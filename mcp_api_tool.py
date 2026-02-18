@@ -1,100 +1,53 @@
-from mcp.server.fastmcp import FastMCP
+import sys
 import os
-import logging
-import requests
-from azure.identity import ClientSecretCredential
-
-logging.basicConfig(level=logging.INFO)
-logging.info("Starting Microsoft Graph MCP server")
+import time
+import configparser
+from mcp.server.fastmcp import FastMCP
+from azure.core.credentials import AccessToken
+from graph_tutorial import Graph
 
 mcp = FastMCP("graph")
-
-# ======================
-# CONFIG
-# ======================
-
-TENANT_ID = os.environ["TENANT_ID"]
-CLIENT_ID = os.environ["CLIENT_ID"]
-CLIENT_SECRET = os.environ["CLIENT_SECRET"]
+graph = None
 
 
-credential = ClientSecretCredential(
-    tenant_id=TENANT_ID,
-    client_id=CLIENT_ID,
-    client_secret=CLIENT_SECRET,
-)
+class StaticTokenCredential:
+    """Wraps a pre-obtained access token so the MCP subprocess never needs
+    to show an interactive authentication prompt."""
 
-def get_access_token():
-    token = credential.get_token("https://graph.microsoft.com/.default")
-    return token.token
+    def __init__(self, token: str):
+        self._token = token
+
+    def get_token(self, *scopes, **kwargs) -> AccessToken:
+        # Expiry is unknown; report 1 h from now so the SDK accepts it.
+        return AccessToken(self._token, int(time.time()) + 3600)
 
 
-# ======================
-# TOOLS
-# ======================
+def ensure_graph():
+    global graph
+    if graph is None:
+        config = configparser.ConfigParser()
+        config.read(["config.cfg"])
+        azure_settings = config["azure"]
 
-@mcp.tool()
-def get_users() -> list[dict]:
-    """
-    Fetch all users from Microsoft Graph.
-    """
-    token = get_access_token()
-    print(token)
+        token = os.environ.get("GRAPH_ACCESS_TOKEN")
+        if not token:
+            raise RuntimeError(
+                "GRAPH_ACCESS_TOKEN env var is not set. "
+                "Authenticate in the main process first."
+            )
 
-    headers = {
-        "Authorization": f"Bearer {token}"
-    }
+        credential = StaticTokenCredential(token)
+        graph = Graph(azure_settings, credential=credential)
 
-    r = requests.get(
-        "https://graph.microsoft.com/v1.0/users",
-        headers=headers
-    )
-
-    r.raise_for_status()
-
-    data = r.json().get("value", [])
-
-    simplified = [
-        {
-            "id": u.get("id"),
-            "displayName": u.get("displayName"),
-            "mail": u.get("mail"),
-            "userPrincipalName": u.get("userPrincipalName"),
-        }
-        for u in data
-    ]
-
-    return simplified
+    return graph
 
 
 @mcp.tool()
-def get_user_by_id(user_id: str) -> dict:
-    """
-    Fetch a specific user by ID.
-    """
-    token = get_access_token()
-
-    headers = {
-        "Authorization": f"Bearer {token}"
-    }
-
-    r = requests.get(
-        f"https://graph.microsoft.com/v1.0/users/{user_id}",
-        headers=headers
-    )
-
-    r.raise_for_status()
-
-    return r.json()
-
-
-# ======================
-# ENTRYPOINT
-# ======================
-
-def main():
-    mcp.run(transport="stdio")
+async def whoami() -> str:
+    g = ensure_graph()
+    user = await g.get_user()
+    return f"Name: {user.display_name}\nEmail: {user.mail or user.user_principal_name}"
 
 
 if __name__ == "__main__":
-    main()
+    mcp.run(transport="stdio")
