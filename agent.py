@@ -5,7 +5,7 @@ from openai import AzureOpenAI
 
 endpoint = os.environ["endpoint"]
 model_name = os.environ["model_name"]
-deployment = os.environ["deployement"]
+deployment = os.environ["deployment"]
 subscription_key = os.environ["subscription_key"]
 api_version = os.environ["api_version"]
 
