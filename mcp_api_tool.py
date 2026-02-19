@@ -18,7 +18,6 @@ class StaticTokenCredential:
         self._token = token
 
     def get_token(self, *scopes, **kwargs) -> AccessToken:
-        # Expiry is unknown; report 1 h from now so the SDK accepts it.
         return AccessToken(self._token, int(time.time()) + 3600)
 
 
@@ -47,6 +46,35 @@ async def whoami() -> str:
     g = ensure_graph()
     user = await g.get_user()
     return f"Name: {user.display_name}\nEmail: {user.mail or user.user_principal_name}"
+
+@mcp.tool()
+async def list_inbox() -> str:
+    g = ensure_graph()
+    message_page = await g.get_inbox()
+
+    if not message_page or not message_page.value:
+        return "Inbox is empty."
+
+    output = []
+
+    for message in message_page.value:
+        sender = (
+            message.from_.email_address.name
+            if message.from_ and message.from_.email_address
+            else "NONE"
+        )
+
+        output.append(
+            f"Subject: {message.subject}\n"
+            f"From: {sender}\n"
+            f"Status: {'Read' if message.is_read else 'Unread'}\n"
+            f"Received: {message.received_date_time}\n"
+        )
+
+    more_available = message_page.odata_next_link is not None
+    output.append(f"More messages available: {more_available}")
+
+    return "\n".join(output)
 
 
 if __name__ == "__main__":

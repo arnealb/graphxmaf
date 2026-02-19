@@ -28,6 +28,10 @@ def main():
 
     token = authenticate()
 
+    print("toke", token)
+
+    os.environ["GRAPH_ACCESS_TOKEN"] = token
+
     graph_mcp = MCPStdioTool(
         name="graph",
         command=sys.executable,
@@ -37,7 +41,7 @@ def main():
         }
     )
 
-    print(os.environ["GRAPH_ACCESS_TOKEN"])
+    print("print: ", os.environ["GRAPH_ACCESS_TOKEN"])
 
     agent = create_graph_agent(graph_mcp=graph_mcp)
 

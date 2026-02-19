@@ -1,9 +1,26 @@
 import sys
 import asyncio
 from configparser import SectionProxy
+
 from azure.identity import DeviceCodeCredential
 from msgraph import GraphServiceClient
-from msgraph.generated.users.item.user_item_request_builder import UserItemRequestBuilder
+
+from msgraph.generated.users.item.user_item_request_builder import (
+    UserItemRequestBuilder,
+)
+from msgraph.generated.users.item.mail_folders.item.messages.messages_request_builder import (
+    MessagesRequestBuilder,
+)
+from msgraph.generated.users.item.send_mail.send_mail_post_request_body import (
+    SendMailPostRequestBody,
+)
+
+from msgraph.generated.models.message import Message
+from msgraph.generated.models.item_body import ItemBody
+from msgraph.generated.models.body_type import BodyType
+from msgraph.generated.models.recipient import Recipient
+from msgraph.generated.models.email_address import EmailAddress
+
 
 
 class Graph:
@@ -61,3 +78,20 @@ class Graph:
         )
 
         return user
+
+    async def get_inbox(self):
+        query_params = MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters(
+            # Only request specific properties
+            select=['from', 'isRead', 'receivedDateTime', 'subject'],
+            # Get at most 25 results
+            top=25,
+            # Sort by received time, newest first
+            orderby=['receivedDateTime DESC']
+        )
+        request_config = MessagesRequestBuilder.MessagesRequestBuilderGetRequestConfiguration(
+            query_parameters= query_params
+        )
+
+        messages = await self.user_client.me.mail_folders.by_mail_folder_id('inbox').messages.get(
+                request_configuration=request_config)
+        return messages
