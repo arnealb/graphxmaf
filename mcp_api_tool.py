@@ -8,7 +8,7 @@ from starlette.responses import JSONResponse
 from azure.core.credentials import AccessToken
 
 from graph_tutorial import Graph
-from tokencred import StaticTokenCredential, _make_graph_client
+from tokencred import StaticTokenCredential, _make_graph_client, search
 
 mcp = FastMCP("graph", port=8000)
 
@@ -90,6 +90,133 @@ async def list_inbox(ctx: Context) -> str:
     output.append(f"More messages available: {more_available}")
 
     return "\n".join(output)
+
+@mcp.tool()
+async def list_files(ctx: Context) -> str:
+    """List the first 20 files in OneDrive root."""
+
+    token = _extract_token(ctx)
+    g = _make_graph_client(token, _azure_settings)
+
+    files = await g.get_drive_items()
+
+    if not files or not files.value:
+        return "No files found."
+
+    output = []
+    for item in files.value:
+        output.append(
+            f"Name: {item.name}\n"
+            f"Type: {'Folder' if item.folder else 'File'}\n"
+            f"WebUrl: {item.web_url}\n"
+        )
+
+    return "\n".join(output)
+
+@mcp.tool()
+async def list_contacts(ctx: Context) -> str:
+    """List the first 15 contacts."""
+
+    token = _extract_token(ctx)
+    g = _make_graph_client(token, _azure_settings)
+
+    contacts = await g.get_contacts()
+
+    if not contacts or not contacts.value:
+        return "No contacts found."
+
+    output = []
+    for c in contacts.value:
+        email = c.email_addresses[0].address if c.email_addresses else "N/A"
+
+        output.append(
+            f"Name: {c.display_name}\n"
+            f"Email: {email}\n"
+        )
+
+    return "\n".join(output)
+
+@mcp.tool()
+async def list_calendar(ctx: Context) -> str:
+    """List the next 10 upcoming calendar events."""
+
+    token = _extract_token(ctx)
+    g = _make_graph_client(token, _azure_settings)
+
+    events = await g.get_upcoming_events()
+
+    if not events or not events.value:
+        return "No upcoming events found."
+
+    output = []
+    for event in events.value:
+        output.append(
+            f"Subject: {event.subject}\n"
+            f"Start: {event.start.date_time if event.start else 'N/A'}\n"
+            f"End: {event.end.date_time if event.end else 'N/A'}\n"
+        )
+
+    return "\n".join(output)
+
+
+# @mcp.tool()
+# async def unified_search(
+#     ctx: Context,
+#     query: str,
+#     entities: list[str] = ["message", "event", "driveItem", "person"]
+# ) -> str:
+#     """
+#     Search across mail, calendar, contacts and files using Microsoft Graph search API.
+#     """
+
+#     token = _extract_token(ctx)
+#     g = _make_graph_client(token, _azure_settings)
+
+#     result = await g.search(query=query, entity_types=entities)
+
+#     if not result or "value" not in result or not result["value"]:
+#         return "No results found."
+
+#     hits = result["value"][0].get("hitsContainers", [])
+#     if not hits:
+#         return "No results found."
+
+#     output = []
+
+#     for container in hits:
+#         for hit in container.get("hits", []):
+#             resource = hit.get("resource", {})
+#             entity_type = container.get("entityType", "unknown")
+
+#             if entity_type == "message":
+#                 output.append(
+#                     f"[MAIL]\n"
+#                     f"Subject: {resource.get('subject')}\n"
+#                     f"From: {resource.get('from', {}).get('emailAddress', {}).get('name')}\n"
+#                 )
+
+#             elif entity_type == "event":
+#                 output.append(
+#                     f"[EVENT]\n"
+#                     f"Subject: {resource.get('subject')}\n"
+#                     f"Start: {resource.get('start', {}).get('dateTime')}\n"
+#                 )
+
+#             elif entity_type == "driveItem":
+#                 output.append(
+#                     f"[FILE]\n"
+#                     f"Name: {resource.get('name')}\n"
+#                     f"WebUrl: {resource.get('webUrl')}\n"
+#                 )
+
+#             elif entity_type == "person":
+#                 output.append(
+#                     f"[CONTACT]\n"
+#                     f"Name: {resource.get('displayName')}\n"
+#                     f"Email: {resource.get('emailAddresses', [{}])[0].get('address')}\n"
+#                 )
+
+#     return "\n".join(output) if output else "No results found."
 
 
 if __name__ == "__main__":

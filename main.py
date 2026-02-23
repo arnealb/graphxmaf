@@ -57,12 +57,12 @@ def authenticate(client_id: str, tenant_id: str, scopes: list[str]) -> str:
 
 # uncomment this to use cached tokens
     # Silent path: use a cached token when available.
-    # accounts = app.get_accounts()
-    # if accounts:
-    #     result = app.acquire_token_silent(scopes, account=accounts[0])
-    #     if result and "access_token" in result:
-    #         _persist_cache(cache)
-    #         return result["access_token"]
+    accounts = app.get_accounts()
+    if accounts:
+        result = app.acquire_token_silent(scopes, account=accounts[0])
+        if result and "access_token" in result:
+            _persist_cache(cache)
+            return result["access_token"]
 
     # Interactive path: device code flow.
 
@@ -123,7 +123,7 @@ def _start_local_mcp_server(env: dict) -> subprocess.Popen:
     print("MCP server ready.")
     return proc
 
-
+    
 
 def main() -> None:
     print("Starting application...")
@@ -169,6 +169,10 @@ def main() -> None:
         url=mcp_url,
         http_client=http_client,
     )
+
+
+
+
 
     try:
         agent = create_graph_agent(graph_mcp=graph_mcp)

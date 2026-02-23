@@ -22,6 +22,18 @@ from msgraph.generated.models.recipient import Recipient
 from msgraph.generated.models.email_address import EmailAddress
 
 
+from msgraph.generated.drives.item.items.item.children.children_request_builder import (
+    ChildrenRequestBuilder,
+)
+
+from msgraph.generated.users.item.contacts.contacts_request_builder import (
+    ContactsRequestBuilder,
+)
+
+from msgraph.generated.users.item.events.events_request_builder import (
+    EventsRequestBuilder,
+)
+
 
 class Graph:
     settings: SectionProxy
@@ -95,3 +107,52 @@ class Graph:
         messages = await self.user_client.me.mail_folders.by_mail_folder_id('inbox').messages.get(
                 request_configuration=request_config)
         return messages
+
+
+    async def get_drive_items(self):
+        query_params = ChildrenRequestBuilder.ChildrenRequestBuilderGetQueryParameters(
+            top=20
+        )
+
+        request_config = ChildrenRequestBuilder.ChildrenRequestBuilderGetRequestConfiguration(
+            query_parameters=query_params
+        )
+
+        drive = await self.user_client.me.drive.get()
+
+        items = await self.user_client.drives.by_drive_id(drive.id).items.by_drive_item_id("root").children.get(
+            request_configuration=request_config
+        )
+
+        return items
+
+    async def get_contacts(self):
+        query_params = ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters(
+            top=15
+        )
+
+        request_config = ContactsRequestBuilder.ContactsRequestBuilderGetRequestConfiguration(
+            query_parameters=query_params
+        )
+
+        contacts = await self.user_client.me.contacts.get(
+            request_configuration=request_config
+        )
+
+        return contacts
+
+    async def get_upcoming_events(self):
+        query_params = EventsRequestBuilder.EventsRequestBuilderGetQueryParameters(
+            top=10,
+            orderby=["start/dateTime"]
+        )
+
+        request_config = EventsRequestBuilder.EventsRequestBuilderGetRequestConfiguration(
+            query_parameters=query_params
+        )
+
+        events = await self.user_client.me.events.get(
+            request_configuration=request_config
+        )
+
+        return events
