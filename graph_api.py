@@ -1,6 +1,4 @@
 import sys
-import json
-import asyncio
 from configparser import SectionProxy
 from datetime import datetime, timezone
 

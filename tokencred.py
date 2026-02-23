@@ -2,7 +2,7 @@ import time
 
 from azure.core.credentials import AccessToken
 
-from graph_tutorial import Graph
+from graph_api import Graph
 
 
 class StaticTokenCredential:

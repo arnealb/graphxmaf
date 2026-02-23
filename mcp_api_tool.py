@@ -7,7 +7,7 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse
 from azure.core.credentials import AccessToken
 
-from graph_tutorial import Graph
+from graph_api import Graph
 from tokencred import StaticTokenCredential, _make_graph_client
 
 mcp = FastMCP("graph", port=8000)
