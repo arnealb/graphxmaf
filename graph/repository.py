@@ -32,7 +32,8 @@ from msgraph.generated.models.search_request import SearchRequest
 from msgraph.generated.models.search_query import SearchQuery
 
 
-from .IGraphRepository import IGraphRepository
+from entities.IGraphRepository import IGraphRepository
+
 
 class GraphRepository(IGraphRepository):
     settings: SectionProxy
