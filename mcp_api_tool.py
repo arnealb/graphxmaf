@@ -8,7 +8,7 @@ from starlette.responses import JSONResponse
 from azure.core.credentials import AccessToken
 
 from graph_tutorial import Graph
-from tokencred import StaticTokenCredential, _make_graph_client, search
+from tokencred import StaticTokenCredential, _make_graph_client
 
 mcp = FastMCP("graph", port=8000)
 
@@ -80,6 +80,7 @@ async def list_inbox(ctx: Context) -> str:
             else "NONE"
         )
         output.append(
+            f"ID: {message.id}\n"
             f"Subject: {message.subject}\n"
             f"From: {sender}\n"
             f"Status: {'Read' if message.is_read else 'Unread'}\n"
@@ -159,64 +160,89 @@ async def list_calendar(ctx: Context) -> str:
     return "\n".join(output)
 
 
-# @mcp.tool()
-# async def unified_search(
-#     ctx: Context,
-#     query: str,
-#     entities: list[str] = ["message", "event", "driveItem", "person"]
-# ) -> str:
-#     """
-#     Search across mail, calendar, contacts and files using Microsoft Graph search API.
-#     """
+@mcp.tool()
+async def read_email(ctx: Context, message_id: str) -> str:
+    """Read the full body of a specific email by its message ID."""
+    token = _extract_token(ctx)
+    g = _make_graph_client(token, _azure_settings)
 
-#     token = _extract_token(ctx)
-#     g = _make_graph_client(token, _azure_settings)
+    message = await g.get_message_body(message_id)
 
-#     result = await g.search(query=query, entity_types=entities)
+    if not message:
+        return "Message not found."
 
-#     if not result or "value" not in result or not result["value"]:
-#         return "No results found."
+    sender = (
+        message.from_.email_address.name
+        if message.from_ and message.from_.email_address
+        else "Unknown"
+    )
+    body_content = message.body.content if message.body else "(no body)"
 
-#     hits = result["value"][0].get("hitsContainers", [])
-#     if not hits:
-#         return "No results found."
+    return (
+        f"Subject: {message.subject}\n"
+        f"From: {sender}\n"
+        f"Received: {message.received_date_time}\n"
+        f"\n{body_content}"
+    )
 
-#     output = []
 
-#     for container in hits:
-#         for hit in container.get("hits", []):
-#             resource = hit.get("resource", {})
-#             entity_type = container.get("entityType", "unknown")
+@mcp.tool()
+async def unified_search(
+    ctx: Context,
+    query: str,
+    entities: list[str] = ["message", "event", "driveItem", "person"],
+) -> str:
+    """Search across mail, calendar, files and contacts using the Microsoft Graph search API."""
+    token = _extract_token(ctx)
+    g = _make_graph_client(token, _azure_settings)
 
-#             if entity_type == "message":
-#                 output.append(
-#                     f"[MAIL]\n"
-#                     f"Subject: {resource.get('subject')}\n"
-#                     f"From: {resource.get('from', {}).get('emailAddress', {}).get('name')}\n"
-#                 )
+    result = await g.search(query=query, entity_types=entities)
 
-#             elif entity_type == "event":
-#                 output.append(
-#                     f"[EVENT]\n"
-#                     f"Subject: {resource.get('subject')}\n"
-#                     f"Start: {resource.get('start', {}).get('dateTime')}\n"
-#                 )
+    if not result or not result.value:
+        return "No results found."
 
-#             elif entity_type == "driveItem":
-#                 output.append(
-#                     f"[FILE]\n"
-#                     f"Name: {resource.get('name')}\n"
-#                     f"WebUrl: {resource.get('webUrl')}\n"
-#                 )
+    output = []
 
-#             elif entity_type == "person":
-#                 output.append(
-#                     f"[CONTACT]\n"
-#                     f"Name: {resource.get('displayName')}\n"
-#                     f"Email: {resource.get('emailAddresses', [{}])[0].get('address')}\n"
-#                 )
+    for response in result.value:
+        if not response.hits_containers:
+            continue
+        for container in response.hits_containers:
+            if not container.hits:
+                continue
+            for hit in container.hits:
+                resource = hit.resource
+                if resource is None:
+                    continue
 
-#     return "\n".join(output) if output else "No results found."
+                odata_type = (resource.odata_type or "").lower()
+
+                if "message" in odata_type:
+                    output.append(
+                        f"[MAIL]\n"
+                        f"ID: {resource.id}\n"
+                        f"Subject: {getattr(resource, 'subject', 'N/A')}\n"
+                    )
+                elif "event" in odata_type:
+                    output.append(
+                        f"[EVENT]\n"
+                        f"Subject: {getattr(resource, 'subject', 'N/A')}\n"
+                        f"Start: {getattr(resource.start, 'date_time', 'N/A') if resource.start else 'N/A'}\n"
+                    )
+                elif "driveitem" in odata_type:
+                    output.append(
+                        f"[FILE]\n"
+                        f"Name: {getattr(resource, 'name', 'N/A')}\n"
+                        f"WebUrl: {getattr(resource, 'web_url', 'N/A')}\n"
+                    )
+                elif "person" in odata_type or "contact" in odata_type:
+                    output.append(
+                        f"[CONTACT]\n"
+                        f"Name: {getattr(resource, 'display_name', 'N/A')}\n"
+                    )
+                else:
+                    output.append(f"[{odata_type}] ID: {resource.id}\n")
+
+    return "\n".join(output) if output else "No results found."
 
 
 if __name__ == "__main__":

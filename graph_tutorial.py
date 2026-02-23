@@ -1,6 +1,8 @@
 import sys
+import json
 import asyncio
 from configparser import SectionProxy
+from datetime import datetime, timezone
 
 from azure.identity import DeviceCodeCredential
 from msgraph import GraphServiceClient
@@ -11,16 +13,9 @@ from msgraph.generated.users.item.user_item_request_builder import (
 from msgraph.generated.users.item.mail_folders.item.messages.messages_request_builder import (
     MessagesRequestBuilder,
 )
-from msgraph.generated.users.item.send_mail.send_mail_post_request_body import (
-    SendMailPostRequestBody,
+from msgraph.generated.users.item.messages.item.message_item_request_builder import (
+    MessageItemRequestBuilder,
 )
-
-from msgraph.generated.models.message import Message
-from msgraph.generated.models.item_body import ItemBody
-from msgraph.generated.models.body_type import BodyType
-from msgraph.generated.models.recipient import Recipient
-from msgraph.generated.models.email_address import EmailAddress
-
 
 from msgraph.generated.drives.item.items.item.children.children_request_builder import (
     ChildrenRequestBuilder,
@@ -33,6 +28,10 @@ from msgraph.generated.users.item.contacts.contacts_request_builder import (
 from msgraph.generated.users.item.events.events_request_builder import (
     EventsRequestBuilder,
 )
+
+from msgraph.generated.search.query.query_post_request_body import QueryPostRequestBody
+from msgraph.generated.models.search_request import SearchRequest
+from msgraph.generated.models.search_query import SearchQuery
 
 
 class Graph:
@@ -94,7 +93,7 @@ class Graph:
     async def get_inbox(self):
         query_params = MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters(
             # Only request specific properties
-            select=['from', 'isRead', 'receivedDateTime', 'subject'],
+            select=['id', 'from', 'isRead', 'receivedDateTime', 'subject'],
             # Get at most 25 results
             top=25,
             # Sort by received time, newest first
@@ -142,9 +141,12 @@ class Graph:
         return contacts
 
     async def get_upcoming_events(self):
+        now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
+
         query_params = EventsRequestBuilder.EventsRequestBuilderGetQueryParameters(
             top=10,
-            orderby=["start/dateTime"]
+            orderby=["start/dateTime"],
+            filter=f"start/dateTime ge '{now}'",
         )
 
         request_config = EventsRequestBuilder.EventsRequestBuilderGetRequestConfiguration(
@@ -156,3 +158,34 @@ class Graph:
         )
 
         return events
+
+    async def get_message_body(self, message_id: str):
+        query_params = MessageItemRequestBuilder.MessageItemRequestBuilderGetQueryParameters(
+            select=["subject", "from", "receivedDateTime", "body", "toRecipients"],
+        )
+
+        request_config = MessageItemRequestBuilder.MessageItemRequestBuilderGetRequestConfiguration(
+            query_parameters=query_params
+        )
+
+        message = await self.user_client.me.messages.by_message_id(message_id).get(
+            request_configuration=request_config
+        )
+
+        return message
+
+    async def search(self, query: str, entity_types: list[str], size: int = 25):
+        search_query = SearchQuery()
+        search_query.query_string = query
+
+        search_request = SearchRequest()
+        search_request.entity_types = entity_types
+        search_request.query = search_query
+        search_request.from_ = 0
+        search_request.size = size
+
+        body = QueryPostRequestBody()
+        body.requests = [search_request]
+
+        result = await self.user_client.search.query.post(body)
+        return result
