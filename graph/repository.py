@@ -34,7 +34,7 @@ from msgraph.generated.models.search_query import SearchQuery
 
 
 from entities.IGraphRepository import IGraphRepository
-from data.classes import Email
+from data.classes import Email, File, Contact, CalendarEvent, EmailAddress, Attendee
 
 
 class GraphRepository(IGraphRepository):
@@ -139,9 +139,21 @@ class GraphRepository(IGraphRepository):
         return emails
 
 
-    async def get_drive_items(self):
+    async def get_drive_items(self) -> List[File]:
         query_params = ChildrenRequestBuilder.ChildrenRequestBuilderGetQueryParameters(
-            top=20
+            select=[
+                "id",
+                "name",
+                "webUrl",
+                "size",
+                "createdDateTime",
+                "lastModifiedDateTime",
+                "file",
+                "folder",
+                "parentReference",
+            ],
+            top=20,
+            orderby=["name"]
         )
 
         request_config = ChildrenRequestBuilder.ChildrenRequestBuilderGetRequestConfiguration(
@@ -150,14 +162,36 @@ class GraphRepository(IGraphRepository):
 
         drive = await self.user_client.me.drive.get()
 
-        items = await self.user_client.drives.by_drive_id(drive.id).items.by_drive_item_id("root").children.get(
+        items = await self.user_client.drives.by_drive_id(
+            drive.id
+        ).items.by_drive_item_id("root").children.get(
             request_configuration=request_config
         )
 
-        return items
+        files: list[File] = []
 
-    async def get_contacts(self):
+        if not items or not items.value: 
+            return []
+
+        for item in items.value:
+            files.append(
+                File(
+                    id=item.id,
+                    name=item.name,
+                    is_folder=item.folder is not None,
+                    size=item.size,
+                    created=item.created_date_time,
+                    modified=item.last_modified_date_time,
+                    parent_id=item.parent_reference.id if item.parent_reference else None,
+                    web_link=item.web_url,
+                )
+            )
+
+        return files 
+
+    async def get_contacts(self) -> list[Contact]:
         query_params = ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters(
+            select=["id", "displayName", "emailAddresses"],
             top=15
         )
 
@@ -165,16 +199,34 @@ class GraphRepository(IGraphRepository):
             query_parameters=query_params
         )
 
-        contacts = await self.user_client.me.contacts.get(
+        result = await self.user_client.me.contacts.get(
             request_configuration=request_config
         )
 
+        contacts: list[Contact] = []
+        if not result or not result.value:
+            return contacts
+
+        if not result or result.value:
+            return []
+        
+        for c in result.value:
+            email = c.email_addresses[0].address if c.email_addresses else None
+            contacts.append(
+                Contact(
+                    id=c.id,
+                    name=c.display_name,
+                    email=email
+                )
+            )
+
         return contacts
 
-    async def get_upcoming_events(self):
+    async def get_upcoming_events(self) -> list[CalendarEvent]:
         now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
 
         query_params = EventsRequestBuilder.EventsRequestBuilderGetQueryParameters(
+            select=["id", "subject", "start", "end", "attendees", "organizer"],
             top=10,
             orderby=["start/dateTime"],
             filter=f"start/dateTime ge '{now}'",
@@ -184,11 +236,49 @@ class GraphRepository(IGraphRepository):
             query_parameters=query_params
         )
 
-        events = await self.user_client.me.events.get(
+        result = await self.user_client.me.events.get(
             request_configuration=request_config
         )
 
+        events: list[CalendarEvent] = []
+        if not result or not result.value:
+            return events
+
+        for e in result.value:
+            events.append(self.map_event(e))
+
         return events
+
+    def map_event(self, ev) -> CalendarEvent:
+        organizer = None
+        if ev.organizer and ev.organizer.email_address:
+            organizer = EmailAddress(
+                name=ev.organizer.email_address.name,
+                address=ev.organizer.email_address.address,
+            )
+
+        attendees = []
+        if ev.attendees:
+            attendees = [
+                Attendee(
+                    email=EmailAddress(
+                        name=a.email_address.name,
+                        address=a.email_address.address,
+                    )
+                )
+                for a in ev.attendees
+                if a.email_address
+            ]
+
+        return CalendarEvent(
+            id=ev.id,
+            subject=ev.subject,
+            start= ev.start.date_time if ev.start else None,
+            end= ev.end.date_time if ev.end else None,
+            organizer=organizer,
+            attendees=attendees,
+        )
+
 
     async def get_message_body(self, message_id: str) -> Email | None:
         query_params = MessageItemRequestBuilder.MessageItemRequestBuilderGetQueryParameters(

@@ -1,27 +1,20 @@
-from data.classes import Email
+from data.classes import Email, File, Contact, CalendarEvent
+
+
 
 class GraphAgent:
     def __init__(self, repo):
         self.repo = repo
         self._email_cache: dict[str, Email] = {}
+        self._file_cache: dict[str, File] = {}
+        self._contact_cache: dict[str, Contact] = {}
+        self._event_cache: dict[str, CalendarEvent] = {}
+
+# whoami ------------------------------------------------------------------
 
     async def whoami(self) -> str:
         user = await self.repo.get_user()
         return f"Name: {user.display_name}\nEmail: {user.mail or user.user_principal_name}"
-
-    async def list_files(self) -> str:
-        files = await self.repo.get_drive_items()
-        if not files or not files.value:
-            return "No files found."
-
-        output = []
-        for item in files.value:
-            output.append(
-                f"Name: {item.name}\n"
-                f"Type: {'Folder' if item.folder else 'File'}\n"
-                f"WebUrl: {item.web_url}\n"
-            )
-        return "\n".join(output)
 
 # email ------------------------------------------------------------------
 
@@ -64,32 +57,63 @@ class GraphAgent:
             f"{body}"
         )
 
+# files ------------------------------------------------------------------
+
+    async def list_files(self) -> str:
+        files = await self.repo.get_drive_items()
+        if not files:
+            return "No files found."
+
+        self._file_cache = {f.id: f for f in files}
+
+        out = []
+        for f in files:
+            out.append(
+                f"ID: {f.id}\n"
+                f"Name: {f.name}\n"
+                f"Type: {'Folder' if f.is_folder else 'File'}\n"
+                f"WebLink: {f.web_link}\n"
+            )
+        return "\n".join(out)
+
 # contacts ------------------------------------------------------------------
 
     async def list_contacts(self) -> str:
         contacts = await self.repo.get_contacts()
-        if not contacts or not contacts.value:
+        if not contacts:
             return "No contacts found."
 
-        output = []
-        for c in contacts.value:
-            email = c.email_addresses[0].address if c.email_addresses else "N/A"
-            output.append(f"Name: {c.display_name}\nEmail: {email}\n")
-        return "\n".join(output)
+        self._contact_cache = {c.id: c for c in contacts}
+
+        out = []
+        for c in contacts:
+            out.append(
+                f"ID: {c.id}\n"
+                f"Name: {c.name}\n"
+                f"Email: {c.email}\n"
+            )
+
+        return "\n".join(out)
+
+# calendar ------------------------------------------------------------------
 
     async def list_calendar(self) -> str:
         events = await self.repo.get_upcoming_events()
-        if not events or not events.value:
+        if not events:
             return "No upcoming events found."
 
-        output = []
-        for event in events.value:
-            output.append(
-                f"Subject: {event.subject}\n"
-                f"Start: {event.start.date_time if event.start else 'N/A'}\n"
-                f"End: {event.end.date_time if event.end else 'N/A'}\n"
+        self._event_cache = {e.id: e for e in events}
+
+        out = []
+        for e in events:
+            out.append(
+                f"ID: {e.id}\n"
+                f"Subject: {e.subject}\n"
+                f"Start: {e.start}\n"
+                f"End: {e.end}\n"
             )
-        return "\n".join(output)
+
+        return "\n".join(out)
 
 
     async def unified_search(

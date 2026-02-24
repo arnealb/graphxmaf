@@ -24,7 +24,6 @@ def create_graph_agent(graph_mcp):
             - list_files: list files in the user's OneDrive root
             - list_contacts: list contacts
             - list_calendar: list upcoming calendar events
-            - unified_search: search across mail, calendar, files and contacts
 
             Rules:
             - Always use tools to retrieve real data. Never invent or guess data.
