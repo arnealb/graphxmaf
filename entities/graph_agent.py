@@ -20,6 +20,23 @@ class GraphAgent:
             )
         return "\n".join(output)
 
+    async def list_email(self) -> str:
+        emails = await self.repo.get_inbox()
+        if not emails:
+            return "No emails found."
+
+        output = []
+        for e in emails:
+            output.append(
+                f"ID: {e.id}\n"
+                f"Subject: {e.subject}\n"
+                f"From: {e.sender}\n"
+                f"Received: {e.received}\n"
+            )
+
+        return "\n".join(output)
+
+
     async def list_contacts(self) -> str:
         contacts = await self.repo.get_contacts()
         if not contacts or not contacts.value:

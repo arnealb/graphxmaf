@@ -92,6 +92,12 @@ async def read_email(ctx: Context, message_id: str) -> str:
     return await agent.read_email(message_id)
 
 @mcp.tool()
+async def list_email(ctx: Context) -> str:
+    token = _extract_token(ctx)
+    agent = _make_agent(token)
+    return await agent.list_email()
+
+@mcp.tool()
 async def unified_search(
     ctx: Context,
     query: str,

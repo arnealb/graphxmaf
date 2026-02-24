@@ -1,6 +1,7 @@
 import sys
 from configparser import SectionProxy
 from datetime import datetime, timezone
+from typing import List
 
 from azure.identity import DeviceCodeCredential
 from msgraph import GraphServiceClient
@@ -33,6 +34,7 @@ from msgraph.generated.models.search_query import SearchQuery
 
 
 from entities.IGraphRepository import IGraphRepository
+from data.classes import Email
 
 
 class GraphRepository(IGraphRepository):
@@ -91,22 +93,40 @@ class GraphRepository(IGraphRepository):
 
         return user
 
-    async def get_inbox(self):
+
+    async def get_inbox(self) -> List[Email]:
         query_params = MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters(
-            # Only request specific properties
-            select=['id', 'from', 'isRead', 'receivedDateTime', 'subject'],
-            # Get at most 25 results
+            select=["id", "from", "isRead", "receivedDateTime", "subject"],
             top=25,
-            # Sort by received time, newest first
-            orderby=['receivedDateTime DESC']
+            orderby=["receivedDateTime DESC"],
         )
         request_config = MessagesRequestBuilder.MessagesRequestBuilderGetRequestConfiguration(
-            query_parameters= query_params
+            query_parameters=query_params
         )
 
-        messages = await self.user_client.me.mail_folders.by_mail_folder_id('inbox').messages.get(
-                request_configuration=request_config)
-        return messages
+        messages = await self.user_client.me.mail_folders.by_mail_folder_id("inbox").messages.get(
+            request_configuration=request_config
+        )
+
+        emails: List[Email] = []
+        if not messages or not messages.value:
+            return emails
+
+        for m in messages.value:
+            sender = ""
+            if m.from_ and m.from_.email_address:
+                sender = m.from_.email_address.name or m.from_.email_address.address or ""
+
+            emails.append(
+                Email(
+                    id=m.id or "",
+                    subject=m.subject or "",
+                    sender=sender,
+                    received=m.received_date_time,
+                )
+            )
+
+        return emails
 
 
     async def get_drive_items(self):
