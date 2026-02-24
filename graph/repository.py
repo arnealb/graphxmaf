@@ -96,7 +96,7 @@ class GraphRepository(IGraphRepository):
 
     async def get_inbox(self) -> List[Email]:
         query_params = MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters(
-            select=["id", "from", "isRead", "receivedDateTime", "subject"],
+            select=["id", "from", "isRead", "receivedDateTime", "subject", "webLink"],
             top=25,
             orderby=["receivedDateTime DESC"],
         )
@@ -113,16 +113,26 @@ class GraphRepository(IGraphRepository):
             return emails
 
         for m in messages.value:
-            sender = ""
+            sender_name = ""
+            sender_email = None
+
             if m.from_ and m.from_.email_address:
-                sender = m.from_.email_address.name or m.from_.email_address.address or ""
+                sender_name = (
+                    m.from_.email_address.name
+                    or m.from_.email_address.address
+                    or ""
+                )
+                sender_email = m.from_.email_address.address
+
 
             emails.append(
                 Email(
                     id=m.id or "",
                     subject=m.subject or "",
-                    sender=sender,
+                    sender_name=sender_name,
+                    sender_email=sender_email,
                     received=m.received_date_time,
+                    web_link=m.web_link
                 )
             )
 
@@ -180,20 +190,46 @@ class GraphRepository(IGraphRepository):
 
         return events
 
-    async def get_message_body(self, message_id: str):
+    async def get_message_body(self, message_id: str) -> Email | None:
         query_params = MessageItemRequestBuilder.MessageItemRequestBuilderGetQueryParameters(
-            select=["subject", "from", "receivedDateTime", "body", "toRecipients"],
+            select=["id", "subject", "from", "receivedDateTime", "body", "webLink"],
         )
 
         request_config = MessageItemRequestBuilder.MessageItemRequestBuilderGetRequestConfiguration(
             query_parameters=query_params
         )
 
-        message = await self.user_client.me.messages.by_message_id(message_id).get(
+        m = await self.user_client.me.messages.by_message_id(message_id).get(
             request_configuration=request_config
         )
 
-        return message
+        if not m:
+            return None
+
+        sender_name = ""
+        sender_email = None
+
+        if m.from_ and m.from_.email_address:
+            sender_name = (
+                m.from_.email_address.name
+                or m.from_.email_address.address
+                or ""
+            )
+            sender_email = m.from_.email_address.address
+
+        body = m.body.content if m.body and m.body.content else None
+
+        return Email(
+            id=m.id or "",
+            subject=m.subject or "",
+            sender_name=sender_name,
+            sender_email=sender_email,
+            received=m.received_date_time,
+            body=body,
+            web_link=m.web_link,   # ← correct
+        )
+            
+
 
     async def search(self, query: str, entity_types: list[str], size: int = 25):
         search_query = SearchQuery()

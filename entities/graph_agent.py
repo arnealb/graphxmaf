@@ -23,6 +23,8 @@ class GraphAgent:
             )
         return "\n".join(output)
 
+# email ------------------------------------------------------------------
+
     async def list_email(self) -> str:
         emails = await self.repo.get_inbox()
         if not emails:
@@ -36,8 +38,10 @@ class GraphAgent:
             out.append(
                 f"ID: {e.id}\n"
                 f"Subject: {e.subject}\n"
-                f"From: {e.sender}\n"
+                f"From: {e.sender_name}\n"
                 f"Received: {e.received}\n"
+                f"webLink: {e.web_link}\n"
+                f"Body: {e.body}"
             )
         return "\n".join(out)
 
@@ -54,10 +58,13 @@ class GraphAgent:
 
         return (
             f"Subject: {email.subject}\n"
-            f"From: {email.sender}\n"
-            f"Received: {email.received}\n\n"
+            f"From: {email.sender_name}\n"
+            f"Received: {email.received}\n"
+            f"webLink: {email.web_link}\n"
             f"{body}"
         )
+
+# contacts ------------------------------------------------------------------
 
     async def list_contacts(self) -> str:
         contacts = await self.repo.get_contacts()

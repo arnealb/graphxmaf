@@ -25,6 +25,8 @@ _TENANT_ID = _azure_settings["tenantId"]
 _GRAPH_SCOPES = _azure_settings["graphUserScopes"].split(" ")
 _RESOURCE_URI = os.environ.get("MCP_RESOURCE_URI", "http://localhost:8000")
 
+_agents: dict[str, GraphAgent] = {}
+
 
 # prm shit -> hoe moeten user authenticeren
 @mcp.custom_route("/.well-known/oauth-protected-resource", methods=["GET"])
@@ -57,9 +59,15 @@ def _extract_token(ctx: Context) -> str:
     return auth[7:]
 
 
+# def _make_agent(token: str) -> GraphAgent:
+#     repo = GraphRepository(_azure_settings, credential=StaticTokenCredential(token))
+#     return GraphAgent(repo)
+
 def _make_agent(token: str) -> GraphAgent:
-    repo = GraphRepository(_azure_settings, credential=StaticTokenCredential(token))
-    return GraphAgent(repo)
+    if token not in _agents:
+        repo = GraphRepository(_azure_settings, credential=StaticTokenCredential(token))
+        _agents[token] = GraphAgent(repo)
+    return _agents[token]
 
 @mcp.tool()
 async def whoami(ctx: Context) -> str:
@@ -97,15 +105,15 @@ async def list_email(ctx: Context) -> str:
     agent = _make_agent(token)
     return await agent.list_email()
 
-@mcp.tool()
-async def unified_search(
-    ctx: Context,
-    query: str,
-    entities: list[str] = ["message", "event", "driveItem", "person"],
-) -> str:
-    token = _extract_token(ctx)
-    agent = _make_agent(token)
-    return await agent.unified_search(query=query, entities=entities)
+# @mcp.tool()
+# async def unified_search(
+#     ctx: Context,
+#     query: str,
+#     entities: list[str] = ["message", "event", "driveItem", "person"],
+# ) -> str:
+#     token = _extract_token(ctx)
+#     agent = _make_agent(token)
+#     return await agent.unified_search(query=query, entities=entities)
 
 if __name__ == "__main__":
     mcp.run(transport="streamable-http")
