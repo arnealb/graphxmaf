@@ -1,6 +1,9 @@
+from data.classes import Email
+
 class GraphAgent:
     def __init__(self, repo):
         self.repo = repo
+        self._email_cache: dict[str, Email] = {}
 
     async def whoami(self) -> str:
         user = await self.repo.get_user()
@@ -25,17 +28,36 @@ class GraphAgent:
         if not emails:
             return "No emails found."
 
-        output = []
+        print("---------- saving to cache ----------")
+        self._email_cache = {e.id: e for e in emails}
+
+        out = []
         for e in emails:
-            output.append(
+            out.append(
                 f"ID: {e.id}\n"
                 f"Subject: {e.subject}\n"
                 f"From: {e.sender}\n"
                 f"Received: {e.received}\n"
             )
+        return "\n".join(out)
 
-        return "\n".join(output)
+    async def read_email(self, message_id: str) -> str:
+        print("---------- fist fetching from cache ------------")
+        email = self._email_cache.get(message_id)
 
+        if not email:
+            email = await self.repo.get_message_body(message_id)
+            if not email:
+                return "Message not found."
+
+        body = email.body or "(no body)"
+
+        return (
+            f"Subject: {email.subject}\n"
+            f"From: {email.sender}\n"
+            f"Received: {email.received}\n\n"
+            f"{body}"
+        )
 
     async def list_contacts(self) -> str:
         contacts = await self.repo.get_contacts()
@@ -62,24 +84,6 @@ class GraphAgent:
             )
         return "\n".join(output)
 
-    async def read_email(self, message_id: str) -> str:
-        message = await self.repo.get_message_body(message_id)
-        if not message:
-            return "Message not found."
-
-        sender = (
-            message.from_.email_address.name
-            if message.from_ and message.from_.email_address
-            else "Unknown"
-        )
-        body_content = message.body.content if message.body else "(no body)"
-
-        return (
-            f"Subject: {message.subject}\n"
-            f"From: {sender}\n"
-            f"Received: {message.received_date_time}\n"
-            f"\n{body_content}"
-        )
 
     async def unified_search(
         self,
