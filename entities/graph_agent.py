@@ -125,23 +125,37 @@ class GraphAgent:
 # calendar ------------------------------------------------------------------
 
     async def list_calendar(self) -> str:
-        events = await self.repo.get_upcoming_events()
-        if not events:
-            return "No upcoming events found."
+        upcoming_events = await self.repo.get_upcoming_events()
+        past_events = await self.repo.get_past_events()
 
-        self._event_cache = {e.id: e for e in events}
+        if not upcoming_events and not past_events:
+            return "No events found."
+
+        self._event_cache = {e.id: e for e in (upcoming_events + past_events)}
 
         out = []
-        for e in events:
-            out.append(
-                f"ID: {e.id}\n"
-                f"Subject: {e.subject}\n"
-                f"Start: {e.start}\n"
-                f"End: {e.end}\n"
-            )
+
+        if upcoming_events:
+            out.append("Upcoming events:")
+            for e in upcoming_events:
+                out.append(
+                    f"ID: {e.id}\n"
+                    f"Subject: {e.subject}\n"
+                    f"Start: {e.start}\n"
+                    f"End: {e.end}\n"
+                )
+
+        if past_events:
+            out.append("Past events:")
+            for e in past_events:
+                out.append(
+                    f"ID: {e.id}\n"
+                    f"Subject: {e.subject}\n"
+                    f"Start: {e.start}\n"
+                    f"End: {e.end}\n"
+                )
 
         return "\n".join(out)
-
 
     async def unified_search(
         self,

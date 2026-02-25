@@ -33,12 +33,10 @@ def create_graph_agent(graph_mcp):
 
             Additional rules:
             - Always use tools to retrieve real data. Never invent or guess data.
-            - When the user asks about emails involving a person:
+            - When the user asks about information involving a person:
             1) call findpeople with the name
-            2) then use the resolved email to decide next steps
-            - When the user asks about an email's content:
-            1) call list_email to get message IDs
-            2) then call read_email with the chosen ID
+            2) then use the resolved email of the person to decide the next steps
+
             - Present dates in a human-readable format.
         """,
         tools=[graph_mcp],

@@ -188,40 +188,6 @@ class GraphRepository(IGraphRepository):
 
         return out
 
-    # from kiota_abstractions.api_error import APIError  # meestal aanwezig in msgraph sdk
-
-    # async def _find_contacts(self, query: str, top: int = 5) -> list[EmailAddress]:
-    #     params = ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters(
-    #         select=["displayName","emailAddresses"],
-    #         top=top,
-    #     )
-
-    #     cfg = ContactsRequestBuilder.ContactsRequestBuilderGetRequestConfiguration(
-    #         query_parameters=params
-    #     )
-
-    #     print("before res")
-    #     try:
-    #         res = await self.user_client.me.contacts.get(request_configuration=cfg)
-    #     except Exception as e:
-    #         print("CONTACTS ERROR:", repr(e))
-    #         if hasattr(e, "error") and e.error:
-    #             print("API error:", e.error.code, e.error.message)
-    #         return []
-    #     print("after res")
-
-    #     out = []
-    #     if res and res.value:
-    #         for c in res.value:
-    #             if c.email_addresses:
-    #                 e = c.email_addresses[0]
-    #                 email = EmailAddress(name = e.name, address=e.address)
-    #                 print("Email: ", email)
-    #                 out.append(email)
-
-    #     return out
-
-
     async def find_people(self, query: str, top: int = 5) -> list[EmailAddress]:
         print("fetching contacts / dir / mail")
         contacts = await self._find_contacts(query, top)
@@ -430,6 +396,33 @@ class GraphRepository(IGraphRepository):
             top=10,
             orderby=["start/dateTime"],
             filter=f"start/dateTime ge '{now}'",
+        )
+
+        request_config = EventsRequestBuilder.EventsRequestBuilderGetRequestConfiguration(
+            query_parameters=query_params
+        )
+
+        result = await self.user_client.me.events.get(
+            request_configuration=request_config
+        )
+
+        events: list[CalendarEvent] = []
+        if not result or not result.value:
+            return events
+
+        for e in result.value:
+            events.append(self.map_event(e))
+
+        return events
+
+    async def get_past_events(self) -> list[CalendarEvent]:
+        now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
+
+        query_params = EventsRequestBuilder.EventsRequestBuilderGetQueryParameters(
+            select=["id", "subject", "start", "end", "attendees", "organizer"],
+            top=10,
+            orderby=["start/dateTime desc"],
+            filter=f"start/dateTime lt '{now}'",
         )
 
         request_config = EventsRequestBuilder.EventsRequestBuilderGetRequestConfiguration(
