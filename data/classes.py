@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from datetime import datetime
+from typing import Literal, Optional, List
 
 @dataclass
 class Email:
@@ -49,4 +50,19 @@ class EmailAddress:
 class Attendee:
     email: EmailAddress
 
-# ---------------------------------------
+
+
+# ---------------------------------------------------------------------
+EntityType = Literal["email", "file", "event", "contact"]
+
+
+@dataclass
+class SearchResult:
+    type: EntityType
+    id: str
+    title: Optional[str]
+    snippet: Optional[str]
+    timestamp: Optional[datetime]
+    people: List[EmailAddress]
+    web_link: Optional[str]
+    source: str = "graph"

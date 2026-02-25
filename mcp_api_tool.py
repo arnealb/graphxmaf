@@ -76,6 +76,12 @@ async def whoami(ctx: Context) -> str:
     return await agent.whoami()
 
 @mcp.tool()
+async def findpeople(ctx: Context, name: str) -> str:
+    token = _extract_token(ctx)
+    agent = _make_agent(token)
+    return await agent.find_people(name)
+
+@mcp.tool()
 async def list_files(ctx: Context) -> str:
     token = _extract_token(ctx)
     agent = _make_agent(token)

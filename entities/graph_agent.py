@@ -1,4 +1,4 @@
-from data.classes import Email, File, Contact, CalendarEvent
+from data.classes import Email, File, Contact, CalendarEvent, EmailAddress 
 
 
 
@@ -9,12 +9,40 @@ class GraphAgent:
         self._file_cache: dict[str, File] = {}
         self._contact_cache: dict[str, Contact] = {}
         self._event_cache: dict[str, CalendarEvent] = {}
+        self._people_cache: dict[str, EmailAddress] = {}
 
 # whoami ------------------------------------------------------------------
 
     async def whoami(self) -> str:
         user = await self.repo.get_user()
         return f"Name: {user.display_name}\nEmail: {user.mail or user.user_principal_name}"
+
+# people ------------------------------------------------------------------
+
+    async def find_people(self, name: str) -> str:
+        print("in find people")
+        people = await self.repo.find_people(name)
+        print("in agent, find_people from repo done")
+
+        if not people:
+            return "No people found."
+
+        # cache op email
+        self._people_cache = {
+            p.address.lower(): p
+            for p in people
+            if p.address
+        }
+
+        out = []
+        for p in people:
+            out.append(
+                f"Name: {p.name}\n"
+                f"Email: {p.address}\n"
+            )
+
+        return "\n".join(out)
+
 
 # email ------------------------------------------------------------------
 
@@ -34,7 +62,6 @@ class GraphAgent:
                 f"From: {e.sender_name}\n"
                 f"Received: {e.received}\n"
                 f"webLink: {e.web_link}\n"
-                f"Body: {e.body}"
             )
         return "\n".join(out)
 

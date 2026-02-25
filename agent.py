@@ -19,17 +19,26 @@ def create_graph_agent(graph_mcp):
 
             Available tools:
             - whoami: identify the authenticated user
-            - list_inbox: list recent emails (returns message IDs)
+            - findpeople: resolve a person's name to their email address
+            - list_email: list recent emails (returns message IDs)
             - read_email: read the full body of a specific email by its ID
             - list_files: list files in the user's OneDrive root
             - list_contacts: list contacts
             - list_calendar: list upcoming calendar events
 
-            Rules:
+            Core rule:
+            - Whenever a user mentions or implies a person (name, sender, colleague, etc.),
+            you MUST call findpeople first to resolve the person to an email address
+            before using any other tools.
+
+            Additional rules:
             - Always use tools to retrieve real data. Never invent or guess data.
-            - When the user asks about an email's content, first call list_inbox to
-              get the message ID, then call read_email with that ID.
-            - For broad queries spanning multiple data types, prefer unified_search.
+            - When the user asks about emails involving a person:
+            1) call findpeople with the name
+            2) then use the resolved email to decide next steps
+            - When the user asks about an email's content:
+            1) call list_email to get message IDs
+            2) then call read_email with the chosen ID
             - Present dates in a human-readable format.
         """,
         tools=[graph_mcp],

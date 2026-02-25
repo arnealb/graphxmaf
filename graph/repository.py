@@ -28,6 +28,8 @@ from msgraph.generated.users.item.events.events_request_builder import (
     EventsRequestBuilder,
 )
 
+from msgraph.generated.users.users_request_builder import UsersRequestBuilder
+
 from msgraph.generated.search.query.query_post_request_body import QueryPostRequestBody
 from msgraph.generated.models.search_request import SearchRequest
 from msgraph.generated.models.search_query import SearchQuery
@@ -35,6 +37,10 @@ from msgraph.generated.models.search_query import SearchQuery
 
 from entities.IGraphRepository import IGraphRepository
 from data.classes import Email, File, Contact, CalendarEvent, EmailAddress, Attendee
+
+import logging
+log = logging.getLogger("graph")
+log.setLevel(logging.INFO)
 
 
 class GraphRepository(IGraphRepository):
@@ -94,6 +100,157 @@ class GraphRepository(IGraphRepository):
         return user
 
 
+# people ------------------------------------------------------------------
+
+    async def _find_directory_users(self, query: str, top: int = 5) -> list[EmailAddress]:
+        params = UsersRequestBuilder.UsersRequestBuilderGetQueryParameters(
+            select=["displayName", "mail", "userPrincipalName"],
+            top=top,
+            filter=f"startswith(displayName,'{query}') or startswith(mail,'{query}') or startswith(userPrincipalName,'{query}')"
+        )
+
+        cfg = UsersRequestBuilder.UsersRequestBuilderGetRequestConfiguration(
+            query_parameters=params
+        )
+
+        users = await self.user_client.users.get(request_configuration=cfg)
+
+        out = []
+        if users and users.value:
+            for u in users.value:
+                email = u.mail or u.user_principal_name
+                if email:
+                    out.append(EmailAddress(name=u.display_name, address=email))
+
+        return out
+
+    async def _find_mail_people(self, query: str, top: int = 5) -> list[EmailAddress]:
+        params = MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters(
+            search=f'"{query}"',
+            select=["from","toRecipients","ccRecipients"],
+            top=top,
+        )
+
+        cfg = MessagesRequestBuilder.MessagesRequestBuilderGetRequestConfiguration(
+            query_parameters=params
+        )
+
+        res = await self.user_client.me.messages.get(request_configuration=cfg)
+
+        found = {}
+
+        if res and res.value:
+            for m in res.value:
+                candidates = []
+
+                if m.from_ and m.from_.email_address:
+                    candidates.append(m.from_.email_address)
+
+                for lst in [m.to_recipients, m.cc_recipients]:
+                    if lst:
+                        for r in lst:
+                            if r.email_address:
+                                candidates.append(r.email_address)
+
+                for c in candidates:
+                    if not c.address:
+                        continue
+                    key = c.address.lower()
+                    if key not in found:
+                        found[key] = EmailAddress(
+                            name=c.name,
+                            address=c.address
+                        )
+
+        return list(found.values())
+
+    async def _find_contacts(self, query: str, top: int = 5) -> list[EmailAddress]:
+        params = ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters(
+            select=["displayName","emailAddresses"],
+            top=top,
+        )
+
+
+        cfg = ContactsRequestBuilder.ContactsRequestBuilderGetRequestConfiguration(
+            query_parameters=params
+        )
+
+        print("before res")
+        res = await self.user_client.me.contacts.get(request_configuration=cfg)
+        print("after res")
+
+        out = []
+        if res and res.value:
+            for c in res.value:
+                if c.email_addresses:
+                    e = c.email_addresses[0]
+                    out.append(EmailAddress(name=e.name, address=e.address))
+
+        return out
+
+    # from kiota_abstractions.api_error import APIError  # meestal aanwezig in msgraph sdk
+
+    # async def _find_contacts(self, query: str, top: int = 5) -> list[EmailAddress]:
+    #     params = ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters(
+    #         select=["displayName","emailAddresses"],
+    #         top=top,
+    #     )
+
+    #     cfg = ContactsRequestBuilder.ContactsRequestBuilderGetRequestConfiguration(
+    #         query_parameters=params
+    #     )
+
+    #     print("before res")
+    #     try:
+    #         res = await self.user_client.me.contacts.get(request_configuration=cfg)
+    #     except Exception as e:
+    #         print("CONTACTS ERROR:", repr(e))
+    #         if hasattr(e, "error") and e.error:
+    #             print("API error:", e.error.code, e.error.message)
+    #         return []
+    #     print("after res")
+
+    #     out = []
+    #     if res and res.value:
+    #         for c in res.value:
+    #             if c.email_addresses:
+    #                 e = c.email_addresses[0]
+    #                 email = EmailAddress(name = e.name, address=e.address)
+    #                 print("Email: ", email)
+    #                 out.append(email)
+
+    #     return out
+
+
+    async def find_people(self, query: str, top: int = 5) -> list[EmailAddress]:
+        print("fetching contacts / dir / mail")
+        contacts = await self._find_contacts(query, top)
+        print("find contacts done")
+        directory = await self._find_directory_users(query, top)
+        mail = await self._find_mail_people(query, top)
+        print("fetching contacts / dir / mail done")
+
+        print(f"[find_people] query={query!r}")
+        print("  contacts :", [(p.name, p.address) for p in contacts])
+        print("  directory:", [(p.name, p.address) for p in directory])
+        print("  mail     :", [(p.name, p.address) for p in mail])
+
+        merged = {}
+
+        for src in (contacts + directory + mail):
+            if not src.address:
+                continue
+            merged[src.address.lower()] = src
+
+        merged_list = list(merged.values())[:top]
+
+        print("  merged   :", [(p.name, p.address) for p in merged_list])
+        print()
+
+        return merged_list
+
+# email ------------------------------------------------------------------
+
     async def get_inbox(self) -> List[Email]:
         query_params = MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters(
             select=["id", "from", "isRead", "receivedDateTime", "subject", "webLink"],
@@ -138,6 +295,8 @@ class GraphRepository(IGraphRepository):
 
         return emails
 
+
+# files ------------------------------------------------------------------
 
     async def get_drive_items(self) -> List[File]:
         query_params = ChildrenRequestBuilder.ChildrenRequestBuilderGetQueryParameters(
@@ -188,6 +347,47 @@ class GraphRepository(IGraphRepository):
             )
 
         return files 
+    
+    async def get_message_body(self, message_id: str) -> Email | None:
+        query_params = MessageItemRequestBuilder.MessageItemRequestBuilderGetQueryParameters(
+            select=["id", "subject", "from", "receivedDateTime", "body", "webLink"],
+        )
+
+        request_config = MessageItemRequestBuilder.MessageItemRequestBuilderGetRequestConfiguration(
+            query_parameters=query_params
+        )
+
+        m = await self.user_client.me.messages.by_message_id(message_id).get(
+            request_configuration=request_config
+        )
+
+        if not m:
+            return None
+
+        sender_name = ""
+        sender_email = None
+
+        if m.from_ and m.from_.email_address:
+            sender_name = (
+                m.from_.email_address.name
+                or m.from_.email_address.address
+                or ""
+            )
+            sender_email = m.from_.email_address.address
+
+        body = m.body.content if m.body and m.body.content else None
+
+        return Email(
+            id=m.id or "",
+            subject=m.subject or "",
+            sender_name=sender_name,
+            sender_email=sender_email,
+            received=m.received_date_time,
+            body=body,
+            web_link=m.web_link,   # ← correct
+        )
+
+# contacts ------------------------------------------------------------------
 
     async def get_contacts(self) -> list[Contact]:
         query_params = ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters(
@@ -204,10 +404,8 @@ class GraphRepository(IGraphRepository):
         )
 
         contacts: list[Contact] = []
-        if not result or not result.value:
-            return contacts
 
-        if not result or result.value:
+        if not result or not result.value:
             return []
         
         for c in result.value:
@@ -221,6 +419,8 @@ class GraphRepository(IGraphRepository):
             )
 
         return contacts
+
+# contacts ------------------------------------------------------------------
 
     async def get_upcoming_events(self) -> list[CalendarEvent]:
         now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
@@ -280,46 +480,6 @@ class GraphRepository(IGraphRepository):
         )
 
 
-    async def get_message_body(self, message_id: str) -> Email | None:
-        query_params = MessageItemRequestBuilder.MessageItemRequestBuilderGetQueryParameters(
-            select=["id", "subject", "from", "receivedDateTime", "body", "webLink"],
-        )
-
-        request_config = MessageItemRequestBuilder.MessageItemRequestBuilderGetRequestConfiguration(
-            query_parameters=query_params
-        )
-
-        m = await self.user_client.me.messages.by_message_id(message_id).get(
-            request_configuration=request_config
-        )
-
-        if not m:
-            return None
-
-        sender_name = ""
-        sender_email = None
-
-        if m.from_ and m.from_.email_address:
-            sender_name = (
-                m.from_.email_address.name
-                or m.from_.email_address.address
-                or ""
-            )
-            sender_email = m.from_.email_address.address
-
-        body = m.body.content if m.body and m.body.content else None
-
-        return Email(
-            id=m.id or "",
-            subject=m.subject or "",
-            sender_name=sender_name,
-            sender_email=sender_email,
-            received=m.received_date_time,
-            body=body,
-            web_link=m.web_link,   # ← correct
-        )
-            
-
 
     async def search(self, query: str, entity_types: list[str], size: int = 25):
         search_query = SearchQuery()
@@ -336,3 +496,4 @@ class GraphRepository(IGraphRepository):
 
         result = await self.user_client.search.query.post(body)
         return result
+
