@@ -476,21 +476,21 @@ class GraphRepository(IGraphRepository):
 
 
 
-    async def search(self, query: str, entity_types: list[str], size: int = 25):
-        search_query = SearchQuery()
-        search_query.query_string = query
+    # async def search(self, query: str, entity_types: list[str], size: int = 25):
+    #     search_query = SearchQuery()
+    #     search_query.query_string = query
 
-        search_request = SearchRequest()
-        search_request.entity_types = entity_types
-        search_request.query = search_query
-        search_request.from_ = 0
-        search_request.size = size
+    #     search_request = SearchRequest()
+    #     search_request.entity_types = entity_types
+    #     search_request.query = search_query
+    #     search_request.from_ = 0
+    #     search_request.size = size
 
-        body = QueryPostRequestBody()
-        body.requests = [search_request]
+    #     body = QueryPostRequestBody()
+    #     body.requests = [search_request]
 
-        result = await self.user_client.search.query.post(body)
-        return result
+    #     result = await self.user_client.search.query.post(body)
+    #     return result
 
 
 
@@ -521,12 +521,12 @@ class GraphRepository(IGraphRepository):
             filters.append(f"contains(from/emailAddress/address,'{sender}')")
 
         if received_after:
-            iso = received_after.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            # iso = received_after.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
             filters.append(f"receivedDateTime ge {received_after}")
 
         if received_before:
-            iso = received_before.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-            filters.append(f"receivedDateTime le {iso}")
+            # iso = received_before.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            filters.append(f"receivedDateTime le {received_before}")
 
         f = " and ".join(filters) if filters else None
 

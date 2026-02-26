@@ -111,15 +111,26 @@ async def list_email(ctx: Context) -> str:
     agent = _make_agent(token)
     return await agent.list_email()
 
-# @mcp.tool()
-# async def unified_search(
-#     ctx: Context,
-#     query: str,
-#     entities: list[str] = ["message", "event", "driveItem", "person"],
-# ) -> str:
-#     token = _extract_token(ctx)
-#     agent = _make_agent(token)
-#     return await agent.unified_search(query=query, entities=entities)
+@mcp.tool()
+async def search_email(
+    ctx: Context,
+    sender: str | None = None,
+    subject: str | None = None,
+    received_after: str | None = None,
+    received_before: str | None = None,
+) -> str:
+    token = _extract_token(ctx)
+    agent = _make_agent(token)
+
+    print(f"search emails met: sender={sender!r}, subject={subject!r}, received_after={received_after!r}, received_before={received_before!r}")
+
+    return await agent.search_emails(
+        sender=sender,
+        subject=subject,
+        received_before=received_before,
+        received_after=received_after,
+    )
+
 
 if __name__ == "__main__":
     mcp.run(transport="streamable-http")
