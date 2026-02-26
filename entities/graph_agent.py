@@ -46,6 +46,38 @@ class GraphAgent:
 
 # email ------------------------------------------------------------------
 
+    async def search_emails(
+        self,
+        sender: str | None = None,
+        subject: str | None = None,
+        received_after=None,
+        received_before=None,
+    ) -> str:
+        emails = await self.repo.search_emails(
+            sender=sender,
+            subject=subject,
+            received_after=received_after,
+            received_before=received_before,
+        )
+
+        if not emails:
+            return "No emails found."
+
+        # cache
+        self._email_cache = {e.id: e for e in emails}
+
+        out = []
+        for e in emails:
+            out.append(
+                f"ID: {e.id}\n"
+                f"Subject: {e.subject}\n"
+                f"From: {e.sender_name}\n"
+                f"Received: {e.received}\n"
+                f"webLink: {e.web_link}\n"
+            )
+
+        return "\n".join(out)
+
     async def list_email(self) -> str:
         emails = await self.repo.get_inbox()
         if not emails:
@@ -59,7 +91,7 @@ class GraphAgent:
             out.append(
                 f"ID: {e.id}\n"
                 f"Subject: {e.subject}\n"
-                f"From: {e.sender_name}\n"
+                f"From: {e.sender_name}, {e.sender_email}\n"
                 f"Received: {e.received}\n"
                 f"webLink: {e.web_link}\n"
             )

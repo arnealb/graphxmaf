@@ -1,4 +1,6 @@
 import sys
+from dataclasses import dataclass
+from typing import Optional
 from configparser import SectionProxy
 from datetime import datetime, timezone
 from typing import List
@@ -490,3 +492,73 @@ class GraphRepository(IGraphRepository):
         result = await self.user_client.search.query.post(body)
         return result
 
+
+
+
+
+
+    def _iso_utc(dt: datetime) -> str:
+        return dt.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+
+
+    async def search_emails(
+        self,
+        sender: str | None = None,
+        subject: str | None = None,
+        received_after: datetime | None = None,
+        received_before: datetime | None = None,
+        top: int = 25,
+    ) -> list[Email]:
+        filters: list[str] = []
+
+        if subject:
+            filters.append(f"contains(subject, '{subject}')")
+
+        if sender:
+            # filters.append(f"contains(from/emailAddress/address, '{sender})'")
+            filters.append(f"contains(from/emailAddress/address,'{sender}')")
+
+        if received_after:
+            iso = received_after.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            filters.append(f"receivedDateTime ge {received_after}")
+
+        if received_before:
+            iso = received_before.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            filters.append(f"receivedDateTime le {iso}")
+
+        f = " and ".join(filters) if filters else None
+
+        qp = MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters(
+            select=["id", "subject", "from", "receivedDateTime", "webLink"],
+            top=top,
+            filter=f,
+        )
+
+        cfg = MessagesRequestBuilder.MessagesRequestBuilderGetRequestConfiguration(
+            query_parameters=qp
+        )
+
+        res = await self.user_client.me.messages.get(request_configuration=cfg)
+
+        out: list[Email] = []
+        for m in (res.value or []) if res else []:
+            name = ""
+            addr = None
+            if m.from_ and m.from_.email_address:
+                name = m.from_.email_address.name or m.from_.email_address.address or ""
+                addr = m.from_.email_address.address
+
+            out.append(
+                Email(
+                    id=m.id or "",
+                    subject=m.subject or "",
+                    sender_name=name,
+                    sender_email=addr,
+                    received=m.received_date_time,
+                    web_link=m.web_link,
+                )
+            )
+
+        return out
