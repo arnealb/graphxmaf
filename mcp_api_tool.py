@@ -109,6 +109,12 @@ async def search_email(
 
 # --------------------------------------------------------------- 
 @mcp.tool()
+async def search_files(ctx: Context, query: str, drive_id: str | None = None, folder_id: str = "root") -> str:
+    token = _extract_token(ctx)
+    agent = _make_agent(token)
+    return await agent.search_files(query=query, drive_id=drive_id, folder_id=folder_id)
+
+@mcp.tool()
 async def list_files(ctx: Context) -> str:
     token = _extract_token(ctx)
     agent = _make_agent(token)

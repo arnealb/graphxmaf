@@ -4,6 +4,7 @@ from typing import Optional
 from configparser import SectionProxy
 from datetime import datetime, timezone
 from typing import List
+import httpx
 
 from azure.identity import DeviceCodeCredential
 from msgraph import GraphServiceClient
@@ -412,7 +413,10 @@ class GraphRepository(IGraphRepository):
             )
 
         return files 
-    
+
+
+
+        
 
 
 # contacts ------------------------------------------------------------------
@@ -545,3 +549,123 @@ class GraphRepository(IGraphRepository):
 
 
 
+    # async def search_drive_items(
+    #         self,
+    #         query: str,
+    #         top: int = 25,
+    #         drive_id: str | None = None,
+    #         folder_id: str = "root",
+    #     ) -> list[File]:
+    #         if drive_id is None:
+    #             drive = await self.user_client.me.drive.get()
+    #             drive_id = drive.id
+
+    #         if folder_id == "root":
+    #             url = f"/drives/{drive_id}/root/search(q='{query}')"
+    #         else:
+    #             url = f"/drives/{drive_id}/items/{folder_id}/search(q='{query}')"
+
+    #         params = {
+    #             "$select": ",".join([
+    #                 "id",
+    #                 "name",
+    #                 "webUrl",
+    #                 "size",
+    #                 "createdDateTime",
+    #                 "lastModifiedDateTime",
+    #                 "file",
+    #                 "folder",
+    #                 "parentReference",
+    #             ]),
+    #             "$top": str(top),
+    #         }
+
+    #         request_info = self.user_client.request_adapter.create_request_information()
+    #         request_info.http_method = "GET"
+    #         request_info.url_template = url
+    #         request_info.query_parameters = params
+
+    #         res = await self.user_client.request_adapter.send_async(
+    #             request_info,
+    #             lambda x: x,
+    #             None,
+    #         )
+
+    #         items = (res or {}).get("value", [])
+    #         out: list[File] = []
+
+    #         for item in items:
+    #             out.append(
+    #                 File(
+    #                     id=item.get("id") or "",
+    #                     name=item.get("name") or "",
+    #                     is_folder=item.get("folder") is not None,
+    #                     size=item.get("size"),
+    #                     created=item.get("createdDateTime"),
+    #                     modified=item.get("lastModifiedDateTime"),
+    #                     parent_id=(item.get("parentReference") or {}).get("id"),
+    #                     web_link=item.get("webUrl"),
+    #                 )
+    #             )
+
+    #         return out
+
+
+    async def search_drive_items(
+        self,
+        query: str,
+        top: int = 25,
+        drive_id: str | None = None,
+        folder_id: str = "root",
+    ) -> list[File]:
+        if drive_id is None:
+            drive = await self.user_client.me.drive.get()
+            drive_id = drive.id
+
+        # escape single quotes for OData string literal
+        q = query.replace("'", "''")
+
+        if folder_id == "root":
+            url = f"https://graph.microsoft.com/v1.0/drives/{drive_id}/root/search(q='{q}')"
+        else:
+            url = f"https://graph.microsoft.com/v1.0/drives/{drive_id}/items/{folder_id}/search(q='{q}')"
+
+        params = {
+            "$select": ",".join([
+                "id",
+                "name",
+                "webUrl",
+                "size",
+                "createdDateTime",
+                "lastModifiedDateTime",
+                "file",
+                "folder",
+                "parentReference",
+            ]),
+            "$top": str(top),
+        }
+
+        token = self.get_user_token()
+        headers = {"Authorization": f"Bearer {token}"}
+
+        async with httpx.AsyncClient(timeout=30) as client:
+            r = await client.get(url, params=params, headers=headers)
+            r.raise_for_status()
+            data = r.json()
+
+        out: list[File] = []
+        for item in data.get("value", []):
+            out.append(
+                File(
+                    id=item.get("id") or "",
+                    name=item.get("name") or "",
+                    is_folder=item.get("folder") is not None,
+                    size=item.get("size"),
+                    created=item.get("createdDateTime"),
+                    modified=item.get("lastModifiedDateTime"),
+                    parent_id=(item.get("parentReference") or {}).get("id"),
+                    web_link=item.get("webUrl"),
+                )
+            )
+
+        return out

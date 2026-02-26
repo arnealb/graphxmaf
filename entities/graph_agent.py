@@ -135,6 +135,35 @@ class GraphAgent:
             )
         return "\n".join(out)
 
+    async def search_files(
+            self,
+            query: str,
+            drive_id: str | None = None,
+            folder_id: str = "root",
+        ) -> str:
+            files = await self.repo.search_drive_items(
+                query=query,
+                top=25,
+                drive_id=drive_id,
+                folder_id=folder_id,
+            )
+
+            if not files:
+                return "No files found."
+
+            self._file_cache = {f.id: f for f in files if f.id}
+
+            out = []
+            for f in files:
+                out.append(
+                    f"ID: {f.id}\n"
+                    f"Name: {f.name}\n"
+                    f"Type: {'Folder' if f.is_folder else 'File'}\n"
+                    f"WebLink: {f.web_link}\n"
+                )
+            return "\n".join(out)
+
+
 # contacts ------------------------------------------------------------------
 
     async def list_contacts(self) -> str:
