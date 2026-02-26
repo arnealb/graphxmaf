@@ -82,30 +82,6 @@ async def findpeople(ctx: Context, name: str) -> str:
     return await agent.find_people(name)
 
 @mcp.tool()
-async def list_files(ctx: Context) -> str:
-    token = _extract_token(ctx)
-    agent = _make_agent(token)
-    return await agent.list_files()
-
-@mcp.tool()
-async def list_contacts(ctx: Context) -> str:
-    token = _extract_token(ctx)
-    agent = _make_agent(token)
-    return await agent.list_contacts()
-
-@mcp.tool()
-async def list_calendar(ctx: Context) -> str:
-    token = _extract_token(ctx)
-    agent = _make_agent(token)
-    return await agent.list_calendar()
-
-@mcp.tool()
-async def read_email(ctx: Context, message_id: str) -> str:
-    token = _extract_token(ctx)
-    agent = _make_agent(token)
-    return await agent.read_email(message_id)
-
-@mcp.tool()
 async def list_email(ctx: Context) -> str:
     token = _extract_token(ctx)
     agent = _make_agent(token)
@@ -130,6 +106,32 @@ async def search_email(
         received_before=received_before,
         received_after=received_after,
     )
+
+# --------------------------------------------------------------- 
+@mcp.tool()
+async def list_files(ctx: Context) -> str:
+    token = _extract_token(ctx)
+    agent = _make_agent(token)
+    return await agent.list_files()
+
+@mcp.tool()
+async def list_contacts(ctx: Context) -> str:
+    token = _extract_token(ctx)
+    agent = _make_agent(token)
+    return await agent.list_contacts()
+
+@mcp.tool()
+async def list_calendar(ctx: Context) -> str:
+    token = _extract_token(ctx)
+    agent = _make_agent(token)
+    return await agent.list_calendar()
+
+@mcp.tool()
+async def read_email(ctx: Context, message_id: str) -> str:
+    token = _extract_token(ctx)
+    agent = _make_agent(token)
+    return await agent.read_email(message_id)
+
 
 
 if __name__ == "__main__":
