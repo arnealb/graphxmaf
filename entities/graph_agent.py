@@ -141,11 +141,11 @@ class GraphAgent:
             drive_id: str | None = None,
             folder_id: str = "root",
         ) -> str:
-            files = await self.repo.search_drive_items(
+            files = await self.repo.search_drive_items_sdk(
                 query=query,
                 top=25,
                 drive_id=drive_id,
-                folder_id=folder_id,
+                # folder_id=folder_id,
             )
 
             if not files:

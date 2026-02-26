@@ -31,6 +31,10 @@ from msgraph.generated.users.item.events.events_request_builder import (
     EventsRequestBuilder,
 )
 
+from msgraph.generated.drives.item.items.item.search_with_q.search_with_q_request_builder import (
+    SearchWithQRequestBuilder,
+)
+
 from msgraph.generated.users.users_request_builder import UsersRequestBuilder
 
 from msgraph.generated.search.query.query_post_request_body import QueryPostRequestBody
@@ -611,61 +615,102 @@ class GraphRepository(IGraphRepository):
     #         return out
 
 
-    async def search_drive_items(
-        self,
-        query: str,
-        top: int = 25,
-        drive_id: str | None = None,
-        folder_id: str = "root",
-    ) -> list[File]:
+    # this is a backup
+    # async def search_drive_items(
+    #     self,
+    #     query: str,
+    #     top: int = 25,
+    #     drive_id: str | None = None,
+    #     folder_id: str = "root",
+    # ) -> list[File]:
+    #     if drive_id is None:
+    #         drive = await self.user_client.me.drive.get()
+    #         drive_id = drive.id
+
+    #     # escape single quotes for OData string literal
+    #     q = query.replace("'", "''")
+
+    #     if folder_id == "root":
+    #         url = f"https://graph.microsoft.com/v1.0/drives/{drive_id}/root/search(q='{q}')"
+    #     else:
+    #         url = f"https://graph.microsoft.com/v1.0/drives/{drive_id}/items/{folder_id}/search(q='{q}')"
+
+    #     params = {
+    #         "$select": ",".join([
+    #             "id",
+    #             "name",
+    #             "webUrl",
+    #             "size",
+    #             "createdDateTime",
+    #             "lastModifiedDateTime",
+    #             "file",
+    #             "folder",
+    #             "parentReference",
+    #         ]),
+    #         "$top": str(top),
+    #     }
+
+    #     token = self.get_user_token()
+    #     headers = {"Authorization": f"Bearer {token}"}
+
+    #     async with httpx.AsyncClient(timeout=30) as client:
+    #         r = await client.get(url, params=params, headers=headers)
+    #         r.raise_for_status()
+    #         data = r.json()
+
+    #     out: list[File] = []
+    #     for item in data.get("value", []):
+    #         out.append(
+    #             File(
+    #                 id=item.get("id") or "",
+    #                 name=item.get("name") or "",
+    #                 is_folder=item.get("folder") is not None,
+    #                 size=item.get("size"),
+    #                 created=item.get("createdDateTime"),
+    #                 modified=item.get("lastModifiedDateTime"),
+    #                 parent_id=(item.get("parentReference") or {}).get("id"),
+    #                 web_link=item.get("webUrl"),
+    #             )
+    #         )
+
+    #     return out
+
+
+
+
+    async def search_drive_items_sdk(self, query: str, top: int = 25, drive_id: str | None = None) -> list[File]:
         if drive_id is None:
             drive = await self.user_client.me.drive.get()
             drive_id = drive.id
 
-        # escape single quotes for OData string literal
-        q = query.replace("'", "''")
+        qp = SearchWithQRequestBuilder.SearchWithQRequestBuilderGetQueryParameters(
+            select=[
+                "id","name","webUrl","size","createdDateTime","lastModifiedDateTime",
+                "file","folder","parentReference"
+            ],
+            top=top,
+        )
+        cfg = SearchWithQRequestBuilder.SearchWithQRequestBuilderGetRequestConfiguration(
+            query_parameters=qp
+        )
 
-        if folder_id == "root":
-            url = f"https://graph.microsoft.com/v1.0/drives/{drive_id}/root/search(q='{q}')"
-        else:
-            url = f"https://graph.microsoft.com/v1.0/drives/{drive_id}/items/{folder_id}/search(q='{q}')"
-
-        params = {
-            "$select": ",".join([
-                "id",
-                "name",
-                "webUrl",
-                "size",
-                "createdDateTime",
-                "lastModifiedDateTime",
-                "file",
-                "folder",
-                "parentReference",
-            ]),
-            "$top": str(top),
-        }
-
-        token = self.get_user_token()
-        headers = {"Authorization": f"Bearer {token}"}
-
-        async with httpx.AsyncClient(timeout=30) as client:
-            r = await client.get(url, params=params, headers=headers)
-            r.raise_for_status()
-            data = r.json()
+        res = await (
+            self.user_client.drives.by_drive_id(drive_id)
+            .items.by_drive_item_id("root")
+            .search_with_q(query)
+            .get(request_configuration=cfg)
+        )
 
         out: list[File] = []
-        for item in data.get("value", []):
-            out.append(
-                File(
-                    id=item.get("id") or "",
-                    name=item.get("name") or "",
-                    is_folder=item.get("folder") is not None,
-                    size=item.get("size"),
-                    created=item.get("createdDateTime"),
-                    modified=item.get("lastModifiedDateTime"),
-                    parent_id=(item.get("parentReference") or {}).get("id"),
-                    web_link=item.get("webUrl"),
-                )
-            )
-
+        for item in (res.value or []) if res else []:
+            out.append(File(
+                id=item.id or "",
+                name=item.name or "",
+                is_folder=item.folder is not None,
+                size=item.size,
+                created=item.created_date_time,
+                modified=item.last_modified_date_time,
+                parent_id=item.parent_reference.id if item.parent_reference else None,
+                web_link=item.web_url,
+            ))
         return out

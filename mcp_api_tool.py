@@ -114,11 +114,11 @@ async def search_files(ctx: Context, query: str, drive_id: str | None = None, fo
     agent = _make_agent(token)
     return await agent.search_files(query=query, drive_id=drive_id, folder_id=folder_id)
 
-@mcp.tool()
-async def list_files(ctx: Context) -> str:
-    token = _extract_token(ctx)
-    agent = _make_agent(token)
-    return await agent.list_files()
+# @mcp.tool()
+# async def list_files(ctx: Context) -> str:
+#     token = _extract_token(ctx)
+#     agent = _make_agent(token)
+#     return await agent.list_files()
 
 @mcp.tool()
 async def list_contacts(ctx: Context) -> str:
