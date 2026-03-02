@@ -1,0 +1,85 @@
+- name: whoami
+  description: Identify the currently authenticated user
+  method: whoami
+
+# ------------------------------------------------------------------------------- 
+
+- name: findpeople
+  description: Resolve a person name to one or more email addresses
+  method: find_people
+  params:
+    - name: name
+      type: str
+
+# ------------------------------------------------------------------------------- 
+
+- name: list_email
+  description: List the 25 most recent emails from the inbox
+  method: list_email
+
+# ------------------------------------------------------------------------------- 
+
+- name: search_email
+  description: Search emails by sender address, subject, or received date range
+  method: search_emails
+  params:
+    - name: sender
+      type: "str | None"
+    - name: subject
+      type: "str | None"
+    - name: received_after
+      type: "str | None"
+    - name: received_before
+      type: "str | None"
+
+# ------------------------------------------------------------------------------- 
+
+- name: read_email
+  description: Read the full body of a specific email by its ID
+  method: read_email
+  params:
+    - name: message_id
+      type: str
+
+# ------------------------------------------------------------------------------- 
+
+- name: search_files
+  description: Search files and folders in OneDrive
+  method: search_files
+  params:
+    - name: query
+      type: str
+    - name: drive_id
+      type: "str | None"
+    - name: folder_id
+      type: str
+      default: "root"
+
+# ------------------------------------------------------------------------------- 
+
+- name: list_contacts
+  description: List the user's contacts
+  method: list_contacts
+
+# ------------------------------------------------------------------------------- 
+
+- name: list_calendar
+  description: List upcoming and recent calendar events
+  method: list_calendar
+
+# ------------------------------------------------------------------------------- 
+
+- name: search_calendar
+  description: Search calendar events by subject text, location, attendee, or date range
+  method: search_events
+  params:
+    - name: text
+      type: "str | None"
+    - name: location
+      type: "str | None"
+    - name: attendee
+      type: "str | None"
+    - name: start_after
+      type: "str | None"
+    - name: start_before
+      type: "str | None"
