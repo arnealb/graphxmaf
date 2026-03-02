@@ -12,7 +12,7 @@ import msal
 
 from agent_framework import MCPStreamableHTTPTool
 from agent_framework.devui import serve
-from agent import create_graph_agent
+from orchestrator import setup
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -173,13 +173,9 @@ def main() -> None:
         http_client=http_client,
     )
 
-
-
-
-
     try:
-        agent = create_graph_agent(graph_mcp=graph_mcp)
-        serve(entities=[agent], port=8080, auto_open=True)
+        workflow = setup(graph_mcp=graph_mcp)
+        serve(entities=[workflow], port=8080, auto_open=True)
     finally:
         if server_proc is not None:
             server_proc.terminate()
