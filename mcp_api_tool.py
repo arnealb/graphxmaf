@@ -1,18 +1,12 @@
 import configparser
 import os
-import time
 
 from mcp.server.fastmcp import FastMCP, Context
+from mcp.shared.context import RequestContext
 from starlette.requests import Request
 from starlette.responses import JSONResponse
-from azure.core.credentials import AccessToken
 
-from graph.repository import GraphRepository
-from auth.token_credential import StaticTokenCredential, _make_graph_client
-
-from graph.repository import GraphRepository
-from auth.token_credential import StaticTokenCredential
-from entities.graph_agent import GraphAgent
+from graph.mcp_router import register_graph_tools
 
 
 mcp = FastMCP("graph", port=8000)
@@ -25,10 +19,7 @@ _TENANT_ID = _azure_settings["tenantId"]
 _GRAPH_SCOPES = _azure_settings["graphUserScopes"].split(" ")
 _RESOURCE_URI = os.environ.get("MCP_RESOURCE_URI", "http://localhost:8000")
 
-_agents: dict[str, GraphAgent] = {}
 
-
-# prm shit -> hoe moeten user authenticeren
 @mcp.custom_route("/.well-known/oauth-protected-resource", methods=["GET"])
 async def protected_resource_metadata(_request: Request) -> JSONResponse:
     return JSONResponse({
@@ -41,7 +32,6 @@ async def protected_resource_metadata(_request: Request) -> JSONResponse:
     })
 
 
-# gewoon fancy way om bearer token uit http req te halen -> me foutmeldingen
 def _extract_token(ctx: Context) -> str:
     http_request = ctx.request_context.request
     if http_request is None:
@@ -59,105 +49,74 @@ def _extract_token(ctx: Context) -> str:
     return auth[7:]
 
 
-# def _make_agent(token: str) -> GraphAgent:
-#     repo = GraphRepository(_azure_settings, credential=StaticTokenCredential(token))
-#     return GraphAgent(repo)
+register_graph_tools(mcp, _azure_settings, _extract_token)
 
-def _make_agent(token: str) -> GraphAgent:
-    if token not in _agents:
-        repo = GraphRepository(_azure_settings, credential=StaticTokenCredential(token))
-        _agents[token] = GraphAgent(repo)
-    return _agents[token]
 
-@mcp.tool()
-async def whoami(ctx: Context) -> str:
-    token = _extract_token(ctx)
-    agent = _make_agent(token)
-    return await agent.whoami()
+# ── /mcp-json REST bridge ─────────────────────────────────────────────────────
+#
+# POST { "tool": "graph.list-mail-messages", "params": { "$top": 5 } }
+#
+# Why the original bridge returned known_tools: []:
+#   mcp.app.state has no "tools" key — FastMCP stores tools in
+#   mcp._tool_manager (a ToolManager), not in the Starlette app state.
+#
+# Why the original Context construction silently failed:
+#   request.scope.get("fastmcp_context") is always None — FastMCP never
+#   writes into the ASGI scope under that key.  Passing None means
+#   ctx.request_context raises ValueError("Context is not available outside
+#   of a request"), which is exactly what _extract_token hits first.
+#
+# Fix: build a RequestContext whose .request field is the real Starlette
+# Request arriving at this endpoint.  _extract_token only reads
+# ctx.request_context.request.headers, so session/lifespan_context can be
+# None — the Graph tool handlers never touch those fields.
 
-@mcp.tool()
-async def findpeople(ctx: Context, name: str) -> str:
-    token = _extract_token(ctx)
-    agent = _make_agent(token)
-    return await agent.find_people(name)
+@mcp.custom_route("/mcp-json", methods=["POST"])
+async def mcp_json_bridge(request: Request) -> JSONResponse:
+    try:
+        data = await request.json()
+    except Exception:
+        return JSONResponse({"error": "invalid JSON body"}, status_code=400)
 
-@mcp.tool()
-async def list_email(ctx: Context) -> str:
-    token = _extract_token(ctx)
-    agent = _make_agent(token)
-    return await agent.list_email()
+    tool_name: str | None = data.get("tool")
+    params: dict = data.get("params", {})
 
-@mcp.tool()
-async def search_email(
-    ctx: Context,
-    sender: str | None = None,
-    subject: str | None = None,
-    received_after: str | None = None,
-    received_before: str | None = None,
-) -> str:
-    token = _extract_token(ctx)
-    agent = _make_agent(token)
+    if not tool_name:
+        return JSONResponse({"error": "missing 'tool' field"}, status_code=400)
 
-    print(f"search emails met: sender={sender!r}, subject={subject!r}, received_after={received_after!r}, received_before={received_before!r}")
+    # ── locate the tool ───────────────────────────────────────────────────────
+    # FastMCP tools live in mcp._tool_manager._tools.
+    # Use the public API: get_tool() / list_tools().
+    tool = mcp._tool_manager.get_tool(tool_name)
+    if tool is None:
+        known = [t.name for t in mcp._tool_manager.list_tools()]
+        return JSONResponse(
+            {"error": f"unknown tool {tool_name!r}", "known_tools": known},
+            status_code=404,
+        )
 
-    return await agent.search_emails(
-        sender=sender,
-        subject=subject,
-        received_before=received_before,
-        received_after=received_after,
+    # ── build a Context that carries the real HTTP request ────────────────────
+    # RequestContext is a dataclass; Python does not enforce types at runtime.
+    # session=None and lifespan_context=None are safe because our tool handlers
+    # only call ctx.request_context.request (to read the Authorization header).
+    rc = RequestContext(
+        request_id="bridge",
+        meta=None,
+        session=None,        # type: ignore[arg-type]
+        lifespan_context=None,
+        request=request,     # ← gives _extract_token its Authorization header
     )
+    ctx = Context(request_context=rc, fastmcp=mcp)
 
-# --------------------------------------------------------------- 
-@mcp.tool()
-async def search_files(ctx: Context, query: str, drive_id: str | None = None, folder_id: str = "root") -> str:
-    token = _extract_token(ctx)
-    agent = _make_agent(token)
-    return await agent.search_files(query=query, drive_id=drive_id, folder_id=folder_id)
-
-# @mcp.tool()
-# async def list_files(ctx: Context) -> str:
-#     token = _extract_token(ctx)
-#     agent = _make_agent(token)
-#     return await agent.list_files()
-
-@mcp.tool()
-async def list_contacts(ctx: Context) -> str:
-    token = _extract_token(ctx)
-    agent = _make_agent(token)
-    return await agent.list_contacts()
-
-@mcp.tool()
-async def list_calendar(ctx: Context) -> str:
-    token = _extract_token(ctx)
-    agent = _make_agent(token)
-    return await agent.list_calendar()
-
-@mcp.tool()
-async def search_calendar(
-    ctx: Context,
-    text: str | None = None,
-    location: str | None = None,
-    attendee: str | None = None,
-    start_after: str | None = None,
-    start_before: str | None = None,
-) -> str:
-    token = _extract_token(ctx)
-    agent = _make_agent(token)
-
-    return await agent.search_events(
-        text=text,
-        location=location,
-        attendee=attendee,
-        start_after=start_after,
-        start_before=start_before,
-    )
-
-@mcp.tool()
-async def read_email(ctx: Context, message_id: str) -> str:
-    token = _extract_token(ctx)
-    agent = _make_agent(token)
-    return await agent.read_email(message_id)
-
+    # ── execute ───────────────────────────────────────────────────────────────
+    # call_tool handles argument validation and injects ctx into context_kwarg.
+    # Do NOT call the raw fn directly — that bypasses both.
+    try:
+        print("calling tool: ", tool_name)
+        result = await mcp._tool_manager.call_tool(tool_name, params, context=ctx)
+        return JSONResponse({"result": result})
+    except Exception as exc:
+        return JSONResponse({"error": str(exc)}, status_code=500)
 
 
 if __name__ == "__main__":

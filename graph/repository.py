@@ -81,6 +81,27 @@ class GraphRepository(IGraphRepository):
         token = self.device_code_credential.get_token(*scopes)
         return token.token
 
+    async def raw(
+        self,
+        path: str,
+        method: str = "GET",
+        query: dict | None = None,
+        body: dict | None = None,
+    ) -> dict:
+        """Make an arbitrary Microsoft Graph API call and return the JSON response."""
+        token = self.get_user_token()
+        url = f"https://graph.microsoft.com/v1.0{path}"
+        async with httpx.AsyncClient(timeout=30) as client:
+            r = await client.request(
+                method,
+                url,
+                params=query,
+                headers={"Authorization": f"Bearer {token}", "Accept": "application/json"},
+                json=body if body else None,
+            )
+            r.raise_for_status()
+            return r.json()
+
     def _device_code_callback(self, verification_uri, user_code, expires_on):
         print("\nAuthenticate here:", file=sys.stderr)
         print(verification_uri, file=sys.stderr)
@@ -105,6 +126,31 @@ class GraphRepository(IGraphRepository):
         )
 
         return user
+
+# v2 - delcartive ------------------------------------------------------------------
+
+    async def raw(
+        self,
+        path: str,
+        method: str = "GET",
+        query: dict | None = None,
+        body: dict | None = None,
+    ):
+        token = self.get_user_token()
+
+        url = f"https://graph.microsoft.com/v1.0{path}"
+
+        async with httpx.AsyncClient(timeout=30) as client:
+            resp = await client.request(
+                method,
+                url,
+                params=query,
+                json=body,
+                headers={"Authorization": f"Bearer {token}"},
+            )
+            resp.raise_for_status()
+            return resp.json()
+
 
 
 # people ------------------------------------------------------------------
@@ -716,6 +762,12 @@ class GraphRepository(IGraphRepository):
     #         )
 
     #     return out
+
+
+    # --------------------------------------------------------------------------------
+    # v2
+
+
 
 
 

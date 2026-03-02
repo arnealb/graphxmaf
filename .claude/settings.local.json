@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"raw\\\\|httpx\\\\|get_user_token\\\\|_graph_client\\\\|request_adapter\" /c/Users/AALB/Desktop/mp/graph/graphxmaf/.venv/Lib/site-packages/msgraph/graph_service_client.py 2>/dev/null | head -20\ngrep -rn \"request_adapter\\\\|send_async\\\\|raw_url\\\\|RawUrlRequestBuilder\" /c/Users/AALB/Desktop/mp/graph/graphxmaf/.venv/Lib/site-packages/kiota_http/ 2>/dev/null | head -10)",
+      "Bash(.venv/Scripts/python:*)"
+    ]
+  }
+}

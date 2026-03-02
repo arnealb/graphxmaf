@@ -1,0 +1,17 @@
+- name: list-mail-messages
+  method: GET
+  path: /me/messages
+  query:
+    - filter
+    - search
+    - select
+    - top
+    - orderby
+  llmTip: |
+    Use $search for full-text search. Wrap value in quotes.
+
+- name: get-mail-message
+  method: GET
+  path: /me/messages/{message_id}
+  pathParams:
+    - message_id
