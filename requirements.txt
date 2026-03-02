@@ -1,0 +1,19 @@
+# Microsoft Graph & Auth
+azure-identity>=1.25.2
+msgraph-sdk>=1.54.0
+msal>=1.34.0
+
+# MCP server
+mcp>=1.26.0
+starlette>=0.52.1
+
+# HTTP
+httpx>=0.28.1
+
+# OpenAI (used via agent_framework)
+openai>=2.21.0
+
+# Microsoft Agent Framework
+# Install from: https://aka.ms/agent-framework
+# pip install agent-framework --extra-index-url <private-feed-url>
+agent-framework>=1.0.0b251120
