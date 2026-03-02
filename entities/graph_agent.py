@@ -1,27 +1,83 @@
-from data.classes import Email
+from data.classes import Email, File, Contact, CalendarEvent, EmailAddress 
+from datetime import datetime
+
+
 
 class GraphAgent:
     def __init__(self, repo):
         self.repo = repo
         self._email_cache: dict[str, Email] = {}
+        self._file_cache: dict[str, File] = {}
+        self._contact_cache: dict[str, Contact] = {}
+        self._event_cache: dict[str, CalendarEvent] = {}
+        self._people_cache: dict[str, EmailAddress] = {}
+
+# whoami ------------------------------------------------------------------
 
     async def whoami(self) -> str:
         user = await self.repo.get_user()
         return f"Name: {user.display_name}\nEmail: {user.mail or user.user_principal_name}"
 
-    async def list_files(self) -> str:
-        files = await self.repo.get_drive_items()
-        if not files or not files.value:
-            return "No files found."
+# people ------------------------------------------------------------------
 
-        output = []
-        for item in files.value:
-            output.append(
-                f"Name: {item.name}\n"
-                f"Type: {'Folder' if item.folder else 'File'}\n"
-                f"WebUrl: {item.web_url}\n"
+    async def find_people(self, name: str) -> str:
+        print("in find people")
+        people = await self.repo.find_people(name)
+        print("in agent, find_people from repo done")
+
+        if not people:
+            return "No people found."
+
+        # cache op email
+        self._people_cache = {
+            p.address.lower(): p
+            for p in people
+            if p.address
+        }
+
+        out = []
+        for p in people:
+            out.append(
+                f"Name: {p.name}\n"
+                f"Email: {p.address}\n"
             )
-        return "\n".join(output)
+
+        return "\n".join(out)
+
+
+# email ------------------------------------------------------------------
+
+    async def search_emails(
+        self,
+        sender: str | None = None,
+        subject: str | None = None,
+        received_after=None,
+        received_before=None,
+    ) -> str:
+        emails = await self.repo.search_emails(
+            sender=sender,
+            subject=subject,
+            received_after=received_after,
+            received_before=received_before,
+        )
+
+        if not emails:
+            return "No emails found."
+
+        # cache
+        self._email_cache = {e.id: e for e in emails}
+
+        out = []
+        for e in emails:
+            out.append(
+                f"ID: {e.id}\n"
+                f"Subject: {e.subject}\n"
+                f"From: {e.sender_name}\n"
+                f"Received: {e.received}\n"
+                f"webLink: {e.web_link}\n"
+            )
+
+        return "\n".join(out)
 
     async def list_email(self) -> str:
         emails = await self.repo.get_inbox()
@@ -36,8 +92,9 @@ class GraphAgent:
             out.append(
                 f"ID: {e.id}\n"
                 f"Subject: {e.subject}\n"
-                f"From: {e.sender}\n"
+                f"From: {e.sender_name}, {e.sender_email}\n"
                 f"Received: {e.received}\n"
+                f"webLink: {e.web_link}\n"
             )
         return "\n".join(out)
 
@@ -54,36 +111,145 @@ class GraphAgent:
 
         return (
             f"Subject: {email.subject}\n"
-            f"From: {email.sender}\n"
-            f"Received: {email.received}\n\n"
+            f"From: {email.sender_name}\n"
+            f"Received: {email.received}\n"
+            f"webLink: {email.web_link}\n"
             f"{body}"
         )
 
+# files ------------------------------------------------------------------
+
+    async def list_files(self) -> str:
+        files = await self.repo.get_drive_items()
+        if not files:
+            return "No files found."
+
+        self._file_cache = {f.id: f for f in files}
+
+        out = []
+        for f in files:
+            out.append(
+                f"ID: {f.id}\n"
+                f"Name: {f.name}\n"
+                f"Type: {'Folder' if f.is_folder else 'File'}\n"
+                f"WebLink: {f.web_link}\n"
+            )
+        return "\n".join(out)
+
+    async def search_files(
+            self,
+            query: str,
+            drive_id: str | None = None,
+            folder_id: str = "root",
+        ) -> str:
+            files = await self.repo.search_drive_items_sdk(
+                query=query,
+                top=25,
+                drive_id=drive_id,
+                # folder_id=folder_id,
+            )
+
+            if not files:
+                return "No files found."
+
+            self._file_cache = {f.id: f for f in files if f.id}
+
+            out = []
+            for f in files:
+                out.append(
+                    f"ID: {f.id}\n"
+                    f"Name: {f.name}\n"
+                    f"Type: {'Folder' if f.is_folder else 'File'}\n"
+                    f"WebLink: {f.web_link}\n"
+                )
+            return "\n".join(out)
+
+
+# contacts ------------------------------------------------------------------
+
     async def list_contacts(self) -> str:
         contacts = await self.repo.get_contacts()
-        if not contacts or not contacts.value:
+        if not contacts:
             return "No contacts found."
 
-        output = []
-        for c in contacts.value:
-            email = c.email_addresses[0].address if c.email_addresses else "N/A"
-            output.append(f"Name: {c.display_name}\nEmail: {email}\n")
-        return "\n".join(output)
+        self._contact_cache = {c.id: c for c in contacts}
+
+        out = []
+        for c in contacts:
+            out.append(
+                f"ID: {c.id}\n"
+                f"Name: {c.name}\n"
+                f"Email: {c.email}\n"
+            )
+
+        return "\n".join(out)
+
+# calendar ------------------------------------------------------------------
 
     async def list_calendar(self) -> str:
-        events = await self.repo.get_upcoming_events()
-        if not events or not events.value:
-            return "No upcoming events found."
+        upcoming_events = await self.repo.get_upcoming_events()
+        past_events = await self.repo.get_past_events()
 
-        output = []
-        for event in events.value:
-            output.append(
-                f"Subject: {event.subject}\n"
-                f"Start: {event.start.date_time if event.start else 'N/A'}\n"
-                f"End: {event.end.date_time if event.end else 'N/A'}\n"
+        if not upcoming_events and not past_events:
+            return "No events found."
+
+        self._event_cache = {e.id: e for e in (upcoming_events + past_events)}
+
+        out = []
+
+        if upcoming_events:
+            out.append("Upcoming events:")
+            for e in upcoming_events:
+                out.append(
+                    f"ID: {e.id}\n"
+                    f"Subject: {e.subject}\n"
+                    f"Start: {e.start}\n"
+                    f"End: {e.end}\n"
+                )
+
+        if past_events:
+            out.append("Past events:")
+            for e in past_events:
+                out.append(
+                    f"ID: {e.id}\n"
+                    f"Subject: {e.subject}\n"
+                    f"Start: {e.start}\n"
+                    f"End: {e.end}\n"
+                )
+
+        return "\n".join(out)
+
+    async def search_events(
+        self,
+        text: str | None = None,
+        location: str | None = None,
+        attendee: str | None = None,
+        start_after: datetime | None = None,
+        start_before: datetime | None = None,
+    ) -> str:
+
+        events = await self.repo.search_events(
+            text=text,
+            location=location,
+            attendee_query=attendee,
+            start_after=start_after,
+            start_before=start_before,
+        )
+
+        if not events:
+            return "No events found."
+
+        out = []
+        for e in events:
+            out.append(
+                f"ID: {e.id}\n"
+                f"Subject: {e.subject}\n"
+                f"Start: {e.start}\n"
+                f"End: {e.end}\n"
+                f"webLink: {e.web_link}"
             )
-        return "\n".join(output)
 
+        return "\n".join(out)
 
     async def unified_search(
         self,
