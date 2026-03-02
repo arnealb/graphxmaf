@@ -420,6 +420,45 @@ class GraphRepository(IGraphRepository):
 
 
 
+    async def search_drive_items_sdk(self, query: str, top: int = 25, drive_id: str | None = None) -> list[File]:
+        if drive_id is None:
+            drive = await self.user_client.me.drive.get()
+            drive_id = drive.id
+
+        qp = SearchWithQRequestBuilder.SearchWithQRequestBuilderGetQueryParameters(
+            select=[
+                "id","name","webUrl","size","createdDateTime","lastModifiedDateTime",
+                "file","folder","parentReference"
+            ],
+            top=top,
+        )
+        cfg = SearchWithQRequestBuilder.SearchWithQRequestBuilderGetRequestConfiguration(
+            query_parameters=qp
+        )
+
+        res = await (
+            self.user_client.drives.by_drive_id(drive_id)
+            .items.by_drive_item_id("root")
+            .search_with_q(query)
+            .get(request_configuration=cfg)
+        )
+
+        out: list[File] = []
+        for item in (res.value or []) if res else []:
+            out.append(File(
+                id=item.id or "",
+                name=item.name or "",
+                is_folder=item.folder is not None,
+                size=item.size,
+                created=item.created_date_time,
+                modified=item.last_modified_date_time,
+                parent_id=item.parent_reference.id if item.parent_reference else None,
+                web_link=item.web_url,
+            ))
+        return out
+
+
+
         
 
 
@@ -456,7 +495,7 @@ class GraphRepository(IGraphRepository):
 
         return contacts
 
-# contacts ------------------------------------------------------------------
+# calendar ------------------------------------------------------------------
 
     async def get_upcoming_events(self) -> list[CalendarEvent]:
         now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
@@ -543,6 +582,69 @@ class GraphRepository(IGraphRepository):
         )
 
 
+# subject werkt, de rest not sure 
+# postman url: https://graph.microsoft.com/v1.0/me/events?$filter=contains(subject,'meeting')
+    async def search_events(
+        self,
+        text: str | None = None,
+        location: str | None = None,
+        attendee_query: str | None = None,
+        start_after: datetime | None = None,
+        start_before: datetime | None = None,
+        top: int = 25,
+    ) -> list[CalendarEvent]:
+
+        filters: list[str] = []
+
+        if text:
+            filters.append(f"contains(subject,'{text}')")
+
+        if location:
+            filters.append(f"contains(location/displayName,'{location}')")
+
+        if start_after:
+            iso = start_after.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            filters.append(f"start/dateTime ge '{iso}'")
+
+        if start_before:
+            iso = start_before.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            filters.append(f"start/dateTime le '{iso}'")
+
+        f = " and ".join(filters) if filters else None
+
+        qp = EventsRequestBuilder.EventsRequestBuilderGetQueryParameters(
+            select=["id","subject","start","end","attendees","organizer","location"],
+            top=top,
+            filter=f,
+            orderby=["start/dateTime"],
+        )
+
+        cfg = EventsRequestBuilder.EventsRequestBuilderGetRequestConfiguration(
+            query_parameters=qp
+        )
+
+        res = await self.user_client.me.events.get(request_configuration=cfg)
+
+        events: list[CalendarEvent] = []
+        if not res or not res.value:
+            return events
+
+        mapped = [self.map_event(e) for e in res.value]
+
+        # attendee filter (client-side)
+        if attendee_query:
+            people = await self.find_people(attendee_query)
+            emails = {p.address.lower() for p in people if p.address}
+
+            def match(ev: CalendarEvent) -> bool:
+                for a in ev.attendees:
+                    if a.email and a.email.address and a.email.address.lower() in emails:
+                        return True
+                return False
+
+            mapped = [ev for ev in mapped if match(ev)]
+
+        return mapped
 
 
 
@@ -553,69 +655,10 @@ class GraphRepository(IGraphRepository):
 
 
 
-    # async def search_drive_items(
-    #         self,
-    #         query: str,
-    #         top: int = 25,
-    #         drive_id: str | None = None,
-    #         folder_id: str = "root",
-    #     ) -> list[File]:
-    #         if drive_id is None:
-    #             drive = await self.user_client.me.drive.get()
-    #             drive_id = drive.id
-
-    #         if folder_id == "root":
-    #             url = f"/drives/{drive_id}/root/search(q='{query}')"
-    #         else:
-    #             url = f"/drives/{drive_id}/items/{folder_id}/search(q='{query}')"
-
-    #         params = {
-    #             "$select": ",".join([
-    #                 "id",
-    #                 "name",
-    #                 "webUrl",
-    #                 "size",
-    #                 "createdDateTime",
-    #                 "lastModifiedDateTime",
-    #                 "file",
-    #                 "folder",
-    #                 "parentReference",
-    #             ]),
-    #             "$top": str(top),
-    #         }
-
-    #         request_info = self.user_client.request_adapter.create_request_information()
-    #         request_info.http_method = "GET"
-    #         request_info.url_template = url
-    #         request_info.query_parameters = params
-
-    #         res = await self.user_client.request_adapter.send_async(
-    #             request_info,
-    #             lambda x: x,
-    #             None,
-    #         )
-
-    #         items = (res or {}).get("value", [])
-    #         out: list[File] = []
-
-    #         for item in items:
-    #             out.append(
-    #                 File(
-    #                     id=item.get("id") or "",
-    #                     name=item.get("name") or "",
-    #                     is_folder=item.get("folder") is not None,
-    #                     size=item.get("size"),
-    #                     created=item.get("createdDateTime"),
-    #                     modified=item.get("lastModifiedDateTime"),
-    #                     parent_id=(item.get("parentReference") or {}).get("id"),
-    #                     web_link=item.get("webUrl"),
-    #                 )
-    #             )
-
-    #         return out
 
 
-    # this is a backup
+
+    ## this is a backup
     # async def search_drive_items(
     #     self,
     #     query: str,
@@ -677,40 +720,3 @@ class GraphRepository(IGraphRepository):
 
 
 
-
-    async def search_drive_items_sdk(self, query: str, top: int = 25, drive_id: str | None = None) -> list[File]:
-        if drive_id is None:
-            drive = await self.user_client.me.drive.get()
-            drive_id = drive.id
-
-        qp = SearchWithQRequestBuilder.SearchWithQRequestBuilderGetQueryParameters(
-            select=[
-                "id","name","webUrl","size","createdDateTime","lastModifiedDateTime",
-                "file","folder","parentReference"
-            ],
-            top=top,
-        )
-        cfg = SearchWithQRequestBuilder.SearchWithQRequestBuilderGetRequestConfiguration(
-            query_parameters=qp
-        )
-
-        res = await (
-            self.user_client.drives.by_drive_id(drive_id)
-            .items.by_drive_item_id("root")
-            .search_with_q(query)
-            .get(request_configuration=cfg)
-        )
-
-        out: list[File] = []
-        for item in (res.value or []) if res else []:
-            out.append(File(
-                id=item.id or "",
-                name=item.name or "",
-                is_folder=item.folder is not None,
-                size=item.size,
-                created=item.created_date_time,
-                modified=item.last_modified_date_time,
-                parent_id=item.parent_reference.id if item.parent_reference else None,
-                web_link=item.web_url,
-            ))
-        return out

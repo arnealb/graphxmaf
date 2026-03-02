@@ -1,4 +1,5 @@
 from data.classes import Email, File, Contact, CalendarEvent, EmailAddress 
+import datetime
 
 
 
@@ -215,6 +216,37 @@ class GraphAgent:
                     f"Start: {e.start}\n"
                     f"End: {e.end}\n"
                 )
+
+        return "\n".join(out)
+
+    async def search_events(
+        self,
+        text: str | None = None,
+        location: str | None = None,
+        attendee: str | None = None,
+        start_after: datetime | None = None,
+        start_before: datetime | None = None,
+    ) -> str:
+
+        events = await self.repo.search_events(
+            text=text,
+            location=location,
+            attendee_query=attendee,
+            start_after=start_after,
+            start_before=start_before,
+        )
+
+        if not events:
+            return "No events found."
+
+        out = []
+        for e in events:
+            out.append(
+                f"ID: {e.id}\n"
+                f"Subject: {e.subject}\n"
+                f"Start: {e.start}\n"
+                f"End: {e.end}\n"
+            )
 
         return "\n".join(out)
 

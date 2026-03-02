@@ -133,6 +133,26 @@ async def list_calendar(ctx: Context) -> str:
     return await agent.list_calendar()
 
 @mcp.tool()
+async def search_calendar(
+    ctx: Context,
+    text: str | None = None,
+    location: str | None = None,
+    attendee: str | None = None,
+    start_after: str | None = None,
+    start_before: str | None = None,
+) -> str:
+    token = _extract_token(ctx)
+    agent = _make_agent(token)
+
+    return await agent.search_events(
+        text=text,
+        location=location,
+        attendee=attendee,
+        start_after=start_after,
+        start_before=start_before,
+    )
+
+@mcp.tool()
 async def read_email(ctx: Context, message_id: str) -> str:
     token = _extract_token(ctx)
     agent = _make_agent(token)
