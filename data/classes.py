@@ -40,6 +40,7 @@ class CalendarEvent:
     end: datetime | None
     organizer: EmailAddress | None
     attendees: list[Attendee]
+    web_link: str | None
 
 @dataclass
 class EmailAddress:

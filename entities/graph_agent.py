@@ -1,5 +1,5 @@
 from data.classes import Email, File, Contact, CalendarEvent, EmailAddress 
-import datetime
+from datetime import datetime
 
 
 
@@ -246,6 +246,7 @@ class GraphAgent:
                 f"Subject: {e.subject}\n"
                 f"Start: {e.start}\n"
                 f"End: {e.end}\n"
+                f"webLink: {e.web_link}"
             )
 
         return "\n".join(out)

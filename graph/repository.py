@@ -575,15 +575,14 @@ class GraphRepository(IGraphRepository):
         return CalendarEvent(
             id=ev.id,
             subject=ev.subject,
-            start= ev.start.date_time if ev.start else None,
-            end= ev.end.date_time if ev.end else None,
+            start=ev.start.date_time if ev.start else None,
+            end=ev.end.date_time if ev.end else None,
             organizer=organizer,
             attendees=attendees,
+            web_link=ev.web_link,   # hier
         )
 
 
-# subject werkt, de rest not sure 
-# postman url: https://graph.microsoft.com/v1.0/me/events?$filter=contains(subject,'meeting')
     async def search_events(
         self,
         text: str | None = None,
@@ -613,7 +612,7 @@ class GraphRepository(IGraphRepository):
         f = " and ".join(filters) if filters else None
 
         qp = EventsRequestBuilder.EventsRequestBuilderGetQueryParameters(
-            select=["id","subject","start","end","attendees","organizer","location"],
+            select=["id","subject","start","end","attendees","organizer","location", "webLink"],
             top=top,
             filter=f,
             orderby=["start/dateTime"],
