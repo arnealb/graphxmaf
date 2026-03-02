@@ -69,6 +69,6 @@ def register_graph_tools(mcp, azure_settings, extract_token):
         return handler
 
     for ep in endpoints:
-        tool_name = f"graph.{ep['name']}"
+        tool_name = f"graph-{ep['name']}"
         print("tool_name:", tool_name)
         mcp.tool(name=tool_name)(make_handler(ep))
