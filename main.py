@@ -14,6 +14,9 @@ from agent_framework import MCPStreamableHTTPTool
 from agent_framework.devui import serve
 from agent import create_graph_agent
 
+from dotenv import load_dotenv
+load_dotenv()
+
 logging.getLogger("asyncio").setLevel(logging.CRITICAL)
 
 _TOKEN_CACHE_FILE = ".token_cache.bin"
