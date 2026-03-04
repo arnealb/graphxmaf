@@ -159,6 +159,14 @@ class GraphAgent:
 
         return f"File: {name}\n\n{text}"
 
+    async def read_multiple_files(self, file_ids: str) -> str:
+        ids = [fid.strip() for fid in file_ids.split(",") if fid.strip()]
+        results = []
+        for file_id in ids:
+            content = await self.read_file(file_id)
+            results.append(content)
+        return "\n\n---\n\n".join(results)
+
     async def search_files(
             self,
             query: str,

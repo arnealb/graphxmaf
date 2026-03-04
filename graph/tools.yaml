@@ -64,6 +64,17 @@
     - name: file_id
       type: str
 
+# -------------------------------------------------------------------------------
+
+- name: read_multiple_files
+  description: Read the text contents of multiple OneDrive files at once.
+    Pass a comma-separated list of file IDs (e.g. "id1,id2,id3").
+    Use this when the user asks a question that spans multiple documents.
+  method: read_multiple_files
+  params:
+    - name: file_ids
+      type: str
+
 # ------------------------------------------------------------------------------- 
 
 - name: list_contacts

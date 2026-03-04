@@ -3,6 +3,8 @@ from agent_framework import Agent, MCPStreamableHTTPTool
 from agent_framework.azure import AzureOpenAIChatClient
 
 from dotenv import load_dotenv
+from entities.document_context import DocumentContextProvider
+
 load_dotenv()
 deployment = os.environ["deployment"]
 
@@ -32,17 +34,32 @@ def create_graph_agent(graph_mcp):
             - search_email: search emails by sender, subject, or date range
             - read_email: read the full body of a specific email by its ID
             - search_files: search for files and folders in OneDrive
-            - read_file: read the text content of a OneDrive file by its ID
+            - read_file: read the text content of a single OneDrive file by its ID
+            - read_multiple_files: read text contents of multiple OneDrive files at once (comma-separated IDs)
             - list_contacts: list contacts
             - list_calendar: list upcoming and recent calendar events
             - search_calendar: search calendar events by subject, location, attendee, or date range
+
+            CONTEXT CONTINUITY
+            - A [Session Context] block is injected at the start of each turn showing:
+              - "Current topic": the active search subject
+              - "Last search": the most recent query used
+              - "Files found": names and IDs of files retrieved this session
+            - Use this block to resolve vague references ("another one", "that file", "the document") — do NOT ask for clarification.
+            - Vague follow-up about files → re-run search_files with expanded or related keywords from Current topic.
+
+            DOCUMENT WORKFLOW
+            - User asks to search for files → call search_files.
+            - User asks what a file says, explains, or contains → call read_file or read_multiple_files, then answer from the content. NEVER re-list file names or IDs instead of reading.
+            - Files already in [Session Context] → use their IDs directly, do not search again.
+            - Question spans multiple files already found → call read_multiple_files with all relevant IDs in one call.
 
             STRICT TOOL SELECTION RULES — follow these exactly:
             - ONLY call tools that are directly required by the user's current request.
             - NEVER call a tool speculatively or to gather background context.
             - NEVER call calendar tools (list_calendar, search_calendar) unless the user explicitly asks about meetings, events, or their schedule.
             - NEVER call email tools (list_email, search_email, read_email) unless the user explicitly asks about emails or messages.
-            - NEVER call file tools (search_files, read_file) unless the user explicitly asks about files or documents.
+            - NEVER call file tools (search_files, read_file, read_multiple_files) unless the user explicitly asks about files or documents.
             - NEVER call list_contacts unless the user explicitly asks about contacts.
             - NEVER call the same tool twice in a single turn unless each call uses different parameters required by the request.
             - If a tool returns sufficient data, stop and answer — do NOT call more tools.
@@ -55,13 +72,15 @@ def create_graph_agent(graph_mcp):
             - When searching by person, resolve with findpeople first, then pass the resolved email to search_email.
             - Prefer search_email over list_email when any filter is implied.
 
-            FILE WORKFLOW
-            - To find a file: call search_files with a relevant query.
-            - To read a file's contents: call read_file with the file ID returned by search_files.
+            ANSWER QUALITY
+            - Always attribute file content: "According to [filename]: ..."
+            - Never fabricate content — only state what the files actually say.
+            - When multiple files contain relevant information, synthesize into ONE structured answer, citing each source file inline.
 
             OUTPUT
             - Present dates in a human-readable format.
             - When showing emails or files, include the ID so the user can request read_email or read_file.
         """,
         tools=[graph_mcp],
+        context_providers=[DocumentContextProvider()],
     )
