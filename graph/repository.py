@@ -420,6 +420,18 @@ class GraphRepository(IGraphRepository):
 
 
 
+    async def get_file_content(self, file_id: str, drive_id: str | None = None) -> bytes:
+        if drive_id is None:
+            drive = await self.user_client.me.drive.get()
+            drive_id = drive.id
+
+        content = await (
+            self.user_client.drives.by_drive_id(drive_id)
+            .items.by_drive_item_id(file_id)
+            .content.get()
+        )
+        return content or b""
+
     async def search_drive_items_sdk(self, query: str, top: int = 25, drive_id: str | None = None) -> list[File]:
         if drive_id is None:
             drive = await self.user_client.me.drive.get()

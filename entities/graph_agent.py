@@ -136,6 +136,29 @@ class GraphAgent:
             )
         return "\n".join(out)
 
+    async def read_file(self, file_id: str) -> str:
+        file = self._file_cache.get(file_id)
+        content_bytes = await self.repo.get_file_content(file_id)
+
+        name = file.name if file else file_id
+
+        if name.lower().endswith(".docx"):
+            import io
+            from docx import Document
+            doc = Document(io.BytesIO(content_bytes))
+            text = "\n".join(p.text for p in doc.paragraphs if p.text)
+        else:
+            try:
+                text = content_bytes.decode("utf-8")
+            except UnicodeDecodeError:
+                text = content_bytes.decode("latin-1")
+
+        MAX_CHARS = 12_000
+        if len(text) > MAX_CHARS:
+            text = text[:MAX_CHARS] + "\n\n[... content truncated ...]"
+
+        return f"File: {name}\n\n{text}"
+
     async def search_files(
             self,
             query: str,

@@ -55,6 +55,15 @@
       type: str
       default: "root"
 
+# -------------------------------------------------------------------------------
+
+- name: read_file
+  description: Read the text content of a OneDrive file by its ID. Use this after search_files to retrieve the actual contents of a file.
+  method: read_file
+  params:
+    - name: file_id
+      type: str
+
 # ------------------------------------------------------------------------------- 
 
 - name: list_contacts

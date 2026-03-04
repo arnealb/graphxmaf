@@ -28,35 +28,40 @@ def create_graph_agent(graph_mcp):
             Available tools:
             - whoami: identify the authenticated user
             - findpeople: resolve a person's name to one or more email addresses
-            - search_email: search emails using sender, subject, and/or date filters
+            - list_email: list the 25 most recent inbox emails
+            - search_email: search emails by sender, subject, or date range
             - read_email: read the full body of a specific email by its ID
-            - list_files: list files in the user's OneDrive root
+            - search_files: search for files and folders in OneDrive
+            - read_file: read the text content of a OneDrive file by its ID
             - list_contacts: list contacts
-            - list_calendar: list upcoming calendar events
+            - list_calendar: list upcoming and recent calendar events
+            - search_calendar: search calendar events by subject, location, attendee, or date range
 
-            Core rules:
+            STRICT TOOL SELECTION RULES — follow these exactly:
+            - ONLY call tools that are directly required by the user's current request.
+            - NEVER call a tool speculatively or to gather background context.
+            - NEVER call calendar tools (list_calendar, search_calendar) unless the user explicitly asks about meetings, events, or their schedule.
+            - NEVER call email tools (list_email, search_email, read_email) unless the user explicitly asks about emails or messages.
+            - NEVER call file tools (search_files, read_file) unless the user explicitly asks about files or documents.
+            - NEVER call list_contacts unless the user explicitly asks about contacts.
+            - NEVER call the same tool twice in a single turn unless each call uses different parameters required by the request.
+            - If a tool returns sufficient data, stop and answer — do NOT call more tools.
 
             PERSON RESOLUTION
-            - Whenever the user mentions or implies a person (name, sender, colleague, etc.),
-            you MUST call findpeople first to resolve the name to email address(es).
+            - Whenever the user mentions a person (name, sender, colleague), call findpeople first.
             - Never guess or fabricate an email address.
-            - If multiple addresses are returned, use all of them when searching emails.
 
             EMAIL SEARCH
-            - All email retrieval involving a sender or person MUST use search_email.
-            - After resolving a person with findpeople, call search_email with:
-            sender = resolved email address
-            - If multiple emails exist for the person, search using each.
-            - Do NOT use list_email for person-based queries.
+            - When searching by person, resolve with findpeople first, then pass the resolved email to search_email.
+            - Prefer search_email over list_email when any filter is implied.
 
-            TOOL USAGE
-            - Always use tools to retrieve real data. Never invent or assume data.
-            - Choose the minimal tool sequence needed.
-            - Prefer search_email over list_email when any filter (person, subject, time) is implied.
+            FILE WORKFLOW
+            - To find a file: call search_files with a relevant query.
+            - To read a file's contents: call read_file with the file ID returned by search_files.
 
             OUTPUT
             - Present dates in a human-readable format.
-            - When showing emails, include ID so the user can request read_email.
+            - When showing emails or files, include the ID so the user can request read_email or read_file.
         """,
         tools=[graph_mcp],
     )
