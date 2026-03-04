@@ -1,17 +1,23 @@
 import os
 from agent_framework import Agent, MCPStreamableHTTPTool
-from agent_framework.openai import OpenAIChatClient
-
+from agent_framework.azure import AzureOpenAIChatClient
 
 from dotenv import load_dotenv
 load_dotenv()
 deployment = os.environ["deployment"]
 
+endpoint = os.environ["AZURE_OPENAI_ENDPOINT"]
+subscription_key = os.environ["AZURE_OPENAI_API_KEY"]
+api_version = "2024-12-01-preview"
 
 def create_graph_agent(graph_mcp):
+
     return Agent(
-        client=OpenAIChatClient(
-            model_id=deployment,
+        client=AzureOpenAIChatClient(
+            deployment_name=deployment,
+            endpoint=endpoint,
+            api_key=subscription_key,
+            api_version=api_version,
         ),
         name="GraphAgent",
         description="Interacts with Microsoft Graph to access organizational data",
