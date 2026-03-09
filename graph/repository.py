@@ -42,8 +42,8 @@ from msgraph.generated.models.search_request import SearchRequest
 from msgraph.generated.models.search_query import SearchQuery
 
 
-from entities.IGraphRepository import IGraphRepository
-from data.classes import Email, File, Contact, CalendarEvent, EmailAddress, Attendee
+from graph.interface import IGraphRepository
+from graph.models import Email, File, Contact, CalendarEvent, EmailAddress, Attendee
 
 import logging
 log = logging.getLogger("graph")

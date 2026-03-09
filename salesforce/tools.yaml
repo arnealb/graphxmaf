@@ -1,0 +1,37 @@
+- name: find_accounts
+  description: Search for Salesforce accounts by name or keyword
+  method: find_accounts
+  params:
+    - name: query
+      type: str
+
+# -------------------------------------------------------------------------------
+
+- name: find_contacts
+  description: Search for Salesforce contacts by name or email
+  method: find_contacts
+  params:
+    - name: query
+      type: str
+
+# -------------------------------------------------------------------------------
+
+- name: get_opportunities
+  description: List Salesforce opportunities, optionally filtered by account ID or stage
+  method: get_opportunities
+  params:
+    - name: account_id
+      type: "str | None"
+    - name: stage
+      type: "str | None"
+
+# -------------------------------------------------------------------------------
+
+- name: get_cases
+  description: List Salesforce cases, optionally filtered by account ID or status
+  method: get_cases
+  params:
+    - name: account_id
+      type: "str | None"
+    - name: status
+      type: "str | None"

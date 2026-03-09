@@ -12,7 +12,7 @@ import msal
 
 from agent_framework import MCPStreamableHTTPTool
 from agent_framework.devui import serve
-from agent import create_graph_agent
+from agents.graph_agent import create_graph_agent
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -116,17 +116,17 @@ def _wait_for_port(host: str, port: int, timeout: float = 15.0) -> None:
     )
 
 
-def _start_local_mcp_server(env: dict) -> subprocess.Popen:
-    # mcp_api_tool.py als achtergrond http server launchen
+def _start_local_mcp_server(env: dict, mcp_url: str) -> subprocess.Popen:
+    # graph/mcp_server.py als achtergrond http server launchen
 
     proc = subprocess.Popen(
-        [sys.executable, "mcp_api_tool.py"],
+        [sys.executable, "-m", "graph.mcp_server"],
         env=env,
-        # fouten / output naar zelfde terminal sturen 
+        # fouten / output naar zelfde terminal sturen
         stdout=sys.stdout,
         stderr=sys.stderr,
     )
-    parsed = urlparse(env.get("MCP_SERVER_URL", "http://localhost:8000"))
+    parsed = urlparse(mcp_url)
     host = parsed.hostname or "localhost"
     port = parsed.port or 8000
     print(f"Waiting for MCP server on {host}:{port} …")
@@ -165,7 +165,7 @@ def main() -> None:
     # als local -> spin up
     server_proc = None
     if _is_local_url(mcp_url):
-        server_proc = _start_local_mcp_server(server_env)
+        server_proc = _start_local_mcp_server(server_env, mcp_url)
 
     # Pass the bearer token on every HTTP request to the MCP server.
     # APIM (or the MCP server itself in local dev) validates this token.

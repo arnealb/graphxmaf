@@ -19,6 +19,3 @@ class IGraphRepository(ABC):
 
     @abstractmethod
     async def get_message_body(self, message_id: str): ...
-
-    # @abstractmethod
-    # async def search(self, query: str, entity_types: list[str], size: int = 25): ...
