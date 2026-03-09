@@ -1,0 +1,20 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements_bot.txt .
+RUN pip install --no-cache-dir -r requirements_bot.txt
+
+COPY agent.py .
+COPY agent_framework_agent.py .
+COPY copilot_agent.py .
+COPY main_copilot.py .
+COPY start_server.py .
+COPY config.cfg .
+COPY entities/ ./entities/
+COPY data/ ./data/
+
+ENV PORT=3978
+ENV PYTHONUNBUFFERED=1
+
+CMD ["python", "main_copilot.py"]

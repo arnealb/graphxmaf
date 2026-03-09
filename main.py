@@ -187,7 +187,13 @@ def main() -> None:
 
     try:
         agent = create_graph_agent(graph_mcp=graph_mcp)
-        serve(entities=[agent], port=8080, auto_open=True)
+        port = int(os.environ.get("PORT", 8080))
+
+        serve(
+            entities=[agent],
+            port=port,
+            auto_open=False
+        )
     finally:
         if server_proc is not None:
             server_proc.terminate()

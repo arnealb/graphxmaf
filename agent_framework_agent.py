@@ -48,9 +48,14 @@ def get_cached_token() -> str:
 
 
 class GraphAgentWrapper:
-    def __init__(self):
+    def __init__(self, token: str | None = None):
         mcp_url = os.environ.get("MCP_SERVER_URL", "http://localhost:8000/mcp")
-        token = get_cached_token()
+        
+        if token:
+            print(f"[GraphAgentWrapper] OBO token ontvangen")
+        else:
+            token = get_cached_token()
+            print(f"[GraphAgentWrapper] Cached token gebruikt")
 
         http_client = httpx.AsyncClient(
             headers={"Authorization": f"Bearer {token}"}
@@ -63,5 +68,13 @@ class GraphAgentWrapper:
         self.agent = create_graph_agent(graph_mcp=graph_mcp)
 
     async def invoke(self, message: str) -> str:
-        result = await self.agent.run(message)
-        return result.text
+        print(f"[invoke] Bericht naar agent: {message}")
+        try:
+            result = await self.agent.run(message)
+            print(f"[invoke] Antwoord: {result.text[:100]}")
+            return result.text
+        except Exception as e:
+            print(f"[invoke] FOUT: {e}")
+            import traceback
+            traceback.print_exc()
+            raise

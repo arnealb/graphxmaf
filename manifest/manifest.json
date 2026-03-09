@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.17",
+  "version": "1.0.0",
+  "id": "5b6e8b68-088c-469b-8d96-f1416e57d3e9",
+  "packageName": "com.graphagent.bot",
+  "developer": {
+    "name": "Graph Agent",
+    "websiteUrl": "https://graph-bot-server.azurewebsites.net",
+    "privacyUrl": "https://graph-bot-server.azurewebsites.net",
+    "termsOfUseUrl": "https://graph-bot-server.azurewebsites.net"
+  },
+  "name": {
+    "short": "Graph Agent",
+    "full": "Graph Agent - Microsoft 365"
+  },
+  "description": {
+    "short": "Graph Agent voor Microsoft 365",
+    "full": "Een agent die je emails, agenda, contacten en bestanden kan opvragen via Microsoft Graph."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#0078D4",
+  "bots": [
+    {
+      "botId": "5b6e8b68-088c-469b-8d96-f1416e57d3e9",
+      "scopes": ["personal", "team", "groupchat"],
+      "isNotificationOnly": false,
+      "supportsCalling": false,
+      "supportsVideo": false,
+      "supportsFiles": false
+    }
+  ],
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": [
+    "graph-bot-server.azurewebsites.net",
+    "token.botframework.com"
+  ],
+  "webApplicationInfo": {
+    "id": "5b6e8b68-088c-469b-8d96-f1416e57d3e9",
+    "resource": "api://5b6e8b68-088c-469b-8d96-f1416e57d3e9"
+  }
+}
