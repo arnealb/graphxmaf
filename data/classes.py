@@ -12,7 +12,6 @@ class Email:
     body: str | None = None
     web_link: str | None = None
 
-
 @dataclass
 class File:
     id: str
@@ -30,8 +29,15 @@ class Contact:
     name: str
     email: str | None
 
+@dataclass
+class EmailAddress:
+    name: str | None
+    address: str | None
 
-# kan zijn dat calendar shit niet zelfde is als contacten dus best andere zeker?
+@dataclass
+class Attendee:
+    email: EmailAddress
+
 @dataclass
 class CalendarEvent:
     id: str
@@ -42,20 +48,7 @@ class CalendarEvent:
     attendees: list[Attendee]
     web_link: str | None
 
-@dataclass
-class EmailAddress:
-    name: str | None
-    address: str | None
-
-@dataclass
-class Attendee:
-    email: EmailAddress
-
-
-
-# ---------------------------------------------------------------------
 EntityType = Literal["email", "file", "event", "contact"]
-
 
 @dataclass
 class SearchResult:

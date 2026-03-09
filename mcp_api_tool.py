@@ -51,5 +51,10 @@ def _extract_token(ctx: Context) -> str:
 register_graph_tools(mcp, _azure_settings, _extract_token)
 
 
+# if __name__ == "__main__":
+#     mcp.run(transport="streamable-http")
+
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
+    import uvicorn
+    app = mcp.streamable_http_app()
+    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
