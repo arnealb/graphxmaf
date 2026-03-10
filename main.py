@@ -7,16 +7,14 @@ import configparser
 import subprocess
 from urllib.parse import urlparse
 
-import time
-
 import httpx
-import jwt
 import msal
 
 from agent_framework import MCPStreamableHTTPTool
 from agent_framework.devui import serve
 from agents.graph_agent import create_graph_agent
 from agents.salesforce_agent import create_salesforce_agent
+from salesforce.auth import authenticate_from_env
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -35,7 +33,6 @@ _TOKEN_CACHE_FILE = ".token_cache.bin"
 
 
 # https://bonanipaulchaudhury.medium.com/integrating-oauth-2-0-delegation-via-azure-api-management-with-mcp-and-prm-why-it-matters-f6c993ef591f
-
 
 
 def _build_msal_app(
@@ -99,43 +96,6 @@ def authenticate(client_id: str, tenant_id: str, scopes: list[str]) -> str:
     return result["access_token"]
 
 
-def authenticate_salesforce(
-    client_id: str,
-    username: str,
-    private_key_path: str,
-    login_url: str = "https://test.salesforce.com",
-) -> tuple[str, str]:
-    """Authenticate with Salesforce using the OAuth 2.0 JWT bearer flow.
-
-    Requires a Connected App with a digital signature (certificate) uploaded,
-    and the user pre-authorized in the Connected App policies.
-
-    Returns (access_token, instance_url).
-    """
-    with open(private_key_path) as f:
-        private_key = f.read()
-
-    payload = {
-        "iss": client_id,
-        "sub": username,
-        "aud": login_url,
-        "exp": int(time.time()) + 300,
-    }
-    assertion = jwt.encode(payload, private_key, algorithm="RS256")
-
-    data = {
-        "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
-        "assertion": assertion,
-    }
-    resp = httpx.post(f"{login_url}/services/oauth2/token", data=data, timeout=30)
-    if not resp.is_success:
-        raise RuntimeError(
-            f"Salesforce auth failed ({resp.status_code}): {resp.text}"
-        )
-    result = resp.json()
-    return result["access_token"], result["instance_url"]
-
-
 def _is_local_url(url: str) -> bool:
     # gewoon ofda local of cloud
     host = urlparse(url).hostname or ""
@@ -191,7 +151,6 @@ def _start_salesforce_mcp_server(env: dict, mcp_url: str) -> subprocess.Popen:
     return proc
 
 
-
 def main() -> None:
     print("Starting application...")
 
@@ -229,33 +188,25 @@ def main() -> None:
 
     # ── Salesforce ─────────────────────────────────────────────────────
     sf_mcp_url = sf_settings.get("mcpServerUrl", "http://localhost:8001/mcp")
-
-    sf_client_id = os.environ["SF_CLIENT_ID"]
-    sf_username = os.environ["SF_USERNAME"]
-    sf_private_key_path = os.environ.get("SF_PRIVATE_KEY_PATH", "salesforce_key.pem")
     sf_login_url = sf_settings.get("loginUrl", "https://test.salesforce.com")
 
-    sf_token, sf_instance_url = authenticate_salesforce(
-        client_id=sf_client_id,
-        username=sf_username,
-        private_key_path=sf_private_key_path,
-        login_url=sf_login_url,
-    )
+    # authenticate_from_env() picks JWT or password based on available env vars.
+    sf_creds = authenticate_from_env(login_url=sf_login_url)
     print("Authenticated with Salesforce.")
 
     sf_server_env = os.environ.copy()
     sf_parsed = urlparse(sf_mcp_url)
     sf_resource_base = f"{sf_parsed.scheme}://{sf_parsed.netloc}"
     sf_server_env["MCP_RESOURCE_URI"] = sf_resource_base
-    # Pass the resolved instance URL to the MCP server process
-    sf_server_env["SF_INSTANCE_URL"] = sf_instance_url
+    # Pass the resolved instance URL so the MCP server uses the right endpoint.
+    sf_server_env["SF_INSTANCE_URL"] = sf_creds.instance_url
 
     sf_proc = None
     if _is_local_url(sf_mcp_url):
         sf_proc = _start_salesforce_mcp_server(sf_server_env, sf_mcp_url)
 
     sf_http = httpx.AsyncClient(
-        headers={"Authorization": f"Bearer {sf_token}"},
+        headers={"Authorization": f"Bearer {sf_creds.access_token}"},
     )
     sf_mcp = MCPStreamableHTTPTool(
         name="salesforce",

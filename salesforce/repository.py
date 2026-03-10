@@ -41,13 +41,17 @@ class SalesforceRepository:
         if query:
             q = self._esc(query)
             soql = (
-                f"SELECT Id, Name, Industry, Website FROM Account "
+                f"SELECT Id, Name, Industry, Website, BillingPostalCode FROM Account "
                 f"WHERE Name LIKE '%{q}%' LIMIT {top}"
             )
+
+
         else:
-            soql = f"SELECT Id, Name, Industry, Website FROM Account LIMIT {top}"
+            soql = f"SELECT Id, Name, Industry, Website, BillingPostalCode FROM Account LIMIT {top}"
+
 
         records = await self._query(soql)
+
         return [
             SalesforceAccount(
                 id=r["Id"],
