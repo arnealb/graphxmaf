@@ -6,14 +6,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 deployment = os.environ["deployment"]
-
 endpoint = os.environ["AZURE_OPENAI_ENDPOINT"]
 subscription_key = os.environ["AZURE_OPENAI_API_KEY"]
 api_version = "2024-12-01-preview"
 
-
 def create_salesforce_agent(salesforce_mcp):
-
     return Agent(
         client=AzureOpenAIChatClient(
             deployment_name=deployment,

@@ -68,33 +68,6 @@ def _post_token(login_url: str, data: dict) -> SalesforceCredentials:
 # Public auth functions
 # ──────────────────────────────────────────────────────────────────────────────
 
-def authenticate_password(
-    *,
-    client_id: str,
-    client_secret: str,
-    username: str,
-    password: str,
-    security_token: str = "",
-    login_url: str = "https://test.salesforce.com",
-) -> SalesforceCredentials:
-    """OAuth 2.0 Resource Owner Password Grant.
-
-    ``security_token`` is appended to ``password`` (Salesforce convention for
-    untrusted IPs).  Leave it empty if your org IP-whitelists the client.
-
-    Env vars used by ``authenticate_from_env()``:
-      SF_CLIENT_ID, SF_CLIENT_SECRET, SF_USERNAME, SF_PASSWORD,
-      SF_SECURITY_TOKEN (optional)
-    """
-    log.info("Salesforce password grant  user=%s  login_url=%s", username, login_url)
-    data = {
-        "grant_type": "password",
-        "client_id": client_id,
-        "client_secret": client_secret,
-        "username": username,
-        "password": password + security_token,
-    }
-    return _post_token(login_url, data)
 
 
 def authenticate_jwt(
@@ -151,54 +124,24 @@ def authenticate_jwt(
 # Convenience: pick flow from environment
 # ──────────────────────────────────────────────────────────────────────────────
 
-def authenticate_from_env(login_url: str) -> SalesforceCredentials:
-    """Select and run the appropriate auth flow based on environment variables.
-
-    Flow selection (checked in order):
-      1. JWT bearer  – if SF_PRIVATE_KEY_PATH or SF_PRIVATE_KEY is set
-      2. Password    – if SF_PASSWORD is set
-
-    Set SF_AUTH_FLOW=password to force password grant even when a key is present.
-
-    Required env vars (both flows):
-      SF_CLIENT_ID      – Connected App consumer key
-
-    Password flow also needs:
-      SF_CLIENT_SECRET, SF_USERNAME, SF_PASSWORD
-      SF_SECURITY_TOKEN – optional; append to password for untrusted IPs
-
-    JWT flow also needs:
-      SF_USERNAME
-      SF_PRIVATE_KEY_PATH  or  SF_PRIVATE_KEY  (inline PEM)
-    """
+def authenticate_salesforce(login_url: str) -> SalesforceCredentials:
     client_id = _require_env("SF_CLIENT_ID")
     username = _require_env("SF_USERNAME")
-    forced_flow = os.environ.get("SF_AUTH_FLOW", "").lower()
 
     private_key_path = os.environ.get("SF_PRIVATE_KEY_PATH")
     private_key = os.environ.get("SF_PRIVATE_KEY")
-    has_jwt_key = bool(private_key_path or private_key)
 
-    use_jwt = has_jwt_key and forced_flow != "password"
+    # use_jwt = has_jwt_key and forced_flow != "password"
 
-    if use_jwt:
-        return authenticate_jwt(
-            client_id=client_id,
-            username=username,
-            private_key=private_key,
-            private_key_path=private_key_path,
-            login_url=login_url,
-        )
-
-    # Password grant
-    return authenticate_password(
+    return authenticate_jwt(
         client_id=client_id,
-        client_secret=_require_env("SF_CLIENT_SECRET"),
         username=username,
-        password=_require_env("SF_PASSWORD"),
-        security_token=os.environ.get("SF_SECURITY_TOKEN", ""),
+        private_key=private_key,
+        private_key_path=private_key_path,
         login_url=login_url,
     )
+
+
 
 
 def _require_env(name: str) -> str:

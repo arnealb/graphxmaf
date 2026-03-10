@@ -14,7 +14,7 @@ from agent_framework import MCPStreamableHTTPTool
 from agent_framework.devui import serve
 from agents.graph_agent import create_graph_agent
 from agents.salesforce_agent import create_salesforce_agent
-from salesforce.auth import authenticate_from_env
+from salesforce.auth import authenticate_salesforce
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -67,18 +67,12 @@ def authenticate(client_id: str, tenant_id: str, scopes: list[str]) -> str:
     """
     app, cache = _build_msal_app(client_id, tenant_id)
 
-# uncomment this to use cached tokens
-    # Silent path: use a cached token when available.
     accounts = app.get_accounts()
     if accounts:
         result = app.acquire_token_silent(scopes, account=accounts[0])
         if result and "access_token" in result:
             _persist_cache(cache)
             return result["access_token"]
-
-    # Interactive path: device code flow.
-
-    print("starting auth")
 
     flow = app.initiate_device_flow(scopes=scopes)
 
@@ -116,7 +110,7 @@ def _wait_for_port(host: str, port: int, timeout: float = 15.0) -> None:
     )
 
 
-def _start_local_mcp_server(env: dict, mcp_url: str) -> subprocess.Popen:
+def _start_graph_mcp_server(env: dict, mcp_url: str) -> subprocess.Popen:
     # graph/mcp_server.py als achtergrond http server launchen
 
     proc = subprocess.Popen(
@@ -175,7 +169,7 @@ def main() -> None:
 
     graph_proc = None
     if _is_local_url(mcp_url):
-        graph_proc = _start_local_mcp_server(server_env, mcp_url)
+        graph_proc = _start_graph_mcp_server(server_env, mcp_url)
 
     graph_http = httpx.AsyncClient(
         headers={"Authorization": f"Bearer {token}"},
@@ -190,8 +184,7 @@ def main() -> None:
     sf_mcp_url = sf_settings.get("mcpServerUrl", "http://localhost:8001/mcp")
     sf_login_url = sf_settings.get("loginUrl", "https://test.salesforce.com")
 
-    # authenticate_from_env() picks JWT or password based on available env vars.
-    sf_creds = authenticate_from_env(login_url=sf_login_url)
+    sf_creds = authenticate_salesforce(login_url=sf_login_url)
     print("Authenticated with Salesforce.")
 
     sf_server_env = os.environ.copy()

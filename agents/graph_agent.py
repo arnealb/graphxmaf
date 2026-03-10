@@ -7,13 +7,11 @@ from graph.context import DocumentContextProvider
 
 load_dotenv()
 deployment = os.environ["deployment"]
-
 endpoint = os.environ["AZURE_OPENAI_ENDPOINT"]
 subscription_key = os.environ["AZURE_OPENAI_API_KEY"]
 api_version = "2024-12-01-preview"
 
 def create_graph_agent(graph_mcp):
-
     return Agent(
         client=AzureOpenAIChatClient(
             deployment_name=deployment,
