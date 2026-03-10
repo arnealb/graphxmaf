@@ -14,7 +14,7 @@ _config = configparser.ConfigParser()
 _config.read(["config.cfg"])
 _sf_settings = _config["salesforce"]
 
-_INSTANCE_URL = _sf_settings.get("instanceUrl", "https://login.salesforce.com")
+_INSTANCE_URL = os.environ.get("SF_INSTANCE_URL") or _sf_settings.get("loginUrl", "https://login.salesforce.com")
 _RESOURCE_URI = os.environ.get("MCP_RESOURCE_URI", "http://localhost:8001")
 
 

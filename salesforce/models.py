@@ -38,3 +38,13 @@ class SalesforceCase:
     priority: str | None
     account_name: str | None
     created_date: datetime | None
+
+
+@dataclass
+class SalesforceLead:
+    id: str
+    first_name: str | None
+    last_name: str
+    email: str | None
+    company: str | None
+    status: str | None

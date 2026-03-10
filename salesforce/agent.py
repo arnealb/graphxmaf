@@ -1,4 +1,4 @@
-from salesforce.models import SalesforceAccount, SalesforceContact, SalesforceOpportunity, SalesforceCase
+from salesforce.models import SalesforceAccount, SalesforceContact, SalesforceOpportunity, SalesforceCase, SalesforceLead
 
 
 class SalesforceAgent:
@@ -46,6 +46,21 @@ class SalesforceAgent:
                 f"Amount: {o.amount}\n"
                 f"Close date: {o.close_date}\n"
                 f"Account: {o.account_name}\n"
+            )
+        return "\n".join(out)
+
+    async def find_leads(self, query: str) -> str:
+        leads = await self.repo.find_leads(query)
+        if not leads:
+            return "No leads found."
+        out = []
+        for lead in leads:
+            out.append(
+                f"ID: {lead.id}\n"
+                f"Name: {lead.first_name} {lead.last_name}\n"
+                f"Email: {lead.email}\n"
+                f"Company: {lead.company}\n"
+                f"Status: {lead.status}\n"
             )
         return "\n".join(out)
 

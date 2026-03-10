@@ -2,3 +2,5 @@
 *.cfg
 *.bin
 *.pyc
+*.pem
+*.crt

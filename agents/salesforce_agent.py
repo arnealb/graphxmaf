@@ -29,13 +29,19 @@ def create_salesforce_agent(salesforce_mcp):
             Available tools:
             - find_accounts: search for accounts by name or keyword
             - find_contacts: search for contacts by name or email
-            - get_opportunities: list opportunities, optionally filtered by account or stage
-            - get_cases: list cases, optionally filtered by account or status
+            - find_leads: search for leads by name, email, or company
+            - get_opportunities: list opportunities, optionally filtered by account ID or stage
+            - get_cases: list cases, optionally filtered by account ID or status
 
             STRICT TOOL SELECTION RULES:
             - ONLY call tools directly required by the user's request.
             - NEVER call a tool speculatively.
             - If a tool returns sufficient data, stop and answer.
+            - Use find_accounts when the user asks about companies or accounts.
+            - Use find_contacts when the user asks about people already in CRM.
+            - Use find_leads when the user asks about prospective customers or leads.
+            - Use get_opportunities when the user asks about deals or sales pipeline.
+            - Use get_cases when the user asks about support tickets or cases.
 
             OUTPUT
             - Always include the ID so the user can reference records in follow-up questions.

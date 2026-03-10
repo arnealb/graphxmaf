@@ -7,12 +7,16 @@ import configparser
 import subprocess
 from urllib.parse import urlparse
 
+import time
+
 import httpx
+import jwt
 import msal
 
 from agent_framework import MCPStreamableHTTPTool
 from agent_framework.devui import serve
 from agents.graph_agent import create_graph_agent
+from agents.salesforce_agent import create_salesforce_agent
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -83,7 +87,7 @@ def authenticate(client_id: str, tenant_id: str, scopes: list[str]) -> str:
 
     print(f"\nAuthenticate at: {flow['verification_uri']}")
     print(f"Enter code:      {flow['user_code']}\n")
-    
+
     result = app.acquire_token_by_device_flow(flow)
 
     if "access_token" not in result:
@@ -95,6 +99,42 @@ def authenticate(client_id: str, tenant_id: str, scopes: list[str]) -> str:
     return result["access_token"]
 
 
+def authenticate_salesforce(
+    client_id: str,
+    username: str,
+    private_key_path: str,
+    login_url: str = "https://test.salesforce.com",
+) -> tuple[str, str]:
+    """Authenticate with Salesforce using the OAuth 2.0 JWT bearer flow.
+
+    Requires a Connected App with a digital signature (certificate) uploaded,
+    and the user pre-authorized in the Connected App policies.
+
+    Returns (access_token, instance_url).
+    """
+    with open(private_key_path) as f:
+        private_key = f.read()
+
+    payload = {
+        "iss": client_id,
+        "sub": username,
+        "aud": login_url,
+        "exp": int(time.time()) + 300,
+    }
+    assertion = jwt.encode(payload, private_key, algorithm="RS256")
+
+    data = {
+        "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
+        "assertion": assertion,
+    }
+    resp = httpx.post(f"{login_url}/services/oauth2/token", data=data, timeout=30)
+    if not resp.is_success:
+        raise RuntimeError(
+            f"Salesforce auth failed ({resp.status_code}): {resp.text}"
+        )
+    result = resp.json()
+    return result["access_token"], result["instance_url"]
+
 
 def _is_local_url(url: str) -> bool:
     # gewoon ofda local of cloud
@@ -103,7 +143,7 @@ def _is_local_url(url: str) -> bool:
 
 
 def _wait_for_port(host: str, port: int, timeout: float = 15.0) -> None:
-    # idk waarom dis shit echt nodig is 
+    # idk waarom dis shit echt nodig is
     deadline = time.monotonic() + timeout
     while time.monotonic() < deadline:
         try:
@@ -134,7 +174,23 @@ def _start_local_mcp_server(env: dict, mcp_url: str) -> subprocess.Popen:
     print("MCP server ready.")
     return proc
 
-    
+
+def _start_salesforce_mcp_server(env: dict, mcp_url: str) -> subprocess.Popen:
+    proc = subprocess.Popen(
+        [sys.executable, "-m", "salesforce.mcp_server"],
+        env=env,
+        stdout=sys.stdout,
+        stderr=sys.stderr,
+    )
+    parsed = urlparse(mcp_url)
+    host = parsed.hostname or "localhost"
+    port = parsed.port or 8001
+    print(f"Waiting for Salesforce MCP server on {host}:{port} …")
+    _wait_for_port(host, port)
+    print("Salesforce MCP server ready.")
+    return proc
+
+
 
 def main() -> None:
     print("Starting application...")
@@ -142,56 +198,81 @@ def main() -> None:
     config = configparser.ConfigParser()
     config.read(["config.cfg"])
     azure_settings = config["azure"]
+    sf_settings = config["salesforce"]
 
+    # ── Microsoft Graph ────────────────────────────────────────────────
     client_id = azure_settings["clientId"]
     tenant_id = azure_settings["tenantId"]
     scopes = azure_settings["graphUserScopes"].split(" ")
     mcp_url = azure_settings.get("mcpServerUrl", "http://localhost:8000/mcp")
 
-    # 1. client logt in + scopes
     token = authenticate(client_id, tenant_id, scopes)
-    print("Authenticated.")
+    print("Authenticated with Microsoft.")
 
-                            # Build the environment that will be passed to the server subprocess so
-                            # it can construct the correct PRM response.
-
-    # 1.2 environment maken dat naar de server gestuurd wordt (wat is een prm resp)
     server_env = os.environ.copy()
     parsed = urlparse(mcp_url)
     resource_base = f"{parsed.scheme}://{parsed.netloc}"
     server_env["MCP_RESOURCE_URI"] = resource_base
 
-    # dit is gwn een test om te zien of het een local mcp server / al in de cloud draait
-    # als local -> spin up
-    server_proc = None
+    graph_proc = None
     if _is_local_url(mcp_url):
-        server_proc = _start_local_mcp_server(server_env, mcp_url)
+        graph_proc = _start_local_mcp_server(server_env, mcp_url)
 
-    # Pass the bearer token on every HTTP request to the MCP server.
-    # APIM (or the MCP server itself in local dev) validates this token.
-    # token met ieder request doorsturen naar de MCP server
-    # dafaq is APIM
-    http_client = httpx.AsyncClient(
+    graph_http = httpx.AsyncClient(
         headers={"Authorization": f"Bearer {token}"},
     )
-
     graph_mcp = MCPStreamableHTTPTool(
         name="graph",
         url=mcp_url,
-        http_client=http_client,
+        http_client=graph_http,
     )
 
+    # ── Salesforce ─────────────────────────────────────────────────────
+    sf_mcp_url = sf_settings.get("mcpServerUrl", "http://localhost:8001/mcp")
 
+    sf_client_id = os.environ["SF_CLIENT_ID"]
+    sf_username = os.environ["SF_USERNAME"]
+    sf_private_key_path = os.environ.get("SF_PRIVATE_KEY_PATH", "salesforce_key.pem")
+    sf_login_url = sf_settings.get("loginUrl", "https://test.salesforce.com")
 
+    sf_token, sf_instance_url = authenticate_salesforce(
+        client_id=sf_client_id,
+        username=sf_username,
+        private_key_path=sf_private_key_path,
+        login_url=sf_login_url,
+    )
+    print("Authenticated with Salesforce.")
 
+    sf_server_env = os.environ.copy()
+    sf_parsed = urlparse(sf_mcp_url)
+    sf_resource_base = f"{sf_parsed.scheme}://{sf_parsed.netloc}"
+    sf_server_env["MCP_RESOURCE_URI"] = sf_resource_base
+    # Pass the resolved instance URL to the MCP server process
+    sf_server_env["SF_INSTANCE_URL"] = sf_instance_url
 
+    sf_proc = None
+    if _is_local_url(sf_mcp_url):
+        sf_proc = _start_salesforce_mcp_server(sf_server_env, sf_mcp_url)
+
+    sf_http = httpx.AsyncClient(
+        headers={"Authorization": f"Bearer {sf_token}"},
+    )
+    sf_mcp = MCPStreamableHTTPTool(
+        name="salesforce",
+        url=sf_mcp_url,
+        http_client=sf_http,
+    )
+
+    # ── Serve both agents ──────────────────────────────────────────────
     try:
-        agent = create_graph_agent(graph_mcp=graph_mcp)
-        serve(entities=[agent], port=8080, auto_open=True)
+        graph_agent = create_graph_agent(graph_mcp=graph_mcp)
+        sf_agent = create_salesforce_agent(salesforce_mcp=sf_mcp)
+        serve(entities=[graph_agent, sf_agent], port=8080, auto_open=True)
     finally:
-        if server_proc is not None:
-            server_proc.terminate()
-            server_proc.wait()
+        for proc in (graph_proc, sf_proc):
+            if proc is not None:
+                proc.terminate()
+                proc.wait()
 
 
 if __name__ == "__main__":

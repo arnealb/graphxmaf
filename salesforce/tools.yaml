@@ -16,6 +16,15 @@
 
 # -------------------------------------------------------------------------------
 
+- name: find_leads
+  description: Search for Salesforce leads by name, email, or company
+  method: find_leads
+  params:
+    - name: query
+      type: str
+
+# -------------------------------------------------------------------------------
+
 - name: get_opportunities
   description: List Salesforce opportunities, optionally filtered by account ID or stage
   method: get_opportunities
