@@ -12,7 +12,9 @@ import msal
 
 from agent_framework import MCPStreamableHTTPTool
 from agent_framework.devui import serve
-from agent import create_graph_agent
+from agents.graph_agent import create_graph_agent
+from agents.salesforce_agent import create_salesforce_agent
+from salesforce.auth import authenticate_salesforce
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -31,7 +33,6 @@ _TOKEN_CACHE_FILE = ".token_cache.bin"
 
 
 # https://bonanipaulchaudhury.medium.com/integrating-oauth-2-0-delegation-via-azure-api-management-with-mcp-and-prm-why-it-matters-f6c993ef591f
-
 
 
 def _build_msal_app(
@@ -66,8 +67,6 @@ def authenticate(client_id: str, tenant_id: str, scopes: list[str]) -> str:
     """
     app, cache = _build_msal_app(client_id, tenant_id)
 
-# uncomment this to use cached tokens
-    # Silent path: use a cached token when available.
     accounts = app.get_accounts()
     if accounts:
         result = app.acquire_token_silent(scopes, account=accounts[0])
@@ -75,15 +74,11 @@ def authenticate(client_id: str, tenant_id: str, scopes: list[str]) -> str:
             _persist_cache(cache)
             return result["access_token"]
 
-    # Interactive path: device code flow.
-
-    print("starting auth")
-
     flow = app.initiate_device_flow(scopes=scopes)
 
     print(f"\nAuthenticate at: {flow['verification_uri']}")
     print(f"Enter code:      {flow['user_code']}\n")
-    
+
     result = app.acquire_token_by_device_flow(flow)
 
     if "access_token" not in result:
@@ -95,7 +90,6 @@ def authenticate(client_id: str, tenant_id: str, scopes: list[str]) -> str:
     return result["access_token"]
 
 
-
 def _is_local_url(url: str) -> bool:
     # gewoon ofda local of cloud
     host = urlparse(url).hostname or ""
@@ -103,7 +97,7 @@ def _is_local_url(url: str) -> bool:
 
 
 def _wait_for_port(host: str, port: int, timeout: float = 15.0) -> None:
-    # idk waarom dis shit echt nodig is 
+    # idk waarom dis shit echt nodig is
     deadline = time.monotonic() + timeout
     while time.monotonic() < deadline:
         try:
@@ -116,17 +110,17 @@ def _wait_for_port(host: str, port: int, timeout: float = 15.0) -> None:
     )
 
 
-def _start_local_mcp_server(env: dict) -> subprocess.Popen:
-    # mcp_api_tool.py als achtergrond http server launchen
+def _start_graph_mcp_server(env: dict, mcp_url: str) -> subprocess.Popen:
+    # graph/mcp_server.py als achtergrond http server launchen
 
     proc = subprocess.Popen(
-        [sys.executable, "mcp_api_tool.py"],
+        [sys.executable, "-m", "graph.mcp_server"],
         env=env,
-        # fouten / output naar zelfde terminal sturen 
+        # fouten / output naar zelfde terminal sturen
         stdout=sys.stdout,
         stderr=sys.stderr,
     )
-    parsed = urlparse(env.get("MCP_SERVER_URL", "http://localhost:8000"))
+    parsed = urlparse(mcp_url)
     host = parsed.hostname or "localhost"
     port = parsed.port or 8000
     print(f"Waiting for MCP server on {host}:{port} …")
@@ -134,7 +128,22 @@ def _start_local_mcp_server(env: dict) -> subprocess.Popen:
     print("MCP server ready.")
     return proc
 
-    
+
+def _start_salesforce_mcp_server(env: dict, mcp_url: str) -> subprocess.Popen:
+    proc = subprocess.Popen(
+        [sys.executable, "-m", "salesforce.mcp_server"],
+        env=env,
+        stdout=sys.stdout,
+        stderr=sys.stderr,
+    )
+    parsed = urlparse(mcp_url)
+    host = parsed.hostname or "localhost"
+    port = parsed.port or 8001
+    print(f"Waiting for Salesforce MCP server on {host}:{port} …")
+    _wait_for_port(host, port)
+    print("Salesforce MCP server ready.")
+    return proc
+
 
 def main() -> None:
     print("Starting application...")
@@ -142,56 +151,72 @@ def main() -> None:
     config = configparser.ConfigParser()
     config.read(["config.cfg"])
     azure_settings = config["azure"]
+    sf_settings = config["salesforce"]
 
+    # ── Microsoft Graph ────────────────────────────────────────────────
     client_id = azure_settings["clientId"]
     tenant_id = azure_settings["tenantId"]
     scopes = azure_settings["graphUserScopes"].split(" ")
     mcp_url = azure_settings.get("mcpServerUrl", "http://localhost:8000/mcp")
 
-    # 1. client logt in + scopes
     token = authenticate(client_id, tenant_id, scopes)
-    print("Authenticated.")
+    print("Authenticated with Microsoft.")
 
-                            # Build the environment that will be passed to the server subprocess so
-                            # it can construct the correct PRM response.
-
-    # 1.2 environment maken dat naar de server gestuurd wordt (wat is een prm resp)
     server_env = os.environ.copy()
     parsed = urlparse(mcp_url)
     resource_base = f"{parsed.scheme}://{parsed.netloc}"
     server_env["MCP_RESOURCE_URI"] = resource_base
 
-    # dit is gwn een test om te zien of het een local mcp server / al in de cloud draait
-    # als local -> spin up
-    server_proc = None
+    graph_proc = None
     if _is_local_url(mcp_url):
-        server_proc = _start_local_mcp_server(server_env)
+        graph_proc = _start_graph_mcp_server(server_env, mcp_url)
 
-    # Pass the bearer token on every HTTP request to the MCP server.
-    # APIM (or the MCP server itself in local dev) validates this token.
-    # token met ieder request doorsturen naar de MCP server
-    # dafaq is APIM
-    http_client = httpx.AsyncClient(
+    graph_http = httpx.AsyncClient(
         headers={"Authorization": f"Bearer {token}"},
     )
-
     graph_mcp = MCPStreamableHTTPTool(
         name="graph",
         url=mcp_url,
-        http_client=http_client,
+        http_client=graph_http,
     )
 
+    # ── Salesforce ─────────────────────────────────────────────────────
+    sf_mcp_url = sf_settings.get("mcpServerUrl", "http://localhost:8001/mcp")
+    sf_login_url = sf_settings.get("loginUrl", "https://test.salesforce.com")
 
+    sf_creds = authenticate_salesforce(login_url=sf_login_url)
+    print("Authenticated with Salesforce.")
 
+    sf_server_env = os.environ.copy()
+    sf_parsed = urlparse(sf_mcp_url)
+    sf_resource_base = f"{sf_parsed.scheme}://{sf_parsed.netloc}"
+    sf_server_env["MCP_RESOURCE_URI"] = sf_resource_base
+    # Pass the resolved instance URL so the MCP server uses the right endpoint.
+    sf_server_env["SF_INSTANCE_URL"] = sf_creds.instance_url
 
+    sf_proc = None
+    if _is_local_url(sf_mcp_url):
+        sf_proc = _start_salesforce_mcp_server(sf_server_env, sf_mcp_url)
 
+    sf_http = httpx.AsyncClient(
+        headers={"Authorization": f"Bearer {sf_creds.access_token}"},
+    )
+    sf_mcp = MCPStreamableHTTPTool(
+        name="salesforce",
+        url=sf_mcp_url,
+        http_client=sf_http,
+    )
+
+    # ── Serve both agents ──────────────────────────────────────────────
     try:
-        agent = create_graph_agent(graph_mcp=graph_mcp)
-        serve(entities=[agent], port=8080, auto_open=True)
+        graph_agent = create_graph_agent(graph_mcp=graph_mcp)
+        sf_agent = create_salesforce_agent(salesforce_mcp=sf_mcp)
+        serve(entities=[graph_agent, sf_agent], port=8080, auto_open=True)
     finally:
-        if server_proc is not None:
-            server_proc.terminate()
-            server_proc.wait()
+        for proc in (graph_proc, sf_proc):
+            if proc is not None:
+                proc.terminate()
+                proc.wait()
 
 
 if __name__ == "__main__":

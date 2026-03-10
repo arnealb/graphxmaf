@@ -1,51 +1,49 @@
 import inspect
-import os
 import yaml
 
 from mcp.server.fastmcp import Context
 
-from graph.repository import GraphRepository
-from auth.token_credential import StaticTokenCredential
-from graph.agent import GraphAgent
+from salesforce.repository import SalesforceRepository
+from salesforce.agent import SalesforceAgent
 
 _TYPE_MAP: dict[str, type] = {
-    "str":       str,
-    "str | None": str | None,
-    "int":       int,
-    "int | None": int | None,
+    "str":                  str,
+    "str | None":           str | None,
+    "int":                  int,
+    "int | None":           int | None,
+    "list[str] | None":     list[str] | None,
+    "dict[str, str] | None": dict[str, str] | None,
 }
 
-_agent_cache: dict[str, GraphAgent] = {}
+_agent_cache: dict[str, SalesforceAgent] = {}
 
 
-def _get_agent(token: str, azure_settings) -> GraphAgent:
+def _get_agent(token: str, instance_url: str) -> SalesforceAgent:
     if token not in _agent_cache:
-        repo = GraphRepository(azure_settings, credential=StaticTokenCredential(token))
-        _agent_cache[token] = GraphAgent(repo)
+        repo = SalesforceRepository(access_token=token, instance_url=instance_url)
+        _agent_cache[token] = SalesforceAgent(repo)
     return _agent_cache[token]
 
 
-def _load_tools(path: str = "graph/tools.yaml") -> list[dict]:
+def _load_tools(path: str = "salesforce/tools.yaml") -> list[dict]:
     with open(path) as f:
         return yaml.safe_load(f)
 
 
-def register_graph_tools(mcp, azure_settings, extract_token) -> None:
+def register_salesforce_tools(mcp, instance_url: str, extract_token) -> None:
     for tool_def in _load_tools():
-        _register_one(mcp, azure_settings, extract_token, tool_def)
+        _register_one(mcp, instance_url, extract_token, tool_def)
 
 
-def _register_one(mcp, azure_settings, extract_token, tool_def: dict) -> None:
+def _register_one(mcp, instance_url: str, extract_token, tool_def: dict) -> None:
     agent_method = tool_def["method"]
     params = tool_def.get("params", [])
 
-    # _m=agent_method captures the loop variable by value
     async def handler(ctx: Context, _m=agent_method, **kwargs):
         token = extract_token(ctx)
-        agent = _get_agent(token, azure_settings)
+        agent = _get_agent(token, instance_url)
         return await getattr(agent, _m)(**kwargs)
 
-    # FastMCP introspects __signature__ to build the JSON schema for the LLM.
     sig_params = [
         inspect.Parameter("ctx", inspect.Parameter.POSITIONAL_OR_KEYWORD, annotation=Context),
     ]
