@@ -7,10 +7,12 @@ from salesforce.repository import SalesforceRepository
 from salesforce.agent import SalesforceAgent
 
 _TYPE_MAP: dict[str, type] = {
-    "str":        str,
-    "str | None": str | None,
-    "int":        int,
-    "int | None": int | None,
+    "str":                  str,
+    "str | None":           str | None,
+    "int":                  int,
+    "int | None":           int | None,
+    "list[str] | None":     list[str] | None,
+    "dict[str, str] | None": dict[str, str] | None,
 }
 
 _agent_cache: dict[str, SalesforceAgent] = {}

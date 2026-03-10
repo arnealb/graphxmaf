@@ -1,46 +1,158 @@
 - name: find_accounts
-  description: Search for Salesforce accounts by name or keyword
+  description: >
+    Search for Salesforce accounts whose Name contains the given keyword,
+    optionally fetching extra columns and/or filtering on specific field values.
+
+    `query` must be a plain name keyword (e.g. "Acme"), NOT a SOQL condition.
+
+    `extra_fields` — list of additional SOQL field names to include in the result.
+    Allowed values: Phone, Type, BillingStreet, BillingCity, BillingState,
+    BillingPostalCode, BillingCountry, NumberOfEmployees, AnnualRevenue,
+    Description, CreatedDate, LastModifiedDate.
+
+    `filters` — dict of {SoqlField: value} for additional WHERE conditions.
+    String fields use LIKE (substring match); NumberOfEmployees and AnnualRevenue
+    use exact numeric equality.
+    Allowed filter fields: Name, Industry, Website, Phone, Type, BillingStreet,
+    BillingCity, BillingState, BillingPostalCode, BillingCountry,
+    NumberOfEmployees, AnnualRevenue, Description.
   method: find_accounts
   params:
     - name: query
-      type: str
+      type: "str | None"
+      description: >
+        Name keyword to search for (plain text, e.g. "Acme Corp").
+        Must NOT be a SOQL expression or field filter.
+    - name: extra_fields
+      type: "list[str] | None"
+      description: >
+        Extra SOQL field names to SELECT and return, e.g. ["BillingPostalCode", "Phone"].
+    - name: filters
+      type: "dict[str, str] | None"
+      description: >
+        Additional field filters as {SoqlField: value}, e.g. {"BillingPostalCode": "1234"}.
+        Only allowed field names are applied; unknown fields are silently ignored.
 
 # -------------------------------------------------------------------------------
 
 - name: find_contacts
-  description: Search for Salesforce contacts by name or email
+  description: >
+    Search for Salesforce contacts whose Name or Email contains the given keyword,
+    optionally fetching extra columns and/or filtering on specific field values.
+
+    `query` must be a plain keyword (name or email fragment), NOT a SOQL condition.
+
+    `extra_fields` — list of additional SOQL field names to include.
+    Allowed values: Phone, MobilePhone, Title, Department, MailingStreet,
+    MailingCity, MailingState, MailingPostalCode, MailingCountry,
+    LeadSource, CreatedDate.
+
+    `filters` — dict of {SoqlField: value} for WHERE conditions (LIKE substring match).
+    Allowed filter fields: FirstName, LastName, Email, Account.Name, Phone, Title,
+    Department, MailingCity, MailingState, MailingPostalCode, MailingCountry,
+    LeadSource, CreatedDate.
   method: find_contacts
   params:
     - name: query
-      type: str
+      type: "str | None"
+      description: >
+        Name or email keyword (plain text). Must NOT be a SOQL expression.
+    - name: extra_fields
+      type: "list[str] | None"
+      description: >
+        Extra SOQL field names to SELECT, e.g. ["MailingPostalCode", "Title"].
+    - name: filters
+      type: "dict[str, str] | None"
+      description: >
+        Additional field filters as {SoqlField: value}, e.g. {"MailingCity": "Amsterdam"}.
 
 # -------------------------------------------------------------------------------
 
 - name: find_leads
-  description: Search for Salesforce leads by name, email, or company
+  description: >
+    Search for Salesforce leads whose Name, Email, or Company contains the given keyword,
+    optionally fetching extra columns and/or filtering on specific field values.
+
+    `query` must be a plain keyword, NOT a SOQL condition.
+
+    `extra_fields` — list of additional SOQL field names to include.
+    Allowed values: Phone, MobilePhone, Title, Industry, LeadSource, Street, City,
+    State, PostalCode, Country, Rating, NumberOfEmployees, AnnualRevenue, CreatedDate.
+
+    `filters` — dict of {SoqlField: value} for WHERE conditions.
+    String fields use LIKE; NumberOfEmployees and AnnualRevenue use exact equality.
+    Allowed filter fields: FirstName, LastName, Email, Company, Status, Phone, Title,
+    Industry, LeadSource, City, State, PostalCode, Country, Rating,
+    NumberOfEmployees, AnnualRevenue.
   method: find_leads
   params:
     - name: query
-      type: str
+      type: "str | None"
+      description: >
+        Name, email, or company keyword (plain text). Must NOT be a SOQL expression.
+    - name: extra_fields
+      type: "list[str] | None"
+      description: >
+        Extra SOQL field names to SELECT, e.g. ["PostalCode", "City"].
+    - name: filters
+      type: "dict[str, str] | None"
+      description: >
+        Additional field filters as {SoqlField: value}, e.g. {"Country": "Netherlands"}.
 
 # -------------------------------------------------------------------------------
 
 - name: get_opportunities
-  description: List Salesforce opportunities, optionally filtered by account ID or stage
+  description: >
+    List Salesforce opportunities, optionally filtered by account ID or stage,
+    with support for extra columns and additional field filters.
+
+    `extra_fields` — list of additional SOQL field names to include.
+    Allowed values: Probability, Type, LeadSource, ForecastCategory,
+    Description, CreatedDate, LastModifiedDate.
+
+    `filters` — dict of {SoqlField: value} for WHERE conditions.
+    Probability and Amount use exact equality; all others use LIKE.
+    Allowed filter fields: Name, StageName, Account.Name, Type, LeadSource,
+    ForecastCategory, Description, Probability, Amount.
   method: get_opportunities
   params:
     - name: account_id
       type: "str | None"
     - name: stage
       type: "str | None"
+    - name: extra_fields
+      type: "list[str] | None"
+      description: >
+        Extra SOQL field names to SELECT, e.g. ["Probability", "Type"].
+    - name: filters
+      type: "dict[str, str] | None"
+      description: >
+        Additional field filters as {SoqlField: value}, e.g. {"LeadSource": "Web"}.
 
 # -------------------------------------------------------------------------------
 
 - name: get_cases
-  description: List Salesforce cases, optionally filtered by account ID or status
+  description: >
+    List Salesforce cases, optionally filtered by account ID or status,
+    with support for extra columns and additional field filters.
+
+    `extra_fields` — list of additional SOQL field names to include.
+    Allowed values: Description, Origin, Type, Reason, ClosedDate, LastModifiedDate.
+
+    `filters` — dict of {SoqlField: value} for WHERE conditions (all LIKE substring match).
+    Allowed filter fields: Subject, Status, Priority, Account.Name,
+    Description, Origin, Type, Reason.
   method: get_cases
   params:
     - name: account_id
       type: "str | None"
     - name: status
       type: "str | None"
+    - name: extra_fields
+      type: "list[str] | None"
+      description: >
+        Extra SOQL field names to SELECT, e.g. ["Origin", "Reason"].
+    - name: filters
+      type: "dict[str, str] | None"
+      description: >
+        Additional field filters as {SoqlField: value}, e.g. {"Origin": "Email"}.
