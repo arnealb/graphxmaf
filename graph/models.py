@@ -1,9 +1,18 @@
-from dataclasses import dataclass
 from datetime import datetime
 from typing import Literal, Optional, List
+from pydantic import BaseModel
 
-@dataclass
-class Email:
+
+class EmailAddress(BaseModel):
+    name: str | None
+    address: str | None
+
+
+class Attendee(BaseModel):
+    email: EmailAddress
+
+
+class Email(BaseModel):
     id: str
     subject: str
     sender_name: str
@@ -13,8 +22,7 @@ class Email:
     web_link: str | None = None
 
 
-@dataclass
-class File:
+class File(BaseModel):
     id: str
     name: str
     is_folder: bool
@@ -24,41 +32,28 @@ class File:
     parent_id: str | None
     web_link: str | None
 
-@dataclass
-class Contact:
+
+class Contact(BaseModel):
     id: str
     name: str
     email: str | None
 
 
-# kan zijn dat calendar shit niet zelfde is als contacten dus best andere zeker?
-@dataclass
-class CalendarEvent:
+class CalendarEvent(BaseModel):
     id: str
     subject: str
-    start: datetime | None
-    end: datetime | None
+    start: str | None
+    end: str | None
     organizer: EmailAddress | None
     attendees: list[Attendee]
     web_link: str | None
-
-@dataclass
-class EmailAddress:
-    name: str | None
-    address: str | None
-
-@dataclass
-class Attendee:
-    email: EmailAddress
-
 
 
 # ---------------------------------------------------------------------
 EntityType = Literal["email", "file", "event", "contact"]
 
 
-@dataclass
-class SearchResult:
+class SearchResult(BaseModel):
     type: EntityType
     id: str
     title: Optional[str]
@@ -67,3 +62,8 @@ class SearchResult:
     people: List[EmailAddress]
     web_link: Optional[str]
     source: str = "graph"
+
+
+class User(BaseModel):
+    display_name: str | None
+    email: str | None

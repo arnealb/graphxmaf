@@ -4,7 +4,6 @@ import yaml
 from mcp.server.fastmcp import Context
 
 from salesforce.repository import SalesforceRepository
-from salesforce.agent import SalesforceAgent
 
 _TYPE_MAP: dict[str, type] = {
     "str":                  str,
@@ -15,14 +14,18 @@ _TYPE_MAP: dict[str, type] = {
     "dict[str, str] | None": dict[str, str] | None,
 }
 
-_agent_cache: dict[str, SalesforceAgent] = {}
+# tools.yaml uses "find_accounts" but the repo method is "get_accounts"
+_SF_METHOD_ALIASES = {
+    "find_accounts": "get_accounts",
+}
+
+_repo_cache: dict[str, SalesforceRepository] = {}
 
 
-def _get_agent(token: str, instance_url: str) -> SalesforceAgent:
-    if token not in _agent_cache:
-        repo = SalesforceRepository(access_token=token, instance_url=instance_url)
-        _agent_cache[token] = SalesforceAgent(repo)
-    return _agent_cache[token]
+def _get_repo(token: str, instance_url: str) -> SalesforceRepository:
+    if token not in _repo_cache:
+        _repo_cache[token] = SalesforceRepository(access_token=token, instance_url=instance_url)
+    return _repo_cache[token]
 
 
 def _load_tools(path: str = "salesforce/tools.yaml") -> list[dict]:
@@ -36,13 +39,14 @@ def register_salesforce_tools(mcp, instance_url: str, extract_token) -> None:
 
 
 def _register_one(mcp, instance_url: str, extract_token, tool_def: dict) -> None:
-    agent_method = tool_def["method"]
+    repo_method = tool_def["method"]
     params = tool_def.get("params", [])
 
-    async def handler(ctx: Context, _m=agent_method, **kwargs):
+    async def handler(ctx: Context, _m=repo_method, **kwargs):
         token = extract_token(ctx)
-        agent = _get_agent(token, instance_url)
-        return await getattr(agent, _m)(**kwargs)
+        repo = _get_repo(token, instance_url)
+        actual = _SF_METHOD_ALIASES.get(_m, _m)
+        return await getattr(repo, actual)(**kwargs)
 
     sig_params = [
         inspect.Parameter("ctx", inspect.Parameter.POSITIONAL_OR_KEYWORD, annotation=Context),

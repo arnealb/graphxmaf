@@ -1,9 +1,8 @@
-from dataclasses import dataclass
 from datetime import datetime, date
+from pydantic import BaseModel
 
 
-@dataclass
-class SalesforceAccount:
+class SalesforceAccount(BaseModel):
     """
     Salesforce Account record.
 
@@ -39,8 +38,7 @@ class SalesforceAccount:
     last_modified_date: str | None = None    # LastModifiedDate
 
 
-@dataclass
-class SalesforceContact:
+class SalesforceContact(BaseModel):
     """
     Salesforce Contact record.
 
@@ -75,8 +73,7 @@ class SalesforceContact:
     created_date: str | None = None          # CreatedDate
 
 
-@dataclass
-class SalesforceOpportunity:
+class SalesforceOpportunity(BaseModel):
     """
     Salesforce Opportunity record.
 
@@ -107,8 +104,7 @@ class SalesforceOpportunity:
     last_modified_date: str | None = None    # LastModifiedDate
 
 
-@dataclass
-class SalesforceCase:
+class SalesforceCase(BaseModel):
     """
     Salesforce Case record.
 
@@ -137,8 +133,7 @@ class SalesforceCase:
     last_modified_date: str | None = None    # LastModifiedDate
 
 
-@dataclass
-class SalesforceLead:
+class SalesforceLead(BaseModel):
     """
     Salesforce Lead record.
 
