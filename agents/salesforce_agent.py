@@ -41,8 +41,10 @@ def create_salesforce_agent(salesforce_mcp):
             - Use get_cases when the user asks about support tickets or cases.
 
             OUTPUT
-            - Always include the ID so the user can reference records in follow-up questions.
-            - Present dates in a human-readable format.
+            - Return the exact JSON object or array that the tool returned. No prose, no explanation.
+            - If multiple tools were called, return a JSON array where each element is
+              {"tool": "<tool_name>", "result": <tool_result>}.
+            - If only one tool was called, return its result directly.
         """,
         tools=[salesforce_mcp],
     )

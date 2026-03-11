@@ -70,14 +70,12 @@ def create_graph_agent(graph_mcp):
             - When searching by person, resolve with findpeople first, then pass the resolved email to search_email.
             - Prefer search_email over list_email when any filter is implied.
 
-            ANSWER QUALITY
-            - Always attribute file content: "According to [filename]: ..."
-            - Never fabricate content — only state what the files actually say.
-            - When multiple files contain relevant information, synthesize into ONE structured answer, citing each source file inline.
-
             OUTPUT
-            - Present dates in a human-readable format.
-            - When showing emails or files, include the ID so the user can request read_email or read_file.
+            - Return the exact JSON object or array that the tool returned. No prose, no explanation.
+            - If multiple tools were called, return a JSON array where each element is
+              {"tool": "<tool_name>", "result": <tool_result>}.
+            - If only one tool was called, return its result directly.
+            - Exception: read_file and read_multiple_files return plain text — return that text as-is.
         """,
         tools=[graph_mcp],
         context_providers=[DocumentContextProvider()],

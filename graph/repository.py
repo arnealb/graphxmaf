@@ -5,7 +5,7 @@ from configparser import SectionProxy
 from datetime import datetime, timezone
 from typing import List
 import httpx
-
+import asyncio
 from azure.identity import DeviceCodeCredential
 from msgraph import GraphServiceClient
 
@@ -419,6 +419,42 @@ class GraphRepository(IGraphRepository):
         return files 
 
 
+
+    async def get_file_text(self, file_id: str) -> str:
+        content_bytes = await self.get_file_content(file_id)
+
+        # Detect docx by ZIP magic bytes (docx is a zip archive)
+        if content_bytes[:4] == b'PK\x03\x04':
+            try:
+                import io
+                from docx import Document
+                doc = Document(io.BytesIO(content_bytes))
+                text = "\n".join(p.text for p in doc.paragraphs if p.text)
+            except Exception:
+                try:
+                    text = content_bytes.decode("utf-8")
+                except UnicodeDecodeError:
+                    text = content_bytes.decode("latin-1")
+        else:
+            try:
+                text = content_bytes.decode("utf-8")
+            except UnicodeDecodeError:
+                text = content_bytes.decode("latin-1")
+
+        MAX_CHARS = 12_000
+        if len(text) > MAX_CHARS:
+            text = text[:MAX_CHARS] + "\n\n[... content truncated ...]"
+        return text
+
+    async def get_files_text_batch(self, file_ids: list[str]) -> list[str]:
+        results = await asyncio.gather(
+            *[self.get_file_text(fid) for fid in file_ids],
+            return_exceptions=True,
+        )
+        return [
+            r if isinstance(r, str) else f"Error reading file {fid}: {r}"
+            for fid, r in zip(file_ids, results)
+        ]
 
     async def get_file_content(self, file_id: str, drive_id: str | None = None) -> bytes:
         if drive_id is None:
