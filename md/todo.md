@@ -38,3 +38,6 @@
   10. Duplicate env loading across every agent file
   - salesforce_agent.py:6-11, orchestrator_agent.py:8-12, and agents/graph_agent.py all call load_dotenv() and re-read the same env vars independently. This is fine functionally but messy — the config should
   be centralized.
+
+
+iets van ik vind geen entries met rrne -> bedoel je arne? 
