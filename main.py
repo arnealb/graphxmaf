@@ -13,6 +13,7 @@ import msal
 from agent_framework import MCPStreamableHTTPTool
 from agent_framework.devui import serve
 from agents.graph_agent import create_graph_agent
+from agents.orchestrator_agent import create_orchestrator_agent
 from agents.salesforce_agent import create_salesforce_agent
 from salesforce.auth import authenticate_salesforce
 
@@ -207,11 +208,12 @@ def main() -> None:
         http_client=sf_http,
     )
 
-    # ── Serve both agents ──────────────────────────────────────────────
+    # ── Serve agents ───────────────────────────────────────────────────
     try:
         graph_agent = create_graph_agent(graph_mcp=graph_mcp)
         sf_agent = create_salesforce_agent(salesforce_mcp=sf_mcp)
-        serve(entities=[graph_agent, sf_agent], port=8080, auto_open=True)
+        orchestrator = create_orchestrator_agent(graph_agent=graph_agent, salesforce_agent=sf_agent)
+        serve(entities=[orchestrator, graph_agent, sf_agent], port=8080, auto_open=True)
     finally:
         for proc in (graph_proc, sf_proc):
             if proc is not None:

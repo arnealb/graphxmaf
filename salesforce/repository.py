@@ -129,7 +129,6 @@ class SalesforceRepository:
 
     @staticmethod
     def _esc(value: str) -> str:
-        """Escape single quotes for SOQL string literals."""
         return value.replace("'", "\\'")
 
     @staticmethod
@@ -137,6 +136,7 @@ class SalesforceRepository:
         extra_fields: list[str] | None,
         selectable: dict[str, str],
     ) -> tuple[list[str], dict[str, str]]:
+
         """Return (valid_soql_fields, soql→model_attr mapping) from requested extra_fields."""
         safe, mapping = [], {}
         for f in (extra_fields or []):
@@ -152,6 +152,7 @@ class SalesforceRepository:
         filterable: frozenset[str],
         numeric: frozenset[str],
     ) -> None:
+        
         """Append validated filter conditions to the conditions list."""
         for field, value in (filters or {}).items():
             if field not in filterable:
@@ -168,21 +169,27 @@ class SalesforceRepository:
 
     async def get_accounts(
         self,
-        query: str | None = None,
-        extra_fields: list[str] | None = None,
-        filters: dict[str, str] | None = None,
-        top: int = 25,
+        query: str | None = None,                   # zoekterm bv Technology
+        extra_fields: list[str] | None = None,      # extra col die opgezocht meoten worden
+        filters: dict[str, str] | None = None,      # filters bv {"Industry": "Technology"}
+        top: int = 25,                              # aantal records
     ) -> list[SalesforceAccount]:
         safe_extras, field_map = self._resolve_fields(extra_fields, _ACCOUNT_SELECTABLE)
+            # safe_extra: fieldnames voor SOQL query
+            # field_map: om terug in response te steken 
         extra_cols = (", " + ", ".join(safe_extras)) if safe_extras else ""
 
         conditions: list[str] = []
-        if query:
+        # Only add a Name LIKE condition from `query` when `filters` doesn't
+        # already carry a Name filter (avoids duplicate Name conditions).
+        if query and not (filters and "Name" in filters):
             conditions.append(f"Name LIKE '%{self._esc(query)}%'")
         self._apply_filters(conditions, filters, _ACCOUNT_FILTERABLE, _ACCOUNT_NUMERIC)
 
         where = f" WHERE {' AND '.join(conditions)}" if conditions else ""
         soql = f"SELECT Id, Name, Industry, Website{extra_cols} FROM Account{where} LIMIT {top}"
+
+        print("soql: ", soql)
 
         records = await self._query(soql)
         return [

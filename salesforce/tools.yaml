@@ -1,9 +1,12 @@
 - name: find_accounts
   description: >
-    Search for Salesforce accounts whose Name contains the given keyword,
-    optionally fetching extra columns and/or filtering on specific field values.
+    Search for Salesforce accounts, optionally fetching extra columns and/or
+    filtering on specific field values.
 
-    `query` must be a plain name keyword (e.g. "Acme"), NOT a SOQL condition.
+    `query` adds a WHERE Name LIKE '%...%' condition — use it ONLY when the user
+    is searching for accounts by name (e.g. "find accounts named Acme").
+    OMIT `query` (leave it null) when you are filtering by Industry, Type, or any
+    other non-name field; in that case use `filters` exclusively.
 
     `extra_fields` — list of additional SOQL field names to include in the result.
     Allowed values: Phone, Type, BillingStreet, BillingCity, BillingState,
@@ -16,12 +19,18 @@
     Allowed filter fields: Name, Industry, Website, Phone, Type, BillingStreet,
     BillingCity, BillingState, BillingPostalCode, BillingCountry,
     NumberOfEmployees, AnnualRevenue, Description.
+
+    Examples:
+    - User asks for accounts in Technology sector → query=null, filters={"Industry":"Technology"}
+    - User asks for accounts named "Acme" → query="Acme", filters=null
+    - User asks for Technology accounts named "Acme" → query="Acme", filters={"Industry":"Technology"}
   method: find_accounts
   params:
     - name: query
       type: "str | None"
       description: >
-        Name keyword to search for (plain text, e.g. "Acme Corp").
+        Name keyword for a Name LIKE search (plain text, e.g. "Acme Corp").
+        Set to null when filtering by Industry or other non-name fields.
         Must NOT be a SOQL expression or field filter.
     - name: extra_fields
       type: "list[str] | None"
