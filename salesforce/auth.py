@@ -1,3 +1,4 @@
+# auth.py
 """Salesforce OAuth 2.0 authentication helpers.
 
 Supports two flows (mirrored from simple-salesforce login.py, no dependency):
@@ -60,7 +61,7 @@ def _post_token(login_url: str, data: dict) -> SalesforceCredentials:
         access_token=result["access_token"],
         instance_url=result["instance_url"],
     )
-    log.info("Salesforce auth OK  instance_url=%s", creds.instance_url)
+    log.info("Salesforce auth OK instance_url=%s", creds.instance_url)
     return creds
 
 
@@ -130,8 +131,7 @@ def authenticate_salesforce(login_url: str) -> SalesforceCredentials:
 
     private_key_path = os.environ.get("SF_PRIVATE_KEY_PATH")
     private_key = os.environ.get("SF_PRIVATE_KEY")
-
-    # use_jwt = has_jwt_key and forced_flow != "password"
+    print("private_key: ", private_key)
 
     return authenticate_jwt(
         client_id=client_id,

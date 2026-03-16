@@ -41,3 +41,60 @@
 
 
 iets van ik vind geen entries met rrne -> bedoel je arne? 
+
+---
+- vraag aan dorian: 
+2. Privacy van bedrijfsdata
+
+Hier gaat het over:
+
+gevoelige informatie
+
+persoonsgegevens
+
+vertrouwelijke documenten
+
+interne communicatie
+
+klantgegevens
+
+Je systeem haalt mogelijk data op uit e-mails, CRM, documenten enzovoort. Dus je moet uitleggen dat niet alle data zomaar naar een taalmodel gestuurd mag worden. Belangrijke vragen:
+
+welke data mag doorgestuurd worden?
+
+hoeveel context geef je mee?
+
+vermijd je onnodige blootstelling van gevoelige data?
+
+hoe ga je om met logging en caching?
+
+Dit is belangrijker dan veel studenten denken.
+
+---
+
+---
+fetch me all information you can find on Advanced Communications
+
+Here is the information available about Advanced Communications:
+
+From Salesforce:
+- **Account Information:**
+  - **Name:** Advanced Communications
+  - **Industry:** Communications
+  - **Website:** [www.advancedcomms.net](http://www.advancedcomms.net)
+  - **Phone:** Not available
+  - **Number of Employees:** Not available
+  - **Annual Revenue:** Not available
+  - **Description:** Not available
+  
+- **Contacts:** No contact information found.
+
+- **Leads:** No leads found.
+
+### From Microsoft 365:
+- No information retrieved.
+
+If you need specific details or further assistance, please let me know!
+
+-> maar is wel informatie over anual revenue en stuff
+---
