@@ -73,7 +73,7 @@ Dit is belangrijker dan veel studenten denken.
 ---
 
 ---
-fetch me all information you can find on Advanced Communications
+> fetch me all information you can find on Advanced Communications -> done
 
 Here is the information available about Advanced Communications:
 
@@ -98,3 +98,41 @@ If you need specific details or further assistance, please let me know!
 
 -> maar is wel informatie over anual revenue en stuff
 ---
+
+
+- nog geen mogelijkheid om te vragen geef me alle informatie over x 
+  - zoekt dan binnen graph -> door emails / calenders / ...
+  - zoekt dan binnen salesforce leads / accounts / ... 
+      - combineert dan de output
+
+    voor de moment vooral nog vragen van ejo vind me alle emails van / over / ...
+    aandacht aan geven pls
+
+-> doet dit automatisch tho
+---
+
+Here are the links to the files related to Nutella:
+
+nutella sales.docx
+Document.docx
+origin.docx
+
+4:40:30 PM
+•
+↑1453
+↓317
+(1770 tokens)
+•
+
+1
+are there any salesforce accounts related to these files?
+
+4:40:59 PM
+
+en dan vraagt ie voor welke files? dus da moet nog beter gedaan worden tho, moet meer state bijhouden binnen de huidige converstatie
+
+
+
+---
+shit achter die external app checken van salesforce
+- wat als meerdere users in 1 app zitten
