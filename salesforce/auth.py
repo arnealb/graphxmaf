@@ -14,6 +14,8 @@ import os
 import time
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Optional
+from urllib.parse import urlencode
 
 import httpx
 import jwt as _jwt  # PyJWT[cryptography]
@@ -29,6 +31,7 @@ class SalesforceCredentials:
     """Successful Salesforce auth result."""
     access_token: str
     instance_url: str
+    expires_at: Optional[float] = None
 
 
 class SalesforceAuthError(RuntimeError):
@@ -149,3 +152,99 @@ def _require_env(name: str) -> str:
     if not value:
         raise SalesforceAuthError(f"Required environment variable {name!r} is not set")
     return value
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# OAuth 2.0 Authorization Code Flow
+# ──────────────────────────────────────────────────────────────────────────────
+
+def build_authorization_url(
+    *,
+    client_id: str,
+    redirect_uri: str,
+    login_url: str,
+    state: str,
+    scope: str = "api refresh_token",
+) -> str:
+    """Return the Salesforce OAuth 2.0 authorization URL to redirect the user to."""
+    params = {
+        "response_type": "code",
+        "client_id": client_id,
+        "redirect_uri": redirect_uri,
+        "state": state,
+        "scope": scope,
+    }
+    base = f"{login_url.rstrip('/')}/services/oauth2/authorize"
+    return f"{base}?{urlencode(params)}"
+
+
+async def exchange_code_for_tokens(
+    *,
+    code: str,
+    client_id: str,
+    client_secret: str,
+    redirect_uri: str,
+    login_url: str,
+) -> dict:
+    """Exchange an authorization code for access + refresh tokens.
+
+    Returns the raw JSON response dict from Salesforce.
+    Raises ``SalesforceAuthError`` on failure.
+    """
+    url = f"{login_url.rstrip('/')}/services/oauth2/token"
+    data = {
+        "grant_type": "authorization_code",
+        "code": code,
+        "client_id": client_id,
+        "client_secret": client_secret,
+        "redirect_uri": redirect_uri,
+    }
+    async with httpx.AsyncClient(timeout=30) as client:
+        resp = await client.post(url, data=data)
+
+    if not resp.is_success:
+        try:
+            body = resp.json()
+            err_code = body.get("error", resp.status_code)
+            msg = body.get("error_description", resp.text)
+        except Exception:
+            err_code, msg = resp.status_code, resp.text
+        raise SalesforceAuthError(f"Token exchange failed [{err_code}]: {msg}")
+
+    log.info("OAuth code exchange OK instance_url=%s", resp.json().get("instance_url"))
+    return resp.json()
+
+
+async def refresh_access_token(
+    *,
+    refresh_token: str,
+    client_id: str,
+    client_secret: str,
+    login_url: str,
+) -> dict:
+    """Use a refresh token to obtain a new access token.
+
+    Returns the raw JSON response dict from Salesforce.
+    Raises ``SalesforceAuthError`` on failure (e.g. ``invalid_grant``).
+    """
+    url = f"{login_url.rstrip('/')}/services/oauth2/token"
+    data = {
+        "grant_type": "refresh_token",
+        "refresh_token": refresh_token,
+        "client_id": client_id,
+        "client_secret": client_secret,
+    }
+    async with httpx.AsyncClient(timeout=30) as client:
+        resp = await client.post(url, data=data)
+
+    if not resp.is_success:
+        try:
+            body = resp.json()
+            err_code = body.get("error", resp.status_code)
+            msg = body.get("error_description", resp.text)
+        except Exception:
+            err_code, msg = resp.status_code, resp.text
+        raise SalesforceAuthError(f"Token refresh failed [{err_code}]: {msg}")
+
+    log.info("OAuth token refresh OK")
+    return resp.json()

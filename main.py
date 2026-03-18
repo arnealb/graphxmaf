@@ -15,7 +15,6 @@ from agent_framework.devui import serve
 from agents.graph_agent import create_graph_agent
 from agents.orchestrator_agent import create_orchestrator_agent
 from agents.salesforce_agent import create_salesforce_agent
-from salesforce.auth import authenticate_salesforce
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -183,24 +182,31 @@ def main() -> None:
 
     # ── Salesforce ─────────────────────────────────────────────────────
     sf_mcp_url = sf_settings.get("mcpServerUrl", "http://localhost:8001/mcp")
-    sf_login_url = sf_settings.get("loginUrl", "https://test.salesforce.com")
 
-    sf_creds = authenticate_salesforce(login_url=sf_login_url)
-    print("Authenticated with Salesforce.")
+    sf_session_token = os.environ.get("SF_SESSION_TOKEN")
+    if not sf_session_token:
+        print(
+            "\nSalesforce session token not found.\n"
+            "To authenticate:\n"
+            "  1. Run:  python -m salesforce.mcp_server\n"
+            "  2. Open: http://localhost:8001/auth/salesforce/login\n"
+            "  3. Copy the returned session_token into .env as:\n"
+            "       SF_SESSION_TOKEN=<uuid>\n"
+            "  4. Restart the application.\n"
+        )
+        sys.exit(1)
 
     sf_server_env = os.environ.copy()
     sf_parsed = urlparse(sf_mcp_url)
     sf_resource_base = f"{sf_parsed.scheme}://{sf_parsed.netloc}"
     sf_server_env["MCP_RESOURCE_URI"] = sf_resource_base
-    # Pass the resolved instance URL so the MCP server uses the right endpoint.
-    sf_server_env["SF_INSTANCE_URL"] = sf_creds.instance_url
 
     sf_proc = None
     if _is_local_url(sf_mcp_url):
         sf_proc = _start_salesforce_mcp_server(sf_server_env, sf_mcp_url)
 
     sf_http = httpx.AsyncClient(
-        headers={"Authorization": f"Bearer {sf_creds.access_token}"},
+        headers={"Authorization": f"Bearer {sf_session_token}"},
     )
     sf_mcp = MCPStreamableHTTPTool(
         name="salesforce",
