@@ -1,0 +1,50 @@
+@startuml
+sequenceDiagram
+    actor User as Gebruiker
+    participant O as Orchestrator
+    participant L as LLM / modelcomponent
+    participant GA as Graph agent
+    participant SA as Salesforce agent
+    participant SMA as SmartSales agent
+    participant GMCP as Graph MCP-server
+    participant SMCP as Salesforce MCP-server
+    participant SMMCP as SmartSales MCP-server
+    participant G as Microsoft Graph
+    participant SF as Salesforce
+    participant SS as SmartSales
+
+    User->>O: Natuurlijke taalquery
+    O->>L: Interpreteer query en bepaal relevante agents
+    L-->>O: Intentie / routingvoorstel
+
+    alt Query voor Microsoft Graph
+        O->>GA: Vraag gegevens op
+        GA->>GMCP: Toolaanroep
+        GMCP->>G: API-call
+        G-->>GMCP: Resultaten
+        GMCP-->>GA: Gestructureerde output
+        GA-->>O: Deelresultaten
+    end
+
+    alt Query voor Salesforce
+        O->>SA: Vraag gegevens op
+        SA->>SMCP: Toolaanroep
+        SMCP->>SF: API-call
+        SF-->>SMCP: Resultaten
+        SMCP-->>SA: Gestructureerde output
+        SA-->>O: Deelresultaten
+    end
+
+    alt Query voor SmartSales
+        O->>SMA: Vraag gegevens op
+        SMA->>SMMCP: Toolaanroep
+        SMMCP->>SS: API-call
+        SS-->>SMMCP: Resultaten
+        SMMCP-->>SMA: Gestructureerde output
+        SMA-->>O: Deelresultaten
+    end
+
+    O->>L: Combineer en formuleer antwoord
+    L-->>O: Samengebracht antwoord
+    O-->>User: Eindantwoord
+@enduml
