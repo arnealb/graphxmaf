@@ -1,9 +1,12 @@
 # mcp_router.py
 import inspect
+from typing import Callable, Awaitable
+
 import yaml
 
 from mcp.server.fastmcp import Context
 
+from salesforce.auth import SalesforceCredentials
 from salesforce.repository import SalesforceRepository
 
 _TYPE_MAP: dict[str, type] = {
@@ -20,13 +23,18 @@ _SF_METHOD_ALIASES = {
     "find_accounts": "get_accounts",
 }
 
-_repo_cache: dict[str, SalesforceRepository] = {}
+# Cache keyed by session_token → (SalesforceRepository, cached_access_token).
+# When the access token is refreshed the cached_access_token won't match and a
+# fresh repo is created automatically.
+_repo_cache: dict[str, tuple[SalesforceRepository, str]] = {}
 
 
-def _get_repo(token: str, instance_url: str) -> SalesforceRepository:
-    if token not in _repo_cache:
-        _repo_cache[token] = SalesforceRepository(access_token=token, instance_url=instance_url)
-    return _repo_cache[token]
+def _get_repo(session_token: str, access_token: str, instance_url: str) -> SalesforceRepository:
+    cached = _repo_cache.get(session_token)
+    if cached is None or cached[1] != access_token:
+        repo = SalesforceRepository(access_token=access_token, instance_url=instance_url)
+        _repo_cache[session_token] = (repo, access_token)
+    return _repo_cache[session_token][0]
 
 
 def _load_tools(path: str = "salesforce/tools.yaml") -> list[dict]:
@@ -34,18 +42,23 @@ def _load_tools(path: str = "salesforce/tools.yaml") -> list[dict]:
         return yaml.safe_load(f)
 
 
-def register_salesforce_tools(mcp, instance_url: str, extract_token) -> None:
+def register_salesforce_tools(
+    mcp,
+    extract_session_token: Callable[[Context], str],
+    resolve_session: Callable[[str], Awaitable[SalesforceCredentials]],
+) -> None:
     for tool_def in _load_tools():
-        _register_one(mcp, instance_url, extract_token, tool_def)
+        _register_one(mcp, extract_session_token, resolve_session, tool_def)
 
 
-def _register_one(mcp, instance_url: str, extract_token, tool_def: dict) -> None:
+def _register_one(mcp, extract_session_token, resolve_session, tool_def: dict) -> None:
     repo_method = tool_def["method"]
     params = tool_def.get("params", [])
 
     async def handler(ctx: Context, _m=repo_method, **kwargs):
-        token = extract_token(ctx)
-        repo = _get_repo(token, instance_url)
+        session_token = extract_session_token(ctx)
+        creds = await resolve_session(session_token)
+        repo = _get_repo(session_token, creds.access_token, creds.instance_url)
         actual = _SF_METHOD_ALIASES.get(_m, _m)
         return await getattr(repo, actual)(**kwargs)
 
