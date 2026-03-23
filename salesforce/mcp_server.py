@@ -1,8 +1,10 @@
 # mcp_server.py
 import configparser
+import json
 import logging
 import os
 import uuid
+from pathlib import Path
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -36,6 +38,7 @@ _SF_LOGIN_URL = "https://test.salesforce.com"
 _SF_CLIENT_ID = os.environ.get("SF_CLIENT_ID", "")
 _SF_CLIENT_SECRET = os.environ.get("SF_CLIENT_SECRET", "")
 _SF_CALLBACK_URL = os.environ.get("SF_OAUTH_CALLBACK_URL", "http://localhost:8001/auth/salesforce/callback")
+
 # _SF_LOGIN_URL = (
 #     os.environ.get("SF_LOGIN_URL")
 #     or _sf_settings.get("loginUrl", "https://test.salesforce.com")
@@ -59,6 +62,28 @@ log.info(
 # In-memory CSRF state map: state UUID → redirect_after URL.
 _pending_states: dict[str, str] = {}
 
+# Local pointer file: stores the UUID of the most recently authenticated session.
+# main.py reads this via /auth/salesforce/session so it never needs SF_SESSION_TOKEN in .env.
+_SESSION_REF_FILE = Path(os.environ.get("SF_SESSION_REF_FILE", ".sf_session.json"))
+
+
+def _write_session_ref(session_token: str) -> None:
+    """Persist the active session UUID so main.py can discover it automatically."""
+
+    _SESSION_REF_FILE.write_text(json.dumps({"session_token": session_token}), encoding="utf-8")
+    log.info("Session ref written to %s  session=%s", _SESSION_REF_FILE, session_token)
+
+
+def _read_session_ref() -> str | None:
+    """Return the stored session UUID, or None if the file is absent or corrupt."""
+
+    if not _SESSION_REF_FILE.exists():
+        return None
+    try:
+        return json.loads(_SESSION_REF_FILE.read_text(encoding="utf-8")).get("session_token")
+    except Exception:
+        return None
+
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Well-known metadata
@@ -71,6 +96,32 @@ async def protected_resource_metadata(_request: Request) -> JSONResponse:
         "bearer_methods_supported": ["header"],
         "login_endpoint": f"{_RESOURCE_URI}/auth/salesforce/login",
     })
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Session discovery (used by main.py on startup)
+# ──────────────────────────────────────────────────────────────────────────────
+
+@mcp.custom_route("/auth/salesforce/session", methods=["GET"])
+async def salesforce_current_session(_request: Request) -> JSONResponse:
+    """Return the active session token, or 404 if no authenticated session exists.
+
+    main.py calls this on startup instead of reading SF_SESSION_TOKEN from .env.
+    The session token is written here by the callback after every successful auth.
+    """
+    session_token = _read_session_ref()
+    if not session_token:
+        log.debug("No session ref file found at %s", _SESSION_REF_FILE)
+        return JSONResponse({"error": "no_session"}, status_code=404)
+
+    tokens = await _token_store.get(session_token)
+    if tokens is None:
+        log.warning("Session ref points to unknown session=%s — clearing ref", session_token)
+        _SESSION_REF_FILE.unlink(missing_ok=True)
+        return JSONResponse({"error": "session_not_found"}, status_code=404)
+
+    log.debug("Session ref resolved  session=%s  user=%s", session_token, tokens.username)
+    return JSONResponse({"session_token": session_token, "username": tokens.username})
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -129,6 +180,7 @@ async def salesforce_callback(request: Request) -> JSONResponse:
     tokens = StoredTokens.from_token_response(token_data)
     session_token = _token_store.generate_session_token()
     await _token_store.save(session_token, tokens)
+    _write_session_ref(session_token)
 
     log.info("New session created user=%s session=%s", tokens.username, session_token)
     return JSONResponse({"session_token": session_token, "username": tokens.username})
@@ -157,6 +209,7 @@ async def _resolve_session(session_token: str) -> SalesforceCredentials:
     - Auto-refreshes the access token if it is about to expire.
     - Raises ``RuntimeError`` (with a re-auth hint) on any unrecoverable error.
     """
+    print("resolve_sessions")
     tokens = await _token_store.get(session_token)
     if tokens is None:
         raise RuntimeError(
@@ -207,6 +260,7 @@ async def _resolve_session(session_token: str) -> SalesforceCredentials:
 # ──────────────────────────────────────────────────────────────────────────────
 
 def _extract_session_token(ctx: Context) -> str:
+    print("extract_session_token")
     http_request = ctx.request_context.request
     if http_request is None:
         raise RuntimeError(
