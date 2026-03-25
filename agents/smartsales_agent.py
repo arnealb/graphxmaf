@@ -49,6 +49,7 @@ def create_smartsales_agent(smartsales_mcp):
 
             OUTPUT
             - Return the exact JSON object or array that the tool returned. No prose, no explanation.
+            - Do NOT omit, summarize, or filter any fields — including null values, empty arrays, and technical fields.
             - If multiple tools were called, return a JSON array where each element is
               {"tool": "<tool_name>", "result": <tool_result>}.
             - If only one tool was called, return its result directly.

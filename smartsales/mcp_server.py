@@ -16,7 +16,7 @@ from smartsales.auth import (
     SmartSalesCredentials,
     authenticate_from_env,
 )
-from smartsales.mcp_router import register_smartsales_tools
+from smartsales.mcp_router import register_smartsales_tools, _get_repo
 from smartsales.token_store import StoredTokens, build_token_store
 
 logging.basicConfig(
@@ -86,6 +86,9 @@ async def smartsales_current_session(_request: Request) -> JSONResponse:
     """
     try:
         session_token = await _ensure_session()
+        creds = await _resolve_session(session_token)
+        repo = _get_repo(session_token, creds.access_token)
+        await repo.warm_field_cache()
         return JSONResponse({"session_token": session_token})
     except SmartSalesAuthError as exc:
         log.error("SmartSales auth failed: %s", exc)

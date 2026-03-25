@@ -137,3 +137,27 @@
       description: >
         If false (default), includes resultSizeEstimate in the response so you know the total count.
         Set to true only to skip the count for performance.
+
+- name: list_displayable_fields
+  description: >
+    List all fields that can be displayed in a SmartSales location list view.
+    Returns field metadata: fieldName, displayName, type, size, audiences.
+    Use when the user asks which fields or columns are available to display.
+  method: list_displayable_fields
+  params: []
+
+- name: list_queryable_fields
+  description: >
+    List all fields that can be used to filter locations via the q parameter in list_locations.
+    Returns field metadata: fieldName, displayName, type, allowExpression, selector.
+    Use when the user asks which fields are available to filter on.
+  method: list_queryable_fields
+  params: []
+
+- name: list_sortable_fields
+  description: >
+    List all fields that can be used for sorting locations via the s parameter in list_locations.
+    Returns field metadata: keyName, displayName, hidden, audiences.
+    Use when the user asks which fields are available to sort on.
+  method: list_sortable_fields
+  params: []
