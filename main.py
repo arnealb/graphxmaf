@@ -16,6 +16,7 @@ from agent_framework.devui import serve
 from agents.graph_agent import create_graph_agent
 from agents.orchestrator_agent import create_orchestrator_agent
 from agents.salesforce_agent import create_salesforce_agent
+from agents.smartsales_agent import create_smartsales_agent
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -146,6 +147,43 @@ def _start_salesforce_mcp_server(env: dict, mcp_url: str) -> subprocess.Popen:
     return proc
 
 
+def _start_smartsales_mcp_server(env: dict, mcp_url: str) -> subprocess.Popen:
+    proc = subprocess.Popen(
+        [sys.executable, "-m", "smartsales.mcp_server"],
+        env=env,
+        stdout=sys.stdout,
+        stderr=sys.stderr,
+    )
+    parsed = urlparse(mcp_url)
+    host = parsed.hostname or "localhost"
+    port = parsed.port or 8002
+    print(f"Waiting for SmartSales MCP server on {host}:{port} …")
+    _wait_for_port(host, port)
+    print("SmartSales MCP server ready.")
+    return proc
+
+
+def _resolve_ss_session(ss_mcp_url: str) -> str:
+    """Return a valid SmartSales session token.
+
+    Calls GET /auth/smartsales/session on the running MCP server.
+    The MCP server auto-authenticates using env credentials — no browser needed.
+    """
+    parsed = urlparse(ss_mcp_url)
+    base = f"{parsed.scheme}://{parsed.netloc}"
+    session_url = f"{base}/auth/smartsales/session"
+
+    try:
+        resp = httpx.get(session_url, timeout=10)
+        if resp.status_code == 200:
+            data = resp.json()
+            print(f"SmartSales: session ready.")
+            return data["session_token"]
+        raise RuntimeError(f"SmartSales session endpoint returned {resp.status_code}: {resp.text}")
+    except httpx.RequestError as exc:
+        raise RuntimeError(f"Cannot reach SmartSales MCP server at {base}: {exc}") from exc
+
+
 def _resolve_sf_session(sf_mcp_url: str) -> str:
     """Return a valid Salesforce session token, triggering browser auth if needed.
 
@@ -213,6 +251,7 @@ def main() -> None:
     config.read(["config.cfg"])
     azure_settings = config["azure"]
     sf_settings = config["salesforce"]
+    ss_settings = config["smartsales"] if config.has_section("smartsales") else {}
 
     # ── Microsoft Graph ────────────────────────────────────────────────
     client_id = azure_settings["clientId"]
@@ -267,14 +306,42 @@ def main() -> None:
         http_client=sf_http,
     )
 
+    # ── SmartSales ──────────────────────────────────────────────────────
+    ss_mcp_url = ss_settings.get("mcpServerUrl", "http://localhost:8002/mcp")
+    ss_server_env = os.environ.copy()
+    ss_parsed = urlparse(ss_mcp_url)
+    ss_resource_base = f"{ss_parsed.scheme}://{ss_parsed.netloc}"
+    ss_server_env["MCP_RESOURCE_URI"] = ss_resource_base
+
+    ss_proc = None
+    if _is_local_url(ss_mcp_url):
+        ss_proc = _start_smartsales_mcp_server(ss_server_env, ss_mcp_url)
+
+    ss_session_token = _resolve_ss_session(ss_mcp_url)
+
+    ss_http = httpx.AsyncClient(
+        headers={"Authorization": f"Bearer {ss_session_token}"},
+    )
+    ss_mcp = MCPStreamableHTTPTool(
+        name="smartsales",
+        url=ss_mcp_url,
+        http_client=ss_http,
+    )
+
     # ── Serve agents ───────────────────────────────────────────────────
     try:
-        graph_agent = create_graph_agent(graph_mcp=graph_mcp)
-        sf_agent = create_salesforce_agent(salesforce_mcp=sf_mcp)
-        orchestrator = create_orchestrator_agent(graph_agent=graph_agent, salesforce_agent=sf_agent)
-        serve(entities=[orchestrator, graph_agent, sf_agent], port=8080, auto_open=True)
+        # graph_agent = create_graph_agent(graph_mcp=graph_mcp)
+        # sf_agent = create_salesforce_agent(salesforce_mcp=sf_mcp)
+        ss_agent = create_smartsales_agent(smartsales_mcp=ss_mcp)
+        # orchestrator = create_orchestrator_agent(
+        #     graph_agent=graph_agent,
+        #     salesforce_agent=sf_agent,
+        #     smartsales_agent=ss_agent,
+        # )
+        # serve(entities=[orchestrator, graph_agent, sf_agent, ss_agent], port=8080, auto_open=True)
+        serve(entities=[ss_agent], port=8080, auto_open=True)
     finally:
-        for proc in (graph_proc, sf_proc):
+        for proc in (graph_proc, sf_proc, ss_proc):
             if proc is not None:
                 proc.terminate()
                 proc.wait()

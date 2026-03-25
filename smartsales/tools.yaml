@@ -1,0 +1,139 @@
+- name: get_location
+  description: >
+    Retrieve a single SmartSales location by its unique identifier (uid).
+    Use this when the user provides a specific location uid.
+  method: get_location
+  params:
+    - name: uid
+      type: "str"
+      description: The unique identifier (uid) of the location.
+
+# -------------------------------------------------------------------------------
+
+# - name: list_locations
+#   description: >
+#     Search and list SmartSales locations with optional filters.
+
+#     Use `query` to search by name (contains match).
+#     Use `city` to filter by city (contains match).
+#     Use `country` to filter by country (exact match, e.g. "Belgium").
+#     Use `sort` to order results, e.g. "name:asc" or "code:desc".
+#     Use `projection` to control how much data is returned:
+#       "minimal" (uid+code only), "simple" (default, main fields),
+#       "fullWithColor", "full" (all fields including attributes/documents).
+#     `limit` controls the maximum number of results (default 25).
+
+#     Examples:
+#     - Locations in Brussels → city="Brussels"
+#     - Find location named "Carrefour" → query="Carrefour"
+#     - All Belgian locations sorted by name → country="Belgium", sort="name:asc"
+#   method: list_locations
+#   params:
+#     - name: query
+#       type: "str | None"
+#       description: Name keyword for a contains search (e.g. "Carrefour").
+#     - name: city
+#       type: "str | None"
+#       description: Plain city name for exact match (e.g. "Knokke", "Brussels"). Do NOT include an operator prefix.
+#     - name: country
+#       type: "str | None"
+#       description: Plain country name for exact match (e.g. "Belgium", "United Kingdom"). Do NOT include an operator prefix.
+#     - name: sort
+#       type: "str | None"
+#       description: Sort string in format "field:asc" or "field:desc" (e.g. "name:asc").
+#     - name: projection
+#       type: "str | None"
+#       default: "simple"
+#       description: >
+#         Detail level — "minimal", "simple" (default), "fullWithColor", or "full".
+#     - name: limit
+#       type: "int | None"
+#       default: 25
+#       description: Maximum number of locations to return (default 25).
+
+- name: list_locations
+  description: >
+    Query SmartSales locations.
+
+    This endpoint supports SmartSales-native query parameters.
+
+    Query parameter behavior:
+    - `q`: JSON string containing field filters.
+      Each field maps to a SmartSales filter expression.
+      Format: {"<fieldName>":"<operator>:<value>"} or {"<fieldName>":"empty"} / {"<fieldName>":"nempty"}.
+      Examples:
+      - {"name":"eq:name-v1"}
+      - {"city":"contains:knokke"}
+      - {"country":"eq:Belgium","deleted":"eq:false"}
+      - {"vatNumber":"empty"}
+      - {"lastVisitDate":"range:20260101,20260331"}
+
+      Supported operators include:
+      - eq
+      - neq
+      - contains
+      - ncontains
+      - startswith
+      - range:start,end
+      - gt
+      - gte
+      - lt
+      - lte
+      - empty
+      - nempty
+
+    - `s`: sorting expression in format "<field>:asc" or "<field>:desc"
+      Examples: "name:asc", "code:desc"
+
+    - `p`: projection level
+      Allowed values: "minimal", "full"
+      - "minimal": only uid and code
+      - "full": all fields including attributes
+
+    - `d`: comma-separated list of fields to include in the response
+      Example: "code,name,street,zip,city,country,externalId,vatNumber,commented"
+
+    - `nextPageToken`: token returned by a previous query to retrieve the next page
+
+    - `skipResultSize`: if true, skips total result size calculation for performance
+
+    Notes:
+    - `q` must be passed as a JSON string
+    - when using an HTTP client with query params, do not manually URL-encode `q`;
+      let the client encode it
+  method: list_locations
+  params:
+    - name: q
+      type: "str | dict | None"
+      description: >
+        JSON string containing SmartSales field filters.
+        Example: {"country":"eq:Belgium","city":"contains:knokke"}
+
+    - name: s
+      type: "str | None"
+      description: >
+        Sorting expression in format "<field>:asc" or "<field>:desc".
+        Example: "name:asc"
+
+    - name: p
+      type: "str | None"
+      default: "fullWithColor"
+      description: >
+        Projection level. Allowed values: "minimal", "simple", "fullWithColor", "full".
+
+    - name: d
+      type: "str | None"
+      description: >
+        Comma-separated list of fields to include in the response.
+        Example: "code,name,street,zip,city,country"
+
+    - name: nextPageToken
+      type: "str | None"
+      description: Token returned by a previous list query to fetch the next page.
+
+    - name: skipResultSize
+      type: "bool | None"
+      default: false
+      description: >
+        If false (default), includes resultSizeEstimate in the response so you know the total count.
+        Set to true only to skip the count for performance.
