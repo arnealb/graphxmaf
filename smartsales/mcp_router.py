@@ -52,12 +52,8 @@ def _register_one(mcp, extract_session_token, resolve_session, tool_def: dict) -
     params = tool_def.get("params", [])
 
     async def handler(ctx: Context, _m=repo_method, **kwargs):
-        # LLm geeft vaak json door als dict, maar hebben string nodig -> omzetten
-        # kwargs = {k: json.dumps(v) if isinstance(v, dict) else v for k, v in kwargs.items()}
-
-        for key, value in kwargs.items():
-            if isinstance(value, str): 
-                kwargs[key] = json.dumps(value) 
+        # LLM geeft q soms door als dict ipv JSON string — omzetten naar string
+        kwargs = {k: json.dumps(v) if isinstance(v, dict) else v for k, v in kwargs.items()}
 
         session_token = extract_session_token(ctx)
         creds = await resolve_session(session_token)

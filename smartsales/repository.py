@@ -71,9 +71,8 @@ class SmartSalesRepository:
             r.raise_for_status()
 
         data = r.json()
-        entries = data.get("entries") or []
         return {
-            "locations": [_parse_location(e).model_dump() for e in entries],
+            "locations": data.get("entries") or [],
             "nextPageToken": data.get("nextPageToken"),
             "resultSizeEstimate": data.get("resultSizeEstimate"),
         }
