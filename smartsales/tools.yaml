@@ -1,0 +1,460 @@
+- name: get_location
+  description: >
+    Retrieve a single SmartSales location by its unique identifier (uid).
+    Use this when the user provides a specific location uid.
+  method: get_location
+  params:
+    - name: uid
+      type: "str"
+      description: The unique identifier (uid) of the location.
+
+# -------------------------------------------------------------------------------
+
+# - name: list_locations
+#   description: >
+#     Search and list SmartSales locations with optional filters.
+
+#     Use `query` to search by name (contains match).
+#     Use `city` to filter by city (contains match).
+#     Use `country` to filter by country (exact match, e.g. "Belgium").
+#     Use `sort` to order results, e.g. "name:asc" or "code:desc".
+#     Use `projection` to control how much data is returned:
+#       "minimal" (uid+code only), "simple" (default, main fields),
+#       "fullWithColor", "full" (all fields including attributes/documents).
+#     `limit` controls the maximum number of results (default 25).
+
+#     Examples:
+#     - Locations in Brussels → city="Brussels"
+#     - Find location named "Carrefour" → query="Carrefour"
+#     - All Belgian locations sorted by name → country="Belgium", sort="name:asc"
+#   method: list_locations
+#   params:
+#     - name: query
+#       type: "str | None"
+#       description: Name keyword for a contains search (e.g. "Carrefour").
+#     - name: city
+#       type: "str | None"
+#       description: Plain city name for exact match (e.g. "Knokke", "Brussels"). Do NOT include an operator prefix.
+#     - name: country
+#       type: "str | None"
+#       description: Plain country name for exact match (e.g. "Belgium", "United Kingdom"). Do NOT include an operator prefix.
+#     - name: sort
+#       type: "str | None"
+#       description: Sort string in format "field:asc" or "field:desc" (e.g. "name:asc").
+#     - name: projection
+#       type: "str | None"
+#       default: "simple"
+#       description: >
+#         Detail level — "minimal", "simple" (default), "fullWithColor", or "full".
+#     - name: limit
+#       type: "int | None"
+#       default: 25
+#       description: Maximum number of locations to return (default 25).
+
+- name: list_locations
+  description: >
+    Query SmartSales locations.
+
+    This endpoint supports SmartSales-native query parameters.
+
+    Query parameter behavior:
+    - `q`: JSON string containing field filters.
+      Each field maps to a SmartSales filter expression.
+      Format: {"<fieldName>":"<operator>:<value>"} or {"<fieldName>":"empty"} / {"<fieldName>":"nempty"}.
+      Examples:
+      - {"name":"eq:name-v1"}
+      - {"city":"contains:knokke"}
+      - {"country":"eq:Belgium","deleted":"eq:false"}
+      - {"vatNumber":"empty"}
+      - {"lastVisitDate":"range:20260101,20260331"}
+
+      Supported operators include:
+      - eq
+      - neq
+      - contains
+      - ncontains
+      - startswith
+      - range:start,end
+      - gt
+      - gte
+      - lt
+      - lte
+      - empty
+      - nempty
+
+    - `s`: sorting expression in format "<field>:asc" or "<field>:desc"
+      Examples: "name:asc", "code:desc"
+
+    - `p`: projection level
+      Allowed values: "minimal", "full"
+      - "minimal": only uid and code
+      - "full": all fields including attributes
+
+    - `d`: comma-separated list of fields to include in the response
+      Example: "code,name,street,zip,city,country,externalId,vatNumber,commented"
+
+    - `nextPageToken`: token returned by a previous query to retrieve the next page
+
+    - `skipResultSize`: if true, skips total result size calculation for performance
+
+    Notes:
+    - `q` must be passed as a JSON string
+    - when using an HTTP client with query params, do not manually URL-encode `q`;
+      let the client encode it
+  method: list_locations
+  params:
+    - name: q
+      type: "str | dict | None"
+      description: >
+        JSON string containing SmartSales field filters.
+        Example: {"country":"eq:Belgium","city":"contains:knokke"}
+
+    - name: s
+      type: "str | None"
+      description: >
+        Sorting expression in format "<field>:asc" or "<field>:desc".
+        Example: "name:asc"
+
+    - name: p
+      type: "str | None"
+      default: "fullWithColor"
+      description: >
+        Projection level. Allowed values: "minimal", "simple", "fullWithColor", "full".
+
+    - name: d
+      type: "str | None"
+      description: >
+        Comma-separated list of fields to include in the response.
+        Example: "code,name,street,zip,city,country"
+
+    - name: nextPageToken
+      type: "str | None"
+      description: Token returned by a previous list query to fetch the next page.
+
+    - name: skipResultSize
+      type: "bool | None"
+      default: false
+      description: >
+        If false (default), includes resultSizeEstimate in the response so you know the total count.
+        Set to true only to skip the count for performance.
+
+- name: list_displayable_fields
+  description: >
+    List all fields that can be displayed in a SmartSales location list view.
+    Returns field metadata: fieldName, displayName, type, size, audiences.
+    Use when the user asks which fields or columns are available to display.
+  method: list_displayable_fields
+  params: []
+
+- name: list_queryable_fields
+  description: >
+    List all fields that can be used to filter locations via the q parameter in list_locations.
+    Returns field metadata: fieldName, displayName, type, allowExpression, selector.
+    Use when the user asks which fields are available to filter on.
+  method: list_queryable_fields
+  params: []
+
+- name: list_sortable_fields
+  description: >
+    List all fields that can be used for sorting locations via the s parameter in list_locations.
+    Returns field metadata: keyName, displayName, hidden, audiences.
+    Use when the user asks which fields are available to sort on.
+  method: list_sortable_fields
+  params: []
+
+# -------------------------------------------------------------------------------
+# Catalog
+# -------------------------------------------------------------------------------
+
+- name: get_catalog_item
+  description: >
+    Retrieve a single SmartSales catalog item by its unique identifier (uid).
+    Use this when the user provides a specific catalog item uid.
+  method: get_catalog_item
+  params:
+    - name: uid
+      type: "str"
+      description: The unique identifier (uid) of the catalog item.
+
+- name: get_catalog_group
+  description: >
+    Retrieve a single SmartSales catalog group by its unique identifier (uid).
+    Use this when the user provides a specific catalog group uid or wants to inspect a group's details.
+  method: get_catalog_group
+  params:
+    - name: uid
+      type: "str"
+      description: The unique identifier (uid) of the catalog group.
+
+- name: list_catalog_items
+  description: >
+    Query SmartSales catalog items.
+
+    This endpoint supports SmartSales-native query parameters.
+
+    Query parameter behavior:
+    - `q`: JSON string containing field filters.
+      Each field maps to a SmartSales filter expression.
+      Format: {"<fieldName>":"<operator>:<value>"} or {"<fieldName>":"empty"} / {"<fieldName>":"nempty"}.
+      Examples:
+      - {"name":"eq:Widget A"}
+      - {"name":"contains:widget"}
+      - {"deleted":"eq:false"}
+
+      Supported operators include:
+      - eq
+      - neq
+      - contains
+      - ncontains
+      - startswith
+      - range:start,end
+      - gt
+      - gte
+      - lt
+      - lte
+      - empty
+      - nempty
+
+    - `s`: sorting expression in format "<field>:asc" or "<field>:desc"
+      Examples: "name:asc", "code:desc"
+
+    - `p`: projection level
+      Allowed values: "minimal", "simple", "full", "simpleWithDiscount", "fullWithDiscount"
+      - "minimal": only uid and code
+      - "simple": main fields
+      - "full": all fields
+      - "simpleWithDiscount": simple fields + discount pricing
+      - "fullWithDiscount": all fields + discount pricing
+
+    - `nextPageToken`: token returned by a previous query to retrieve the next page
+
+    Notes:
+    - `q` must be passed as a JSON string
+    - when using an HTTP client with query params, do not manually URL-encode `q`;
+      let the client encode it
+  method: list_catalog_items
+  params:
+    - name: q
+      type: "str | dict | None"
+      description: >
+        JSON string containing SmartSales field filters.
+        Example: {"name":"contains:widget","deleted":"eq:false"}
+
+    - name: s
+      type: "str | None"
+      description: >
+        Sorting expression in format "<field>:asc" or "<field>:desc".
+        Example: "name:asc"
+
+    - name: p
+      type: "str | None"
+      default: "simple"
+      description: >
+        Projection level. Allowed values: "minimal", "simple", "full", "simpleWithDiscount", "fullWithDiscount".
+
+    - name: nextPageToken
+      type: "str | None"
+      description: Token returned by a previous list query to fetch the next page.
+
+    - name: skipResultSize
+      type: "bool | None"
+      default: false
+      description: >
+        If false (default), includes resultSizeEstimate in the response so you know the total count.
+        Set to true only to skip the count for performance.
+
+- name: list_catalog_displayable_fields
+  description: >
+    List all fields that can be displayed in a SmartSales catalog item list view.
+    Returns field metadata: fieldName, displayName, type, size, audiences.
+    Use when the user asks which fields or columns are available to display for catalog items.
+  method: list_catalog_displayable_fields
+  params: []
+
+- name: list_catalog_queryable_fields
+  description: >
+    List all fields that can be used to filter catalog items via the q parameter in list_catalog_items.
+    Returns field metadata: fieldName, displayName, type, allowExpression, selector.
+    Use when the user asks which fields are available to filter on for catalog items.
+  method: list_catalog_queryable_fields
+  params: []
+
+- name: list_catalog_sortable_fields
+  description: >
+    List all fields that can be used for sorting catalog items via the s parameter in list_catalog_items.
+    Returns field metadata: keyName, displayName, hidden, audiences.
+    Use when the user asks which fields are available to sort on for catalog items.
+  method: list_catalog_sortable_fields
+  params: []
+
+# -------------------------------------------------------------------------------
+# Orders
+# -------------------------------------------------------------------------------
+
+- name: get_order
+  description: >
+    Retrieve a single SmartSales order by its unique identifier (uid).
+    Use this when the user provides a specific order uid.
+  method: get_order
+  params:
+    - name: uid
+      type: "str"
+      description: The unique identifier (uid) of the order.
+
+- name: list_orders
+  description: >
+    Query SmartSales orders.
+
+    This endpoint supports SmartSales-native query parameters.
+
+    Query parameter behavior:
+    - `q`: JSON string containing field filters.
+      Each field maps to a SmartSales filter expression.
+      Format: {"<fieldName>":"<operator>:<value>"} or {"<fieldName>":"empty"} / {"<fieldName>":"nempty"}.
+      Examples:
+      - {"type":"eq:ORDER"}
+      - {"approbationStatus":"eq:APPROVED"}
+      - {"date":"range:20260101,20260331"}
+      - {"total":"gt:1000"}
+
+      Supported operators include:
+      - eq
+      - neq
+      - contains
+      - ncontains
+      - startswith
+      - range:start,end
+      - gt
+      - gte
+      - lt
+      - lte
+      - empty
+      - nempty
+
+    - `s`: sorting expression in format "<field>:asc" or "<field>:desc"
+      Examples: "date:desc", "total:asc"
+
+    - `p`: projection level
+      Allowed values: "minimal", "simple", "full", "custom"
+      - "minimal": only uid
+      - "simple": main header fields
+      - "full": all fields including line items
+
+    - `nextPageToken`: token returned by a previous query to retrieve the next page
+
+    - `skipResultSize`: if true, skips total result size calculation for performance
+
+    Notes:
+    - `q` must be passed as a JSON string
+    - when using an HTTP client with query params, do not manually URL-encode `q`;
+      let the client encode it
+
+    Important — filtering by customer or supplier:
+    - Orders cannot be filtered by customer or supplier name directly.
+      The queryable fields only expose uid-based filters for locations.
+    - To find orders for a named customer or supplier, always follow this two-step pattern:
+      1. Call `list_locations` with a name filter (e.g. {"name":"eq:Customer1"}) to resolve
+         the name to a location uid.
+      2. Use that uid as the filter value in `list_orders` (e.g. {"customerUid":"eq:<uid>"}).
+    - If unsure of the exact field name, call `list_order_queryable_fields` first.
+  method: list_orders
+  params:
+    - name: q
+      type: "str | dict | None"
+      description: >
+        JSON string containing SmartSales field filters.
+        Example: {"type":"eq:ORDER","approbationStatus":"eq:APPROVED"}
+
+    - name: s
+      type: "str | None"
+      description: >
+        Sorting expression in format "<field>:asc" or "<field>:desc".
+        Example: "date:desc"
+
+    - name: p
+      type: "str | None"
+      default: "simple"
+      description: >
+        Projection level. Allowed values: "minimal", "simple", "full", "custom".
+
+    - name: nextPageToken
+      type: "str | None"
+      description: Token returned by a previous list query to fetch the next page.
+
+    - name: skipResultSize
+      type: "bool | None"
+      default: false
+      description: >
+        If false (default), includes resultSizeEstimate in the response so you know the total count.
+        Set to true only to skip the count for performance.
+
+- name: get_order_configuration
+  description: >
+    Retrieve the SmartSales order configuration.
+    Returns global settings: discount rules, signature requirements, VAT display,
+    configurable form sections and their fields.
+    Use when the user asks how orders are configured or what form fields/sections exist.
+  method: get_order_configuration
+  params: []
+
+- name: list_approbation_statuses
+  description: >
+    Query SmartSales order approbation statuses (approval workflow statuses).
+    Returns defined statuses with their codes, icons, colors, and workflow properties
+    (terminal, secured, percent of success, notification types).
+    Use when the user asks about available approval or approbation statuses for orders or offers.
+  method: list_approbation_statuses
+  params:
+    - name: q
+      type: "str | dict | None"
+      description: >
+        JSON string containing field filters.
+        Example: {"type":"eq:ORDER","deleted":"eq:false"}
+
+    - name: s
+      type: "str | None"
+      description: Sorting expression in format "<field>:asc" or "<field>:desc".
+
+    - name: p
+      type: "str | None"
+      default: "minimal"
+      description: >
+        Projection level. Allowed values: "minimal", "simple", "full".
+
+    - name: nextPageToken
+      type: "str | None"
+      description: Token returned by a previous list query to fetch the next page.
+
+- name: get_approbation_status
+  description: >
+    Retrieve a single SmartSales order approbation status by its unique identifier (uid).
+    Returns full details including title, description, mail templates, and notification settings.
+  method: get_approbation_status
+  params:
+    - name: uid
+      type: "str"
+      description: The unique identifier (uid) of the approbation status.
+
+- name: list_order_displayable_fields
+  description: >
+    List all fields that can be displayed in a SmartSales order list view.
+    Returns field metadata: fieldName, displayName, type, size, audiences.
+    Use when the user asks which fields or columns are available to display for orders.
+  method: list_order_displayable_fields
+  params: []
+
+- name: list_order_queryable_fields
+  description: >
+    List all fields that can be used to filter orders via the q parameter in list_orders.
+    Returns field metadata: fieldName, displayName, type, allowExpression, selector.
+    Use when the user asks which fields are available to filter on for orders.
+  method: list_order_queryable_fields
+  params: []
+
+- name: list_order_sortable_fields
+  description: >
+    List all fields that can be used for sorting orders via the s parameter in list_orders.
+    Returns field metadata: keyName, displayName, hidden, audiences.
+    Use when the user asks which fields are available to sort on for orders.
+  method: list_order_sortable_fields
+  params: []
