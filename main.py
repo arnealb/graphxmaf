@@ -334,7 +334,7 @@ def main() -> None:
         sf_agent = create_salesforce_agent(salesforce_mcp=sf_mcp)
         ss_agent = create_smartsales_agent(smartsales_mcp=ss_mcp)
         orchestrator = create_orchestrator_agent(smartsales_agent=ss_agent, graph_agent=graph_agent, salesforce_agent=sf_agent)
-        serve(entities=[orchestrator, ss_agent, graph_agent], port=8080, auto_open=True)
+        serve(entities=[orchestrator, ss_agent, graph_agent, sf_agent], port=8080, auto_open=True)
     finally:
         if ss_proc is not None:
             ss_proc.terminate()
