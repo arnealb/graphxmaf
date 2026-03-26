@@ -136,3 +136,17 @@ en dan vraagt ie voor welke files? dus da moet nog beter gedaan worden tho, moet
 ---
 shit achter die external app checken van salesforce
 - wat als meerdere users in 1 app zitten
+
+---
+SmartSales — v2
+
+- Verify the exact queryable field name for filtering orders by customer/supplier uid
+  (likely `customerUid` / `supplierUid` — confirm via `list_order_queryable_fields` on the live API)
+  and update the example in the `list_orders` tool description in smartsales/tools.yaml accordingly.
+
+- Agent should resolve entity names to uids automatically without the user having to specify steps.
+  Example: "show me orders from Customer1" should trigger:
+  1. list_locations to resolve "Customer1" → uid
+  2. list_orders filtered on that uid
+  Currently this works if the tool description is explicit enough, but needs validation
+  that the agent does this reliably across different phrasings.
