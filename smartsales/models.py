@@ -1,3 +1,5 @@
+from __future__ import annotations
+from typing import Any
 from pydantic import BaseModel, ConfigDict
 from pydantic.alias_generators import to_camel
 
@@ -40,6 +42,32 @@ class EmbeddedUserGroup(_CamelModel):
     uid: str | None = None
     name: str | None = None
     system: bool | None = None
+
+
+class EmbeddedAttribute(_CamelModel):
+    name: str | None = None
+    value: str | None = None
+
+
+class EmbeddedDocument(_CamelModel):
+    uid: str | None = None
+    name: str | None = None
+
+
+class EmbeddedImage(_CamelModel):
+    uid: str | None = None
+    code: str | None = None
+    name: str | None = None
+    extension: str | None = None
+    tech_server_update_date: str | None = None
+    last_modified: str | None = None
+
+
+class EmbeddedCatalogItemGroup(_CamelModel):
+    uid: str | None = None
+    code: str | None = None
+    title: str | None = None
+    parent: EmbeddedCatalogItemGroup | None = None
 
 
 # ---------------------------------------------------------------------------
@@ -206,26 +234,115 @@ class SmartSalesOrder(_CamelModel):
 # Location
 # ---------------------------------------------------------------------------
 
-class SmartSalesLocation(BaseModel):
-    """
-    SmartSales Location record.
-
-    Base fields (always returned): uid, code, name, city, zip, country
-    Optional fields: external_id, street, latitude, longitude, vat_number,
-                     last_visit_date, last_order_date, tags, deleted
-    """
-    uid: str
-    code: str | None
-    name: str | None
+class SmartSalesLocation(_CamelModel):
+    uid: str | None = None
+    tech_server_creation_date: str | None = None
+    tech_server_update_date: str | None = None
+    tech_client_creation_date: str | None = None
+    tech_client_update_date: str | None = None
+    tech_creation_user_uid: str | None = None
+    tech_update_user_uid: str | None = None
+    tech_creation_user: EmbeddedUser | None = None
+    tech_update_user: EmbeddedUser | None = None
+    to_synchronize: bool | None = None
+    code: str | None = None
+    external_id: str | None = None
+    street: str | None = None
     city: str | None = None
     zip: str | None = None
     country: str | None = None
-    external_id: str | None = None
-    street: str | None = None
     latitude: float | None = None
     longitude: float | None = None
+    name: str | None = None
     vat_number: str | None = None
+    deleted: bool | None = None
+    suppliers: list[EmbeddedLocation] | None = None
+    attributes: list[EmbeddedAttribute] | None = None
+    users: list[EmbeddedUser] | None = None
+    groups: list[EmbeddedUserGroup] | None = None
+    documents: list[EmbeddedDocument] | None = None
+    tags: list[str] | None = None
+    commented: bool | None = None
     last_visit_date: str | None = None
     last_order_date: str | None = None
-    tags: list[str] | None = None
+
+
+# ---------------------------------------------------------------------------
+# Catalog
+# ---------------------------------------------------------------------------
+
+class SmartSalesCatalogItemGroup(_CamelModel):
+    uid: str | None = None
+    tech_server_creation_date: str | None = None
+    tech_server_update_date: str | None = None
+    code: str | None = None
+    title: str | None = None
+    position: int | None = None
+    image_code: str | None = None
+    image: EmbeddedImage | None = None
+    generate_thumbnail: bool | None = None
+    parent: EmbeddedCatalogItemGroup | None = None
     deleted: bool | None = None
+    type: str | None = None
+
+
+class SmartSalesCatalogItem(_CamelModel):
+    uid: str | None = None
+    tech_server_creation_date: str | None = None
+    tech_server_update_date: str | None = None
+    code: str | None = None
+    external_id: str | None = None
+    title: str | None = None
+    description: str | None = None
+    position: int | None = None
+    price: float | None = None
+    sales_unit: int | None = None
+    packaging_unit: int | None = None
+    measure: float | None = None
+    unit_of_measure: str | None = None
+    availability: str | None = None
+    group: EmbeddedCatalogItemGroup | None = None
+    groups: list[EmbeddedCatalogItemGroup] | None = None
+    tags: list[str] | None = None
+    attributes: list[EmbeddedAttribute] | None = None
+    documents: list[EmbeddedDocument] | None = None
+    image: EmbeddedImage | None = None
+    commented: bool | None = None
+    deleted: bool | None = None
+
+
+# ---------------------------------------------------------------------------
+# Generic list / field-metadata wrappers
+# ---------------------------------------------------------------------------
+
+class SmartSalesListResponse(_CamelModel):
+    next_page_token: str | None = None
+    result_size_estimate: int | None = None
+    entries: list[Any] | None = None
+
+
+class DisplayField(_CamelModel):
+    field_name: str | None = None
+    display_name: str | None = None
+    type: str | None = None
+    constraint_type: str | None = None
+    fixed: bool | None = None
+    size: str | None = None
+    audiences: list[str] | None = None
+
+
+class QueryField(_CamelModel):
+    field_name: str | None = None
+    display_name: str | None = None
+    type: str | None = None
+    hidden: bool | None = None
+    allow_expression: bool | None = None
+    selector: str | None = None
+    audiences: list[str] | None = None
+
+
+class SortField(_CamelModel):
+    key_name: str | None = None
+    display_name: str | None = None
+    hidden: bool | None = None
+    audiences: list[str] | None = None

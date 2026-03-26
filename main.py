@@ -253,58 +253,58 @@ def main() -> None:
     sf_settings = config["salesforce"]
     ss_settings = config["smartsales"] if config.has_section("smartsales") else {}
 
-    # # ── Microsoft Graph ────────────────────────────────────────────────
-    # client_id = azure_settings["clientId"]
-    # tenant_id = azure_settings["tenantId"]
-    # scopes = azure_settings["graphUserScopes"].split(" ")
-    # mcp_url = azure_settings.get("mcpServerUrl", "http://localhost:8000/mcp")
+    # ── Microsoft Graph ────────────────────────────────────────────────
+    client_id = azure_settings["clientId"]
+    tenant_id = azure_settings["tenantId"]
+    scopes = azure_settings["graphUserScopes"].split(" ")
+    mcp_url = azure_settings.get("mcpServerUrl", "http://localhost:8000/mcp")
 
-    # token = authenticate(client_id, tenant_id, scopes)
-    # print("Authenticated with Microsoft.")
+    token = authenticate(client_id, tenant_id, scopes)
+    print("Authenticated with Microsoft.")
 
-    # server_env = os.environ.copy()
-    # parsed = urlparse(mcp_url)
-    # resource_base = f"{parsed.scheme}://{parsed.netloc}"
-    # server_env["MCP_RESOURCE_URI"] = resource_base
+    server_env = os.environ.copy()
+    parsed = urlparse(mcp_url)
+    resource_base = f"{parsed.scheme}://{parsed.netloc}"
+    server_env["MCP_RESOURCE_URI"] = resource_base
 
-    # graph_proc = None
-    # if _is_local_url(mcp_url):
-    #     graph_proc = _start_graph_mcp_server(server_env, mcp_url)
+    graph_proc = None
+    if _is_local_url(mcp_url):
+        graph_proc = _start_graph_mcp_server(server_env, mcp_url)
 
-    # graph_http = httpx.AsyncClient(
-    #     headers={"Authorization": f"Bearer {token}"},
-    # )
-    # graph_mcp = MCPStreamableHTTPTool(
-    #     name="graph",
-    #     url=mcp_url,
-    #     http_client=graph_http,
-    # )
+    graph_http = httpx.AsyncClient(
+        headers={"Authorization": f"Bearer {token}"},
+    )
+    graph_mcp = MCPStreamableHTTPTool(
+        name="graph",
+        url=mcp_url,
+        http_client=graph_http,
+    )
 
-    # # ── Salesforce ─────────────────────────────────────────────────────
-    # sf_mcp_url = sf_settings.get("mcpServerUrl", "http://localhost:8001/mcp")
-    # sf_server_env = os.environ.copy()
-    # sf_parsed = urlparse(sf_mcp_url)
+    # ── Salesforce ─────────────────────────────────────────────────────
+    sf_mcp_url = sf_settings.get("mcpServerUrl", "http://localhost:8001/mcp")
+    sf_server_env = os.environ.copy()
+    sf_parsed = urlparse(sf_mcp_url)
 
-    # #fok is dit? 
-    # sf_resource_base = f"{sf_parsed.scheme}://{sf_parsed.netloc}"
-    # sf_server_env["MCP_RESOURCE_URI"] = sf_resource_base
+    #fok is dit? 
+    sf_resource_base = f"{sf_parsed.scheme}://{sf_parsed.netloc}"
+    sf_server_env["MCP_RESOURCE_URI"] = sf_resource_base
 
 
-    # if _is_local_url(sf_mcp_url):
-    #     sf_proc = _start_salesforce_mcp_server(sf_server_env, sf_mcp_url)
+    if _is_local_url(sf_mcp_url):
+        sf_proc = _start_salesforce_mcp_server(sf_server_env, sf_mcp_url)
 
-    # # Resolve session from the MCP server (restores existing or triggers browser auth).
-    # sf_session_token = _resolve_sf_session(sf_mcp_url)
-    # sf_proc = None
+    # Resolve session from the MCP server (restores existing or triggers browser auth).
+    sf_session_token = _resolve_sf_session(sf_mcp_url)
+    sf_proc = None
 
-    # sf_http = httpx.AsyncClient(
-    #     headers={"Authorization": f"Bearer {sf_session_token}"},
-    # )
-    # sf_mcp = MCPStreamableHTTPTool(
-    #     name="salesforce",
-    #     url=sf_mcp_url,
-    #     http_client=sf_http,
-    # )
+    sf_http = httpx.AsyncClient(
+        headers={"Authorization": f"Bearer {sf_session_token}"},
+    )
+    sf_mcp = MCPStreamableHTTPTool(
+        name="salesforce",
+        url=sf_mcp_url,
+        http_client=sf_http,
+    )
 
     # ── SmartSales ──────────────────────────────────────────────────────
     ss_mcp_url = ss_settings.get("mcpServerUrl", "http://localhost:8002/mcp")
@@ -330,21 +330,15 @@ def main() -> None:
 
     # ── Serve agents ───────────────────────────────────────────────────
     try:
-        # graph_agent = create_graph_agent(graph_mcp=graph_mcp)
-        # sf_agent = create_salesforce_agent(salesforce_mcp=sf_mcp)
+        graph_agent = create_graph_agent(graph_mcp=graph_mcp)
+        sf_agent = create_salesforce_agent(salesforce_mcp=sf_mcp)
         ss_agent = create_smartsales_agent(smartsales_mcp=ss_mcp)
-        # orchestrator = create_orchestrator_agent(
-        #     graph_agent=graph_agent,
-        #     salesforce_agent=sf_agent,
-        #     smartsales_agent=ss_agent,
-        # )
-        # serve(entities=[orchestrator, graph_agent, sf_agent, ss_agent], port=8080, auto_open=True)
-        serve(entities=[ss_agent], port=8080, auto_open=True)
+        orchestrator = create_orchestrator_agent(smartsales_agent=ss_agent, graph_agent=graph_agent, salesforce_agent=sf_agent)
+        serve(entities=[orchestrator, ss_agent, graph_agent], port=8080, auto_open=True)
     finally:
-        for proc in (graph_proc, sf_proc, ss_proc):
-            if proc is not None:
-                proc.terminate()
-                proc.wait()
+        if ss_proc is not None:
+            ss_proc.terminate()
+            ss_proc.wait()
 
 
 if __name__ == "__main__":
