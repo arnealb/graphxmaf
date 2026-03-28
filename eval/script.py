@@ -34,6 +34,7 @@ from openpyxl.styles import Font, PatternFill
 from agent_framework import MCPStreamableHTTPTool
 from agents.graph_agent import create_graph_agent
 from agents.orchestrator_agent import create_orchestrator_agent
+from agents.routing_trace import get_trace, start_trace
 from agents.salesforce_agent import create_salesforce_agent
 from agents.smartsales_agent import create_smartsales_agent
 
@@ -663,6 +664,7 @@ RESULT_COLUMNS = [
     "llm_comments",
     "success",
     "error",
+    "routing_trace",    # JSON string — populated for OrchestratorAgent runs
 ]
 
 SUMMARY_COLUMNS = [
@@ -882,6 +884,10 @@ async def run_prompt(agent, prompt: Prompt) -> dict:
     success = False
     input_tokens = output_tokens = total_tokens = None
 
+    # Initialise a fresh routing trace for every run.  For non-orchestrator
+    # agents the trace will be empty (invoked_agents=[]), which is correct.
+    trace = start_trace(prompt.text)
+
     try:
         response = await agent.run(prompt.text)
         response_text = response.text or ""
@@ -899,15 +905,19 @@ async def run_prompt(agent, prompt: Prompt) -> dict:
         error = str(exc)
         print(f"    ERROR: {exc}")
 
+    # Collect trace after the run (closures have mutated it in-place)
+    routing_trace_json = get_trace().to_json() if get_trace() is not None else ""
+
     return {
-        "response_text":  response_text,
-        "response_time":  time.perf_counter() - t0,
-        "input_tokens":   input_tokens,
-        "output_tokens":  output_tokens,
-        "total_tokens":   total_tokens,
+        "response_text":   response_text,
+        "response_time":   time.perf_counter() - t0,
+        "input_tokens":    input_tokens,
+        "output_tokens":   output_tokens,
+        "total_tokens":    total_tokens,
         "response_length": len(response_text),
-        "success":        success,
-        "error":          error,
+        "success":         success,
+        "error":           error,
+        "routing_trace":   routing_trace_json,
     }
 
 
@@ -999,6 +1009,7 @@ def save_results(results: list[dict]) -> None:
                 r.get("llm_comments", ""),
                 r["success"],
                 r["error"],
+                r.get("routing_trace", ""),
             ])
         _auto_width(ws)
 
@@ -1036,6 +1047,48 @@ def save_results(results: list[dict]) -> None:
         wb.save(target)
         print(f"\nWARNING: {EXCEL_FILE} is locked. Saved to {target}")
     print(f"\nResults saved → {target}  ({len(results)} rows)")
+
+
+# ── Routing trace persistence ─────────────────────────────────────────────────
+
+ROUTING_TRACES_FILE = "eval/routing_traces.jsonl"
+
+
+def save_routing_traces(results: list[dict]) -> None:
+    """Append one JSONL line per result that has a non-empty routing_trace.
+
+    Each line is a self-contained JSON object:
+      {run_id, timestamp, agent_mode, prompt_text, routing_trace: {...}}
+
+    This file is easy to consume from any analysis script:
+      import json
+      traces = [json.loads(l) for l in open("eval/routing_traces.jsonl")]
+    """
+    lines = []
+    for r in results:
+        raw = r.get("routing_trace", "")
+        if not raw:
+            continue
+        try:
+            trace_dict = json.loads(raw)
+        except json.JSONDecodeError:
+            continue
+        prompt: Prompt = r["prompt"]
+        lines.append(json.dumps({
+            "run_id":      r["run_id"],
+            "timestamp":   r["timestamp"],
+            "agent_mode":  r["agent_mode"],
+            "prompt_text": prompt.text,
+            "routing_trace": trace_dict,
+        }, ensure_ascii=False))
+
+    if not lines:
+        return
+
+    os.makedirs(os.path.dirname(ROUTING_TRACES_FILE), exist_ok=True)
+    with open(ROUTING_TRACES_FILE, "a", encoding="utf-8") as fh:
+        fh.write("\n".join(lines) + "\n")
+    print(f"Routing traces appended → {ROUTING_TRACES_FILE}  ({len(lines)} entries)")
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────
@@ -1145,6 +1198,7 @@ async def main() -> None:
         results = await benchmark(graph_agent, sf_agent, ss_agent, orchestrator)
         await evaluate_all(results, eval_client, deployment)
         save_results(results)
+        save_routing_traces(results)
     finally:
         await graph_http.aclose()
         await sf_http.aclose()
