@@ -119,6 +119,7 @@ class SalesforceCase(BaseModel):
     """
     # Base fields
     id: str                                  # Id
+    case_number: str | None                  # CaseNumber
     subject: str                             # Subject
     status: str                              # Status
     priority: str | None                     # Priority

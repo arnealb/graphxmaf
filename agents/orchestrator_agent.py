@@ -1,9 +1,12 @@
 import os
+from datetime import datetime, timezone
 from typing import Annotated
 
 from agent_framework import Agent, FunctionTool
 from agent_framework.azure import AzureOpenAIChatClient
 from dotenv import load_dotenv
+
+from agents.routing_trace import AgentInvocation, get_trace
 
 load_dotenv()
 deployment = os.environ["deployment"]
@@ -20,11 +23,33 @@ def create_orchestrator_agent(
 
     tools = []
 
+    # ─── ask_graph_agent tool ─────────────────────────────────────
     if graph_agent is not None:
         async def ask_graph_agent(query: Annotated[str, "The full question to send to the Microsoft Graph agent"]) -> str:
-            response = await graph_agent.run(query)
-            print(f"GraphAgent response: {response}")
-            return response.text or "(no response from GraphAgent)"
+            trace = get_trace()
+            order = len(trace.invoked_agents) + 1 if trace is not None else 0
+            started_at = datetime.now(timezone.utc).isoformat()
+            try:
+                response = await graph_agent.run(query)
+                result = response.text or "(no response from GraphAgent)"
+                if trace is not None:
+                    trace.invoked_agents.append(AgentInvocation(
+                        agent="graph", order=order, input=query,
+                        started_at=started_at,
+                        ended_at=datetime.now(timezone.utc).isoformat(),
+                        success=True, error=None,
+                    ))
+                print(f"GraphAgent response: {response}")
+                return result
+            except Exception as exc:
+                if trace is not None:
+                    trace.invoked_agents.append(AgentInvocation(
+                        agent="graph", order=order, input=query,
+                        started_at=started_at,
+                        ended_at=datetime.now(timezone.utc).isoformat(),
+                        success=False, error=str(exc),
+                    ))
+                raise
 
         tools.append(FunctionTool(
             name="ask_graph_agent",
@@ -37,11 +62,33 @@ def create_orchestrator_agent(
             approval_mode="never_require",
         ))
 
+    # ─── ask_salesforce_agent tool ────────────────────────────────
     if salesforce_agent is not None:
         async def ask_salesforce_agent(query: Annotated[str, "The full question to send to the Salesforce CRM agent"]) -> str:
-            response = await salesforce_agent.run(query)
-            print(f"salesforce response: {response}")
-            return response.text or "(no response from SalesforceAgent)"
+            trace = get_trace()
+            order = len(trace.invoked_agents) + 1 if trace is not None else 0
+            started_at = datetime.now(timezone.utc).isoformat()
+            try:
+                response = await salesforce_agent.run(query)
+                result = response.text or "(no response from SalesforceAgent)"
+                if trace is not None:
+                    trace.invoked_agents.append(AgentInvocation(
+                        agent="salesforce", order=order, input=query,
+                        started_at=started_at,
+                        ended_at=datetime.now(timezone.utc).isoformat(),
+                        success=True, error=None,
+                    ))
+                print(f"salesforce response: {response}")
+                return result
+            except Exception as exc:
+                if trace is not None:
+                    trace.invoked_agents.append(AgentInvocation(
+                        agent="salesforce", order=order, input=query,
+                        started_at=started_at,
+                        ended_at=datetime.now(timezone.utc).isoformat(),
+                        success=False, error=str(exc),
+                    ))
+                raise
 
         tools.append(FunctionTool(
             name="ask_salesforce_agent",
@@ -54,10 +101,32 @@ def create_orchestrator_agent(
             approval_mode="never_require",
         ))
 
+    # ─── ask_smartsales_agent tool ────────────────────────────────
     async def ask_smartsales_agent(query: Annotated[str, "The full question to send to the SmartSales agent"]) -> str:
-        response = await smartsales_agent.run(query)
-        print(f"SmartSalesAgent response: {response}")
-        return response.text or "(no response from SmartSalesAgent)"
+        trace = get_trace()
+        order = len(trace.invoked_agents) + 1 if trace is not None else 0
+        started_at = datetime.now(timezone.utc).isoformat()
+        try:
+            response = await smartsales_agent.run(query)
+            result = response.text or "(no response from SmartSalesAgent)"
+            if trace is not None:
+                trace.invoked_agents.append(AgentInvocation(
+                    agent="smartsales", order=order, input=query,
+                    started_at=started_at,
+                    ended_at=datetime.now(timezone.utc).isoformat(),
+                    success=True, error=None,
+                ))
+            print(f"SmartSalesAgent response: {response}")
+            return result
+        except Exception as exc:
+            if trace is not None:
+                trace.invoked_agents.append(AgentInvocation(
+                    agent="smartsales", order=order, input=query,
+                    started_at=started_at,
+                    ended_at=datetime.now(timezone.utc).isoformat(),
+                    success=False, error=str(exc),
+                ))
+            raise
 
     tools.append(FunctionTool(
         name="ask_smartsales_agent",
@@ -70,6 +139,7 @@ def create_orchestrator_agent(
         approval_mode="never_require",
     ))
 
+    # ─── Create the orchestrator agent ─────────────────────────────
     active_systems = []
     if graph_agent is not None:
         active_systems.append("1. ask_graph_agent  — handles everything Microsoft 365:\n               emails, OneDrive files, calendar events, contacts, user identity.")

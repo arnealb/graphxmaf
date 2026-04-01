@@ -91,6 +91,89 @@ async def evaluate(
         return None, f"Evaluator error: {exc}", ""
 
 
+# ── Routing evaluator ─────────────────────────────────────────────────────────
+
+_ROUTING_SYSTEM = (
+    "You are a benchmark evaluator for a multi-agent AI orchestration system. "
+    "Your job is to assess whether an orchestrator correctly routed a user query "
+    "to the appropriate sub-agent(s)."
+)
+
+_ROUTING_USER_TMPL = """\
+User query:
+{question}
+
+Sub-agents invoked by the orchestrator (in order):
+{invoked_agents}
+
+Available sub-agents and their domains:
+  graph       – Microsoft 365: emails, OneDrive files, contacts, calendar
+  salesforce  – CRM: accounts, contacts, leads, opportunities, cases
+  smartsales  – Field sales app: locations, catalog items, orders, approbation statuses
+
+Rate the routing on a scale of 1 to 5:
+  1 – Wrong agent(s) called, or no agent called when one was needed
+  2 – Partially correct: mostly wrong domain or many unnecessary calls
+  3 – Correct agent(s) called but with notable issues (redundant calls, wrong order, missing agent)
+  4 – Correct routing with only minor inefficiencies
+  5 – Optimal: exactly the right agent(s) called in the right order, no unnecessary calls
+
+Respond ONLY with valid JSON in this exact format:
+{{"score": <integer 1-5>, "rationale": "<one or two sentence justification>"}}
+"""
+
+
+def _format_invocations(routing_trace_json: str) -> str:
+    """Format a routing trace JSON string for the evaluator prompt."""
+    try:
+        data = json.loads(routing_trace_json)
+        invocations = data.get("invoked_agents", [])
+        if not invocations:
+            return "(none)"
+        lines = []
+        for inv in invocations:
+            status = "success" if inv.get("success") else "FAILED"
+            inp = str(inv.get("input", ""))[:200]
+            lines.append(f"  {inv['order']}. {inv['agent']} ({status}) — {inp!r}")
+        return "\n".join(lines)
+    except Exception:
+        return "(could not parse trace)"
+
+
+async def evaluate_routing(
+    client: AsyncAzureOpenAI,
+    deployment: str,
+    question: str,
+    routing_trace_json: str,
+) -> tuple[int | None, str]:
+    """Return (routing_score 1-5 or None, rationale)."""
+    if not routing_trace_json or not routing_trace_json.strip():
+        return None, "No routing trace available."
+
+    invoked_agents_str = _format_invocations(routing_trace_json)
+    try:
+        resp = await client.chat.completions.create(
+            model=deployment,
+            messages=[
+                {"role": "system", "content": _ROUTING_SYSTEM},
+                {"role": "user",   "content": _ROUTING_USER_TMPL.format(
+                    question=question,
+                    invoked_agents=invoked_agents_str,
+                )},
+            ],
+            temperature=0,
+            max_tokens=200,
+        )
+        raw  = resp.choices[0].message.content or ""
+        data = json.loads(raw)
+        score = data.get("score")
+        if score is not None:
+            score = int(score)
+        return score, str(data.get("rationale", ""))
+    except Exception as exc:
+        return None, f"Routing evaluator error: {exc}"
+
+
 # ── Sheet processing ──────────────────────────────────────────────────────────
 
 def _build_col_map(ws) -> dict[str, int]:
@@ -113,20 +196,26 @@ def _is_scored(row, col_map: dict) -> bool:
     return score is not None and str(score).strip() != ""
 
 
+def _is_routing_scored(row, col_map: dict) -> bool:
+    score = _cell(row, "routing_score", col_map)
+    return score is not None and str(score).strip() != ""
+
+
 async def score_sheet(
     ws,
     client: AsyncAzureOpenAI,
     deployment: str,
     force: bool,
     run_id_filter: str | None,
+    skip_routing: bool = False,
 ) -> tuple[int, int]:
     """Score all eligible rows in a worksheet. Returns (scored, skipped)."""
     col_map = _build_col_map(ws)
     scored  = 0
     skipped = 0
 
-    # Collect rows to score (skip header row 1)
-    rows_to_score = []
+    # Collect rows that need any scoring (answer quality and/or routing)
+    rows_to_process: list[tuple] = []
     for row in ws.iter_rows(min_row=2):
         run_id = _cell(row, "run_id", col_map)
 
@@ -134,46 +223,65 @@ async def score_sheet(
             skipped += 1
             continue
 
-        if not force and _is_scored(row, col_map):
+        needs_answer  = force or not _is_scored(row, col_map)
+        routing_trace = str(_cell(row, "routing_trace", col_map) or "")
+        needs_routing = (
+            not skip_routing
+            and bool(routing_trace.strip())
+            and (force or not _is_routing_scored(row, col_map))
+        )
+
+        if not needs_answer and not needs_routing:
             skipped += 1
             continue
 
-        rows_to_score.append(row)
+        rows_to_process.append((row, needs_answer, needs_routing))
 
-    total = len(rows_to_score)
-    for i, row in enumerate(rows_to_score, 1):
-        question        = str(_cell(row, "prompt",          col_map) or "")
-        expected_answer = str(_cell(row, "expected_answer", col_map) or "")
-        actual_response = str(_cell(row, "actual_response", col_map) or "")
-        success_val     = _cell(row, "success", col_map)
-        success         = bool(success_val) if success_val is not None else False
-        run_id          = _cell(row, "run_id",    col_map)
-        difficulty      = _cell(row, "difficulty", col_map)
+    total = len(rows_to_process)
+    for i, (row, needs_answer, needs_routing) in enumerate(rows_to_process, 1):
+        question      = str(_cell(row, "prompt",    col_map) or "")
+        success_val   = _cell(row, "success",       col_map)
+        success       = bool(success_val) if success_val is not None else False
+        run_id        = _cell(row, "run_id",        col_map)
+        difficulty    = _cell(row, "difficulty",    col_map)
+        excel_row     = row[0].row
 
         print(f"  [{i:02d}/{total:02d}] run={run_id}  [{difficulty}]  {question[:60]!r}")
 
-        score, rationale, comments = await evaluate(
-            client, deployment,
-            question, expected_answer, actual_response, success,
-        )
+        updates: dict = {}
 
-        # Write scores back — look up column numbers from the header map.
-        # If llm_comments column doesn't exist yet (old file), append it to the header first.
-        excel_row = row[0].row
-        for col_name, value in [
-            ("llm_score",     score),
-            ("llm_rationale", rationale),
-            ("llm_comments",  comments),
-        ]:
+        if needs_answer:
+            expected_answer = str(_cell(row, "expected_answer", col_map) or "")
+            actual_response = str(_cell(row, "actual_response", col_map) or "")
+            score, rationale, comments = await evaluate(
+                client, deployment,
+                question, expected_answer, actual_response, success,
+            )
+            updates["llm_score"]     = score
+            updates["llm_rationale"] = rationale
+            updates["llm_comments"]  = comments
+            label = f"{score}/5" if score is not None else "ERR"
+            print(f"           answer  → {label}  {rationale[:70]}")
+
+        if needs_routing:
+            routing_trace = str(_cell(row, "routing_trace", col_map) or "")
+            r_score, r_rationale = await evaluate_routing(
+                client, deployment,
+                question, routing_trace,
+            )
+            updates["routing_score"]     = r_score
+            updates["routing_rationale"] = r_rationale
+            r_label = f"{r_score}/5" if r_score is not None else "ERR"
+            print(f"           routing → {r_label}  {r_rationale[:70]}")
+
+        # Write scores back — add missing columns on the fly for backward compatibility
+        for col_name, value in updates.items():
             if col_name not in col_map:
-                # Column missing from this sheet (old file) — add it after the last column
                 new_col = ws.max_column + 1
                 ws.cell(row=1, column=new_col).value = col_name
-                col_map[col_name] = new_col - 1  # update map (0-based)
+                col_map[col_name] = new_col - 1
             ws.cell(row=excel_row, column=col_map[col_name] + 1).value = value
 
-        label = f"{score}/5" if score is not None else "ERR"
-        print(f"           → {label}  {rationale[:80]}")
         scored += 1
 
     return scored, skipped
@@ -182,6 +290,7 @@ async def score_sheet(
 # ── Entry point ───────────────────────────────────────────────────────────────
 
 async def main(args: argparse.Namespace) -> None:
+    skip_routing: bool = getattr(args, "no_routing", False)
     if not os.path.exists(EXCEL_FILE):
         print(f"ERROR: {EXCEL_FILE} not found. Run eval/script.py first.")
         return
@@ -228,6 +337,7 @@ async def main(args: argparse.Namespace) -> None:
             ws, client, deployment,
             force=args.force,
             run_id_filter=args.run_id,
+            skip_routing=skip_routing,
         )
         total_scored  += scored
         total_skipped += skipped
@@ -259,6 +369,10 @@ if __name__ == "__main__":
     parser.add_argument(
         "--sheet", choices=["Graph", "Salesforce", "SmartSales", "Orchestrator"],
         help="Only score rows in this agent sheet.",
+    )
+    parser.add_argument(
+        "--no-routing", action="store_true",
+        help="Skip routing correctness scoring (only score answer quality).",
     )
     args = parser.parse_args()
     asyncio.run(main(args))

@@ -13,6 +13,11 @@
     BillingPostalCode, BillingCountry, NumberOfEmployees, AnnualRevenue,
     Description, CreatedDate, LastModifiedDate.
 
+    `not_null_fields` — fields that must NOT be null in the result.
+    Use when the user explicitly asks for a field to be present (e.g. "accounts with a website").
+    Allowed values: Name, Industry, Website, Phone, Type,
+    BillingCity, BillingCountry, BillingPostalCode.
+
     `filters` — dict of {SoqlField: value} for additional WHERE conditions.
     String fields use LIKE (substring match); NumberOfEmployees and AnnualRevenue
     use exact numeric equality.
@@ -23,7 +28,7 @@
     Examples:
     - User asks for accounts in Technology sector → query=null, filters={"Industry":"Technology"}
     - User asks for accounts named "Acme" → query="Acme", filters=null
-    - User asks for Technology accounts named "Acme" → query="Acme", filters={"Industry":"Technology"}
+    - User asks for accounts with a website → not_null_fields=["Website"]
   method: find_accounts
   params:
     - name: query
@@ -36,6 +41,12 @@
       type: "list[str] | None"
       description: >
         Extra SOQL field names to SELECT and return, e.g. ["BillingPostalCode", "Phone"].
+    - name: not_null_fields
+      type: "list[str] | None"
+      description: >
+        Fields that must NOT be null, e.g. ["Website"] to exclude accounts without a website.
+        Allowed values: Name, Industry, Website, Phone, Type,
+        BillingCity, BillingCountry, BillingPostalCode.
     - name: filters
       type: "dict[str, str] | None"
       description: >
@@ -51,15 +62,31 @@
 
     `query` must be a plain keyword (name or email fragment), NOT a SOQL condition.
 
-    `extra_fields` — list of additional SOQL field names to include.
+    Base fields always returned: Id, FirstName, LastName, Email, Account.Name.
+
+    `extra_fields` — list of additional SOQL field names to include in the response.
     Allowed values: Phone, MobilePhone, Title, Department, MailingStreet,
     MailingCity, MailingState, MailingPostalCode, MailingCountry,
     LeadSource, CreatedDate.
+
+    `not_null_fields` — fields that must NOT be null in the result.
+    Use when the user explicitly asks for a field to be present.
+    Example — "contacts with their email addresses": not_null_fields=["Email"]
+    Example — "contacts with a phone number": not_null_fields=["Phone"]
+    Allowed values: Email, FirstName, LastName, Name, Phone, MobilePhone,
+    Title, Department, Account.Name.
 
     `filters` — dict of {SoqlField: value} for WHERE conditions (LIKE substring match).
     Allowed filter fields: FirstName, LastName, Email, Account.Name, Phone, Title,
     Department, MailingCity, MailingState, MailingPostalCode, MailingCountry,
     LeadSource, CreatedDate.
+
+    IMPORTANT: If you filter by a non-base field (e.g. Department, Title), you MUST
+    also add that field to extra_fields so it appears in the response.
+    Example — find contacts in Sales department and show their department:
+      filters={"Department": "Sales"}, extra_fields=["Department"]
+    Example — find contacts with Manager in their title and show their title:
+      filters={"Title": "Manager"}, extra_fields=["Title"]
   method: find_contacts
   params:
     - name: query
@@ -69,11 +96,18 @@
     - name: extra_fields
       type: "list[str] | None"
       description: >
-        Extra SOQL field names to SELECT, e.g. ["MailingPostalCode", "Title"].
+        Extra SOQL field names to SELECT, e.g. ["Department", "Title"].
+        Always include a field here if you are filtering by it and want it shown.
+    - name: not_null_fields
+      type: "list[str] | None"
+      description: >
+        Fields that must NOT be null, e.g. ["Email"] to exclude contacts without an email.
+        Allowed values: Email, FirstName, LastName, Name, Phone, MobilePhone,
+        Title, Department, Account.Name.
     - name: filters
       type: "dict[str, str] | None"
       description: >
-        Additional field filters as {SoqlField: value}, e.g. {"MailingCity": "Amsterdam"}.
+        Additional field filters as {SoqlField: value}, e.g. {"Department": "Sales"}.
 
 # -------------------------------------------------------------------------------
 
@@ -88,11 +122,23 @@
     Allowed values: Phone, MobilePhone, Title, Industry, LeadSource, Street, City,
     State, PostalCode, Country, Rating, NumberOfEmployees, AnnualRevenue, CreatedDate.
 
+    `not_null_fields` — fields that must NOT be null in the result.
+    Example — "leads with an email address": not_null_fields=["Email"]
+    Example — "leads with a company name": not_null_fields=["Company"]
+    Allowed values: Email, FirstName, LastName, Company, Status,
+    Phone, Industry, Country, City.
+
     `filters` — dict of {SoqlField: value} for WHERE conditions.
-    String fields use LIKE; NumberOfEmployees and AnnualRevenue use exact equality.
+    String fields use LIKE; NumberOfEmployees and AnnualRevenue use exact equality;
+    IsConverted uses boolean (true/false).
     Allowed filter fields: FirstName, LastName, Email, Company, Status, Phone, Title,
     Industry, LeadSource, City, State, PostalCode, Country, Rating,
-    NumberOfEmployees, AnnualRevenue.
+    NumberOfEmployees, AnnualRevenue, IsConverted.
+
+    NOTE: To find converted leads, use filters={"IsConverted": "true"}.
+    To find unconverted leads, use filters={"IsConverted": "false"}.
+    When filtering by Industry and you want Industry in the response, also add "Industry"
+    to extra_fields.
   method: find_leads
   params:
     - name: query
@@ -102,66 +148,136 @@
     - name: extra_fields
       type: "list[str] | None"
       description: >
-        Extra SOQL field names to SELECT, e.g. ["PostalCode", "City"].
+        Extra SOQL field names to SELECT, e.g. ["Industry", "City"].
+        Include "Industry" when filtering by industry to show it in the response.
+    - name: not_null_fields
+      type: "list[str] | None"
+      description: >
+        Fields that must NOT be null, e.g. ["Email"] to exclude leads without an email.
+        Allowed values: Email, FirstName, LastName, Company, Status,
+        Phone, Industry, Country, City.
     - name: filters
       type: "dict[str, str] | None"
       description: >
         Additional field filters as {SoqlField: value}, e.g. {"Country": "Netherlands"}.
+        Use {"IsConverted": "true"} for converted leads, {"IsConverted": "false"} for unconverted.
 
 # -------------------------------------------------------------------------------
 
 - name: get_opportunities
   description: >
-    List Salesforce opportunities, optionally filtered by account ID or stage,
-    with support for extra columns and additional field filters.
+    List Salesforce opportunities, optionally filtered by account ID, stage, or
+    minimum amount, with support for extra columns and additional field filters.
+
+    IMPORTANT: In Salesforce, "open" opportunities are those where IsClosed = false.
+    To list open opportunities, use filters={"IsClosed": "false"}.
+    To list closed opportunities (Closed Won / Closed Lost), use filters={"IsClosed": "true"}.
+    Do NOT use stage="Open" — that will match nothing.
+
+    `stage` — use only when the user specifies an exact stage name such as
+    "Proposal/Price Quote" or "Negotiation/Review". Leave null for "open/closed" requests.
+
+    `min_amount` — minimum Amount value (inclusive); use for "amount greater than X" queries.
 
     `extra_fields` — list of additional SOQL field names to include.
     Allowed values: Probability, Type, LeadSource, ForecastCategory,
     Description, CreatedDate, LastModifiedDate.
 
+    `not_null_fields` — fields that must NOT be null in the result.
+    Example — "opportunities with an amount": not_null_fields=["Amount"]
+    Example — "opportunities linked to an account": not_null_fields=["Account.Name"]
+    Allowed values: Name, Amount, CloseDate, StageName, Account.Name.
+
     `filters` — dict of {SoqlField: value} for WHERE conditions.
-    Probability and Amount use exact equality; all others use LIKE.
+    Probability and Amount use exact equality; IsClosed uses boolean (true/false);
+    all others use LIKE.
     Allowed filter fields: Name, StageName, Account.Name, Type, LeadSource,
-    ForecastCategory, Description, Probability, Amount.
+    ForecastCategory, Description, Probability, Amount, IsClosed.
+
+    Base fields always returned: Id, Name, StageName, Amount, CloseDate, Account.Name.
   method: get_opportunities
   params:
     - name: account_id
       type: "str | None"
     - name: stage
       type: "str | None"
+      description: >
+        Exact stage name filter (e.g. "Proposal/Price Quote"). Do NOT use "Open" or "Closed" here;
+        use filters={"IsClosed": "false"} for open and filters={"IsClosed": "true"} for closed.
+    - name: min_amount
+      type: "str | None"
+      description: >
+        Minimum opportunity amount (inclusive), e.g. "10000" for amount >= 10000.
     - name: extra_fields
       type: "list[str] | None"
       description: >
         Extra SOQL field names to SELECT, e.g. ["Probability", "Type"].
+    - name: not_null_fields
+      type: "list[str] | None"
+      description: >
+        Fields that must NOT be null, e.g. ["Amount"] to exclude opportunities without an amount.
+        Allowed values: Name, Amount, CloseDate, StageName, Account.Name.
     - name: filters
       type: "dict[str, str] | None"
       description: >
-        Additional field filters as {SoqlField: value}, e.g. {"LeadSource": "Web"}.
+        Additional field filters as {SoqlField: value}.
+        Use {"IsClosed": "false"} for open opportunities, {"IsClosed": "true"} for closed.
 
 # -------------------------------------------------------------------------------
 
 - name: get_cases
   description: >
-    List Salesforce cases, optionally filtered by account ID or status,
+    List Salesforce cases, optionally filtered by account ID, status, or open/closed state,
     with support for extra columns and additional field filters.
+
+    IMPORTANT: In Salesforce, "open" cases are NOT filtered by Status = "Open" (that status
+    does not exist). Use filters={"IsClosed": "false"} for open cases and
+    filters={"IsClosed": "true"} for closed cases.
+    Actual case statuses are: New, Working, Escalated, Closed.
+
+    `status` — use for exact status values like "New", "Working", "Escalated", "Closed".
+    Do NOT use "Open" as a status value; use filters={"IsClosed": "false"} instead.
+
+    Base fields always returned: Id, CaseNumber, Subject, Status, Priority, Account.Name, CreatedDate.
 
     `extra_fields` — list of additional SOQL field names to include.
     Allowed values: Description, Origin, Type, Reason, ClosedDate, LastModifiedDate.
 
-    `filters` — dict of {SoqlField: value} for WHERE conditions (all LIKE substring match).
+    `not_null_fields` — fields that must NOT be null in the result.
+    Example — "cases with a description": not_null_fields=["Description"]
+    Example — "cases linked to an account": not_null_fields=["Account.Name"]
+    Allowed values: Subject, Status, Priority, Account.Name,
+    CaseNumber, Description, ClosedDate.
+
+    `filters` — dict of {SoqlField: value} for WHERE conditions.
+    IsClosed uses boolean (true/false); all others use LIKE substring match.
     Allowed filter fields: Subject, Status, Priority, Account.Name,
-    Description, Origin, Type, Reason.
+    Description, Origin, Type, Reason, IsClosed.
+
+    NOTE: Include ClosedDate in extra_fields when the user asks for the close date of cases.
   method: get_cases
   params:
     - name: account_id
       type: "str | None"
     - name: status
       type: "str | None"
+      description: >
+        Exact status value: "New", "Working", "Escalated", or "Closed".
+        Do NOT use "Open" — use filters={"IsClosed": "false"} for open cases instead.
     - name: extra_fields
       type: "list[str] | None"
       description: >
-        Extra SOQL field names to SELECT, e.g. ["Origin", "Reason"].
+        Extra SOQL field names to SELECT, e.g. ["Origin", "Reason", "ClosedDate"].
+        Always include "ClosedDate" when the user asks for the case close date.
+    - name: not_null_fields
+      type: "list[str] | None"
+      description: >
+        Fields that must NOT be null, e.g. ["Description"] to exclude cases without a description.
+        Allowed values: Subject, Status, Priority, Account.Name,
+        CaseNumber, Description, ClosedDate.
     - name: filters
       type: "dict[str, str] | None"
       description: >
-        Additional field filters as {SoqlField: value}, e.g. {"Origin": "Email"}.
+        Additional field filters as {SoqlField: value}.
+        Use {"IsClosed": "false"} for open cases, {"IsClosed": "true"} for closed cases.
+        Example for high-priority open cases: filters={"IsClosed": "false", "Priority": "High"}.
