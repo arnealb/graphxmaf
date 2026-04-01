@@ -36,6 +36,10 @@ _ACCOUNT_FILTERABLE = frozenset({
     *_ACCOUNT_SELECTABLE,
 })
 _ACCOUNT_NUMERIC = frozenset({"NumberOfEmployees", "AnnualRevenue"})
+_ACCOUNT_NOT_NULL = frozenset({
+    "Name", "Industry", "Website", "Phone", "Type",
+    "BillingCity", "BillingCountry", "BillingPostalCode",
+})
 
 
 _CONTACT_SELECTABLE: dict[str, str] = {
@@ -56,6 +60,10 @@ _CONTACT_FILTERABLE = frozenset({
     *_CONTACT_SELECTABLE,
 })
 _CONTACT_NUMERIC: frozenset[str] = frozenset()
+_CONTACT_NOT_NULL = frozenset({
+    "Email", "FirstName", "LastName", "Name", "Phone", "MobilePhone",
+    "Title", "Department", "Account.Name",
+})
 
 
 _LEAD_SELECTABLE: dict[str, str] = {
@@ -75,10 +83,15 @@ _LEAD_SELECTABLE: dict[str, str] = {
     "CreatedDate":       "created_date",
 }
 _LEAD_FILTERABLE = frozenset({
-    "FirstName", "LastName", "Email", "Company", "Status",
+    "FirstName", "LastName", "Email", "Company", "Status", "IsConverted",
     *_LEAD_SELECTABLE,
 })
 _LEAD_NUMERIC = frozenset({"NumberOfEmployees", "AnnualRevenue"})
+_LEAD_BOOLEAN = frozenset({"IsConverted"})
+_LEAD_NOT_NULL = frozenset({
+    "Email", "FirstName", "LastName", "Company", "Status",
+    "Phone", "Industry", "Country", "City",
+})
 
 
 _OPP_SELECTABLE: dict[str, str] = {
@@ -91,10 +104,14 @@ _OPP_SELECTABLE: dict[str, str] = {
     "LastModifiedDate": "last_modified_date",
 }
 _OPP_FILTERABLE = frozenset({
-    "Name", "StageName", "Account.Name",
+    "Name", "StageName", "Account.Name", "IsClosed",
     *_OPP_SELECTABLE,
 })
 _OPP_NUMERIC = frozenset({"Probability", "Amount"})
+_OPP_BOOLEAN = frozenset({"IsClosed"})
+_OPP_NOT_NULL = frozenset({
+    "Name", "Amount", "CloseDate", "StageName", "Account.Name",
+})
 
 
 _CASE_SELECTABLE: dict[str, str] = {
@@ -106,10 +123,15 @@ _CASE_SELECTABLE: dict[str, str] = {
     "LastModifiedDate": "last_modified_date",
 }
 _CASE_FILTERABLE = frozenset({
-    "Subject", "Status", "Priority", "Account.Name",
+    "Subject", "Status", "Priority", "Account.Name", "IsClosed",
     *_CASE_SELECTABLE,
 })
 _CASE_NUMERIC: frozenset[str] = frozenset()
+_CASE_BOOLEAN = frozenset({"IsClosed"})
+_CASE_NOT_NULL = frozenset({
+    "Subject", "Status", "Priority", "Account.Name",
+    "CaseNumber", "Description", "ClosedDate",
+})
 
 
 class SalesforceRepository:
@@ -121,6 +143,12 @@ class SalesforceRepository:
         return {"Authorization": f"Bearer {self.access_token}"}
 
     async def _query(self, soql: str) -> list[dict]:
+        # Endpoint: GET {instance_url}/services/data/{version}/query?q={soql}
+        # All repository methods funnel through this single REST endpoint.
+        # Docs — REST API Query resource:
+        #   https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_query.htm
+        # Docs — SOQL syntax reference:
+        #   https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql.htm
         url = f"{self.instance_url}/services/data/{_API_VERSION}/query"
         async with httpx.AsyncClient(timeout=30) as client:
             r = await client.get(url, params={"q": soql}, headers=self._headers())
@@ -136,7 +164,6 @@ class SalesforceRepository:
         extra_fields: list[str] | None,
         selectable: dict[str, str],
     ) -> tuple[list[str], dict[str, str]]:
-
         """Return (valid_soql_fields, soql→model_attr mapping) from requested extra_fields."""
         safe, mapping = [], {}
         for f in (extra_fields or []):
@@ -145,45 +172,62 @@ class SalesforceRepository:
                 mapping[f] = selectable[f]
         return safe, mapping
 
+    @staticmethod
+    def _apply_not_null(
+        conditions: list[str],
+        not_null_fields: list[str] | None,
+        allowed: frozenset[str],
+    ) -> None:
+        """Append field != null conditions for each requested field that is in the allowlist."""
+        for field in (not_null_fields or []):
+            if field in allowed:
+                conditions.append(f"{field} != null")
+
     def _apply_filters(
         self,
         conditions: list[str],
         filters: dict[str, str] | None,
         filterable: frozenset[str],
         numeric: frozenset[str],
+        boolean: frozenset[str] = frozenset(),
     ) -> None:
-        
         """Append validated filter conditions to the conditions list."""
         for field, value in (filters or {}).items():
             if field not in filterable:
                 continue
-            v = self._esc(str(value))
-            if field in numeric:
+            if field in boolean:
+                soql_bool = "true" if str(value).lower() in ("true", "1", "yes") else "false"
+                conditions.append(f"{field} = {soql_bool}")
+            elif field in numeric:
+                v = self._esc(str(value))
                 conditions.append(f"{field} = {v}")
             else:
+                v = self._esc(str(value))
                 conditions.append(f"{field} LIKE '%{v}%'")
 
     # ------------------------------------------------------------------
     # Accounts
+    # Salesforce Object: Account
+    # SOQL: SELECT ... FROM Account [WHERE ...] LIMIT n
+    # Object reference (all fields + types):
+    #   https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_account.htm
     # ------------------------------------------------------------------
 
     async def get_accounts(
         self,
-        query: str | None = None,                   # zoekterm bv Technology
-        extra_fields: list[str] | None = None,      # extra col die opgezocht meoten worden
-        filters: dict[str, str] | None = None,      # filters bv {"Industry": "Technology"}
-        top: int = 25,                              # aantal records
+        query: str | None = None,
+        extra_fields: list[str] | None = None,
+        filters: dict[str, str] | None = None,
+        not_null_fields: list[str] | None = None,
+        top: int = 25,
     ) -> list[SalesforceAccount]:
         safe_extras, field_map = self._resolve_fields(extra_fields, _ACCOUNT_SELECTABLE)
-            # safe_extra: fieldnames voor SOQL query
-            # field_map: om terug in response te steken 
         extra_cols = (", " + ", ".join(safe_extras)) if safe_extras else ""
 
         conditions: list[str] = []
-        # Only add a Name LIKE condition from `query` when `filters` doesn't
-        # already carry a Name filter (avoids duplicate Name conditions).
         if query and not (filters and "Name" in filters):
             conditions.append(f"Name LIKE '%{self._esc(query)}%'")
+        self._apply_not_null(conditions, not_null_fields, _ACCOUNT_NOT_NULL)
         self._apply_filters(conditions, filters, _ACCOUNT_FILTERABLE, _ACCOUNT_NUMERIC)
 
         where = f" WHERE {' AND '.join(conditions)}" if conditions else ""
@@ -205,6 +249,13 @@ class SalesforceRepository:
 
     # ------------------------------------------------------------------
     # Contacts
+    # Salesforce Object: Contact
+    # SOQL: SELECT ... FROM Contact [WHERE ...] LIMIT n
+    # Object reference (all fields + types):
+    #   https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm
+    # Note: Account.Name uses a relationship query (dot-notation) to the parent
+    # Account object — see relationship query docs:
+    #   https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql_relationships.htm
     # ------------------------------------------------------------------
 
     async def get_contact(self, contact_id: str) -> SalesforceContact | None:
@@ -230,6 +281,7 @@ class SalesforceRepository:
         query: str | None = None,
         extra_fields: list[str] | None = None,
         filters: dict[str, str] | None = None,
+        not_null_fields: list[str] | None = None,
         top: int = 10,
     ) -> list[SalesforceContact]:
         safe_extras, field_map = self._resolve_fields(extra_fields, _CONTACT_SELECTABLE)
@@ -239,6 +291,7 @@ class SalesforceRepository:
         if query:
             q = self._esc(query)
             conditions.append(f"(Name LIKE '%{q}%' OR Email LIKE '%{q}%')")
+        self._apply_not_null(conditions, not_null_fields, _CONTACT_NOT_NULL)
         self._apply_filters(conditions, filters, _CONTACT_FILTERABLE, _CONTACT_NUMERIC)
 
         where = f" WHERE {' AND '.join(conditions)}" if conditions else ""
@@ -261,6 +314,12 @@ class SalesforceRepository:
 
     # ------------------------------------------------------------------
     # Leads
+    # Salesforce Object: Lead
+    # SOQL: SELECT ... FROM Lead [WHERE ...] LIMIT n
+    # Object reference (all fields + types):
+    #   https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm
+    # Note: IsConverted is a standard boolean field on Lead; it becomes true
+    # when the lead is converted to an Account/Contact/Opportunity.
     # ------------------------------------------------------------------
 
     async def find_leads(
@@ -268,6 +327,7 @@ class SalesforceRepository:
         query: str | None = None,
         extra_fields: list[str] | None = None,
         filters: dict[str, str] | None = None,
+        not_null_fields: list[str] | None = None,
         top: int = 25,
     ) -> list[SalesforceLead]:
         safe_extras, field_map = self._resolve_fields(extra_fields, _LEAD_SELECTABLE)
@@ -277,7 +337,8 @@ class SalesforceRepository:
         if query:
             q = self._esc(query)
             conditions.append(f"(Name LIKE '%{q}%' OR Email LIKE '%{q}%' OR Company LIKE '%{q}%')")
-        self._apply_filters(conditions, filters, _LEAD_FILTERABLE, _LEAD_NUMERIC)
+        self._apply_not_null(conditions, not_null_fields, _LEAD_NOT_NULL)
+        self._apply_filters(conditions, filters, _LEAD_FILTERABLE, _LEAD_NUMERIC, _LEAD_BOOLEAN)
 
         where = f" WHERE {' AND '.join(conditions)}" if conditions else ""
         soql = (
@@ -300,14 +361,24 @@ class SalesforceRepository:
 
     # ------------------------------------------------------------------
     # Opportunities
+    # Salesforce Object: Opportunity
+    # SOQL: SELECT ... FROM Opportunity [WHERE ...] LIMIT n
+    # Object reference (all fields + types):
+    #   https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_opportunity.htm
+    # Note: IsClosed is a formula boolean — true when StageName is a "Closed"
+    # stage (Closed Won / Closed Lost). Use IsClosed = false for open opps.
+    # Standard stage values:
+    #   https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_opportunity.htm#kanchor861
     # ------------------------------------------------------------------
 
     async def get_opportunities(
         self,
         account_id: str | None = None,
         stage: str | None = None,
+        min_amount: str | None = None,
         extra_fields: list[str] | None = None,
         filters: dict[str, str] | None = None,
+        not_null_fields: list[str] | None = None,
         top: int = 25,
     ) -> list[SalesforceOpportunity]:
         safe_extras, field_map = self._resolve_fields(extra_fields, _OPP_SELECTABLE)
@@ -318,7 +389,10 @@ class SalesforceRepository:
             conditions.append(f"AccountId = '{self._esc(account_id)}'")
         if stage:
             conditions.append(f"StageName LIKE '%{self._esc(stage)}%'")
-        self._apply_filters(conditions, filters, _OPP_FILTERABLE, _OPP_NUMERIC)
+        if min_amount is not None:
+            conditions.append(f"Amount >= {min_amount}")
+        self._apply_not_null(conditions, not_null_fields, _OPP_NOT_NULL)
+        self._apply_filters(conditions, filters, _OPP_FILTERABLE, _OPP_NUMERIC, _OPP_BOOLEAN)
 
         where = f" WHERE {' AND '.join(conditions)}" if conditions else ""
         soql = (
@@ -345,6 +419,14 @@ class SalesforceRepository:
 
     # ------------------------------------------------------------------
     # Cases
+    # Salesforce Object: Case
+    # SOQL: SELECT ... FROM Case [WHERE ...] LIMIT n
+    # Object reference (all fields + types):
+    #   https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_case.htm
+    # Note: IsClosed is a formula boolean — true when Status = "Closed".
+    # Actual status picklist values depend on org config; common defaults:
+    #   New | Working | Escalated | Closed
+    # CaseNumber is an auto-generated read-only field (e.g. "00001023").
     # ------------------------------------------------------------------
 
     async def get_cases(
@@ -353,6 +435,7 @@ class SalesforceRepository:
         status: str | None = None,
         extra_fields: list[str] | None = None,
         filters: dict[str, str] | None = None,
+        not_null_fields: list[str] | None = None,
         top: int = 25,
     ) -> list[SalesforceCase]:
         safe_extras, field_map = self._resolve_fields(extra_fields, _CASE_SELECTABLE)
@@ -363,11 +446,12 @@ class SalesforceRepository:
             conditions.append(f"AccountId = '{self._esc(account_id)}'")
         if status:
             conditions.append(f"Status LIKE '%{self._esc(status)}%'")
-        self._apply_filters(conditions, filters, _CASE_FILTERABLE, _CASE_NUMERIC)
+        self._apply_not_null(conditions, not_null_fields, _CASE_NOT_NULL)
+        self._apply_filters(conditions, filters, _CASE_FILTERABLE, _CASE_NUMERIC, _CASE_BOOLEAN)
 
         where = f" WHERE {' AND '.join(conditions)}" if conditions else ""
         soql = (
-            f"SELECT Id, Subject, Status, Priority, Account.Name, CreatedDate{extra_cols} "
+            f"SELECT Id, CaseNumber, Subject, Status, Priority, Account.Name, CreatedDate{extra_cols} "
             f"FROM Case{where} LIMIT {top}"
         )
 
@@ -382,6 +466,7 @@ class SalesforceRepository:
             result.append(
                 SalesforceCase(
                     id=r["Id"],
+                    case_number=r.get("CaseNumber"),
                     subject=r["Subject"],
                     status=r["Status"],
                     priority=r.get("Priority"),
