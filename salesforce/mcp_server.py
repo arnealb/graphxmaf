@@ -24,7 +24,7 @@ from salesforce.token_store import StoredTokens, build_token_store
 
 log = logging.getLogger("salesforce.mcp_server")
 
-mcp = FastMCP("salesforce", port=8001)
+mcp = FastMCP("salesforce", port=8001, host="0.0.0.0")
 
 _RESOURCE_URI = os.environ.get("MCP_RESOURCE_URI", "http://localhost:8001")
 

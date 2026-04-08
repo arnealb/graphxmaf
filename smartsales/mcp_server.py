@@ -26,7 +26,7 @@ logging.basicConfig(
 )
 log = logging.getLogger("smartsales.mcp_server")
 
-mcp = FastMCP("smartsales", port=8002)
+mcp = FastMCP("smartsales", port=8002, host="0.0.0.0")
 
 _token_store = build_token_store()
 

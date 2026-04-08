@@ -126,12 +126,15 @@ def _register_one(mcp, azure_settings, extract_token, tool_def: dict) -> None:
     params = tool_def.get("params", [])
 
     async def handler(ctx: Context, _m=method_name, **kwargs):
-        token = extract_token(ctx)
-        repo = _get_repo(token, azure_settings)
-        fn = _DISPATCH.get(_m)
-        if fn:
-            return await fn(repo, **kwargs)
-        return await getattr(repo, _m)(**kwargs)
+            token = extract_token(ctx)
+            # Support async extract_token (voor OBO)
+            if inspect.isawaitable(token):
+                token = await token
+            repo = _get_repo(token, azure_settings)
+            fn = _DISPATCH.get(_m)
+            if fn:
+                return await fn(repo, **kwargs)
+            return await getattr(repo, _m)(**kwargs)
 
     sig_params = [
         inspect.Parameter("ctx", inspect.Parameter.POSITIONAL_OR_KEYWORD, annotation=Context),
