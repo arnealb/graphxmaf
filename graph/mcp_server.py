@@ -137,7 +137,9 @@ async def _extract_and_exchange_token(ctx: Context) -> str:
 
 
 # register_graph_tools(mcp, _azure_settings, _extract_token)
-register_graph_tools(mcp, _azure_settings, _extract_and_exchange_token)
+# register_graph_tools(mcp, _azure_settings, _extract_and_exchange_token)
+register_graph_tools(mcp, _azure_settings, _extract_token)
+
 
 
 class RoutingMiddleware(BaseHTTPMiddleware):

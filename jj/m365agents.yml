@@ -11,7 +11,7 @@ provision:
   - uses: teamsApp/create
     with:
       # app name
-      name: jj${{APP_NAME_SUFFIX}}
+      name: jj_new${{APP_NAME_SUFFIX}}
     # Write the information of created resources into environment file for
     # the specified environment variable(s).
     writeToEnvironmentFile:
@@ -19,16 +19,16 @@ provision:
 
   - uses: oauth/register
     with:
-      name: graphmcpwh
+      name: orchestratormcp
       appId: ${{TEAMS_APP_ID}}
       flow: authorizationCode
       identityProvider: Custom
-      baseUrl: https://graph-mcp.whitemushroom-38caf70a.swedencentral.azurecontainerapps.io/mcp
-      authorizationUrl: https://graph-mcp.whitemushroom-38caf70a.swedencentral.azurecontainerapps.io/authorize
-      tokenUrl: https://graph-mcp.whitemushroom-38caf70a.swedencentral.azurecontainerapps.io/token
+      baseUrl: https://orchestrator-mcp.whitemushroom-38caf70a.swedencentral.azurecontainerapps.io/mcp
+      authorizationUrl: https://orchestrator-mcp.whitemushroom-38caf70a.swedencentral.azurecontainerapps.io/authorize
+      tokenUrl: https://orchestrator-mcp.whitemushroom-38caf70a.swedencentral.azurecontainerapps.io/token
       apiSpecPath: ./appPackage/ai-plugin.json
     writeToEnvironmentFile:
-        configurationId: MCP_DA_AUTH_ID_GRAPHMCPWH
+        configurationId: MCP_DA_AUTH_ID_ORCHESTRATORMCP
 
   # Build app package with latest env value
   - uses: teamsApp/zipAppPackage
