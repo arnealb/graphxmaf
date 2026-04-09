@@ -31,6 +31,7 @@ from agent_framework.azure import AzureOpenAIChatClient
 
 load_dotenv()
 log = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s — %(message)s")
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
@@ -60,10 +61,13 @@ _GRAPH_MCP_URL = _orch.get(
         "https://graph-mcp.whitemushroom-38caf70a.swedencentral.azurecontainerapps.io/mcp",
     ),
 )
-_SS_MCP_URL = _ss_cfg.get(
-    "mcpServerUrl",
-    os.environ.get("SS_MCP_URL", "http://localhost:8002/mcp"),
+_SS_MCP_URL = os.environ.get(
+    "SS_MCP_URL",
+    _ss_cfg.get("mcpServerUrl", "http://localhost:8002/mcp"),
 )
+
+log.warning("[config] SS_MCP_URL = %s", _SS_MCP_URL)
+
 
 # Azure OpenAI (same env vars as the rest of the project).
 _AOAI_DEPLOYMENT = os.environ.get("deployment", "")
@@ -88,21 +92,23 @@ def _aoai_client() -> AzureOpenAIChatClient:
         api_version=_AOAI_VERSION,
     )
 
-
 async def _init_smartsales() -> None:
     global _ss_agent
     try:
         parsed = urlparse(_SS_MCP_URL)
         base = f"{parsed.scheme}://{parsed.netloc}"
+        log.warning("[init_smartsales] GET %s/auth/smartsales/session", base)
         async with httpx.AsyncClient() as client:
             resp = await client.get(f"{base}/auth/smartsales/session", timeout=20)
 
+        log.warning("[init_smartsales] Response: %s %s", resp.status_code, resp.text[:200])
+
         if resp.status_code != 200:
-            log.error("SmartSales session init failed: %s %s", resp.status_code, resp.text[:200])
-            return  # Don't crash, just skip
+            log.warning("[init_smartsales] FAILED — skipping SmartSales")
+            return
 
         session_token = resp.json()["session_token"]
-        log.info("SmartSales session ready  session=%s", session_token)
+        log.warning("[init_smartsales] Session ready: %s", session_token)
 
         ss_http = httpx.AsyncClient(headers={"Authorization": f"Bearer {session_token}"})
         ss_mcp = MCPStreamableHTTPTool(name="smartsales", url=_SS_MCP_URL, http_client=ss_http)
@@ -111,13 +117,48 @@ async def _init_smartsales() -> None:
             client=_aoai_client(),
             name="SmartSalesAgent",
             description="Interacts with SmartSales to access locations, catalog items, and orders",
-            instructions="""...""",  # zelfde instructions als nu
+            instructions="""
+            You are a helpful assistant with access to SmartSales data.
+
+            AVAILABLE TOOL GROUPS:
+
+            Locations:
+            - get_location: retrieve a single location by uid.
+            - list_locations: query locations (params: q, s, p, nextPageToken).
+            - list_displayable_fields / list_queryable_fields / list_sortable_fields: field metadata.
+
+            Catalog:
+            - get_catalog_item: retrieve a single catalog item by uid.
+            - get_catalog_group: retrieve a single catalog group by uid.
+            - list_catalog_items: query catalog items (params: q, s, p, nextPageToken).
+
+            Orders:
+            - get_order: retrieve a single order by uid.
+            - list_orders: query orders (params: q, s, p, nextPageToken).
+
+            QUERY SYNTAX (q parameter):
+            - Always a JSON string with operator-prefixed values.
+            - e.g. '{"city":"eq:Brussels"}' or '{"country":"eq:Belgium","name":"contains:acme"}'
+            - Supported operators: eq, neq, contains, ncontains, startswith, range:start,end,
+              gt, gte, lt, lte, empty, nempty.
+
+            STRICT TOOL SELECTION RULES:
+            - ONLY call tools directly required by the user's request.
+            - Call list_* tools EXACTLY ONCE per request.
+            - If a tool returns sufficient data, stop and answer immediately.
+
+            OUTPUT
+            - Return the exact JSON object or array that the tool returned. No prose, no explanation.
+            - If multiple tools were called, return a JSON array:
+              [{"tool": "<name>", "result": <result>}, ...]
+            - If only one tool was called, return its result directly.
+            """,
             tools=[ss_mcp],
         )
+        log.warning("[init_smartsales] SmartSalesAgent created successfully")
     except Exception as e:
-        log.error("SmartSales init failed (non-fatal): %s", e)
+        log.warning("[init_smartsales] EXCEPTION: %s", e)
         _ss_agent = None
-
 
 # ── Per-request Graph agent ───────────────────────────────────────────────────
 
@@ -258,6 +299,8 @@ def _build_orchestrator(graph_agent: Agent, ss_agent: Agent) -> Agent:
     ),
 )
 async def ask(ctx: Context, query: str) -> str:
+    global _ss_agent
+
     # 1. Extract the incoming Copilot token.
     http_request = ctx.request_context.request
     if http_request is None:
@@ -270,17 +313,22 @@ async def ask(ctx: Context, query: str) -> str:
     # 2. OBO exchange → Graph token.
     graph_token = await _obo_exchange(assertion)
 
-    # 3. Build per-request GraphAgent.
+    # 3. Lazy init SmartSales (once).
+    if _ss_agent is None:
+        log.warning("[ask] SmartSales not initialized yet — trying now")
+        await _init_smartsales()
+
+    # 4. Build per-request GraphAgent.
     graph_agent = _build_graph_agent(graph_token)
 
-    # 4. Build orchestrator — SmartSales is optional.
+    # 5. Build orchestrator — SmartSales is optional.
     if _ss_agent is not None:
         orchestrator = _build_orchestrator(graph_agent, _ss_agent)
     else:
         log.warning("[ask] SmartSales not available — using GraphAgent only")
         orchestrator = graph_agent
 
-    # 5. Run.
+    # 6. Run.
     log.info("[ask] query=%r", query[:120])
     response = await orchestrator.run(query)
     result = response.text or "(no response)"
@@ -409,7 +457,7 @@ class RoutingMiddleware(BaseHTTPMiddleware):
 
 app = mcp.streamable_http_app()
 app.add_middleware(RoutingMiddleware)
-app.add_event_handler("startup", _init_smartsales)
+# VERWIJDER: app.add_event_handler("startup", _init_smartsales)
 
 
 if __name__ == "__main__":
