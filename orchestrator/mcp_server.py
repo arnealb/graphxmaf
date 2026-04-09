@@ -5,8 +5,9 @@ Exposes a single `ask` tool to Microsoft 365 Copilot.
 On each call it:
   1. Extracts the Copilot bearer token and exchanges it for a Graph token via OBO.
   2. Creates a per-request GraphAgent (MCPStreamableHTTPTool → deployed graph-mcp).
-  3. Reuses the shared SmartSalesAgent (initialised at startup).
-  4. Runs an OrchestratorAgent that routes to whichever sub-agents are needed and
+  3. Reuses the shared SmartSalesAgent (initialised lazily on first request).
+  4. Reuses the shared SalesforceAgent (initialised lazily on first request).
+  5. Runs an OrchestratorAgent that routes to whichever sub-agents are needed and
      synthesises the results into one answer.
 
 OAuth proxy routes (/authorize, /token, /.well-known/*) are wired identically to
@@ -41,14 +42,14 @@ _azure = _config["azure"]
 _orch = _config["orchestrator"] if _config.has_section("orchestrator") else {}
 _ss_cfg = _config["smartsales"] if _config.has_section("smartsales") else {}
 
-_TENANT_ID   = _azure["tenantId"]
-_CLIENT_ID   = _orch.get("clientId",     os.environ.get("ORCH_CLIENT_ID", ""))
+_TENANT_ID = _azure["tenantId"]
+_CLIENT_ID = _orch.get("clientId", os.environ.get("ORCH_CLIENT_ID", ""))
 _CLIENT_SECRET = _orch.get("clientSecret", os.environ.get("ORCH_CLIENT_SECRET", ""))
-_GRAPH_SCOPES  = _azure["graphUserScopes"].split()
+_GRAPH_SCOPES = _azure["graphUserScopes"].split()
 
 _RESOURCE_URI = os.environ.get("MCP_RESOURCE_URI", "http://localhost:8003")
-_BASE_URL     = _RESOURCE_URI.removesuffix("/mcp")
-_AZURE_BASE   = f"https://login.microsoftonline.com/{_TENANT_ID}/oauth2/v2.0"
+_BASE_URL = _RESOURCE_URI.removesuffix("/mcp")
+_AZURE_BASE = f"https://login.microsoftonline.com/{_TENANT_ID}/oauth2/v2.0"
 
 # Scope Copilot requests — tied to this orchestrator's App Registration.
 _SCOPE = f"openid profile offline_access api://{_CLIENT_ID}/access_as_user"
@@ -61,27 +62,37 @@ _GRAPH_MCP_URL = _orch.get(
         "https://graph-mcp.whitemushroom-38caf70a.swedencentral.azurecontainerapps.io/mcp",
     ),
 )
+log.warning("[config] GRAPH_MCP_URL = %s", _GRAPH_MCP_URL)
+
 _SS_MCP_URL = os.environ.get(
     "SS_MCP_URL",
     _ss_cfg.get("mcpServerUrl", "http://localhost:8002/mcp"),
 )
-
 log.warning("[config] SS_MCP_URL = %s", _SS_MCP_URL)
 
+_SF_MCP_URL = os.environ.get(
+    "SF_MCP_URL",
+    _config["salesforce"].get("mcpServerUrl", "http://localhost:8001/mcp")
+    if _config.has_section("salesforce")
+    else "http://localhost:8001/mcp",
+)
+log.warning("[config] SF_MCP_URL = %s", _SF_MCP_URL)
 
 # Azure OpenAI (same env vars as the rest of the project).
 _AOAI_DEPLOYMENT = os.environ.get("deployment", "")
-_AOAI_ENDPOINT   = os.environ.get("AZURE_OPENAI_ENDPOINT", "")
-_AOAI_KEY        = os.environ.get("AZURE_OPENAI_API_KEY", "")
-_AOAI_VERSION    = "2024-12-01-preview"
+_AOAI_ENDPOINT = os.environ.get("AZURE_OPENAI_ENDPOINT", "")
+_AOAI_KEY = os.environ.get("AZURE_OPENAI_API_KEY", "")
+_AOAI_VERSION = "2024-12-01-preview"
 
 # ── FastMCP ───────────────────────────────────────────────────────────────────
 
 mcp = FastMCP("orchestrator", port=8003, host="0.0.0.0")
 
-# ── Shared SmartSales state (initialised once at startup) ─────────────────────
+# ── Shared agent state (initialised lazily on first request) ──────────────────
 
 _ss_agent: Agent | None = None
+_sf_agent: Agent | None = None
+_sf_login_url: str | None = None
 
 
 def _aoai_client() -> AzureOpenAIChatClient:
@@ -91,6 +102,9 @@ def _aoai_client() -> AzureOpenAIChatClient:
         api_key=_AOAI_KEY,
         api_version=_AOAI_VERSION,
     )
+
+
+# ── SmartSales init ──────────────────────────────────────────────────────────
 
 async def _init_smartsales() -> None:
     global _ss_agent
@@ -149,7 +163,7 @@ async def _init_smartsales() -> None:
 
             OUTPUT
             - Return the exact JSON object or array that the tool returned. No prose, no explanation.
-            - If multiple tools were called, return a JSON array:
+            - If mFultiple tools were called, return a JSON array:
               [{"tool": "<name>", "result": <result>}, ...]
             - If only one tool was called, return its result directly.
             """,
@@ -159,6 +173,58 @@ async def _init_smartsales() -> None:
     except Exception as e:
         log.warning("[init_smartsales] EXCEPTION: %s", e)
         _ss_agent = None
+
+
+# ── Salesforce init ──────────────────────────────────────────────────────────
+
+async def _init_salesforce() -> None:
+    global _sf_agent
+    try:
+        parsed = urlparse(_SF_MCP_URL)
+        base = f"{parsed.scheme}://{parsed.netloc}"
+        log.warning("[init_salesforce] GET %s/auth/salesforce/session", base)
+        async with httpx.AsyncClient() as client:
+            resp = await client.get(f"{base}/auth/salesforce/session", timeout=20)
+
+        log.warning("[init_salesforce] Response: %s %s", resp.status_code, resp.text[:200])
+
+        if resp.status_code != 200:
+            global _sf_login_url
+            parsed = urlparse(_SF_MCP_URL)
+            _sf_login_url = f"{parsed.scheme}://{parsed.netloc}/auth/salesforce/login"
+            log.warning("[init_salesforce] No session — login at %s", _sf_login_url)
+            return
+
+        session_token = resp.json()["session_token"]
+        log.warning("[init_salesforce] Session ready: %s", session_token)
+
+        sf_http = httpx.AsyncClient(headers={"Authorization": f"Bearer {session_token}"})
+        sf_mcp = MCPStreamableHTTPTool(name="salesforce", url=_SF_MCP_URL, http_client=sf_http)
+
+        _sf_agent = Agent(
+            client=_aoai_client(),
+            name="SalesforceAgent",
+            description="Interacts with Salesforce to access accounts, leads, contacts, and opportunities",
+            instructions="""
+            You are a helpful assistant with access to Salesforce CRM data.
+
+            STRICT TOOL SELECTION RULES:
+            - ONLY call tools directly required by the user's request.
+            - If a tool returns sufficient data, stop and answer immediately.
+
+            OUTPUT
+            - Return the exact JSON object or array that the tool returned. No prose, no explanation.
+            - If multiple tools were called, return a JSON array:
+              [{"tool": "<name>", "result": <result>}, ...]
+            - If only one tool was called, return its result directly.
+            """,
+            tools=[sf_mcp],
+        )
+        log.warning("[init_salesforce] SalesforceAgent created successfully")
+    except Exception as e:
+        log.warning("[init_salesforce] EXCEPTION: %s", e)
+        _sf_agent = None
+
 
 # ── Per-request Graph agent ───────────────────────────────────────────────────
 
@@ -210,7 +276,12 @@ def _build_graph_agent(graph_token: str) -> Agent:
 
 # ── Orchestrator agent ────────────────────────────────────────────────────────
 
-def _build_orchestrator(graph_agent: Agent, ss_agent: Agent) -> Agent:
+def _build_orchestrator(
+    graph_agent: Agent,
+    ss_agent: Agent | None,
+    sf_agent: Agent | None,
+    sf_status:str=""
+) -> Agent:
     """Assemble the orchestrator with FunctionTools wrapping each sub-agent."""
 
     async def ask_graph_agent(
@@ -225,6 +296,13 @@ def _build_orchestrator(graph_agent: Agent, ss_agent: Agent) -> Agent:
         response = await ss_agent.run(query)
         return response.text or "(no response from SmartSalesAgent)"
 
+    async def ask_salesforce_agent(
+        query: Annotated[str, "The full question to send to the Salesforce agent"],
+    ) -> str:
+        response = await sf_agent.run(query)
+        return response.text or "(no response from SalesforceAgent)"
+
+    # Graph is always available.
     tools = [
         FunctionTool(
             name="ask_graph_agent",
@@ -236,70 +314,96 @@ def _build_orchestrator(graph_agent: Agent, ss_agent: Agent) -> Agent:
             func=ask_graph_agent,
             approval_mode="never_require",
         ),
-        FunctionTool(
-            name="ask_smartsales_agent",
-            description=(
-                "Route a question to the SmartSales agent. "
-                "Use this for anything related to SmartSales locations, catalog items, "
-                "or orders: searching, listing, and retrieving by name, city, country, or uid."
-            ),
-            func=ask_smartsales_agent,
-            approval_mode="never_require",
-        ),
     ]
+
+    # SmartSales is optional.
+    if ss_agent is not None:
+        tools.append(
+            FunctionTool(
+                name="ask_smartsales_agent",
+                description=(
+                    "Route a question to the SmartSales agent. "
+                    "Use this for anything related to SmartSales locations, catalog items, "
+                    "or orders: searching, listing, and retrieving by name, city, country, or uid."
+                ),
+                func=ask_smartsales_agent,
+                approval_mode="never_require",
+            )
+        )
+
+    # Salesforce is optional.
+    if sf_agent is not None:
+        tools.append(
+            FunctionTool(
+                name="ask_salesforce_agent",
+                description=(
+                    "Route a question to the Salesforce agent. "
+                    "Use this for anything related to Salesforce CRM data: "
+                    "accounts, leads, contacts, opportunities, and campaigns."
+                ),
+                func=ask_salesforce_agent,
+                approval_mode="never_require",
+            )
+        )
 
     return Agent(
         client=_aoai_client(),
         name="OrchestratorAgent",
-        description="Routes queries to Graph or SmartSales sub-agents and combines their results",
+        description="Routes queries to Graph, SmartSales, or Salesforce sub-agents and combines their results",
         instructions="""
-            You are a central orchestrator that coordinates two specialised agents:
+            You are a central orchestrator that coordinates three specialised agents:
 
-            1. ask_graph_agent  — handles everything Microsoft 365:
+            1. ask_graph_agent — handles everything Microsoft 365:
                emails, OneDrive files, calendar events, contacts, user identity.
             2. ask_smartsales_agent — handles SmartSales data:
                locations, catalog items, and orders.
+            3. ask_salesforce_agent — handles Salesforce CRM data:
+               accounts, leads, contacts, opportunities, and campaigns.
 
             ROUTING RULES
             - Microsoft 365 / Office data → ask_graph_agent
             - SmartSales data             → ask_smartsales_agent
-            - Query spans both systems    → call both tools, then combine
+            - Salesforce CRM data         → ask_salesforce_agent
+            - Query spans multiple systems → call relevant tools, then combine
 
             STRICT TOOL SELECTION RULES
             - Only call a tool when the user's request explicitly requires it.
             - Pass the user's original question (rephrased if needed) to the sub-agent.
             - Never guess or fabricate data — only report what sub-agents return.
-            - If a single tool call returns sufficient information, do NOT call the other.
+            - If a single tool call returns sufficient information, do NOT call the other tools.
 
             SUB-AGENT RESPONSES
             - Sub-agents return raw JSON from their tool calls, not prose.
             - Parse the structured fields (id, name, email, etc.) to answer the user.
 
             COMBINING RESULTS
-            - When both agents are called, synthesise into one coherent answer.
-            - Clearly indicate the source (e.g. "From Microsoft 365: …" / "From SmartSales: …").
+            - When multiple agents are called, synthesise into one coherent answer.
+            - Clearly indicate the source (e.g. "From Microsoft 365: …" / "From SmartSales: …" / "From Salesforce: …").
             - Present a unified, structured summary — do not concatenate raw outputs.
 
             OUTPUT
             - Be concise and factual.
             - Use bullet points or sections when presenting data from multiple sources.
             - Present dates in a human-readable format.
+            {sf_status}
         """,
         tools=tools,
     )
 
 
 # ── The one MCP tool exposed to Copilot ──────────────────────────────────────
+
 @mcp.tool(
     name="ask",
     description=(
         "Ask the multi-agent system a question. "
-        "Handles Microsoft 365 data (emails, calendar, files, contacts) "
-        "and SmartSales data (locations, catalog items, orders)."
+        "Handles Microsoft 365 data (emails, calendar, files, contacts), "
+        "SmartSales data (locations, catalog items, orders), "
+        "and Salesforce CRM data (accounts, leads, contacts, opportunities)."
     ),
 )
 async def ask(ctx: Context, query: str) -> str:
-    global _ss_agent
+    global _ss_agent, _sf_agent
 
     # 1. Extract the incoming Copilot token.
     http_request = ctx.request_context.request
@@ -318,22 +422,33 @@ async def ask(ctx: Context, query: str) -> str:
         log.warning("[ask] SmartSales not initialized yet — trying now")
         await _init_smartsales()
 
-    # 4. Build per-request GraphAgent.
+    # 4. Lazy init Salesforce (once).
+    if _sf_agent is None:
+        log.warning("[ask] Salesforce not initialized yet — trying now")
+        await _init_salesforce()
+
+    # If Salesforce still unavailable, inject login hint into query context.
+    sf_status = ""
+    if _sf_agent is None and _sf_login_url is not None:
+        sf_status = f"\n\nNOTE: Salesforce is not authenticated. If the user asks for Salesforce data, respond with: 'Salesforce is currently not authenticated. Please log in first at: {_sf_login_url}'"
+
+    # 5. Build per-request GraphAgent.
     graph_agent = _build_graph_agent(graph_token)
 
-    # 5. Build orchestrator — SmartSales is optional.
-    if _ss_agent is not None:
-        orchestrator = _build_orchestrator(graph_agent, _ss_agent)
+    # 6. Build orchestrator with available agents.
+    if _ss_agent is not None or _sf_agent is not None:
+        orchestrator = _build_orchestrator(graph_agent, _ss_agent, _sf_agent, sf_status)
     else:
-        log.warning("[ask] SmartSales not available — using GraphAgent only")
+        log.warning("[ask] No sub-agents available — using GraphAgent only")
         orchestrator = graph_agent
 
-    # 6. Run.
+    # 7. Run.
     log.info("[ask] query=%r", query[:120])
     response = await orchestrator.run(query)
     result = response.text or "(no response)"
     log.info("[ask] done, response length=%d", len(result))
     return result
+
 
 # ── OBO helper ────────────────────────────────────────────────────────────────
 
@@ -457,7 +572,6 @@ class RoutingMiddleware(BaseHTTPMiddleware):
 
 app = mcp.streamable_http_app()
 app.add_middleware(RoutingMiddleware)
-# VERWIJDER: app.add_event_handler("startup", _init_smartsales)
 
 
 if __name__ == "__main__":
