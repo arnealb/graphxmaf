@@ -66,22 +66,21 @@ class SmartSalesRepository:
 
         log.info("list_locations params=%s", params)
 
-        if _field_cache:
-            if q is not None:
-                try:
-                    q_fields = set(json.loads(q).keys())
-                    valid_fields = {f["fieldName"] for f in _field_cache.get("queryable", [])}
-                    invalid = q_fields - valid_fields
-                    if invalid:
-                        return {"error": f"Unknown filter field(s): {sorted(invalid)}. Valid fields: {sorted(valid_fields)}"}
-                except (json.JSONDecodeError, KeyError):
-                    pass
+        if "location_queryable" in _field_cache and q is not None:
+            try:
+                q_fields = set(json.loads(q).keys())
+                valid_fields = {f["fieldName"] for f in _field_cache["location_queryable"]}
+                invalid = q_fields - valid_fields
+                if invalid:
+                    return {"error": f"Unknown filter field(s): {sorted(invalid)}. Valid fields: {sorted(valid_fields)}"}
+            except (json.JSONDecodeError, KeyError):
+                pass
 
-            if s is not None:
-                sort_field = s.split(":")[0]
-                valid_sort = {f["keyName"] for f in _field_cache.get("sortable", [])}
-                if sort_field not in valid_sort:
-                    return {"error": f"Unknown sort field: '{sort_field}'. Valid fields: {sorted(valid_sort)}"}
+        if "location_sortable" in _field_cache and s is not None:
+            sort_field = s.split(":")[0]
+            valid_sort = {f["keyName"] for f in _field_cache["location_sortable"]}
+            if sort_field not in valid_sort:
+                return {"error": f"Unknown sort field: '{sort_field}'. Valid fields: {sorted(valid_sort)}"}
 
         url = f"{_BASE_URL}/api/v3/location/list"
         async with httpx.AsyncClient(timeout=30) as client:
@@ -98,33 +97,33 @@ class SmartSalesRepository:
 
     async def list_displayable_fields(self) -> list:
         """Return the fields that can be displayed in a location list view."""
-        if "displayable" not in _field_cache:
+        if "location_displayable" not in _field_cache:
             url = f"{_BASE_URL}/api/v3/location/list/displayableFields"
             async with httpx.AsyncClient(timeout=30) as client:
                 r = await client.get(url, headers=self._headers())
                 r.raise_for_status()
-            _field_cache["displayable"] = r.json()
-        return _field_cache["displayable"]
+            _field_cache["location_displayable"] = r.json()
+        return _field_cache["location_displayable"]
 
     async def list_queryable_fields(self) -> list:
         """Return the fields that can be used as filters in list_locations (q param)."""
-        if "queryable" not in _field_cache:
+        if "location_queryable" not in _field_cache:
             url = f"{_BASE_URL}/api/v3/location/list/queryableFields"
             async with httpx.AsyncClient(timeout=30) as client:
                 r = await client.get(url, headers=self._headers())
                 r.raise_for_status()
-            _field_cache["queryable"] = r.json()
-        return _field_cache["queryable"]
+            _field_cache["location_queryable"] = r.json()
+        return _field_cache["location_queryable"]
 
     async def list_sortable_fields(self) -> list:
         """Return the fields that can be used for sorting in list_locations (s param)."""
-        if "sortable" not in _field_cache:
+        if "location_sortable" not in _field_cache:
             url = f"{_BASE_URL}/api/v3/location/list/sortableFields"
             async with httpx.AsyncClient(timeout=30) as client:
                 r = await client.get(url, headers=self._headers())
                 r.raise_for_status()
-            _field_cache["sortable"] = r.json()
-        return _field_cache["sortable"]
+            _field_cache["location_sortable"] = r.json()
+        return _field_cache["location_sortable"]
 
     async def warm_field_cache(self) -> None:
         """Pre-fetch all field lists and store in the module-level cache."""
@@ -141,9 +140,9 @@ class SmartSalesRepository:
             "Field cache warmed: loc_displayable=%d, loc_queryable=%d, loc_sortable=%d, "
             "cat_displayable=%d, cat_queryable=%d, cat_sortable=%d, "
             "ord_displayable=%d, ord_queryable=%d, ord_sortable=%d",
-            len(_field_cache["displayable"]),
-            len(_field_cache["queryable"]),
-            len(_field_cache["sortable"]),
+            len(_field_cache["location_displayable"]),
+            len(_field_cache["location_queryable"]),
+            len(_field_cache["location_sortable"]),
             len(_field_cache["catalog_displayable"]),
             len(_field_cache["catalog_queryable"]),
             len(_field_cache["catalog_sortable"]),
@@ -202,22 +201,21 @@ class SmartSalesRepository:
 
         log.info("list_catalog_items params=%s", params)
 
-        if _field_cache:
-            if q is not None:
-                try:
-                    q_fields = set(json.loads(q).keys())
-                    valid_fields = {f["fieldName"] for f in _field_cache.get("catalog_queryable", [])}
-                    invalid = q_fields - valid_fields
-                    if invalid:
-                        return {"error": f"Unknown filter field(s): {sorted(invalid)}. Valid fields: {sorted(valid_fields)}"}
-                except (json.JSONDecodeError, KeyError):
-                    pass
+        if "catalog_queryable" in _field_cache and q is not None:
+            try:
+                q_fields = set(json.loads(q).keys())
+                valid_fields = {f["fieldName"] for f in _field_cache["catalog_queryable"]}
+                invalid = q_fields - valid_fields
+                if invalid:
+                    return {"error": f"Unknown filter field(s): {sorted(invalid)}. Valid fields: {sorted(valid_fields)}"}
+            except (json.JSONDecodeError, KeyError):
+                pass
 
-            if s is not None:
-                sort_field = s.split(":")[0]
-                valid_sort = {f["keyName"] for f in _field_cache.get("catalog_sortable", [])}
-                if sort_field not in valid_sort:
-                    return {"error": f"Unknown sort field: '{sort_field}'. Valid fields: {sorted(valid_sort)}"}
+        if "catalog_sortable" in _field_cache and s is not None:
+            sort_field = s.split(":")[0]
+            valid_sort = {f["keyName"] for f in _field_cache["catalog_sortable"]}
+            if sort_field not in valid_sort:
+                return {"error": f"Unknown sort field: '{sort_field}'. Valid fields: {sorted(valid_sort)}"}
 
         url = f"{_BASE_URL}/api/v3/catalog/list"
         async with httpx.AsyncClient(timeout=30) as client:
@@ -303,22 +301,21 @@ class SmartSalesRepository:
 
         log.info("list_orders params=%s", params)
 
-        if _field_cache:
-            if q is not None:
-                try:
-                    q_fields = set(json.loads(q).keys())
-                    valid_fields = {f["fieldName"] for f in _field_cache.get("order_queryable", [])}
-                    invalid = q_fields - valid_fields
-                    if invalid:
-                        return {"error": f"Unknown filter field(s): {sorted(invalid)}. Valid fields: {sorted(valid_fields)}"}
-                except (json.JSONDecodeError, KeyError):
-                    pass
+        if "order_queryable" in _field_cache and q is not None:
+            try:
+                q_fields = set(json.loads(q).keys())
+                valid_fields = {f["fieldName"] for f in _field_cache["order_queryable"]}
+                invalid = q_fields - valid_fields
+                if invalid:
+                    return {"error": f"Unknown filter field(s): {sorted(invalid)}. Valid fields: {sorted(valid_fields)}"}
+            except (json.JSONDecodeError, KeyError):
+                pass
 
-            if s is not None:
-                sort_field = s.split(":")[0]
-                valid_sort = {f["keyName"] for f in _field_cache.get("order_sortable", [])}
-                if sort_field not in valid_sort:
-                    return {"error": f"Unknown sort field: '{sort_field}'. Valid fields: {sorted(valid_sort)}"}
+        if "order_sortable" in _field_cache and s is not None:
+            sort_field = s.split(":")[0]
+            valid_sort = {f["keyName"] for f in _field_cache["order_sortable"]}
+            if sort_field not in valid_sort:
+                return {"error": f"Unknown sort field: '{sort_field}'. Valid fields: {sorted(valid_sort)}"}
 
         url = f"{_BASE_URL}/api/v3/order/list"
         async with httpx.AsyncClient(timeout=30) as client:
