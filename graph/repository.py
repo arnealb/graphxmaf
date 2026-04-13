@@ -172,19 +172,24 @@ class GraphRepository(IGraphRepository):
         return list(found.values())
 
     async def _find_contacts(self, query: str, top: int = 5) -> list[EmailAddress]:
-        params = ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters(
-            select=["displayName","emailAddresses"],
-            top=top,
-        )
+        # Escape single quotes for OData filter safety
+        safe_query = query.replace("'", "''")
+        odata_filter = f"startswith(displayName,'{safe_query}')" if query else None
 
+        log.info("[_find_contacts] query=%r filter=%s", query, odata_filter)
+
+
+        params = ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters(
+            select=["displayName", "emailAddresses"],
+            top=top,
+            filter=odata_filter,
+        )
 
         cfg = ContactsRequestBuilder.ContactsRequestBuilderGetRequestConfiguration(
             query_parameters=params
         )
 
-        print("before res")
         res = await self.user_client.me.contacts.get(request_configuration=cfg)
-        print("after res")
 
         out = []
         if res and res.value:
