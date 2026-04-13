@@ -17,6 +17,10 @@ _TYPE_MAP: dict[str, type] = {
 
 _repo_cache: dict[str, GraphRepository] = {}
 
+import logging
+log = logging.getLogger("graph")
+log.setLevel(logging.INFO)
+
 
 def _get_repo(token: str, azure_settings) -> GraphRepository:
     if token not in _repo_cache:
@@ -41,11 +45,14 @@ async def _find_people(repo: GraphRepository, name: str, **kwargs):
 
 
 async def _list_email(repo: GraphRepository, **kwargs):
-    return await repo.get_inbox()
-
+    emails = await repo.get_inbox()
+    return [e.model_dump(mode="json") for e in emails]
 
 async def _read_email(repo: GraphRepository, message_id: str, **kwargs):
-    return await repo.get_message_body(message_id)
+    result = await repo.get_message_body(message_id)
+    if not result:
+        return {"error": "Email not found"}
+    return result.model_dump(mode="json")
 
 
 async def _search_files(repo: GraphRepository, query: str, drive_id=None, folder_id="root", **kwargs):

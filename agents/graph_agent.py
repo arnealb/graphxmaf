@@ -61,6 +61,8 @@ def create_graph_agent(graph_mcp):
             - NEVER call list_contacts unless the user explicitly asks about contacts.
             - NEVER call the same tool twice in a single turn unless each call uses different parameters required by the request.
             - If a tool returns sufficient data, stop and answer — do NOT call more tools.
+            - NEVER call read_email more than once for the same email ID.
+            - If read_email returns empty or unreadable content, report that to the user instead of retrying.
 
             PERSON RESOLUTION
             - Whenever the user mentions a person (name, sender, colleague), call findpeople first.

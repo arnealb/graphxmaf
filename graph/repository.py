@@ -1,3 +1,5 @@
+import html as _html
+import re as _re
 import sys
 from dataclasses import dataclass
 from typing import Optional
@@ -48,6 +50,25 @@ from graph.models import Email, File, Contact, CalendarEvent, EmailAddress, Atte
 import logging
 log = logging.getLogger("graph")
 log.setLevel(logging.INFO)
+
+_MAX_EMAIL_CHARS = 8_000
+
+
+def _strip_html(raw: str) -> str:
+    """Convert HTML email body to plain text using stdlib only."""
+    # Remove <style> and <script> blocks — often kilobytes of CSS/JS
+    text = _re.sub(r'<(style|script)[^>]*>.*?</\1>', '', raw, flags=_re.DOTALL | _re.IGNORECASE)
+    # Turn block-level elements into newlines so paragraphs survive
+    text = _re.sub(r'<(br|p|div|tr|li|h[1-6])\b[^>]*/?>', '\n', text, flags=_re.IGNORECASE)
+    # Drop all remaining tags
+    text = _re.sub(r'<[^>]+>', '', text)
+    # Decode HTML entities (&amp; &nbsp; &#8203; etc.)
+    text = _html.unescape(text)
+    # Collapse runs of blank lines and horizontal whitespace
+    text = _re.sub(r'\n[ \t]+', '\n', text)
+    text = _re.sub(r'\n{3,}', '\n\n', text)
+    text = _re.sub(r'[ \t]{2,}', ' ', text)
+    return text.strip()
 
 
 class GraphRepository(IGraphRepository):
@@ -278,9 +299,18 @@ class GraphRepository(IGraphRepository):
             select=["id", "subject", "from", "receivedDateTime", "body", "webLink"],
         )
 
+        log.info(f"[read_email] for email with id: {message_id}")
+
         request_config = MessageItemRequestBuilder.MessageItemRequestBuilderGetRequestConfiguration(
             query_parameters=query_params
         )
+
+        log.info("[get_message_body] headers type=%s value=%r", type(request_config.headers), request_config.headers)
+
+        # Ask Graph API to return the body as plain text directly.
+        # Falls back to HTML transparently if no plain-text version exists.
+        request_config.headers.try_add("Prefer", 'outlook.body-content-type="text"')
+
 
         m = await self.user_client.me.messages.by_message_id(message_id).get(
             request_configuration=request_config
@@ -300,7 +330,29 @@ class GraphRepository(IGraphRepository):
             )
             sender_email = m.from_.email_address.address
 
-        body = m.body.content if m.body and m.body.content else None
+        raw_body = m.body.content if m.body and m.body.content else None
+
+        if raw_body:
+            # Strip HTML if the server still returned HTML (no plain-text alternative)
+            content_type = (m.body.content_type.value if m.body.content_type else "").lower()
+            if content_type == "html" or raw_body.lstrip().startswith("<"):
+                raw_body = _strip_html(raw_body)
+                log.debug("Email body HTML-stripped, content_type=%s", content_type)
+            # Truncate to prevent token explosions
+            if len(raw_body) > _MAX_EMAIL_CHARS:
+                raw_body = raw_body[:_MAX_EMAIL_CHARS] + "\n\n[... body truncated ...]"
+                log.debug("Email body truncated to %d chars", _MAX_EMAIL_CHARS)
+
+        body = raw_body
+
+        log.info("[get_message_body] id=%s content_type=%s raw_body_len=%d body_len=%d body_preview=%r",
+            message_id,
+            m.body.content_type.value if m.body and m.body.content_type else "None",
+            len(m.body.content) if m.body and m.body.content else 0,
+            len(body) if body else 0,
+            body[:200] if body else None,
+        )
+
 
         return Email(
             id=m.id or "",
@@ -309,7 +361,7 @@ class GraphRepository(IGraphRepository):
             sender_email=sender_email,
             received=m.received_date_time,
             body=body,
-            web_link=m.web_link,   # ← correct
+            web_link=m.web_link,
         )
 
 
