@@ -293,14 +293,24 @@ def _build_orchestrator(
     async def ask_smartsales_agent(
         query: Annotated[str, "The full question to send to the SmartSales agent"],
     ) -> str:
+        global _ss_agent
         response = await ss_agent.run(query)
-        return response.text or "(no response from SmartSalesAgent)"
+        result = response.text or ""
+        if "Session not found" in result:
+            _ss_agent = None  # force re-init op volgende request
+            return "(SmartSales session expired — retrying on next request)"
+        return result
 
     async def ask_salesforce_agent(
         query: Annotated[str, "The full question to send to the Salesforce agent"],
     ) -> str:
+        global _sf_agent
         response = await sf_agent.run(query)
-        return response.text or "(no response from SalesforceAgent)"
+        result = response.text or ""
+        if "Session not found" in result or "Re-authenticate" in result:
+            _sf_agent = None
+            return "(Salesforce session expired — retrying on next request)"
+        return result
 
     # Graph is always available.
     tools = [
@@ -350,7 +360,7 @@ def _build_orchestrator(
         client=_aoai_client(),
         name="OrchestratorAgent",
         description="Routes queries to Graph, SmartSales, or Salesforce sub-agents and combines their results",
-        instructions="""
+        instructions=f"""
             You are a central orchestrator that coordinates three specialised agents:
 
             1. ask_graph_agent — handles everything Microsoft 365:
@@ -436,7 +446,8 @@ async def ask(ctx: Context, query: str) -> str:
     graph_agent = _build_graph_agent(graph_token)
 
     # 6. Build orchestrator with available agents.
-    if _ss_agent is not None or _sf_agent is not None:
+    if _ss_agent is not None or _sf_agent is not None or sf_status:
+        # ook als sf_status niet leeg is -> aka user moet inloggen -> 
         orchestrator = _build_orchestrator(graph_agent, _ss_agent, _sf_agent, sf_status)
     else:
         log.warning("[ask] No sub-agents available — using GraphAgent only")
