@@ -87,10 +87,11 @@ async def protected_resource_metadata(_request: Request) -> JSONResponse:
 
 @mcp.custom_route("/auth/salesforce/session", methods=["GET"])
 async def salesforce_current_session(_request: Request) -> JSONResponse:
-    """Return the active session token, or 404 if no authenticated session exists.
+    """Return the active session token, or 404/401 if no valid session exists.
 
     main.py calls this on startup instead of reading SF_SESSION_TOKEN from .env.
     The session token is written here by the callback after every successful auth.
+    Also checks token expiry and attempts a refresh so callers always get a live token.
     """
     session_token = _read_session_ref()
     if not session_token:
@@ -102,7 +103,17 @@ async def salesforce_current_session(_request: Request) -> JSONResponse:
         _SESSION_REF_FILE.unlink(missing_ok=True)
         return JSONResponse({"error": "session_not_found"}, status_code=404)
 
-    return JSONResponse({"session_token": session_token, "username": tokens.username})
+    if tokens.is_expired():
+        log.info("Session token expired — attempting refresh  session=%s", session_token)
+        try:
+            await _resolve_session(session_token)   # refreshes + saves updated tokens in-place
+        except RuntimeError as exc:
+            log.warning("Token refresh failed — re-auth required: %s", exc)
+            return JSONResponse({"error": "session_expired", "detail": str(exc)}, status_code=401)
+        # Re-read so username reflects the refreshed StoredTokens
+        tokens = await _token_store.get(session_token)
+
+    return JSONResponse({"session_token": session_token, "username": tokens.username if tokens else ""})
 
 
 # ──────────────────────────────────────────────────────────────────────────────
