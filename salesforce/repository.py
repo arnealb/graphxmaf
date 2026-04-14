@@ -307,7 +307,7 @@ class SalesforceRepository:
         filters: dict[str, str] | None = None,
         not_null_fields: list[str] | None = None,
         order_by: str | None = None,
-        top: int = 10,
+        top: int = 25,
     ) -> list[SalesforceContact]:
         safe_extras, field_map = self._resolve_fields(extra_fields, _CONTACT_SELECTABLE)
         extra_cols = (", " + ", ".join(safe_extras)) if safe_extras else ""
