@@ -208,6 +208,12 @@ async def _init_salesforce() -> None:
             instructions="""
             You are a helpful assistant with access to Salesforce CRM data.
 
+            LINKED QUERIES:
+            - When the user asks for opportunities or cases for a named account:
+              1. Call find_accounts(query="<account name>") to get the account ID.
+              2. Pass that ID to get_opportunities(account_id="<id>") or get_cases(account_id="<id>").
+            - NEVER pass account_id=null when the user specifies an account name.
+
             STRICT TOOL SELECTION RULES:
             - ONLY call tools directly required by the user's request.
             - If a tool returns sufficient data, stop and answer immediately.
