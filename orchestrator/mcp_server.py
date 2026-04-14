@@ -297,8 +297,12 @@ def _build_orchestrator(
         response = await ss_agent.run(query)
         result = response.text or ""
         if "Session not found" in result:
-            _ss_agent = None  # force re-init op volgende request
-            return "(SmartSales session expired — retrying on next request)"
+            _ss_agent = None
+            await _init_smartsales()
+            if _ss_agent is not None:
+                response = await _ss_agent.run(query)
+                return response.text or ""
+            return "(SmartSales kon niet opnieuw worden geïnitialiseerd)"
         return result
 
     async def ask_salesforce_agent(
