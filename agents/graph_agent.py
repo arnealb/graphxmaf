@@ -1,4 +1,5 @@
 import os
+from datetime import datetime, timezone
 from agent_framework import Agent, MCPStreamableHTTPTool
 from agent_framework.azure import AzureOpenAIChatClient
 
@@ -21,7 +22,9 @@ def create_graph_agent(graph_mcp):
         ),
         name="GraphAgent",
         description="Interacts with Microsoft Graph to access organizational data",
-        instructions="""
+        instructions=f"""
+            Today's date: {datetime.now(timezone.utc).strftime('%Y-%m-%d')} (UTC).
+
             You are a helpful assistant with access to the user's Microsoft 365 data
             via the Microsoft Graph API.
 
@@ -75,7 +78,7 @@ def create_graph_agent(graph_mcp):
             OUTPUT
             - Return the exact JSON object or array that the tool returned. No prose, no explanation.
             - If multiple tools were called, return a JSON array where each element is
-              {"tool": "<tool_name>", "result": <tool_result>}.
+              {{"tool": "<tool_name>", "result": <tool_result>}}.
             - If only one tool was called, return its result directly.
             - Exception: read_file and read_multiple_files return plain text — return that text as-is.
         """,

@@ -17,6 +17,7 @@ the graph-mcp server so Copilot's OAuth flow works unchanged.
 import configparser
 import logging
 import os
+from datetime import datetime, timezone
 from typing import Annotated
 from urllib.parse import parse_qs, parse_qsl, urlencode, urlparse
 
@@ -236,6 +237,7 @@ async def _init_salesforce() -> None:
 
 def _build_graph_agent(graph_token: str) -> Agent:
     """Create a GraphAgent with a fresh OBO-derived token for this request."""
+    log.info("[build_graph_agent] injecting date=%s", datetime.now(timezone.utc).strftime('%Y-%m-%d'))
     graph_http = httpx.AsyncClient(headers={"Authorization": f"Bearer {graph_token}"})
     graph_mcp = MCPStreamableHTTPTool(name="graph", url=_GRAPH_MCP_URL, http_client=graph_http)
 
@@ -243,7 +245,9 @@ def _build_graph_agent(graph_token: str) -> Agent:
         client=_aoai_client(),
         name="GraphAgent",
         description="Interacts with Microsoft Graph to access organisational data",
-        instructions="""
+        instructions=f"""
+            Today's date: {datetime.now(timezone.utc).strftime('%Y-%m-%d')} (UTC).
+
             You are a helpful assistant with access to the user's Microsoft 365 data
             via the Microsoft Graph API.
 
