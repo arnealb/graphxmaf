@@ -117,9 +117,10 @@
 
     - name: p
       type: "str | None"
-      default: "fullWithColor"
+      default: "simple"
       description: >
-        Projection level. Allowed values: "minimal", "simple", "fullWithColor", "full".
+        Projection level. Default: "simple". Use "simple" for ALL general queries (name, city, country, uid).
+        Only use "fullWithColor" or "full" when the user explicitly asks for details or all information about an object.
 
     - name: d
       type: "str | None"

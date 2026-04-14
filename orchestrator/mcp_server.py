@@ -156,6 +156,12 @@ async def _init_smartsales() -> None:
             - Supported operators: eq, neq, contains, ncontains, startswith, range:start,end,
               gt, gte, lt, lte, empty, nempty.
 
+            PROJECTION RULE (p parameter for list_* tools):
+            - DEFAULT: always pass p="simple". This is mandatory for any general listing or search.
+            - EXCEPTION: only pass p="fullWithColor" or p="full" when the user explicitly asks for complete details.
+            - WRONG: p="fullWithColor" for "give me all locations in Belgium" → use p="simple".
+            - RIGHT: p="fullWithColor" for "give me all details for locations in Belgium".
+
             STRICT TOOL SELECTION RULES:
             - ONLY call tools directly required by the user's request.
             - Call list_* tools EXACTLY ONCE per request.
@@ -207,12 +213,6 @@ async def _init_salesforce() -> None:
             description="Interacts with Salesforce to access accounts, leads, contacts, and opportunities",
             instructions="""
             You are a helpful assistant with access to Salesforce CRM data.
-
-            LINKED QUERIES:
-            - When the user asks for opportunities or cases for a named account:
-              1. Call find_accounts(query="<account name>") to get the account ID.
-              2. Pass that ID to get_opportunities(account_id="<id>") or get_cases(account_id="<id>").
-            - NEVER pass account_id=null when the user specifies an account name.
 
             STRICT TOOL SELECTION RULES:
             - ONLY call tools directly required by the user's request.

@@ -33,7 +33,7 @@ class SmartSalesRepository:
         self,
         q: str | None = None,
         s: str | None = None,
-        p: str | None = "fullWithColor",
+        p: str | None = "simple",
         d: str | None = None,
         nextPageToken: str | None = None,
         skipResultSize: bool | None = False,
@@ -64,7 +64,7 @@ class SmartSalesRepository:
 
         
 
-        log.info("list_locations params=%s", params)
+        log.info("[list_locations] params=%s", params)
 
         if "location_queryable" in _field_cache and q is not None:
             try:
