@@ -244,7 +244,11 @@ class SalesforceRepository:
         order_by: str | None = None,
         top: int = 25,
     ) -> list[SalesforceAccount]:
-        safe_extras, field_map = self._resolve_fields(extra_fields, _ACCOUNT_SELECTABLE)
+        combined = list(extra_fields or [])
+        for f in (not_null_fields or []):
+            if f in _ACCOUNT_SELECTABLE and f not in combined:
+                combined.append(f)
+        safe_extras, field_map = self._resolve_fields(combined, _ACCOUNT_SELECTABLE)
         extra_cols = (", " + ", ".join(safe_extras)) if safe_extras else ""
 
         conditions: list[str] = []
@@ -309,7 +313,11 @@ class SalesforceRepository:
         order_by: str | None = None,
         top: int = 25,
     ) -> list[SalesforceContact]:
-        safe_extras, field_map = self._resolve_fields(extra_fields, _CONTACT_SELECTABLE)
+        combined = list(extra_fields or [])
+        for f in (not_null_fields or []):
+            if f in _CONTACT_SELECTABLE and f not in combined:
+                combined.append(f)
+        safe_extras, field_map = self._resolve_fields(combined, _CONTACT_SELECTABLE)
         extra_cols = (", " + ", ".join(safe_extras)) if safe_extras else ""
 
         conditions: list[str] = []
@@ -358,7 +366,11 @@ class SalesforceRepository:
         order_by: str | None = None,
         top: int = 25,
     ) -> list[SalesforceLead]:
-        safe_extras, field_map = self._resolve_fields(extra_fields, _LEAD_SELECTABLE)
+        combined = list(extra_fields or [])
+        for f in (not_null_fields or []):
+            if f in _LEAD_SELECTABLE and f not in combined:
+                combined.append(f)
+        safe_extras, field_map = self._resolve_fields(combined, _LEAD_SELECTABLE)
         extra_cols = (", " + ", ".join(safe_extras)) if safe_extras else ""
 
         conditions: list[str] = []
@@ -471,7 +483,11 @@ class SalesforceRepository:
         order_by: str | None = None,
         top: int = 25,
     ) -> list[SalesforceCase]:
-        safe_extras, field_map = self._resolve_fields(extra_fields, _CASE_SELECTABLE)
+        combined = list(extra_fields or [])
+        for f in (not_null_fields or []):
+            if f in _CASE_SELECTABLE and f not in combined:
+                combined.append(f)
+        safe_extras, field_map = self._resolve_fields(combined, _CASE_SELECTABLE)
         extra_cols = (", " + ", ".join(safe_extras)) if safe_extras else ""
 
         conditions: list[str] = []

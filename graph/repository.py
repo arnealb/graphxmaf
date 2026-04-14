@@ -131,12 +131,23 @@ class GraphRepository(IGraphRepository):
 # people ------------------------------------------------------------------
 
     async def _find_directory_users(self, query: str, top: int = 5) -> list[EmailAddress]:
+        # Graph OData startswith is case-sensitive, so try both the raw query
+        # and its title-cased variant (e.g. "arne" → also try "Arne").
+        q = query.strip().replace("'", "''")
+        q_title = query.strip().title().replace("'", "''")
+        variants = list({q, q_title})  # deduplicate
+        display_parts = " or ".join(f"startswith(displayName,'{v}')" for v in variants)
+        mail_parts    = " or ".join(f"startswith(mail,'{v}')" for v in variants)
+        upn_parts     = " or ".join(f"startswith(userPrincipalName,'{v}')" for v in variants)
+        odata_filter  = f"{display_parts} or {mail_parts} or {upn_parts}"
+
+        log.info("[_find_directory_users] query=%r filter=%s", query, odata_filter)
+
         params = UsersRequestBuilder.UsersRequestBuilderGetQueryParameters(
             select=["displayName", "mail", "userPrincipalName"],
             top=top,
-            filter=f"startswith(displayName,'{query}') or startswith(mail,'{query}') or startswith(userPrincipalName,'{query}')"
+            filter=odata_filter,
         )
-
         cfg = UsersRequestBuilder.UsersRequestBuilderGetRequestConfiguration(
             query_parameters=params
         )
@@ -150,6 +161,7 @@ class GraphRepository(IGraphRepository):
                 if email:
                     out.append(EmailAddress(name=u.display_name, address=email))
 
+        log.info("[_find_directory_users] returned %d result(s)", len(out))
         return out
 
     async def _find_mail_people(self, query: str, top: int = 5) -> list[EmailAddress]:
@@ -193,9 +205,14 @@ class GraphRepository(IGraphRepository):
         return list(found.values())
 
     async def _find_contacts(self, query: str, top: int = 5) -> list[EmailAddress]:
-        # Escape single quotes for OData filter safety
-        safe_query = query.replace("'", "''")
-        odata_filter = f"startswith(displayName,'{safe_query}')" if query else None
+        # OData startswith is case-sensitive; also try title-cased variant.
+        safe_query  = query.strip().replace("'", "''")
+        safe_title  = query.strip().title().replace("'", "''")
+        variants    = list({safe_query, safe_title})
+        odata_filter = (
+            " or ".join(f"startswith(displayName,'{v}')" for v in variants)
+            if query else None
+        )
 
         log.info("[_find_contacts] query=%r filter=%s", query, odata_filter)
 
@@ -222,30 +239,23 @@ class GraphRepository(IGraphRepository):
         return out
 
     async def find_people(self, query: str, top: int = 5) -> list[EmailAddress]:
-        print("fetching contacts / dir / mail")
-        contacts = await self._find_contacts(query, top)
-        print("find contacts done")
+        log.info("[find_people] query=%r", query)
+        contacts  = await self._find_contacts(query, top)
         directory = await self._find_directory_users(query, top)
-        mail = await self._find_mail_people(query, top)
-        print("fetching contacts / dir / mail done")
+        mail      = await self._find_mail_people(query, top)
 
-        print(f"[find_people] query={query!r}")
-        print("  contacts :", [(p.name, p.address) for p in contacts])
-        print("  directory:", [(p.name, p.address) for p in directory])
-        print("  mail     :", [(p.name, p.address) for p in mail])
+        log.info("[find_people] contacts=%d  directory=%d  mail=%d",
+                 len(contacts), len(directory), len(mail))
 
-        merged = {}
-
+        merged: dict[str, EmailAddress] = {}
         for src in (contacts + directory + mail):
             if not src.address:
                 continue
             merged[src.address.lower()] = src
 
         merged_list = list(merged.values())[:top]
-
-        print("  merged   :", [(p.name, p.address) for p in merged_list])
-        print()
-
+        log.info("[find_people] merged=%d result(s): %s",
+                 len(merged_list), [(p.name, p.address) for p in merged_list])
         return merged_list
 
 # email ------------------------------------------------------------------
@@ -571,7 +581,7 @@ class GraphRepository(IGraphRepository):
 
     async def get_contacts(self) -> list[Contact]:
         query_params = ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters(
-            select=["id", "displayName", "emailAddresses"],
+            select=["id", "displayName", "emailAddresses", "mobilePhone", "businessPhones"],
             top=15
         )
 
@@ -587,14 +597,16 @@ class GraphRepository(IGraphRepository):
 
         if not result or not result.value:
             return []
-        
+
         for c in result.value:
             email = c.email_addresses[0].address if c.email_addresses else None
+            phone = c.mobile_phone or (c.business_phones[0] if c.business_phones else None)
             contacts.append(
                 Contact(
                     id=c.id,
                     name=c.display_name,
-                    email=email
+                    email=email,
+                    phone=phone,
                 )
             )
 
