@@ -10,6 +10,10 @@ from salesforce.models import (
     SalesforceLead,
 )
 
+import logging
+log = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s — %(message)s")
+
 _API_VERSION = "v59.0"
 
 # ---------------------------------------------------------------------------
@@ -35,6 +39,7 @@ _ACCOUNT_FILTERABLE = frozenset({
     "Name", "Industry", "Website",
     *_ACCOUNT_SELECTABLE,
 })
+_ACCOUNT_SORTABLE = frozenset({"Name", "Industry", *_ACCOUNT_SELECTABLE})
 _ACCOUNT_NUMERIC = frozenset({"NumberOfEmployees", "AnnualRevenue"})
 _ACCOUNT_NOT_NULL = frozenset({
     "Name", "Industry", "Website", "Phone", "Type",
@@ -59,6 +64,7 @@ _CONTACT_FILTERABLE = frozenset({
     "FirstName", "LastName", "Email", "Account.Name",
     *_CONTACT_SELECTABLE,
 })
+_CONTACT_SORTABLE = frozenset({"FirstName", "LastName", "Email", *_CONTACT_SELECTABLE})
 _CONTACT_NUMERIC: frozenset[str] = frozenset()
 _CONTACT_NOT_NULL = frozenset({
     "Email", "FirstName", "LastName", "Name", "Phone", "MobilePhone",
@@ -86,6 +92,7 @@ _LEAD_FILTERABLE = frozenset({
     "FirstName", "LastName", "Email", "Company", "Status", "IsConverted",
     *_LEAD_SELECTABLE,
 })
+_LEAD_SORTABLE = frozenset({"FirstName", "LastName", "Company", "Status", *_LEAD_SELECTABLE})
 _LEAD_NUMERIC = frozenset({"NumberOfEmployees", "AnnualRevenue"})
 _LEAD_BOOLEAN = frozenset({"IsConverted"})
 _LEAD_NOT_NULL = frozenset({
@@ -107,6 +114,7 @@ _OPP_FILTERABLE = frozenset({
     "Name", "StageName", "Account.Name", "IsClosed",
     *_OPP_SELECTABLE,
 })
+_OPP_SORTABLE = frozenset({"Name", "StageName", "Amount", "CloseDate", *_OPP_SELECTABLE})
 _OPP_NUMERIC = frozenset({"Probability", "Amount"})
 _OPP_BOOLEAN = frozenset({"IsClosed"})
 _OPP_NOT_NULL = frozenset({
@@ -126,6 +134,7 @@ _CASE_FILTERABLE = frozenset({
     "Subject", "Status", "Priority", "Account.Name", "IsClosed",
     *_CASE_SELECTABLE,
 })
+_CASE_SORTABLE = frozenset({"CaseNumber", "Subject", "Status", "Priority", "CreatedDate", *_CASE_SELECTABLE})
 _CASE_NUMERIC: frozenset[str] = frozenset()
 _CASE_BOOLEAN = frozenset({"IsClosed"})
 _CASE_NOT_NULL = frozenset({
@@ -158,6 +167,19 @@ class SalesforceRepository:
     @staticmethod
     def _esc(value: str) -> str:
         return value.replace("'", "\\'")
+
+    @staticmethod
+    def _parse_order_by(raw: str | None, allowed_fields: frozenset[str], default: str) -> str:
+        """Validate and build an ORDER BY clause from a 'Field [ASC|DESC]' string."""
+        log.info(f"[_parse_order_by] raw: {raw}, default: {default}")
+        if not raw:
+            return f"ORDER BY {default}"
+        parts = raw.strip().split()
+        field = parts[0]
+        direction = parts[1].upper() if len(parts) > 1 else "DESC"
+        if field not in allowed_fields or direction not in {"ASC", "DESC"}:
+            return f"ORDER BY {default}"
+        return f"ORDER BY {field} {direction}"
 
     @staticmethod
     def _resolve_fields(
@@ -219,6 +241,7 @@ class SalesforceRepository:
         extra_fields: list[str] | None = None,
         filters: dict[str, str] | None = None,
         not_null_fields: list[str] | None = None,
+        order_by: str | None = None,
         top: int = 25,
     ) -> list[SalesforceAccount]:
         safe_extras, field_map = self._resolve_fields(extra_fields, _ACCOUNT_SELECTABLE)
@@ -231,9 +254,9 @@ class SalesforceRepository:
         self._apply_filters(conditions, filters, _ACCOUNT_FILTERABLE, _ACCOUNT_NUMERIC)
 
         where = f" WHERE {' AND '.join(conditions)}" if conditions else ""
-        soql = f"SELECT Id, Name, Industry, Website{extra_cols} FROM Account{where} LIMIT {top}"
-
-        print("soql: ", soql)
+        order = self._parse_order_by(order_by, _ACCOUNT_SORTABLE, "LastModifiedDate DESC")
+        soql = f"SELECT Id, Name, Industry, Website{extra_cols} FROM Account{where} {order} LIMIT {top}"
+        log.info(f"[get_accounts] soql: {soql}")
 
         records = await self._query(soql)
         return [
@@ -264,6 +287,7 @@ class SalesforceRepository:
             f"SELECT Id, FirstName, LastName, Email, Account.Name "
             f"FROM Contact WHERE Id = '{cid}' LIMIT 1"
         )
+        log.info(f"[get_contact] soql: {soql}")
         records = await self._query(soql)
         if not records:
             return None
@@ -282,6 +306,7 @@ class SalesforceRepository:
         extra_fields: list[str] | None = None,
         filters: dict[str, str] | None = None,
         not_null_fields: list[str] | None = None,
+        order_by: str | None = None,
         top: int = 10,
     ) -> list[SalesforceContact]:
         safe_extras, field_map = self._resolve_fields(extra_fields, _CONTACT_SELECTABLE)
@@ -295,10 +320,12 @@ class SalesforceRepository:
         self._apply_filters(conditions, filters, _CONTACT_FILTERABLE, _CONTACT_NUMERIC)
 
         where = f" WHERE {' AND '.join(conditions)}" if conditions else ""
+        order = self._parse_order_by(order_by, _CONTACT_SORTABLE, "LastModifiedDate DESC")
         soql = (
             f"SELECT Id, FirstName, LastName, Email, Account.Name{extra_cols} "
-            f"FROM Contact{where} LIMIT {top}"
+            f"FROM Contact{where} {order} LIMIT {top}"
         )
+        log.info(f"[find_contacts] soql: {soql}")
         records = await self._query(soql)
         return [
             SalesforceContact(
@@ -328,6 +355,7 @@ class SalesforceRepository:
         extra_fields: list[str] | None = None,
         filters: dict[str, str] | None = None,
         not_null_fields: list[str] | None = None,
+        order_by: str | None = None,
         top: int = 25,
     ) -> list[SalesforceLead]:
         safe_extras, field_map = self._resolve_fields(extra_fields, _LEAD_SELECTABLE)
@@ -341,10 +369,12 @@ class SalesforceRepository:
         self._apply_filters(conditions, filters, _LEAD_FILTERABLE, _LEAD_NUMERIC, _LEAD_BOOLEAN)
 
         where = f" WHERE {' AND '.join(conditions)}" if conditions else ""
+        order = self._parse_order_by(order_by, _LEAD_SORTABLE, "CreatedDate DESC")
         soql = (
             f"SELECT Id, FirstName, LastName, Email, Company, Status{extra_cols} "
-            f"FROM Lead{where} LIMIT {top}"
+            f"FROM Lead{where} {order} LIMIT {top}"
         )
+        log.info(f"[find_leads] soql: {soql}")
         records = await self._query(soql)
         return [
             SalesforceLead(
@@ -379,6 +409,7 @@ class SalesforceRepository:
         extra_fields: list[str] | None = None,
         filters: dict[str, str] | None = None,
         not_null_fields: list[str] | None = None,
+        order_by: str | None = None,
         top: int = 25,
     ) -> list[SalesforceOpportunity]:
         safe_extras, field_map = self._resolve_fields(extra_fields, _OPP_SELECTABLE)
@@ -395,11 +426,12 @@ class SalesforceRepository:
         self._apply_filters(conditions, filters, _OPP_FILTERABLE, _OPP_NUMERIC, _OPP_BOOLEAN)
 
         where = f" WHERE {' AND '.join(conditions)}" if conditions else ""
+        order = self._parse_order_by(order_by, _OPP_SORTABLE, "CloseDate DESC")
         soql = (
             f"SELECT Id, Name, StageName, Amount, CloseDate, Account.Name{extra_cols} "
-            f"FROM Opportunity{where} LIMIT {top}"
+            f"FROM Opportunity{where} {order} LIMIT {top}"
         )
-
+        log.info(f"[get_opportunities] soql: {soql}")
         records = await self._query(soql)
         result = []
         for r in records:
@@ -436,6 +468,7 @@ class SalesforceRepository:
         extra_fields: list[str] | None = None,
         filters: dict[str, str] | None = None,
         not_null_fields: list[str] | None = None,
+        order_by: str | None = None,
         top: int = 25,
     ) -> list[SalesforceCase]:
         safe_extras, field_map = self._resolve_fields(extra_fields, _CASE_SELECTABLE)
@@ -450,10 +483,12 @@ class SalesforceRepository:
         self._apply_filters(conditions, filters, _CASE_FILTERABLE, _CASE_NUMERIC, _CASE_BOOLEAN)
 
         where = f" WHERE {' AND '.join(conditions)}" if conditions else ""
+        order = self._parse_order_by(order_by, _CASE_SORTABLE, "CreatedDate DESC")
         soql = (
             f"SELECT Id, CaseNumber, Subject, Status, Priority, Account.Name, CreatedDate{extra_cols} "
-            f"FROM Case{where} LIMIT {top}"
+            f"FROM Case{where} {order} LIMIT {top}"
         )
+        log.info(f"[get_cases] soql: {soql}")
 
         records = await self._query(soql)
         result = []
