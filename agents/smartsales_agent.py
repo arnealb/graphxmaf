@@ -50,6 +50,12 @@ def create_smartsales_agent(smartsales_mcp):
             - Supported operators: eq, neq, contains, ncontains, startswith, range:start,end,
               gt, gte, lt, lte, empty, nempty.
 
+            PROJECTION RULE (p parameter for list_* tools):
+            - DEFAULT: always pass p="simple". This is mandatory for any general listing or search.
+            - EXCEPTION: only pass p="fullWithColor" or p="full" when the user explicitly asks for complete details.
+            - WRONG: p="fullWithColor" for "give me all locations in Belgium" → use p="simple".
+            - RIGHT: p="fullWithColor" for "give me all details for locations in Belgium".
+
             STRICT TOOL SELECTION RULES:
             - ONLY call tools directly required by the user's request.
             - Call list_* tools EXACTLY ONCE per request. Do NOT paginate automatically —

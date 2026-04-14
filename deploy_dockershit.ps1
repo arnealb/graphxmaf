@@ -10,8 +10,11 @@
 # # Graph + orchestrator samen
 # .\deploy.ps1 -Services graph, orchestrator
 
+# # Alleen salesforce
+# .\deploy.ps1 -Services salesforce
+
 param(
-    [ValidateSet("all", "graph", "orchestrator", "smartsales")]
+    [ValidateSet("all", "graph", "orchestrator", "smartsales", "salesforce")]
     [string[]]$Services = @("all"),
 
     [string]$ACR = "graphxmafacr2",
@@ -43,6 +46,11 @@ $all = @{
         dockerfile = "Dockerfile.smartsales"
         image      = "$ACR_URL/smartsales-mcp"
         app        = "smartsales-mcp"
+    }
+    salesforce = @{
+        dockerfile = "Dockerfile.salesforce"
+        image      = "$ACR_URL/salesforce-mcp"
+        app        = "salesforce-mcp"
     }
 }
 
@@ -89,7 +97,15 @@ foreach ($svc in $targets) {
     az containerapp update --name $cfg.app --resource-group $RG --image $fullImage
     if ($LASTEXITCODE -ne 0) { Write-Error "Deploy failed for $svc"; continue }
 
-    Write-Host "$svc deployed successfully!" -ForegroundColor Green
+    # Health check — verify the new revision is ready
+    Start-Sleep -Seconds 5
+    $rev = az containerapp show --name $cfg.app --resource-group $RG --query "properties.latestRevisionName" -o tsv
+    $ready = az containerapp show --name $cfg.app --resource-group $RG --query "properties.latestReadyRevisionName" -o tsv
+    if ($rev -ne $ready) {
+        Write-Warning "${svc}: revision $rev is NOT ready (latest ready: $ready) - container may be crashing"
+    } else {
+        Write-Host "$svc deployed successfully! (revision: $rev)" -ForegroundColor Green
+    }
 }
 
 Write-Host ""

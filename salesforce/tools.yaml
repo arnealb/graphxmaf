@@ -52,6 +52,14 @@
       description: >
         Additional field filters as {SoqlField: value}, e.g. {"BillingPostalCode": "1234"}.
         Only allowed field names are applied; unknown fields are silently ignored.
+    - name: order_by
+      type: "str | None"
+      description: >
+        Sort order as "Field [ASC|DESC]", e.g. "Name ASC" or "AnnualRevenue DESC".
+        Allowed fields: Name, Industry, Website, Phone, Type, BillingStreet, BillingCity,
+        BillingState, BillingPostalCode, BillingCountry, NumberOfEmployees, AnnualRevenue,
+        Description, CreatedDate, LastModifiedDate.
+        Default: "LastModifiedDate DESC".
 
 # -------------------------------------------------------------------------------
 
@@ -108,6 +116,14 @@
       type: "dict[str, str] | None"
       description: >
         Additional field filters as {SoqlField: value}, e.g. {"Department": "Sales"}.
+    - name: order_by
+      type: "str | None"
+      description: >
+        Sort order as "Field [ASC|DESC]", e.g. "LastModifiedDate DESC" or "LastName ASC".
+        Allowed fields: FirstName, LastName, Email, Phone, MobilePhone, Title, Department,
+        MailingStreet, MailingCity, MailingState, MailingPostalCode, MailingCountry,
+        LeadSource, CreatedDate.
+        Default: "LastModifiedDate DESC".
 
 # -------------------------------------------------------------------------------
 
@@ -161,6 +177,14 @@
       description: >
         Additional field filters as {SoqlField: value}, e.g. {"Country": "Netherlands"}.
         Use {"IsConverted": "true"} for converted leads, {"IsConverted": "false"} for unconverted.
+    - name: order_by
+      type: "str | None"
+      description: >
+        Sort order as "Field [ASC|DESC]", e.g. "CreatedDate DESC" or "Company ASC".
+        Allowed fields: FirstName, LastName, Company, Status, Phone, MobilePhone, Title,
+        Industry, LeadSource, Street, City, State, PostalCode, Country, Rating,
+        NumberOfEmployees, AnnualRevenue, CreatedDate.
+        Default: "CreatedDate DESC".
 
 # -------------------------------------------------------------------------------
 
@@ -222,6 +246,13 @@
       description: >
         Additional field filters as {SoqlField: value}.
         Use {"IsClosed": "false"} for open opportunities, {"IsClosed": "true"} for closed.
+    - name: order_by
+      type: "str | None"
+      description: >
+        Sort order as "Field [ASC|DESC]", e.g. "CloseDate DESC" or "Amount ASC".
+        Allowed fields: Name, StageName, Amount, CloseDate, Probability, Type, LeadSource,
+        ForecastCategory, Description, CreatedDate, LastModifiedDate.
+        Default: "CloseDate DESC".
 
 # -------------------------------------------------------------------------------
 
@@ -281,3 +312,10 @@
         Additional field filters as {SoqlField: value}.
         Use {"IsClosed": "false"} for open cases, {"IsClosed": "true"} for closed cases.
         Example for high-priority open cases: filters={"IsClosed": "false", "Priority": "High"}.
+    - name: order_by
+      type: "str | None"
+      description: >
+        Sort order as "Field [ASC|DESC]", e.g. "CreatedDate DESC" or "Priority ASC".
+        Allowed fields: CaseNumber, Subject, Status, Priority, CreatedDate, Description,
+        Origin, Type, Reason, ClosedDate, LastModifiedDate.
+        Default: "CreatedDate DESC".

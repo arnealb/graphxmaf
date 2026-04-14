@@ -106,7 +106,7 @@ async def _resolve_session(session_token: str) -> SmartSalesCredentials:
     """
     tokens = await _token_store.get(session_token)
     if tokens is None:
-        raise RuntimeError("Session not found — restart the server to re-authenticate.")
+        raise RuntimeError("SESSION_ERROR: session not found")
 
     if tokens.is_expired():
         log.info("SmartSales token expired — re-authenticating …")

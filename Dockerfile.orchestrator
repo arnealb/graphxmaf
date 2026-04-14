@@ -7,6 +7,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY config.cfg .
 COPY orchestrator/ orchestrator/
+COPY agents/ agents/
+COPY graph/ graph/
 
 EXPOSE 8003
 

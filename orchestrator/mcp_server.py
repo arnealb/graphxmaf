@@ -30,6 +30,10 @@ from starlette.responses import JSONResponse, RedirectResponse, Response
 from agent_framework import Agent, FunctionTool, MCPStreamableHTTPTool
 from agent_framework.azure import AzureOpenAIChatClient
 
+from agents.graph_agent import create_graph_agent
+from agents.salesforce_agent import create_salesforce_agent
+from agents.smartsales_agent import create_smartsales_agent
+
 load_dotenv()
 log = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s — %(message)s")
@@ -127,48 +131,7 @@ async def _init_smartsales() -> None:
         ss_http = httpx.AsyncClient(headers={"Authorization": f"Bearer {session_token}"})
         ss_mcp = MCPStreamableHTTPTool(name="smartsales", url=_SS_MCP_URL, http_client=ss_http)
 
-        _ss_agent = Agent(
-            client=_aoai_client(),
-            name="SmartSalesAgent",
-            description="Interacts with SmartSales to access locations, catalog items, and orders",
-            instructions="""
-            You are a helpful assistant with access to SmartSales data.
-
-            AVAILABLE TOOL GROUPS:
-
-            Locations:
-            - get_location: retrieve a single location by uid.
-            - list_locations: query locations (params: q, s, p, nextPageToken).
-            - list_displayable_fields / list_queryable_fields / list_sortable_fields: field metadata.
-
-            Catalog:
-            - get_catalog_item: retrieve a single catalog item by uid.
-            - get_catalog_group: retrieve a single catalog group by uid.
-            - list_catalog_items: query catalog items (params: q, s, p, nextPageToken).
-
-            Orders:
-            - get_order: retrieve a single order by uid.
-            - list_orders: query orders (params: q, s, p, nextPageToken).
-
-            QUERY SYNTAX (q parameter):
-            - Always a JSON string with operator-prefixed values.
-            - e.g. '{"city":"eq:Brussels"}' or '{"country":"eq:Belgium","name":"contains:acme"}'
-            - Supported operators: eq, neq, contains, ncontains, startswith, range:start,end,
-              gt, gte, lt, lte, empty, nempty.
-
-            STRICT TOOL SELECTION RULES:
-            - ONLY call tools directly required by the user's request.
-            - Call list_* tools EXACTLY ONCE per request.
-            - If a tool returns sufficient data, stop and answer immediately.
-
-            OUTPUT
-            - Return the exact JSON object or array that the tool returned. No prose, no explanation.
-            - If mFultiple tools were called, return a JSON array:
-              [{"tool": "<name>", "result": <result>}, ...]
-            - If only one tool was called, return its result directly.
-            """,
-            tools=[ss_mcp],
-        )
+        _ss_agent = create_smartsales_agent(ss_mcp)
         log.warning("[init_smartsales] SmartSalesAgent created successfully")
     except Exception as e:
         log.warning("[init_smartsales] EXCEPTION: %s", e)
@@ -201,25 +164,7 @@ async def _init_salesforce() -> None:
         sf_http = httpx.AsyncClient(headers={"Authorization": f"Bearer {session_token}"})
         sf_mcp = MCPStreamableHTTPTool(name="salesforce", url=_SF_MCP_URL, http_client=sf_http)
 
-        _sf_agent = Agent(
-            client=_aoai_client(),
-            name="SalesforceAgent",
-            description="Interacts with Salesforce to access accounts, leads, contacts, and opportunities",
-            instructions="""
-            You are a helpful assistant with access to Salesforce CRM data.
-
-            STRICT TOOL SELECTION RULES:
-            - ONLY call tools directly required by the user's request.
-            - If a tool returns sufficient data, stop and answer immediately.
-
-            OUTPUT
-            - Return the exact JSON object or array that the tool returned. No prose, no explanation.
-            - If multiple tools were called, return a JSON array:
-              [{"tool": "<name>", "result": <result>}, ...]
-            - If only one tool was called, return its result directly.
-            """,
-            tools=[sf_mcp],
-        )
+        _sf_agent = create_salesforce_agent(sf_mcp)
         log.warning("[init_salesforce] SalesforceAgent created successfully")
     except Exception as e:
         log.warning("[init_salesforce] EXCEPTION: %s", e)
@@ -232,46 +177,7 @@ def _build_graph_agent(graph_token: str) -> Agent:
     """Create a GraphAgent with a fresh OBO-derived token for this request."""
     graph_http = httpx.AsyncClient(headers={"Authorization": f"Bearer {graph_token}"})
     graph_mcp = MCPStreamableHTTPTool(name="graph", url=_GRAPH_MCP_URL, http_client=graph_http)
-
-    return Agent(
-        client=_aoai_client(),
-        name="GraphAgent",
-        description="Interacts with Microsoft Graph to access organisational data",
-        instructions="""
-            You are a helpful assistant with access to the user's Microsoft 365 data
-            via the Microsoft Graph API.
-
-            Available tools:
-            - whoami: identify the authenticated user
-            - findpeople: resolve a person's name to one or more email addresses
-            - list_email: list the 25 most recent inbox emails
-            - search_email: search emails by sender, subject, or date range
-            - read_email: read the full body of a specific email by its ID
-            - search_files: search for files and folders in OneDrive
-            - read_file: read the text content of a single OneDrive file by its ID
-            - read_multiple_files: read text contents of multiple OneDrive files at once
-            - list_contacts: list contacts
-            - list_calendar: list upcoming and recent calendar events
-            - search_calendar: search calendar events by subject, location, attendee, or date range
-
-            STRICT TOOL SELECTION RULES:
-            - ONLY call tools directly required by the user's current request.
-            - NEVER call a tool speculatively.
-            - If a tool returns sufficient data, stop and answer.
-
-            PERSON RESOLUTION
-            - Whenever the user mentions a person, call findpeople first.
-            - Never guess or fabricate an email address.
-
-            OUTPUT
-            - Return the exact JSON object or array that the tool returned. No prose, no explanation.
-            - If multiple tools were called, return:
-              [{"tool": "<name>", "result": <result>}, ...]
-            - If only one tool was called, return its result directly.
-            - read_file / read_multiple_files return plain text — return that as-is.
-        """,
-        tools=[graph_mcp],
-    )
+    return create_graph_agent(graph_mcp)
 
 
 # ── Orchestrator agent ────────────────────────────────────────────────────────
@@ -296,9 +202,13 @@ def _build_orchestrator(
         global _ss_agent
         response = await ss_agent.run(query)
         result = response.text or ""
-        if "Session not found" in result:
-            _ss_agent = None  # force re-init op volgende request
-            return "(SmartSales session expired — retrying on next request)"
+        if "SESSION_ERROR:" in result:
+            _ss_agent = None
+            await _init_smartsales()
+            if _ss_agent is not None:
+                response = await _ss_agent.run(query)
+                return response.text or ""
+            return "(SmartSales kon niet opnieuw worden geïnitialiseerd)"
         return result
 
     async def ask_salesforce_agent(
@@ -307,7 +217,7 @@ def _build_orchestrator(
         global _sf_agent
         response = await sf_agent.run(query)
         result = response.text or ""
-        if "Session not found" in result or "Re-authenticate" in result:
+        if "SESSION_ERROR:" in result:
             _sf_agent = None
             return "(Salesforce session expired — retrying on next request)"
         return result
