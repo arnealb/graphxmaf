@@ -203,14 +203,13 @@ async def _resolve_session(session_token: str) -> SalesforceCredentials:
     """
     tokens = await _token_store.get(session_token)
     if tokens is None:
-        raise RuntimeError(f"Session not found. Re-authenticate at {_RESOURCE_URI}/auth/salesforce/login")
+        raise RuntimeError(f"SESSION_ERROR: session not found. Re-authenticate at {_RESOURCE_URI}/auth/salesforce/login")
 
     if tokens.is_expired():
         if not tokens.refresh_token:
             await _token_store.delete(session_token)
             raise RuntimeError(
-                "Session expired and no refresh token available. "
-                f"Re-authenticate at {_RESOURCE_URI}/auth/salesforce/login"
+                f"SESSION_ERROR: session expired, no refresh token. Re-authenticate at {_RESOURCE_URI}/auth/salesforce/login"
             )
         try:
             refreshed = await refresh_access_token(
@@ -232,8 +231,7 @@ async def _resolve_session(session_token: str) -> SalesforceCredentials:
         except SalesforceAuthError as exc:
             await _token_store.delete(session_token)
             raise RuntimeError(
-                f"Token refresh failed (session invalidated): {exc}. "
-                f"Re-authenticate at {_RESOURCE_URI}/auth/salesforce/login"
+                f"SESSION_ERROR: token refresh failed: {exc}. Re-authenticate at {_RESOURCE_URI}/auth/salesforce/login"
             ) from exc
 
     return SalesforceCredentials(

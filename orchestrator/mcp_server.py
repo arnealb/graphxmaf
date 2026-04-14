@@ -306,7 +306,7 @@ def _build_orchestrator(
         global _ss_agent
         response = await ss_agent.run(query)
         result = response.text or ""
-        if "Session not found" in result:
+        if "SESSION_ERROR:" in result:
             _ss_agent = None
             await _init_smartsales()
             if _ss_agent is not None:
@@ -321,7 +321,7 @@ def _build_orchestrator(
         global _sf_agent
         response = await sf_agent.run(query)
         result = response.text or ""
-        if "Session not found" in result or "Re-authenticate" in result:
+        if "SESSION_ERROR:" in result:
             _sf_agent = None
             return "(Salesforce session expired — retrying on next request)"
         return result
