@@ -41,6 +41,7 @@ async def _whoami(repo: GraphRepository, **kwargs):
 
 
 async def _find_people(repo: GraphRepository, name: str, **kwargs):
+    log.info("[findpeople] tool called with name=%r", name)
     return await repo.find_people(name)
 
 

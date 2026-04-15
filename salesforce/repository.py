@@ -15,6 +15,7 @@ log = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s — %(message)s")
 
 _API_VERSION = "v59.0"
+_SF_TIMEOUT = 30.0  # seconds; Salesforce API calls exceeding this are cancelled
 
 # ---------------------------------------------------------------------------
 # Per-object field allowlists
@@ -159,7 +160,7 @@ class SalesforceRepository:
         # Docs — SOQL syntax reference:
         #   https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql.htm
         url = f"{self.instance_url}/services/data/{_API_VERSION}/query"
-        async with httpx.AsyncClient(timeout=30) as client:
+        async with httpx.AsyncClient(timeout=_SF_TIMEOUT) as client:
             r = await client.get(url, params={"q": soql}, headers=self._headers())
             r.raise_for_status()
             return r.json().get("records", [])
@@ -244,7 +245,11 @@ class SalesforceRepository:
         order_by: str | None = None,
         top: int = 25,
     ) -> list[SalesforceAccount]:
-        safe_extras, field_map = self._resolve_fields(extra_fields, _ACCOUNT_SELECTABLE)
+        combined = list(extra_fields or [])
+        for f in (not_null_fields or []):
+            if f in _ACCOUNT_SELECTABLE and f not in combined:
+                combined.append(f)
+        safe_extras, field_map = self._resolve_fields(combined, _ACCOUNT_SELECTABLE)
         extra_cols = (", " + ", ".join(safe_extras)) if safe_extras else ""
 
         conditions: list[str] = []
@@ -309,7 +314,11 @@ class SalesforceRepository:
         order_by: str | None = None,
         top: int = 25,
     ) -> list[SalesforceContact]:
-        safe_extras, field_map = self._resolve_fields(extra_fields, _CONTACT_SELECTABLE)
+        combined = list(extra_fields or [])
+        for f in (not_null_fields or []):
+            if f in _CONTACT_SELECTABLE and f not in combined:
+                combined.append(f)
+        safe_extras, field_map = self._resolve_fields(combined, _CONTACT_SELECTABLE)
         extra_cols = (", " + ", ".join(safe_extras)) if safe_extras else ""
 
         conditions: list[str] = []
@@ -358,7 +367,11 @@ class SalesforceRepository:
         order_by: str | None = None,
         top: int = 25,
     ) -> list[SalesforceLead]:
-        safe_extras, field_map = self._resolve_fields(extra_fields, _LEAD_SELECTABLE)
+        combined = list(extra_fields or [])
+        for f in (not_null_fields or []):
+            if f in _LEAD_SELECTABLE and f not in combined:
+                combined.append(f)
+        safe_extras, field_map = self._resolve_fields(combined, _LEAD_SELECTABLE)
         extra_cols = (", " + ", ".join(safe_extras)) if safe_extras else ""
 
         conditions: list[str] = []
@@ -471,7 +484,11 @@ class SalesforceRepository:
         order_by: str | None = None,
         top: int = 25,
     ) -> list[SalesforceCase]:
-        safe_extras, field_map = self._resolve_fields(extra_fields, _CASE_SELECTABLE)
+        combined = list(extra_fields or [])
+        for f in (not_null_fields or []):
+            if f in _CASE_SELECTABLE and f not in combined:
+                combined.append(f)
+        safe_extras, field_map = self._resolve_fields(combined, _CASE_SELECTABLE)
         extra_cols = (", " + ", ".join(safe_extras)) if safe_extras else ""
 
         conditions: list[str] = []

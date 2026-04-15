@@ -6,6 +6,7 @@ import httpx
 log = logging.getLogger("smartsales.repository")
 
 _BASE_URL = "https://proxy-smartsales.easi.net/proxy/rest"
+_SS_TIMEOUT = 30.0  # seconds; SmartSales API calls exceeding this are cancelled
 
 _field_cache: dict[str, list] = {}
 
@@ -17,16 +18,20 @@ class SmartSalesRepository:
     def _headers(self) -> dict:
         return {"Authorization": f"Bearer {self.access_token}"}
 
+    async def _get(self, url: str, params: dict | None = None) -> httpx.Response:
+        """Make a GET request with a consistent timeout. Raises on HTTP errors."""
+        async with httpx.AsyncClient(timeout=_SS_TIMEOUT) as client:
+            r = await client.get(url, params=params, headers=self._headers())
+            r.raise_for_status()
+        return r
+
     # ------------------------------------------------------------------
     # Locations
     # ------------------------------------------------------------------
 
     async def get_location(self, uid: str) -> dict:
         """Retrieve a single location by its uid."""
-        url = f"{_BASE_URL}/api/v3/location/{uid}"
-        async with httpx.AsyncClient(timeout=30) as client:
-            r = await client.get(url, headers=self._headers())
-            r.raise_for_status()
+        r = await self._get(f"{_BASE_URL}/api/v3/location/{uid}")
         return r.json()
 
     async def list_locations(
@@ -62,7 +67,7 @@ class SmartSalesRepository:
         if skipResultSize is not None:
             params["skipResultSize"] = str(skipResultSize).lower()
 
-        
+
 
         log.info("[list_locations] params=%s", params)
 
@@ -82,11 +87,7 @@ class SmartSalesRepository:
             if sort_field not in valid_sort:
                 return {"error": f"Unknown sort field: '{sort_field}'. Valid fields: {sorted(valid_sort)}"}
 
-        url = f"{_BASE_URL}/api/v3/location/list"
-        async with httpx.AsyncClient(timeout=30) as client:
-            r = await client.get(url, params=params, headers=self._headers())
-            r.raise_for_status()
-
+        r = await self._get(f"{_BASE_URL}/api/v3/location/list", params)
         data = r.json()
         return {
             "locations": data.get("entries") or [],
@@ -98,30 +99,21 @@ class SmartSalesRepository:
     async def list_displayable_fields(self) -> list:
         """Return the fields that can be displayed in a location list view."""
         if "location_displayable" not in _field_cache:
-            url = f"{_BASE_URL}/api/v3/location/list/displayableFields"
-            async with httpx.AsyncClient(timeout=30) as client:
-                r = await client.get(url, headers=self._headers())
-                r.raise_for_status()
+            r = await self._get(f"{_BASE_URL}/api/v3/location/list/displayableFields")
             _field_cache["location_displayable"] = r.json()
         return _field_cache["location_displayable"]
 
     async def list_queryable_fields(self) -> list:
         """Return the fields that can be used as filters in list_locations (q param)."""
         if "location_queryable" not in _field_cache:
-            url = f"{_BASE_URL}/api/v3/location/list/queryableFields"
-            async with httpx.AsyncClient(timeout=30) as client:
-                r = await client.get(url, headers=self._headers())
-                r.raise_for_status()
+            r = await self._get(f"{_BASE_URL}/api/v3/location/list/queryableFields")
             _field_cache["location_queryable"] = r.json()
         return _field_cache["location_queryable"]
 
     async def list_sortable_fields(self) -> list:
         """Return the fields that can be used for sorting in list_locations (s param)."""
         if "location_sortable" not in _field_cache:
-            url = f"{_BASE_URL}/api/v3/location/list/sortableFields"
-            async with httpx.AsyncClient(timeout=30) as client:
-                r = await client.get(url, headers=self._headers())
-                r.raise_for_status()
+            r = await self._get(f"{_BASE_URL}/api/v3/location/list/sortableFields")
             _field_cache["location_sortable"] = r.json()
         return _field_cache["location_sortable"]
 
@@ -157,18 +149,12 @@ class SmartSalesRepository:
 
     async def get_catalog_item(self, uid: str) -> dict:
         """Retrieve a single catalog item by its uid."""
-        url = f"{_BASE_URL}/api/v3/catalog/item/{uid}"
-        async with httpx.AsyncClient(timeout=30) as client:
-            r = await client.get(url, headers=self._headers())
-            r.raise_for_status()
+        r = await self._get(f"{_BASE_URL}/api/v3/catalog/item/{uid}")
         return r.json()
 
     async def get_catalog_group(self, uid: str) -> dict:
         """Retrieve a single catalog group by its uid."""
-        url = f"{_BASE_URL}/api/v3/catalog/group/{uid}"
-        async with httpx.AsyncClient(timeout=30) as client:
-            r = await client.get(url, headers=self._headers())
-            r.raise_for_status()
+        r = await self._get(f"{_BASE_URL}/api/v3/catalog/group/{uid}")
         return r.json()
 
     async def list_catalog_items(
@@ -217,11 +203,7 @@ class SmartSalesRepository:
             if sort_field not in valid_sort:
                 return {"error": f"Unknown sort field: '{sort_field}'. Valid fields: {sorted(valid_sort)}"}
 
-        url = f"{_BASE_URL}/api/v3/catalog/list"
-        async with httpx.AsyncClient(timeout=30) as client:
-            r = await client.get(url, params=params, headers=self._headers())
-            r.raise_for_status()
-
+        r = await self._get(f"{_BASE_URL}/api/v3/catalog/list", params)
         data = r.json()
         return {
             "items": data.get("entries") or [],
@@ -232,30 +214,21 @@ class SmartSalesRepository:
     async def list_catalog_displayable_fields(self) -> list:
         """Return the fields that can be displayed in a catalog item list view."""
         if "catalog_displayable" not in _field_cache:
-            url = f"{_BASE_URL}/api/v3/catalog/list/displayableFields"
-            async with httpx.AsyncClient(timeout=30) as client:
-                r = await client.get(url, headers=self._headers())
-                r.raise_for_status()
+            r = await self._get(f"{_BASE_URL}/api/v3/catalog/list/displayableFields")
             _field_cache["catalog_displayable"] = r.json()
         return _field_cache["catalog_displayable"]
 
     async def list_catalog_queryable_fields(self) -> list:
         """Return the fields that can be used as filters in list_catalog_items (q param)."""
         if "catalog_queryable" not in _field_cache:
-            url = f"{_BASE_URL}/api/v3/catalog/list/queryableFields"
-            async with httpx.AsyncClient(timeout=30) as client:
-                r = await client.get(url, headers=self._headers())
-                r.raise_for_status()
+            r = await self._get(f"{_BASE_URL}/api/v3/catalog/list/queryableFields")
             _field_cache["catalog_queryable"] = r.json()
         return _field_cache["catalog_queryable"]
 
     async def list_catalog_sortable_fields(self) -> list:
         """Return the fields that can be used for sorting in list_catalog_items (s param)."""
         if "catalog_sortable" not in _field_cache:
-            url = f"{_BASE_URL}/api/v3/catalog/list/sortableFields"
-            async with httpx.AsyncClient(timeout=30) as client:
-                r = await client.get(url, headers=self._headers())
-                r.raise_for_status()
+            r = await self._get(f"{_BASE_URL}/api/v3/catalog/list/sortableFields")
             _field_cache["catalog_sortable"] = r.json()
         return _field_cache["catalog_sortable"]
 
@@ -265,10 +238,7 @@ class SmartSalesRepository:
 
     async def get_order(self, uid: str) -> dict:
         """Retrieve a single order by its uid."""
-        url = f"{_BASE_URL}/api/v3/order/{uid}"
-        async with httpx.AsyncClient(timeout=30) as client:
-            r = await client.get(url, headers=self._headers())
-            r.raise_for_status()
+        r = await self._get(f"{_BASE_URL}/api/v3/order/{uid}")
         return r.json()
 
     async def list_orders(
@@ -317,11 +287,7 @@ class SmartSalesRepository:
             if sort_field not in valid_sort:
                 return {"error": f"Unknown sort field: '{sort_field}'. Valid fields: {sorted(valid_sort)}"}
 
-        url = f"{_BASE_URL}/api/v3/order/list"
-        async with httpx.AsyncClient(timeout=30) as client:
-            r = await client.get(url, params=params, headers=self._headers())
-            r.raise_for_status()
-
+        r = await self._get(f"{_BASE_URL}/api/v3/order/list", params)
         data = r.json()
         return {
             "orders": data.get("entries") or [],
@@ -331,10 +297,7 @@ class SmartSalesRepository:
 
     async def get_order_configuration(self) -> dict:
         """Retrieve the global order configuration."""
-        url = f"{_BASE_URL}/api/v3/order/configuration"
-        async with httpx.AsyncClient(timeout=30) as client:
-            r = await client.get(url, headers=self._headers())
-            r.raise_for_status()
+        r = await self._get(f"{_BASE_URL}/api/v3/order/configuration")
         return r.json()
 
     async def list_approbation_statuses(
@@ -357,11 +320,7 @@ class SmartSalesRepository:
 
         log.info("list_approbation_statuses params=%s", params)
 
-        url = f"{_BASE_URL}/api/v3/order/approbation/status/list"
-        async with httpx.AsyncClient(timeout=30) as client:
-            r = await client.get(url, params=params, headers=self._headers())
-            r.raise_for_status()
-
+        r = await self._get(f"{_BASE_URL}/api/v3/order/approbation/status/list", params)
         data = r.json()
         return {
             "statuses": data.get("entries") or [],
@@ -371,40 +330,26 @@ class SmartSalesRepository:
 
     async def get_approbation_status(self, uid: str) -> dict:
         """Retrieve a single approbation status by its uid."""
-        url = f"{_BASE_URL}/api/v3/order/approbation/status/{uid}"
-        async with httpx.AsyncClient(timeout=30) as client:
-            r = await client.get(url, headers=self._headers())
-            r.raise_for_status()
+        r = await self._get(f"{_BASE_URL}/api/v3/order/approbation/status/{uid}")
         return r.json()
 
     async def list_order_displayable_fields(self) -> list:
         """Return the fields that can be displayed in an order list view."""
         if "order_displayable" not in _field_cache:
-            url = f"{_BASE_URL}/api/v3/order/list/displayableFields"
-            async with httpx.AsyncClient(timeout=30) as client:
-                r = await client.get(url, headers=self._headers())
-                r.raise_for_status()
+            r = await self._get(f"{_BASE_URL}/api/v3/order/list/displayableFields")
             _field_cache["order_displayable"] = r.json()
         return _field_cache["order_displayable"]
 
     async def list_order_queryable_fields(self) -> list:
         """Return the fields that can be used as filters in list_orders (q param)."""
         if "order_queryable" not in _field_cache:
-            url = f"{_BASE_URL}/api/v3/order/list/queryableFields"
-            async with httpx.AsyncClient(timeout=30) as client:
-                r = await client.get(url, headers=self._headers())
-                r.raise_for_status()
+            r = await self._get(f"{_BASE_URL}/api/v3/order/list/queryableFields")
             _field_cache["order_queryable"] = r.json()
         return _field_cache["order_queryable"]
 
     async def list_order_sortable_fields(self) -> list:
         """Return the fields that can be used for sorting in list_orders (s param)."""
         if "order_sortable" not in _field_cache:
-            url = f"{_BASE_URL}/api/v3/order/list/sortableFields"
-            async with httpx.AsyncClient(timeout=30) as client:
-                r = await client.get(url, headers=self._headers())
-                r.raise_for_status()
+            r = await self._get(f"{_BASE_URL}/api/v3/order/list/sortableFields")
             _field_cache["order_sortable"] = r.json()
         return _field_cache["order_sortable"]
-
-

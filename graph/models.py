@@ -37,6 +37,7 @@ class Contact(BaseModel):
     id: str
     name: str
     email: str | None
+    phone: str | None = None
 
 
 class CalendarEvent(BaseModel):

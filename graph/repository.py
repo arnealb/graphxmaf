@@ -52,6 +52,7 @@ log = logging.getLogger("graph")
 log.setLevel(logging.INFO)
 
 _MAX_EMAIL_CHARS = 8_000
+_GRAPH_TIMEOUT = 30.0  # seconds; Graph SDK calls exceeding this are cancelled
 
 
 def _strip_html(raw: str) -> str:
@@ -97,6 +98,13 @@ class GraphRepository(IGraphRepository):
             graph_scopes,
         )
 
+    async def _graph_call(self, coro, timeout: float = _GRAPH_TIMEOUT):
+        """Await a Graph SDK coroutine with a timeout. Raises TimeoutError on expiry."""
+        try:
+            return await asyncio.wait_for(coro, timeout=timeout)
+        except asyncio.TimeoutError:
+            raise TimeoutError(f"Graph API call timed out after {timeout}s")
+
     def get_user_token(self):
         scopes = self.settings["graphUserScopes"].split(" ")
         token = self.device_code_credential.get_token(*scopes)
@@ -121,9 +129,9 @@ class GraphRepository(IGraphRepository):
             )
         )
 
-        user = await self.user_client.me.get(
+        user = await self._graph_call(self.user_client.me.get(
             request_configuration=request_config
-        )
+        ))
 
         return user
 
@@ -131,17 +139,28 @@ class GraphRepository(IGraphRepository):
 # people ------------------------------------------------------------------
 
     async def _find_directory_users(self, query: str, top: int = 5) -> list[EmailAddress]:
+        # Graph OData startswith is case-sensitive, so try both the raw query
+        # and its title-cased variant (e.g. "arne" → also try "Arne").
+        q = query.strip().replace("'", "''")
+        q_title = query.strip().title().replace("'", "''")
+        variants = list({q, q_title})  # deduplicate
+        display_parts = " or ".join(f"startswith(displayName,'{v}')" for v in variants)
+        mail_parts    = " or ".join(f"startswith(mail,'{v}')" for v in variants)
+        upn_parts     = " or ".join(f"startswith(userPrincipalName,'{v}')" for v in variants)
+        odata_filter  = f"{display_parts} or {mail_parts} or {upn_parts}"
+
+        log.info("[_find_directory_users] query=%r filter=%s", query, odata_filter)
+
         params = UsersRequestBuilder.UsersRequestBuilderGetQueryParameters(
             select=["displayName", "mail", "userPrincipalName"],
             top=top,
-            filter=f"startswith(displayName,'{query}') or startswith(mail,'{query}') or startswith(userPrincipalName,'{query}')"
+            filter=odata_filter,
         )
-
         cfg = UsersRequestBuilder.UsersRequestBuilderGetRequestConfiguration(
             query_parameters=params
         )
 
-        users = await self.user_client.users.get(request_configuration=cfg)
+        users = await self._graph_call(self.user_client.users.get(request_configuration=cfg))
 
         out = []
         if users and users.value:
@@ -150,6 +169,7 @@ class GraphRepository(IGraphRepository):
                 if email:
                     out.append(EmailAddress(name=u.display_name, address=email))
 
+        log.info("[_find_directory_users] returned %d result(s)", len(out))
         return out
 
     async def _find_mail_people(self, query: str, top: int = 5) -> list[EmailAddress]:
@@ -163,7 +183,7 @@ class GraphRepository(IGraphRepository):
             query_parameters=params
         )
 
-        res = await self.user_client.me.messages.get(request_configuration=cfg)
+        res = await self._graph_call(self.user_client.me.messages.get(request_configuration=cfg))
 
         found = {}
 
@@ -193,9 +213,14 @@ class GraphRepository(IGraphRepository):
         return list(found.values())
 
     async def _find_contacts(self, query: str, top: int = 5) -> list[EmailAddress]:
-        # Escape single quotes for OData filter safety
-        safe_query = query.replace("'", "''")
-        odata_filter = f"startswith(displayName,'{safe_query}')" if query else None
+        # OData startswith is case-sensitive; also try title-cased variant.
+        safe_query  = query.strip().replace("'", "''")
+        safe_title  = query.strip().title().replace("'", "''")
+        variants    = list({safe_query, safe_title})
+        odata_filter = (
+            " or ".join(f"startswith(displayName,'{v}')" for v in variants)
+            if query else None
+        )
 
         log.info("[_find_contacts] query=%r filter=%s", query, odata_filter)
 
@@ -210,7 +235,7 @@ class GraphRepository(IGraphRepository):
             query_parameters=params
         )
 
-        res = await self.user_client.me.contacts.get(request_configuration=cfg)
+        res = await self._graph_call(self.user_client.me.contacts.get(request_configuration=cfg))
 
         out = []
         if res and res.value:
@@ -222,30 +247,23 @@ class GraphRepository(IGraphRepository):
         return out
 
     async def find_people(self, query: str, top: int = 5) -> list[EmailAddress]:
-        print("fetching contacts / dir / mail")
-        contacts = await self._find_contacts(query, top)
-        print("find contacts done")
+        log.info("[find_people] query=%r", query)
+        contacts  = await self._find_contacts(query, top)
         directory = await self._find_directory_users(query, top)
-        mail = await self._find_mail_people(query, top)
-        print("fetching contacts / dir / mail done")
+        mail      = await self._find_mail_people(query, top)
 
-        print(f"[find_people] query={query!r}")
-        print("  contacts :", [(p.name, p.address) for p in contacts])
-        print("  directory:", [(p.name, p.address) for p in directory])
-        print("  mail     :", [(p.name, p.address) for p in mail])
+        log.info("[find_people] contacts=%d  directory=%d  mail=%d",
+                 len(contacts), len(directory), len(mail))
 
-        merged = {}
-
+        merged: dict[str, EmailAddress] = {}
         for src in (contacts + directory + mail):
             if not src.address:
                 continue
             merged[src.address.lower()] = src
 
         merged_list = list(merged.values())[:top]
-
-        print("  merged   :", [(p.name, p.address) for p in merged_list])
-        print()
-
+        log.info("[find_people] merged=%d result(s): %s",
+                 len(merged_list), [(p.name, p.address) for p in merged_list])
         return merged_list
 
 # email ------------------------------------------------------------------
@@ -260,8 +278,10 @@ class GraphRepository(IGraphRepository):
             query_parameters=query_params
         )
 
-        messages = await self.user_client.me.mail_folders.by_mail_folder_id("inbox").messages.get(
-            request_configuration=request_config
+        messages = await self._graph_call(
+            self.user_client.me.mail_folders.by_mail_folder_id("inbox").messages.get(
+                request_configuration=request_config
+            )
         )
 
         emails: List[Email] = []
@@ -312,8 +332,10 @@ class GraphRepository(IGraphRepository):
         request_config.headers.try_add("Prefer", 'outlook.body-content-type="text"')
 
 
-        m = await self.user_client.me.messages.by_message_id(message_id).get(
-            request_configuration=request_config
+        m = await self._graph_call(
+            self.user_client.me.messages.by_message_id(message_id).get(
+                request_configuration=request_config
+            )
         )
 
         if not m:
@@ -399,7 +421,7 @@ class GraphRepository(IGraphRepository):
             query_parameters=qp
         )
 
-        res = await self.user_client.me.messages.get(request_configuration=cfg)
+        res = await self._graph_call(self.user_client.me.messages.get(request_configuration=cfg))
 
         out: list[Email] = []
         for m in (res.value or []) if res else []:
@@ -446,12 +468,14 @@ class GraphRepository(IGraphRepository):
             query_parameters=query_params
         )
 
-        drive = await self.user_client.me.drive.get()
+        drive = await self._graph_call(self.user_client.me.drive.get())
 
-        items = await self.user_client.drives.by_drive_id(
-            drive.id
-        ).items.by_drive_item_id("root").children.get(
-            request_configuration=request_config
+        items = await self._graph_call(
+            self.user_client.drives.by_drive_id(
+                drive.id
+            ).items.by_drive_item_id("root").children.get(
+                request_configuration=request_config
+            )
         )
 
         files: list[File] = []
@@ -515,10 +539,10 @@ class GraphRepository(IGraphRepository):
 
     async def get_file_content(self, file_id: str, drive_id: str | None = None) -> bytes:
         if drive_id is None:
-            drive = await self.user_client.me.drive.get()
+            drive = await self._graph_call(self.user_client.me.drive.get())
             drive_id = drive.id
 
-        content = await (
+        content = await self._graph_call(
             self.user_client.drives.by_drive_id(drive_id)
             .items.by_drive_item_id(file_id)
             .content.get()
@@ -527,7 +551,7 @@ class GraphRepository(IGraphRepository):
 
     async def search_drive_items_sdk(self, query: str, top: int = 25, drive_id: str | None = None) -> list[File]:
         if drive_id is None:
-            drive = await self.user_client.me.drive.get()
+            drive = await self._graph_call(self.user_client.me.drive.get())
             drive_id = drive.id
 
         qp = SearchWithQRequestBuilder.SearchWithQRequestBuilderGetQueryParameters(
@@ -541,7 +565,7 @@ class GraphRepository(IGraphRepository):
             query_parameters=qp
         )
 
-        res = await (
+        res = await self._graph_call(
             self.user_client.drives.by_drive_id(drive_id)
             .items.by_drive_item_id("root")
             .search_with_q(query)
@@ -571,7 +595,7 @@ class GraphRepository(IGraphRepository):
 
     async def get_contacts(self) -> list[Contact]:
         query_params = ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters(
-            select=["id", "displayName", "emailAddresses"],
+            select=["id", "displayName", "emailAddresses", "mobilePhone", "businessPhones"],
             top=15
         )
 
@@ -579,22 +603,24 @@ class GraphRepository(IGraphRepository):
             query_parameters=query_params
         )
 
-        result = await self.user_client.me.contacts.get(
+        result = await self._graph_call(self.user_client.me.contacts.get(
             request_configuration=request_config
-        )
+        ))
 
         contacts: list[Contact] = []
 
         if not result or not result.value:
             return []
-        
+
         for c in result.value:
             email = c.email_addresses[0].address if c.email_addresses else None
+            phone = c.mobile_phone or (c.business_phones[0] if c.business_phones else None)
             contacts.append(
                 Contact(
                     id=c.id,
                     name=c.display_name,
-                    email=email
+                    email=email,
+                    phone=phone,
                 )
             )
 
@@ -616,9 +642,9 @@ class GraphRepository(IGraphRepository):
             query_parameters=query_params
         )
 
-        result = await self.user_client.me.events.get(
+        result = await self._graph_call(self.user_client.me.events.get(
             request_configuration=request_config
-        )
+        ))
 
         events: list[CalendarEvent] = []
         if not result or not result.value:
@@ -643,9 +669,9 @@ class GraphRepository(IGraphRepository):
             query_parameters=query_params
         )
 
-        result = await self.user_client.me.events.get(
+        result = await self._graph_call(self.user_client.me.events.get(
             request_configuration=request_config
-        )
+        ))
 
         events: list[CalendarEvent] = []
         if not result or not result.value:
@@ -727,7 +753,7 @@ class GraphRepository(IGraphRepository):
             query_parameters=qp
         )
 
-        res = await self.user_client.me.events.get(request_configuration=cfg)
+        res = await self._graph_call(self.user_client.me.events.get(request_configuration=cfg))
 
         events: list[CalendarEvent] = []
         if not res or not res.value:
