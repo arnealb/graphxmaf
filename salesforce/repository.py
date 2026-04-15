@@ -15,6 +15,7 @@ log = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s — %(message)s")
 
 _API_VERSION = "v59.0"
+_SF_TIMEOUT = 30.0  # seconds; Salesforce API calls exceeding this are cancelled
 
 # ---------------------------------------------------------------------------
 # Per-object field allowlists
@@ -159,7 +160,7 @@ class SalesforceRepository:
         # Docs — SOQL syntax reference:
         #   https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql.htm
         url = f"{self.instance_url}/services/data/{_API_VERSION}/query"
-        async with httpx.AsyncClient(timeout=30) as client:
+        async with httpx.AsyncClient(timeout=_SF_TIMEOUT) as client:
             r = await client.get(url, params={"q": soql}, headers=self._headers())
             r.raise_for_status()
             return r.json().get("records", [])
