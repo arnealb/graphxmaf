@@ -955,204 +955,203 @@ _ORCHESTRATOR_CROSS: list[Prompt] = [
     # graph + smartsales - contacts vs locations
 
 
-# deze not done yet
 
 
-    Prompt(
-        text="List my Microsoft 365 contacts and check if any of them are also SmartSales locations.",
-        category="cross-system",
-        difficulty="hard",
-        expected_answer=(
-            "My Microsoft 365 contacts with display name and email, with a note "
-            "for each on whether a matching name appears as a SmartSales location."
-        ),
-        tags=["orchestrator", "multi-agent", "graph", "smartsales"],
-    ),
-    # salesforce + smartsales - accounts vs locations same city
-    Prompt(
-        text="Find Salesforce accounts in Brussels and compare with SmartSales locations in the same city.",
-        category="cross-system",
-        difficulty="hard",
-        expected_answer=(
-            "Salesforce accounts with BillingCity Brussels and SmartSales locations "
-            "filtered by city Brussels, shown in two clearly labelled sections."
-        ),
-        tags=["orchestrator", "multi-agent", "salesforce", "smartsales"],
-    ),
-    # graph + salesforce - calendar attendees as contacts
-    Prompt(
-        text="Show me my calendar events for the next 7 days and check if any attendees are Salesforce contacts.",
-        category="cross-system",
-        difficulty="hard",
-        expected_answer=(
-            "Calendar events for the next 7 days with title and attendees, followed "
-            "by a note for each unique attendee email on whether they are a Salesforce contact."
-        ),
-        tags=["orchestrator", "multi-agent", "graph", "salesforce"],
-    ),
-    # graph + salesforce + smartsales - all three
-    Prompt(
-        text="Who am I in Microsoft 365, what Salesforce accounts exist, and what SmartSales locations are in Belgium?",
-        category="cross-system",
-        difficulty="hard",
-        expected_answer=(
-            "Three clearly labelled sections: (1) Microsoft 365 identity with "
-            "display name and email, (2) a list of Salesforce accounts, "
-            "(3) SmartSales locations in Belgium."
-        ),
-        tags=["orchestrator", "multi-agent", "graph", "salesforce", "smartsales"],
-    ),
-    # salesforce + smartsales - orders vs opportunities
-    Prompt(
-        text="List recent SmartSales orders and check if the customer names match any Salesforce accounts.",
-        category="cross-system",
-        difficulty="hard",
-        expected_answer=(
-            "A list of recent SmartSales orders with customer information, followed "
-            "by a check per customer whether a matching account name exists in Salesforce."
-        ),
-        tags=["orchestrator", "multi-agent", "salesforce", "smartsales"],
-    ),
-    # graph + salesforce - files + accounts
-    Prompt(
-        text="Search my OneDrive for files about contracts and check if the mentioned company names are Salesforce accounts.",
-        category="cross-system",
-        difficulty="hard",
-        expected_answer=(
-            "Files found in OneDrive matching 'contract' with their content summary, "
-            "followed by a check for each mentioned company name in Salesforce accounts."
-        ),
-        tags=["orchestrator", "multi-agent", "graph", "salesforce"],
-    ),
-    # graph + smartsales - email senders vs locations
-    Prompt(
-        text="Find emails I received this week and check if any senders are linked to a SmartSales location.",
-        category="cross-system",
-        difficulty="hard",
-        expected_answer=(
-            "Emails received this week showing sender and subject, followed by a "
-            "note for each sender on whether a matching name or company appears "
-            "as a SmartSales location."
-        ),
-        tags=["orchestrator", "multi-agent", "graph", "smartsales"],
-    ),
-    # # graph + salesforce + smartsales - full overview
     # Prompt(
-    #     text="Give me an overview of my upcoming meetings from Microsoft 365, related Salesforce opportunities, and SmartSales locations for the companies involved.",
+    #     text="List my Microsoft 365 contacts and check if any of them are also SmartSales locations.",
     #     category="cross-system",
     #     difficulty="hard",
     #     expected_answer=(
-    #         "Upcoming calendar events from Microsoft 365, followed by any Salesforce "
-    #         "opportunities related to the meeting subjects or attendees, followed by "
-    #         "SmartSales locations for any recognized company names."
-    #     ),
-    #     tags=["orchestrator", "multi-agent", "graph", "salesforce", "smartsales"],
-    # ),
-    # # graph + salesforce - contacts with phone cross-check
-    # Prompt(
-    #     text="List my Microsoft 365 contacts with their phone numbers and check if those contacts also exist in Salesforce.",
-    #     category="cross-system",
-    #     difficulty="hard",
-    #     expected_answer=(
-    #         "Microsoft 365 contacts each showing name, email, and phone number, "
-    #         "followed by a note for each contact on whether they appear in Salesforce "
-    #         "(matched by email or name)."
-    #     ),
-    #     tags=["orchestrator", "multi-agent", "graph", "salesforce"],
-    # ),
-    # # salesforce + graph - cases to email thread
-    # Prompt(
-    #     text="Show me open Salesforce cases and search my Microsoft 365 email for any threads related to those case subjects.",
-    #     category="cross-system",
-    #     difficulty="hard",
-    #     expected_answer=(
-    #         "A list of open Salesforce cases with subject and status, followed by "
-    #         "any matching Microsoft 365 emails found per case subject."
-    #     ),
-    #     tags=["orchestrator", "multi-agent", "graph", "salesforce"],
-    # ),
-    # # salesforce + smartsales - leads by city vs locations
-    # Prompt(
-    #     text="Find Salesforce leads in Ghent and check if there are SmartSales locations in the same city.",
-    #     category="cross-system",
-    #     difficulty="hard",
-    #     expected_answer=(
-    #         "Salesforce leads with City = Ghent (name, email, company), followed by "
-    #         "SmartSales locations in Ghent, shown in two labelled sections."
-    #     ),
-    #     tags=["orchestrator", "multi-agent", "salesforce", "smartsales"],
-    # ),
-    # # graph + salesforce - email domain to account
-    # Prompt(
-    #     text="Who sent me emails this week? For each sender's email domain, check if there is a matching Salesforce account website.",
-    #     category="cross-system",
-    #     difficulty="hard",
-    #     expected_answer=(
-    #         "Emails received this week with sender names and domains, followed by "
-    #         "a check per domain whether a Salesforce account has a matching website."
-    #     ),
-    #     tags=["orchestrator", "multi-agent", "graph", "salesforce"],
-    # ),
-    # # salesforce + graph - opportunities closing soon + calendar
-    # Prompt(
-    #     text="List Salesforce opportunities that are closing this month and check if I have any calendar events related to those account names.",
-    #     category="cross-system",
-    #     difficulty="hard",
-    #     expected_answer=(
-    #         "Salesforce opportunities closing this month (Name, Account, CloseDate, Amount), "
-    #         "followed by any Microsoft 365 calendar events whose subject or attendees "
-    #         "match the account names."
-    #     ),
-    #     tags=["orchestrator", "multi-agent", "graph", "salesforce"],
-    # ),
-    # # graph + smartsales - OneDrive + location lookup
-    # Prompt(
-    #     text="Search my OneDrive for files about 'locations' and find those locations in SmartSales.",
-    #     category="cross-system",
-    #     difficulty="hard",
-    #     expected_answer=(
-    #         "Files found in OneDrive matching 'locations' with names and links, "
-    #         "followed by SmartSales location search results for any location names "
-    #         "mentioned in those files."
+    #         "My Microsoft 365 contacts with display name and email, with a note "
+    #         "for each on whether a matching name appears as a SmartSales location."
     #     ),
     #     tags=["orchestrator", "multi-agent", "graph", "smartsales"],
     # ),
-    # # graph + salesforce + smartsales - sender chain
+    # # salesforce + smartsales - accounts vs locations same city
     # Prompt(
-    #     text="Take the sender of my most recent email, look them up in Salesforce as a contact or lead, and check if their company has a SmartSales location.",
+    #     text="Find Salesforce accounts in Brussels and compare with SmartSales locations in the same city.",
     #     category="cross-system",
     #     difficulty="hard",
     #     expected_answer=(
-    #         "The sender name and email of the most recent email, their Salesforce "
-    #         "record (contact or lead) if found, and SmartSales location results for "
-    #         "their company name."
+    #         "Salesforce accounts with BillingCity Brussels and SmartSales locations "
+    #         "filtered by city Brussels, shown in two clearly labelled sections."
     #     ),
-    #     tags=["orchestrator", "multi-agent", "graph", "salesforce", "smartsales"],
+    #     tags=["orchestrator", "multi-agent", "salesforce", "smartsales"],
     # ),
-    # # graph + salesforce - file mentions to account
+    # # graph + salesforce - calendar attendees as contacts
     # Prompt(
-    #     text="Read the most recently modified OneDrive file and check if any company names in it are Salesforce accounts.",
+    #     text="Show me my calendar events for the next 7 days and check if any attendees are Salesforce contacts.",
     #     category="cross-system",
     #     difficulty="hard",
     #     expected_answer=(
-    #         "The content or summary of the most recently modified OneDrive file, "
-    #         "followed by a Salesforce account lookup for any company names found in it."
+    #         "Calendar events for the next 7 days with title and attendees, followed "
+    #         "by a note for each unique attendee email on whether they are a Salesforce contact."
     #     ),
     #     tags=["orchestrator", "multi-agent", "graph", "salesforce"],
     # ),
-    # # salesforce + smartsales + graph - account 360
+    # # graph + salesforce + smartsales - all three
     # Prompt(
-    #     text="Pick a Salesforce account and give me a 360 view: open opportunities, any SmartSales locations for that account, and any emails I have about that company.",
+    #     text="Who am I in Microsoft 365, what Salesforce accounts exist, and what SmartSales locations are in Belgium?",
     #     category="cross-system",
     #     difficulty="hard",
     #     expected_answer=(
-    #         "A chosen Salesforce account name, followed by three sections: "
-    #         "(1) open opportunities for that account, "
-    #         "(2) SmartSales locations matching the company name, "
-    #         "(3) Microsoft 365 emails mentioning the company name."
+    #         "Three clearly labelled sections: (1) Microsoft 365 identity with "
+    #         "display name and email, (2) a list of Salesforce accounts, "
+    #         "(3) SmartSales locations in Belgium."
     #     ),
     #     tags=["orchestrator", "multi-agent", "graph", "salesforce", "smartsales"],
     # ),
+    # # salesforce + smartsales - orders vs opportunities
+    # Prompt(
+    #     text="List recent SmartSales orders and check if the customer names match any Salesforce accounts.",
+    #     category="cross-system",
+    #     difficulty="hard",
+    #     expected_answer=(
+    #         "A list of recent SmartSales orders with customer information, followed "
+    #         "by a check per customer whether a matching account name exists in Salesforce."
+    #     ),
+    #     tags=["orchestrator", "multi-agent", "salesforce", "smartsales"],
+    # ),
+    # # graph + salesforce - files + accounts
+    # Prompt(
+    #     text="Search my OneDrive for files about contracts and check if the mentioned company names are Salesforce accounts.",
+    #     category="cross-system",
+    #     difficulty="hard",
+    #     expected_answer=(
+    #         "Files found in OneDrive matching 'contract' with their content summary, "
+    #         "followed by a check for each mentioned company name in Salesforce accounts."
+    #     ),
+    #     tags=["orchestrator", "multi-agent", "graph", "salesforce"],
+    # ),
+    # # graph + smartsales - email senders vs locations
+    # Prompt(
+    #     text="Find emails I received this week and check if any senders are linked to a SmartSales location.",
+    #     category="cross-system",
+    #     difficulty="hard",
+    #     expected_answer=(
+    #         "Emails received this week showing sender and subject, followed by a "
+    #         "note for each sender on whether a matching name or company appears "
+    #         "as a SmartSales location."
+    #     ),
+    #     tags=["orchestrator", "multi-agent", "graph", "smartsales"],
+    # ),
+    # # graph + salesforce + smartsales - full overview
+    Prompt(
+        text="Give me an overview of my upcoming meetings from Microsoft 365, related Salesforce opportunities, and SmartSales locations for the companies involved.",
+        category="cross-system",
+        difficulty="hard",
+        expected_answer=(
+            "Upcoming calendar events from Microsoft 365, followed by any Salesforce "
+            "opportunities related to the meeting subjects or attendees, followed by "
+            "SmartSales locations for any recognized company names."
+        ),
+        tags=["orchestrator", "multi-agent", "graph", "salesforce", "smartsales"],
+    ),
+    # graph + salesforce - contacts with phone cross-check
+    Prompt(
+        text="List my Microsoft 365 contacts with their phone numbers and check if those contacts also exist in Salesforce.",
+        category="cross-system",
+        difficulty="hard",
+        expected_answer=(
+            "Microsoft 365 contacts each showing name, email, and phone number, "
+            "followed by a note for each contact on whether they appear in Salesforce "
+            "(matched by email or name)."
+        ),
+        tags=["orchestrator", "multi-agent", "graph", "salesforce"],
+    ),
+    # salesforce + graph - cases to email thread
+    Prompt(
+        text="Show me open Salesforce cases and search my Microsoft 365 email for any threads related to those case subjects.",
+        category="cross-system",
+        difficulty="hard",
+        expected_answer=(
+            "A list of open Salesforce cases with subject and status, followed by "
+            "any matching Microsoft 365 emails found per case subject."
+        ),
+        tags=["orchestrator", "multi-agent", "graph", "salesforce"],
+    ),
+    # salesforce + smartsales - leads by city vs locations
+    Prompt(
+        text="Find Salesforce leads in Ghent and check if there are SmartSales locations in the same city.",
+        category="cross-system",
+        difficulty="hard",
+        expected_answer=(
+            "Salesforce leads with City = Ghent (name, email, company), followed by "
+            "SmartSales locations in Ghent, shown in two labelled sections."
+        ),
+        tags=["orchestrator", "multi-agent", "salesforce", "smartsales"],
+    ),
+    # graph + salesforce - email domain to account
+    Prompt(
+        text="Who sent me emails this week? For each sender's email domain, check if there is a matching Salesforce account website.",
+        category="cross-system",
+        difficulty="hard",
+        expected_answer=(
+            "Emails received this week with sender names and domains, followed by "
+            "a check per domain whether a Salesforce account has a matching website."
+        ),
+        tags=["orchestrator", "multi-agent", "graph", "salesforce"],
+    ),
+    # salesforce + graph - opportunities closing soon + calendar
+    Prompt(
+        text="List Salesforce opportunities that are closing this month and check if I have any calendar events related to those account names.",
+        category="cross-system",
+        difficulty="hard",
+        expected_answer=(
+            "Salesforce opportunities closing this month (Name, Account, CloseDate, Amount), "
+            "followed by any Microsoft 365 calendar events whose subject or attendees "
+            "match the account names."
+        ),
+        tags=["orchestrator", "multi-agent", "graph", "salesforce"],
+    ),
+    # graph + smartsales - OneDrive + location lookup
+    Prompt(
+        text="Search my OneDrive for files about 'locations' and find those locations in SmartSales.",
+        category="cross-system",
+        difficulty="hard",
+        expected_answer=(
+            "Files found in OneDrive matching 'locations' with names and links, "
+            "followed by SmartSales location search results for any location names "
+            "mentioned in those files."
+        ),
+        tags=["orchestrator", "multi-agent", "graph", "smartsales"],
+    ),
+    # graph + salesforce + smartsales - sender chain
+    Prompt(
+        text="Take the sender of my most recent email, look them up in Salesforce as a contact or lead, and check if their company has a SmartSales location.",
+        category="cross-system",
+        difficulty="hard",
+        expected_answer=(
+            "The sender name and email of the most recent email, their Salesforce "
+            "record (contact or lead) if found, and SmartSales location results for "
+            "their company name."
+        ),
+        tags=["orchestrator", "multi-agent", "graph", "salesforce", "smartsales"],
+    ),
+    # graph + salesforce - file mentions to account
+    Prompt(
+        text="Read the most recently modified OneDrive file and check if any company names in it are Salesforce accounts.",
+        category="cross-system",
+        difficulty="hard",
+        expected_answer=(
+            "The content or summary of the most recently modified OneDrive file, "
+            "followed by a Salesforce account lookup for any company names found in it."
+        ),
+        tags=["orchestrator", "multi-agent", "graph", "salesforce"],
+    ),
+    # salesforce + smartsales + graph - account 360
+    Prompt(
+        text="Pick a Salesforce account and give me a 360 view: open opportunities, any SmartSales locations for that account, and any emails I have about that company.",
+        category="cross-system",
+        difficulty="hard",
+        expected_answer=(
+            "A chosen Salesforce account name, followed by three sections: "
+            "(1) open opportunities for that account, "
+            "(2) SmartSales locations matching the company name, "
+            "(3) Microsoft 365 emails mentioning the company name."
+        ),
+        tags=["orchestrator", "multi-agent", "graph", "salesforce", "smartsales"],
+    ),
 ]
 
 ORCHESTRATOR_PROMPTS = _ORCHESTRATOR_ROUTING + _ORCHESTRATOR_CROSS
