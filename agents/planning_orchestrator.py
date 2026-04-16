@@ -113,7 +113,7 @@ class PlanningOrchestrator:
           {"type": "done", "tokens": None}
           {"type": "error", "message": str}
         """
-        yield {"type": "text", "chunk": "🔍 Planning query...\n"}
+        yield {"type": "text", "chunk": "Planning query...\n"}
 
         # ── Phase 1: Planning ──────────────────────────────────────────────────
         try:
@@ -134,44 +134,69 @@ class PlanningOrchestrator:
         results: dict[int, str] = {}
         try:
             waves = self._topological_waves(steps)
+            log.info("[run_sse] waves: %s", waves)
         except ValueError as exc:
             yield {"type": "error", "message": str(exc)}
             return
 
         for wave in waves:
-            agents_label = ", ".join(s["agent"] for s in wave)
+            agent_names = []
+            for s in wave:
+                agent_names.append(s["agent"])
+            agents_label = ", ".join(agent_names)
             yield {"type": "text", "chunk": f"️Executing ({agents_label})...\n"}
 
-            # Capture enriched task strings and start time before parallel execution
             step_inputs = [(s, self._enrich_task(s, results)) for s in wave]
             wave_start = datetime.now(timezone.utc).isoformat()
-
-            coros = [self._execute_step(s, results) for s in wave]
+            coros = [self._execute_step(s, task) for s, task in step_inputs]
             wave_results = await asyncio.gather(*coros, return_exceptions=True)
+
             wave_end = datetime.now(timezone.utc).isoformat()
 
-            for (step, task_input), res in zip(step_inputs, wave_results):
+            # Resultaten verwerken — per index door beide lijsten lopen
+            for i in range(len(step_inputs)):
+                step, task_input = step_inputs[i]
+                res = wave_results[i]
+
+                # wel fout
                 if isinstance(res, BaseException):
                     err_msg = str(res)
                     log.error("Step %d (%s) failed: %s", step["id"], step["agent"], err_msg)
+
                     current_trace = get_trace()
                     if current_trace is not None:
-                        current_trace.invoked_agents.append(AgentInvocation(
-                            agent=step["agent"], order=step["id"], input=task_input,
-                            started_at=wave_start, ended_at=wave_end,
-                            success=False, error=err_msg,
-                        ))
-                    yield {"type": "error", "message": f"Step {step['id']} ({step['agent']}) failed: {err_msg}"}
+                        invocation = AgentInvocation(
+                            agent=step["agent"],
+                            order=step["id"],
+                            input=task_input,
+                            started_at=wave_start,
+                            ended_at=wave_end,
+                            success=False,
+                            error=err_msg,
+                        )
+                        current_trace.invoked_agents.append(invocation)
+
+                    yield {
+                        "type": "error",
+                        "message": f"Step {step['id']} ({step['agent']}) failed: {err_msg}",
+                    }
                     return
 
+                # geen fout
                 results[step["id"]] = res
+
                 current_trace = get_trace()
                 if current_trace is not None:
-                    current_trace.invoked_agents.append(AgentInvocation(
-                        agent=step["agent"], order=step["id"], input=task_input,
-                        started_at=wave_start, ended_at=wave_end,
-                        success=True, error=None,
-                    ))
+                    invocation = AgentInvocation(
+                        agent=step["agent"],
+                        order=step["id"],
+                        input=task_input,
+                        started_at=wave_start,
+                        ended_at=wave_end,
+                        success=True,
+                        error=None,
+                    )
+                    current_trace.invoked_agents.append(invocation)
 
         # ── Phase 3: Synthesis ─────────────────────────────────────────────────
         yield {"type": "text", "chunk": "Synthesizing...\n"}
@@ -196,11 +221,23 @@ class PlanningOrchestrator:
         for attempt in range(2):
             try:
                 resp = await self._planner.run(prompt)
-                raw = (resp.text or "").strip()
-                # Strip markdown code fences if the model wraps in them anyway
+                
+                raw = resp.text
+                if raw is None:
+                    raw = ""
+                raw = raw.strip()
+
+                # markdown stuff weghalen
                 if raw.startswith("```"):
                     lines = raw.split("\n")
-                    raw = "\n".join(lines[1:-1] if lines[-1].strip() == "```" else lines[1:])
+                    # Eerste regel (opening fence) weggooien
+                    lines = lines[1:]
+                    # Laatste regel weggooien als die een closing fence is
+                    if lines and lines[-1].strip() == "```":
+                        lines = lines[:-1]
+                    raw = "\n".join(lines)
+
+
                 plan = json.loads(raw)
                 self._validate_plan(plan)
                 log.info("Generated plan:\n%s", json.dumps(plan, indent=2, ensure_ascii=False))
@@ -224,8 +261,11 @@ class PlanningOrchestrator:
             ]
             if agent is not None
         }
+        step_ids: set = set()
         for step in plan["steps"]:
             assert "id" in step, f"Step missing 'id': {step}"
+            assert step["id"] not in step_ids, f"Duplicate step id: {step['id']}"
+            step_ids.add(step["id"])
             assert "agent" in step, f"Step missing 'agent': {step}"
             assert "depends_on" in step, f"Step missing 'depends_on': {step}"
             assert isinstance(step["depends_on"], list), f"'depends_on' must be a list in step {step['id']}"
@@ -233,6 +273,11 @@ class PlanningOrchestrator:
                 f"Unknown agent '{step['agent']}' in step {step['id']}. "
                 f"Valid: {valid_agents}"
             )
+        for step in plan["steps"]:
+            for dep_id in step["depends_on"]:
+                assert dep_id in step_ids, (
+                    f"Step {step['id']} depends_on unknown step id {dep_id}"
+                )
 
     def _available_agents_description(self) -> str:
         agents = []
@@ -253,14 +298,33 @@ class PlanningOrchestrator:
         remaining = list(steps)
 
         while remaining:
-            wave = [s for s in remaining if all(d in completed for d in s["depends_on"])]
+            wave = []
+            for step in remaining:
+                dependencies_done = True
+                for dep in step["depends_on"]:
+                    if dep not in completed:
+                        dependencies_done = False
+                        break
+                if dependencies_done:
+                    wave.append(step)
+
             if not wave:
+                remaining_ids = []
+                for step in remaining:
+                    remaining_ids.append(step["id"])
                 raise ValueError(
-                    f"Circular dependency detected in plan steps: {[s['id'] for s in remaining]}"
+                    f"Circular dependency detected in plan steps: {remaining_ids}"
                 )
+
             waves.append(wave)
-            completed.update(s["id"] for s in wave)
-            remaining = [s for s in remaining if s not in wave]
+            for step in wave:
+                completed.add(step["id"])
+
+            new_remaining = []
+            for step in remaining:
+                if step not in wave:
+                    new_remaining.append(step)
+            remaining = new_remaining
 
         return waves
 
@@ -279,9 +343,8 @@ class PlanningOrchestrator:
         context = "\n\n".join(context_parts)
         return f"{context}\n\n[Task]:\n{step['task']}"
 
-    async def _execute_step(self, step: dict, results: dict) -> str:
+    async def _execute_step(self, step: dict, task: str) -> str:
         """Execute a single plan step by calling the appropriate sub-agent."""
-        task = self._enrich_task(step, results)
         agent_map = {
             "graph": self._graph_agent,
             "salesforce": self._sf_agent,
