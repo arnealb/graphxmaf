@@ -1,0 +1,22 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+Here are the results regarding Salesforce opportunities and related calendar events:
+
+### Salesforce Opportunities
+- **Closing This Month**: There are no opportunities closing this month in Salesforce.
+
+### Related Calendar Events
+- You have an upcoming calendar event related to a closing opportunity:
+  - **Subject**: Closing Opportunity
+  - **Start Date**: 30 April 2026
+  - **End Date**: 1 May 2026
+  - **Organizer**: SmartAdmin
+  - **Attendees**: None
+  - [**Event Link**](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANc8eMRAAA%3D&exvsurl=1&path=/calendar/item)
+
+### Summary
+- There are no Salesforce opportunities closing this month.
+- There is one calendar event scheduled for a closing opportunity starting on April 30, 2026.

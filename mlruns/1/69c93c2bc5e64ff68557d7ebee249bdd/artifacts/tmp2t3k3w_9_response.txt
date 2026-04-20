@@ -1,0 +1,35 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+### Microsoft 365 Contacts and Phone Numbers
+
+Here are your contacts from Microsoft 365 along with their phone numbers:
+
+1. **John Lastname**  
+   - **Email:** john.lastname@globalmedia.com  
+   - **Phone:** 0326243426  
+
+2. **ur dog**  
+   - **Email:** ur.dog@doghouse.com  
+   - **Phone:** 0483922818  
+
+3. **ur mom**  
+   - **Email:** ur.mom@grandpa.com  
+   - **Phone:** 0427277501  
+
+4. **test**  
+   - **Email:** test.test@gmail.com  
+   - **Phone:** Not available  
+
+5. **Arne Albrecht**  
+   - **Email:** a.albrecht@easi.net  
+   - **Phone:** Not available  
+
+### Salesforce Contact Check
+
+- There are no contacts found in Salesforce that match your Microsoft 365 contacts.
+
+### Summary
+- Microsoft 365 has 5 contacts listed. However, there are no matching contacts in Salesforce.

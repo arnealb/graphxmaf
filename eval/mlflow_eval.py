@@ -63,6 +63,7 @@ import tempfile
 import time
 from dataclasses import dataclass, field
 from datetime import datetime
+from pathlib import Path
 from urllib.parse import urlparse
 
 import httpx
@@ -88,136 +89,22 @@ mlflow.openai.autolog()
 @dataclass
 class BenchmarkPrompt:
     text: str
-    category: str           # email | calendar | identity | locations | crm | cross-system
+    category: str           # email | calendar | identity | locations | crm | cross-system | ...
     difficulty: str         # simple | medium | hard
     expected_answer: str    # what a correct response should contain (for LLM judge)
+    tags: list[str] = field(default_factory=list)
     expected_agents: list[str] = field(default_factory=list)  # for routing precision/recall
 
 
-BENCHMARK_PROMPTS: list[BenchmarkPrompt] = [
-    # ── Identity ──────────────────────────────────────────────────────────────
-    BenchmarkPrompt(
-        text="Who am I in Microsoft 365?",
-        category="identity", difficulty="simple",
-        expected_answer=(
-            "The response contains the authenticated user's full display name "
-            "and email address from Microsoft 365."
-        ),
-        expected_agents=["graph"],
-    ),
+def _load_prompts(path: str | None = None) -> list[BenchmarkPrompt]:
+    """Load benchmark prompts from eval/prompts.json."""
+    json_path = path or str(Path(__file__).parent / "prompts.json")
+    with open(json_path, encoding="utf-8") as f:
+        data = json.load(f)
+    return [BenchmarkPrompt(**p) for p in data]
 
-    # ── Email ─────────────────────────────────────────────────────────────────
-    BenchmarkPrompt(
-        text="Show me my 5 most recent emails.",
-        category="email", difficulty="simple",
-        expected_answer=(
-            "A list of 5 recent inbox emails, each with at minimum sender, "
-            "subject line, and received date/time."
-        ),
-        expected_agents=["graph"],
-    ),
-    BenchmarkPrompt(
-        text="Have I received any emails in the last 7 days? List sender and subject.",
-        category="email", difficulty="medium",
-        expected_answer=(
-            "A list of emails received in the past 7 days showing sender and subject. "
-            "If no emails, the response clearly states the inbox was empty for that period."
-        ),
-        expected_agents=["graph"],
-    ),
 
-    # ── Calendar ──────────────────────────────────────────────────────────────
-    BenchmarkPrompt(
-        text="What are my upcoming calendar events this week?",
-        category="calendar", difficulty="simple",
-        expected_answer=(
-            "A list of calendar events for the current week, each with event title, "
-            "start date, and start time."
-        ),
-        expected_agents=["graph"],
-    ),
-    BenchmarkPrompt(
-        text="Search my calendar for events in the next 14 days.",
-        category="calendar", difficulty="medium",
-        expected_answer=(
-            "A list of calendar events occurring in the next 14 days, each showing "
-            "event title and start date/time."
-        ),
-        expected_agents=["graph"],
-    ),
-
-    # ── SmartSales ────────────────────────────────────────────────────────────
-    # BenchmarkPrompt(
-    #     text="List the first 5 SmartSales locations.",
-    #     category="locations", difficulty="simple",
-    #     expected_answer=(
-    #         "A list of 5 SmartSales locations with at minimum their uid and name."
-    #     ),
-    #     expected_agents=["smartsales"],
-    # ),
-    # BenchmarkPrompt(
-    #     text="Find SmartSales locations in Brussels.",
-    #     category="locations", difficulty="medium",
-    #     expected_answer=(
-    #         "SmartSales locations in or near Brussels, each with name and uid. "
-    #         "If none found, the response states so clearly."
-    #     ),
-    #     expected_agents=["smartsales"],
-    # ),
-
-    # # ── Salesforce ────────────────────────────────────────────────────────────
-    # BenchmarkPrompt(
-    #     text="List 5 Salesforce accounts.",
-    #     category="crm", difficulty="simple",
-    #     expected_answer=(
-    #         "Exactly 5 Salesforce account records, each with at minimum the Name and Id fields."
-    #     ),
-    #     expected_agents=["salesforce"],
-    # ),
-    # BenchmarkPrompt(
-    #     text="Find Salesforce accounts in Belgium, including their billing address.",
-    #     category="crm", difficulty="medium",
-    #     expected_answer=(
-    #         "Salesforce accounts where BillingCountry is Belgium, each with Name "
-    #         "and billing address fields (street, city, country)."
-    #     ),
-    #     expected_agents=["salesforce"],
-    # ),
-
-    # # ── Cross-system ──────────────────────────────────────────────────────────
-    # BenchmarkPrompt(
-    #     text="Who am I in Microsoft 365, and what are the first 3 SmartSales locations?",
-    #     category="cross-system", difficulty="medium",
-    #     expected_answer=(
-    #         "Two sections: (1) M365 user identity with name and email, "
-    #         "(2) at least 3 SmartSales locations with name."
-    #     ),
-    #     expected_agents=["graph", "smartsales"],
-    # ),
-    # BenchmarkPrompt(
-    #     text="Who am I in Microsoft 365 and list 3 Salesforce accounts?",
-    #     category="cross-system", difficulty="medium",
-    #     expected_answer=(
-    #         "Two sections: (1) M365 user identity with name and email, "
-    #         "(2) 3 Salesforce account names with IDs."
-    #     ),
-    #     expected_agents=["graph", "salesforce"],
-    # ),
-    # BenchmarkPrompt(
-    #     text=(
-    #         "Show my last 2 emails, list 3 SmartSales locations in Belgium, "
-    #         "and show 2 Salesforce accounts."
-    #     ),
-    #     category="cross-system", difficulty="hard",
-    #     expected_answer=(
-    #         "Three sections, all must be present: "
-    #         "(1) 2 recent email subjects and senders, "
-    #         "(2) 3 Belgian SmartSales locations with name, "
-    #         "(3) 2 Salesforce account names."
-    #     ),
-    #     expected_agents=["graph", "smartsales", "salesforce"],
-    # ),
-]
+BENCHMARK_PROMPTS: list[BenchmarkPrompt] = _load_prompts()
 
 
 # ── Orchestrator runner ───────────────────────────────────────────────────────
@@ -567,8 +454,8 @@ async def main_async(args: argparse.Namespace) -> None:
     config = configparser.ConfigParser()
     config.read("config.cfg")
 
-    # ── Filter prompts ────────────────────────────────────────────────────────
-    prompts = list(BENCHMARK_PROMPTS)
+    # ── Load + filter prompts ─────────────────────────────────────────────────
+    prompts = _load_prompts(args.prompts) if args.prompts else list(BENCHMARK_PROMPTS)
     if args.category:
         prompts = [p for p in prompts if p.category == args.category]
     if args.difficulty:
@@ -685,9 +572,12 @@ def main() -> None:
         help="MLflow experiment name  [default: graphxmaf-eval]",
     )
     parser.add_argument(
+        "--prompts",
+        help="Path to a custom prompts JSON file  [default: eval/prompts.json]",
+    )
+    parser.add_argument(
         "--category",
-        choices=["email", "calendar", "identity", "locations", "crm", "cross-system"],
-        help="Only run prompts in this category",
+        help="Only run prompts in this category (e.g. email, calendar, cross-system, accounts, ...)",
     )
     parser.add_argument(
         "--difficulty",

@@ -1,0 +1,42 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (smartsales)...
+Synthesizing...
+Here are the files found in OneDrive that contain the keyword "locations" along with corresponding location data from SmartSales:
+
+### Files from OneDrive
+1. [SmartSales_Locations.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BF23C8827-CC49-4607-A0B8-FF47034DC9E8%7D&file=SmartSales_Locations.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+2. [agenda.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B8BB0C73E-6AED-4FEB-8D5E-440279145EBF%7D&file=agenda.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+3. [Prospects_Filled.xlsx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B144B0D44-0527-4B59-BF80-8F4EBE10A1CF%7D&file=Prospects_Filled.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+### Corresponding Locations from SmartSales
+- **AACO DAVIDSON**
+  - Address: Havenkant 6, Leuven, 3000, Belgium
+  - Coordinates: Latitude 50.8873413, Longitude 4.7005038
+  
+- **Stream Software**
+  - Address: Potvlietlaan 4, Antwerpen, 2600
+  - Coordinates: Not available
+  
+- **Advanced Communications**
+  - Address: Mediapark 5, Ghent, 9000, Belgium
+  - Coordinates: Latitude 51.0678307, Longitude 3.7290914
+  
+- **Displaytech**
+  - Address: Technologielaan 12, Leuven, 3001, Belgium
+  - Coordinates: Latitude 50.8522066, Longitude 4.7331362
+  
+- **EASI**
+  - Address: Rue d'Arlon 50, Namur, 5000, Belgium
+  - Coordinates: Latitude 50.8400867, Longitude 4.3722889
+  
+- **Global Media**
+  - Address: Mediastraat 10, Brussels, 1000, Belgium
+  - Coordinates: Latitude 50.8427501, Longitude 4.3515499
+  
+- **Test**
+  - Address: Teststraat 1, Brussels, 1000, Belgium
+  - Coordinates: Latitude 50.8427501, Longitude 4.3515499
+
+This summary provides a straightforward view of the files from OneDrive relating to "locations" and their associated data from SmartSales. If you need access to specific file content or further details, please let me know!

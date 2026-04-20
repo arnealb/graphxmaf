@@ -1,0 +1,31 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+️Executing (smartsales)...
+Synthesizing...
+Here are the results concerning the sender of your most recent email, Arne Albrecht:
+
+### Sender Information
+- **Name**: Arne Albrecht
+- **Email**: albrecht.arne@gmail.com
+
+### Salesforce Status
+- **Contact**: 
+  - **ID**: 003KI00000964NzYAI
+  - **Company**: Displaytech
+- **Lead**:
+  - **ID**: 00QKI000002KPFT2A4
+  - **Company**: easi_dupe
+  - **Status**: Contacted
+
+### SmartSales Location
+- **Company with Location Found**: 
+  - **Name**: Displaytech
+  - **Address**: Technologielaan 12, Leuven, 3001, Belgium
+  - **UID**: 1cdabf58-38aa-11f1-a803-005056010707
+- **No SmartSales location found** for the second company (easi_dupe).
+
+### Summary
+- Arne Albrecht is listed as both a contact and lead in Salesforce, associated with two companies: Displaytech (as a contact) and easi_dupe (as a lead).
+- Displaytech has an active SmartSales location, while easi_dupe does not appear in the SmartSales system.

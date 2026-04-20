@@ -218,7 +218,7 @@ def _resolve_sf_session(sf_mcp_url: str) -> str:
 
     # 1. Check for existing session.
     try:
-        resp = httpx.get(session_url, timeout=5)
+        resp = httpx.get(session_url, timeout=15)
         if resp.status_code == 200:
             data = resp.json()
             print(f"Salesforce: session restored ({data.get('username', '?')}).")
