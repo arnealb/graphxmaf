@@ -102,6 +102,14 @@ class PlanningOrchestrator:
         self._graph_agent = graph_agent
         self._sf_agent = sf_agent
         self._ss_agent = ss_agent
+        self._input_tokens: int = 0
+        self._output_tokens: int = 0
+
+    def _accumulate_usage(self, resp) -> None:
+        """Add token counts from an agent response to the running totals."""
+        usage = getattr(resp, "usage_details", None) or {}
+        self._input_tokens  += usage.get("input_token_count",  0) or 0
+        self._output_tokens += usage.get("output_token_count", 0) or 0
 
     # ── Public API ─────────────────────────────────────────────────────────────
 
@@ -110,9 +118,11 @@ class PlanningOrchestrator:
 
         Yields dicts with keys:
           {"type": "text", "chunk": str}
-          {"type": "done", "tokens": None}
+          {"type": "done", "tokens": {"input": int, "output": int, "total": int}}
           {"type": "error", "message": str}
         """
+        self._input_tokens = 0
+        self._output_tokens = 0
         yield {"type": "text", "chunk": "Planning query...\n"}
 
         # ── Phase 1: Planning ──────────────────────────────────────────────────
@@ -208,7 +218,15 @@ class PlanningOrchestrator:
             return
 
         yield {"type": "text", "chunk": answer}
-        yield {"type": "done", "tokens": None}
+        total = self._input_tokens + self._output_tokens
+        yield {
+            "type": "done",
+            "tokens": {
+                "input":  self._input_tokens,
+                "output": self._output_tokens,
+                "total":  total,
+            },
+        }
 
     # ── Internal: Planning ─────────────────────────────────────────────────────
 
@@ -221,7 +239,7 @@ class PlanningOrchestrator:
         for attempt in range(2):
             try:
                 resp = await self._planner.run(prompt)
-                
+                self._accumulate_usage(resp)
                 raw = resp.text
                 if raw is None:
                     raw = ""
@@ -354,6 +372,7 @@ class PlanningOrchestrator:
         if agent is None:
             raise ValueError(f"Agent '{step['agent']}' is not available in this session")
         resp = await agent.run(task)
+        self._accumulate_usage(resp)
         return resp.text or ""
 
     # ── Internal: Synthesis ────────────────────────────────────────────────────
@@ -373,6 +392,7 @@ class PlanningOrchestrator:
 
         context = "\n".join(parts)
         resp = await self._synthesizer.run(context)
+        self._accumulate_usage(resp)
         return resp.text or ""
 
 

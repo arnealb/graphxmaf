@@ -35,7 +35,7 @@ from openpyxl.styles import Font, PatternFill
 
 from agent_framework import MCPStreamableHTTPTool
 from agents.graph_agent import create_graph_agent
-from agents.orchestrator_agent import create_orchestrator_agent
+from agents.planning_orchestrator import PlanningOrchestrator, create_planning_orchestrator
 from agents.routing_trace import get_trace, start_trace
 from agents.salesforce_agent import create_salesforce_agent
 from agents.smartsales_agent import create_smartsales_agent
@@ -53,6 +53,7 @@ class Prompt:
     expected_answer: str = ""   # human-written description of a correct response
     tags: list[str] = field(default_factory=list)
 
+today = "today is the 20th of april 2026, "
 
 # ── Graph prompts - 11 tools ──────────────────────────────────────────────────
 
@@ -1035,7 +1036,12 @@ _ORCHESTRATOR_CROSS: list[Prompt] = [
     #     ),
     #     tags=["orchestrator", "multi-agent", "graph", "smartsales"],
     # ),
-    # # graph + salesforce + smartsales - full overview
+
+
+
+
+
+    # graph + salesforce + smartsales - full overview
     Prompt(
         text="Give me an overview of my upcoming meetings from Microsoft 365, related Salesforce opportunities, and SmartSales locations for the companies involved.",
         category="cross-system",
@@ -1059,36 +1065,36 @@ _ORCHESTRATOR_CROSS: list[Prompt] = [
         ),
         tags=["orchestrator", "multi-agent", "graph", "salesforce"],
     ),
-    # salesforce + graph - cases to email thread
-    Prompt(
-        text="Show me open Salesforce cases and search my Microsoft 365 email for any threads related to those case subjects.",
-        category="cross-system",
-        difficulty="hard",
-        expected_answer=(
-            "A list of open Salesforce cases with subject and status, followed by "
-            "any matching Microsoft 365 emails found per case subject."
-        ),
-        tags=["orchestrator", "multi-agent", "graph", "salesforce"],
-    ),
+    # # salesforce + graph - cases to email thread
+    # Prompt(
+    #     text="Show me open Salesforce cases and search my Microsoft 365 email for anything related to those case subjects.",
+    #     category="cross-system",
+    #     difficulty="hard",
+    #     expected_answer=(
+    #         "A list of open Salesforce cases with subject and status, followed by "
+    #         "any matching Microsoft 365 emails found per case subject."
+    #     ),
+    #     tags=["orchestrator", "multi-agent", "graph", "salesforce"],
+    # ),
     # salesforce + smartsales - leads by city vs locations
     Prompt(
-        text="Find Salesforce leads in Ghent and check if there are SmartSales locations in the same city.",
+        text="Find Salesforce leads in Belgium and check if there are SmartSales locations in the same country.",
         category="cross-system",
         difficulty="hard",
         expected_answer=(
-            "Salesforce leads with City = Ghent (name, email, company), followed by "
-            "SmartSales locations in Ghent, shown in two labelled sections."
+            "Salesforce leads with County = Belgium (name, email, company), followed by "
+            "SmartSales locations in Belgium, shown in two labelled sections."
         ),
         tags=["orchestrator", "multi-agent", "salesforce", "smartsales"],
     ),
     # graph + salesforce - email domain to account
     Prompt(
-        text="Who sent me emails this week? For each sender's email domain, check if there is a matching Salesforce account website.",
+        text="Who sent me emails in the past 7 days? For each sender's email domain, check if there is a matching Salesforce contact for these adresses.",
         category="cross-system",
         difficulty="hard",
         expected_answer=(
             "Emails received this week with sender names and domains, followed by "
-            "a check per domain whether a Salesforce account has a matching website."
+            "a check per domain whether a Salesforce has a matching contact." + today
         ),
         tags=["orchestrator", "multi-agent", "graph", "salesforce"],
     ),
@@ -1141,11 +1147,10 @@ _ORCHESTRATOR_CROSS: list[Prompt] = [
     ),
     # salesforce + smartsales + graph - account 360
     Prompt(
-        text="Pick a Salesforce account and give me a 360 view: open opportunities, any SmartSales locations for that account, and any emails I have about that company.",
+        text="Give me a 360 view of this salesforce account: supplier1 : open opportunities, any SmartSales locations for that account, and any emails I have about that company.",
         category="cross-system",
         difficulty="hard",
         expected_answer=(
-            "A chosen Salesforce account name, followed by three sections: "
             "(1) open opportunities for that account, "
             "(2) SmartSales locations matching the company name, "
             "(3) Microsoft 365 emails mentioning the company name."
@@ -1166,7 +1171,7 @@ AGENT_SHEETS = {
     "GraphAgent":        "Graph",
     "SalesforceAgent":   "Salesforce",
     "SmartSalesAgent":   "SmartSales",
-    "OrchestratorAgent": "Orchestrator",
+    "PlanningOrchestrator": "Orchestrator",
 }
 SUMMARY_SHEET = "Summary"
 
@@ -1496,7 +1501,7 @@ def _resolve_ss_session(ss_mcp_url: str) -> str:
     parsed = urlparse(ss_mcp_url)
     base = f"{parsed.scheme}://{parsed.netloc}"
     try:
-        resp = httpx.get(f"{base}/auth/smartsales/session", timeout=10)
+        resp = httpx.get(f"{base}/auth/smartsales/session", timeout=60)
         if resp.status_code == 200:
             return resp.json()["session_token"]
         raise RuntimeError(f"SmartSales session returned {resp.status_code}: {resp.text}")
@@ -1518,17 +1523,32 @@ async def run_prompt(agent, prompt: Prompt) -> dict:
     trace = start_trace(prompt.text)
 
     try:
-        response = await agent.run(prompt.text)
-        response_text = response.text or ""
+        if isinstance(agent, PlanningOrchestrator):
+            chunks = []
+            async for event in agent.run_sse(prompt.text):
+                if event["type"] == "text":
+                    chunks.append(event["chunk"])
+                elif event["type"] == "done":
+                    tok = event.get("tokens") or {}
+                    input_tokens  = tok.get("input")
+                    output_tokens = tok.get("output")
+                    total_tokens  = tok.get("total")
+                elif event["type"] == "error":
+                    raise RuntimeError(event["message"])
+            response_text = "".join(chunks)
+        else:
+            response = await agent.run(prompt.text)
+            response_text = response.text or ""
+
+            usage = response.usage_details or {}
+            input_tokens  = usage.get("input_token_count")
+            output_tokens = usage.get("output_token_count")
+            total_tokens  = usage.get("total_token_count")
+            if total_tokens is None and input_tokens is not None and output_tokens is not None:
+                total_tokens = input_tokens + output_tokens
+
         print("response_text", response_text)
         success = True
-
-        usage = response.usage_details or {}
-        input_tokens  = usage.get("input_token_count")
-        output_tokens = usage.get("output_token_count")
-        total_tokens  = usage.get("total_token_count")
-        if total_tokens is None and input_tokens is not None and output_tokens is not None:
-            total_tokens = input_tokens + output_tokens
 
     except Exception as exc:
         error = str(exc)
@@ -1559,7 +1579,7 @@ async def benchmark(graph_agent, sf_agent, ss_agent, orchestrator) -> list[dict]
         # ("GraphAgent",        graph_agent,   GRAPH_PROMPTS),
         # ("SalesforceAgent",   sf_agent,      SALESFORCE_PROMPTS),
         # ("SmartSalesAgent",   ss_agent,      SMARTSALES_PROMPTS),
-        ("OrchestratorAgent", orchestrator,  ORCHESTRATOR_PROMPTS),
+        ("PlanningOrchestrator", orchestrator,  ORCHESTRATOR_PROMPTS),
     ]
 
     for mode_name, agent, prompts in modes:
@@ -1827,10 +1847,10 @@ async def main() -> None:
     graph_agent  = create_graph_agent(graph_mcp=graph_mcp)
     sf_agent     = create_salesforce_agent(salesforce_mcp=sf_mcp)
     ss_agent     = create_smartsales_agent(smartsales_mcp=ss_mcp)
-    orchestrator = create_orchestrator_agent(
+    orchestrator = create_planning_orchestrator(
         graph_agent=graph_agent,
-        salesforce_agent=sf_agent,
-        smartsales_agent=ss_agent,
+        sf_agent=sf_agent,
+        ss_agent=ss_agent,
     )
 
     # ── LLM evaluator client ───────────────────────────────────────────────────
