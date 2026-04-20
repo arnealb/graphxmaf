@@ -80,6 +80,8 @@ from eval.score import evaluate, evaluate_routing
 
 load_dotenv()
 
+mlflow.openai.autolog()
+
 
 # ── Benchmark prompts ─────────────────────────────────────────────────────────
 
