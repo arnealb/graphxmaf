@@ -1,0 +1,24 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are your upcoming calendar events for the week:
+
+### 21 April 2026
+- **Event:** nog e meeting  
+  **Time:** 12:30 PM - 1:00 PM  
+  **Organizer:** SmartAdmin  
+
+- **Event:** meeting about numbers or something  
+  **Time:** 4:30 PM - 5:00 PM  
+  **Organizer:** SmartAdmin  
+
+### 22 April 2026
+- **Event:** gym  
+  **Time:** 8:30 PM - 9:00 PM  
+  **Organizer:** SmartAdmin  
+
+### 23 April 2026
+- **Event:** anotha one  
+  **Time:** 11:00 AM - 11:30 AM  
+  **Organizer:** SmartAdmin  

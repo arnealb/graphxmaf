@@ -1,0 +1,1 @@
+The orchestrator correctly routed the user query to the appropriate sub-agents, with the 'graph' agent retrieving user profile information from Microsoft 365 and the 'smartsales' agent fetching the first 3 locations from SmartSales, in the optimal or

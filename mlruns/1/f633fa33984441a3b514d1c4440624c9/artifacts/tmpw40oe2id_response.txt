@@ -1,0 +1,47 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here are the first 5 SmartSales locations:
+
+1. **AACO DAVIDSON**  
+   - Street: Havenkant 6  
+   - City: Leuven  
+   - Zip: 3000  
+   - Country: Belgium  
+   - Latitude: 50.8873413  
+   - Longitude: 4.7005038  
+
+2. **Stream Software**  
+   - Street: Potvlietlaan 4  
+   - City: Antwerpen  
+   - Zip: 2600  
+   - Country: Not specified  
+   - Latitude: Not specified  
+   - Longitude: Not specified  
+
+3. **name-v1**  
+   - Street: Stationsplein 14  
+   - City: Antwerp  
+   - Zip: 2018  
+   - Country: Belgium  
+   - Latitude: 51.1341955  
+   - Longitude: 4.4751428  
+
+4. **Customer1**  
+   - Street: Markt 5  
+   - City: Bruges  
+   - Zip: 8000  
+   - Country: Belgium  
+   - Latitude: 51.2086225  
+   - Longitude: 3.2250864  
+
+5. **Arne Albrecht**  
+   - Street: Lippenslaan 347  
+   - City: Knokke  
+   - Zip: 8300  
+   - Country: Belgium  
+   - Latitude: 51.3518122  
+   - Longitude: 3.2887656  
+
+These details are sourced from SmartSales data.

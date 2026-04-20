@@ -1,0 +1,1 @@
+The orchestrator correctly routed the user query to the appropriate sub-agents, with the graph agent handling the Microsoft 365 profile information and the salesforce agent fetching the requested Salesforce accounts, in the optimal order.

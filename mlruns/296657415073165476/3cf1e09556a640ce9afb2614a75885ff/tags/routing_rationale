@@ -1,0 +1,1 @@
+The orchestrator failed to route the query to the correct sub-agent, as the graph agent was invoked but did not successfully retrieve the emails, indicating a complete failure in addressing the user's request.
