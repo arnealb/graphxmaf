@@ -217,8 +217,9 @@ def _resolve_sf_session(sf_mcp_url: str) -> str:
     login_url = f"{base}/auth/salesforce/login"
 
     # 1. Check for existing session.
+    # Use a longer timeout to accommodate Azure Container App cold-starts (30–60 s).
     try:
-        resp = httpx.get(session_url, timeout=15)
+        resp = httpx.get(session_url, timeout=90)
         if resp.status_code == 200:
             data = resp.json()
             print(f"Salesforce: session restored ({data.get('username', '?')}).")

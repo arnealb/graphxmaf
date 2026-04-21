@@ -387,9 +387,10 @@ def setup_agents(
     )
     ss_agent = create_smartsales_agent(smartsales_mcp=ss_mcp)
 
-    # ── Microsoft Graph (optional) ────────────────────────────────────────────
+    # ── Microsoft Graph ────────────────────────────────────────────
     if not skip_graph:
         mcp_url = azure.get("mcpServerUrl", "http://localhost:8000/mcp")
+        print(f"[authenticate graph] mcp_url {mcp_url}")
         graph_env = os.environ.copy()
         graph_env["MCP_RESOURCE_URI"] = (
             f"{urlparse(mcp_url).scheme}://{urlparse(mcp_url).netloc}"
@@ -417,7 +418,7 @@ def setup_agents(
             print(f"WARNING: Microsoft Graph unavailable ({exc}). Graph prompts will score 1.")
             print("         Use --skip-graph to suppress this warning.")
 
-    # ── Salesforce (optional) ─────────────────────────────────────────────────
+    # ── Salesforce ─────────────────────────────────────────────────
     if not skip_sf:
         sf_url = sf_section.get("mcpServerUrl", "http://localhost:8001/mcp")
         sf_env = os.environ.copy()
