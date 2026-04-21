@@ -17,7 +17,6 @@ the graph-mcp server so Copilot's OAuth flow works unchanged.
 import configparser
 import logging
 import os
-from typing import Annotated
 from urllib.parse import parse_qs, parse_qsl, urlencode, urlparse
 
 import httpx
@@ -27,10 +26,10 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 from starlette.responses import JSONResponse, RedirectResponse, Response
 
-from agent_framework import Agent, FunctionTool, MCPStreamableHTTPTool
-from agent_framework.azure import AzureOpenAIChatClient
+from agent_framework import MCPStreamableHTTPTool
 
 from agents.graph_agent import create_graph_agent
+from agents.planning_orchestrator import create_planning_orchestrator
 from agents.salesforce_agent import create_salesforce_agent
 from agents.smartsales_agent import create_smartsales_agent
 
@@ -82,12 +81,6 @@ _SF_MCP_URL = os.environ.get(
 )
 log.warning("[config] SF_MCP_URL = %s", _SF_MCP_URL)
 
-# Azure OpenAI (same env vars as the rest of the project).
-_AOAI_DEPLOYMENT = os.environ.get("deployment", "")
-_AOAI_ENDPOINT = os.environ.get("AZURE_OPENAI_ENDPOINT", "")
-_AOAI_KEY = os.environ.get("AZURE_OPENAI_API_KEY", "")
-_AOAI_VERSION = "2024-12-01-preview"
-
 # ── FastMCP ───────────────────────────────────────────────────────────────────
 
 mcp = FastMCP("orchestrator", port=8003, host="0.0.0.0")
@@ -98,14 +91,6 @@ _ss_agent: Agent | None = None
 _sf_agent: Agent | None = None
 _sf_login_url: str | None = None
 
-
-def _aoai_client() -> AzureOpenAIChatClient:
-    return AzureOpenAIChatClient(
-        deployment_name=_AOAI_DEPLOYMENT,
-        endpoint=_AOAI_ENDPOINT,
-        api_key=_AOAI_KEY,
-        api_version=_AOAI_VERSION,
-    )
 
 
 # ── SmartSales init ──────────────────────────────────────────────────────────
@@ -180,135 +165,6 @@ def _build_graph_agent(graph_token: str) -> Agent:
     return create_graph_agent(graph_mcp)
 
 
-# ── Orchestrator agent ────────────────────────────────────────────────────────
-
-def _build_orchestrator(
-    graph_agent: Agent,
-    ss_agent: Agent | None,
-    sf_agent: Agent | None,
-    sf_status:str=""
-) -> Agent:
-    """Assemble the orchestrator with FunctionTools wrapping each sub-agent."""
-
-    async def ask_graph_agent(
-        query: Annotated[str, "The full question to send to the Microsoft Graph agent"],
-    ) -> str:
-        response = await graph_agent.run(query)
-        return response.text or "(no response from GraphAgent)"
-
-    async def ask_smartsales_agent(
-        query: Annotated[str, "The full question to send to the SmartSales agent"],
-    ) -> str:
-        global _ss_agent
-        response = await ss_agent.run(query)
-        result = response.text or ""
-        if "SESSION_ERROR:" in result:
-            _ss_agent = None
-            await _init_smartsales()
-            if _ss_agent is not None:
-                response = await _ss_agent.run(query)
-                return response.text or ""
-            return "(SmartSales kon niet opnieuw worden geïnitialiseerd)"
-        return result
-
-    async def ask_salesforce_agent(
-        query: Annotated[str, "The full question to send to the Salesforce agent"],
-    ) -> str:
-        global _sf_agent
-        response = await sf_agent.run(query)
-        result = response.text or ""
-        if "SESSION_ERROR:" in result:
-            _sf_agent = None
-            return "(Salesforce session expired — retrying on next request)"
-        return result
-
-    # Graph is always available.
-    tools = [
-        FunctionTool(
-            name="ask_graph_agent",
-            description=(
-                "Route a question to the Microsoft Graph agent. "
-                "Use this for anything related to emails, OneDrive files, calendar events, "
-                "contacts, or identifying the current Microsoft 365 user."
-            ),
-            func=ask_graph_agent,
-            approval_mode="never_require",
-        ),
-    ]
-
-    # SmartSales is optional.
-    if ss_agent is not None:
-        tools.append(
-            FunctionTool(
-                name="ask_smartsales_agent",
-                description=(
-                    "Route a question to the SmartSales agent. "
-                    "Use this for anything related to SmartSales locations, catalog items, "
-                    "or orders: searching, listing, and retrieving by name, city, country, or uid."
-                ),
-                func=ask_smartsales_agent,
-                approval_mode="never_require",
-            )
-        )
-
-    # Salesforce is optional.
-    if sf_agent is not None:
-        tools.append(
-            FunctionTool(
-                name="ask_salesforce_agent",
-                description=(
-                    "Route a question to the Salesforce agent. "
-                    "Use this for anything related to Salesforce CRM data: "
-                    "accounts, leads, contacts, opportunities, and campaigns."
-                ),
-                func=ask_salesforce_agent,
-                approval_mode="never_require",
-            )
-        )
-
-    return Agent(
-        client=_aoai_client(),
-        name="OrchestratorAgent",
-        description="Routes queries to Graph, SmartSales, or Salesforce sub-agents and combines their results",
-        instructions=f"""
-            You are a central orchestrator that coordinates three specialised agents:
-
-            1. ask_graph_agent — handles everything Microsoft 365:
-               emails, OneDrive files, calendar events, contacts, user identity.
-            2. ask_smartsales_agent — handles SmartSales data:
-               locations, catalog items, and orders.
-            3. ask_salesforce_agent — handles Salesforce CRM data:
-               accounts, leads, contacts, opportunities, and campaigns.
-
-            ROUTING RULES
-            - Microsoft 365 / Office data → ask_graph_agent
-            - SmartSales data             → ask_smartsales_agent
-            - Salesforce CRM data         → ask_salesforce_agent
-            - Query spans multiple systems → call relevant tools, then combine
-
-            STRICT TOOL SELECTION RULES
-            - Only call a tool when the user's request explicitly requires it.
-            - Pass the user's original question (rephrased if needed) to the sub-agent.
-            - Never guess or fabricate data — only report what sub-agents return.
-            - If a single tool call returns sufficient information, do NOT call the other tools.
-
-            SUB-AGENT RESPONSES
-            - Sub-agents return raw JSON from their tool calls, not prose.
-            - Parse the structured fields (id, name, email, etc.) to answer the user.
-
-            COMBINING RESULTS
-            - When multiple agents are called, synthesise into one coherent answer.
-            - Clearly indicate the source (e.g. "From Microsoft 365: …" / "From SmartSales: …" / "From Salesforce: …").
-            - Present a unified, structured summary — do not concatenate raw outputs.
-
-            OUTPUT
-            - Be concise and factual.
-            - Use bullet points or sections when presenting data from multiple sources.
-            - Present dates in a human-readable format.
-            {sf_status}
-        """,
-        tools=tools,
-    )
 
 
 # ── The one MCP tool exposed to Copilot ──────────────────────────────────────
@@ -347,26 +203,27 @@ async def ask(ctx: Context, query: str) -> str:
         log.warning("[ask] Salesforce not initialized yet — trying now")
         await _init_salesforce()
 
-    # If Salesforce still unavailable, inject login hint into query context.
-    sf_status = ""
-    if _sf_agent is None and _sf_login_url is not None:
-        sf_status = f"\n\nNOTE: Salesforce is not authenticated. If the user asks for Salesforce data, respond with: 'Salesforce is currently not authenticated. Please log in first at: {_sf_login_url}'"
-
-    # 5. Build per-request GraphAgent.
+    # 5. Build per-request GraphAgent (fresh OBO token each time).
     graph_agent = _build_graph_agent(graph_token)
 
-    # 6. Build orchestrator with available agents.
-    if _ss_agent is not None or _sf_agent is not None or sf_status:
-        # ook als sf_status niet leeg is -> aka user moet inloggen -> 
-        orchestrator = _build_orchestrator(graph_agent, _ss_agent, _sf_agent, sf_status)
-    else:
-        log.warning("[ask] No sub-agents available — using GraphAgent only")
-        orchestrator = graph_agent
+    # 6. Build PlanningOrchestrator with available agents.
+    orchestrator = create_planning_orchestrator(
+        graph_agent=graph_agent,
+        sf_agent=_sf_agent,
+        ss_agent=_ss_agent,
+    )
 
-    # 7. Run.
+    # 7. Run and collect all text chunks into a single string result.
     log.info("[ask] query=%r", query[:120])
-    response = await orchestrator.run(query)
-    result = response.text or "(no response)"
+    chunks = []
+    async for event in orchestrator.run_sse(query):
+        if event["type"] == "text":
+            chunks.append(event["chunk"])
+        elif event["type"] == "error":
+            log.error("[ask] orchestrator error: %s", event["message"])
+            raise RuntimeError(event["message"])
+
+    result = "".join(chunks)
     log.info("[ask] done, response length=%d", len(result))
     return result
 

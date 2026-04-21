@@ -1,0 +1,48 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (smartsales)...
+Synthesizing...
+### Search Results Summary
+
+#### OneDrive Files Related to 'Locations':
+- **SmartSales_Locations.docx**
+  - [Access here](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BF23C8827-CC49-4607-A0B8-FF47034DC9E8%7D&file=SmartSales_Locations.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+- **agenda.docx** (not specifically related to 'locations')
+  - [Access here](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B8BB0C73E-6AED-4FEB-8D5E-440279145EBF%7D&file=agenda.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+- **Prospects_Filled.xlsx** (not specifically related to 'locations')
+  - [Access here](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B144B0D44-0527-4B59-BF80-8F4EBE10A1CF%7D&file=Prospects_Filled.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+#### Locations Found in SmartSales:
+- **AACO DAVIDSON**
+  - Address: Havenkant 6, Leuven, 3000, Belgium
+- **Stream Software**
+  - Address: Potvlietlaan 4, Antwerpen, 2600, Belgium
+- **name-v1**
+  - Address: Stationsplein 14, Antwerp, 2018, Belgium
+- **Customer1**
+  - Address: Markt 5, Bruges, 8000, Belgium
+- **Arne Albrecht**
+  - Address: Lippenslaan 347, Knokke, 8300, Belgium
+- **Acme Logistics Ltd**
+  - Address: Baker Street 221B, London, NW1 6XE, United Kingdom
+- **Advanced Communications**
+  - Address: Mediapark 5, Ghent, 9000, Belgium
+- **Displaytech**
+  - Address: Technologielaan 12, Leuven, 3001, Belgium
+- **EASI**
+  - Address: Rue d'Arlon 50, Namur, 5000, Belgium
+- **Global Media**
+  - Address: Mediastraat 10, Brussels, 1000, Belgium
+- **Test**
+  - Address: Teststraat 1, Brussels, 1000, Belgium
+- **Universal Services**
+  - Address: Serviceweg 22, Mechelen, 2800, Belgium
+- **Upstyle Inc.**
+  - Address: Fashion Avenue 88, Antwerp, 2000, Belgium
+- **ur mom**
+  - Address: Rue de France 1, Brussels, 1000, Belgium
+- **supplier1**
+  - Address: Rue du Commerce 1, Brussels, 1000, Belgium
+
+For further details, you can refer to the files in OneDrive or check the specific locations in SmartSales as needed.

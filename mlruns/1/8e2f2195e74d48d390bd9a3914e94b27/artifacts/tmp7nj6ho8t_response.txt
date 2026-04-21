@@ -1,0 +1,28 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (salesforce)...
+Synthesizing...
+Here are the three largest open Salesforce opportunities along with the billing country of each related account:
+
+### Largest Open Opportunities
+1. **Opportunity Name:** new opp
+   - **Amount:** $1,000,000
+   - **Close Date:** 30 April 2026
+   - **Account Name:** Global Media
+   - **Billing Country:** Not specified (null)
+
+2. **Opportunity Name:** salesforce.com - 1,000 Widgets
+   - **Amount:** $100,000
+   - **Close Date:** 15 April 2021
+   - **Account Name:** salesforce.com
+   - **Billing Country:** Not specified (null)
+
+3. **Opportunity Name:** salesforce.com - 500 Widgets
+   - **Amount:** $50,000
+   - **Close Date:** 13 March 2021
+   - **Account Name:** Global Media
+   - **Billing Country:** Not specified (null)
+
+### Notes:
+- The billing country for both accounts (Global Media and salesforce.com) is unspecified (null).

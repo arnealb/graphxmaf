@@ -1,0 +1,46 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Here is the summary of email senders from the last 7 days and whether they have matching contacts in Salesforce:
+
+### Email Senders
+1. **Sender:** Arne Albrecht
+   - **Email:** albrecht.arne@gmail.com
+   - **Received:** 13 April 2026
+   - **Total Emails:** 6 
+   - **[Link to Emails](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOJ%2FAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+2. **Sender:** SmartAdmin
+   - **Email:** SmartAdmin@easigroupdemo.onmicrosoft.com
+   - **Received:** 14 April 2026
+   - **Total Emails:** 3
+   - **[Link to Emails](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANJHug1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+3. **Sender:** Microsoft Outlook
+   - **Email:** MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@easigroupdemo.onmicrosoft.com
+   - **Received:** 14 April 2026
+   - **Total Emails:** 1
+   - **[Link to Emails](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANJTK74AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+4. **Sender:** Microsoft Security
+   - **Email:** MSSecurity-noreply@microsoft.com
+   - **Received:** 17 April 2026
+   - **Total Emails:** 2
+   - **[Link to Emails](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANUrxQfAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+### Matching Salesforce Contacts
+- **Arne Albrecht**
+  - **Email:** albrecht.arne@gmail.com
+  - **Account Name:** Displaytech
+  
+No matching contacts were found for emails from **SmartAdmin** or **Microsoft Outlook** as these are specific domains tied to Microsoft's services.
+
+### Summary
+- **Total Senders:** 4 unique senders
+- **Matched Contacts in Salesforce:** 
+  - *Arne Albrecht is linked to Salesforce as a contact.*
+- **No matches found for domains of SmartAdmin and Microsoft services.**
+
+This report provides a clear overview of who reached out to you in the past week and their presence in Salesforce.

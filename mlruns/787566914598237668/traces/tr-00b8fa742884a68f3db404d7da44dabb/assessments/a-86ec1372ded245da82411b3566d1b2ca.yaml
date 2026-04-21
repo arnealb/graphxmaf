@@ -1,0 +1,14 @@
+assessment_id: a-86ec1372ded245da82411b3566d1b2ca
+assessment_name: expected_response
+create_time: '2026-04-20T13:36:28.828Z'
+expectation:
+  value: Use mlflow.<flavor>.log_model() (e.g., sklearn, pytorch) to save models.
+    Load later with mlflow.<flavor>.load_model('runs:/<run_id>/model').
+last_update_time: '2026-04-20T13:36:28.828Z'
+metadata:
+  demo: 'true'
+source:
+  source_id: demo_annotator
+  source_type: HUMAN
+trace_id: tr-00b8fa742884a68f3db404d7da44dabb
+valid: true

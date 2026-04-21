@@ -1,0 +1,54 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is the list of Excel and PDF files found in your OneDrive:
+
+### PDF Files:
+- **[Contract_Customer_ABY.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/Contract_Customer_ABY.pdf)**
+  - Created: 3 June 2025
+- **[Contract_Customer_DB 1.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/Contract_Customer_DB%201.pdf)**
+  - Created: 3 June 2025
+- **[Contract_Customer.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/Contract_Customer.pdf)**
+  - Created: 3 June 2025
+- **[3. DHL T&C 5.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/3.%20DHL%20T%26C%205.pdf)**
+  - Created: 30 May 2025
+- **[Contract_Customer 1.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/Contract_Customer%201.pdf)**
+  - Created: 3 June 2025
+- **[Contract_Customer_DB.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/Contract_Customer_DB.pdf)**
+  - Created: 3 June 2025
+- **[3. DHL T&C 4.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/3.%20DHL%20T%26C%204.pdf)**
+  - Created: 12 May 2025
+- **[3. DHL T&C.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/3.%20DHL%20T%26C.pdf)**
+  - Created: 3 April 2025
+- **[General purchase conditions.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/General%20purchase%20conditions.pdf)**
+  - Created: 14 May 2025
+- **[General purchase conditions 7.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/General%20purchase%20conditions%207.pdf)**
+  - Created: 14 May 2025
+- **[3. DHL T&C 4 1.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/3.%20DHL%20T%26C%204%201.pdf)**
+  - Created: 14 May 2025
+- **[General purchase conditions 3.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/General%20purchase%20conditions%203.pdf)**
+  - Created: 14 May 2025
+- **[General purchase conditions 1.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/General%20purchase%20conditions%201.pdf)**
+  - Created: 14 May 2025
+- **[3. DHL T&C 4 2.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/3.%20DHL%20T%26C%204%202.pdf)**
+  - Created: 14 May 2025
+- **[General purchase conditions 5.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/General%20purchase%20conditions%205.pdf)**
+  - Created: 14 May 2025
+- **[General purchase conditions 6.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/General%20purchase%20conditions%206.pdf)**
+  - Created: 14 May 2025
+- **[General purchase conditions 4.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/General%20purchase%20conditions%204.pdf)**
+  - Created: 14 May 2025
+- **[3. DHL T&C 3.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/3.%20DHL%20T%26C%203.pdf)**
+  - Created: 12 May 2025
+- **[3. DHL T&C 2.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/3.%20DHL%20T%26C%202.pdf)**
+  - Created: 12 May 2025
+- **[General purchase conditions 2.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/General%20purchase%20conditions%202.pdf)**
+  - Created: 14 May 2025
+- **[3. DHL T&C 1.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/3.%20DHL%20T%26C%201.pdf)**
+  - Created: 12 May 2025
+
+### Excel Files:
+- No Excel files were found in your OneDrive. 
+
+You can click on the links to access each file directly.

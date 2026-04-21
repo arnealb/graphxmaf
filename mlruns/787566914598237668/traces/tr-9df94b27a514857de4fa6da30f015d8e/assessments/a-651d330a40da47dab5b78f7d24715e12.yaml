@@ -1,0 +1,14 @@
+assessment_id: a-651d330a40da47dab5b78f7d24715e12
+assessment_name: expected_response
+create_time: '2026-04-20T13:36:28.866Z'
+expectation:
+  value: Check RETRIEVER span in traces for scores. Try adjusting similarity threshold,
+    chunk size, or embedding model. Log params to compare experiments.
+last_update_time: '2026-04-20T13:36:28.866Z'
+metadata:
+  demo: 'true'
+source:
+  source_id: demo_annotator
+  source_type: HUMAN
+trace_id: tr-9df94b27a514857de4fa6da30f015d8e
+valid: true

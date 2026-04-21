@@ -1,0 +1,1 @@
+The orchestrator correctly routed the user query to the salesforce sub-agent, which is the appropriate agent for retrieving accounts and their billing addresses.

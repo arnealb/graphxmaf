@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/AALB/Desktop/mp/graph/graphxmaf/mlruns/296657415073165476/f3d9ccc0ff314267ae75e936e866043c/artifacts
+end_time: 1776692413276
+entry_point_name: ''
+experiment_id: '296657415073165476'
+lifecycle_stage: active
+run_id: f3d9ccc0ff314267ae75e936e866043c
+run_name: tc09_cross-system_medium
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776692391582
+status: 3
+tags: []
+user_id: AALB

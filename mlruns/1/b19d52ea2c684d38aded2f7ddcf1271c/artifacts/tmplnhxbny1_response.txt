@@ -1,0 +1,20 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here is the Salesforce account that contains 'Group' in its name:
+
+- **Account Name**: Easi Group
+  - **ID**: 0010600002E2TeGAAV
+  - **Industry**: Not specified
+  - **Website**: Not specified
+  - **Phone**: Not specified
+  - **Type**: Not specified
+  - **Billing Information**: Not specified
+  - **Number of Employees**: Not specified
+  - **Annual Revenue**: Not specified
+  - **Description**: Not specified
+  - **Created Date**: Not specified
+  - **Last Modified Date**: Not specified 
+
+This is the only account returned in the query results.

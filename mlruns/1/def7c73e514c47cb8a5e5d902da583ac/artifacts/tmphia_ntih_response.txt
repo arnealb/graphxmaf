@@ -1,0 +1,105 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here is the list of Salesforce contacts in the Sales department:
+
+- **Jeff Blay**
+  - Email: jblay@example.com
+  - Account: Towson Inc.
+  
+- **James Wu**
+  - Email: jwu@example.com
+  - Account: Omega SA-NV
+
+- **Gabriel Silva**
+  - Email: rlloyd@example.com
+  - Account: Opportunity Resources Inc
+
+- **Judy Odom**
+  - Email: jodom@example.com
+  - Account: Pairi Daiza
+
+- **Danielle Hauck**
+  - Email: dhauck@example.com
+  - Account: Vand Enterprises Inc.
+
+- **Stewart Clink**
+  - Email: sclink@example.com
+  - Account: Inventure Inc.
+
+- **Tammy Reseller**
+  - Email: treseller@example.com
+  - Account: Universal Services
+
+- **Brad Anastasio**
+  - Email: banastasio@example.com
+  - Account: Tech Labs
+
+- **Paul Partner**
+  - Email: ppartner@example.com
+  - Account: Test
+
+- **Barry Brown**
+  - Email: bbrown@example.com
+  - Account: Meridian Partners
+
+- **Sean Silver**
+  - Email: ssilver@example.com
+  - Account: Pinnacle Partners
+
+- **Jamie Green**
+  - Email: jgreen@example.com
+  - Account: Summit Resellers
+
+- **Andrea Bowden**
+  - Email: abowden@example.com
+  - Account: Displaytech
+
+- **Sarah Phillips**
+  - Email: sphillips@example.com
+  - Account: Test
+
+- **Daryl Distributor**
+  - Email: ddistributor@example.com
+  - Account: Zenith Distributors
+
+- **Sandy Knudson**
+  - Email: sknudson@example.com
+  - Account: General Utilities
+
+- **Larry Kuchenreuther**
+  - Email: lkuchenreuther@example.com
+  - Account: Missoula & Sons Inc.
+
+- **Dan Fitzgerald**
+  - Email: dfitzgerald112@example.com
+  - Account: Omega Financial Services
+
+- **Mark Dillon**
+  - Email: mdillon@example.com
+  - Account: Pairi Daiza
+
+- **Bjorn Lundgren**
+  - Email: bolson@example.com
+  - Account: Big Sky & Sons
+
+- **Chris Templey**
+  - Email: ctempley@example.com
+  - Account: Employnet
+
+- **Joyce Turner**
+  - Email: jturner@example.com
+  - Account: Test
+
+- **Adam Mercer**
+  - Email: amercer@example.com
+  - Account: Test
+
+- **Shay Dulaney**
+  - Email: sdulaney@example.com
+  - Account: Datanet Inc.
+
+- **Bree Reitz**
+  - Email: breitz@example.com
+  - Account: Datanet Inc.

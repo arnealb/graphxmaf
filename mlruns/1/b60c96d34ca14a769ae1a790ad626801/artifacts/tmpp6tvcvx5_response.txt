@@ -1,0 +1,68 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (smartsales)...
+️Executing (smartsales)...
+Synthesizing...
+Here are the details of the SmartSales orders, including the full details of the first order.
+
+### List of SmartSales Orders:
+1. **Order UID:** 332cb4b2-285d-11f1-a2fe-005056010707
+   - **Customer:** Customer1
+   - **Internal Reference:** TEST-001
+   - **External Reference:** EXT-001
+   - **Date:** 25 March 2026
+   - **Total:** $0
+   - **Total Without Discount:** $100
+   - **Comments:** Test order created via Postman
+   - **Status:** APPROVED
+
+2. **Order UID:** e8333fcf-38ad-11f1-a803-005056010707
+   - **Customer:** Arne Albrecht
+   - **Internal Reference:** ORD-ARNE-001
+   - **External Reference:** EXT-ARNE-001
+   - **Date:** 15 April 2026
+   - **Total:** $0
+   - **Total Without Discount:** $2047.99
+   - **Comments:** New employee IT setup for Arne Albrecht
+   - **Status:** APPROVED
+
+3. **Order UID:** f63830a6-38ad-11f1-a803-005056010707
+   - **Customer:** ur mom
+   - **Internal Reference:** ORD-URMOM-001
+   - **External Reference:** EXT-URMOM-001
+   - **Date:** 15 April 2026
+   - **Total:** $0
+   - **Total Without Discount:** $1356
+   - **Comments:** Home office equipment order
+   - **Status:** APPROVED
+
+4. **Order UID:** fced9d92-38ad-11f1-a2fe-005056010707
+   - **Customer:** Global Media
+   - **Internal Reference:** ORD-GLOBALMEDIA-001
+   - **External Reference:** EXT-GLOBALMEDIA-001
+   - **Date:** 15 April 2026
+   - **Total:** $0
+   - **Total Without Discount:** $2444.5
+   - **Comments:** Bulk order for media production team
+   - **Status:** APPROVED
+
+### Full Details of the First Order:
+- **UID:** 332cb4b2-285d-11f1-a2fe-005056010707
+- **Date:** 25 March 2026
+- **Internal Reference:** TEST-001
+- **External Reference:** EXT-001
+- **Customer Name:** Customer1
+- **Total Quantity:** 2
+- **Supplier:** supplier1
+- **Items:**
+  - **Code:** ITEM-001
+    - **Description:** Test product
+    - **Quantity:** 2
+    - **Price:** $50
+    - **Total Price:** $100
+- **Comments:** Test order created via Postman
+- **Status:** APPROVED
+- **Total Discount:** $100
+- **Total Without Discount:** $100
+
+These details provide a comprehensive view of the orders in the SmartSales system, focusing on the requested first order.

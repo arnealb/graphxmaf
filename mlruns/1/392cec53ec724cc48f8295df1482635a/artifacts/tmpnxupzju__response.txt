@@ -1,0 +1,30 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+You have received the following emails in the last 7 days:
+
+- **Sender:** SmartAdmin
+  - **Subject:** meeting
+- **Sender:** Microsoft Outlook
+  - **Subject:** Undeliverable: meeting
+- **Sender:** SmartAdmin
+  - **Subject:** zup me de boys
+- **Sender:** SmartAdmin
+  - **Subject:** nog e meeting
+- **Sender:** SmartAdmin
+  - **Subject:** DM Process sync failed
+- **Sender:** SmartAdmin
+  - **Subject:** meeting about numbers or something
+- **Sender:** Arne Albrecht
+  - **Subject:** Accepted: meeting about numbers or something @ di 21 apr 2026 18:30 - 19:00 (CEST) (SmartAdmin)
+- **Sender:** Microsoft Security
+  - **Subject:** New recommendation available for EasiGroupDemo
+- **Sender:** Microsoft Security
+  - **Subject:** Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)
+- **Sender:** Arne Albrecht
+  - **Subject:** this is a test
+- **Sender:** Arne Albrecht
+  - **Subject:** supplier1 possible order
+- **Sender:** Microsoft Notifications
+  - **Subject:** 59080341 is de verificatiecode voor Microsoft SharePoint.

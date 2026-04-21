@@ -1,0 +1,12 @@
+execution_duration_ms: 678
+request_preview: '{"message": "I''m new to MLflow. How do I get started with experiment
+  tracking?", "turn": 1}'
+request_time: '2026-04-15T19:47:02.638Z'
+response_preview: '{"response": "To get started with MLflow, first install it with
+  pip. Then you can start using the tracking API to log your experiments."}'
+state: OK
+trace_id: tr-741484651c28ca0591c58b4bb46794db
+trace_location:
+  mlflow_experiment:
+    experiment_id: '787566914598237668'
+  type: MLFLOW_EXPERIMENT

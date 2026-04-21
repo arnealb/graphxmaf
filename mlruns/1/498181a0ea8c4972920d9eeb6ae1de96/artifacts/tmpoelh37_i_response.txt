@@ -1,0 +1,29 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, smartsales, salesforce)...
+Synthesizing...
+Here is the requested information:
+
+### Last 2 Emails
+1. **Subject:** supplier1 possible order
+   - **Sender:** Arne Albrecht (albrecht.arne@gmail.com)
+   - **Received:** 20 April 2026
+   - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+2. **Subject:** this is a test
+   - **Sender:** Arne Albrecht (albrecht.arne@gmail.com)
+   - **Received:** 20 April 2026
+   - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmtAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### SmartSales Locations in Belgium
+1. **AACO DAVIDSON**
+   - **Address:** Havenkant 6, Leuven, 3000, Belgium
+
+2. **Unnamed Location**
+   - **Address:** Stationsplein 14, Antwerp, 2018, Belgium
+
+3. **Customer1**
+   - **Address:** Markt 5, Bruges, 8000, Belgium
+
+### Salesforce Accounts
+- No Salesforce accounts were found.

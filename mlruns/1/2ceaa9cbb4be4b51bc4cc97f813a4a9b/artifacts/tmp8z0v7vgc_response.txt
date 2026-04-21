@@ -1,0 +1,85 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+️Executing (smartsales)...
+Synthesizing...
+### Overview of Upcoming Meetings, Related Opportunities, and Locations
+
+#### Upcoming Meetings (From Microsoft 365):
+1. **Meeting: nog e meeting**
+   - **Date & Time:** 21 April 2026, 12:30 PM - 1:00 PM
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendees:** Arne Albrecht (a.albrecht@easi.net)
+   
+2. **Meeting: meeting about numbers or something**
+   - **Date & Time:** 21 April 2026, 4:30 PM - 5:00 PM
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendees:** Arne Albrecht (albrecht.arne@gmail.com)
+   
+3. **Meeting: gym**
+   - **Date & Time:** 22 April 2026, 8:30 PM - 9:00 PM
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendees:** None
+   
+4. **Meeting: anotha one**
+   - **Date & Time:** 23 April 2026, 11:00 AM - 11:30 AM
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendees:** None
+
+5. **Meeting: closing opportunity**
+   - **Date & Time:** 30 April 2026, 12:00 AM - 1 May 2026, 12:00 AM
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendees:** None
+
+#### Related Salesforce Opportunities:
+- No relevant results returned from Salesforce.
+
+#### Locations (From SmartSales):
+- **AACO DAVIDSON**
+   - Address: Havenkant 6, Leuven, 3000, Belgium
+
+- **Stream Software**
+   - Address: Potvlietlaan 4, Antwerpen, 2600, Belgium
+
+- **name-v1**
+   - Address: Stationsplein 14, Antwerp, 2018, Belgium
+
+- **Customer1**
+   - Address: Markt 5, Bruges, 8000, Belgium
+
+- **Arne Albrecht**
+   - Address: Lippenslaan 347, Knokke, 8300, Belgium
+
+- **Acme Logistics Ltd**
+   - Address: Baker Street 221B, London, NW1 6XE, United Kingdom
+
+- **Advanced Communications**
+   - Address: Mediapark 5, Ghent, 9000, Belgium
+
+- **Displaytech**
+   - Address: Technologielaan 12, Leuven, 3001, Belgium
+
+- **EASI**
+   - Address: Rue d'Arlon 50, Namur, 5000, Belgium
+
+- **Global Media**
+   - Address: Mediastraat 10, Brussels, 1000, Belgium
+
+- **Test**
+   - Address: Teststraat 1, Brussels, 1000, Belgium
+
+- **Universal Services**
+   - Address: Serviceweg 22, Mechelen, 2800, Belgium
+
+- **Upstyle Inc.**
+   - Address: Fashion Avenue 88, Antwerp, 2000, Belgium
+
+- **ur mom**
+   - Address: Rue de France 1, Brussels, 1000, Belgium
+
+- **supplier1**
+   - Address: Rue du Commerce 1, Brussels, 1000, Belgium
+
+### Summary
+The upcoming meetings involve two scheduled meetings on 21 April 2026, followed by additional meetings on 22 and 23 April, with no Salesforce opportunities available. Multiple company locations have been identified from SmartSales, primarily in Belgium and the UK.

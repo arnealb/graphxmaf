@@ -1,0 +1,34 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Here’s the summary of email senders from the past 7 days and their corresponding Salesforce contact matches:
+
+### Email Senders
+- **SmartAdmin@easigroupdemo.onmicrosoft.com** (multiple occurrences, but treated as one for domain)
+- **MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@easigroupdemo.onmicrosoft.com**
+- **albrecht.arne@gmail.com** (multiple occurrences, treated as one)
+- **MSSecurity-noreply@microsoft.com** (multiple occurrences, treated as one)
+- **no-reply@notify.microsoft.com**
+- Invalid format sender (ignored).
+
+### Domains and Salesforce Contacts
+1. **Domain**: easigroupdemo.onmicrosoft.com
+   - No contacts found in Salesforce for this domain.
+  
+2. **Domain**: gmail.com
+   - Contact found:
+     - **Name**: Arne Albrecht
+     - **Email**: albrecht.arne@gmail.com
+     - **Account Name**: Displaytech
+
+3. **Domain**: microsoft.com
+   - No contacts found in Salesforce for this domain.
+
+### Conclusion
+- **Email senders with contacts**:
+  - **Albrecht Arne** matches with the email **albrecht.arne@gmail.com**.
+
+- **Others**:
+  - Senders from the domains "easigroupdemo.onmicrosoft.com" and "microsoft.com" do not have matching contacts in Salesforce.

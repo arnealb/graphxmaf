@@ -1,0 +1,9 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+The attempt to retrieve Salesforce opportunities yielded an error due to a session issue. Consequently, no data on opportunities with amounts greater than 10,000 and probabilities is available.
+
+- **Error from Salesforce:** SESSION_ERROR: session not found. Please re-authenticate. 
+
+Please re-authenticate or try again later to access the required information.

@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/AALB/Desktop/mp/graph/graphxmaf/mlruns/296657415073165476/892dcf7d178a4167a6017396fa4ba212/artifacts
+end_time: 1776692380924
+entry_point_name: ''
+experiment_id: '296657415073165476'
+lifecycle_stage: active
+run_id: 892dcf7d178a4167a6017396fa4ba212
+run_name: tc07_crm_simple
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776692361698
+status: 3
+tags: []
+user_id: AALB

@@ -1,0 +1,78 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is the content of the document titled 'agenda' from OneDrive:
+
+---
+
+### Agenda Overview
+
+1. **Date:** 16 April 2026  
+   **Time:** 09:00  
+   **Location:** Meeting Room Cactus  
+   - Welcome and opening  
+   - Review of the missing stapler situation at Displaytech  
+   - Update on the office plant recovery plan for Allied Technologies  
+   - Discussion of suspicious fridge leftovers near the cityaccount floor  
+   - Alignment on printer noise complaints from Global Media  
+   - Planning the next coffee bean order for Advanced Communications  
+   - Questions and open discussion  
+   - Closing  
+   **Prepared by:** Arne Albrecht  
+
+2. **Date:** 18 April 2026  
+   **Time:** 14:30  
+   **Location:** Zoom Room Banana  
+   - Welcome and opening  
+   - Recap of last week’s chair-swapping incident at account in france  
+   - Budget review for novelty mugs for Displaytech  
+   - Discussion of whether the whiteboard in Global Media is haunted  
+   - Timeline for replacing the broken fan at Allied Technologies  
+   - Allocation of emergency biscuits for Advanced Communications  
+   - Questions and open discussion  
+   - Closing  
+   **Prepared by:** John lastname  
+
+3. **Date:** 21 April 2026  
+   **Time:** 11:15  
+   **Location:** Basement Conference Pod  
+   - Welcome and opening  
+   - Follow-up on the disappearing ethernet cables at Displaytech  
+   - Review of folder naming chaos in cityaccount  
+   - Debate on acceptable microwave smells at account in france  
+   - Status of the "urgent" sticker inventory for Global Media  
+   - Action points for hallway echo reduction at Allied Technologies  
+   - Questions and open discussion  
+   - Closing  
+   **Prepared by:** Leo Snickers  
+
+4. **Date:** 22 April 2026  
+   **Time:** 08:45  
+   **Location:** Rooftop Annex  
+   - Welcome and opening  
+   - Overview of Q2 snack performance at Advanced Communications  
+   - Incident review: accidental all-staff reply sent to Displaytech  
+   - Evaluation of motivational poster effectiveness in cityaccount  
+   - Planning the annual keyboard cleaning effort for Global Media  
+   - Clarification on who keeps stealing chargers at account in france  
+   - Questions and open discussion  
+   - Closing  
+   **Prepared by:** another lead  
+
+5. **Date:** 24 April 2026  
+   **Time:** 16:00  
+   **Location:** Room Delta-2  
+   - Welcome and opening  
+   - Review of cardboard box accumulation at Allied Technologies  
+   - Status update on the backup backup plan for Displaytech  
+   - Discussion of socks found near the server rack in Global Media  
+   - Decision on rebranding the intern cupboard at cityaccount  
+   - Next steps for cable untangling at account in france  
+   - Questions and open discussion  
+   - Closing  
+   **Prepared by:** Ur Mom  
+
+*(Additional agendas continue with similar formatting until the last entry.)* 
+
+---

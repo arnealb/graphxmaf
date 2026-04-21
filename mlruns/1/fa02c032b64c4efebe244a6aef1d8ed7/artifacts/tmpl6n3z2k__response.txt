@@ -1,0 +1,26 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+You can sort SmartSales catalog items by the following fields:
+
+- **Tech Server Creation Date**: `techServerCreationDate`
+- **Tech Server Update Date**: `techServerUpdateDate`
+- **Code**: `code`
+- **External ID**: `externalId`
+- **Title**: `title`
+- **Search Keyword Text**: `searchKeywordText`
+- **Price**: `price`
+- **Measurement Unit Reference Unit Code**: `measurementUnitReferenceUnitCode`
+- **Measurement Unit Title**: `measurementUnitTitle`
+- **Position**: `position`
+- **Quantity Sold**: `quantitySold` (MOBILE only)
+- **Description**: `description` (MOBILE only)
+- **Availability**: `availability` (MOBILE only)
+- **Sales Unit**: `salesunit` (MOBILE only)
+- **Packaging Unit**: `packagingunit` (MOBILE only)
+- **Measure**: `measure` (MOBILE only)
+- **Unit of Measure**: `unitofmeasure` (MOBILE only)
+- **Group**: `group` (MOBILE only)
+
+These fields can be utilized for sorting catalog items on both web and mobile platforms.

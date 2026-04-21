@@ -1,0 +1,20 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph, salesforce)...
+Synthesizing...
+### Your Profile in Microsoft 365
+- **Display Name:** SmartAdmin
+- **Email:** SmartAdmin@easigroupdemo.onmicrosoft.com
+
+### Salesforce Accounts
+1. **Account Name:** supplier1
+   - **ID:** 001KI00000N7MjVYAV
+
+2. **Account Name:** cityaccount
+   - **ID:** 001KI00000N73fKYAR
+   - **Website:** [www.google.com](http://www.google.com)
+
+3. **Account Name:** account in france
+   - **ID:** 001KI00000N73BoYAJ
+   - **Industry:** Technology
+   - **Website:** [www.google.com](http://www.google.com)

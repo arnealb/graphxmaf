@@ -1,0 +1,57 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce, smartsales)...
+Synthesizing...
+### Salesforce Leads in Belgium
+The following leads were found in Belgium:
+
+1. **Bert Coppens**
+   - Company: another-company
+   - Status: New
+   - Email: Not available
+
+2. **Arne Albrecht**
+   - Company: easi_dupe
+   - Status: Contacted
+   - Email: albrecht.arne@gmail.com
+
+3. **Ur Moms Lead**
+   - Company: grandmas bakery
+   - Status: New
+   - Email: Not available
+
+**Note:** No specific country or city information was detailed for the leads in the initial Salesforce query results.
+
+### SmartSales Locations in Belgium
+Several locations were found in Belgium:
+
+1. **AACO Davidson**
+   - Address: Havenkant 6, Leuven, 3000
+   - Latitude: 50.88734
+   - Longitude: 4.70050
+
+2. **Anonymous Customer**
+   - Address: Stationsplein 14, Antwerp, 2018
+   - Latitude: 51.13420
+   - Longitude: 4.47514
+
+3. **Customer1**
+   - Address: Markt 5, Bruges, 8000
+   - Latitude: 51.20862
+   - Longitude: 3.22509
+
+4. **Arne Albrecht**
+   - Address: Lippenslaan 347, Knokke, 8300
+   - Latitude: 51.35181
+   - Longitude: 3.28877
+
+5. **Supplier1**
+   - Address: Rue du Commerce 1, Brussels, 1000
+   - Latitude: 50.83947
+   - Longitude: 4.36731
+
+### Conclusion
+- There are **SmartSales locations in Belgium** that can potentially correspond to the Salesforce leads found:
+  - **Arne Albrecht** from Salesforce matches with a **SmartSales location** (Lippenslaan 347, Knokke, 8300), suggesting a direct connection.
+  
+Other Salesforce leads (Bert Coppens and Ur Moms Lead) do not have specific city or address data to align them with SmartSales locations directly.

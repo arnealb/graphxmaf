@@ -1,0 +1,48 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce, smartsales)...
+Synthesizing...
+### Overview of Salesforce Leads and SmartSales Locations in Belgium
+
+#### Salesforce Leads in Belgium
+1. **Lead:** Bert Coppens
+   - **Company:** another-company
+   - **Status:** New
+   - **Email:** Not provided
+   
+2. **Lead:** Arne Albrecht
+   - **Company:** easi_dupe
+   - **Status:** Contacted
+   - **Email:** albrecht.arne@gmail.com
+
+3. **Lead:** ur moms lead ur dads lead
+   - **Company:** grandmas bakery
+   - **Status:** New
+   - **Email:** Not provided
+
+**Note:** All leads lack specific location details (city, state, etc.).
+
+#### SmartSales Locations in Belgium
+1. **Location:** AACO DAVIDSON
+   - **Address:** Havenkant 6, Leuven, 3000
+   - **Last Visit Date:** 5 April 2026
+
+2. **Location:** name-v1
+   - **Address:** Stationsplein 14, Antwerp, 2018
+   - **Last Visit Date:** 10 March 2026
+
+3. **Location:** Customer1
+   - **Address:** Markt 5, Bruges, 8000
+   - **Last Order Date:** 19 March 2026
+
+4. **Location:** Arne Albrecht
+   - **Address:** Lippenslaan 347, Knokke, 8300
+   - **Last Order Date:** 15 April 2026
+
+5. **Location:** supplier1
+   - **Address:** Rue du Commerce 1, Brussels, 1000
+   - **Last Order Date:** Not specified
+
+### Summary
+- There are **three leads in Salesforce** that are potentially from Belgium, although no specific location data is provided.
+- There are **five SmartSales locations** confirmed in Belgium, located in Leuven, Antwerp, Bruges, Knokke, and Brussels.

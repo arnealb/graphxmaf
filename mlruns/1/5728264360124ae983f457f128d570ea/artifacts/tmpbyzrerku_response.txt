@@ -1,0 +1,26 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce, smartsales, graph)...
+Synthesizing...
+Here’s a 360 view of the Salesforce account 'supplier1' based on available data:
+
+### Open Opportunities
+- **Salesforce:** Unable to retrieve information due to session error. Please re-authenticate to access open opportunities.
+
+### SmartSales Locations
+- **Account Name:** supplier1
+- **Address:**
+  - **Street:** Rue du Commerce 1
+  - **City:** Brussels
+  - **Zip Code:** 1000
+  - **Country:** Belgium
+- **Coordinates:** 
+  - **Latitude:** 50.8394667
+  - **Longitude:** 4.3673141
+- **Status:** Not marked as deleted or commented.
+
+### Emails Related to the Account
+- **Graph:** Unable to access email data due to an expired authentication token. Please refresh your session or re-authenticate.
+
+### Summary
+- For a comprehensive view, re-authenticate your Salesforce and email systems to access full details on open opportunities and related emails.

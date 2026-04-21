@@ -38,11 +38,13 @@ class AgentInvocation:
 class RoutingTrace:
     """Routing metadata for one orchestrator run."""
     user_query: str
+    plan: Optional[dict] = None                       # populated by PlanningOrchestrator
     invoked_agents: list[AgentInvocation] = field(default_factory=list)
 
     def to_dict(self) -> dict:
         return {
             "user_query": self.user_query,
+            "plan": self.plan,
             "invoked_agents": [asdict(inv) for inv in self.invoked_agents],
         }
 

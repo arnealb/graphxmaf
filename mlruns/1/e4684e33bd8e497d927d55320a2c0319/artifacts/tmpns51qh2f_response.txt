@@ -1,0 +1,21 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph, smartsales)...
+Synthesizing...
+Here is the information based on your query:
+
+### Microsoft 365 Identity
+- **Display Name**: SmartAdmin
+- **Email**: SmartAdmin@easigroupdemo.onmicrosoft.com  
+*From Microsoft 365: ...*
+
+### SmartSales Locations
+1. **AACO DAVIDSON**
+   - **Address**: Havenkant 6, Leuven, 3000, Belgium
+2. **Stream Software**
+   - **Address**: Potvlietlaan 4, Antwerpen, 2600, Belgium
+3. **name-v1**
+   - **Address**: Stationsplein 14, Antwerp, 2018, Belgium  
+*From SmartSales: ...* 
+
+If you need any additional details, feel free to ask!

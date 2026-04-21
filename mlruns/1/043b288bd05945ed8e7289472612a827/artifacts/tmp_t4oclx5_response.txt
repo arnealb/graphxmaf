@@ -1,0 +1,44 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are your upcoming events and meetings for the next 14 days:
+
+### Events
+
+1. **nog e meeting**
+   - **Date**: 21 April 2026
+   - **Time**: 12:30 PM - 1:00 PM
+   - **Organizer**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendees**: Arne Albrecht (a.albrecht@easi.net)
+   - [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhVAAA%3D&exvsurl=1&path=/calendar/item)
+
+2. **meeting about numbers or something**
+   - **Date**: 21 April 2026
+   - **Time**: 4:30 PM - 5:00 PM
+   - **Organizer**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendees**: albrecht.arne@gmail.com
+   - [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANRyrptAAA%3D&exvsurl=1&path=/calendar/item)
+
+3. **gym**
+   - **Date**: 22 April 2026
+   - **Time**: 8:30 PM - 9:00 PM
+   - **Organizer**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendees**: None
+   - [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhWAAA%3D&exvsurl=1&path=/calendar/item)
+
+4. **anotha one**
+   - **Date**: 23 April 2026
+   - **Time**: 11:00 AM - 11:30 AM
+   - **Organizer**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendees**: None
+   - [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhXAAA%3D&exvsurl=1&path=/calendar/item)
+
+5. **closing opportunity**
+   - **Date**: 30 April 2026
+   - **Time**: All day event (Starts 30 April, ends 1 May)
+   - **Organizer**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendees**: None
+   - [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANc8eMRAAA%3D&exvsurl=1&path=/calendar/item)
+
+Feel free to click on any event link for more details or to manage your calendar.

@@ -1,0 +1,52 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Here is an overview of your upcoming meetings, related Salesforce opportunities, and SmartSales locations:
+
+### Upcoming Meetings from Microsoft 365:
+
+1. **Meeting: nog e meeting**
+   - **Date:** 21 April 2026
+   - **Time:** 12:30 PM - 1:00 PM
+   - **Organizer:** SmartAdmin
+   - **Attendee:** Arne Albrecht
+
+2. **Meeting: meeting about numbers or something**
+   - **Date:** 21 April 2026
+   - **Time:** 4:30 PM - 5:00 PM
+   - **Organizer:** SmartAdmin
+   - **Attendee:** albrecht.arne@gmail.com
+
+3. **Meeting: gym**
+   - **Date:** 22 April 2026
+   - **Time:** 8:30 PM - 9:00 PM
+   - **Organizer:** SmartAdmin
+   - **Attendees:** None
+
+4. **Meeting: anotha one**
+   - **Date:** 23 April 2026
+   - **Time:** 11:00 AM - 11:30 AM
+   - **Organizer:** SmartAdmin
+   - **Attendees:** None
+
+5. **Meeting: closing opportunity**
+   - **Date:** 30 April 2026 (midnight)
+   - **Organizer:** SmartAdmin
+   - **Attendees:** None
+
+### Related Salesforce Opportunities:
+- **No related opportunities found.** 
+
+### SmartSales Locations for Companies Involved:
+- **Location for Arne Albrecht:**
+  - **Name:** Arne Albrecht
+  - **Street:** Lippenslaan 347
+  - **City:** Knokke
+  - **Zip Code:** 8300
+  - **Country:** Belgium
+  - **Latitude:** 51.3518122
+  - **Longitude:** 3.2887656
+
+This concludes the overview. If you need more information or further assistance, feel free to ask!

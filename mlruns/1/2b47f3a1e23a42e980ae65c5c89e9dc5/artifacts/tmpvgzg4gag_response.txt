@@ -1,0 +1,9 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The email addresses of individuals named Arne in the organization are as follows:
+
+- Arne Albrecht: a.albrecht@easi.net
+- Arne Vermeulen: a.vermeulen@easi.net
+- Arne Albrecht: albrecht.arne@gmail.com

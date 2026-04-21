@@ -1,0 +1,1 @@
+The orchestrator correctly routed the user query to the graph sub-agent, which is appropriate for searching the user's calendar for events.

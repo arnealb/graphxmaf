@@ -1,0 +1,34 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+You received several emails in the last 7 days. Here is the list of senders and subjects:
+
+### Emails Received
+- **From Arne Albrecht:**
+  - Aankoop office supplies
+  - Vraag over vertraagde levering
+  - Voorstel voor kort overleg
+  - Vraag over factuur
+  - Question about delayed delivery
+  - Proposal for a short meeting
+  - Question regarding invoice
+  - Accepted: meeting about numbers or something @ di 21 April 2026 18:30 - 19:00 (CEST) (SmartAdmin)
+  - this is a test
+  - supplier1 possible order
+
+- **From SmartAdmin:**
+  - meeting
+  - zup me de boys
+  - nog e meeting
+  - DM Process sync failed (multiple messages)
+  - meeting about numbers or something
+
+- **From Microsoft Outlook:**
+  - Undeliverable: meeting
+
+- **From Microsoft Security:**
+  - New recommendation available for EasiGroupDemo
+  - Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5) 
+
+If you need further details on any specific email, please let me know!

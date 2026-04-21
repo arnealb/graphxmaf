@@ -217,8 +217,9 @@ def _resolve_sf_session(sf_mcp_url: str) -> str:
     login_url = f"{base}/auth/salesforce/login"
 
     # 1. Check for existing session.
+    # Use a longer timeout to accommodate Azure Container App cold-starts (30–60 s).
     try:
-        resp = httpx.get(session_url, timeout=5)
+        resp = httpx.get(session_url, timeout=90)
         if resp.status_code == 200:
             data = resp.json()
             print(f"Salesforce: session restored ({data.get('username', '?')}).")
@@ -282,6 +283,7 @@ def main() -> None:
 
     graph_http = httpx.AsyncClient(
         headers={"Authorization": f"Bearer {token}"},
+        timeout=httpx.Timeout(120.0),
     )
     graph_mcp = MCPStreamableHTTPTool(
         name="graph",
@@ -304,6 +306,7 @@ def main() -> None:
 
     sf_http = httpx.AsyncClient(
         headers={"Authorization": f"Bearer {sf_session_token}"},
+        timeout=httpx.Timeout(120.0),
     )
     sf_mcp = MCPStreamableHTTPTool(
         name="salesforce",
@@ -326,6 +329,7 @@ def main() -> None:
 
     ss_http = httpx.AsyncClient(
         headers={"Authorization": f"Bearer {ss_session_token}"},
+        timeout=httpx.Timeout(120.0),
     )
     ss_mcp = MCPStreamableHTTPTool(
         name="smartsales",

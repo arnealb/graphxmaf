@@ -27,7 +27,8 @@ from pydantic import BaseModel
 
 from agent_framework import AgentSession, MCPStreamableHTTPTool
 from agents.graph_agent import create_graph_agent
-from agents.orchestrator_agent import create_orchestrator_agent
+from agents.planning_orchestrator import create_planning_orchestrator
+from agents.routing_trace import start_trace
 from agents.salesforce_agent import create_salesforce_agent
 from agents.smartsales_agent import create_smartsales_agent
 from main import (
@@ -41,6 +42,8 @@ from main import (
 )
 
 load_dotenv()
+log = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s — %(message)s")
 
 # ── Global state ──────────────────────────────────────────────────────────────
 
@@ -68,10 +71,10 @@ async def lifespan(app: FastAPI):
     graph_agent = create_graph_agent(graph_mcp=graph_mcp)
     sf_agent = create_salesforce_agent(salesforce_mcp=sf_mcp)
     ss_agent = create_smartsales_agent(smartsales_mcp=ss_mcp)
-    _orchestrator = create_orchestrator_agent(
-        smartsales_agent=ss_agent,
+    _orchestrator = create_planning_orchestrator(
         graph_agent=graph_agent,
-        salesforce_agent=sf_agent,
+        sf_agent=sf_agent,
+        ss_agent=ss_agent,
     )
     print("Agents ready — http://localhost:8090")
 
@@ -129,77 +132,10 @@ async def chat(body: ChatRequest):
         raise HTTPException(404, detail="Session not found — create one first via POST /api/sessions")
 
     async def generate():
-        # function_call content arrives as streaming chunks (one per token).
-        # Accumulate all chunks for the same call_id, then emit a single
-        # tool_call event once the matching function_result arrives.
-        pending: dict[str, dict] = {}  # call_id → {name, args_buf, emitted}
-
-        def flush_call(cid: str) -> str | None:
-            data = pending.get(cid)
-            if not data or data["emitted"]:
-                return None
-            data["emitted"] = True
-            args_str = data["args_buf"]
-            try:
-                args = json.loads(args_str) if args_str else {}
-            except json.JSONDecodeError:
-                args = args_str
-            return _sse({"type": "tool_call", "call_id": cid, "name": data["name"], "arguments": args})
-
         try:
-            stream = _orchestrator.run(body.message, session=session, stream=True)
-            async for update in stream:
-                for content in update.contents:
-                    ctype = getattr(content, "type", None)
-
-                    if ctype == "text" and content.text:
-                        yield _sse({"type": "text", "chunk": content.text})
-
-                    elif ctype == "function_call":
-                        cid = content.call_id or ""
-                        if cid not in pending:
-                            pending[cid] = {"name": content.name or "", "args_buf": "", "emitted": False}
-                        data = pending[cid]
-                        if content.name and not data["name"]:
-                            data["name"] = content.name
-                        # Arguments arrive either as incremental string chunks or as a
-                        # complete dict in one shot. Guard against two overwrite traps:
-                        # (a) an empty-dict terminator chunk wiping accumulated strings,
-                        # (b) a later chunk overwriting an already-populated buffer.
-                        args = content.arguments
-                        if isinstance(args, str) and args:
-                            # String token — always append (this is the streaming case)
-                            data["args_buf"] += args
-                        elif args and not isinstance(args, str):
-                            # Complete dict/mapping — only store if buffer still empty
-                            if not data["args_buf"]:
-                                try:
-                                    data["args_buf"] = json.dumps(dict(args))
-                                except Exception:
-                                    data["args_buf"] = str(args)
-                        # None, empty string, or empty dict {} → skip (terminator chunk)
-
-                    elif ctype == "function_result":
-                        cid = content.call_id or ""
-                        event = flush_call(cid)
-                        if event:
-                            yield event
-                        result = content.result
-                        if isinstance(result, bytes):
-                            result = result.decode()
-                        yield _sse({"type": "tool_result", "call_id": cid, "result": result if result is not None else ""})
-
-            # Flush any calls that never received a result
-            for cid in pending:
-                event = flush_call(cid)
-                if event:
-                    yield event
-
-            final = await stream.get_final_response()
-            usage = getattr(final, "usage_details", None)
-            tokens = getattr(usage, "total_token_count", None) if usage else None
-            yield _sse({"type": "done", "tokens": tokens})
-
+            start_trace(body.message)
+            async for event in _orchestrator.run_sse(body.message, session=session):
+                yield _sse(event)
         except Exception as exc:
             logging.getLogger("ui").error("Chat error: %s", exc, exc_info=True)
             yield _sse({"type": "error", "message": str(exc)})
@@ -227,6 +163,7 @@ def _setup_sync() -> dict:
     ss = config["smartsales"] if config.has_section("smartsales") else {}
 
     mcp_url = azure.get("mcpServerUrl", "http://localhost:8000/mcp")
+    log.info(f"[mcp_url_graph] {mcp_url}")
     token = authenticate(
         azure["clientId"],
         azure["tenantId"],
