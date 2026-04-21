@@ -1,0 +1,17 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the Word documents found in your OneDrive:
+
+1. [MLAT Word Template.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BCB97D03F-287E-455E-9D72-B7F762337B1E%7D&file=MLAT%20Word%20Template.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+   - Size: 23,364 bytes
+   - Created: 5 December 2025
+   - Modified: 5 December 2025
+
+2. [agenda.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B8BB0C73E-6AED-4FEB-8D5E-440279145EBF%7D&file=agenda.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+   - Size: 22,881 bytes
+   - Created: 14 April 2026
+   - Modified: 16 April 2026
+
+These documents are accessible via the provided links.

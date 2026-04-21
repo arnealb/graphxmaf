@@ -1,0 +1,30 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The most recent email with 'meeting' in the subject contains the following body content:
+
+---
+
+**Body:**
+```
+Dear Julien Gaspard,
+
+Your registration for the meeting has been confirmed.
+
+Here is the link to see all participants:
+https://easigroupdemo.sharepoint.com/sites/EMMI-POC/Lists/Registration/AllItems.aspx
+?FilterField1=LinkTitle
+&FilterValue1=01-10-2025%20-%20Workshop%20on%20Corporate%20Sustainability%20Reporting%20Directive%20%28CSRD%29
+&FilterType1=Computed
+&FilterDisplay1=01-10-2025%20-%20Workshop%20on%20Corporate%20Sustainability%20Reporting%20Directive%20%28CSRD%29
+&groupBy=LinkTitle
+&newTargetListUrl=%2Fsites%2FEMMI%2DPOC%2FLists%2FRegistration
+&viewpath=%2Fsites%2FEMMI%2DPOC%2FLists%2FRegistration%2FAllItems%2Easpx
+
+All Participants<https://easigroupdemo.sharepoint.com/sites/EMMI-POC/Lists/Registration/AllItems.aspx>
+```
+
+--- 
+
+You can view the email [here](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAFEZy9iAAA%3D&exvsurl=1&viewmodel=ReadMessageItem).

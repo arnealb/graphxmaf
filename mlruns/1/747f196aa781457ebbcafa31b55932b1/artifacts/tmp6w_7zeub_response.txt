@@ -1,0 +1,87 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the Salesforce contacts with 'Manager' in their title:
+
+- **Jeff Blay**
+  - Email: jblay@example.com
+  - Account Name: Towson Inc.
+  - Title: Enterprise Sales Manager
+
+- **Mark Kingston**
+  - Email: mkingston@example.com
+  - Account Name: Omega SA-NV
+  - Title: Project Manager
+
+- **Gabriel Silva**
+  - Email: rlloyd@example.com
+  - Account Name: Opportunity Resources Inc
+  - Title: Sales Manager
+
+- **Danielle Hauck**
+  - Email: dhauck@example.com
+  - Account Name: Vand Enterprises Inc.
+  - Title: Sales Manager
+
+- **Derek Rose**
+  - Email: drose@example.com
+  - Account Name: UlyssesNet
+  - Title: Credit Manager
+
+- **Jon Baker**
+  - Email: jon.baker@nivea.com
+  - Account Name: Nivea
+  - Title: Sales Manager
+
+- **Wes Chopra**
+  - Email: wchopra@example.com
+  - Account Name: Green Fields Media
+  - Title: Manager, Information Technology
+
+- **Leo Novak**
+  - Email: lnovak@example.com
+  - Account Name: Universal Containers
+  - Title: Marketing Manager
+
+- **Ron Adkins**
+  - Email: radkins@example.com
+  - Account Name: Valley Supply Inc.
+  - Title: General Manager
+
+- **Larry Kuchenreuther**
+  - Email: lkuchenreuther@example.com
+  - Account Name: Missoula & Sons Inc.
+  - Title: Account Manager
+
+- **Keith Lopez**
+  - Email: klopez@example.com
+  - Account Name: Advanced Communications
+  - Title: Marketing Manager
+
+- **Bill Martin**
+  - Email: bmartin@example.com
+  - Account Name: Datanet Inc.
+  - Title: Operations Manager
+
+- **Laura Rossi**
+  - Email: lrossi@example.com
+  - Account Name: Permadyne GmbH LTD
+  - Title: Manager, Sales Operations
+
+- **David Homme**
+  - Email: dhomme@example.com
+  - Account Name: Datanet Inc.
+  - Title: Product Marketing Manager
+
+- **Greg Walker**
+  - Email: gwalker@example.com
+  - Account Name: Wellspring Inc.
+  - Title: Asset Manager
+
+- **Jon Amos**
+  - Email: info@salesforce.com
+  - Account Name: Global Media
+  - Title: Sales Manager
+
+These contacts include a variety of 'Manager' roles across different organizations.

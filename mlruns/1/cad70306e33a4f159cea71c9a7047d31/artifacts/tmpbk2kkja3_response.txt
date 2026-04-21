@@ -1,0 +1,60 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here are the fields you can filter SmartSales orders by:
+
+### Text Fields
+- uid (hidden)
+- internalReference
+- externalReference
+- email
+- vatNumber
+- comments
+- versionKey
+- userUid
+- username (hidden)
+- userGroupUid
+- locationCode
+- locationUid
+- locationExternalId
+- locationCountry
+- locationCity
+- catalogItemUid
+- approbationStatus
+- approbationStatusUid
+- techCreationUserUid
+- techUpdateUserUid
+- since
+- fulltext
+- includeDisplayableRelationChildrenOf (hidden)
+
+### Boolean Fields
+- hasManualDiscount
+- offer (hidden)
+- approbationStatusIncludeInMyTeam (hidden)
+- excludeSecured
+- deleted
+- includeDeleted
+- includeContextualDisplayableRelationChildrenOf
+
+### Decimal Fields
+- total
+- percentOfSuccess
+- totalWithoutDiscount
+- totalDiscount
+- totalDiscountPercentage
+
+### Datetime Fields
+- orderDate
+- approbationModificationDate
+- techServerCreationDate
+- techServerUpdateDate
+- minDate (hidden)
+- maxDate (hidden)
+
+### Other Fields
+- type
+- includeHistory (hidden)
+
+Note: Some fields are hidden and may not be directly accessible during filtering.

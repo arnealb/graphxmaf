@@ -382,7 +382,8 @@ def setup_agents(
         name="smartsales",
         url=ss_url,
         http_client=httpx.AsyncClient(
-            headers={"Authorization": f"Bearer {ss_token}"}
+            headers={"Authorization": f"Bearer {ss_token}"},
+            timeout=httpx.Timeout(120.0),
         ),
     )
     ss_agent = create_smartsales_agent(smartsales_mcp=ss_mcp)
@@ -410,7 +411,8 @@ def setup_agents(
                 name="graph",
                 url=mcp_url,
                 http_client=httpx.AsyncClient(
-                    headers={"Authorization": f"Bearer {token}"}
+                    headers={"Authorization": f"Bearer {token}"},
+                    timeout=httpx.Timeout(120.0),
                 ),
             )
             graph_agent = create_graph_agent(graph_mcp=graph_mcp)
@@ -433,7 +435,8 @@ def setup_agents(
                 name="salesforce",
                 url=sf_url,
                 http_client=httpx.AsyncClient(
-                    headers={"Authorization": f"Bearer {sf_token}"}
+                    headers={"Authorization": f"Bearer {sf_token}"},
+                    timeout=httpx.Timeout(120.0),
                 ),
             )
             sf_agent = create_salesforce_agent(salesforce_mcp=sf_mcp)

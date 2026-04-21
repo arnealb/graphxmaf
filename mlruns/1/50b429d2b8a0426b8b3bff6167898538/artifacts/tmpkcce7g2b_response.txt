@@ -1,0 +1,12 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+### Final Answer:
+
+- **File Found**: **Demande produits.xlsx**
+  - **Description**: Contains structured data related to 'nutella'.
+  - **Format**: The content is in a binary format typical of Excel files and is not directly readable.
+  - **Access Link**: You can view the file [here](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BD23762FE-A7D1-4347-97B5-C43173348CF9%7D&file=Demande%20produits.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1).
+
+For further details, please open the file using Excel or a compatible spreadsheet application.

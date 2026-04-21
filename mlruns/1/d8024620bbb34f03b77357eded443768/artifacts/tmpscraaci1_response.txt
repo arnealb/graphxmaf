@@ -1,0 +1,18 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (salesforce)...
+Synthesizing...
+Here are the Salesforce accounts located in France and their associated contacts:
+
+### Salesforce Account in France
+- **Account Name:** account in france
+- **Industry:** Technology
+- **Website:** www.google.com
+
+### Associated Contacts
+1. **Contact Name:** Ur Mom
+   - **Email:** ur.mom@grandpa.com
+
+2. **Contact Name:** Leo Snickers
+   - **Email:** leo.snickers@candybar.com

@@ -1,0 +1,32 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here is the list of SmartSales locations in Belgium, sorted by name:
+
+- **AACO DAVIDSON**
+  - **Address:** Havenkant 6, Leuven, 3000
+  - **Coordinates:** Latitude 50.8873413, Longitude 4.7005038
+  - **Code:** 20260316134107
+
+- **Arne Albrecht**
+  - **Address:** Lippenslaan 347, Knokke, 8300
+  - **Coordinates:** Latitude 51.3518122, Longitude 3.2887656
+  - **Code:** CUS-002
+
+- **Customer1**
+  - **Address:** Markt 5, Bruges, 8000
+  - **Coordinates:** Latitude 51.2086225, Longitude 3.2250864
+  - **Code:** CUS-001
+
+- **supplier1**
+  - **Address:** Rue du Commerce 1, Brussels, 1000
+  - **Coordinates:** Latitude 50.8394667, Longitude 4.3673141
+  - **Code:** SUP-001
+
+- **name-v1**
+  - **Address:** Stationsplein 14, Antwerp, 2018
+  - **Coordinates:** Latitude 51.1341955, Longitude 4.4751428
+  - **Code:** code-v1
+
+This information was sourced from SmartSales.

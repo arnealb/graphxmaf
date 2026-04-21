@@ -1,0 +1,27 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The most recent email with "meeting" in the subject is as follows:
+
+### Subject:
+Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)
+
+### Sender:
+SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+### Received:
+15 April 2025
+
+### Body:
+Dear Alfie,
+
+Your registration for the meeting has been confirmed.
+
+Here is the link to see all participants:
+
+[View Participants](https://easigroupdemo.sharepoint.com/sites/EMMI-POC/Lists/Registration/AllItems.aspx?FilterField1=LinkTitle&FilterValue1=01-10-2025%20-%20Workshop%20on%20Corporate%20Sustainability%20Reporting%20Directive%20%28CSRD%29&FilterType1=Computed&viewid=ba9c1945%2D1a79%2D4e43%2D91d6%2D148f50f35d18&newTargetListUrl=%2Fsites%2FEMMI%2DPOC%2FLists%2FRegistration&viewpath=%2Fsites%2FEMMI%2DPOC%2FLists%2FRegistration%2FAllItems%2Easpx)
+
+Test final [Link](https://easigroupdemo.sharepoint.com/sites/EMMI-POC/Lists/Registration/AllItems.aspx?FilterField1=LinkTitle&FilterValue1=01-10-2025%20-%20Workshop%20on%20Corporate%20Sustainability%20Reporting%20Directive%20%28CSRD%29&FilterType1=Computed&viewid=ba9c1945%2D1a79%2D4e43%2D91d6%2D148f50f35d18&newTargetListUrl=%2Fsites%2FEMMI%2DPOC%2FLists%2FRegistration&viewpath=%2Fsites%2FEMMI%2DPOC%2FLists%2FRegistration%2FAllItems%2Easpx)
+
+### [View in Outlook](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt5AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)

@@ -1,0 +1,17 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+You have received the following emails in the last 7 days:
+
+- **Sender:** Arne Albrecht (albrecht.arne@gmail.com)
+  - **Subject:** this is a test
+  
+- **Sender:** Arne Albrecht (albrecht.arne@gmail.com)
+  - **Subject:** supplier1 possible order
+  
+- **Sender:** Microsoft Security (MSSecurity-noreply@microsoft.com)
+  - **Subject:** Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)
+  
+- **Sender:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Subject:** DM Process sync failed

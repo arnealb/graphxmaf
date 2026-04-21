@@ -1,0 +1,61 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the emails found with the word 'meeting' in the subject:
+
+- **Email 1**
+  - **Subject**: Accepted: meeting about numbers or something @ di 21 Apr 2026 18:30 - 19:00 (CEST)
+  - **Sender**: Arne Albrecht (albrecht.arne@gmail.com)
+  - **Received**: 16 April 2026
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANR%2BIE1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 2**
+  - **Subject**: Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)
+  - **Sender**: SmartAdmin 
+  - **Received**: 15 April 2025
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt4AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 3**
+  - **Subject**: Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)
+  - **Sender**: SmartAdmin 
+  - **Received**: 15 April 2025
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAFEZy9iAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 4**
+  - **Subject**: Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)
+  - **Sender**: SmartAdmin 
+  - **Received**: 15 April 2025
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt6AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 5**
+  - **Subject**: Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)
+  - **Sender**: SmartAdmin 
+  - **Received**: 15 April 2025
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAFEZy9kAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 6**
+  - **Subject**: Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)
+  - **Sender**: SmartAdmin 
+  - **Received**: 15 April 2025
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt7AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 7**
+  - **Subject**: Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)
+  - **Sender**: SmartAdmin  
+  - **Received**: 15 April 2025
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAFEZyt8AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 8**
+  - **Subject**: Confirmation of your registration to meeting04-09-2025 - INVITATION - Joint FIA-NUTRITION-INCO online meeting, 09 April (14.00 - 15.30)
+  - **Sender**: SmartAdmin 
+  - **Received**: 15 April 2025
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt9AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 9**
+  - **Subject**: Proposal for a short meeting
+  - **Sender**: Arne Albrecht (albrecht.arne@gmail.com)
+  - **Received**: 13 April 2026
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAAM7uOKEAAA%3D&exvsurl=1&viewmodel=ReadMessageItem) 
+
+This list includes all relevant emails retrieved based on your query.

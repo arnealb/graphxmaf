@@ -1,0 +1,36 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+You can filter SmartSales catalog items by the following fields:
+
+- **Text Fields:**
+  - `fulltext`
+  - `code`
+  - `title`
+  - `description`
+  - `measurementUnitUid` (selector: MEASUREMENT_UNIT_UID)
+  - `availability`
+  - `salesunit`
+  - `packagingunit`
+  - `measure`
+  - `unitofmeasure`
+  - `group`
+  - `tag`
+  - `CHILDREN_OF_LOCATION_RELATION:86acdbc2-18a4-11f1-84f0-005056010707` (Client - Supplies to, selector: CLIENT_UID)
+  - `CHILDREN_OF_LOCATION_RELATION:86ae86e5-18a4-11f1-84f0-005056010707` (Client - Headquarter, selector: CLIENT_UID)
+  - `PARENTS_OF_LOCATION_RELATION:86ae86e5-18a4-11f1-84f0-005056010707` (Client - Headquarter of, selector: CLIENT_UID)
+  - `CHILDREN_OF_LOCATION_RELATION:86af3bc8-18a4-11f1-84f0-005056010707` (Client - Billing company of, selector: CLIENT_UID)
+
+- **Date/Time Fields:**
+  - `techServerCreationDate` (allows expressions)
+  - `techServerUpdateDate` (allows expressions)
+  - `since`
+  - `contextualDate` (hidden but can be filtered)
+  
+- **Boolean Fields:**
+  - `deleted` (allows expressions)
+  - `hideEmptyGroups`
+  - `includeContextualDisplayableRelationChildrenOf`
+
+This list includes fields that can be expressed as filters; note that some fields are visible only on specific audience views (WEB, MOBILE) and some are hidden from the standard view.

@@ -1,0 +1,22 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+You can sort SmartSales orders by the following fields:
+
+- **techServerCreationDate**
+- **techServerUpdateDate**
+- **techClientCreationDate**
+- **techClientUpdateDate**
+- **date**
+- **versionKey**
+- **hasManualDiscount**
+- **user**
+- **customerCode**
+- **customer**
+- **locationExternalId**
+- **total**
+- **totalWithoutDiscount**
+- **totalDiscount**
+- **totalDiscountPercentage**
+- **approbationModificationDate**

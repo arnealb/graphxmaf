@@ -1,0 +1,48 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The content of the file titled 'report' retrieved from OneDrive is a comprehensive financial research report on NVIDIA Corporation (Ticker: NVDA). Here are the key sections of the report:
+
+### 1. Company Overview
+- **Full Legal Name:** NVIDIA Corporation
+- **Incorporated:** California, April 1993; reincorporated in Delaware, April 1998
+- **Headquarters:** Santa Clara, California
+- **CEO:** Jensen Huang
+- **Employees:** 42,000 (as of January 25, 2026)
+
+### 2. Business Description
+NVIDIA has evolved into a full-stack computing infrastructure company, offering GPU, CPU, DPU, networking equipment, and software platforms for various applications including AI, gaming, scientific computing, and autonomous vehicles.
+
+### 3. Financial Highlights (Fiscal Year Data)
+- **FY2026 Revenue:** $215.9 billion, a 65% increase from FY2025.
+- **Key Revenue Streams:**
+  - Data Center: $193.7 billion (89.7% of total revenue)
+  - Gaming: $16.0 billion
+  - Professional Visualization: $3.2 billion
+  - Automotive: $2.3 billion
+
+### 4. Market Data (as of April 10, 2026)
+- **Current Stock Price:** ~$186.50
+- **Market Capitalization:** ~$4.5 trillion
+- **Dividend Yield:** ~0.02%
+
+### 5. Income Statement Summary (GAAP in millions)
+- **FY2026 Revenue:** $215,938
+- **Net Income:** $120,067 
+- **Diluted EPS:** $4.90
+
+### 6. Balance Sheet Highlights (GAAP in millions)
+- **Total Assets:** $206,803
+- **Total Liabilities:** $49,510
+- **Stockholders' Equity:** $157,293
+- **Net Cash Position:** $54,088
+
+### 7. Cash Flow Summary (GAAP in millions)
+- **Operating Cash Flow:** $69,203 for FY2026
+- **Investing Cash Flow:** -$40,716 for FY2026
+- **Net Change in Cash:** $26,424 for FY2026
+
+---
+
+This report was prepared on April 10, 2026, and contains financial data reflecting the company's operations up to that date.

@@ -1,0 +1,45 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+From SmartSales, the following fields are available to display in the location list:
+
+### Date/Time Fields
+- **techServerCreationDate** (DATETIME)
+- **techServerUpdateDate** (DATETIME)
+- **techClientCreationDate** (DATETIME)
+- **techClientUpdateDate** (DATETIME)
+- **lastVisitDate** (DATETIME)
+- **lastOrderDate** (DATETIME)
+- **extranetStartDate** (DATE)
+- **extranetEndDate** (DATE)
+
+### Text Fields
+- **techCreationUser** (TEXT)
+- **techUpdateUser** (TEXT)
+- **code** (TEXT)
+- **externalId** (TEXT)
+- **name** (TEXT)
+- **street** (TEXT)
+- **city** (TEXT)
+- **zip** (TEXT)
+- **country** (TEXT)
+- **vatNumber** (TEXT)
+- **extranetUsername** (TEXT)
+- **extranetLanguage** (TEXT)
+- **email** (TEXT)
+- **Supplied by** (TEXT - Children relation)
+- **Headquarter of** (TEXT - Children relation)
+- **Headquarter** (TEXT - Parents relation)
+- **Billing company** (TEXT - Children relation)
+- **VAT** (TEXT)
+
+### Boolean Fields
+- **commented** (BOOLEAN)
+- **hasExtranetAccess** (BOOLEAN)
+
+### Decimal Fields
+- **latitude** (DECIMAL)
+- **longitude** (DECIMAL)
+
+These fields can be used across WEB and MOBILE audiences as specified.

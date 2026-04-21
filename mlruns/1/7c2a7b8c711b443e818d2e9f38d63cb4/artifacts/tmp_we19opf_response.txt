@@ -1,0 +1,85 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Here’s a comprehensive overview of the Salesforce leads and SmartSales locations in Belgium:
+
+### Salesforce Leads in Belgium
+1. **Lead: Bert Coppens**
+   - ID: 00QKI000002KQCj2AO
+   - Company: another-company
+   - Status: New
+
+2. **Lead: Arne Albrecht**
+   - ID: 00QKI000002KPFT2A4
+   - Email: albrecht.arne@gmail.com
+   - Company: easi_dupe
+   - Status: Contacted
+
+3. **Lead: ur moms lead**
+   - ID: 00QKI000002KMU92AO
+   - Company: grandmas bakery
+   - Status: New
+
+### SmartSales Locations in Belgium
+1. **Location: AACO DAVIDSON**
+   - City: Leuven
+   - Address: Havenkant 6, 3000 Leuven
+   - Country: Belgium
+
+2. **Location: Stream Software**
+   - City: Antwerpen
+   - Address: Potvlietlaan 4, 2600 Antwerpen
+   - Country: Not specified
+
+3. **Location: Customer1**
+   - City: Bruges
+   - Address: Markt 5, 8000 Bruges
+   - Country: Belgium
+
+4. **Location: Arne Albrecht**
+   - City: Knokke
+   - Address: Lippenslaan 347, 8300 Knokke
+   - Country: Belgium
+
+5. **Location: Advanced Communications**
+   - City: Ghent
+   - Address: Mediapark 5, 9000 Ghent
+   - Country: Belgium
+
+6. **Location: Displaytech**
+   - City: Leuven
+   - Address: Technologielaan 12, 3001 Leuven
+   - Country: Belgium
+
+7. **Location: EASI**
+   - City: Namur
+   - Address: Rue d'Arlon 50, 5000 Namur
+   - Country: Belgium
+
+8. **Location: Global Media**
+   - City: Brussels
+   - Address: Mediastraat 10, 1000 Brussels
+   - Country: Belgium
+
+9. **Location: Universal Services**
+   - City: Mechelen
+   - Address: Serviceweg 22, 2800 Mechelen
+   - Country: Belgium
+
+10. **Location: Upstyle Inc.**
+    - City: Antwerp
+    - Address: Fashion Avenue 88, 2000 Antwerp
+    - Country: Belgium
+
+11. **Location: supplier1**
+    - City: Brussels
+    - Address: Rue du Commerce 1, 1000 Brussels
+    - Country: Belgium
+
+### Summary
+- There are **three leads** from Salesforce in Belgium.
+- There are **11 SmartSales locations** identified in Belgium.
+- Notably, **Arne Albrecht** (a lead from Salesforce) has a corresponding SmartSales location. 
+
+If you need further details or analysis, let me know!

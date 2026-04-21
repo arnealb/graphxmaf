@@ -1,0 +1,23 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Your most recent email states the following:
+
+```
+[SharePoint]
+
+Hallo,
+Voer om veiligheidsredenen hieronder de code in om het account te verifiëren voor toegang tot Shared with Tekenbureau. De code werkt slechts 15 minuten. Als u een nieuwe code aanvraagt, werkt deze code niet meer.
+
+Verificatiecode voor account:
+59080341
+Hebt u problemen met de code?
+Bekijk de fout en controleer of de e-mail-id 'S7ZN5MB' is. Als dit niet het geval is, kijkt u of u een bijgewerkte e-mail hebt ontvangen of vraagt u een nieuwe code aan.
+
+[cid:74f7c64d-4131-46ea-8d9c-d770b03f4670]
+
+Privacyverklaring<https://go.microsoft.com/fwlink/?LinkId=521839>
+
+Dit e-mailbericht wordt gegenereerd door het gebruik van Microsoft 365 door Encon.
+```

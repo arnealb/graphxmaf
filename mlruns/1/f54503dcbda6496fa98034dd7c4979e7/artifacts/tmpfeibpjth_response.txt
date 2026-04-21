@@ -1,0 +1,81 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is the content from the file named 'report':
+
+---
+
+# NVIDIA Corporation (NVDA) -- Comprehensive Financial Research Report
+
+**Prepared:** April 10, 2026  
+**Data as of:** April 10, 2026 (market data); January 25, 2026 (most recent fiscal year-end)
+
+---
+
+## 1. Company Overview
+
+| Field | Detail | Source |
+|-------|--------|--------|
+| **Full Legal Name** | NVIDIA Corporation | [10-K FY2025](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm) |
+| **Ticker** | NVDA | 10-K FY2025 |
+| **Exchange** | NASDAQ Global Select Market | 10-K FY2025 |
+| **Sector / Industry** | Technology / Semiconductors | 10-K FY2025 |
+| **Incorporated** | California, April 1993; reincorporated in Delaware, April 1998 | [10-K FY2025](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm) |
+| **Headquarters** | 2788 San Tomas Expressway, Santa Clara, California 95051 | 10-K FY2025 |
+| **CEO** | Jensen Huang (Founder) | 10-K FY2025 |
+| **CFO** | Colette Kress (EVP & CFO) | [NVIDIA Q4 FY2026 Earnings](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026) |
+| **Employees** | 42,000 (as of January 25, 2026) | [Stock Analysis](https://stockanalysis.com/stocks/nvda/employees/); [Macrotrends](https://www.macrotrends.net/stocks/charts/NVDA/nvidia/number-of-employees) |
+| **Revenue per Employee** | ~$5.14 million (FY2026) | Calculated from FY2026 revenue / employee count |
+
+### Business Description
+
+NVIDIA pioneered accelerated computing and is a full-stack computing infrastructure company offering GPUs, CPUs, DPUs, networking equipment, and software platforms for various applications including AI, data analytics, and gaming.
+
+### Reporting Segments
+
+1. **Compute & Networking** - $193.5 billion in FY2026 TTM.
+2. **Graphics** - $22.5 billion in FY2026 TTM.
+
+### Market-Facing Revenue Breakdown (FY2026)
+
+| Segment | FY2026 Revenue | % of Total | FY2025 Revenue | YoY Growth |
+|---------|---------------|------------|---------------|------------|
+| Data Center | $193.7B | 89.7% | $115.2B | +68% |
+| Gaming | $16.0B | 7.4% | $11.4B | +41% |
+| Professional Visualization | $3.2B | 1.5% | $1.9B | +70% |
+| Automotive | $2.3B | 1.1% | $1.7B | +39% |
+| OEM & Other | $0.6B | 0.3% | $0.4B | +59% |
+| **Total** | **$215.9B** | **100%** | **$130.5B** | **+65%** |
+
+---
+
+## 2. Market Data (as of April 10, 2026)
+
+| Metric | Value | Source |
+|--------|-------|--------|
+| **Current Stock Price** | ~$186.50 | [Yahoo Finance](https://finance.yahoo.com/quote/NVDA/history/) |
+| **Market Capitalization** | ~$4.5 trillion | [FinanceCharts](https://www.financecharts.com/stocks/NVDA/summary/price) |
+| **Shares Outstanding** | ~24.3 billion | [10-K FY2026 Balance Sheet](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026) |
+| **52-Week High** | $212.19 | [FinanceCharts](https://www.financecharts.com/stocks/NVDA/summary/price) |
+| **52-Week Low** | $95.04 | [FinanceCharts](https://www.financecharts.com/stocks/NVDA/summary/price) |
+| **Enterprise Value** | ~$4.37 trillion | [Yahoo Finance](https://finance.yahoo.com/quote/NVDA/key-statistics/) |
+| **Dividend Yield** | ~0.02% | [NVIDIA Q4 FY2026 Press Release](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026) |
+| **YTD Return** | -1.4% | [FinanceCharts](https://www.financecharts.com/stocks/NVDA/summary/price) |
+| **1-Year Return** | ~60.9% | [FinanceCharts](https://www.financecharts.com/stocks/NVDA/summary/price) |
+
+---
+
+## 3. Income Statement (Annual Data, $ in millions)
+
+| Line Item | FY2022 (Jan 2022) | FY2023 (Jan 2023) | FY2024 (Jan 2024) | FY2025 (Jan 2025) | FY2026 (Jan 2026) |
+|-----------|-------------------|-------------------|-------------------|-------------------|-------------------|
+| **Revenue** | $26,914 | $26,974 | $60,922 | $130,497 | $215,938 |
+| **Cost of Revenue** | $9,439 | $11,618 | $16,621 | $32,639 | $62,475 |
+| **Gross Profit** | $17,475 | $15,356 | $44,301 | $97,858 | $153,463 |
+| **Net Income** | $9,752 | $4,368 | $29,760 | $72,880 | $120,067 |
+| **Diluted EPS** | $0.39 | $0.17 | $1.19 | $2.94 | $4.90 |
+
+---
+
+This document contains comprehensive information regarding NVIDIA's financial status and operations as of April 10, 2026. If you need further details or analysis on specific sections, please ask!

@@ -1,0 +1,50 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+You can filter SmartSales locations using the following fields:
+
+- **General Fields:**
+  - `code`
+  - `name`
+  - `street`
+  - `city`
+  - `country`
+  - `zip`
+  - `vatNumber`
+  - `externalId`
+  
+- **Geographical Fields:**
+  - `latitude`
+  - `longitude`
+
+- **Date and Time Fields:**
+  - `lastVisitDate`
+  - `lastOrderDate`
+  - `extranetStartDate`
+  - `extranetEndDate`
+  - `techServerCreationDate`
+  - `techServerUpdateDate`
+  - `since`
+  
+- **Boolean Fields:**
+  - `toSynchronize`
+  - `hasExtranetAccess`
+  - `deleted`
+  - `includeDeleted`
+  - `includeContextualDisplayableRelationChildrenOf`
+  
+- **User and Relation Fields:**
+  - `username` (hidden)
+  - `userUid`
+  - `userGroupUid`
+  - `extranetUsername`
+  - `techCreationUserUid`
+  - `techUpdateUserUid`
+  
+- **Text Fields for Specific Relations:**
+  - `email`
+  - `VAT`
+  - `tag`
+  
+Note: Some fields may be hidden or designated for specific audiences, but they are still available for filtering.

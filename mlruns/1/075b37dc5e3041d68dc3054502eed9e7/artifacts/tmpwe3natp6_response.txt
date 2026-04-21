@@ -1,0 +1,35 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the emails that contain the word "meeting" in the subject:
+
+- **Email 1**
+  - **Subject:** meeting
+  - **Sender:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Received:** 14 April 2026
+  - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANJHug1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 2**
+  - **Subject:** Undeliverable: meeting
+  - **Sender:** Microsoft Outlook (MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@easigroupdemo.onmicrosoft.com)
+  - **Received:** 14 April 2026
+  - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANJTK74AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 3**
+  - **Subject:** meeting about numbers or something
+  - **Sender:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Received:** 16 April 2026
+  - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANO3voGAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 4**
+  - **Subject:** Proposal for a short meeting
+  - **Sender:** Arne Albrecht (albrecht.arne@gmail.com)
+  - **Received:** 13 April 2026
+  - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKEAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 5**
+  - **Subject:** test meeting 2
+  - **Sender:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Received:** 25 March 2026
+  - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAMKyW3_AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)

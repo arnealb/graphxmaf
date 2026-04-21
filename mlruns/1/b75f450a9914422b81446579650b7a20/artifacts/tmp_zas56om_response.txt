@@ -1,0 +1,59 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (smartsales)...
+️Executing (smartsales)...
+Synthesizing...
+### SmartSales Locations
+
+1. **AACO DAVIDSON**
+   - Street: Havenkant 6
+   - City: Leuven
+   - Zip: 3000
+   - Country: Belgium
+   - Latitude: 50.8873
+   - Longitude: 4.7005
+
+2. **Stream Software**
+   - Street: Potvlietlaan 4
+   - City: Antwerpen
+   - Zip: 2600
+   - Country: N/A
+
+3. **name-v1**
+   - Street: Stationsplein 14
+   - City: Antwerp
+   - Zip: 2018
+   - Country: Belgium
+
+4. **Customer1**
+   - Street: Markt 5
+   - City: Bruges
+   - Zip: 8000
+   - Country: Belgium
+
+5. **Arne Albrecht**
+   - Street: Lippenslaan 347
+   - City: Knokke
+   - Zip: 8300
+   - Country: Belgium
+
+*(Additional locations are available but not listed here for brevity.)*
+
+### Details of the First Location: AACO DAVIDSON
+
+- **Name**: AACO DAVIDSON
+- **Address**: Havenkant 6, Leuven, 3000, Belgium
+- **Coordinates**: 
+  - Latitude: 50.8873
+  - Longitude: 4.7005
+- **Code**: 20260316134107
+- **Creation Date**: 15 March 2026 12:41 (UTC)
+- **Last Update Date**: 06 April 2026 05:00 (UTC)
+- **Email**: info@aacodavidson.com
+- **Deleted**: No
+- **Users**:
+  - **Username**: smaa@easi-ai-demo.net
+  - **Name**: Supervisor Account
+- **Last Visit Date**: 05 April 2026 14:28 (UTC)
+
+This information provides a comprehensive overview of the first SmartSales location identified.

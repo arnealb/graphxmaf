@@ -1,0 +1,72 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, graph, graph)...
+Synthesizing...
+Here is a comprehensive overview of your identity in Microsoft 365 based on the provided profile information, calendar events, and contacts.
+
+### Profile Information
+- **Display Name:** SmartAdmin
+- **Email:** SmartAdmin@easigroupdemo.onmicrosoft.com
+
+### Upcoming Calendar Events
+1. **15 April 2026**
+   - **Event:** Meeting
+   - **Time:** 13:00 - 13:30
+   - **Organizer:** SmartAdmin
+   - **Attendees:** John Lastname (john.lastname@globalmedia.com)
+
+2. **17 April 2026**
+   - **Event:** Zup me de boys
+   - **Time:** 10:30 - 11:00
+   - **Organizer:** SmartAdmin
+   - **Attendees:** ur mom (ur.mom@grandpa.com)
+
+3. **21 April 2026**
+   - **Event:** Nog e meeting
+   - **Time:** 12:30 - 13:00
+   - **Organizer:** SmartAdmin
+   - **Attendees:** Arne Albrecht (a.albrecht@easi.net)
+
+4. **21 April 2026**
+   - **Event:** Meeting about numbers or something
+   - **Time:** 16:30 - 17:00
+   - **Organizer:** SmartAdmin
+   - **Attendees:** albrecht.arne@gmail.com
+
+5. **22 April 2026**
+   - **Event:** Gym
+   - **Time:** 20:30 - 21:00
+   - **Organizer:** SmartAdmin
+
+6. **23 April 2026**
+   - **Event:** Anotha one
+   - **Time:** 11:00 - 11:30
+   - **Organizer:** SmartAdmin
+
+7. **30 April 2026 - 1 May 2026**
+   - **Event:** Closing opportunity
+   - **Time:** All day
+   - **Organizer:** SmartAdmin
+
+### Contacts
+- **John Lastname**
+  - Email: john.lastname@globalmedia.com
+  - Phone: 0326243426
+
+- **Arne Albrecht**
+  - Email: a.albrecht@easi.net
+  - Phone: N/A
+
+- **ur mom**
+  - Email: ur.mom@grandpa.com
+  - Phone: 0427277501
+
+- **ur dog**
+  - Email: ur.dog@doghouse.com
+  - Phone: 0483922818
+
+- **test**
+  - Email: test.test@gmail.com
+  - Phone: N/A
+
+This overview encapsulates your identity and activities within Microsoft 365. If you have further questions or need additional details, feel free to ask!

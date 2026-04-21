@@ -1,0 +1,84 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the most recently created Salesforce contacts:
+
+- **Contact 1**
+  - **ID:** 003KI0000096IJLYA2
+  - **First Name:** supplier1_contact
+  - **Last Name:** lastname
+  - **Account Name:** supplier1
+  - **Email:** Not provided
+
+- **Contact 2**
+  - **ID:** 003KI00000964NzYAI
+  - **First Name:** Arne
+  - **Last Name:** Albrecht
+  - **Account Name:** Displaytech
+  - **Email:** albrecht.arne@gmail.com
+
+- **Contact 3**
+  - **ID:** 003KI00000964ONYAY
+  - **First Name:** ur
+  - **Last Name:** mom
+  - **Account Name:** account in france
+  - **Email:** ur.mom@grandpa.com
+
+- **Contact 4**
+  - **ID:** 003KI00000964NyYAI
+  - **First Name:** John
+  - **Last Name:** lastname
+  - **Account Name:** Global Media
+  - **Email:** john.lastname@globalmedia.com
+
+- **Contact 5**
+  - **ID:** 003KI00000964ALYAY
+  - **First Name:** Leo
+  - **Last Name:** Snickers
+  - **Account Name:** account in france
+  - **Email:** leo.snickers@candybar.com
+
+- **Contact 6**
+  - **ID:** 003J600000BTFSyIAP
+  - **First Name:** John
+  - **Last Name:** Smith
+  - **Account Name:** EASI
+  - **Email:** Not provided
+
+- **Contact 7**
+  - **ID:** 003J600000BTFStIAP
+  - **First Name:** Lisa
+  - **Last Name:** Kane
+  - **Account Name:** EASI
+  - **Email:** Not provided
+
+- **Contact 8**
+  - **ID:** 003J6000008AuSlIAK
+  - **First Name:** Brent
+  - **Last Name:** Pauwels
+  - **Account Name:** EASI
+  - **Email:** b.pauwels@easigroup.onmicrosoft.com
+
+- **Contact 9**
+  - **ID:** 003J6000008AuSbIAK
+  - **First Name:** Sander
+  - **Last Name:** Van der Maas
+  - **Account Name:** EASI
+  - **Email:** s.vandermaas@easigroup.onmicrosoft.com
+
+- **Contact 10**
+  - **ID:** 003J6000008AuS2IAK
+  - **First Name:** Arnaud
+  - **Last Name:** Delforge
+  - **Account Name:** EASI
+  - **Email:** a.delforge@easigroup.onmicrosoft.com
+
+- **Contact 11**
+  - **ID:** 003J6000001ZPOgIAO
+  - **First Name:** Alex
+  - **Last Name:** Moreno
+  - **Account Name:** EASI
+  - **Email:** a.delforge@easi.net
+
+Note: The creation dates for these contacts were not provided in the results.

@@ -1,0 +1,20 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+The SmartSales order configuration includes the following details:
+
+- **Comments**: Allowed
+- **Customer VAT Number**: Not required
+- **Discounts**:
+  - Per item: Allowed (via "SWIPE")
+  - Global: Allowed (via "SWIPE")
+- **Disclaimer**: No disclaimer present
+- **Signature Input**: Displayed
+- **VAT per Item**: Not shown
+- **Signature Requirement**: Not required
+- **Total Modifiers**: None
+- **Sections**: 
+  - One section labeled "Section" with no fields (read-only: false)
+
+This configuration outlines the flexibility in discounting and signature inputs but lacks a requirement for VAT numbers and disclaimers.

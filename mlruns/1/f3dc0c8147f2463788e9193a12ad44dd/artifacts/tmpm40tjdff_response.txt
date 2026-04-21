@@ -1,0 +1,24 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+No leads from the Salesforce database specifically identified as being from the Technology or Software industry were found in the step results. The listed leads did not include specific industry information. Here are the retrieved leads:
+
+- **Lead 1:**
+  - Name: Arne Albrecht
+  - Email: albrecht.arne@gmail.com
+  - Company: easi_dupe
+  - Status: Contacted
+
+- **Lead 2:**
+  - Name: another lead
+  - Email: mr.another.lead@gmail.com
+  - Company: another-company
+  - Status: New
+
+- **Lead 3:**
+  - Name: ur moms lead ur dads lead
+  - Company: grandmas bakery
+  - Status: New
+
+None of these leads are categorized under the Technology or Software industries.

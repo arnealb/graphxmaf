@@ -1,0 +1,58 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the emails you received in the last 14 days:
+
+### Recent Emails
+- **From:** SharePoint Online  
+  **Subject:** News you might have missed  
+  **Received:** 7 April 2026  
+  **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAMlMAhtAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **From:** SharePoint Online  
+  **Subject:** Files in "Logos" have been archived  
+  **Received:** 8 April 2026  
+  **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAMlMAhuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **From:** SharePoint Online  
+  **Subject:** Roel de Graaff wants to access 'DM Process Dump Test'  
+  **Received:** 9 April 2026  
+  **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAMlMAhvAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **From:** SmartAdmin  
+  **Subject:** English version of "Home" was updated  
+  **Received:** 10 April 2026  
+  **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAMxWW%2FPAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **From:** SmartAdmin  
+  **Subject:** SmartAdmin has invited you to 'DM Process Dump Test'  
+  **Received:** 10 April 2026  
+  **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM23lytAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **From:** Microsoft Security  
+  **Subject:** Your weekly PIM digest for EasiGroupDemo  
+  **Received:** 12 April 2026  
+  **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOJ%2BAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **From:** Arne Albrecht  
+  **Subject:** Aankoop office supplies  
+  **Received:** 13 April 2026  
+  **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOJ%2FAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **From:** SmartAdmin  
+  **Subject:** meeting  
+  **Received:** 14 April 2026  
+  **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANJHug1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **From:** Arne Albrecht  
+  **Subject:** Question about delayed delivery  
+  **Received:** 13 April 2026  
+  **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKDAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **From:** Microsoft Security  
+  **Subject:** New recommendation available for EasiGroupDemo  
+  **Received:** 17 April 2026  
+  **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANUrxQfAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+This list includes emails from various senders received during the specified period. If you need further details about any specific email, let me know!

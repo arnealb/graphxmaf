@@ -1,0 +1,45 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here is the list of SmartSales orders with full projection:
+
+### Orders
+
+1. **Order UID**: 332cb4b2-285d-11f1-a2fe-005056010707
+   - **Creation Date**: 25 March 2026
+   - **Internal Reference**: TEST-001
+   - **External Reference**: EXT-001
+   - **Customer**: Customer1 (CUS-001)
+   - **Supplier**: supplier1 (SUP-001)
+   - **Comments**: Test order created via Postman
+   - **Total Quantity**: 2
+   - **Subtotal**: 100.0
+   - **Total**: 0
+   - **Discount**: 100%
+   - **Items**:
+     - **ITEM-001**: Test product - Quantity: 2, Price: 50, Total Price: 100
+
+2. **Order UID**: e8333fcf-38ad-11f1-a803-005056010707
+   - **Creation Date**: 15 April 2026
+   - **Internal Reference**: ORD-ARNE-001
+   - **External Reference**: EXT-ARNE-001
+   - **Customer**: Arne Albrecht (CUS-002)
+   - **Supplier**: supplier1 (SUP-001)
+   - **Comments**: New employee IT setup for Arne Albrecht
+   - **Total Quantity**: 3
+   - **Subtotal**: 2047.99
+   - **Total**: 0
+   - **Discount**: 100%
+   - **Items**:
+     - **CAT-LAPTOP-01**: Business Laptop Pro 15 - Quantity: 1, Price: 1299.99
+     - **CAT-DOCK-01**: USB-C Docking Station - Quantity: 1, Price: 249
+     - **CAT-LICENSE-01**: Software License Pack - Quantity: 1, Price: 499
+
+3. **Order UID**: f63830a6-38ad-11f1-a803-005056010707
+   - **Creation Date**: 15 April 2026
+   - **Internal Reference**: ORD-URMOM-001
+   - **External Reference**: EXT-URMOM-001
+   - **Customer**: ur mom (LOC-URMOM-01)
+   - **Supplier**: supplier1 (SUP-001)
+   - **Comments**: Home office equipm

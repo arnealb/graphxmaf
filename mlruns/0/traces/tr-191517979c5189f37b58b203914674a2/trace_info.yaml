@@ -1,0 +1,11 @@
+execution_duration_ms: 954
+request_preview: Who am I in Microsoft 365?
+request_time: '2026-04-21T07:25:17.739Z'
+response_preview: You are **SmartAdmin** with the email address **SmartAdmin@easigroupdemo.onmicrosoft.com**
+  in Microsoft 365.
+state: OK
+trace_id: tr-191517979c5189f37b58b203914674a2
+trace_location:
+  mlflow_experiment:
+    experiment_id: '0'
+  type: MLFLOW_EXPERIMENT
