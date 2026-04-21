@@ -164,12 +164,14 @@ class PlanningOrchestrator:
             wave_end = datetime.now(timezone.utc).isoformat()
 
             # Resultaten verwerken — per index door beide lijsten lopen
+            wave_failed = False
             for i in range(len(step_inputs)):
                 step, task_input = step_inputs[i]
                 res = wave_results[i]
 
                 # wel fout
                 if isinstance(res, BaseException):
+                    wave_failed = True
                     err_msg = str(res) or repr(res)
                     log.error("Step %d (%s) failed: %s", step["id"], step["agent"], err_msg, exc_info=res)
 
@@ -190,7 +192,7 @@ class PlanningOrchestrator:
                         "type": "error",
                         "message": f"Step {step['id']} ({step['agent']}) failed: {err_msg}",
                     }
-                    return
+                    continue
 
                 # geen fout
                 results[step["id"]] = res
@@ -207,6 +209,9 @@ class PlanningOrchestrator:
                         error=None,
                     )
                     current_trace.invoked_agents.append(invocation)
+
+            if wave_failed:
+                return
 
         # ── Phase 3: Synthesis ─────────────────────────────────────────────────
         yield {"type": "text", "chunk": "Synthesizing...\n"}
