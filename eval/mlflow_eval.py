@@ -68,6 +68,7 @@ from urllib.parse import urlparse
 
 import httpx
 import mlflow
+from typing import Callable
 from dotenv import load_dotenv
 from openai import AsyncAzureOpenAI
 
@@ -82,6 +83,24 @@ from eval.score import evaluate, evaluate_routing
 load_dotenv()
 
 mlflow.openai.autolog()
+
+
+# ── Token auth helper ─────────────────────────────────────────────────────────
+
+class RefreshingBearerAuth(httpx.Auth):
+    """Calls token_fn() on startup and again on 401/403 to refresh the token."""
+
+    def __init__(self, token_fn: Callable[[], str]):
+        self._token_fn = token_fn
+        self._token = token_fn()
+
+    def auth_flow(self, request):
+        request.headers["Authorization"] = f"Bearer {self._token}"
+        response = yield request
+        if response.status_code in (401, 403):
+            self._token = self._token_fn()
+            request.headers["Authorization"] = f"Bearer {self._token}"
+            yield request
 
 
 # ── Benchmark prompts ─────────────────────────────────────────────────────────
@@ -377,12 +396,11 @@ def setup_agents(
     )
     if _is_local_url(ss_url):
         procs.append(_start_smartsales_mcp_server(ss_env, ss_url))
-    ss_token = _resolve_ss_session(ss_url)
     ss_mcp = MCPStreamableHTTPTool(
         name="smartsales",
         url=ss_url,
         http_client=httpx.AsyncClient(
-            headers={"Authorization": f"Bearer {ss_token}"},
+            auth=RefreshingBearerAuth(lambda: _resolve_ss_session(ss_url)),
             timeout=httpx.Timeout(120.0),
         ),
     )

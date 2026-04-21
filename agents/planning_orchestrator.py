@@ -96,12 +96,14 @@ class PlanningOrchestrator:
         graph_agent: Optional[Agent] = None,
         sf_agent: Optional[Agent] = None,
         ss_agent: Optional[Agent] = None,
+        step_timeout: float = 60.0,
     ):
         self._planner = planner
         self._synthesizer = synthesizer
         self._graph_agent = graph_agent
         self._sf_agent = sf_agent
         self._ss_agent = ss_agent
+        self._step_timeout = step_timeout
         self._input_tokens: int = 0
         self._output_tokens: int = 0
 
@@ -158,20 +160,18 @@ class PlanningOrchestrator:
 
             step_inputs = [(s, self._enrich_task(s, results)) for s in wave]
             wave_start = datetime.now(timezone.utc).isoformat()
-            coros = [self._execute_step(s, task) for s, task in step_inputs]
+            coros = [self._execute_step(s, task, session=session) for s, task in step_inputs]
             wave_results = await asyncio.gather(*coros, return_exceptions=True)
 
             wave_end = datetime.now(timezone.utc).isoformat()
 
             # Resultaten verwerken — per index door beide lijsten lopen
-            wave_failed = False
             for i in range(len(step_inputs)):
                 step, task_input = step_inputs[i]
                 res = wave_results[i]
 
                 # wel fout
                 if isinstance(res, BaseException):
-                    wave_failed = True
                     err_msg = str(res) or repr(res)
                     log.error("Step %d (%s) failed: %s", step["id"], step["agent"], err_msg, exc_info=res)
 
@@ -209,9 +209,6 @@ class PlanningOrchestrator:
                         error=None,
                     )
                     current_trace.invoked_agents.append(invocation)
-
-            if wave_failed:
-                return
 
         # ── Phase 3: Synthesis ─────────────────────────────────────────────────
         yield {"type": "text", "chunk": "Synthesizing...\n"}
@@ -366,7 +363,7 @@ class PlanningOrchestrator:
         context = "\n\n".join(context_parts)
         return f"{context}\n\n[Task]:\n{step['task']}"
 
-    async def _execute_step(self, step: dict, task: str) -> str:
+    async def _execute_step(self, step: dict, task: str, session=None) -> str:
         """Execute a single plan step by calling the appropriate sub-agent."""
         agent_map = {
             "graph": self._graph_agent,
@@ -376,7 +373,8 @@ class PlanningOrchestrator:
         agent = agent_map.get(step["agent"])
         if agent is None:
             raise ValueError(f"Agent '{step['agent']}' is not available in this session")
-        resp = await agent.run(task)
+        kwargs = {} if session is None else {"session": session}
+        resp = await asyncio.wait_for(agent.run(task, **kwargs), timeout=self._step_timeout)
         self._accumulate_usage(resp)
         return resp.text or ""
 
@@ -407,6 +405,7 @@ def create_planning_orchestrator(
     graph_agent: Optional[Agent] = None,
     sf_agent: Optional[Agent] = None,
     ss_agent: Optional[Agent] = None,
+    step_timeout: float = 60.0,
 ) -> PlanningOrchestrator:
     """Create a PlanningOrchestrator with planner + synthesizer agents."""
     client_kwargs = dict(
@@ -438,4 +437,5 @@ def create_planning_orchestrator(
         graph_agent=graph_agent,
         sf_agent=sf_agent,
         ss_agent=ss_agent,
+        step_timeout=step_timeout,
     )
