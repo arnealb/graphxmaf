@@ -283,6 +283,7 @@ def main() -> None:
 
     graph_http = httpx.AsyncClient(
         headers={"Authorization": f"Bearer {token}"},
+        timeout=httpx.Timeout(120.0),
     )
     graph_mcp = MCPStreamableHTTPTool(
         name="graph",
@@ -305,6 +306,7 @@ def main() -> None:
 
     sf_http = httpx.AsyncClient(
         headers={"Authorization": f"Bearer {sf_session_token}"},
+        timeout=httpx.Timeout(120.0),
     )
     sf_mcp = MCPStreamableHTTPTool(
         name="salesforce",
@@ -327,6 +329,7 @@ def main() -> None:
 
     ss_http = httpx.AsyncClient(
         headers={"Authorization": f"Bearer {ss_session_token}"},
+        timeout=httpx.Timeout(120.0),
     )
     ss_mcp = MCPStreamableHTTPTool(
         name="smartsales",

@@ -42,6 +42,8 @@ from main import (
 )
 
 load_dotenv()
+log = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s — %(message)s")
 
 # ── Global state ──────────────────────────────────────────────────────────────
 
@@ -161,6 +163,7 @@ def _setup_sync() -> dict:
     ss = config["smartsales"] if config.has_section("smartsales") else {}
 
     mcp_url = azure.get("mcpServerUrl", "http://localhost:8000/mcp")
+    log.info(f"[mcp_url_graph] {mcp_url}")
     token = authenticate(
         azure["clientId"],
         azure["tenantId"],

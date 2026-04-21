@@ -170,8 +170,8 @@ class PlanningOrchestrator:
 
                 # wel fout
                 if isinstance(res, BaseException):
-                    err_msg = str(res)
-                    log.error("Step %d (%s) failed: %s", step["id"], step["agent"], err_msg)
+                    err_msg = str(res) or repr(res)
+                    log.error("Step %d (%s) failed: %s", step["id"], step["agent"], err_msg, exc_info=res)
 
                     current_trace = get_trace()
                     if current_trace is not None:
