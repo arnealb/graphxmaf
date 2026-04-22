@@ -40,10 +40,21 @@ Flags:
   # UI openen (vergelijk baseline vs v1)
   mlflow ui --backend-store-uri sqlite:///mlflow.db   # → http://localhost:5000
 
-  In de MLflow UI:
-    - Runs tab     → metrics/params/artifacts per test case
-    - Traces tab   → plan_generation / step_N_agent / synthesis spans met tijdlijn
-    - Compare runs → selecteer baseline + v1 → zie alle metrics naast elkaar
+    # Alle prompts via de planning orchestrator                                                                                                                                                                                                                                                      
+  python eval/mlflow_eval.py --version v1 --service orchestrator                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                                                 
+  # Alleen SmartSales agent direct (27 prompts)
+  python eval/mlflow_eval.py --version v1 --service smartsales
+
+  # Alleen Salesforce agent direct
+  python eval/mlflow_eval.py --version v1 --service salesforce
+
+  # Alleen Graph agent direct
+  python eval/mlflow_eval.py --version v1 --service graph
+
+  # Combineer met --category om nog verder te filteren
+  python eval/mlflow_eval.py --version v1 --service smartsales --category locations
+
 """
 
 import sys
@@ -82,7 +93,7 @@ from eval.score import evaluate, evaluate_routing
 
 load_dotenv()
 
-mlflow.openai.autolog()
+mlflow.openai.autolog(disable=True)
 
 
 # ── Token auth helper ─────────────────────────────────────────────────────────
@@ -126,7 +137,7 @@ def _load_prompts(path: str | None = None) -> list[BenchmarkPrompt]:
 BENCHMARK_PROMPTS: list[BenchmarkPrompt] = _load_prompts()
 
 
-# ── Orchestrator runner ───────────────────────────────────────────────────────
+# ── Runners ───────────────────────────────────────────────────────────────────
 
 async def run_and_collect(orchestrator, query: str) -> dict:
     """Run a query through the PlanningOrchestrator and collect all results."""
@@ -136,16 +147,23 @@ async def run_and_collect(orchestrator, query: str) -> dict:
     chunks: list[str] = []
     tokens: dict = {}
     errors: list[str] = []
+    _answer_started = False
 
     try:
         async for event in orchestrator.run_sse(query):
             if event["type"] == "text":
                 chunks.append(event["chunk"])
+                if not _answer_started:
+                    chunk = event["chunk"].strip()
+                    print(f"    {chunk}", flush=True)
+                    if chunk == "Synthesizing...":
+                        _answer_started = True
             elif event["type"] == "done":
                 tokens = event.get("tokens", {})
             elif event["type"] == "error":
                 errors.append(event["message"])
     except Exception as exc:
+        print(f"[DEBUG EXCEPTION] {exc}")
         errors.append(str(exc))
 
     return {
@@ -157,6 +175,7 @@ async def run_and_collect(orchestrator, query: str) -> dict:
         "errors": errors,
         "success": len(errors) == 0,
     }
+
 
 
 def compute_plan_stats(plan: dict) -> dict:
@@ -219,12 +238,15 @@ def _log_text_artifact(content: str, filename: str) -> None:
 # ── Per-case benchmark ────────────────────────────────────────────────────────
 
 async def run_benchmark_case(
-    orchestrator,
+    runner,
     prompt: BenchmarkPrompt,
     scorer_client: AsyncAzureOpenAI,
     scorer_deployment: str,
     version: str,
     case_idx: int,
+    total: int = 0,
+    service: str = "orchestrator",
+    orchestrator=None,
 ) -> dict:
     """Run one test case and log all results to a nested MLflow child run.
 
@@ -232,10 +254,9 @@ async def run_benchmark_case(
         params  — query, expected_answer, expected_agents
         metrics — llm_score, routing_score, latency_s, tokens, plan_stats,
                   routing_precision, routing_recall
-        tags    — version, category, difficulty, llm_rationale, routing_rationale
+        tags    — version, service, category, difficulty, llm_rationale, routing_rationale
         artifacts — response.txt, routing_trace.json, plan.json, errors.txt
-    Also creates an MLflow Trace (visible in the Traces tab) with child spans
-    per phase: plan_generation, step_{n}_{agent}, synthesis.
+    For service=orchestrator: also creates an MLflow Trace with plan/execute/synthesis spans.
     """
     from eval.mlflow_tracing import instrument_orchestrator
 
@@ -245,6 +266,7 @@ async def run_benchmark_case(
         # ── Tags & params ─────────────────────────────────────────────────────
         mlflow.set_tags({
             "version": version,
+            "service": service,
             "category": prompt.category,
             "difficulty": prompt.difficulty,
             "expected_agents": ",".join(prompt.expected_agents),
@@ -255,23 +277,27 @@ async def run_benchmark_case(
             "expected_agents": ",".join(prompt.expected_agents),
         })
 
-        # ── Run orchestrator (with MLflow trace) ──────────────────────────────
-        print(f"  [{case_idx:02d}] [{prompt.category}/{prompt.difficulty}] {prompt.text[:70]!r}")
+        # ── Run (with optional MLflow tracing for orchestrator) ───────────────
+        width = len(str(total))
+        print(f"  [{case_idx:0{width}d}/{total}] [{prompt.category}/{prompt.difficulty}] {prompt.text[:70]!r}")
 
         phase_timings: dict = {}
-        try:
-            _trace_ctx = (
-                mlflow.start_trace(name=run_name)
-                if hasattr(mlflow, "start_trace")
-                else __import__("contextlib").nullcontext()
-            )
-            with _trace_ctx:
-                async with instrument_orchestrator(orchestrator) as _pt:
-                    result = await run_and_collect(orchestrator, prompt.text)
-                phase_timings = _pt
-        except Exception as _te:
-            print(f"       [trace unavailable: {_te}]")
-            result = await run_and_collect(orchestrator, prompt.text)
+        if service == "orchestrator" and orchestrator is not None:
+            try:
+                _trace_ctx = (
+                    mlflow.start_trace(name=run_name)
+                    if hasattr(mlflow, "start_trace")
+                    else __import__("contextlib").nullcontext()
+                )
+                with _trace_ctx:
+                    async with instrument_orchestrator(orchestrator) as _pt:
+                        result = await runner(prompt.text)
+                    phase_timings = _pt
+            except Exception as _te:
+                print(f"       [trace unavailable: {_te}]")
+                result = await runner(prompt.text)
+        else:
+            result = await runner(prompt.text)
 
         plan_stats = compute_plan_stats(result["plan"])
 
@@ -462,12 +488,24 @@ def setup_agents(
             print(f"WARNING: Salesforce unavailable ({exc}). CRM prompts will score 1.")
             print("         Use --skip-sf to suppress this warning.")
 
+    # Give MCP servers a moment to fully initialize beyond TCP-port availability.
+    # _wait_for_port only checks socket connectivity; Uvicorn/FastMCP needs ~2s
+    # extra to register routes and be ready to accept MCP sessions.
+    if procs:
+        import time as _time
+        _time.sleep(2)
+
     orchestrator = create_planning_orchestrator(
         graph_agent=graph_agent,
         sf_agent=sf_agent,
         ss_agent=ss_agent,
     )
-    return orchestrator, procs
+    agents = {
+        "graph":      graph_agent,
+        "salesforce": sf_agent,
+        "smartsales": ss_agent,
+    }
+    return orchestrator, agents, procs
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -482,9 +520,17 @@ async def main_async(args: argparse.Namespace) -> None:
         prompts = [p for p in prompts if p.category == args.category]
     if args.difficulty:
         prompts = [p for p in prompts if p.difficulty == args.difficulty]
+    # Filter prompts to only those relevant for the chosen service
+    if not args.category:
+        if args.service == "orchestrator":
+            # Orchestrator only handles multi-agent (cross-system) queries
+            prompts = [p for p in prompts if len(p.expected_agents) > 1]
+        else:
+            # Single-agent services: only prompts exclusively for that agent
+            prompts = [p for p in prompts if p.expected_agents == [args.service]]
 
     if args.dry_run:
-        print(f"DRY RUN — {len(prompts)} prompts:\n")
+        print(f"DRY RUN — {len(prompts)} prompts (service={args.service}):\n")
         for i, p in enumerate(prompts):
             print(f"  [{i:02d}] [{p.category}/{p.difficulty}] {p.text}")
             print(f"        expected_agents : {p.expected_agents}")
@@ -492,12 +538,26 @@ async def main_async(args: argparse.Namespace) -> None:
             print()
         return
 
+    # ── Validate service vs skip flags ────────────────────────────────────────
+    if args.service == "graph" and args.skip_graph:
+        print("ERROR: --service graph conflicts with --skip-graph")
+        return
+    if args.service == "salesforce" and args.skip_sf:
+        print("ERROR: --service salesforce conflicts with --skip-sf")
+        return
+
     # ── MLflow setup ──────────────────────────────────────────────────────────
     mlflow.set_tracking_uri("sqlite:///mlflow.db")
     mlflow.set_experiment(args.experiment)
 
     # ── Build agents ──────────────────────────────────────────────────────────
-    orchestrator, procs = setup_agents(config, args.skip_graph, args.skip_sf)
+    orchestrator, agents, procs = setup_agents(config, args.skip_graph, args.skip_sf)
+
+    # ── Runner: always the full planning orchestrator ─────────────────────────
+    # --service only controls which prompts are selected (see filtering above).
+    # Every prompt goes through the same plan→execute→synthesize pipeline.
+    runner = lambda q: run_and_collect(orchestrator, q)
+    orch_for_tracing = orchestrator
 
     # ── Scorer ────────────────────────────────────────────────────────────────
     scorer_client = AsyncAzureOpenAI(
@@ -515,7 +575,7 @@ async def main_async(args: argparse.Namespace) -> None:
         with mlflow.start_run(run_name=parent_run_name) as parent:
             mlflow.set_tags({
                 "version": args.version,
-                "orchestrator": "planning",
+                "service": args.service,
                 "n_prompts": str(len(prompts)),
                 "skip_graph": str(args.skip_graph),
                 "skip_sf": str(args.skip_sf),
@@ -525,18 +585,21 @@ async def main_async(args: argparse.Namespace) -> None:
             print(f"\n{'─' * 64}")
             print(f"  Experiment : {args.experiment}")
             print(f"  Version    : {args.version}")
+            print(f"  Service    : {args.service}")
             print(f"  Parent run : {parent_run_name}")
             print(f"  Prompts    : {len(prompts)}")
-            print(f"  Tracing    : on (plan/execute/synthesis spans)")
             print(f"{'─' * 64}\n")
 
             all_results = []
             for i, prompt in enumerate(prompts):
                 result = await run_benchmark_case(
-                    orchestrator, prompt,
+                    runner, prompt,
                     scorer_client, scorer_deployment,
                     version=args.version,
                     case_idx=i,
+                    total=len(prompts),
+                    service=args.service,
+                    orchestrator=orch_for_tracing,
                 )
                 all_results.append(result)
 
@@ -588,6 +651,13 @@ def main() -> None:
     parser.add_argument(
         "--version", required=True,
         help="Version label for this run (e.g. baseline, v1, prompt-v2)",
+    )
+    parser.add_argument(
+        "--service",
+        choices=["orchestrator", "graph", "salesforce", "smartsales"],
+        default="orchestrator",
+        help="Which service to benchmark [default: orchestrator]. "
+             "orchestrator=multi-agent queries only; single-agent services filter to their own queries.",
     )
     parser.add_argument(
         "--experiment", default="graphxmaf-eval",

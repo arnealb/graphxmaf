@@ -97,12 +97,12 @@ async def instrument_orchestrator(orchestrator: "PlanningOrchestrator"):
 
     # ── plan_generation  (SpanType.LLM) ──────────────────────────────────────
 
-    async def _plan(query: str) -> dict:
+    async def _plan(query: str, **kwargs) -> dict:
         before = _snap(orchestrator)
         with _span("plan_generation", _SPAN_LLM) as sp:
             _safe(sp.set_inputs, {"query": query[:500]}) if sp else None
             t0   = time.monotonic()
-            plan = await orig_create_plan(query)
+            plan = await orig_create_plan(query, **kwargs)
             elapsed = time.monotonic() - t0
             usage   = _usage(orchestrator, before)
             n       = len(plan.get("steps", []))
@@ -122,7 +122,7 @@ async def instrument_orchestrator(orchestrator: "PlanningOrchestrator"):
 
     # ── step_{n}_{agent}  (SpanType.AGENT) ───────────────────────────────────
 
-    async def _step(step: dict, task: str) -> str:
+    async def _step(step: dict, task: str, **kwargs) -> str:
         before    = _snap(orchestrator)
         span_name = f"step_{step['id']}_{step['agent']}"
         with _span(span_name, _SPAN_AGENT) as sp:
@@ -133,7 +133,7 @@ async def instrument_orchestrator(orchestrator: "PlanningOrchestrator"):
                     "task":       task[:400],
                 })
             t0     = time.monotonic()
-            result = await orig_execute_step(step, task)
+            result = await orig_execute_step(step, task, **kwargs)
             elapsed = time.monotonic() - t0
             usage   = _usage(orchestrator, before)
             phase_timings["steps"].append({
@@ -151,7 +151,7 @@ async def instrument_orchestrator(orchestrator: "PlanningOrchestrator"):
 
     # ── synthesis  (SpanType.LLM) ─────────────────────────────────────────────
 
-    async def _synth(query: str, plan: dict, results: dict) -> str:
+    async def _synth(query: str, plan: dict, results: dict, **kwargs) -> str:
         before = _snap(orchestrator)
         with _span("synthesis", _SPAN_LLM) as sp:
             if sp:
@@ -160,7 +160,7 @@ async def instrument_orchestrator(orchestrator: "PlanningOrchestrator"):
                     "n_results": str(len(results)),
                 })
             t0     = time.monotonic()
-            answer = await orig_synthesize(query, plan, results)
+            answer = await orig_synthesize(query, plan, results, **kwargs)
             elapsed = time.monotonic() - t0
             usage   = _usage(orchestrator, before)
             phase_timings["synthesis"] = {
