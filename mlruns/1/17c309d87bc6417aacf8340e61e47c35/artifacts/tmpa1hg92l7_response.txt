@@ -1,0 +1,65 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here are the SmartSales locations in Belgium, sorted by name, with complete details:
+
+### Locations:
+1. **AACO DAVIDSON**
+   - **UID:** 77538c4e-2135-11f1-84f0-005056010707
+   - **Street:** Havenkant 6
+   - **City:** Leuven
+   - **ZIP:** 3000
+   - **Country:** Belgium
+   - **Latitude:** 50.8873413
+   - **Longitude:** 4.7005038
+   - **Email:** info@aacodavidson.com
+   - **VAT Number:** Not available
+   - **Last Visit Date:** 5 April 2026
+
+2. **Arne Albrecht**
+   - **UID:** e99a8663-38a8-11f1-a803-005056010707
+   - **Street:** Lippenslaan 347
+   - **City:** Knokke
+   - **ZIP:** 8300
+   - **Country:** Belgium
+   - **Latitude:** 51.3518122
+   - **Longitude:** 3.2887656
+   - **Email:** Not available
+   - **VAT Number:** Not available
+   - **Last Order Date:** 15 April 2026
+
+3. **Customer1**
+   - **UID:** fa4acd29-285c-11f1-a2fe-005056010707
+   - **Street:** Markt 5
+   - **City:** Bruges
+   - **ZIP:** 8000
+   - **Country:** Belgium
+   - **Latitude:** 51.2086225
+   - **Longitude:** 3.2250864
+   - **Email:** Not available
+   - **VAT Number:** Not available
+   - **Last Order Date:** 25 March 2026
+
+4. **name-v1**
+   - **UID:** 44b3e977-2783-11f1-a2fe-005056010707
+   - **Street:** Stationsplein 14
+   - **City:** Antwerp
+   - **ZIP:** 2018
+   - **Country:** Belgium
+   - **Latitude:** 51.1341955
+   - **Longitude:** 4.4751428
+   - **Email:** Not available
+   - **VAT Number:** BE0897654321
+   - **Last Order Date:** 19 March 2026
+
+5. **supplier1**
+   - **UID:** cac5b20d-285c-11f1-a2fe-005056010707
+   - **Street:** Rue du Commerce 1
+   - **City:** Brussels
+   - **ZIP:** 1000
+   - **Country:** Belgium
+   - **Latitude:** 50.8394667
+   - **Longitude:** 4.3673141
+   - **Email:** Not available
+   - **VAT Number:** Not available

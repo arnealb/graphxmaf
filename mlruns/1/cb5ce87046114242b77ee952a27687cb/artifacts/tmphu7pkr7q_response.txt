@@ -1,0 +1,156 @@
+[
+    {
+        "keyName": "techServerCreationDate",
+        "displayName": "",
+        "hidden": false,
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "techServerUpdateDate",
+        "displayName": "",
+        "hidden": false,
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "code",
+        "displayName": "code",
+        "hidden": false,
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "externalId",
+        "displayName": "",
+        "hidden": false,
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "title",
+        "displayName": "title",
+        "hidden": false,
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "searchKeywordText",
+        "displayName": "",
+        "hidden": false,
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "price",
+        "displayName": "price",
+        "hidden": false,
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "measurementUnitReferenceUnitCode",
+        "displayName": "",
+        "hidden": false,
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "measurementUnitTitle",
+        "displayName": "",
+        "hidden": false,
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "position",
+        "displayName": "",
+        "hidden": false,
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "quantitySold",
+        "displayName": "",
+        "hidden": false,
+        "audiences": [
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "description",
+        "displayName": "description",
+        "hidden": false,
+        "audiences": [
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "availability",
+        "displayName": "availability",
+        "hidden": false,
+        "audiences": [
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "salesunit",
+        "displayName": "salesUnit",
+        "hidden": false,
+        "audiences": [
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "packagingunit",
+        "displayName": "packagingUnit",
+        "hidden": false,
+        "audiences": [
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "measure",
+        "displayName": "measure",
+        "hidden": false,
+        "audiences": [
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "unitofmeasure",
+        "displayName": "unitOfMeasure",
+        "hidden": false,
+        "audiences": [
+            "MOBILE"
+        ]
+    },
+    {
+        "keyName": "group",
+        "displayName": "group",
+        "hidden": false,
+        "audiences": [
+            "MOBILE"
+        ]
+    }
+]

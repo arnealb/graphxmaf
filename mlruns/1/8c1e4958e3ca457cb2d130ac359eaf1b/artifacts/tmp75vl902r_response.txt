@@ -1,0 +1,42 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+### File Details
+- **File Name:** nvidia-financial-analysis-report.md
+- **File Size:** 39,649 bytes
+- **Created:** 10 April 2026
+- **Modified:** 10 April 2026
+- **Web Link:** [View File](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Forms/DispForm.aspx?ID=145)
+
+### Content Summary
+The file is a financial analysis report for NVIDIA Corporation (NVDA), containing the following sections:
+
+#### 1. Company Overview
+- **Full Legal Name:** NVIDIA Corporation
+- **Ticker:** NVDA
+- **Exchange:** NASDAQ Global Select Market
+- **Incorporated:** California, April 1993; reincorporated in Delaware, April 1998
+- **Headquarters:** 2788 San Tomas Expressway, Santa Clara, California 95051
+- **CEO:** Jensen Huang (Founder)
+- **CFO:** Colette Kress
+
+#### 2. Business Description
+- NVIDIA designs and manufactures GPUs, CPUs, DPUs, and software platforms, focusing on accelerated computing and AI solutions.
+
+#### 3. Financial Metrics (as of April 10, 2026)
+- **Current Stock Price:** ~$186.50
+- **Market Capitalization:** ~$4.5 trillion
+- **Revenue (FY2026):** $215.9 billion
+
+#### 4. Income Statement Highlights (FY2026)
+- **Total Revenue:** $215,938 million
+- **Net Income:** $120,067 million
+- **Diluted EPS:** $4.90
+
+#### 5. Balance Sheet Highlights (FY2026)
+- **Total Assets:** $206,803 million
+- **Total Stockholders' Equity:** $157,293 million
+- **Net Cash Position:** $54.1 billion
+
+This report provides a comprehensive overview of NVIDIA's financial performance, market position, and key data points related to its business segments and fiscal health.

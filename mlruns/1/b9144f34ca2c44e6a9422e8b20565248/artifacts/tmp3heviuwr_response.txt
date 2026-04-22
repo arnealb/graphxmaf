@@ -1,0 +1,9 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is your profile information in Microsoft 365:
+
+- **Name**: SmartAdmin
+- **Email**: SmartAdmin@easigroupdemo.onmicrosoft.com
+- **Job Title**: Not available

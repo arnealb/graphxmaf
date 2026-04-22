@@ -1,0 +1,52 @@
+[
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANRyrptAAA=",
+        "subject": "meeting about numbers or something",
+        "start": "2026-04-21T16:30:00.0000000",
+        "end": "2026-04-21T17:00:00.0000000",
+        "organizer": {
+            "name": "SmartAdmin",
+            "address": "SmartAdmin@easigroupdemo.onmicrosoft.com"
+        }
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhWAAA=",
+        "subject": "gym",
+        "start": "2026-04-22T20:30:00.0000000",
+        "end": "2026-04-22T21:00:00.0000000",
+        "organizer": {
+            "name": "SmartAdmin",
+            "address": "SmartAdmin@easigroupdemo.onmicrosoft.com"
+        }
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhXAAA=",
+        "subject": "anotha one",
+        "start": "2026-04-23T11:00:00.0000000",
+        "end": "2026-04-23T11:30:00.0000000",
+        "organizer": {
+            "name": "SmartAdmin",
+            "address": "SmartAdmin@easigroupdemo.onmicrosoft.com"
+        }
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANc8eMRAAA=",
+        "subject": "closing opportunity",
+        "start": "2026-04-30T00:00:00.0000000",
+        "end": "2026-05-01T00:00:00.0000000",
+        "organizer": {
+            "name": "SmartAdmin",
+            "address": "SmartAdmin@easigroupdemo.onmicrosoft.com"
+        }
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhVAAA=",
+        "subject": "nog e meeting",
+        "start": "2026-04-21T12:30:00.0000000",
+        "end": "2026-04-21T13:00:00.0000000",
+        "organizer": {
+            "name": "SmartAdmin",
+            "address": "SmartAdmin@easigroupdemo.onmicrosoft.com"
+        }
+    }
+]

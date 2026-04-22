@@ -1,0 +1,29 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here are the SmartSales locations found in Brussels:
+
+- **Global Media**
+  - Street: Mediastraat 10
+  - Zip: 1000
+  - Country: Belgium
+  - UID: c7f1a08e-38ad-11f1-a803-005056010707
+
+- **Test**
+  - Street: Teststraat 1
+  - Zip: 1000
+  - Country: Belgium
+  - UID: 0266c124-38aa-11f1-a803-005056010707
+
+- **ur mom**
+  - Street: Rue de France 1
+  - Zip: 1000
+  - Country: Belgium
+  - UID: bb8983bf-38ad-11f1-a803-005056010707
+
+- **supplier1**
+  - Street: Rue du Commerce 1
+  - Zip: 1000
+  - Country: Belgium
+  - UID: cac5b20d-285c-11f1-a2fe-005056010707

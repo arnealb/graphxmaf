@@ -1,0 +1,21 @@
+Here are your Microsoft 365 contacts:
+
+1. **John Lastname**
+   - Email: john.lastname@globalmedia.com
+   - Phone: 0326243426
+
+2. **ur dog**
+   - Email: ur.dog@doghouse.com
+   - Phone: 0483922818
+
+3. **ur mom**
+   - Email: ur.mom@grandpa.com
+   - Phone: 0427277501
+
+4. **test**
+   - Email: test.test@gmail.com
+   - Phone: Not available
+
+5. **Arne Albrecht**
+   - Email: a.albrecht@easi.net
+   - Phone: Not available

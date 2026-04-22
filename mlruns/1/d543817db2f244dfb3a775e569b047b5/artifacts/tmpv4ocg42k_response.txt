@@ -1,0 +1,66 @@
+{
+  "uid": "77538c4e-2135-11f1-84f0-005056010707",
+  "techServerCreationDate": "20260316124134000+0000",
+  "techServerUpdateDate": "20260406050039000+0000",
+  "techCreationUserUid": "b1a57af8-1de9-11f1-84f0-005056010707",
+  "techUpdateUserUid": "b1a57af8-1de9-11f1-84f0-005056010707",
+  "techCreationUser": {
+    "uid": "b1a57af8-1de9-11f1-84f0-005056010707",
+    "username": "smaa@easi-ai-demo.net",
+    "firstname": "Supervisor",
+    "lastname": "Account",
+    "displayName": null,
+    "businessId": null
+  },
+  "techUpdateUser": {
+    "uid": "b1a57af8-1de9-11f1-84f0-005056010707",
+    "username": "smaa@easi-ai-demo.net",
+    "firstname": "Supervisor",
+    "lastname": "Account",
+    "displayName": null,
+    "businessId": null
+  },
+  "toSynchronize": false,
+  "techClientCreationDate": "20260316124134000+0000",
+  "techClientUpdateDate": "20260316124134000+0000",
+  "code": "20260316134107",
+  "externalId": "2033",
+  "street": "Havenkant 6",
+  "city": "Leuven",
+  "zip": "3000",
+  "country": "Belgium",
+  "latitude": 50.8873413,
+  "longitude": 4.7005038,
+  "name": "AACO DAVIDSON",
+  "vatNumber": "",
+  "deleted": false,
+  "suppliers": [],
+  "parentRelationships": [],
+  "childRelationships": [],
+  "attributes": [
+    {
+      "name": "email",
+      "value": "info@aacodavidson.com"
+    }
+  ],
+  "users": [
+    {
+      "uid": "b1a57af8-1de9-11f1-84f0-005056010707",
+      "username": "smaa@easi-ai-demo.net",
+      "firstname": "Supervisor",
+      "lastname": "Account",
+      "displayName": null,
+      "businessId": null
+    }
+  ],
+  "groups": [],
+  "documents": [],
+  "tags": [],
+  "commented": false,
+  "lastVisitDate": "20260405142802000+0000",
+  "lastOrderDate": null,
+  "targetGoals": [],
+  "hasExtranetAccess": false,
+  "extranetUser": null,
+  "fieldValues": []
+}

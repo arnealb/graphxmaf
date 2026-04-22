@@ -1,0 +1,146 @@
+[
+    {
+        "fieldName": "uid",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": true,
+        "allowExpression": true,
+        "selector": "CLIENT_UID",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "code",
+        "displayName": "code",
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": null,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "name",
+        "displayName": "name",
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": null,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "street",
+        "displayName": "street",
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": null,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "city",
+        "displayName": "city",
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": null,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "country",
+        "displayName": "country",
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": null,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "zip",
+        "displayName": "zip",
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": null,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "vatNumber",
+        "displayName": "vatNumber",
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": null,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "externalId",
+        "displayName": "externalId",
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": null,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "latitude",
+        "displayName": "latitude",
+        "type": "DECIMAL",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": null,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "longitude",
+        "displayName": "longitude",
+        "type": "DECIMAL",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": null,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "lastVisitDate",
+        "displayName": "lastVisitDate",
+        "type": "DATETIME",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": null,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "lastOrderDate",
+        "displayName": "lastOrderDate",
+        "type": "DATETIME",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": null,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "deleted",
+        "displayName": null,
+        "type": "BOOLEAN",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": null,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "includeDeleted",
+        "displayName": null,
+        "type": "BOOLEAN",
+        "hidden": false,
+        "allowExpression": false,
+        "selector": null,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "email",
+        "displayName": "email",
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": null,
+        "audiences": ["WEB", "MOBILE"]
+    }
+]

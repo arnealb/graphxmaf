@@ -1,0 +1,11 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is the list of your Microsoft 365 contacts along with their phone numbers:
+
+- **John Lastname:** 0326243426
+- **ur dog:** 0483922818
+- **ur mom:** 0427277501
+- **test:** Not available
+- **Arne Albrecht:** Not available

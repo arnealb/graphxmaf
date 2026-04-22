@@ -1,0 +1,29 @@
+```json
+[
+    {
+        "name": "John Lastname",
+        "email": "john.lastname@globalmedia.com",
+        "phone": "0326243426"
+    },
+    {
+        "name": "ur dog",
+        "email": "ur.dog@doghouse.com",
+        "phone": "0483922818"
+    },
+    {
+        "name": "ur mom",
+        "email": "ur.mom@grandpa.com",
+        "phone": "0427277501"
+    },
+    {
+        "name": "test",
+        "email": "test.test@gmail.com",
+        "phone": null
+    },
+    {
+        "name": "Arne Albrecht",
+        "email": "a.albrecht@easi.net",
+        "phone": null
+    }
+]
+```

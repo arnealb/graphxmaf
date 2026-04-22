@@ -1,0 +1,61 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here is the list of Salesforce opportunities sorted by amount, from highest to lowest:
+
+- **Opportunity Name:** new opp
+  - **Amount:** $1,000,000
+  - **Stage:** Value Proposition
+  - **Close Date:** 30 April 2026
+  - **Account Name:** Global Media
+
+- **Opportunity Name:** IT Parc replacement
+  - **Amount:** $19,625
+  - **Stage:** Offer sent
+  - **Close Date:** 30 September 2025
+  - **Account Name:** Advanced Communications
+
+- **Opportunity Name:** Renewal @ Assurity
+  - **Amount:** $35,000
+  - **Stage:** Negotiation/Review
+  - **Close Date:** 20 February 2025
+  - **Account Name:** Assurity Corporation
+
+- **Opportunity Name:** End-of-Year Summit
+  - **Amount:** $25,000
+  - **Stage:** Offer sent
+  - **Close Date:** 24 January 2025
+  - **Account Name:** Tech Labs
+
+- **Opportunity Name:** Training Workshop
+  - **Amount:** Not specified
+  - **Stage:** Offer sent
+  - **Close Date:** 8 April 2025
+  - **Account Name:** Goodman Imports
+
+- **Opportunity Name:** Sales Kick-off Meeting
+  - **Amount:** $10,000
+  - **Stage:** Offer sent
+  - **Close Date:** 22 February 2025
+  - **Account Name:** Plasmosis Inc.
+
+- **Opportunity Name:** Networking Event
+  - **Amount:** $7,500
+  - **Stage:** Offer sent
+  - **Close Date:** 10 April 2025
+  - **Account Name:** Roseburg Products
+
+- **Opportunity Name:** Prospection Nivea
+  - **Amount:** $646
+  - **Stage:** Contact reached
+  - **Close Date:** 24 April 2025
+  - **Account Name:** Nivea
+
+- **Opportunity Name:** Product Launch Event
+  - **Amount:** Not specified
+  - **Stage:** Qualification
+  - **Close Date:** 19 February 2025
+  - **Account Name:** Gusto Manufacturing
+
+Please note that opportunities with unspecified amounts are included but listed as "Not specified."

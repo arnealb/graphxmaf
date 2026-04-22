@@ -1,0 +1,42 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (smartsales)...
+️Executing (smartsales)...
+Synthesizing...
+### SmartSales Locations
+1. **AACO DAVIDSON**
+   - **UID:** 77538c4e-2135-11f1-84f0-005056010707
+   - **Address:** Havenkant 6, Leuven, 3000, Belgium
+   - **Coordinates:** Latitude 50.8873413, Longitude 4.7005038
+   
+2. **Stream Software**
+   - **UID:** e6d82255-2861-11f1-a2fe-005056010707
+   - **Address:** Potvlietlaan 4, Antwerpen, 2600, Belgium
+
+3. **Acme Logistics Ltd**
+   - **UID:** 927f671a-277b-11f1-a2fe-005056010707
+   - **Address:** Baker Street 221B, London, NW1 6XE, United Kingdom
+
+4. **Advanced Communications**
+   - **UID:** 2d0dcc47-38aa-11f1-a803-005056010707
+   - **Address:** Mediapark 5, Ghent, 9000, BE
+
+5. **EASI**
+   - **UID:** 479a3ea8-38aa-11f1-a803-005056010707
+   - **Address:** Rue d'Arlon 50, Namur, 5000, BE
+
+### Full Details of the First Location: AACO DAVIDSON
+- **UID:** 77538c4e-2135-11f1-84f0-005056010707
+- **Name:** AACO DAVIDSON
+- **Address:** Havenkant 6, Leuven, 3000, Belgium
+- **Coordinates:** Latitude 50.8873413, Longitude 4.7005038
+- **Creation Date:** 16 March 2026
+- **Last Update Date:** 6 April 2026
+- **Last Visit Date:** 5 April 2026
+- **Email:** info@aacodavidson.com
+- **Created by:** 
+  - **First Name:** Supervisor
+  - **Last Name:** Account
+  - **Username:** smaa@easi-ai-demo.net
+- **Has Extranet Access:** No
+- **Deleted:** No

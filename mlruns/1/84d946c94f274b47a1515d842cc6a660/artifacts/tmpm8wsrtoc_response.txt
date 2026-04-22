@@ -1,0 +1,19 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+️Executing (smartsales)...
+Synthesizing...
+Based on the results from each step of the execution plan, here is the final answer:
+
+- **Sender Information**:
+  - **Name**: Microsoft Notifications
+  - **Email**: no-reply@notify.microsoft.com
+
+- **Salesforce Lookup**:
+  - No contact or lead found for the sender in Salesforce.
+
+- **SmartSales Location Check**:
+  - No SmartSales locations associated with the sender's company.
+
+In summary, the sender of your most recent email is Microsoft Notifications, but there are no relevant contacts or leads in Salesforce, and their company does not have a SmartSales location.

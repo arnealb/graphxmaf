@@ -1,0 +1,37 @@
+[
+    {
+        "id": "003KI00000964NzYAI",
+        "first_name": "Arne",
+        "last_name": "Albrecht",
+        "email": "albrecht.arne@gmail.com",
+        "account_name": "Displaytech"
+    },
+    {
+        "id": "003KI00000964ONYAY",
+        "first_name": "ur",
+        "last_name": "mom",
+        "email": "ur.mom@grandpa.com",
+        "account_name": "account in france"
+    },
+    {
+        "id": "003KI00000964NyYAI",
+        "first_name": "John",
+        "last_name": "lastname",
+        "email": "john.lastname@globalmedia.com",
+        "account_name": "Global Media"
+    },
+    {
+        "id": "003KI00000964ALYAY",
+        "first_name": "Leo",
+        "last_name": "Snickers",
+        "email": "leo.snickers@candybar.com",
+        "account_name": "account in france"
+    },
+    {
+        "id": "003J6000001ZPOgIAO",
+        "first_name": "Alex",
+        "last_name": "Moreno",
+        "email": "a.delforge@easi.net",
+        "account_name": "EASI"
+    }
+]

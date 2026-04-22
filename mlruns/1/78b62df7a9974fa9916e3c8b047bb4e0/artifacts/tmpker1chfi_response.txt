@@ -1,0 +1,53 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (smartsales)...
+️Executing (smartsales)...
+Synthesizing...
+### SmartSales Orders
+
+You have the following orders:
+
+1. **Order UID**: 332cb4b2-285d-11f1-a2fe-005056010707
+   - **Date**: 25 March 2026
+   - **Customer**: Customer1
+   - **Internal Reference**: TEST-001
+   - **External Reference**: EXT-001
+   - **Comments**: Test order created via Postman
+   - **Total**: 0
+   - **Total Without Discount**: 100
+   - **Total Discount**: 100
+   - **Total Discount Percentage**: 100
+   - **City**: Bruges
+   - **Country**: Belgium
+
+2. **Order UID**: e8333fcf-38ad-11f1-a803-005056010707
+   - **Date**: 15 April 2026
+   - **Customer**: Arne Albrecht
+   - **Internal Reference**: ORD-ARNE-001
+   - **External Reference**: EXT-ARNE-001
+   - **Comments**: New employee IT setup for Arne Albrecht
+   - **Total**: 0
+   - **Total Without Discount**: 2047.99
+   - **Total Discount**: 2047.99
+   - **Total Discount Percentage**: 100
+   - **City**: Knokke
+   - **Country**: Belgium
+
+3. **Order UID**: f63830a6-38ad-11f1-a803-005056010707
+   - **Date**: 15 April 2026
+   - **Customer**: ur mom
+   - **Internal Reference**: ORD-URMOM-001
+   - **External Reference**: EXT-URMOM-001
+   - **Comments**: Home office equipment order
+   - **Total**: 0
+   - **Total Without Discount**: 1356
+   - **Total Discount**: 1356
+   - **Total Discount Percentage**: 100
+   - **City**: Brussels
+   - **Country**: Belgium
+
+4. **Order UID**: fced9d92-38ad-11f1-a803-005056010707
+   - **Date**: 15 April 2026
+   - **Customer**: Global Media
+   - **Internal Reference**: ORD-GLOBALMEDIA-001
+   - **External Re

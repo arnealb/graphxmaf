@@ -1,0 +1,116 @@
+# NVIDIA Corporation (NVDA) -- Comprehensive Financial Research Report
+
+**Prepared:** April 10, 2026  
+**Data as of:** April 10, 2026 (market data); January 25, 2026 (most recent fiscal year-end)  
+**Fiscal Year Note:** NVIDIA's fiscal year ends in late January. FY2026 ended January 25, 2026. FY2025 ended January 26, 2025. Calendar references below align with NVIDIA's fiscal calendar.
+
+---
+
+## 1. Company Overview
+
+| Field | Detail | Source |
+|-------|--------|--------|
+| **Full Legal Name** | NVIDIA Corporation | [10-K FY2025](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm) |
+| **Ticker** | NVDA | 10-K FY2025 |
+| **Exchange** | NASDAQ Global Select Market | 10-K FY2025 |
+| **Sector / Industry** | Technology / Semiconductors | 10-K FY2025 |
+| **Incorporated** | California, April 1993; reincorporated in Delaware, April 1998 | [10-K FY2025](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm) |
+| **Headquarters** | 2788 San Tomas Expressway, Santa Clara, California 95051 | 10-K FY2025 |
+| **CEO** | Jensen Huang (Founder) | 10-K FY2025 |
+| **CFO** | Colette Kress (EVP & CFO) | [NVIDIA Q4 FY2026 Earnings](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026) |
+| **Employees** | 42,000 (as of January 25, 2026) -- up 16.7% YoY from 36,000 | [Stock Analysis](https://stockanalysis.com/stocks/nvda/employees/); [Macrotrends](https://www.macrotrends.net/stocks/charts/NVDA/nvidia/number-of-employees) |
+| **Revenue per Employee** | ~$5.14 million (FY2026) | Calculated from FY2026 revenue / employee count |
+
+### Business Description
+
+NVIDIA pioneered accelerated computing and is now a full-stack computing infrastructure company with data-center-scale offerings. The company designs GPUs, CPUs, DPUs, networking equipment, and comprehensive software platforms. Its CUDA programming model, introduced in 2006, created a massive developer ecosystem that underpins its competitive moat. NVIDIA's platforms serve AI training and inference, data analytics, scientific computing, 3D graphics, autonomous vehicles, and robotics [10-K FY2025](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm).
+
+### Reporting Segments
+
+NVIDIA reports through two operating segments [10-K FY2025](https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm):
+
+1. **Compute & Networking** -- Data Center accelerated computing platforms and AI solutions, networking, automotive platforms, Jetson for robotics, DGX Cloud. (FY2026 TTM: $193.5B)
+2. **Graphics** -- GeForce GPUs for gaming, GeForce NOW, Quadro/RTX GPUs for workstations, vGPU software, automotive infotainment, Omniverse. (FY2026 TTM: $22.5B)
+
+### Market-Facing Revenue Breakdown (by end-market)
+
+| Segment | FY2026 Revenue | % of Total | FY2025 Revenue | YoY Growth |
+|---------|---------------|------------|---------------|------------|
+| Data Center | $193.7B | 89.7% | $115.2B | +68% |
+| Gaming | $16.0B | 7.4% | $11.4B | +41% |
+| Professional Visualization | $3.2B | 1.5% | $1.9B | +70% |
+| Automotive | $2.3B | 1.1% | $1.7B | +39% |
+| OEM & Other | $0.6B | 0.3% | $0.4B | +59% |
+| **Total** | **$215.9B** | **100%** | **$130.5B** | **+65%** |
+
+Sources: [NVIDIA Q4/FY2026 Press Release](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026); [Bullfincher Revenue by Segment](https://bullfincher.io/companies/nvidia-corporation/revenue-by-segment); [Yahoo Finance Q4 FY2026 Earnings Call](https://finance.yahoo.com/news/nvidia-corp-nvda-q4-2026-050255428.html)
+
+---
+
+## 2. Market Data (as of April 10, 2026)
+
+| Metric | Value | Source |
+|--------|-------|--------|
+| **Current Stock Price** | ~$186.50 (intraday April 10, 2026) | [Yahoo Finance](https://finance.yahoo.com/quote/NVDA/history/); [Investing.com](https://www.investing.com/equities/nvidia-corp-historical-data) |
+| **Market Capitalization** | ~$4.5 trillion | [FinanceCharts](https://www.financecharts.com/stocks/NVDA/summary/price) ($4.511T); [Yahoo Finance](https://finance.yahoo.com/quote/NVDA/key-statistics/) (~$4.42T) |
+| **Shares Outstanding** | ~24.3 billion | [10-K FY2026 Balance Sheet](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026) (24,304M weighted avg basic) |
+| **52-Week High** | $212.19 (October 29, 2025) | [FinanceCharts](https://www.financecharts.com/stocks/NVDA/summary/price); [Investing.com](https://www.investing.com/equities/nvidia-corp-historical-data) |
+| **52-Week Low** | $95.04 (April 21, 2025) | [FinanceCharts](https://www.financecharts.com/stocks/NVDA/summary/price); [StockScan](https://stockscan.io/stocks/NVDA/price-history) |
+| **Enterprise Value** | ~$4.37 trillion | [Yahoo Finance](https://finance.yahoo.com/quote/NVDA/key-statistics/) |
+| **Dividend Yield** | ~0.02% ($0.04/share annualized, $0.01/quarter) | [NVIDIA Q4 FY2026 Press Release](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026) |
+| **YTD Return** | -1.4% (from ~$186.49 year-end 2025) | [FinanceCharts](https://www.financecharts.com/stocks/NVDA/summary/price) |
+| **1-Year Return** | ~60.9% | [FinanceCharts](https://www.financecharts.com/stocks/NVDA/summary/price) |
+
+---
+
+## 3. Income Statement
+
+### Annual Data (GAAP, $ in millions except EPS)
+
+| Line Item | FY2022 (Jan 2022) | FY2023 (Jan 2023) | FY2024 (Jan 2024) | FY2025 (Jan 2025) | FY2026 (Jan 2026) |
+|-----------|-------------------|-------------------|-------------------|-------------------|-------------------|
+| **Revenue** | $26,914 | $26,974 | $60,922 | $130,497 | $215,938 |
+| **Cost of Revenue** | $9,439 | $11,618 | $16,621 | $32,639 | $62,475 |
+| **Gross Profit** | $17,475 | $15,356 | $44,301 | $97,858 | $153,463 |
+| **Gross Margin** | 64.9% | 56.9% | 72.7% | 75.0% | 71.1% |
+| **R&D Expense** | $5,268 | $7,339 | $8,675 | $12,914 | $18,497 |
+| **SG&A Expense** | $2,166 | $2,440 | $2,654 | $3,491 | $4,579 |
+| **Total Operating Expenses** | $7,434 | $9,779 | $11,329 | $16,405 | $23,076 |
+| **Operating Income** | $10,041 | $5,577 | $32,972 | $81,453 | $130,387 |
+| **Operating Margin** | 37.3% | 20.7% | 54.1% | 62.4% | 60.4% |
+| **Net Income** | $9,752 | $4,368 | $29,760 | $72,880 | $120,067 |
+| **Net Margin** | 36.2% | 16.2% | 48.8% | 55.8% | 55.6% |
+| **Diluted EPS** | $0.39 | $0.17 | $1.19 | $2.94 | $4.90 |
+| **Diluted Shares (M)** | 25,350 | 25,070 | 24,940 | 24,804 | 24,514 |
+
+Sources: [Yahoo Finance Income Statement](https://finance.yahoo.com/quote/NVDA/financials/); [CSIMarket Annual Income Statement](https://csimarket.com/stocks/NVDA-Annual-Income-Statement); [NVIDIA Q4/FY2026 Press Release](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026); [MarketBeat Financials](https://www.marketbeat.com/stocks/NASDAQ/NVDA/financials/); [NVIDIA FY2022 Press Release](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2022)
+
+---
+
+## 4. Balance Sheet
+
+### Annual Data (GAAP, $ in millions)
+
+| Line Item | FY2022 (Jan 2022) | FY2023 (Jan 2023) | FY2024 (Jan 2024) | FY2025 (Jan 2025) | FY2026 (Jan 2026) |
+|-----------|-------------------|-------------------|-------------------|-------------------|-------------------|
+| **Cash & Equivalents** | $1,990 | $3,389 | $7,280 | $8,589 | $10,605 |
+| **Short-Term Investments** | $19,218 | $9,907 | $18,704 | $34,621 | $51,951 |
+| **Cash + ST Investments** | $21,208 | $13,296 | $25,984 | $43,210 | $62,556 |
+| **Accounts Receivable** | $4,650 | $3,827 | $9,999 | $23,065 | $38,466 |
+| **Inventories** | $2,605 | $5,159 | $5,282 | $10,080 | $21,403 |
+| **Total Current Assets** | $28,829 | $23,073 | $44,345 | $80,126 | $125,605 |
+| **PP&E, Net** | $3,607 | $4,845 | $5,260 | $8,076 | $13,250 |
+| **Goodwill** | $4,349 | $4,372 | $4,430 | $5,188 | $20,832 |
+| **Total Assets** | $44,187 | $41,182 | $65,728 | $111,601 | $206,803 |
+
+Sources: [Yahoo Finance Balance Sheet](https://finance.yahoo.com/quote/NVDA/balance-sheet/); [Stock Analysis Balance Sheet](https://stockanalysis.com/stocks/nvda/financials/balance-sheet/); [NVIDIA Q4/FY2026 Press Release](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026); [CSIMarket Annual Balance Sheets](https://csimarket.com/stocks/NVDA-Annual-Balance-Sheets)
+
+---
+
+## 5. Cash Flow Statement
+
+### Annual Data (GAAP, $ in millions)
+
+| Line Item | FY2022 (Jan 2022) | FY2023 (Jan 2023) | FY2024 (Jan 2024) | FY2025 (Jan 2025) | FY2026 (Jan 2026) |
+|-----------|-------------------|-------------------|-------------------|-------------------|-------------------|
+| **Operating Cash Flow** | $9,

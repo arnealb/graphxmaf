@@ -1,0 +1,42 @@
+[
+    {
+        "id": "006KI000005b7EEYAY",
+        "name": "supp_opportyunity",
+        "stage": "On-going Approval",
+        "amount": null,
+        "close_date": "2026-05-08",
+        "account_name": "supplier1"
+    },
+    {
+        "id": "006KI000005b78GYAQ",
+        "name": "new opp",
+        "stage": "Value Proposition",
+        "amount": 1000000.0,
+        "close_date": "2026-04-30",
+        "account_name": "Global Media"
+    },
+    {
+        "id": "006J6000009TkG2IAK",
+        "name": "abc",
+        "stage": "On-going Approval",
+        "amount": null,
+        "close_date": "2026-02-13",
+        "account_name": "abs"
+    },
+    {
+        "id": "006J6000007lXp3IAE",
+        "name": "IT Parc replacement",
+        "stage": "Offer sent",
+        "amount": 19625.0,
+        "close_date": "2025-09-30",
+        "account_name": "Advanced Communications"
+    },
+    {
+        "id": "006J6000007ZmITIA0",
+        "name": "Project Smile V2",
+        "stage": "Value Proposition",
+        "amount": 45000.0,
+        "close_date": "2025-08-21",
+        "account_name": "Omega SA-NV"
+    }
+]

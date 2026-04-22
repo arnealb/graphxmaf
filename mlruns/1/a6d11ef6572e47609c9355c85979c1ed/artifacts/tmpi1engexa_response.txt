@@ -1,0 +1,60 @@
+```json
+[
+    {
+        "sender": "SmartAdmin",
+        "subject": "meeting"
+    },
+    {
+        "sender": "Microsoft Outlook",
+        "subject": "Undeliverable: meeting"
+    },
+    {
+        "sender": "SmartAdmin",
+        "subject": "zup me de boys"
+    },
+    {
+        "sender": "SmartAdmin",
+        "subject": "nog e meeting"
+    },
+    {
+        "sender": "SmartAdmin",
+        "subject": "DM Process sync failed"
+    },
+    {
+        "sender": "SmartAdmin",
+        "subject": "meeting about numbers or something"
+    },
+    {
+        "sender": "Arne Albrecht",
+        "subject": "Accepted: meeting about numbers or something @ di 21 apr 2026 18:30 - 19:00 (CEST) (SmartAdmin)"
+    },
+    {
+        "sender": "SmartAdmin",
+        "subject": "DM Process sync failed"
+    },
+    {
+        "sender": "Microsoft Security",
+        "subject": "New recommendation available for EasiGroupDemo"
+    },
+    {
+        "sender": "SmartAdmin",
+        "subject": "DM Process sync failed"
+    },
+    {
+        "sender": "Microsoft Security",
+        "subject": "Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)"
+    },
+    {
+        "sender": "Arne Albrecht",
+        "subject": "this is a test"
+    },
+    {
+        "sender": "Arne Albrecht",
+        "subject": "supplier1 possible order"
+    },
+    {
+        "sender": "Microsoft Notifications",
+        "subject": "59080341 is de verificatiecode voor Microsoft SharePoint."
+    }
+]
+```

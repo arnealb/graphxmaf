@@ -1,0 +1,19 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is the full body of the most recent email with the subject "meeting":
+
+---
+
+**Microsoft Teams meeting**  
+Join: [Join the meeting](https://teams.microsoft.com/meet/380570109298030?p=IWmP9ViwEUzFZlFPXf)  
+Meeting ID: 380 570 109 298 030  
+Passcode: hh7w7Lr7  
+
+Need help? [Join Teams Meeting Help](https://aka.ms/JoinTeamsMeeting?omkt=en-US) | System reference [Meetup Join](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzlhMmU4MTctNjFmZi00MjdmLWJjODUtYWNiYTRkMmVkNTQx%40thread.v2/0?context=%7b%22Tid%22%3a%22b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5%22%2c%22Oid%22%3a%228aec1e02-60df-4349-b9f5-4c184bf4912b%22%7d)  
+For organizers: [Meeting options](https://teams.microsoft.com/meetingOptions/?organizerId=8aec1e02-60df-4349-b9f5-4c184bf4912b&tenantId=b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5&threadId=19_meeting_NzlhMmU4MTctNjFmZi00MjdmLWJjODUtYWNiYTRkMmVkNTQx@thread.v2&messageId=0&language=en-US)
+
+--- 
+
+For further details, you can view the email [here](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANJHug1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem).

@@ -1,0 +1,11 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The email addresses for Dorian are as follows:
+
+- From the graph results:
+  - **D.Feaux**: D.Feaux@easi.net
+  - **Dorian Termolle**: d.termolle@easi.net
+
+If you need more information, feel free to ask!

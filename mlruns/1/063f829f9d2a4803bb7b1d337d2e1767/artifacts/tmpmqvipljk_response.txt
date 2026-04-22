@@ -1,0 +1,35 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are 5 open opportunities retrieved from Salesforce:
+
+- **Opportunity Name:** supp_opportyunity
+  - **ID:** 006KI000005b7EEYAY
+  - **Close Date:** 8 May 2026
+  - **Account Name:** supplier1
+  - **Amount:** Not specified
+
+- **Opportunity Name:** new opp
+  - **ID:** 006KI000005b78GYAQ
+  - **Close Date:** 30 April 2026
+  - **Account Name:** Global Media
+  - **Amount:** $1,000,000.00
+
+- **Opportunity Name:** abc
+  - **ID:** 006J6000009TkG2IAK
+  - **Close Date:** 13 February 2026
+  - **Account Name:** abs
+  - **Amount:** Not specified
+
+- **Opportunity Name:** IT Parc replacement
+  - **ID:** 006J6000007lXp3IAE
+  - **Close Date:** 30 September 2025
+  - **Account Name:** Advanced Communications
+  - **Amount:** $19,625.00
+
+- **Opportunity Name:** Project Smile V2
+  - **ID:** 006J6000007ZmITIA0
+  - **Close Date:** 21 August 2025
+  - **Account Name:** Omega SA-NV
+  - **Amount:** $45,000.00

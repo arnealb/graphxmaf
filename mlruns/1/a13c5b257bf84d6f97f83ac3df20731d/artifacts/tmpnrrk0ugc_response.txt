@@ -1,0 +1,23 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (graph)...
+Synthesizing...
+Here are the details of the first two Excel files found on OneDrive:
+
+### File 1: Demande produits.xlsx
+- **ID**: 017GPJUIX6MI35FUNHI5BZPNOEGFZTJDHZ
+- **Size**: 154,960 bytes
+- **Created Date**: 9 April 2026
+- **Modified Date**: 9 April 2026
+- **Web Link**: [Demande produits.xlsx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BD23762FE-A7D1-4347-97B5-C43173348CF9%7D&file=Demande%20produits.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+### File 2: Book.xlsx
+- **ID**: 017GPJUIUWWWWLE2GACFF2GTV77JE2EBZW
+- **Size**: 6,177 bytes
+- **Created Date**: 18 March 2026
+- **Modified Date**: 18 March 2026
+- **Web Link**: [Book.xlsx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BB2ACB596-C068-4B11-A34E-BFFA49A20736%7D&file=Book.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+### Note:
+The contents of the Excel files could not be read properly, as they appear to be in binary format and are not displayable as text. If you need specific information extracted from these files, please let me know what details you are looking for!

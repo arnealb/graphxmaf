@@ -1,152 +1,23 @@
-  Authentication Issues
 
-  1. No Salesforce token refresh / expiry handling
-  - main.py:188 gets a Salesforce token once at startup, then it's baked into httpx.AsyncClient headers forever. JWT tokens expire (typically 1–2 hours). The app will silently fail mid-session with 401s.
-  - The StaticTokenCredential in auth/token_credential.py:14 also fakes expiry as now + 3600 — it never actually refreshes.
-
-  2. Salesforce token passed as a plain dict key in _agent_cache
-  - salesforce/mcp_router.py:22 — the cache key is the raw access token string. This creates a memory leak: every new token creates a new cache entry. There's no eviction, no TTL, no max size.
-
-  3. Token stored in a plaintext file
-  - main.py:33 — .token_cache.bin is a plaintext MSAL token cache on disk. Not encrypted, not .gitignored safely. Anyone with filesystem access can replay the token.
-
-  4. Microsoft auth only tries accounts[0]
-  - main.py:73 — if multiple accounts are cached, it silently uses the first one without checking if it's the right user.
-
-  ---
-  Salesforce-specific Issues
-
-  5. print() left in production code
-  - salesforce/repository.py:192 — print("soql: ", soql) — debug statement that logs full SOQL queries to stdout.
-
-  6. Private key files in the repo root
-  - salesforce.crt and salesforce.key are sitting at the project root. Even if .gitignored they're risky. These should be in a secrets store or at minimum a separate non-committed location.
-
-  7. No SOQL injection protection for numeric fields
-  - repository.py:162-163 — numeric fields skip the LIKE escape and are inserted raw: f"{field} = {v}". If someone passes "1 OR 1=1" as a numeric value, it becomes invalid SOQL rather than a security error,
-  but there's no explicit numeric validation.
-
-  8. API version hardcoded
-  - repository.py:13 — _API_VERSION = "v59.0" — v59.0 is old (Winter '23). Salesforce is at v63.0 now.
-
-  ---
-  Architecture Issues
-
-  9. No error handling for sub-agent failures in orchestrator
-  - orchestrator_agent.py:19,23 — both ask_graph_agent and ask_salesforce_agent return "(no response from X)" as a string, but exceptions from agent.run() will propagate unhandled up to the orchestrator.
-
-  10. Duplicate env loading across every agent file
-  - salesforce_agent.py:6-11, orchestrator_agent.py:8-12, and agents/graph_agent.py all call load_dotenv() and re-read the same env vars independently. This is fine functionally but messy — the config should
-  be centralized.
-
-
-iets van ik vind geen entries met rrne -> bedoel je arne? 
-
----
-- vraag aan dorian: 
-2. Privacy van bedrijfsdata
-
-Hier gaat het over:
-
-gevoelige informatie
-
-persoonsgegevens
-
-vertrouwelijke documenten
-
-interne communicatie
-
-klantgegevens
-
-Je systeem haalt mogelijk data op uit e-mails, CRM, documenten enzovoort. Dus je moet uitleggen dat niet alle data zomaar naar een taalmodel gestuurd mag worden. Belangrijke vragen:
-
-welke data mag doorgestuurd worden?
-
-hoeveel context geef je mee?
-
-vermijd je onnodige blootstelling van gevoelige data?
-
-hoe ga je om met logging en caching?
-
-Dit is belangrijker dan veel studenten denken.
+- iets van ik vind geen entries met rrne -> bedoel je arne? 
+- shortcut planning orchestrator vor single agent queries
 
 ---
 
----
-> fetch me all information you can find on Advanced Communications -> done
 
-Here is the information available about Advanced Communications:
+  1. Sub-agent system prompts verbeteren (hoogste ROI)
+  De eval toont welke categorieën laag scoren. SmartSales orders/catalog scoorden 2-3/5 — waarschijnlijk omdat de SmartSales agent niet weet hoe hij de tools correct moet aanroepen. --service smartsales geeft je nu precies die data. Dit is de directe weg naar hogere llm_scores.
 
-From Salesforce:
-- **Account Information:**
-  - **Name:** Advanced Communications
-  - **Industry:** Communications
-  - **Website:** [www.advancedcomms.net](http://www.advancedcomms.net)
-  - **Phone:** Not available
-  - **Number of Employees:** Not available
-  - **Annual Revenue:** Not available
-  - **Description:** Not available
-  
-- **Contacts:** No contact information found.
+  2. Structured output voor de planner (betrouwbaarheid)
+  Vervang de vrije JSON-output van de planner door Azure OpenAI's response_format={"type": "json_object"}. Minder parse-fouten, geen markdown-stripping meer nodig.
 
-- **Leads:** No leads found.
+  3. Ablation study als thesis-bijdrage (academisch sterkst)
+  Je hebt al: baseline (wat?) vs v1-planning-orchestrator. Voeg toe:
+  - --service salesforce direct vs via orchestrator → kwantificeer wat de planning/synthesis overhead kost in latency + tokens + kwaliteit
+  - Dat is een echte empirische vergelijking die publiceerbaar is
 
-### From Microsoft 365:
-- No information retrieved.
-
-If you need specific details or further assistance, please let me know!
-
--> maar is wel informatie over anual revenue en stuff
----
+  4. Retry met feedback op falende stappen (architectureel interessant)
+  Als een stap faalt, geef de foutmelding terug aan de planner voor een herplanning. Dat is het "reflection" pattern uit de literatuur (ReAct / Reflexion) — goed te verwijzen naar bestaand onderzoek.
 
 
-- nog geen mogelijkheid om te vragen geef me alle informatie over x 
-  - zoekt dan binnen graph -> door emails / calenders / ...
-  - zoekt dan binnen salesforce leads / accounts / ... 
-      - combineert dan de output
-
-    voor de moment vooral nog vragen van ejo vind me alle emails van / over / ...
-    aandacht aan geven pls
-
--> doet dit automatisch tho
----
-
-Here are the links to the files related to Nutella:
-
-nutella sales.docx
-Document.docx
-origin.docx
-
-4:40:30 PM
-•
-↑1453
-↓317
-(1770 tokens)
-•
-
-1
-are there any salesforce accounts related to these files?
-
-4:40:59 PM
-
-en dan vraagt ie voor welke files? dus da moet nog beter gedaan worden tho, moet meer state bijhouden binnen de huidige converstatie
-
-
-
----
-shit achter die external app checken van salesforce
-- wat als meerdere users in 1 app zitten
-
----
-SmartSales — v2
-
-- Verify the exact queryable field name for filtering orders by customer/supplier uid
-  (likely `customerUid` / `supplierUid` — confirm via `list_order_queryable_fields` on the live API)
-  and update the example in the `list_orders` tool description in smartsales/tools.yaml accordingly.
-
-- Agent should resolve entity names to uids automatically without the user having to specify steps.
-  Example: "show me orders from Customer1" should trigger:
-  1. list_locations to resolve "Customer1" → uid
-  2. list_orders filtered on that uid
-  Currently this works if the tool description is explicit enough, but needs validation
-  that the agent does this reliably across different phrasings.
+09:29:24  ERROR     agents.planning_orchestrator — Planning failed: Failed to produce a valid plan after 2 attempts: 'steps' must not be empty

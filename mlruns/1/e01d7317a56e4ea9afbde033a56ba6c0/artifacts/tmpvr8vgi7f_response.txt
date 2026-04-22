@@ -1,0 +1,67 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is the list of Word documents stored in your OneDrive:
+
+1. [agenda.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B8BB0C73E-6AED-4FEB-8D5E-440279145EBF%7D&file=agenda.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+   - Size: 22,881 bytes  
+   - Created: 14 April 2026  
+
+2. [Introduction.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B76EB2A7F-BAE3-435B-9F07-E0F96CA39DEA%7D&file=Introduction.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+   - Size: 12,213 bytes  
+   - Created: 14 April 2026  
+
+3. [MLAT Word Template.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BCB97D03F-287E-455E-9D72-B7F762337B1E%7D&file=MLAT%20Word%20Template.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+   - Size: 23,364 bytes  
+   - Created: 5 December 2025  
+
+4. [Document.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BC54DE973-21D7-4CD9-A4B1-63F84DF93530%7D&file=Document.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+   - Size: 9,653 bytes  
+   - Created: 30 October 2025  
+
+5. [SmartSales_Locations.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BF23C8827-CC49-4607-A0B8-FF47034DC9E8%7D&file=SmartSales_Locations.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+   - Size: 9,528 bytes  
+   - Created: 20 April 2026  
+
+6. [Contract_Displaytech_2026.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B0B210C4F-FD0F-459E-8810-7347B8B1E9D0%7D&file=Contract_Displaytech_2026.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+   - Size: 9,311 bytes  
+   - Created: 15 April 2026  
+
+7. [Contract_GlobalMedia_2026.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B9CC62011-7652-4EEE-9DC8-C80201C99BBD%7D&file=Contract_GlobalMedia_2026.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+   - Size: 9,328 bytes  
+   - Created: 15 April 2026  
+
+8. [Partnership_AccountFrance_2026.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BDD8E8864-3D6B-4C67-ADE3-52D1B09CDD8B%7D&file=Partnership_AccountFrance_2026.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+   - Size: 9,311 bytes  
+   - Created: 15 April 2026  
+
+9. [EASI  Une entreprise innovante.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BD2314091-5C37-46E4-B8F0-EE91F551D1FE%7D&file=EASI%20%20Une%20entreprise%20innovante.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+   - Size: 12,974 bytes  
+   - Created: 14 April 2026  
+
+10. [MLAT1test.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BDD6D9884-B0C1-4E2A-8268-D8FE5AA45EF2%7D&file=MLAT1test.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+    - Size: 20,882 bytes  
+    - Created: 5 December 2025  
+
+11. [MLAT31test.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B7245643A-9BF6-434F-9661-7801CDC2048D%7D&file=MLAT31test.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+    - Size: 20,889 bytes  
+    - Created: 5 December 2025  
+
+12. [MLAT91test.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B0C19B602-5A67-4186-AEBF-797C3C53465A%7D&file=MLAT91test.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+    - Size: 20,883 bytes  
+    - Created: 5 December 2025  
+
+13. [MLAT37test.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B8829A59A-0E59-43CC-8D6E-80BAFBEB3B61%7D&file=MLAT37test.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+    - Size: 20,882 bytes  
+    - Created: 5 December 2025  
+
+14. [MLAT64test.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BD43A7076-135B-4078-A3D7-6F466E68E228%7D&file=MLAT64test.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+    - Size: 20,368 bytes  
+    - Created: 18 December 2025  
+
+15. [NVIDIA_NVDA_Research_Cover.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B7DE396A3-1D09-40DE-89D5-1C16DD5F112C%7D&file=NVIDIA_NVDA_Research_Cover.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+    - Size: 13,472 bytes  
+    - Created: 10 April 2026  
+
+You can click the links to view or edit the documents directly.

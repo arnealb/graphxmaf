@@ -1,0 +1,66 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here’s an overview based on your upcoming meetings from Microsoft 365, related Salesforce opportunities (no data available), and SmartSales locations:
+
+### Upcoming Meetings (From Microsoft 365)
+1. **Meeting Title**: Meeting about numbers or something  
+   - **Date**: 21 April 2026  
+   - **Time**: 16:30 - 17:00 UTC  
+   - **Organizer**: SmartAdmin  
+   - **Attendees**: albrecht.arne@gmail.com
+
+2. **Meeting Title**: Nog e meeting  
+   - **Date**: 21 April 2026  
+   - **Time**: 12:30 - 13:00 UTC  
+   - **Organizer**: SmartAdmin  
+   - **Attendees**: Arne Albrecht (a.albrecht@easi.net)
+
+3. **Meeting Title**: Gym  
+   - **Date**: 22 April 2026  
+   - **Time**: 20:30 - 21:00 UTC  
+   - **Organizer**: SmartAdmin  
+   - **Attendees**: None
+
+4. **Meeting Title**: Anotha one  
+   - **Date**: 23 April 2026  
+   - **Time**: 11:00 - 11:30 UTC  
+   - **Organizer**: SmartAdmin  
+   - **Attendees**: None
+
+5. **Meeting Title**: Closing opportunity  
+   - **Date**: 30 April 2026  
+   - **Time**: All day  
+   - **Organizer**: SmartAdmin  
+   - **Attendees**: None
+
+### SmartSales Locations (From SmartSales)
+1. **AACO Davidson**
+   - **Address**: Havenkant 6, Leuven, 3000, Belgium
+   - **Last Visit Date**: 5 April 2026
+   - **Coordinates**: 50.8873413, 4.7005038
+
+2. **Stream Software**
+   - **Address**: Potvlietlaan 4, Antwerpen, 2600, Belgium
+   - **Last Visit Date**: 20 April 2026
+   - **Coordinates**: Not specified
+
+3. **Customer1**
+   - **Address**: Markt 5, Bruges, 8000, Belgium
+   - **Last Order Date**: 25 March 2026
+   - **Coordinates**: 51.2086225, 3.2250864
+
+4. **Arne Albrecht**
+   - **Address**: Lippenslaan 347, Knokke, 8300, Belgium
+   - **Last Order Date**: 15 April 2026
+   - **Coordinates**: 51.3518122, 3.2887656
+
+5. **Acme Logistics Ltd**
+   - **Address**: Baker Street 221B, London, NW1 6XE, United Kingdom
+   - **Last Visit Date**: 18 March 2026
+   - **Coordinates**: 51.5237791, -0.1584514
+
+### Notes
+- There were no Salesforce opportunities related data retrieved.
+- If you need more details about any meetings or locations, please let me know!

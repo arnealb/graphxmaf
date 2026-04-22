@@ -1,0 +1,325 @@
+[
+    {
+        "uid": "77538c4e-2135-11f1-84f0-005056010707",
+        "techServerCreationDate": "20260316124134000+0000",
+        "techServerUpdateDate": "20260406050039000+0000",
+        "techCreationUserUid": "b1a57af8-1de9-11f1-84f0-005056010707",
+        "techUpdateUserUid": "b1a57af8-1de9-11f1-84f0-005056010707",
+        "techCreationUser": {
+            "uid": "b1a57af8-1de9-11f1-84f0-005056010707",
+            "username": "smaa@easi-ai-demo.net",
+            "firstname": "Supervisor",
+            "lastname": "Account",
+            "displayName": null,
+            "businessId": null
+        },
+        "techUpdateUser": {
+            "uid": "b1a57af8-1de9-11f1-84f0-005056010707",
+            "username": "smaa@easi-ai-demo.net",
+            "firstname": "Supervisor",
+            "lastname": "Account",
+            "displayName": null,
+            "businessId": null
+        },
+        "toSynchronize": false,
+        "techClientCreationDate": "20260316124134000+0000",
+        "techClientUpdateDate": "20260316124134000+0000",
+        "code": "20260316134107",
+        "externalId": "2033",
+        "street": "Havenkant 6",
+        "city": "Leuven",
+        "zip": "3000",
+        "country": "Belgium",
+        "latitude": 50.8873413,
+        "longitude": 4.7005038,
+        "name": "AACO DAVIDSON",
+        "vatNumber": "",
+        "deleted": false,
+        "suppliers": [],
+        "parentRelationships": [],
+        "childRelationships": [],
+        "attributes": [
+            {
+                "name": "email",
+                "value": "info@aacodavidson.com"
+            }
+        ],
+        "users": [
+            {
+                "uid": "b1a57af8-1de9-11f1-84f0-005056010707",
+                "username": "smaa@easi-ai-demo.net",
+                "firstname": "Supervisor",
+                "lastname": "Account",
+                "displayName": null,
+                "businessId": null
+            }
+        ],
+        "groups": [],
+        "documents": [],
+        "tags": [],
+        "commented": false,
+        "lastVisitDate": "20260405142802000+0000",
+        "lastOrderDate": null,
+        "targetGoals": [],
+        "hasExtranetAccess": false,
+        "extranetUser": null,
+        "fieldValues": []
+    },
+    {
+        "uid": "e99a8663-38a8-11f1-a803-005056010707",
+        "techServerCreationDate": "20260415085555000+0000",
+        "techServerUpdateDate": "20260416050121000+0000",
+        "techCreationUserUid": "c447d22d-23ad-11f1-a2fe-005056010707",
+        "techUpdateUserUid": "c447d22d-23ad-11f1-a2fe-005056010707",
+        "techCreationUser": {
+            "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+            "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+            "firstname": "AI Assistant",
+            "lastname": "External Client Application",
+            "displayName": null,
+            "businessId": null
+        },
+        "techUpdateUser": {
+            "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+            "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+            "firstname": "AI Assistant",
+            "lastname": "External Client Application",
+            "displayName": null,
+            "businessId": null
+        },
+        "toSynchronize": true,
+        "techClientCreationDate": "20260415085555000+0000",
+        "techClientUpdateDate": "20260415085555000+0000",
+        "code": "CUS-002",
+        "externalId": null,
+        "street": "Lippenslaan 347",
+        "city": "Knokke",
+        "zip": "8300",
+        "country": "Belgium",
+        "latitude": 51.3518122,
+        "longitude": 3.2887656,
+        "name": "Arne Albrecht",
+        "vatNumber": null,
+        "deleted": false,
+        "suppliers": [],
+        "parentRelationships": [],
+        "childRelationships": [],
+        "attributes": [],
+        "users": [
+            {
+                "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+                "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+                "firstname": "AI Assistant",
+                "lastname": "External Client Application",
+                "displayName": null,
+                "businessId": null
+            }
+        ],
+        "groups": [],
+        "documents": [],
+        "tags": [],
+        "commented": false,
+        "lastVisitDate": null,
+        "lastOrderDate": "20260415000000000+0000",
+        "targetGoals": [],
+        "hasExtranetAccess": false,
+        "extranetUser": null,
+        "fieldValues": []
+    },
+    {
+        "uid": "fa4acd29-285c-11f1-a2fe-005056010707",
+        "techServerCreationDate": "20260325151203000+0000",
+        "techServerUpdateDate": "20260326050133000+0000",
+        "techCreationUserUid": "c447d22d-23ad-11f1-a2fe-005056010707",
+        "techUpdateUserUid": "c447d22d-23ad-11f1-a2fe-005056010707",
+        "techCreationUser": {
+            "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+            "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+            "firstname": "AI Assistant",
+            "lastname": "External Client Application",
+            "displayName": null,
+            "businessId": null
+        },
+        "techUpdateUser": {
+            "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+            "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+            "firstname": "AI Assistant",
+            "lastname": "External Client Application",
+            "displayName": null,
+            "businessId": null
+        },
+        "toSynchronize": true,
+        "techClientCreationDate": "20260325151203000+0000",
+        "techClientUpdateDate": "20260325151203000+0000",
+        "code": "CUS-001",
+        "externalId": null,
+        "street": "Markt 5",
+        "city": "Bruges",
+        "zip": "8000",
+        "country": "Belgium",
+        "latitude": 51.2086225,
+        "longitude": 3.2250864,
+        "name": "Customer1",
+        "vatNumber": null,
+        "deleted": false,
+        "suppliers": [],
+        "parentRelationships": [],
+        "childRelationships": [],
+        "attributes": [],
+        "users": [
+            {
+                "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+                "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+                "firstname": "AI Assistant",
+                "lastname": "External Client Application",
+                "displayName": null,
+                "businessId": null
+            }
+        ],
+        "groups": [],
+        "documents": [],
+        "tags": [],
+        "commented": false,
+        "lastVisitDate": null,
+        "lastOrderDate": "20260325000000000+0000",
+        "targetGoals": [],
+        "hasExtranetAccess": false,
+        "extranetUser": null,
+        "fieldValues": []
+    },
+    {
+        "uid": "44b3e977-2783-11f1-a2fe-005056010707",
+        "techServerCreationDate": "20260324131337000+0000",
+        "techServerUpdateDate": "20260324140026000+0000",
+        "techCreationUserUid": "c447d22d-23ad-11f1-a2fe-005056010707",
+        "techUpdateUserUid": "c447d22d-23ad-11f1-a2fe-005056010707",
+        "techCreationUser": {
+            "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+            "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+            "firstname": "AI Assistant",
+            "lastname": "External Client Application",
+            "displayName": null,
+            "businessId": null
+        },
+        "techUpdateUser": {
+            "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+            "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+            "firstname": "AI Assistant",
+            "lastname": "External Client Application",
+            "displayName": null,
+            "businessId": null
+        },
+        "toSynchronize": false,
+        "techClientCreationDate": "20260324090514000+0000",
+        "techClientUpdateDate": "20260324134733000+0000",
+        "code": "code-v1",
+        "externalId": "externalId-v1",
+        "street": "Stationsplein 14",
+        "city": "Antwerp",
+        "zip": "2018",
+        "country": "Belgium",
+        "latitude": 51.1341955,
+        "longitude": 4.4751428,
+        "name": "name-v1",
+        "vatNumber": "BE0897654321",
+        "deleted": false,
+        "suppliers": [],
+        "parentRelationships": [],
+        "childRelationships": [],
+        "attributes": [
+            {
+                "name": "tier",
+                "value": "gold"
+            },
+            {
+                "name": "industry",
+                "value": "healthcare"
+            }
+        ],
+        "users": [
+            {
+                "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+                "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+                "firstname": "AI Assistant",
+                "lastname": "External Client Application",
+                "displayName": null,
+                "businessId": null
+            }
+        ],
+        "groups": [],
+        "documents": [],
+        "tags": [
+            "prospect",
+            "priority-medium",
+            "belgium"
+        ],
+        "commented": false,
+        "lastVisitDate": "20260310110500000+0000",
+        "lastOrderDate": "20260319154000000+0000",
+        "targetGoals": [],
+        "hasExtranetAccess": false,
+        "extranetUser": null,
+        "fieldValues": []
+    },
+    {
+        "uid": "cac5b20d-285c-11f1-a2fe-005056010707",
+        "techServerCreationDate": "20260325151043000+0000",
+        "techServerUpdateDate": "20260325160021000+0000",
+        "techCreationUserUid": "c447d22d-23ad-11f1-a2fe-005056010707",
+        "techUpdateUserUid": "c447d22d-23ad-11f1-a2fe-005056010707",
+        "techCreationUser": {
+            "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+            "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+            "firstname": "AI Assistant",
+            "lastname": "External Client Application",
+            "displayName": null,
+            "businessId": null
+        },
+        "techUpdateUser": {
+            "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+            "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+            "firstname": "AI Assistant",
+            "lastname": "External Client Application",
+            "displayName": null,
+            "businessId": null
+        },
+        "toSynchronize": true,
+        "techClientCreationDate": "20260325151043000+0000",
+        "techClientUpdateDate": "20260325151043000+0000",
+        "code": "SUP-001",
+        "externalId": null,
+        "street": "Rue du Commerce 1",
+        "city": "Brussels",
+        "zip": "1000",
+        "country": "Belgium",
+        "latitude": 50.8394667,
+        "longitude": 4.3673141,
+        "name": "supplier1",
+        "vatNumber": null,
+        "deleted": false,
+        "suppliers": [],
+        "parentRelationships": [],
+        "childRelationships": [],
+        "attributes": [],
+        "users": [
+            {
+                "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+                "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+                "firstname": "AI Assistant",
+                "lastname": "External Client Application",
+                "displayName": null,
+                "businessId": null
+            }
+        ],
+        "groups": [],
+        "documents": [],
+        "tags": [],
+        "commented": false,
+        "lastVisitDate": null,
+        "lastOrderDate": null,
+        "targetGoals": [],
+        "hasExtranetAccess": false,
+        "extranetUser": null,
+        "fieldValues": []
+    }
+]
