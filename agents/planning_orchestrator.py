@@ -63,6 +63,19 @@ Rules:
 - Steps with no dependencies can run in parallel — design the plan accordingly.
 - The "task" field must be a self-contained instruction the agent can execute directly.
 - Do NOT add steps for formatting or summarizing — the synthesis instruction handles that.
+
+Avoiding over-planning (same-agent queries):
+- If a query only involves one system, use ONE step unless the second call genuinely requires
+  specific IDs or values returned by the first (e.g. search → fetch details by ID).
+- When related data can be included in a single call (e.g. opportunities WITH their account's
+  billing country), ask for everything in one task description. Do NOT split "fetch" and
+  "enrich" into two same-agent steps when the agent can return all needed fields in one call.
+
+Handling dependent steps with potentially empty parents:
+- When a step depends on a previous step that may return no results, write the task so the
+  agent can handle the empty case. Example: "Using the account names from step 1 (if any),
+  check for matching calendar events. If step 1 returned no results, state that and skip
+  the calendar lookup."
 """
 
 SYNTHESIS_SYSTEM_PROMPT = """You are a synthesis agent. Given a user query, an execution plan, and
@@ -96,7 +109,7 @@ class PlanningOrchestrator:
         graph_agent: Optional[Agent] = None,
         sf_agent: Optional[Agent] = None,
         ss_agent: Optional[Agent] = None,
-        step_timeout: float = 60.0,
+        step_timeout: float = 120.0,
     ):
         self._planner = planner
         self._synthesizer = synthesizer
@@ -365,16 +378,24 @@ class PlanningOrchestrator:
 
     async def _execute_step(self, step: dict, task: str, session=None) -> str:
         """Execute a single plan step by calling the appropriate sub-agent."""
-        agent_map = {
+        agent = {
             "graph": self._graph_agent,
             "salesforce": self._sf_agent,
             "smartsales": self._ss_agent,
-        }
-        agent = agent_map.get(step["agent"])
+        }.get(step["agent"])
         if agent is None:
             raise ValueError(f"Agent '{step['agent']}' is not available in this session")
         kwargs = {} if session is None else {"session": session}
-        resp = await asyncio.wait_for(agent.run(task, **kwargs), timeout=self._step_timeout)
+        try:
+            resp = await asyncio.wait_for(agent.run(task, **kwargs), timeout=self._step_timeout)
+        except asyncio.TimeoutError:
+            raise TimeoutError(f"Step timed out after {self._step_timeout}s")
+        except asyncio.CancelledError:
+            raise RuntimeError("Step was cancelled (connection dropped or outer request aborted)")
+        except Exception as exc:
+            if "content_filter" in str(exc) or "ContentFilter" in type(exc).__name__:
+                return "[Resultaat geblokkeerd door Azure content filter — mogelijk prompt-injection tekst in brondata]"
+            raise
         self._accumulate_usage(resp)
         return resp.text or ""
 
@@ -405,7 +426,7 @@ def create_planning_orchestrator(
     graph_agent: Optional[Agent] = None,
     sf_agent: Optional[Agent] = None,
     ss_agent: Optional[Agent] = None,
-    step_timeout: float = 60.0,
+    step_timeout: float = 120.0,
 ) -> PlanningOrchestrator:
     """Create a PlanningOrchestrator with planner + synthesizer agents."""
     client_kwargs = dict(
