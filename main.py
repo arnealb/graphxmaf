@@ -33,7 +33,7 @@ logging.getLogger("httpcore").setLevel(logging.WARNING)
 logging.getLogger("mcp").setLevel(logging.WARNING)
 
 _TOKEN_CACHE_FILE = ".token_cache.bin"
-_LOCAL_REDIRECT_URI = "http://localhost:5000"
+_LOCAL_REDIRECT_URI = "http://localhost:5001"
 
 
 # ── MSAL helpers ──────────────────────────────────────────────────────────────
@@ -101,7 +101,7 @@ def authenticate(client_id: str, tenant_id: str, scopes: list[str], client_secre
         def log_message(self, *args):
             pass  # suppress console spam
 
-    server = HTTPServer(("localhost", 5000), CallbackHandler)
+    server = HTTPServer(("localhost", 5001), CallbackHandler)
     print("Waiting for authentication callback...")
     server.handle_request()
     server.server_close()
