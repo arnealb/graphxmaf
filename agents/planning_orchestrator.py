@@ -232,6 +232,7 @@ class PlanningOrchestrator:
             yield {"type": "error", "message": f"Synthesis failed: {exc}"}
             return
 
+        log.info("[run_sse] yielding final answer, length=%d", len(answer))
         yield {"type": "text", "chunk": answer}
         total = self._input_tokens + self._output_tokens
         yield {
@@ -397,7 +398,12 @@ class PlanningOrchestrator:
                 return "[Resultaat geblokkeerd door Azure content filter — mogelijk prompt-injection tekst in brondata]"
             raise
         self._accumulate_usage(resp)
-        return resp.text or ""
+        result_text = resp.text or ""
+        log.info(
+            "[step %d / %s] result length=%d preview=%r",
+            step["id"], step["agent"], len(result_text), result_text[:200],
+        )
+        return result_text
 
     # ── Internal: Synthesis ────────────────────────────────────────────────────
 
@@ -414,10 +420,18 @@ class PlanningOrchestrator:
             result = results.get(sid, "(no result)")
             parts.append(f"\n[Step {sid} — {agent}]:\n{result}")
 
+        
         context = "\n".join(parts)
+        log.info("[synthesize] context length=%d chars, step_ids_with_results=%s", len(context), list(results.keys()))
         resp = await self._synthesizer.run(context)
+        try:
+            log.info("[synthesize] resp.__dict__=%s", vars(resp))
+        except Exception:
+            log.info("[synthesize] resp attrs=%s", {a: getattr(resp, a, None) for a in dir(resp) if not a.startswith("_")})
+        answer = resp.text or ""
+        log.info("[synthesize] response length=%d preview=%r", len(answer), answer[:300])
         self._accumulate_usage(resp)
-        return resp.text or ""
+        return answer
 
 
 # ── Factory ────────────────────────────────────────────────────────────────────
