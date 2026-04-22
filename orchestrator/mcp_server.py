@@ -22,7 +22,7 @@ from urllib.parse import parse_qs, parse_qsl, urlencode, urlparse
 import httpx
 from dotenv import load_dotenv
 from mcp.server.fastmcp import FastMCP, Context
-from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.types import ASGIApp, Receive, Scope, Send
 from starlette.requests import Request
 from starlette.responses import JSONResponse, RedirectResponse, Response
 
@@ -325,16 +325,29 @@ _ROUTES = {
 
 # ── Middleware ────────────────────────────────────────────────────────────────
 
-class RoutingMiddleware(BaseHTTPMiddleware):
-    async def dispatch(self, request: Request, call_next):
-        log.debug("[middleware] %s %s", request.method, request.url.path)
-        handler = _ROUTES.get(request.url.path)
+class RoutingMiddleware:
+    def __init__(self, app: ASGIApp) -> None:
+        self.app = app
+
+    async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+        if scope["type"] != "http":
+            await self.app(scope, receive, send)
+            return
+
+        request = Request(scope, receive)
+        path = scope["path"]
+        log.debug("[middleware] %s %s", request.method, path)
+
+        handler = _ROUTES.get(path)
         if handler:
-            return await handler(request)
-        if request.url.path == "/mcp":
+            response = await handler(request)
+            await response(scope, receive, send)
+            return
+
+        if path == "/mcp":
             auth = request.headers.get("authorization", "")
             if not auth.lower().startswith("bearer "):
-                return Response(
+                response = Response(
                     status_code=401,
                     headers={
                         "WWW-Authenticate": (
@@ -343,13 +356,15 @@ class RoutingMiddleware(BaseHTTPMiddleware):
                         )
                     },
                 )
-        return await call_next(request)
+                await response(scope, receive, send)
+                return
+
+        await self.app(scope, receive, send)
 
 
 # ── App ───────────────────────────────────────────────────────────────────────
 
-app = mcp.streamable_http_app()
-app.add_middleware(RoutingMiddleware)
+app = RoutingMiddleware(mcp.streamable_http_app())
 
 
 if __name__ == "__main__":
