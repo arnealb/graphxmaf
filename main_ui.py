@@ -178,6 +178,8 @@ def _setup_sync() -> dict:
         _procs.append(_start_graph_mcp_server(server_env, mcp_url))
 
     sf_url = sf.get("mcpServerUrl", "http://localhost:8001/mcp")
+    log.info(f"[mcp_url_salesforce] {sf_url}")
+
     sf_parsed = urlparse(sf_url)
     sf_env = {**os.environ, "MCP_RESOURCE_URI": f"{sf_parsed.scheme}://{sf_parsed.netloc}"}
     if _is_local_url(sf_url):
@@ -185,6 +187,8 @@ def _setup_sync() -> dict:
     sf_token = _resolve_sf_session(sf_url)
 
     ss_url = ss.get("mcpServerUrl", "http://localhost:8002/mcp")
+    log.info(f"[mcp_url_smartsales] {mcp_url}")
+
     ss_parsed = urlparse(ss_url)
     ss_env = {**os.environ, "MCP_RESOURCE_URI": f"{ss_parsed.scheme}://{ss_parsed.netloc}"}
     if _is_local_url(ss_url):
