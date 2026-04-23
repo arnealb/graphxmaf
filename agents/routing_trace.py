@@ -28,10 +28,12 @@ class AgentInvocation:
     agent: str                  # "graph" | "salesforce" | "smartsales"
     order: int                  # 1-based invocation order within this run
     input: str                  # query string sent to the sub-agent
-    started_at: str             # ISO-8601 UTC timestamp
-    ended_at: str               # ISO-8601 UTC timestamp
+    started_at: str             # ISO-8601 UTC timestamp (per-step, not wave-level)
+    ended_at: str               # ISO-8601 UTC timestamp (per-step, not wave-level)
     success: bool               # True unless the sub-agent raised an exception
     error: Optional[str]        # exception message when success=False, else None
+    llm_turns: int = 0          # number of LLM iterations (assistant messages) in the run
+    tool_calls: list = field(default_factory=list)  # tool names called, e.g. ["list_locations"]
 
 
 @dataclass

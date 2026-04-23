@@ -93,7 +93,10 @@ from eval.score import evaluate, evaluate_routing
 
 load_dotenv()
 
-mlflow.openai.autolog(disable=True)
+try:
+    mlflow.openai.autolog(log_traces=False)
+except TypeError:
+    mlflow.openai.autolog()  # older mlflow — no log_traces param
 
 
 # ── Token auth helper ─────────────────────────────────────────────────────────
@@ -282,7 +285,7 @@ async def run_benchmark_case(
         print(f"  [{case_idx:0{width}d}/{total}] [{prompt.category}/{prompt.difficulty}] {prompt.text[:70]!r}")
 
         phase_timings: dict = {}
-        if service == "orchestrator" and orchestrator is not None:
+        if orchestrator is not None:
             try:
                 _trace_ctx = (
                     mlflow.start_trace(name=run_name)
@@ -326,6 +329,14 @@ async def run_benchmark_case(
         routing_precision = len(invoked & expected) / len(invoked) if invoked else 0.0
         routing_recall = len(invoked & expected) / len(expected) if expected else 0.0
 
+        # ── Aggregate per-invocation metrics from routing trace ──────────────
+        invocations = result["routing_trace"].get("invoked_agents", [])
+        llm_turns_list  = [inv.get("llm_turns", 0)               for inv in invocations]
+        tool_calls_list = [len(inv.get("tool_calls", []))         for inv in invocations]
+        n_tool_calls_total = sum(tool_calls_list)
+        avg_llm_turns      = round(sum(llm_turns_list) / len(llm_turns_list), 2) if llm_turns_list else 0.0
+        max_llm_turns      = max(llm_turns_list) if llm_turns_list else 0
+
         # ── Log metrics ───────────────────────────────────────────────────────
         metrics: dict[str, float] = {
             "llm_score":        float(llm_score or 0),
@@ -337,6 +348,9 @@ async def run_benchmark_case(
             "success":          1.0 if result["success"] else 0.0,
             "routing_precision": round(routing_precision, 3),
             "routing_recall":    round(routing_recall, 3),
+            "n_tool_calls_total": float(n_tool_calls_total),
+            "avg_llm_turns":     float(avg_llm_turns),
+            "max_llm_turns":     float(max_llm_turns),
         }
         metrics.update({k: float(v) for k, v in plan_stats.items()})
         mlflow.log_metrics(metrics)
@@ -372,6 +386,8 @@ async def run_benchmark_case(
             f"  tokens={result['tokens'].get('total', 0)}"
             f"  steps={plan_stats['plan_steps']}"
             f"  parallel={plan_stats['parallel_ratio']:.0%}"
+            f"  tool_calls={n_tool_calls_total}"
+            f"  llm_turns_avg={avg_llm_turns}"
         )
 
         return {
@@ -382,6 +398,8 @@ async def run_benchmark_case(
             "latency_s": result["latency_s"],
             "total_tokens": result["tokens"].get("total", 0) or 0,
             "plan_steps": plan_stats["plan_steps"],
+            "n_tool_calls_total": n_tool_calls_total,
+            "avg_llm_turns": avg_llm_turns,
             "run_id": child_run.info.run_id,
         }
 
@@ -611,19 +629,23 @@ async def main_async(args: argparse.Namespace) -> None:
                 s = sorted(lst)
                 return s[max(0, int(len(s) * 0.95) - 1)] if s else 0.0
 
-            llm_scores  = [r["llm_score"]     for r in all_results if r["llm_score"]     is not None]
-            r_scores    = [r["routing_score"] for r in all_results if r["routing_score"] is not None]
-            latencies   = [r["latency_s"]     for r in all_results]
-            tok_totals  = [r["total_tokens"]  for r in all_results]
+            llm_scores    = [r["llm_score"]          for r in all_results if r["llm_score"]     is not None]
+            r_scores      = [r["routing_score"]      for r in all_results if r["routing_score"] is not None]
+            latencies     = [r["latency_s"]          for r in all_results]
+            tok_totals    = [r["total_tokens"]        for r in all_results]
+            tool_calls_all = [r["n_tool_calls_total"] for r in all_results]
+            llm_turns_all  = [r["avg_llm_turns"]      for r in all_results]
 
             mlflow.log_metrics({
-                "avg_llm_score":     round(_mean(llm_scores), 3),
-                "avg_routing_score": round(_mean(r_scores), 3),
-                "avg_latency_s":     round(_mean(latencies), 3),
-                "p95_latency_s":     round(_p95(latencies), 3),
-                "avg_total_tokens":  round(_mean(tok_totals), 1),
-                "n_prompts":         float(len(prompts)),
-                "n_scored":          float(len(llm_scores)),
+                "avg_llm_score":        round(_mean(llm_scores), 3),
+                "avg_routing_score":    round(_mean(r_scores), 3),
+                "avg_latency_s":        round(_mean(latencies), 3),
+                "p95_latency_s":        round(_p95(latencies), 3),
+                "avg_total_tokens":     round(_mean(tok_totals), 1),
+                "avg_n_tool_calls":     round(_mean(tool_calls_all), 2),
+                "avg_llm_turns":        round(_mean(llm_turns_all), 2),
+                "n_prompts":            float(len(prompts)),
+                "n_scored":             float(len(llm_scores)),
             })
 
             print(f"\n{'─' * 64}")
@@ -632,6 +654,8 @@ async def main_async(args: argparse.Namespace) -> None:
             print(f"  avg latency       : {_mean(latencies):.1f} s")
             print(f"  p95 latency       : {_p95(latencies):.1f} s")
             print(f"  avg total tokens  : {_mean(tok_totals):.0f}")
+            print(f"  avg tool calls    : {_mean(tool_calls_all):.1f}")
+            print(f"  avg llm turns     : {_mean(llm_turns_all):.2f}")
             print(f"  MLflow run ID     : {parent.info.run_id}")
             print(f"{'─' * 64}")
             print(f"\n  To view results: mlflow ui   →  http://localhost:5000")

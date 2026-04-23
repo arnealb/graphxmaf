@@ -1,0 +1,26 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the Salesforce leads found in the Technology industry:
+
+- **Lead ID:** 00QKI000002KPFT2A4  
+  - **First Name:** Arne  
+  - **Last Name:** Albrecht  
+  - **Email:** albrecht.arne@gmail.com  
+  - **Company:** easi_dupe  
+  - **Status:** Contacted  
+
+- **Lead ID:** 00QKI000002KPEZ2A4  
+  - **First Name:** another  
+  - **Last Name:** lead  
+  - **Email:** mr.another.lead@gmail.com  
+  - **Company:** another-company  
+  - **Status:** New  
+
+- **Lead ID:** 00QKI000002KMU92AO  
+  - **First Name:** ur moms lead  
+  - **Last Name:** ur dads lead  
+  - **Email:** Not provided  
+  - **Company:** grandmas bakery  
+  - **Status:** New  
