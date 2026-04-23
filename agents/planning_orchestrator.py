@@ -142,7 +142,7 @@ class PlanningOrchestrator:
 
         # ── Phase 1: Planning ──────────────────────────────────────────────────
         try:
-            plan = await self._create_plan(query)
+            plan = await self._create_plan(query, session=session)
         except Exception as exc:
             log.error("Planning failed: %s", exc, exc_info=True)
             yield {"type": "error", "message": f"Planning failed: {exc}"}
@@ -194,7 +194,7 @@ class PlanningOrchestrator:
         # ── Phase 3: Synthesis ─────────────────────────────────────────────────
         yield {"type": "text", "chunk": "Synthesizing...\n"}
         try:
-            answer = await self._synthesize(query, plan, results)
+            answer = await self._synthesize(query, plan, results, session=session)
         except Exception as exc:
             log.error("Synthesis failed: %s", exc, exc_info=True)
             yield {"type": "error", "message": f"Synthesis failed: {exc}"}
@@ -214,15 +214,16 @@ class PlanningOrchestrator:
 
     # ── Internal: Planning ─────────────────────────────────────────────────────
 
-    async def _create_plan(self, query: str) -> dict:
+    async def _create_plan(self, query: str, session=None) -> dict:
         """Call the planner agent, parse + validate the JSON plan. Retries once."""
         available = self._available_agents_description()
         prompt = f"Available agents: {available}\n\nUser query: {query}"
 
         last_exc: Exception = RuntimeError("No attempts made")
+        kwargs = {} if session is None else {"session": session}
         for attempt in range(2):
             try:
-                resp = await self._planner.run(prompt)
+                resp = await self._planner.run(prompt, **kwargs)
                 self._accumulate_usage(resp)
                 raw = resp.text
                 if raw is None:
@@ -416,7 +417,7 @@ class PlanningOrchestrator:
 
     # ── Internal: Synthesis ────────────────────────────────────────────────────
 
-    async def _synthesize(self, query: str, plan: dict, results: dict) -> str:
+    async def _synthesize(self, query: str, plan: dict, results: dict, session=None) -> str:
         """Call the synthesizer agent to combine all step results."""
         parts = [
             f"User query: {query}",
@@ -429,10 +430,10 @@ class PlanningOrchestrator:
             result = results.get(sid, "(no result)")
             parts.append(f"\n[Step {sid} — {agent}]:\n{result}")
 
-        
         context = "\n".join(parts)
         log.info("[synthesize] context length=%d chars, step_ids_with_results=%s", len(context), list(results.keys()))
-        resp = await self._synthesizer.run(context)
+        kwargs = {} if session is None else {"session": session}
+        resp = await self._synthesizer.run(context, **kwargs)
         try:
             log.info("[synthesize] resp.__dict__=%s", vars(resp))
         except Exception:
