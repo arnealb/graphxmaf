@@ -26,7 +26,7 @@ from starlette.types import ASGIApp, Receive, Scope, Send
 from starlette.requests import Request
 from starlette.responses import JSONResponse, RedirectResponse, Response
 
-from agent_framework import MCPStreamableHTTPTool
+from agent_framework import Agent, MCPStreamableHTTPTool
 
 from agents.graph_agent import create_graph_agent
 from agents.planning_orchestrator import create_planning_orchestrator
@@ -202,6 +202,12 @@ async def ask(ctx: Context, query: str) -> str:
     if _sf_agent is None:
         log.warning("[ask] Salesforce not initialized yet — trying now")
         await _init_salesforce()
+
+    if _sf_agent is None and _sf_login_url:
+        return (
+            f"Salesforce is not authenticated yet. "
+            f"Please log in via this link and then retry your question:\n\n{_sf_login_url}"
+        )
 
     # 5. Build per-request GraphAgent (fresh OBO token each time).
     graph_agent = _build_graph_agent(graph_token)

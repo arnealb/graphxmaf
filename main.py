@@ -15,7 +15,7 @@ import msal
 from agent_framework import MCPStreamableHTTPTool
 from agent_framework.devui import serve
 from agents.graph_agent import create_graph_agent
-from agents.orchestrator_agent import create_orchestrator_agent
+from agents.planning_orchestrator import create_planning_orchestrator
 from agents.salesforce_agent import create_salesforce_agent
 from agents.smartsales_agent import create_smartsales_agent
 
@@ -342,12 +342,10 @@ def main() -> None:
         graph_agent = create_graph_agent(graph_mcp=graph_mcp)
         sf_agent = create_salesforce_agent(salesforce_mcp=sf_mcp)
         ss_agent = create_smartsales_agent(smartsales_mcp=ss_mcp)
-        orchestrator = create_orchestrator_agent(
-            smartsales_agent=ss_agent,
-            graph_agent=graph_agent,
-            salesforce_agent=sf_agent,
-        )
-        serve(entities=[orchestrator, ss_agent, graph_agent, sf_agent], port=8080, auto_open=True)
+        # Note: PlanningOrchestrator runs in the deployed orchestrator MCP server
+        # (orchestrator/mcp_server.py). Only sub-agents are shown in devui for
+        # individual testing; combined orchestration is tested via Copilot.
+        serve(entities=[ss_agent, graph_agent, sf_agent], port=8080, auto_open=True)
     finally:
         if graph_proc is not None:
             graph_proc.terminate()
