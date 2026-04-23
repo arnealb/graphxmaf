@@ -1,0 +1,39 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+You can filter SmartSales catalog items by the following fields:
+
+### Text Fields
+- **fulltext** (Type: TEXT)
+- **code** (Type: TEXT)
+- **title** (Type: TEXT)
+- **description** (Type: TEXT)
+- **measurementUnitUid** (Type: TEXT)
+- **tag** (Type: TEXT)
+- **availability** (Type: TEXT)
+- **unitofmeasure** (Type: TEXT)
+- **group** (Type: TEXT)
+- **Client - Supplies to** (Type: TEXT)
+- **Client - Headquarter** (Type: TEXT)
+- **Client - Headquarter of** (Type: TEXT)
+- **Client - Billing company of** (Type: TEXT)
+
+### Date/Time Fields
+- **techServerCreationDate** (Type: DATETIME)
+- **techServerUpdateDate** (Type: DATETIME)
+- **since** (Type: DATETIME)
+- **contextualDate** (Type: DATETIME)
+
+### Boolean Fields
+- **deleted** (Type: BOOLEAN)
+- **hideEmptyGroups** (Type: BOOLEAN)
+- **includeContextualDisplayableRelationChildrenOf** (Type: BOOLEAN)
+
+### Decimal/Integer Fields
+- **price** (Type: DECIMAL)
+- **measure** (Type: DECIMAL)
+- **salesunit** (Type: INTEGER)
+- **packagingunit** (Type: INTEGER)
+
+These fields can be used to refine your searches within the SmartSales catalog.

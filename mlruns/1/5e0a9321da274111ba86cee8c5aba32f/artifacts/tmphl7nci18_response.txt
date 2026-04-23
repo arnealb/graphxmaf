@@ -1,0 +1,18 @@
+Here's a 360 view of the Salesforce account for "supplier1":
+
+### Open Opportunities
+Currently, I do not have direct access to the open opportunities for this account. Please check your Salesforce dashboard for detailed information on opportunities related to "supplier1".
+
+### SmartSales Locations
+I found a document related to SmartSales locations for supplier1:
+
+- [**SmartSales_Locations.docx**](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BF23C8827-CC49-4607-A0B8-FF47034DC9E8%7D&file=SmartSales_Locations.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+### Emails About Supplier1
+1. **Email from Arne Albrecht**
+   - **Subject:** supplier1 possible order
+   - **Sender:** Arne Albrecht (albrecht.arne@gmail.com)
+   - **Received:** April 20, 2026
+   - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+If you need further details or specific information, let me know!

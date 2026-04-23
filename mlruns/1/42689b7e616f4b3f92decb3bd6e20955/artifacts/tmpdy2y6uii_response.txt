@@ -1,0 +1,46 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are your events and meetings scheduled for the next 14 days:
+
+### Scheduled Events
+
+1. **Event:** nog e meeting
+   - **Date:** 21 April 2026
+   - **Time:** 12:30 PM - 1:00 PM
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendees:** 
+     - Arne Albrecht (a.albrecht@easi.net)
+   - **Web Link:** [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhVAAA%3D&exvsurl=1&path=/calendar/item)
+
+2. **Event:** meeting about numbers or something
+   - **Date:** 21 April 2026
+   - **Time:** 4:30 PM - 5:00 PM
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendees:** 
+     - Arne Albrecht (albrecht.arne@gmail.com)
+   - **Web Link:** [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANRyrptAAA%3D&exvsurl=1&path=/calendar/item)
+
+3. **Event:** gym
+   - **Date:** 22 April 2026
+   - **Time:** 8:30 PM - 9:00 PM
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendees:** None
+   - **Web Link:** [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhWAAA%3D&exvsurl=1&path=/calendar/item)
+
+4. **Event:** anotha one
+   - **Date:** 23 April 2026
+   - **Time:** 11:00 AM - 11:30 AM
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendees:** None
+   - **Web Link:** [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhXAAA%3D&exvsurl=1&path=/calendar/item)
+
+5. **Event:** closing opportunity
+   - **Date:** 30 April 2026 (spanning to 1 May 2026)
+   - **Time:** Whole day event
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendees:** None
+   - **Web Link:** [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANc8eMRAAA%3D&exvsurl=1&path=/calendar/item)
+
+Let me know if you need any further assistance!

@@ -1,0 +1,63 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the Salesforce opportunities sorted by amount, from highest to lowest:
+
+- **ID:** 006KI000005b78GYAQ
+  - **Name:** new opp
+  - **Stage:** Value Proposition
+  - **Amount:** $1,000,000.00
+  - **Close Date:** 30 April 2026
+  - **Account Name:** Global Media
+
+- **ID:** 006060000193aYlAAI
+  - **Name:** salesforce.com - 1,000 Widgets
+  - **Stage:** Approved
+  - **Amount:** $100,000.00
+  - **Close Date:** 15 April 2021
+  - **Account Name:** salesforce.com
+
+- **ID:** 006060000193aYgAAI
+  - **Name:** salesforce.com - 500 Widgets
+  - **Stage:** Offer sent
+  - **Amount:** $50,000.00
+  - **Close Date:** 13 March 2021
+  - **Account Name:** Global Media
+
+- **ID:** 006J6000007ZmITIA0
+  - **Name:** Project Smile V2
+  - **Stage:** Value Proposition
+  - **Amount:** $45,000.00
+  - **Close Date:** 21 August 2025
+  - **Account Name:** Omega SA-NV
+
+- **ID:** 006J6000004i8BnIAI
+  - **Name:** Renewal @ Assurity
+  - **Stage:** Negotiation/Review
+  - **Amount:** $35,000.00
+  - **Close Date:** 20 February 2025
+  - **Account Name:** Assurity Corporation
+
+- **ID:** 006J6000004i8BmIAI
+  - **Name:** New project @ Anaco
+  - **Stage:** Negotiation/Review
+  - **Amount:** $25,000.00
+  - **Close Date:** 30 January 2025
+  - **Account Name:** Anaco Limited
+
+- **ID:** 006J6000004i8CVIAY
+  - **Name:** End-of-Year Summit
+  - **Stage:** Offer sent
+  - **Amount:** $25,000.00
+  - **Close Date:** 24 January 2025
+  - **Account Name:** Tech Labs
+
+- **ID:** 006060000193aYmAAI
+  - **Name:** salesforce.com - 2,000 Widgets
+  - **Stage:** Offer sent
+  - **Amount:** $20,000.00
+  - **Close Date:** 13 June 2021
+  - **Account Name:** salesforce.com
+
+The remaining opportunities either have no amounts specified or are in the initial stages and thus are not included in this list.

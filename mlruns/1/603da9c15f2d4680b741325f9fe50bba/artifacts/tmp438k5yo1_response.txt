@@ -1,0 +1,98 @@
+[
+    {
+        "keyName": "techServerCreationDate",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "keyName": "techServerUpdateDate",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "keyName": "techClientCreationDate",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB"]
+    },
+    {
+        "keyName": "techClientUpdateDate",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB"]
+    },
+    {
+        "keyName": "date",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "keyName": "versionKey",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB"]
+    },
+    {
+        "keyName": "hasManualDiscount",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "keyName": "user",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "keyName": "customerCode",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB"]
+    },
+    {
+        "keyName": "customer",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "keyName": "locationExternalId",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB"]
+    },
+    {
+        "keyName": "total",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "keyName": "totalWithoutDiscount",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "keyName": "totalDiscount",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB"]
+    },
+    {
+        "keyName": "totalDiscountPercentage",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB"]
+    },
+    {
+        "keyName": "approbationModificationDate",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB"]
+    }
+]

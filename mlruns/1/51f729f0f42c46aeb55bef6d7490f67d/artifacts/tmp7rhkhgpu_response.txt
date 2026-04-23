@@ -1,0 +1,37 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the most recently created Salesforce contacts:
+
+- **Contact 1**
+  - **Name:** supplier1_contact lastname
+  - **Email:** N/A
+  - **Account Name:** supplier1
+  - **Created Date:** 20 April 2026
+
+- **Contact 2**
+  - **Name:** Arne Albrecht
+  - **Email:** albrecht.arne@gmail.com
+  - **Account Name:** Displaytech
+  - **Created Date:** 14 April 2026
+  
+- **Contact 3**
+  - **Name:** ur mom
+  - **Email:** ur.mom@grandpa.com
+  - **Account Name:** account in france
+  - **Created Date:** 14 April 2026
+  
+- **Contact 4**
+  - **Name:** John lastname
+  - **Email:** john.lastname@globalmedia.com
+  - **Account Name:** Global Media
+  - **Created Date:** 14 April 2026
+  
+- **Contact 5**
+  - **Name:** Leo Snickers
+  - **Email:** leo.snickers@candybar.com
+  - **Account Name:** account in france
+  - **Created Date:** 14 April 2026  
+
+This list includes contacts created on 20 April 2026 and 14 April 2026.

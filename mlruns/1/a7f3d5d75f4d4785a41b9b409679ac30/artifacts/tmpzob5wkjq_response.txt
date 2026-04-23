@@ -1,0 +1,18 @@
+[
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAFbM2OqAAA=",
+        "subject": "Marc Dardenne wants to access 'invoice'",
+        "sender_name": "SharePoint Online",
+        "sender_email": "no-reply@sharepointonline.com",
+        "received": "2025-05-27T08:26:11Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAFbM2OqAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKFAAA=",
+        "subject": "Question regarding invoice",
+        "sender_name": "Arne Albrecht",
+        "sender_email": "albrecht.arne@gmail.com",
+        "received": "2026-04-13T15:07:20Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    }
+]

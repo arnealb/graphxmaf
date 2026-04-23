@@ -1,0 +1,74 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+### Content of the File 'report'
+
+#### NVIDIA Corporation (NVDA) -- Comprehensive Financial Research Report
+
+**Prepared:** 10 April 2026  
+**Data as of:** 10 April 2026 (market data); 25 January 2026 (most recent fiscal year-end)  
+
+---
+
+#### 1. Company Overview
+
+- **Full Legal Name:** NVIDIA Corporation
+- **Ticker:** NVDA
+- **Exchange:** NASDAQ Global Select Market
+- **Sector / Industry:** Technology / Semiconductors
+- **Incorporated:** California, April 1993; Reincorporated in Delaware, April 1998
+- **Headquarters:** 2788 San Tomas Expressway, Santa Clara, California 95051
+- **CEO:** Jensen Huang (Founder)
+- **CFO:** Colette Kress (EVP & CFO)
+- **Employees:** 42,000 (as of 25 January 2026) — up 16.7% YoY from 36,000
+- **Revenue per Employee:** ~$5.14 million (FY2026)
+
+**Business Description:**
+NVIDIA is a pioneer in accelerated computing, focusing on GPUs, CPUs, DPUs, networking equipment, and software platforms to serve sectors like AI, data analytics, and gaming.
+
+---
+
+#### 2. Market Data (as of 10 April 2026)
+
+- **Current Stock Price:** ~$186.50
+- **Market Capitalization:** ~$4.5 trillion
+- **Shares Outstanding:** ~24.3 billion
+- **52-Week High:** $212.19
+- **52-Week Low:** $95.04
+- **Enterprise Value:** ~$4.37 trillion
+- **Dividend Yield:** ~0.02%
+- **YTD Return:** -1.4%
+- **1-Year Return:** ~60.9%
+
+---
+
+#### 3. Income Statement (Annual Data in $ millions)
+
+| Line Item               | FY2025       | FY2026       |
+|-------------------------|--------------|--------------|
+| **Revenue**             | $130,497     | $215,938     |
+| **Net Income**          | $72,880      | $120,067     |
+| **Diluted EPS**         | $2.94        | $4.90        |
+
+---
+
+#### 4. Balance Sheet (Annual Data in $ millions)
+
+| Line Item                | FY2026       |
+|--------------------------|--------------|
+| **Total Assets**         | $206,803     |
+| **Total Liabilities**    | $49,510      |
+| **Total Stockholders' Equity** | $157,293 |
+
+---
+
+#### 5. Cash Flow Statement (Annual Data in $ millions)
+
+- **Operating Cash Flow (FY2026):** Data incomplete in results.
+
+**Key Observations:**
+- Major revenue growth driven by data center and AI solutions.
+- Significant increase in total assets and stockholders' equity year-over-year.
+
+This report provides a detailed financial overview of NVIDIA Corporation as of early 2026, reflecting its robust growth trajectory and market position.

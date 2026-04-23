@@ -1,0 +1,63 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+️Executing (smartsales)...
+Synthesizing...
+Here is an overview of your upcoming meetings, related SmartSales locations, and the absence of related Salesforce opportunities:
+
+### Upcoming Meetings from Microsoft 365:
+1. **Meeting Subject:** Meeting about numbers or something  
+   - **Date & Time:** 21 April 2026, 16:30 - 17:00  
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+   - **Attendees:** Arne Albrecht (albrecht.arne@gmail.com)  
+  
+2. **Meeting Subject:** Gym  
+   - **Date & Time:** 22 April 2026, 20:30 - 21:00  
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+   - **Attendees:** None  
+
+3. **Meeting Subject:** Anotha one  
+   - **Date & Time:** 23 April 2026, 11:00 - 11:30  
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+   - **Attendees:** None  
+
+4. **Meeting Subject:** Closing opportunity  
+   - **Date & Time:** 30 April 2026 - 1 May 2026  
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+   - **Attendees:** None  
+
+### Related SmartSales Locations:
+- **AACO Davidson**
+  - **City:** Leuven  
+  - **Street:** Havenkant 6  
+  - **ZIP:** 3000  
+  - **Country:** Belgium  
+
+- **Stream Software**
+  - **City:** Antwerpen  
+  - **Street:** Potvlietlaan 4  
+  - **ZIP:** 2600  
+
+- **Name-v1**
+  - **City:** Antwerp  
+  - **Street:** Stationsplein 14  
+  - **ZIP:** 2018  
+  - **Country:** Belgium  
+
+- **Customer1**
+  - **City:** Bruges  
+  - **Street:** Markt 5  
+  - **ZIP:** 8000  
+  - **Country:** Belgium  
+
+- **Arne Albrecht**
+  - **City:** Knokke  
+  - **Street:** Lippenslaan 347  
+  - **ZIP:** 8300  
+  - **Country:** Belgium  
+
+### Salesforce Opportunities:
+- There were no related opportunities found in Salesforce.
+
+If you need further details on any aspect, let me know!

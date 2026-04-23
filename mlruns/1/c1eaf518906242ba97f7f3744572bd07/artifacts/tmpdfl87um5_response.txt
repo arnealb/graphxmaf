@@ -1,0 +1,20 @@
+{
+  "commentAllowed": true,
+  "customerVATNumberRequired": false,
+  "discountPerItemAllowed": "SWIPE",
+  "globalDiscountAllowed": "SWIPE",
+  "hasDisclaimer": false,
+  "showSignatureInput": true,
+  "showVATPerItem": false,
+  "signatureRequired": false,
+  "totalModifiers": [],
+  "items": [],
+  "sections": [
+    {
+      "name": "section",
+      "displayName": "Section",
+      "readOnly": false,
+      "fields": []
+    }
+  ]
+}

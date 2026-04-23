@@ -1,0 +1,202 @@
+[
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAMlMAhtAAA=",
+        "subject": "News you might have missed",
+        "sender_name": "SharePoint Online",
+        "sender_email": "no-reply@sharepointonline.com",
+        "received": "2026-04-07T10:25:49Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAMlMAhtAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAMlMAhuAAA=",
+        "subject": "Files in \"Logos\" have been archived",
+        "sender_name": "SharePoint Online",
+        "sender_email": "no-reply@sharepointonline.com",
+        "received": "2026-04-08T06:48:33Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAMlMAhuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAMlMAhvAAA=",
+        "subject": "Roel de Graaff wants to access 'DM Process Dump Test'",
+        "sender_name": "SharePoint Online",
+        "sender_email": "no-reply@sharepointonline.com",
+        "received": "2026-04-09T08:09:36Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAMlMAhvAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAMxWW-PAAA=",
+        "subject": "English version of \"Home\" was updated",
+        "sender_name": "SmartAdmin",
+        "sender_email": "SmartAdmin@easigroupdemo.onmicrosoft.com",
+        "received": "2026-04-10T07:59:41Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAMxWW%2FPAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAMlMAhwAAA=",
+        "subject": "English version of \"Home\" was updated",
+        "sender_name": "SmartAdmin",
+        "sender_email": "SmartAdmin@easigroupdemo.onmicrosoft.com",
+        "received": "2026-04-10T07:59:45Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAMlMAhwAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAM23lytAAA=",
+        "subject": "SmartAdmin has invited you to 'DM Process Dump Test'",
+        "sender_name": "SmartAdmin",
+        "sender_email": "SmartAdmin@easigroupdemo.onmicrosoft.com",
+        "received": "2026-04-10T15:50:43Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAM23lytAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM2-OEuAAA=",
+        "subject": "SmartAdmin has invited you to 'DM Process Dump Test'",
+        "sender_name": "SmartAdmin",
+        "sender_email": "SmartAdmin@easigroupdemo.onmicrosoft.com",
+        "received": "2026-04-10T15:50:47Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM2%2FOEuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM2-OEvAAA=",
+        "subject": "Out of office - Automatic reply : SmartAdmin has invited you to 'DM Process Dump Test'",
+        "sender_name": "Jonas Mariën",
+        "sender_email": "j.marien@easi.net",
+        "received": "2026-04-10T16:04:20Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM2%2FOEvAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOJ_AAA=",
+        "subject": "Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)",
+        "sender_name": "Microsoft Security",
+        "sender_email": "MSSecurity-noreply@microsoft.com",
+        "received": "2026-04-12T00:52:17Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOJ%2BAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOJ-AAA=",
+        "subject": "Aankoop office supplies",
+        "sender_name": "Arne Albrecht",
+        "sender_email": "albrecht.arne@gmail.com",
+        "received": "2026-04-13T14:12:29Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOJ%2FAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKAAAA=",
+        "subject": "Vraag over vertraagde levering",
+        "sender_name": "Arne Albrecht",
+        "sender_email": "albrecht.arne@gmail.com",
+        "received": "2026-04-13T14:13:42Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKAAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKBAAA=",
+        "subject": "Voorstel voor kort overleg",
+        "sender_name": "Arne Albrecht",
+        "sender_email": "albrecht.arne@gmail.com",
+        "received": "2026-04-13T14:14:04Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKBAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKCAAA=",
+        "subject": "Vraag over factuur",
+        "sender_name": "Arne Albrecht",
+        "sender_email": "albrecht.arne@gmail.com",
+        "received": "2026-04-13T14:14:05Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKCAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKDAAA=",
+        "subject": "Question about delayed delivery",
+        "sender_name": "Arne Albrecht",
+        "sender_email": "albrecht.arne@gmail.com",
+        "received": "2026-04-13T15:07:03Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKDAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKEAAA=",
+        "subject": "Proposal for a short meeting",
+        "sender_name": "Arne Albrecht",
+        "sender_email": "albrecht.arne@gmail.com",
+        "received": "2026-04-13T15:07:20Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKEAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKFAAA=",
+        "subject": "Question regarding invoice",
+        "sender_name": "Arne Albrecht",
+        "sender_email": "albrecht.arne@gmail.com",
+        "received": "2026-04-13T15:07:20Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANJHug1AAA=",
+        "subject": "meeting",
+        "sender_name": "SmartAdmin",
+        "sender_email": "SmartAdmin@easigroupdemo.onmicrosoft.com",
+        "received": "2026-04-14T15:08:24Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANJHug1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANJTK74AAA=",
+        "subject": "Undeliverable: meeting",
+        "sender_name": "Microsoft Outlook",
+        "sender_email": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@easigroupdemo.onmicrosoft.com",
+        "received": "2026-04-14T15:08:31Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANJTK74AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANJHug2AAA=",
+        "subject": "zup me de boys",
+        "sender_name": "SmartAdmin",
+        "sender_email": "SmartAdmin@easigroupdemo.onmicrosoft.com",
+        "received": "2026-04-14T15:09:00Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANJHug2AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANO3voEAAA=",
+        "subject": "nog e meeting",
+        "sender_name": "SmartAdmin",
+        "sender_email": "SmartAdmin@easigroupdemo.onmicrosoft.com",
+        "received": "2026-04-15T08:49:08Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANO3voEAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANO3voFAAA=",
+        "subject": "DM Process sync failed",
+        "sender_name": "SmartAdmin",
+        "sender_email": "/O=EXCHANGELABS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0EE555E2BB884FD7902DB53A74597453-8AEC1E02-60",
+        "received": "2026-04-15T15:39:49Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANO3voFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANO3voGAAA=",
+        "subject": "meeting about numbers or something",
+        "sender_name": "SmartAdmin",
+        "sender_email": "SmartAdmin@easigroupdemo.onmicrosoft.com",
+        "received": "2026-04-16T09:44:23Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANO3voGAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANR_IE1AAA=",
+        "subject": "Accepted: meeting about numbers or something @ di 21 apr 2026 18:30 - 19:00 (CEST) (SmartAdmin)",
+        "sender_name": "Arne Albrecht",
+        "sender_email": "albrecht.arne@gmail.com",
+        "received": "2026-04-16T09:46:20Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANR%2BIE1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANO3voHAAA=",
+        "subject": "DM Process sync failed",
+        "sender_name": "SmartAdmin",
+        "sender_email": "/O=EXCHANGELABS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0EE555E2BB884FD7902DB53A74597453-8AEC1E02-60",
+        "received": "2026-04-16T13:18:10Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANO3voHAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANUrxQfAAA=",
+        "subject": "New recommendation available for EasiGroupDemo",
+        "sender_name": "Microsoft Security",
+        "sender_email": "MSSecurity-noreply@microsoft.com",
+        "received": "2026-04-17T00:41:19Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANUrxQfAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    }
+]

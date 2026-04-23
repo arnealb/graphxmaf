@@ -1,0 +1,72 @@
+[
+    {
+        "tool": "get_opportunities",
+        "result": [
+            {
+                "id": "006KI000005b78GYAQ",
+                "name": "new opp",
+                "stage": "Value Proposition",
+                "amount": 1000000.0,
+                "close_date": "2026-04-30",
+                "account_name": "Global Media",
+                "probability": null,
+                "type": null,
+                "lead_source": null,
+                "forecast_category": null,
+                "description": null,
+                "created_date": null,
+                "last_modified_date": null
+            },
+            {
+                "id": "006060000193aYlAAI",
+                "name": "salesforce.com - 1,000 Widgets",
+                "stage": "Approved",
+                "amount": 100000.0,
+                "close_date": "2021-04-15",
+                "account_name": "salesforce.com",
+                "probability": null,
+                "type": null,
+                "lead_source": null,
+                "forecast_category": null,
+                "description": null,
+                "created_date": null,
+                "last_modified_date": null
+            },
+            {
+                "id": "006060000193aYgAAI",
+                "name": "salesforce.com - 500 Widgets",
+                "stage": "Offer sent",
+                "amount": 50000.0,
+                "close_date": "2021-03-13",
+                "account_name": "Global Media",
+                "probability": null,
+                "type": null,
+                "lead_source": null,
+                "forecast_category": null,
+                "description": null,
+                "created_date": null,
+                "last_modified_date": null
+            }
+        ]
+    },
+    {
+        "tool": "find_accounts",
+        "result": [
+            {
+                "id": "001060000261z2RAAQ",
+                "name": "Global Media",
+                "billing_country": "USA"
+            },
+            {
+                "id": "001060000261z2YAAQ",
+                "name": "salesforce.com",
+                "billing_country": "BE"
+            },
+            {
+                "id": "001060000261z2YAAQ",
+                "name": "Global Media",
+                "billing_country": "USA"
+            }
+        ]
+    }
+]

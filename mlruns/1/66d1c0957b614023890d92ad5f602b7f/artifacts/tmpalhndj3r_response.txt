@@ -1,0 +1,23 @@
+Here are your Microsoft 365 contacts with their phone numbers:
+
+1. **Name:** John Lastname
+   - **Email:** john.lastname@globalmedia.com
+   - **Phone:** 0326243426
+
+2. **Name:** ur dog
+   - **Email:** ur.dog@doghouse.com
+   - **Phone:** 0483922818
+
+3. **Name:** ur mom
+   - **Email:** ur.mom@grandpa.com
+   - **Phone:** 0427277501
+
+4. **Name:** test
+   - **Email:** test.test@gmail.com
+   - **Phone:** (no phone number available)
+
+5. **Name:** Arne Albrecht
+   - **Email:** a.albrecht@easi.net
+   - **Phone:** (no phone number available)
+
+To check if these contacts exist in Salesforce, please provide me with the method or system you use to query your Salesforce connections or let me know how you'd like to proceed.

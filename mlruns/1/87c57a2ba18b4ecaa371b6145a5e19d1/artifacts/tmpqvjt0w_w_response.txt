@@ -1,0 +1,101 @@
+[
+    {
+        "id": "006KI000005b78GYAQ",
+        "name": "new opp",
+        "stage": "Value Proposition",
+        "amount": 1000000.0,
+        "close_date": "2026-04-30",
+        "account_name": "Global Media",
+        "probability": 50.0
+    },
+    {
+        "id": "006J6000007lXp3IAE",
+        "name": "IT Parc replacement",
+        "stage": "Offer sent",
+        "amount": 19625.0,
+        "close_date": "2025-09-30",
+        "account_name": "Advanced Communications",
+        "probability": 25.0
+    },
+    {
+        "id": "006J6000007ZmITIA0",
+        "name": "Project Smile V2",
+        "stage": "Value Proposition",
+        "amount": 45000.0,
+        "close_date": "2025-08-21",
+        "account_name": "Omega SA-NV",
+        "probability": 50.0
+    },
+    {
+        "id": "006J6000004i782IAA",
+        "name": "Sales Kick-off Meeting",
+        "stage": "Offer sent",
+        "amount": 10000.0,
+        "close_date": "2025-02-22",
+        "account_name": "Plasmosis Inc.",
+        "probability": 25.0
+    },
+    {
+        "id": "006J6000004i8BnIAI",
+        "name": "Renewal @ Assurity",
+        "stage": "Negotiation/Review",
+        "amount": 35000.0,
+        "close_date": "2025-02-20",
+        "account_name": "Assurity Corporation",
+        "probability": 90.0
+    },
+    {
+        "id": "006J6000004i8BmIAI",
+        "name": "New project @ Anaco",
+        "stage": "Negotiation/Review",
+        "amount": 25000.0,
+        "close_date": "2025-01-30",
+        "account_name": "Anaco Limited",
+        "probability": 90.0
+    },
+    {
+        "id": "006J6000004i8CpIAI",
+        "name": "Business lunch",
+        "stage": "Qualification",
+        "amount": 10000.0,
+        "close_date": "2025-01-30",
+        "account_name": "Optos Inc.",
+        "probability": 10.0
+    },
+    {
+        "id": "006J6000004i8CVIAY",
+        "name": "End-of-Year Summit",
+        "stage": "Offer sent",
+        "amount": 25000.0,
+        "close_date": "2025-01-24",
+        "account_name": "Tech Labs",
+        "probability": 25.0
+    },
+    {
+        "id": "006060000193aYmAAI",
+        "name": "salesforce.com - 2,000 Widgets",
+        "stage": "Offer sent",
+        "amount": 20000.0,
+        "close_date": "2021-06-13",
+        "account_name": "salesforce.com",
+        "probability": 25.0
+    },
+    {
+        "id": "006060000193aYlAAI",
+        "name": "salesforce.com - 1,000 Widgets",
+        "stage": "Approved",
+        "amount": 100000.0,
+        "close_date": "2021-04-15",
+        "account_name": "salesforce.com",
+        "probability": 25.0
+    },
+    {
+        "id": "006060000193aYgAAI",
+        "name": "salesforce.com - 500 Widgets",
+        "stage": "Offer sent",
+        "amount": 50000.0,
+        "close_date": "2021-03-13",
+        "account_name": "Global Media",
+        "probability": 25.0
+    }
+]

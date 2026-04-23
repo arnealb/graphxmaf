@@ -1,0 +1,30 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are your 5 most recent emails:
+
+1. **From**: Microsoft Notifications  
+   **Subject**: 59080341 is de verificatiecode voor Microsoft SharePoint.  
+   **Received**: 20 April 2026, 18:31  
+   **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmvAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+2. **From**: Arne Albrecht  
+   **Subject**: supplier1 possible order  
+   **Received**: 20 April 2026, 12:30  
+   **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+3. **From**: Arne Albrecht  
+   **Subject**: this is a test  
+   **Received**: 20 April 2026, 12:01  
+   **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmtAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+4. **From**: Microsoft Security  
+   **Subject**: Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)  
+   **Received**: 19 April 2026, 13:02  
+   **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmsAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+5. **From**: Microsoft Security  
+   **Subject**: New recommendation available for EasiGroupDemo  
+   **Received**: 17 April 2026, 00:41  
+   **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANUrxQfAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**

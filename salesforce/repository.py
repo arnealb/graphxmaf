@@ -371,6 +371,9 @@ class SalesforceRepository:
         for f in (not_null_fields or []):
             if f in _LEAD_SELECTABLE and f not in combined:
                 combined.append(f)
+        for f in (filters or {}):
+            if f in _LEAD_SELECTABLE and f not in combined:
+                combined.append(f)
         safe_extras, field_map = self._resolve_fields(combined, _LEAD_SELECTABLE)
         extra_cols = (", " + ", ".join(safe_extras)) if safe_extras else ""
 

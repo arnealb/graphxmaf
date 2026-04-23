@@ -1,0 +1,31 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Here is the comprehensive list of your Microsoft 365 contacts along with their phone numbers, indicating which ones also exist in Salesforce:
+
+### Microsoft 365 Contacts
+1. **Name:** John Lastname
+   - **Phone:** 0326243426
+   - **Exists in Salesforce:** Yes (Phone: 0272700252)
+
+2. **Name:** ur dog
+   - **Phone:** 0483922818
+   - **Exists in Salesforce:** No
+
+3. **Name:** ur mom
+   - **Phone:** 0427277501
+   - **Exists in Salesforce:** No
+
+4. **Name:** test
+   - **Phone:** Not available
+   - **Exists in Salesforce:** No
+
+5. **Name:** Arne Albrecht
+   - **Phone:** Not available
+   - **Exists in Salesforce:** No
+
+### Summary
+- **Total Contacts:** 5
+- **Contacts in Both Systems:** 1 (John Lastname)

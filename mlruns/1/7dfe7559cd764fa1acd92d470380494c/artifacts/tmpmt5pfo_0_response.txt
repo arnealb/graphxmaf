@@ -1,0 +1,97 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the most recently created contacts from Salesforce:
+
+- **supplier1_contact lastname**
+  - Email: N/A
+  - Account Name: supplier1
+  - Phone: N/A
+  - Mobile: N/A
+  - Title: N/A
+  - Department: N/A
+  - ID: `003KI0000096IJLYA2`
+
+- **Arne Albrecht**
+  - Email: albrecht.arne@gmail.com
+  - Account Name: Displaytech
+  - Phone: N/A
+  - Mobile: N/A
+  - Title: N/A
+  - Department: N/A
+  - ID: `003KI00000964NzYAI`
+
+- **ur mom**
+  - Email: ur.mom@grandpa.com
+  - Account Name: account in france
+  - Phone: N/A
+  - Mobile: N/A
+  - Title: N/A
+  - Department: N/A
+  - ID: `003KI00000964ONYAY`
+
+- **John lastname**
+  - Email: john.lastname@globalmedia.com
+  - Account Name: Global Media
+  - Phone: N/A
+  - Mobile: N/A
+  - Title: N/A
+  - Department: N/A
+  - ID: `003KI00000964NyYAI`
+
+- **Leo Snickers**
+  - Email: leo.snickers@candybar.com
+  - Account Name: account in france
+  - Phone: N/A
+  - Mobile: N/A
+  - Title: N/A
+  - Department: N/A
+  - ID: `003KI00000964ALYAY`
+
+- **John Smith**
+  - Email: N/A
+  - Account Name: EASI
+  - Phone: N/A
+  - Mobile: N/A
+  - Title: N/A
+  - Department: N/A
+  - ID: `003J600000BTFSyIAP`
+
+- **Lisa Kane**
+  - Email: N/A
+  - Account Name: EASI
+  - Phone: N/A
+  - Mobile: N/A
+  - Title: N/A
+  - Department: N/A
+  - ID: `003J600000BTFStIAP`
+
+- **Brent Pauwels**
+  - Email: b.pauwels@easigroup.onmicrosoft.com
+  - Account Name: EASI
+  - Phone: N/A
+  - Mobile: N/A
+  - Title: N/A
+  - Department: N/A
+  - ID: `003J6000008AuSlIAK`
+
+- **Sander Van der Maas**
+  - Email: s.vandermaas@easigroup.onmicrosoft.com
+  - Account Name: EASI
+  - Phone: N/A
+  - Mobile: N/A
+  - Title: N/A
+  - Department: N/A
+  - ID: `003J6000008AuSbIAK`
+
+- **Arnaud Delforge**
+  - Email: a.delforge@easigroup.onmicrosoft.com
+  - Account Name: EASI
+  - Phone: N/A
+  - Mobile: N/A
+  - Title: N/A
+  - Department: N/A
+  - ID: `003J6000008AuS2IAK`
+
+(Note: All "created_date" fields were not provided, therefore recent creation dates are not available for the entries listed.)

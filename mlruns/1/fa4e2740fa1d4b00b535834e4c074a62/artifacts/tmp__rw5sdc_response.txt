@@ -1,0 +1,33 @@
+[
+    {
+        "id": "001KI00000N7MjVYAV",
+        "name": "supplier1",
+        "billing_city": "Brussels",
+        "billing_country": "Belgium"
+    },
+    {
+        "id": "001KI00000N73fKYAR",
+        "name": "cityaccount",
+        "billing_city": "Leuven",
+        "billing_country": "Belgium",
+        "website": "www.google.com"
+    },
+    {
+        "id": "001060000261z1qAAA",
+        "name": "Omega SA-NV",
+        "billing_street": "132 Avenue Louise",
+        "billing_city": "Bruxelles",
+        "billing_postal_code": "1050",
+        "billing_country": "Belgium",
+        "industry": "Technology",
+        "website": "http://www.omegaincorporated.com"
+    },
+    {
+        "id": "0010600002E0EOjAAN",
+        "name": "Easi Be",
+        "billing_street": "12 Avenue Robert Schuman",
+        "billing_city": "Nivelles",
+        "billing_postal_code": "1400",
+        "billing_country": "Belgium"
+    }
+]

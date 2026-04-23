@@ -1,0 +1,67 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+You can filter SmartSales orders by the following fields:
+
+### Text Fields
+- **uid** (hidden)
+- **internalReference**
+- **externalReference**
+- **email**
+- **vatNumber**
+- **comments**
+- **versionKey**
+- **username** (hidden)
+- **locationCode**
+- **locationExternalId**
+- **locationCountry**
+- **locationCity**
+- **catalogItemUid**
+- **approbationStatus** (hidden)
+- **approbationStatusUid**
+- **techCreationUserUid**
+- **techUpdateUserUid**
+- **fulltext**
+- **totalDiscountPercentage**
+- **CHILDREN_OF_LOCATION_RELATION: Client - Supplies to**
+- **CHILDREN_OF_LOCATION_RELATION: Client - Headquarter**
+- **PARENTS_OF_LOCATION_RELATION: Client - Headquarter of**
+- **CHILDREN_OF_LOCATION_RELATION: Client - Billing company of**
+- **includeDisplayableRelationChildrenOf** (hidden)
+
+### Boolean Fields
+- **hasManualDiscount**
+- **offer** (hidden)
+- **approbationStatusIncludeInMyTeam** (hidden)
+- **deleted**
+- **includeDeleted**
+- **excludeSecured**
+- **includeContextualDisplayableRelationChildrenOf**
+
+### Decimal Fields
+- **total**
+- **percentOfSuccess**
+- **totalWithoutDiscount**
+- **totalDiscount**
+- **totalDiscountPercentage**
+
+### Date/Time Fields
+- **orderDate**
+- **approbationModificationDate**
+- **techServerCreationDate**
+- **techServerUpdateDate**
+- **since**
+- **minDate** (hidden)
+- **maxDate** (hidden)
+
+### Additional Fields
+- **userUid**
+- **userGroupUid**
+- **creatorUid** (hidden)
+- **locationUid**
+- **measurementUnitUid**
+
+Note: Hidden fields are not typically used for filtering in the user interface but are available in the backend.
+
+This data is sourced from SmartSales.

@@ -1,0 +1,35 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are your 5 most recent emails:
+
+- **Email 1**:
+  - **Subject**: 59080341 is de verificatiecode voor Microsoft SharePoint.
+  - **Sender**: Microsoft Notifications (no-reply@notify.microsoft.com)
+  - **Received**: 20 April 2026
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmvAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 2**:
+  - **Subject**: supplier1 possible order
+  - **Sender**: Arne Albrecht (albrecht.arne@gmail.com)
+  - **Received**: 20 April 2026
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 3**:
+  - **Subject**: this is a test
+  - **Sender**: Arne Albrecht (albrecht.arne@gmail.com)
+  - **Received**: 20 April 2026
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmtAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 4**:
+  - **Subject**: Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)
+  - **Sender**: Microsoft Security (MSSecurity-noreply@microsoft.com)
+  - **Received**: 19 April 2026
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmsAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 5**:
+  - **Subject**: New recommendation available for EasiGroupDemo
+  - **Sender**: Microsoft Security (MSSecurity-noreply@microsoft.com)
+  - **Received**: 17 April 2026
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANUrxQfAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)

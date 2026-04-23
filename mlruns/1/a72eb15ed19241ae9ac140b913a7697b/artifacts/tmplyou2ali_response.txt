@@ -1,0 +1,31 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+### Email Senders in the Past 7 Days
+
+Here is the list of email senders who contacted you:
+
+- **SmartAdmin**: SmartAdmin@easigroupdemo.onmicrosoft.com 
+- **Microsoft Outlook**: MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@easigroupdemo.onmicrosoft.com
+- **Arne Albrecht**: albrecht.arne@gmail.com
+- **Microsoft Security**: MSSecurity-noreply@microsoft.com
+- **Microsoft Notifications**: no-reply@notify.microsoft.com
+
+### Corresponding Salesforce Contacts
+
+- **Arne Albrecht**: 
+  - **Email**: albrecht.arne@gmail.com 
+  - **Salesforce Contact ID**: 003KI00000964NzYAI
+  - **Account Name**: Displaytech
+
+No Salesforce contacts were found for the following email domains:
+- easigroupdemo.onmicrosoft.com
+- microsoft.com
+- notify.microsoft.com
+
+### Summary
+
+- **Matched Contact**: Arne Albrecht (albrecht.arne@gmail.com)
+- **No Matches**: Other senders from the domains listed above do not have corresponding Salesforce contacts.

@@ -1,0 +1,58 @@
+[
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt4AAA=",
+        "subject": "Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)",
+        "sender_name": "SmartAdmin",
+        "sender_email": "/O=EXCHANGELABS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0EE555E2BB884FD7902DB53A74597453-8AEC1E02-60",
+        "received": "2025-04-15T08:23:30Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt4AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt5AAA=",
+        "subject": "Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)",
+        "sender_name": "SmartAdmin",
+        "sender_email": "/O=EXCHANGELABS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0EE555E2BB884FD7902DB53A74597453-8AEC1E02-60",
+        "received": "2025-04-15T08:32:24Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt5AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt6AAA=",
+        "subject": "Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)",
+        "sender_name": "SmartAdmin",
+        "sender_email": "/O=EXCHANGELABS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0EE555E2BB884FD7902DB53A74597453-8AEC1E02-60",
+        "received": "2025-04-15T08:49:57Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt6AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAFEZy9jAAA=",
+        "subject": "Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)",
+        "sender_name": "SmartAdmin",
+        "sender_email": "SmartAdmin@easigroupdemo.onmicrosoft.com",
+        "received": "2025-04-15T08:32:43Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAFEZy9jAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+     {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt2AAA=",
+        "subject": "Confirmation of your registration to meetingMeetingFDE",
+        "sender_name": "SmartAdmin",
+        "sender_email": "/O=EXCHANGELABS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0EE555E2BB884FD7902DB53A74597453-8AEC1E02-60",
+        "received": "2025-04-15T08:16:58Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt2AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZy9gAAA=",
+        "subject": "Confirmation of your registration to meetingMeetingFDE",
+        "sender_name": "SmartAdmin",
+        "sender_email": "SmartAdmin@easigroupdemo.onmicrosoft.com",
+        "received": "2025-04-15T08:17:00Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAFEZy9gAAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    },
+    {
+        "id": "AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANJHug1AAA=",
+        "subject": "meeting",
+        "sender_name": "SmartAdmin",
+        "sender_email": "SmartAdmin@easigroupdemo.onmicrosoft.com",
+        "received": "2026-04-14T15:08:24Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANJHug1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem"
+    }
+]

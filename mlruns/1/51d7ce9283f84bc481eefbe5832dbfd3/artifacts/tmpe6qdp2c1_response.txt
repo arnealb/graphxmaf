@@ -1,0 +1,10 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The search for files related to "nutella" in OneDrive returned the following result:
+
+- **File Name:** Demande produits.xlsx
+  - **Content:** The file contains binary data, indicating it is an Excel file. The specific contents have not been displayed here, but you can access and download it using the following link: [Demande produits.xlsx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BD23762FE-A7D1-4347-97B5-C43173348CF9%7D&file=Demande%20produits.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1).
+
+If you need further assistance with the contents of the file, please let me know!

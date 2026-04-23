@@ -1,0 +1,34 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+You can use the following fields to sort SmartSales locations:
+
+- **Dates:**
+  - techServerCreationDate
+  - techServerUpdateDate
+  - techClientCreationDate
+  - techClientUpdateDate
+  - lastVisitDate
+  - lastOrderDate
+  - extranetStartDate
+  - extranetEndDate
+
+- **Identifiers:**
+  - code
+  - externalId
+  - name
+  - extranetUsername
+  - email
+  - vatNumber
+  - VAT
+
+- **Location:**
+  - street
+  - city
+  - zip
+  - country
+  - latitude
+  - longitude
+
+These fields can be accessed for sorting in both WEB and MOBILE audiences, although some fields are limited to WEB or MOBILE only.

@@ -63,6 +63,19 @@ Rules:
 - Steps with no dependencies can run in parallel — design the plan accordingly.
 - The "task" field must be a self-contained instruction the agent can execute directly.
 - Do NOT add steps for formatting or summarizing — the synthesis instruction handles that.
+
+Avoiding over-planning (same-agent queries):
+- If a query only involves one system, use ONE step unless the second call genuinely requires
+  specific IDs or values returned by the first (e.g. search → fetch details by ID).
+- When related data can be included in a single call (e.g. opportunities WITH their account's
+  billing country), ask for everything in one task description. Do NOT split "fetch" and
+  "enrich" into two same-agent steps when the agent can return all needed fields in one call.
+
+Handling dependent steps with potentially empty parents:
+- When a step depends on a previous step that may return no results, write the task so the
+  agent can handle the empty case. Example: "Using the account names from step 1 (if any),
+  check for matching calendar events. If step 1 returned no results, state that and skip
+  the calendar lookup."
 """
 
 SYNTHESIS_SYSTEM_PROMPT = """You are a synthesis agent. Given a user query, an execution plan, and
@@ -96,7 +109,7 @@ class PlanningOrchestrator:
         graph_agent: Optional[Agent] = None,
         sf_agent: Optional[Agent] = None,
         ss_agent: Optional[Agent] = None,
-        step_timeout: float = 60.0,
+        step_timeout: float = 120.0,
     ):
         self._planner = planner
         self._synthesizer = synthesizer
@@ -129,7 +142,7 @@ class PlanningOrchestrator:
 
         # ── Phase 1: Planning ──────────────────────────────────────────────────
         try:
-            plan = await self._create_plan(query)
+            plan = await self._create_plan(query, session=session)
         except Exception as exc:
             log.error("Planning failed: %s", exc, exc_info=True)
             yield {"type": "error", "message": f"Planning failed: {exc}"}
@@ -159,66 +172,35 @@ class PlanningOrchestrator:
             yield {"type": "text", "chunk": f"️Executing ({agents_label})...\n"}
 
             step_inputs = [(s, self._enrich_task(s, results)) for s in wave]
-            wave_start = datetime.now(timezone.utc).isoformat()
             coros = [self._execute_step(s, task, session=session) for s, task in step_inputs]
             wave_results = await asyncio.gather(*coros, return_exceptions=True)
 
-            wave_end = datetime.now(timezone.utc).isoformat()
-
-            # Resultaten verwerken — per index door beide lijsten lopen
+            # AgentInvocation recording (with per-step timestamps) is done inside _execute_step.
             for i in range(len(step_inputs)):
                 step, task_input = step_inputs[i]
                 res = wave_results[i]
 
-                # wel fout
                 if isinstance(res, BaseException):
                     err_msg = str(res) or repr(res)
                     log.error("Step %d (%s) failed: %s", step["id"], step["agent"], err_msg, exc_info=res)
-
-                    current_trace = get_trace()
-                    if current_trace is not None:
-                        invocation = AgentInvocation(
-                            agent=step["agent"],
-                            order=step["id"],
-                            input=task_input,
-                            started_at=wave_start,
-                            ended_at=wave_end,
-                            success=False,
-                            error=err_msg,
-                        )
-                        current_trace.invoked_agents.append(invocation)
-
                     yield {
                         "type": "error",
                         "message": f"Step {step['id']} ({step['agent']}) failed: {err_msg}",
                     }
                     continue
 
-                # geen fout
                 results[step["id"]] = res
-
-                current_trace = get_trace()
-                if current_trace is not None:
-                    invocation = AgentInvocation(
-                        agent=step["agent"],
-                        order=step["id"],
-                        input=task_input,
-                        started_at=wave_start,
-                        ended_at=wave_end,
-                        success=True,
-                        error=None,
-                    )
-                    current_trace.invoked_agents.append(invocation)
 
         # ── Phase 3: Synthesis ─────────────────────────────────────────────────
         yield {"type": "text", "chunk": "Synthesizing...\n"}
         try:
-            answer = await self._synthesize(query, plan, results)
+            answer = await self._synthesize(query, plan, results, session=session)
         except Exception as exc:
             log.error("Synthesis failed: %s", exc, exc_info=True)
             yield {"type": "error", "message": f"Synthesis failed: {exc}"}
             return
 
+        log.info("[run_sse] yielding final answer, length=%d", len(answer))
         yield {"type": "text", "chunk": answer}
         total = self._input_tokens + self._output_tokens
         yield {
@@ -232,15 +214,16 @@ class PlanningOrchestrator:
 
     # ── Internal: Planning ─────────────────────────────────────────────────────
 
-    async def _create_plan(self, query: str) -> dict:
+    async def _create_plan(self, query: str, session=None) -> dict:
         """Call the planner agent, parse + validate the JSON plan. Retries once."""
         available = self._available_agents_description()
         prompt = f"Available agents: {available}\n\nUser query: {query}"
 
         last_exc: Exception = RuntimeError("No attempts made")
+        kwargs = {} if session is None else {"session": session}
         for attempt in range(2):
             try:
-                resp = await self._planner.run(prompt)
+                resp = await self._planner.run(prompt, **kwargs)
                 self._accumulate_usage(resp)
                 raw = resp.text
                 if raw is None:
@@ -365,22 +348,76 @@ class PlanningOrchestrator:
 
     async def _execute_step(self, step: dict, task: str, session=None) -> str:
         """Execute a single plan step by calling the appropriate sub-agent."""
-        agent_map = {
+        agent = {
             "graph": self._graph_agent,
             "salesforce": self._sf_agent,
             "smartsales": self._ss_agent,
-        }
-        agent = agent_map.get(step["agent"])
+        }.get(step["agent"])
         if agent is None:
             raise ValueError(f"Agent '{step['agent']}' is not available in this session")
         kwargs = {} if session is None else {"session": session}
-        resp = await asyncio.wait_for(agent.run(task, **kwargs), timeout=self._step_timeout)
-        self._accumulate_usage(resp)
-        return resp.text or ""
+
+        started_at = datetime.now(timezone.utc).isoformat()
+        success = True
+        error: Optional[str] = None
+        llm_turns = 0
+        tool_calls: list[str] = []
+        result_text = ""
+
+        try:
+            try:
+                resp = await asyncio.wait_for(agent.run(task, **kwargs), timeout=self._step_timeout)
+            except asyncio.TimeoutError:
+                raise TimeoutError(f"Step timed out after {self._step_timeout}s")
+            except asyncio.CancelledError:
+                raise RuntimeError("Step was cancelled (connection dropped or outer request aborted)")
+            except Exception as exc:
+                if "content_filter" in str(exc) or "ContentFilter" in type(exc).__name__:
+                    result_text = "[Resultaat geblokkeerd door Azure content filter — mogelijk prompt-injection tekst in brondata]"
+                    return result_text
+                raise
+
+            self._accumulate_usage(resp)
+            result_text = resp.text or ""
+
+            # Extract LLM turn count and called tool names from the response messages.
+            # Each assistant message = one LLM iteration; function_call content = one tool call.
+            for msg in (resp.messages or []):
+                if getattr(msg, "role", None) == "assistant":
+                    llm_turns += 1
+                for content in getattr(msg, "contents", []):
+                    if getattr(content, "type", None) == "function_call":
+                        tool_calls.append(getattr(content, "name", "unknown"))
+
+            log.info(
+                "[step %d / %s] result length=%d llm_turns=%d tool_calls=%s preview=%r",
+                step["id"], step["agent"], len(result_text), llm_turns, tool_calls, result_text[:200],
+            )
+            return result_text
+
+        except Exception as exc:
+            success = False
+            error = str(exc) or repr(exc)
+            raise
+        finally:
+            ended_at = datetime.now(timezone.utc).isoformat()
+            trace = get_trace()
+            if trace is not None:
+                trace.invoked_agents.append(AgentInvocation(
+                    agent=step["agent"],
+                    order=step["id"],
+                    input=task,
+                    started_at=started_at,
+                    ended_at=ended_at,
+                    success=success,
+                    error=error,
+                    llm_turns=llm_turns,
+                    tool_calls=tool_calls,
+                ))
 
     # ── Internal: Synthesis ────────────────────────────────────────────────────
 
-    async def _synthesize(self, query: str, plan: dict, results: dict) -> str:
+    async def _synthesize(self, query: str, plan: dict, results: dict, session=None) -> str:
         """Call the synthesizer agent to combine all step results."""
         parts = [
             f"User query: {query}",
@@ -394,9 +431,17 @@ class PlanningOrchestrator:
             parts.append(f"\n[Step {sid} — {agent}]:\n{result}")
 
         context = "\n".join(parts)
-        resp = await self._synthesizer.run(context)
+        log.info("[synthesize] context length=%d chars, step_ids_with_results=%s", len(context), list(results.keys()))
+        kwargs = {} if session is None else {"session": session}
+        resp = await self._synthesizer.run(context, **kwargs)
+        try:
+            log.info("[synthesize] resp.__dict__=%s", vars(resp))
+        except Exception:
+            log.info("[synthesize] resp attrs=%s", {a: getattr(resp, a, None) for a in dir(resp) if not a.startswith("_")})
+        answer = resp.text or ""
+        log.info("[synthesize] response length=%d preview=%r", len(answer), answer[:300])
         self._accumulate_usage(resp)
-        return resp.text or ""
+        return answer
 
 
 # ── Factory ────────────────────────────────────────────────────────────────────
@@ -405,7 +450,7 @@ def create_planning_orchestrator(
     graph_agent: Optional[Agent] = None,
     sf_agent: Optional[Agent] = None,
     ss_agent: Optional[Agent] = None,
-    step_timeout: float = 60.0,
+    step_timeout: float = 120.0,
 ) -> PlanningOrchestrator:
     """Create a PlanningOrchestrator with planner + synthesizer agents."""
     client_kwargs = dict(

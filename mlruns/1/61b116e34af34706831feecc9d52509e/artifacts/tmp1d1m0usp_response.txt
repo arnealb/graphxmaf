@@ -1,0 +1,126 @@
+[
+    {
+        "fieldName": "fulltext",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "techServerCreationDate",
+        "type": "DATETIME"
+    },
+    {
+        "fieldName": "techServerUpdateDate",
+        "type": "DATETIME"
+    },
+    {
+        "fieldName": "deleted",
+        "type": "BOOLEAN"
+    },
+    {
+        "fieldName": "type",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "code",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "title",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "description",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "price",
+        "type": "DECIMAL"
+    },
+    {
+        "fieldName": "measurementUnitUid",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "catalogItemUid",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "groupUid",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "layoutUid",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "linkParentUid",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "tag",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "since",
+        "type": "DATETIME"
+    },
+    {
+        "fieldName": "contextualLocationUid",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "contextualDate",
+        "type": "DATETIME"
+    },
+    {
+        "fieldName": "hideEmptyGroups",
+        "type": "BOOLEAN"
+    },
+    {
+        "fieldName": "availability",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "salesunit",
+        "type": "INTEGER"
+    },
+    {
+        "fieldName": "packagingunit",
+        "type": "INTEGER"
+    },
+    {
+        "fieldName": "measure",
+        "type": "DECIMAL"
+    },
+    {
+        "fieldName": "unitofmeasure",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "group",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "CHILDREN_OF_LOCATION_RELATION:86acdbc2-18a4-11f1-84f0-005056010707",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "CHILDREN_OF_LOCATION_RELATION:86ae86e5-18a4-11f1-84f0-005056010707",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "PARENTS_OF_LOCATION_RELATION:86ae86e5-18a4-11f1-84f0-005056010707",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "CHILDREN_OF_LOCATION_RELATION:86af3bc8-18a4-11f1-84f0-005056010707",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "includeDisplayableRelationChildrenOf",
+        "type": "TEXT"
+    },
+    {
+        "fieldName": "includeContextualDisplayableRelationChildrenOf",
+        "type": "BOOLEAN"
+    }
+]

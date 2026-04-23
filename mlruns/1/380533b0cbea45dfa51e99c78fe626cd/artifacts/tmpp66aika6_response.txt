@@ -1,0 +1,295 @@
+[
+    {
+        "fieldName": "techServerCreationDate",
+        "displayName": null,
+        "type": "DATETIME",
+        "constraintType": null,
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "techServerUpdateDate",
+        "displayName": null,
+        "type": "DATETIME",
+        "constraintType": null,
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "code",
+        "displayName": "code",
+        "type": "TEXT",
+        "constraintType": null,
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "externalId",
+        "displayName": null,
+        "type": "TEXT",
+        "constraintType": null,
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "commented",
+        "displayName": null,
+        "type": "BOOLEAN",
+        "constraintType": null,
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "title",
+        "displayName": "title",
+        "type": "TEXT",
+        "constraintType": null,
+        "fixed": true,
+        "size": "EXTRALARGE",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "searchKeywordText",
+        "displayName": null,
+        "type": "TEXT",
+        "constraintType": null,
+        "fixed": true,
+        "size": "EXTRALARGE",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "group",
+        "displayName": "group",
+        "type": "TEXT",
+        "constraintType": null,
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "description",
+        "displayName": "description",
+        "type": "TEXT",
+        "constraintType": null,
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "price",
+        "displayName": "price",
+        "type": "DECIMAL",
+        "constraintType": null,
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "salesUnit",
+        "displayName": "salesUnit",
+        "type": "INTEGER",
+        "constraintType": null,
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "packagingUnit",
+        "displayName": "packagingUnit",
+        "type": "INTEGER",
+        "constraintType": null,
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "measure",
+        "displayName": "measure",
+        "type": "DECIMAL",
+        "constraintType": null,
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "measurementUnitDecimalPrecision",
+        "displayName": null,
+        "type": "DECIMAL",
+        "constraintType": null,
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "measurementUnitReferenceUnitCode",
+        "displayName": null,
+        "type": "TEXT",
+        "constraintType": null,
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "measurementUnitTitle",
+        "displayName": null,
+        "type": "TEXT",
+        "constraintType": null,
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "unitOfMeasure",
+        "displayName": "unitOfMeasure",
+        "type": "TEXT",
+        "constraintType": null,
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "availability",
+        "displayName": "availability",
+        "type": "TEXT",
+        "constraintType": null,
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "position",
+        "displayName": null,
+        "type": "INTEGER",
+        "constraintType": null,
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "quantitySold",
+        "displayName": null,
+        "type": "INTEGER",
+        "constraintType": null,
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": [
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    },
+    {
+        "fieldName": "tags",
+        "displayName": "tags",
+        "type": "TEXT",
+        "constraintType": null,
+        "fixed": true,
+        "size": "LARGE",
+        "audiences": [
+            "WEB",
+            "MOBILE"
+        ],
+        "parentType": null,
+        "parentUid": null
+    }
+]

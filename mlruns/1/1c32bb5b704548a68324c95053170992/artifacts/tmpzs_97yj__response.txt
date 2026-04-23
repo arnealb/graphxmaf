@@ -1,0 +1,41 @@
+Here are the senders of emails you received in the past 7 days, along with the relevant Salesforce contacts based on their email domains:
+
+### Email Senders:
+1. **SmartAdmin**  
+   - Email: SmartAdmin@easigroupdemo.onmicrosoft.com  
+   - **Contact Matches:**  
+     - SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+2. **Microsoft Outlook**  
+   - Email: MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@easigroupdemo.onmicrosoft.com  
+   - **Contact Matches:**  
+     - Microsoft Outlook (MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@easigroupdemo.onmicrosoft.com)
+
+3. **Arne Albrecht**  
+   - Email: albrecht.arne@gmail.com  
+   - **Contact Matches:**  
+     - Arne Albrecht (albrecht.arne@gmail.com)
+
+4. **Microsoft Security**  
+   - Email: MSSecurity-noreply@microsoft.com  
+   - **Contact Matches:**  
+     - Microsoft Security (MSSecurity-noreply@microsoft.com)
+
+5. **Microsoft Notifications**  
+   - Email: no-reply@notify.microsoft.com  
+   - **Contact Matches:**  
+     - Microsoft Notifications (no-reply@notify.microsoft.com)
+
+6. **Microsoft Security**  
+   (Repeats from above)  
+   - Email: MSSecurity-noreply@microsoft.com  
+   - **Contact Matches:**  
+     - Microsoft Security (MSSecurity-noreply@microsoft.com)
+
+### Additional Contacts:
+- **John Lastname**: john.lastname@globalmedia.com  
+- **Other Addresses**: 
+  - rmat@easi.net
+  - m.lantini@student.ichec.be
+
+**Summary:** There are matching Salesforce contacts for each of the email senders received.

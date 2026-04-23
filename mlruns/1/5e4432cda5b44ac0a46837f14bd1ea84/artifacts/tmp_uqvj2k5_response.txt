@@ -1,0 +1,19 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are five Salesforce accounts:
+
+- **supplier1**
+  - ID: 001KI00000N7MjVYAV
+- **cityaccount**
+  - ID: 001KI00000N73fKYAR
+  - Website: [www.google.com](http://www.google.com)
+- **account in france**
+  - ID: 001KI00000N73BoYAJ
+  - Industry: Technology
+  - Website: [www.google.com](http://www.google.com)
+- **abs**
+  - ID: 001J600000JnalSIAR
+- **EASI**
+  - ID: 001J6000009kz5ZIAQ

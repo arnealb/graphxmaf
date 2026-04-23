@@ -1,0 +1,40 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the emails with the word 'meeting' in the subject:
+
+- **Email 1**
+  - **Subject**: Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)
+  - **Sender**: SmartAdmin
+  - **Sender Email**: /O=EXCHANGELABS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0EE555E2BB884FD7902DB53A74597453-8AEC1E02-60
+  - **Received**: 15 April 2025
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt4AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 2**
+  - **Subject**: Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)
+  - **Sender**: SmartAdmin
+  - **Sender Email**: /O=EXCHANGELABS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0EE555E2BB884FD7902DB53A74597453-8AEC1E02-60
+  - **Received**: 15 April 2025
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt5AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 3**
+  - **Subject**: Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)
+  - **Sender**: SmartAdmin
+  - **Sender Email**: SmartAdmin@easigroupdemo.onmicrosoft.com
+  - **Received**: 15 April 2025
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZy9kAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 4**
+  - **Subject**: Confirmation of your registration to meetingMeetingFDE
+  - **Sender**: SmartAdmin
+  - **Sender Email**: SmartAdmin@easigroupdemo.onmicrosoft.com
+  - **Received**: 15 April 2025
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAFEZy9hAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 5**
+  - **Subject**: Confirmation of your registration to meetingMeetingFDE
+  - **Sender**: SmartAdmin
+  - **Sender Email**: /O=EXCHANGELABS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0EE555E2BB884FD7902DB53A74597453-8AEC1E02-60
+  - **Received**: 15 April 2025
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt2AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)

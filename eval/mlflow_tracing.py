@@ -6,6 +6,7 @@ own MLflow span with:
   - inputs / outputs on every span
   - per-span token usage  ({"input_tokens": N, "output_tokens": N, "total_tokens": N})
     derived from the orchestrator's running _input_tokens / _output_tokens counters
+  - per-step llm_turns and tool_calls list (read from RoutingTrace after each step)
 
 The token usage makes MLflow's "Token usage" and "Cost breakdown" panels in the
 Traces UI populate correctly.
@@ -97,12 +98,12 @@ async def instrument_orchestrator(orchestrator: "PlanningOrchestrator"):
 
     # ── plan_generation  (SpanType.LLM) ──────────────────────────────────────
 
-    async def _plan(query: str) -> dict:
+    async def _plan(query: str, **kwargs) -> dict:
         before = _snap(orchestrator)
         with _span("plan_generation", _SPAN_LLM) as sp:
             _safe(sp.set_inputs, {"query": query[:500]}) if sp else None
             t0   = time.monotonic()
-            plan = await orig_create_plan(query)
+            plan = await orig_create_plan(query, **kwargs)
             elapsed = time.monotonic() - t0
             usage   = _usage(orchestrator, before)
             n       = len(plan.get("steps", []))
@@ -122,7 +123,8 @@ async def instrument_orchestrator(orchestrator: "PlanningOrchestrator"):
 
     # ── step_{n}_{agent}  (SpanType.AGENT) ───────────────────────────────────
 
-    async def _step(step: dict, task: str) -> str:
+    async def _step(step: dict, task: str, **kwargs) -> str:
+        from agents.routing_trace import get_trace
         before    = _snap(orchestrator)
         span_name = f"step_{step['id']}_{step['agent']}"
         with _span(span_name, _SPAN_AGENT) as sp:
@@ -133,25 +135,44 @@ async def instrument_orchestrator(orchestrator: "PlanningOrchestrator"):
                     "task":       task[:400],
                 })
             t0     = time.monotonic()
-            result = await orig_execute_step(step, task)
+            result = await orig_execute_step(step, task, **kwargs)
             elapsed = time.monotonic() - t0
             usage   = _usage(orchestrator, before)
+
+            # Read llm_turns and tool_calls recorded by _execute_step in routing trace.
+            trace = get_trace()
+            last_inv = (
+                trace.invoked_agents[-1]
+                if trace and trace.invoked_agents
+                and trace.invoked_agents[-1].order == step["id"]
+                else None
+            )
+            llm_turns    = last_inv.llm_turns  if last_inv else 0
+            tool_calls   = last_inv.tool_calls if last_inv else []
+            n_tool_calls = len(tool_calls)
+
             phase_timings["steps"].append({
-                "step_id":   step["id"],
-                "agent":     step["agent"],
-                "latency_s": round(elapsed, 3),
+                "step_id":     step["id"],
+                "agent":       step["agent"],
+                "latency_s":   round(elapsed, 3),
+                "llm_turns":   llm_turns,
+                "n_tool_calls": n_tool_calls,
+                "tool_calls":  tool_calls,
                 **usage,
             })
             if sp:
                 _safe(sp.set_outputs, {
-                    "result": result[:400],
-                    "usage":  usage,
+                    "result":       result[:400],
+                    "llm_turns":    str(llm_turns),
+                    "n_tool_calls": str(n_tool_calls),
+                    "tool_calls":   str(tool_calls),
+                    "usage":        usage,
                 })
         return result
 
     # ── synthesis  (SpanType.LLM) ─────────────────────────────────────────────
 
-    async def _synth(query: str, plan: dict, results: dict) -> str:
+    async def _synth(query: str, plan: dict, results: dict, **kwargs) -> str:
         before = _snap(orchestrator)
         with _span("synthesis", _SPAN_LLM) as sp:
             if sp:
@@ -160,7 +181,7 @@ async def instrument_orchestrator(orchestrator: "PlanningOrchestrator"):
                     "n_results": str(len(results)),
                 })
             t0     = time.monotonic()
-            answer = await orig_synthesize(query, plan, results)
+            answer = await orig_synthesize(query, plan, results, **kwargs)
             elapsed = time.monotonic() - t0
             usage   = _usage(orchestrator, before)
             phase_timings["synthesis"] = {

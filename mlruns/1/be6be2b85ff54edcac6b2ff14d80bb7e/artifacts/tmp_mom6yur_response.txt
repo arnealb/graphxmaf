@@ -1,0 +1,323 @@
+[
+    {
+        "fieldName": "uid",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": true,
+        "allowExpression": false
+    },
+    {
+        "fieldName": "internalReference",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "externalReference",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "hasManualDiscount",
+        "displayName": null,
+        "type": "BOOLEAN",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "email",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "vatNumber",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "orderDate",
+        "displayName": null,
+        "type": "DATETIME",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "comments",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": "CATALOG_ORDER_TYPE"
+    },
+    {
+        "fieldName": "total",
+        "displayName": null,
+        "type": "DECIMAL",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "versionKey",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "userUid",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": "USER_UID"
+    },
+    {
+        "fieldName": "username",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": true,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "userGroupUid",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": "USER_GROUP_UID"
+    },
+    {
+        "fieldName": "creatorUid",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": true,
+        "allowExpression": true,
+        "selector": "USER_UID"
+    },
+    {
+        "fieldName": "locationCode",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "locationUid",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": "CLIENT_UID"
+    },
+    {
+        "fieldName": "locationExternalId",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "locationCountry",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "locationCity",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "personUid",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": true,
+        "allowExpression": true,
+        "selector": "CONTACT_UID"
+    },
+    {
+        "fieldName": "catalogItemUid",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": "CATALOG_ITEM_UID"
+    },
+    {
+        "fieldName": "measurementUnitUid",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": "MEASUREMENT_UNIT_UID"
+    },
+    {
+        "fieldName": "approbationModificationDate",
+        "displayName": null,
+        "type": "DATETIME",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "percentOfSuccess",
+        "displayName": null,
+        "type": "DECIMAL",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "approbationStatusIncludeInMyTeam",
+        "displayName": null,
+        "type": "BOOLEAN",
+        "hidden": true,
+        "allowExpression": false
+    },
+    {
+        "fieldName": "approbationStatus",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": true,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "approbationStatusUid",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": "CATALOG_ORDER_APPROBATION_STATUS"
+    },
+    {
+        "fieldName": "approbationModificationUserUid",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": "USER_UID"
+    },
+    {
+        "fieldName": "includeHistory",
+        "displayName": null,
+        "type": "BOOLEAN",
+        "hidden": true,
+        "allowExpression": false
+    },
+    {
+        "fieldName": "excludeSecured",
+        "displayName": null,
+        "type": "BOOLEAN",
+        "hidden": false,
+        "allowExpression": false
+    },
+    {
+        "fieldName": "type",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": "CATALOG_ORDER_TYPE"
+    },
+    {
+        "fieldName": "minDate",
+        "displayName": null,
+        "type": "DATETIME",
+        "hidden": true,
+        "allowExpression": false
+    },
+    {
+        "fieldName": "maxDate",
+        "displayName": null,
+        "type": "DATETIME",
+        "hidden": true,
+        "allowExpression": false
+    },
+    {
+        "fieldName": "techCreationUserUid",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": "USER_UID"
+    },
+    {
+        "fieldName": "techUpdateUserUid",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": true,
+        "selector": "USER_UID"
+    },
+    {
+        "fieldName": "techServerCreationDate",
+        "displayName": null,
+        "type": "DATETIME",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "techServerUpdateDate",
+        "displayName": null,
+        "type": "DATETIME",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "since",
+        "displayName": null,
+        "type": "DATETIME",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "deleted",
+        "displayName": null,
+        "type": "BOOLEAN",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "includeDeleted",
+        "displayName": null,
+        "type": "BOOLEAN",
+        "hidden": false,
+        "allowExpression": false
+    },
+    {
+        "fieldName": "fulltext",
+        "displayName": null,
+        "type": "TEXT",
+        "hidden": false,
+        "allowExpression": false
+    },
+    {
+        "fieldName": "totalWithoutDiscount",
+        "displayName": null,
+        "type": "DECIMAL",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "totalDiscount",
+        "displayName": null,
+        "type": "DECIMAL",
+        "hidden": false,
+        "allowExpression": true
+    },
+    {
+        "fieldName": "totalDiscountPercentage",
+        "displayName": null,
+        "type": "DECIMAL",
+        "hidden": false,
+        "allowExpression": true
+    }
+]

@@ -1,0 +1,34 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+You currently have 4 calendar events scheduled for this week. Here are the details:
+
+### Scheduled Events:
+1. **Subject:** nog e meeting  
+   **Start:** 21 April 2026, 12:30 PM  
+   **End:** 21 April 2026, 1:00 PM  
+   **Organizer:** SmartAdmin  
+   **Attendees:** Arne Albrecht (a.albrecht@easi.net)  
+   **Link:** [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhVAAA%3D&exvsurl=1&path=/calendar/item)
+
+2. **Subject:** meeting about numbers or something  
+   **Start:** 21 April 2026, 4:30 PM  
+   **End:** 21 April 2026, 5:00 PM  
+   **Organizer:** SmartAdmin  
+   **Attendees:** Arne Albrecht (albrecht.arne@gmail.com)  
+   **Link:** [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANRyrptAAA%3D&exvsurl=1&path=/calendar/item)
+
+3. **Subject:** gym  
+   **Start:** 22 April 2026, 8:30 PM  
+   **End:** 22 April 2026, 9:00 PM  
+   **Organizer:** SmartAdmin  
+   **Attendees:** None  
+   **Link:** [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhWAAA%3D&exvsurl=1&path=/calendar/item)
+
+4. **Subject:** anotha one  
+   **Start:** 23 April 2026, 11:00 AM  
+   **End:** 23 April 2026, 11:30 AM  
+   **Organizer:** SmartAdmin  
+   **Attendees:** None  
+   **Link:** [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhXAAA%3D&exvsurl=1&path=/calendar/item)

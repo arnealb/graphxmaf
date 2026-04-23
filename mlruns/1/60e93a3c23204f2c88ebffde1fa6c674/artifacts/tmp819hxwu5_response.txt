@@ -1,0 +1,23 @@
+Here are your upcoming calendar events this week:
+
+1. **Meeting about numbers or something**
+   - **Date:** April 21, 2026
+   - **Time:** 4:30 PM - 5:00 PM
+   - **Organizer:** SmartAdmin
+
+2. **Gym**
+   - **Date:** April 22, 2026
+   - **Time:** 8:30 PM - 9:00 PM
+   - **Organizer:** SmartAdmin
+
+3. **Anotha One**
+   - **Date:** April 23, 2026
+   - **Time:** 11:00 AM - 11:30 AM
+   - **Organizer:** SmartAdmin
+
+4. **Nog E Meeting**
+   - **Date:** April 21, 2026
+   - **Time:** 12:30 PM - 1:00 PM
+   - **Organizer:** SmartAdmin
+
+These are the events scheduled for this week.

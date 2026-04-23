@@ -1,0 +1,69 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here is the detailed list of SmartSales orders with full projection:
+
+### Orders
+
+1. **Order UID:** 332cb4b2-285d-11f1-a2fe-005056010707
+   - **Date:** 25 March 2026
+   - **Internal Reference:** TEST-001
+   - **External Reference:** EXT-001
+   - **Customer:** Customer1 (Code: CUS-001)
+   - **Supplier:** supplier1 (Code: SUP-001)
+   - **Total Quantity:** 2
+   - **Subtotal:** 100.00
+   - **Total Discount:** 100.00 (100% discount applied)
+   - **Comments:** Test order created via Postman
+   - **Items:** 
+     - Code: ITEM-001, Description: Test product, Quantity: 2, Price: 50.00
+
+2. **Order UID:** e8333fcf-38ad-11f1-a803-005056010707
+   - **Date:** 15 April 2026
+   - **Internal Reference:** ORD-ARNE-001
+   - **External Reference:** EXT-ARNE-001
+   - **Customer:** Arne Albrecht (Code: CUS-002)
+   - **Supplier:** supplier1 (Code: SUP-001)
+   - **Total Quantity:** 3
+   - **Subtotal:** 2047.99
+   - **Total Discount:** 2047.99 (100% discount applied)
+   - **Comments:** New employee IT setup for Arne Albrecht
+   - **Items:** 
+     - Code: CAT-LAPTOP-01, Description: Business Laptop Pro 15, Quantity: 1, Price: 1299.99
+     - Code: CAT-DOCK-01, Description: USB-C Docking Station, Quantity: 1, Price: 249.00
+     - Code: CAT-LICENSE-01, Description: Software License Pack, Quantity: 1, Price: 499.00
+
+3. **Order UID:** f63830a6-38ad-11f1-a803-005056010707
+   - **Date:** 15 April 2026
+   - **Internal Reference:** ORD-URMOM-001
+   - **External Reference:** EXT-URMOM-001
+   - **Customer:** ur mom (Code: LOC-URMOM-01)
+   - **Supplier:** supplier1 (Code: SUP-001)
+   - **Total Quantity:** 4
+   - **Subtotal:** 1356.00
+   - **Total Discount:** 1356.00 (100% discount applied)
+   - **Comments:** Home office equipment order
+   - **Items:** 
+     - Code: CAT-MONITOR-01, Description: Ultra Wide Monitor 34, Quantity: 2, Price: 549.00
+     - Code: CAT-KEYBOARD-01, Description: Ergonomic Keyboard, Quantity: 2, Price: 129.00
+
+4. **Order UID:** fced9d92-38ad-11f1-a803-005056010707
+   - **Date:** 15 April 2026
+   - **Internal Reference:** ORD-GLOBALMEDIA-001
+   - **External Reference:** EXT-GLOBALMEDIA-001
+   - **Customer:** Global Media (Code: LOC-GLOBALMEDIA-01)
+   - **Supplier:** supplier1 (Code: SUP-001)
+   - **Total Quantity:** 8
+   - **Subtotal:** 2444.50
+   - **Total Discount:** 2444.50 (100% discount applied)
+   - **Comments:** Bulk order for media production team
+   - **Items:** 
+     - Code: CAT-HEADSET-01, Description: Wireless Headset UC, Quantity: 5, Price: 189.50
+     - Code: CAT-LICENSE-01, Description: Software License Pack, Quantity: 3, Price: 499.00
+
+### Summary:
+- Total Orders Retrieved: 4
+- All orders have an approval status of **Approved** and various internal and external references are noted. All discounts applied were 100%.
+
+If you need further details or specific information on any item, feel free to ask!

@@ -1,0 +1,35 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the events scheduled in your calendar for the next 30 days:
+
+- **Meeting about numbers or something**
+  - **Start:** 21 April 2026, 16:30
+  - **End:** 21 April 2026, 17:00
+  - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Attendees:** albrecht.arne@gmail.com
+
+- **Gym**
+  - **Start:** 22 April 2026, 20:30
+  - **End:** 22 April 2026, 21:00
+  - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Attendees:** None
+
+- **Anotha one**
+  - **Start:** 23 April 2026, 11:00
+  - **End:** 23 April 2026, 11:30
+  - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Attendees:** None
+
+- **Closing opportunity**
+  - **Start:** 30 April 2026, 00:00
+  - **End:** 1 May 2026, 00:00
+  - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Attendees:** None
+
+- **Nog e meeting**
+  - **Start:** 21 April 2026, 12:30
+  - **End:** 21 April 2026, 13:00
+  - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Attendees:** Arne Albrecht (a.albrecht@easi.net)

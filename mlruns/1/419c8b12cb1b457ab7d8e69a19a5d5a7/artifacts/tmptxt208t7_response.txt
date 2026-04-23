@@ -1,0 +1,48 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+The following fields are available to display in the SmartSales location list:
+
+- **Dates and Times:**
+  - `techServerCreationDate` (DATETIME)
+  - `techServerUpdateDate` (DATETIME)
+  - `techClientCreationDate` (DATETIME)
+  - `techClientUpdateDate` (DATETIME)
+  - `lastVisitDate` (DATETIME)
+  - `lastOrderDate` (DATETIME)
+  - `extranetStartDate` (DATE)
+  - `extranetEndDate` (DATE)
+
+- **User Information:**
+  - `techCreationUser` (TEXT)
+  - `techUpdateUser` (TEXT)
+  - `extranetUsername` (TEXT)
+  - `email` (TEXT)
+
+- **Location Details:**
+  - `code` (TEXT)
+  - `externalId` (TEXT)
+  - `name` (TEXT)
+  - `street` (TEXT)
+  - `city` (TEXT)
+  - `zip` (TEXT)
+  - `country` (TEXT)
+  - `latitude` (DECIMAL)
+  - `longitude` (DECIMAL)
+  - `vatNumber` (TEXT)
+
+- **Boolean Fields:**
+  - `commented` (BOOLEAN)
+  - `hasExtranetAccess` (BOOLEAN)
+
+- **Relationships:**
+  - `CHILDREN_OF_LOCATION_RELATION:86acdbc2-18a4-11f1-84f0-005056010707` (Supplied by) (TEXT)
+  - `CHILDREN_OF_LOCATION_RELATION:86ae86e5-18a4-11f1-84f0-005056010707` (Headquarter of) (TEXT)
+  - `PARENTS_OF_LOCATION_RELATION:86ae86e5-18a4-11f1-84f0-005056010707` (Headquarter) (TEXT)
+  - `CHILDREN_OF_LOCATION_RELATION:86af3bc8-18a4-11f1-84f0-005056010707` (Billing company) (TEXT)
+
+- **Tax Information:**
+  - `VAT` (TEXT)
+
+This list encompasses various types of data, including text, date and time, decimal, and boolean fields.

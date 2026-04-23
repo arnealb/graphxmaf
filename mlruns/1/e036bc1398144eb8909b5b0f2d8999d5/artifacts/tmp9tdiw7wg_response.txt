@@ -1,0 +1,27 @@
+You have the following calendar events scheduled for this week:
+
+1. **Meeting about numbers or something**
+   - **Date:** April 21, 2026
+   - **Time:** 16:30 - 17:00 (UTC)
+   - **Organizer:** SmartAdmin
+   - **Attendees:** albrecht.arne@gmail.com
+
+2. **Nog e meeting**
+   - **Date:** April 21, 2026
+   - **Time:** 12:30 - 13:00 (UTC)
+   - **Organizer:** SmartAdmin
+   - **Attendees:** Arne Albrecht (a.albrecht@easi.net)
+
+3. **Gym**
+   - **Date:** April 22, 2026
+   - **Time:** 20:30 - 21:00 (UTC)
+   - **Organizer:** SmartAdmin
+   - **Attendees:** None
+
+4. **Anotha one**
+   - **Date:** April 23, 2026
+   - **Time:** 11:00 - 11:30 (UTC)
+   - **Organizer:** SmartAdmin
+   - **Attendees:** None
+
+These are your events for the week.

@@ -1,0 +1,25 @@
+Here are your calendar events scheduled for this week:
+
+1. **Meeting about numbers or something**
+   - **Start:** April 21, 2026, 16:30 UTC
+   - **End:** April 21, 2026, 17:00 UTC
+   - **Organizer:** SmartAdmin
+   - **Attendees:** albrecht.arne@gmail.com
+
+2. **Nog e meeting**
+   - **Start:** April 21, 2026, 12:30 UTC
+   - **End:** April 21, 2026, 13:00 UTC
+   - **Organizer:** SmartAdmin
+   - **Attendees:** Arne Albrecht (a.albrecht@easi.net)
+
+3. **Gym**
+   - **Start:** April 22, 2026, 20:30 UTC
+   - **End:** April 22, 2026, 21:00 UTC
+   - **Organizer:** SmartAdmin
+
+4. **Anotha one**
+   - **Start:** April 23, 2026, 11:00 UTC
+   - **End:** April 23, 2026, 11:30 UTC
+   - **Organizer:** SmartAdmin
+
+You have a total of 4 events scheduled for this week.

@@ -1,0 +1,23 @@
+Here are your upcoming calendar events for this week:
+
+1. **Meeting about Numbers or Something**
+   - **Date:** April 21, 2026
+   - **Time:** 16:30 - 17:00 UTC
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+2. **Nog E Meeting**
+   - **Date:** April 21, 2026
+   - **Time:** 12:30 - 13:00 UTC
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+3. **Gym**
+   - **Date:** April 22, 2026
+   - **Time:** 20:30 - 21:00 UTC
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+4. **Anotha One**
+   - **Date:** April 23, 2026
+   - **Time:** 11:00 - 11:30 UTC
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+If you need more details or have any questions about these events, feel free to ask!

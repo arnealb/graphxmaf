@@ -1,0 +1,49 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+You have received the following emails in the last 7 days:
+
+- **From SmartAdmin**: 
+  - Subject: "meeting" 
+  - Received: 14 April 2026
+  
+- **From Microsoft Outlook**: 
+  - Subject: "Undeliverable: meeting" 
+  - Received: 14 April 2026
+  
+- **From SmartAdmin**: 
+  - Subject: "zup me de boys" 
+  - Received: 14 April 2026
+  
+- **From SmartAdmin**: 
+  - Subject: "nog e meeting" 
+  - Received: 15 April 2026
+  
+- **From SmartAdmin**: 
+  - Subject: "DM Process sync failed" 
+  - Received: 15 April 2026
+  
+- **From SmartAdmin**: 
+  - Subject: "meeting about numbers or something" 
+  - Received: 16 April 2026
+  
+- **From Arne Albrecht**: 
+  - Subject: "Accepted: meeting about numbers or something @ di 21 apr 2026 18:30 - 19:00 (CEST) (SmartAdmin)" 
+  - Received: 16 April 2026
+  
+- **From SmartAdmin**: 
+  - Subject: "DM Process sync failed" 
+  - Received: 16 April 2026
+  
+- **From Microsoft Security**: 
+  - Subject: "New recommendation available for EasiGroupDemo" 
+  - Received: 17 April 2026
+  
+- **From SmartAdmin**: 
+  - Subject: "DM Process sync failed" 
+  - Received: 17 April 2026
+  
+- **From Microsoft Security**: 
+  - Subject: "Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)" 
+  - Received: 19 April 2026

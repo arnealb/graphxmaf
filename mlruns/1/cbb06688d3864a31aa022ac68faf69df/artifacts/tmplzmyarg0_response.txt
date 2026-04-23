@@ -1,0 +1,82 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here is the order configuration details retrieved from SmartSales:
+
+### Order Configuration
+- **Comment Allowed:** Yes
+- **Customer VAT Number Required:** No
+- **Discount Per Item Allowed:** SWIPE
+- **Global Discount Allowed:** SWIPE
+- **Has Disclaimer:** No
+- **Show Signature Input:** Yes
+- **Show VAT Per Item:** No
+- **Signature Required:** No
+- **Total Modifiers:** None
+- **Items:** None
+- **Sections:**
+  - **Name:** Section
+  - **Display Name:** Section
+  - **Read Only:** No
+  - **Fields:** None
+
+### Catalog Items
+1. **IT Hardware**
+   - **Code:** GRP-IT-HARDWARE
+   - **Type:** Group
+   - **Position:** 2
+
+2. **IT Software**
+   - **Code:** GRP-IT-SOFTWARE
+   - **Type:** Group
+   - **Position:** 1
+
+3. **Spreads**
+   - **Code:** SPREADS
+   - **Type:** Group
+   - **Position:** 0
+
+4. **USB-C Docking Station**
+   - **Code:** CAT-DOCK-01
+   - **Description:** Universal docking station with dual display support
+   - **Price:** $249.00
+   - **Availability:** In Stock
+
+5. **Wireless Headset UC**
+   - **Code:** CAT-HEADSET-01
+   - **Description:** Noise-cancelling headset for unified communications
+   - **Price:** $189.50
+   - **Availability:** In Stock
+
+6. **Ergonomic Keyboard**
+   - **Code:** CAT-KEYBOARD-01
+   - **Description:** Split ergonomic wireless keyboard
+   - **Price:** $129.00
+   - **Availability:** In Stock
+
+7. **Business Laptop Pro 15**
+   - **Code:** CAT-LAPTOP-01
+   - **Description:** High-performance laptop for enterprise use
+   - **Price:** $1,299.99
+   - **Availability:** In Stock
+
+8. **Software License Pack**
+   - **Code:** CAT-LICENSE-01
+   - **Description:** Annual enterprise software license bundle
+   - **Price:** $499.00
+   - **Availability:** In Stock
+
+9. **Ultra Wide Monitor 34**
+   - **Code:** CAT-MONITOR-01
+   - **Description:** 34 inch curved ultrawide display
+   - **Price:** $549.00
+   - **Availability:** In Stock
+
+10. **Nutella 750g**
+    - **Code:** ITEM-001
+    - **Description:** Hazelnut spread in 750g jar
+    - **Price:** $5.99
+    - **Availability:** In Stock
+
+This summarizes the order configuration and the active catalog items available in SmartSales.

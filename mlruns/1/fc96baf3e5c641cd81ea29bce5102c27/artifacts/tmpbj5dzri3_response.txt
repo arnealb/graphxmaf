@@ -1,0 +1,74 @@
+```json
+[
+    {
+        "sender_name": "SmartAdmin",
+        "sender_email": "SmartAdmin@easigroupdemo.onmicrosoft.com",
+        "subject": "meeting"
+    },
+    {
+        "sender_name": "Microsoft Outlook",
+        "sender_email": "MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@easigroupdemo.onmicrosoft.com",
+        "subject": "Undeliverable: meeting"
+    },
+    {
+        "sender_name": "SmartAdmin",
+        "sender_email": "SmartAdmin@easigroupdemo.onmicrosoft.com",
+        "subject": "zup me de boys"
+    },
+    {
+        "sender_name": "SmartAdmin",
+        "sender_email": "SmartAdmin@easigroupdemo.onmicrosoft.com",
+        "subject": "nog e meeting"
+    },
+    {
+        "sender_name": "SmartAdmin",
+        "sender_email": "/O=EXCHANGELABS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0EE555E2BB884FD7902DB53A74597453-8AEC1E02-60",
+        "subject": "DM Process sync failed"
+    },
+    {
+        "sender_name": "SmartAdmin",
+        "sender_email": "SmartAdmin@easigroupdemo.onmicrosoft.com",
+        "subject": "meeting about numbers or something"
+    },
+    {
+        "sender_name": "Arne Albrecht",
+        "sender_email": "albrecht.arne@gmail.com",
+        "subject": "Accepted: meeting about numbers or something @ di 21 apr 2026 18:30 - 19:00 (CEST) (SmartAdmin)"
+    },
+    {
+        "sender_name": "SmartAdmin",
+        "sender_email": "/O=EXCHANGELABS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0EE555E2BB884FD7902DB53A74597453-8AEC1E02-60",
+        "subject": "DM Process sync failed"
+    },
+    {
+        "sender_name": "Microsoft Security",
+        "sender_email": "MSSecurity-noreply@microsoft.com",
+        "subject": "New recommendation available for EasiGroupDemo"
+    },
+    {
+        "sender_name": "SmartAdmin",
+        "sender_email": "/O=EXCHANGELABS/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDLT)/CN=RECIPIENTS/CN=0EE555E2BB884FD7902DB53A74597453-8AEC1E02-60",
+        "subject": "DM Process sync failed"
+    },
+    {
+        "sender_name": "Microsoft Security",
+        "sender_email": "MSSecurity-noreply@microsoft.com",
+        "subject": "Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)"
+    },
+    {
+        "sender_name": "Arne Albrecht",
+        "sender_email": "albrecht.arne@gmail.com",
+        "subject": "this is a test"
+    },
+    {
+        "sender_name": "Arne Albrecht",
+        "sender_email": "albrecht.arne@gmail.com",
+        "subject": "supplier1 possible order"
+    },
+    {
+        "sender_name": "Microsoft Notifications",
+        "sender_email": "no-reply@notify.microsoft.com",
+        "subject": "59080341 is de verificatiecode voor Microsoft SharePoint."
+    }
+]
+```

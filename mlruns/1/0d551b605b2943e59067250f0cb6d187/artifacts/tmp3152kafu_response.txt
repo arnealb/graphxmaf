@@ -1,0 +1,128 @@
+[
+    {
+        "keyName": "techServerCreationDate",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "keyName": "techServerUpdateDate",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "keyName": "techClientCreationDate",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB"]
+    },
+    {
+        "keyName": "techClientUpdateDate",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB"]
+    },
+    {
+        "keyName": "code",
+        "displayName": "code",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "keyName": "externalId",
+        "displayName": "externalId",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "keyName": "name",
+        "displayName": "name",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "keyName": "extranetUsername",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB"]
+    },
+    {
+        "keyName": "extranetStartDate",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB"]
+    },
+    {
+        "keyName": "extranetEndDate",
+        "displayName": "",
+        "hidden": false,
+        "audiences": ["WEB"]
+    },
+    {
+        "keyName": "lastVisitDate",
+        "displayName": "lastVisitDate",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "keyName": "lastOrderDate",
+        "displayName": "lastOrderDate",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "keyName": "street",
+        "displayName": "street",
+        "hidden": false,
+        "audiences": ["MOBILE"]
+    },
+    {
+        "keyName": "city",
+        "displayName": "city",
+        "hidden": false,
+        "audiences": ["MOBILE"]
+    },
+    {
+        "keyName": "zip",
+        "displayName": "zip",
+        "hidden": false,
+        "audiences": ["MOBILE"]
+    },
+    {
+        "keyName": "country",
+        "displayName": "country",
+        "hidden": false,
+        "audiences": ["MOBILE"]
+    },
+    {
+        "keyName": "email",
+        "displayName": "email",
+        "hidden": false,
+        "audiences": ["MOBILE"]
+    },
+    {
+        "keyName": "vatnumber",
+        "displayName": "vatNumber",
+        "hidden": false,
+        "audiences": ["MOBILE"]
+    },
+    {
+        "keyName": "latitude",
+        "displayName": "latitude",
+        "hidden": false,
+        "audiences": ["MOBILE"]
+    },
+    {
+        "keyName": "longitude",
+        "displayName": "longitude",
+        "hidden": false,
+        "audiences": ["MOBILE"]
+    },
+    {
+        "keyName": "VAT",
+        "displayName": "VAT",
+        "hidden": false,
+        "audiences": ["WEB", "MOBILE"]
+    }
+]

@@ -1,0 +1,28 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here is the list of recent orders retrieved from SmartSales:
+
+### Recent Orders
+
+1. **Order UID:** e8333fcf-38ad-11f1-a803-005056010707
+   - **Creation Date:** 15 April 2026
+   - **Internal Reference:** ORD-ARNE-001
+   - **External Reference:** EXT-ARNE-001
+   - **Customer:** Arne Albrecht
+   - **Total Amount:** 0 (Total Without Discount: 2047.99, Total Discount: 2047.99)
+   - **Comments:** New employee IT setup for Arne Albrecht
+   - **Status:** APPROVED
+   - **Location:** Knokke, Belgium
+
+2. **Order UID:** f63830a6-38ad-11f1-a803-005056010707
+   - **Creation Date:** 15 April 2026
+   - **Internal Reference:** ORD-URMOM-001
+   - **External Reference:** EXT-URMOM-001
+   - **Customer:** (Details not completely retrieved)
+   - **Total Amount:** (Details not completely retrieved)
+   - **Comments:** (Details not completely retrieved)
+   - **Status:** (Details not completely retrieved)
+
+Note: The second order's details were not fully retrieved, but the creation date and references are listed. If you require further details on this order, please specify.

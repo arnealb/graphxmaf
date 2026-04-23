@@ -1,0 +1,191 @@
+[
+    {
+        "fieldName": "techServerCreationDate",
+        "type": "DATETIME",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "techServerUpdateDate",
+        "type": "DATETIME",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "techCreationUser",
+        "type": "TEXT",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB"]
+    },
+    {
+        "fieldName": "techUpdateUser",
+        "type": "TEXT",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB"]
+    },
+    {
+        "fieldName": "techClientCreationDate",
+        "type": "DATETIME",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB"]
+    },
+    {
+        "fieldName": "techClientUpdateDate",
+        "type": "DATETIME",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB"]
+    },
+    {
+        "fieldName": "commented",
+        "type": "BOOLEAN",
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "date",
+        "type": "DATETIME",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "internalReference",
+        "type": "TEXT",
+        "fixed": true,
+        "size": "LARGE",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "externalReference",
+        "type": "TEXT",
+        "fixed": true,
+        "size": "LARGE",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "versionHistory",
+        "type": "BOOLEAN",
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "versionKey",
+        "type": "TEXT",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB"]
+    },
+    {
+        "fieldName": "hasManualDiscount",
+        "type": "BOOLEAN",
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "user",
+        "type": "TEXT",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "customerCode",
+        "type": "TEXT",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB"]
+    },
+    {
+        "fieldName": "customer",
+        "type": "TEXT",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "locationExternalId",
+        "type": "TEXT",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB"]
+    },
+    {
+        "fieldName": "email",
+        "type": "TEXT",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "total",
+        "type": "DECIMAL",
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "totalWithoutDiscount",
+        "type": "DECIMAL",
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "totalDiscount",
+        "type": "DECIMAL",
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": ["WEB"]
+    },
+    {
+        "fieldName": "totalDiscountPercentage",
+        "type": "DECIMAL",
+        "fixed": true,
+        "size": "SMALL",
+        "audiences": ["WEB"]
+    },
+    {
+        "fieldName": "type",
+        "type": "TEXT",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "comments",
+        "type": "TEXT",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "approbationStatus",
+        "type": "TEXT",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB", "MOBILE"]
+    },
+    {
+        "fieldName": "approbationModificationDate",
+        "type": "DATETIME",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB"]
+    },
+    {
+        "fieldName": "approbationModificationUser",
+        "type": "TEXT",
+        "fixed": true,
+        "size": "MEDIUM",
+        "audiences": ["WEB"]
+    }
+]

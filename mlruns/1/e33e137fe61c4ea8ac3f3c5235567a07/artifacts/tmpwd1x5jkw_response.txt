@@ -1,0 +1,56 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here is the list of SmartSales catalog items with simple projection, sorted by name:
+
+### Catalog Items:
+
+- **Code:** CAT-DOCK-01  
+  **Title:** USB-C Docking Station  
+  **Price:** $249.00  
+  **Availability:** IN STOCK
+
+- **Code:** CAT-HEADSET-01  
+  **Title:** Wireless Headset UC  
+  **Price:** $189.50  
+  **Availability:** IN STOCK
+
+- **Code:** CAT-KEYBOARD-01  
+  **Title:** Ergonomic Keyboard  
+  **Price:** $129.00  
+  **Availability:** IN STOCK
+
+- **Code:** CAT-LAPTOP-01  
+  **Title:** Business Laptop Pro 15  
+  **Price:** $1,299.99  
+  **Availability:** IN STOCK
+
+- **Code:** CAT-LICENSE-01  
+  **Title:** Software License Pack  
+  **Price:** $499.00  
+  **Availability:** IN STOCK
+
+- **Code:** CAT-MONITOR-01  
+  **Title:** Ultra Wide Monitor 34  
+  **Price:** $549.00  
+  **Availability:** IN STOCK
+
+- **Code:** ITEM-001  
+  **Title:** Nutella 750g  
+  **Price:** $5.99  
+  **Availability:** IN STOCK
+
+- **Code:** GRP-IT-HARDWARE  
+  **Title:** IT Hardware  
+  **Type:** group  
+
+- **Code:** GRP-IT-SOFTWARE  
+  **Title:** IT Software  
+  **Type:** group  
+
+- **Code:** SPREADS  
+  **Title:** Spreads  
+  **Type:** group  
+
+These items represent a mix of hardware and software products available in the SmartSales catalog.

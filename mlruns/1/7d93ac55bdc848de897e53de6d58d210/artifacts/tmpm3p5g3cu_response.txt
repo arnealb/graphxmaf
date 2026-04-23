@@ -1,0 +1,6 @@
+The document "SmartSales_Locations.docx" contains the following company names:
+
+- Supplier: **supplier1**
+- Customer: **Customer1**
+
+These do not appear to be standard Salesforce account names as they are generic placeholders. If you need further specific checks against known Salesforce accounts, please provide that list or criteria for comparison.

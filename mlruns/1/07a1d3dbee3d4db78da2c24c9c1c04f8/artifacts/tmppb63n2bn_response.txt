@@ -1,0 +1,24 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (salesforce)...
+Synthesizing...
+### Salesforce Accounts and Contacts in France
+
+**Accounts Found:**
+- **Account Name:** account in france
+  - **Industry:** Technology
+  - **Website:** [www.google.com](http://www.google.com)
+
+**Contacts Linked to the Account:**
+1. **Contact Name:** Mister Maestro
+   - **Email:** mist.maestro@gmail.com
+   - **Account Name:** account in france
+2. **Contact Name:** Testaccount Francestuff
+   - **Email:** test.testaccount@grandpa.com
+   - **Account Name:** account in france
+3. **Contact Name:** Leo Snickers
+   - **Email:** leo.snickers@candybar.com
+   - **Account Name:** account in france
+
+If more accounts had been found, they would have been listed similarly. In this case, only one account was identified with three associated contacts.

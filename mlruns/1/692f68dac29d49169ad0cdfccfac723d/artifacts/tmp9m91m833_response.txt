@@ -1,0 +1,27 @@
+[
+    {
+        "id": "001KI00000N7MjVYAV",
+        "name": "supplier1"
+    },
+    {
+        "id": "001KI00000N73fKYAR",
+        "name": "cityaccount",
+        "website": "www.google.com"
+    },
+    {
+        "id": "001KI00000N73BoYAJ",
+        "name": "account in france",
+        "industry": "Technology",
+        "website": "www.google.com"
+    },
+    {
+        "id": "001J600000JnalSIAR",
+        "name": "abs"
+    },
+    {
+        "id": "001060000261z1qAAA",
+        "name": "Omega SA-NV",
+        "industry": "Technology",
+        "website": "http://www.omegaincorporated.com"
+    }
+]
