@@ -1,0 +1,97 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The document titled "agenda.docx" contains multiple meeting agendas. Below is the content presented in a structured format:
+
+### Meetings Agendas
+
+1. **Date:** 16 April 2026
+   - **Time:** 09:00
+   - **Location:** Meeting Room Cactus
+   - **Items:**
+     - Welcome and opening
+     - Review of missing stapler situation at Displaytech
+     - Update on office plant recovery plan for Allied Technologies
+     - Discussion of suspicious fridge leftovers
+     - Alignment on printer noise complaints
+     - Planning next coffee bean order
+     - Questions and open discussion
+     - Closing
+   - **Prepared by:** Arne Albrecht
+
+2. **Date:** 18 April 2026
+   - **Time:** 14:30
+   - **Location:** Zoom Room Banana
+   - **Items:**
+     - Welcome and opening
+     - Recap of chair-swapping incident
+     - Budget review for novelty mugs
+     - Discussion of possibly haunted whiteboard
+     - Timeline for replacing broken fan
+     - Allocation of emergency biscuits
+     - Questions and open discussion
+     - Closing
+   - **Prepared by:** John lastname
+
+3. **Date:** 21 April 2026
+   - **Time:** 11:15
+   - **Location:** Basement Conference Pod
+   - **Items:**
+     - Welcome and opening
+     - Follow-up on disappearing ethernet cables
+     - Review of folder naming chaos
+     - Debate on acceptable microwave smells
+     - Status of "urgent" sticker inventory
+     - Action points for hallway echo reduction
+     - Questions and open discussion
+     - Closing
+   - **Prepared by:** Leo Snickers
+
+4. **Date:** 22 April 2026
+   - **Time:** 08:45
+   - **Location:** Rooftop Annex
+   - **Items:**
+     - Welcome and opening
+     - Overview of Q2 snack performance
+     - Incident review of all-staff reply
+     - Evaluation of motivational poster effectiveness
+     - Planning annual keyboard cleaning effort
+     - Clarification on charger thefts
+     - Questions and open discussion
+     - Closing
+   - **Prepared by:** another lead
+
+5. **Date:** 24 April 2026
+   - **Time:** 16:00
+   - **Location:** Room Delta-2
+   - **Items:**
+     - Welcome and opening
+     - Review of cardboard box accumulation
+     - Status update on backup plan
+     - Discussion of socks near the server rack
+     - Decision on rebranding intern cupboard
+     - Next steps for cable untangling
+     - Questions and open discussion
+     - Closing
+   - **Prepared by:** Ur Mom
+
+... [Continues through various dates until]
+
+### Last Meetings:
+
+- **Date:** 20 May 2026
+   - **Time:** 13:35
+   - **Location:** Side Hall Lavender
+   - **Items:**
+     - Welcome and opening
+     - Summary of spreadsheet tab color inconsistency
+     - Review of broken clock
+     - Discussion of mystery smell
+     - Planning emergency charger distribution
+     - Audit of forgotten lunch containers
+     - Questions and open discussion
+     - Closing
+   - **Prepared by:** another lead 
+
+This document details a wide range of meeting topics and logistical information, reflecting various concerns and planning activities.

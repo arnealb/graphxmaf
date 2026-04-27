@@ -1,0 +1,41 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Here are your Microsoft 365 contacts with their phone numbers, along with information on whether they also exist in Salesforce:
+
+### Microsoft 365 Contacts
+1. **John Lastname**  
+   - Email: john.lastname@globalmedia.com  
+   - Phone: 0326243426  
+   - **Exists in Salesforce**: Yes (ID: 003KI00000964NyYAI)
+
+2. **ur dog**  
+   - Email: ur.dog@doghouse.com  
+   - Phone: 0483922818  
+   - **Exists in Salesforce**: No  
+
+3. **ur mom**  
+   - Email: ur.mom@grandpa.com  
+   - Phone: 0427277501  
+   - **Exists in Salesforce**: No  
+
+4. **test**  
+   - Email: test.test@gmail.com  
+   - Phone: Not available  
+   - **Exists in Salesforce**: Yes (ID: 003KI00000964ONYAY)
+
+5. **Arne Albrecht**  
+   - Email: a.albrecht@easi.net  
+   - Phone: Not available  
+   - **Exists in Salesforce**: Yes (ID: 003KI00000964NzYAI)  
+
+### Summary
+- **Contacts Found in Salesforce**:
+  - John Lastname
+  - test 
+  - Arne Albrecht
+- **Contacts Not Found in Salesforce**:
+  - ur dog
+  - ur mom

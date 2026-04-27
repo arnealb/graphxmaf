@@ -1,0 +1,41 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (smartsales)...
+️Executing (smartsales)...
+Synthesizing...
+### SmartSales Approbation Statuses
+
+1. **UID:** 86ceb193-18a4-11f1-84f0-005056010707
+2. **UID:** 86d4e3b4-18a4-11f1-84f0-005056010707
+3. **UID:** 86d17c14-18a4-11f1-84f0-005056010707
+4. **UID:** 86d5a606-18a4-11f1-84f0-005056010707
+5. **UID:** 86d26456-18a4-11f1-84f0-005056010707
+6. **UID:** 86d62bbc-18a4-11f1-84f0-005056010707
+7. **UID:** 86d30fd9-18a4-11f1-84f0-005056010707
+8. **UID:** 86d6d77c-18a4-11f1-84f0-005056010707
+9. **UID:** 86d3ef5c-18a4-11f1-84f0-005056010707
+10. **UID:** 86d8a79f-18a4-11f1-84f0-005056010707
+
+### Details of the First Approbation Status (UID: 86ceb193-18a4-11f1-84f0-005056010707)
+
+- **Title (English):** Ongoing approval
+- **Title (French):** En cours d'approbation
+- **Title (Dutch):** Lopende goedkeuring
+- **Code:** PENDING
+- **Type:** OFFER
+- **Position:** 0
+- **Icon Code:** QUARTER_0
+- **Icon Color:** YELLOW
+- **Percent of Success:** 0.0%
+- **Terminal:** No
+- **Secured:** No
+- **Include in My Team:** Yes
+- **System:** No
+- **Deleted:** No
+- **Mail Subject (English):** Offer
+- **Mail Body (English):** An offer has been received from {0} {1}. Please download a copy below:
+- **Notification Types:** USER, CUSTOMER, BACKOFFICE
+- **Security Permissions:** None
+
+- **Technical Server Creation Date:** 5 March 2026
+- **Technical Server Update Date:** 5 March 2026

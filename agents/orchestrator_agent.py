@@ -140,13 +140,6 @@ def create_orchestrator_agent(
     ))
 
     # ─── Create the orchestrator agent ─────────────────────────────
-    active_systems = []
-    if graph_agent is not None:
-        active_systems.append("1. ask_graph_agent  — handles everything Microsoft 365:\n               emails, OneDrive files, calendar events, contacts, user identity.")
-    if salesforce_agent is not None:
-        active_systems.append("2. ask_salesforce_agent — handles everything Salesforce CRM:\n               accounts, contacts, leads, opportunities, support cases.")
-    active_systems.append("3. ask_smartsales_agent — handles SmartSales data:\n               locations, catalog items, and orders.")
-
     return Agent(
         client=AzureOpenAIChatClient(
             deployment_name=deployment,
@@ -156,16 +149,13 @@ def create_orchestrator_agent(
         ),
         name="OrchestratorAgent",
         description="Central orchestrator that routes queries to the available sub-agents and combines their results",
-        instructions=f"""
-            You are a central orchestrator that coordinates specialized agents:
+        instructions="""
+            You are a central orchestrator that coordinates specialized agents to answer user queries.
+            Use the tool descriptions to decide which agent(s) to call.
 
-            {chr(10).join(active_systems)}
-
-            ROUTING RULES
-            - Microsoft 365 / Office data → ask_graph_agent (if available)
-            - Salesforce / CRM data       → ask_salesforce_agent (if available)
-            - SmartSales data             → ask_smartsales_agent
-            - Query spans multiple systems → call relevant tools, then combine
+            ROUTING STRATEGY
+            - A query involving only one system → call that agent's tool once.
+            - A query spanning multiple systems → call all relevant tools, then combine results.
 
             STRICT TOOL SELECTION RULES
             - Only call a tool when the user's request explicitly requires it.

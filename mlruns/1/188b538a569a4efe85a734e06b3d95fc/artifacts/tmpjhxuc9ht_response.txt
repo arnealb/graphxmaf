@@ -1,0 +1,34 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+You have 4 calendar events scheduled this week. Here are the details:
+
+### Scheduled Events
+
+1. **Subject**: Closing Opportunity
+   - **Start**: 30 April 2026
+   - **End**: 1 May 2026
+   - **Organizer**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+2. **Subject**: Anotha One
+   - **Start**: 23 April 2026, 11:00 AM
+   - **End**: 23 April 2026, 11:30 AM
+   - **Organizer**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+3. **Subject**: Gym
+   - **Start**: 22 April 2026, 8:30 PM
+   - **End**: 22 April 2026, 9:00 PM
+   - **Organizer**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+4. **Subject**: Meeting About Numbers or Something
+   - **Start**: 21 April 2026, 4:30 PM
+   - **End**: 21 April 2026, 5:00 PM
+   - **Organizer**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendee**: Arne Albrecht (albrecht.arne@gmail.com)
+
+5. **Subject**: Nog E Meeting
+   - **Start**: 21 April 2026, 12:30 PM
+   - **End**: 21 April 2026, 1:00 PM
+   - **Organizer**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Attendee**: Arne Albrecht (a.albrecht@easi.net)

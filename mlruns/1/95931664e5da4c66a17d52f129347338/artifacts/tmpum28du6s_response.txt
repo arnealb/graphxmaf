@@ -1,0 +1,49 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The file retrieved from OneDrive titled "Comprehensive Financial Research Report" provides detailed financial information about NVIDIA Corporation (NVDA) as of 10 April 2026. Here are the key sections:
+
+### 1. Company Overview
+- **Full Legal Name:** NVIDIA Corporation
+- **Ticker:** NVDA
+- **Exchange:** NASDAQ Global Select Market
+- **Headquarters:** 2788 San Tomas Expressway, Santa Clara, California 95051
+- **CEO:** Jensen Huang
+- **CFO:** Colette Kress
+- **Employees:** 42,000 (as of January 25, 2026)
+- **Revenue per Employee:** ~$5.14 million (FY2026)
+
+### 2. Business Description
+- Focus on accelerated computing, designing GPUs, CPUs, and networking equipment.
+- Key offerings include platforms for AI training, scientific computing, gaming, and more.
+
+### 3. Market-Facing Revenue Breakdown (FY2026)
+- **Total Revenue:** $215.9 billion
+    - Data Center: $193.7B (89.7%)
+    - Gaming: $16.0B (7.4%)
+    - Professional Visualization: $3.2B (1.5%)
+    - Automotive: $2.3B (1.1%)
+    - OEM & Other: $0.6B (0.3%)
+- **YoY Growth:** +65%
+
+### 4. Market Data (as of April 10, 2026)
+- **Current Stock Price:** ~$186.50
+- **Market Capitalization:** ~$4.5 trillion
+- **1-Year Return:** ~60.9%
+
+### 5. Income Statement Highlights (FY2026)
+- **Revenue:** $215,938 million
+- **Net Income:** $120,067 million
+- **Diluted EPS:** $4.90
+
+### 6. Balance Sheet Highlights (As of January 2026)
+- **Total Assets:** $206,803 million
+- **Total Liabilities:** $49,510 million
+- **Total Stockholders' Equity:** $157,293 million
+
+### 7. Cash Flow Statement Highlights (FY2026)
+- **Operating Cash Flow:** $90,000 million
+- **Net Change in Cash:** $58,000 million
+
+This report presents an extensive overview of NVIDIA's financial performance, emphasizing growth in various segments and overall market position.

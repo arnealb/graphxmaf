@@ -1,0 +1,34 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here are the SmartSales order approbation statuses:
+
+### Order Approbaton Statuses
+- **Pending**
+  - **Title:** Ongoing approval
+  - **Code:** PENDING
+  - **Icon Color:** Yellow
+  - **Type:** Order
+- **Approved**
+  - **Title:** Approved
+  - **Code:** APPROVED
+  - **Icon Color:** Green
+  - **Type:** Order
+- **Rejected**
+  - **Title:** Rejected
+  - **Code:** REJECTED
+  - **Icon Color:** Red
+  - **Type:** Order
+- **On Hold**
+  - **Title:** On hold
+  - **Code:** ON_HOLD
+  - **Icon Color:** Blue
+  - **Type:** Order
+- **Invalid Status**
+  - **Title:** Invalid status
+  - **Code:** INVALID
+  - **Icon Color:** Red
+  - **Type:** Order
+
+These statuses indicate the various stages and conditions of order approval within the SmartSales system.

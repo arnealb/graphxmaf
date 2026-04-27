@@ -1,0 +1,18 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+Here are the Salesforce opportunities closing in April 2026:
+
+### Opportunities Closing This Month:
+- **Opportunity Name:** new opp
+  - **Stage:** Value Proposition
+  - **Close Date:** 30 April 2026
+  - **Account Name:** Global Media
+  - **Amount:** $1,000,000
+
+### Calendar Events Check:
+- No calendar events were found related to the account "Global Media".
+
+If you need any further assistance or details, let me know!

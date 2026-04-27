@@ -1,0 +1,62 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (smartsales)...
+️Executing (smartsales)...
+Synthesizing...
+### SmartSales Orders
+
+1. **Order UID:** 332cb4b2-285d-11f1-a2fe-005056010707
+   - **Date:** 25 March 2026
+   - **Internal Reference:** TEST-001
+   - **External Reference:** EXT-001
+   - **Customer:** Customer1 (Code: CUS-001)
+   - **Total Without Discount:** 100
+   - **Total Discount:** 100
+   - **Comments:** Test order created via Postman
+  
+2. **Order UID:** e8333fcf-38ad-11f1-a803-005056010707
+   - **Date:** 15 April 2026
+   - **Internal Reference:** ORD-ARNE-001
+   - **External Reference:** EXT-ARNE-001
+   - **Customer:** Arne Albrecht (Code: CUS-002)
+   - **Total Without Discount:** 2047.99
+   - **Total Discount:** 2047.99
+   - **Comments:** New employee IT setup for Arne Albrecht
+
+3. **Order UID:** f63830a6-38ad-11f1-a803-005056010707
+   - **Date:** 15 April 2026
+   - **Internal Reference:** ORD-URMOM-001
+   - **External Reference:** EXT-URMOM-001
+   - **Customer:** ur mom (Code: LOC-URMOM-01)
+   - **Total Without Discount:** 1356
+   - **Total Discount:** 1356
+   - **Comments:** Home office equipment order
+
+4. **Order UID:** fced9d92-38ad-11f1-a803-005056010707
+   - **Date:** 15 April 2026
+   - **Internal Reference:** ORD-GLOBALMEDIA-001
+   - **External Reference:** EXT-GLOBALMEDIA-001
+   - **Customer:** Global Media (Code: LOC-GLOBALMEDIA-01)
+   - **Total Without Discount:** 2444.5
+   - **Total Discount:** 2444.5
+   - **Comments:** Bulk order for media production team
+
+---
+
+### Details of the First Order (UID: 332cb4b2-285d-11f1-a2fe-005056010707)
+
+- **Creation Date:** 25 March 2026
+- **Customer:** Customer1 (Code: CUS-001)
+- **Supplier:** supplier1 (Code: SUP-001)
+- **Total Quantity:** 2
+- **Total Without Discount:** 100
+- **Comments:** Test order created via Postman
+- **Items:**
+  - **Code:** ITEM-001
+    - **Description:** Test product
+    - **Quantity:** 2
+    - **Price:** 50
+    - **Total Price:** 100
+    - **Discount:** 0
+
+This summarizes the orders in SmartSales along with full details of the first order.
