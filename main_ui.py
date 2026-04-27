@@ -31,7 +31,7 @@ from agents.planning_orchestrator import create_planning_orchestrator
 from agents.routing_trace import start_trace
 from agents.salesforce_agent import create_salesforce_agent
 from agents.smartsales_agent import create_smartsales_agent
-from main import (
+from startup import (
     _is_local_url,
     _resolve_sf_session,
     _resolve_ss_session,
