@@ -95,8 +95,11 @@
     Returns up to 25 results. Does NOT return file contents — call read_file
     or read_multiple_files to get the actual text of a file.
 
-    `query` — keyword to search across file and folder names (e.g. "budget",
-    "Q1 report"). Searches the entire drive recursively from the root.
+    `query` — search term passed to OneDrive's KQL engine. Supports plain keywords
+    (e.g. "budget", "Q1 report") and filetype filters (e.g. "filetype:xlsx" to find
+    all Excel files, "budget filetype:docx" to find Word files whose name contains
+    "budget"). Use filetype:xlsx for Excel, filetype:docx for Word, filetype:pdf for
+    PDF, etc. Searches the entire drive recursively from the root.
 
     `drive_id` — optional, leave null to use the authenticated user's default drive.
     `folder_id` — optional, defaults to "root" to search from the drive root.

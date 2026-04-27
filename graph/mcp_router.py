@@ -57,6 +57,13 @@ async def _read_email(repo: GraphRepository, message_id: str, **kwargs):
 
 
 async def _search_files(repo: GraphRepository, query: str, drive_id=None, folder_id="root", **kwargs):
+    import re
+    filetype_match = re.search(r'\bfiletype:(\w+)\b', query, re.IGNORECASE)
+    if filetype_match:
+        ext = "." + filetype_match.group(1).lower()
+        base = re.sub(r'\bfiletype:\w+\b', "", query, flags=re.IGNORECASE).strip()
+        results = await repo.search_drive_items_sdk(query=base or ext, top=25, drive_id=drive_id)
+        return [f for f in results if f.name.lower().endswith(ext)]
     return await repo.search_drive_items_sdk(query=query, top=25, drive_id=drive_id)
 
 

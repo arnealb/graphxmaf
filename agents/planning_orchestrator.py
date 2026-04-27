@@ -285,9 +285,9 @@ class PlanningOrchestrator:
     def _available_agents_description(self) -> str:
         agents = []
         if self._graph_agent is not None:
-            agents.append("graph (Microsoft 365: emails, calendar, OneDrive, contacts)")
+            agents.append("graph (Microsoft 365: emails, calendar, OneDrive, personal Outlook contacts / address book)")
         if self._sf_agent is not None:
-            agents.append("salesforce (CRM: accounts, contacts, leads, opportunities)")
+            agents.append("salesforce (CRM: accounts, CRM contacts, leads, opportunities, cases)")
         if self._ss_agent is not None:
             agents.append("smartsales (locations, catalog items)")
         return ", ".join(agents)

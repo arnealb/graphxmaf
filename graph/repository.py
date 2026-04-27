@@ -503,6 +503,7 @@ class GraphRepository(IGraphRepository):
 
     async def get_file_text(self, file_id: str) -> str:
         content_bytes = await self.get_file_content(file_id)
+        log.info("[get_file_text] file_id=%s bytes=%d magic=%r", file_id, len(content_bytes), content_bytes[:4])
 
         # Detect ZIP-based Office formats (docx, xlsx) by magic bytes
         if content_bytes[:4] == b'PK\x03\x04':
@@ -526,7 +527,9 @@ class GraphRepository(IGraphRepository):
                             if line.strip():
                                 parts.append(line)
                     text = "\n".join(parts)
+                    log.info("[get_file_text] xlsx parsed OK, sheets=%d chars=%d", len(wb.worksheets), len(text))
                 except Exception as exc:
+                    log.warning("[get_file_text] xlsx parse failed: %s", exc)
                     text = f"[Could not parse Excel file: {exc}]"
             else:
                 try:
@@ -575,6 +578,7 @@ class GraphRepository(IGraphRepository):
         if drive_id is None:
             drive = await self._graph_call(self.user_client.me.drive.get())
             drive_id = drive.id
+        log.info("[search_drive_items_sdk] query=%r drive_id=%s top=%d", query, drive_id, top)
 
         qp = SearchWithQRequestBuilder.SearchWithQRequestBuilderGetQueryParameters(
             select=[
@@ -606,6 +610,7 @@ class GraphRepository(IGraphRepository):
                 parent_id=item.parent_reference.id if item.parent_reference else None,
                 web_link=item.web_url,
             ))
+        log.info("[search_drive_items_sdk] query=%r → %d result(s): %s", query, len(out), [f.name for f in out])
         return out
 
 

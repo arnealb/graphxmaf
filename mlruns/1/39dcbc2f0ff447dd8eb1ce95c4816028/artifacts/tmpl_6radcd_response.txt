@@ -1,0 +1,38 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here are the recent SmartSales orders:
+
+### Order Details
+
+1. **Order ID**: ORD-ARNE-001
+   - **Customer**: Arne Albrecht
+   - **Date**: 15 April 2026
+   - **Total Amount**: €0 (after discount)
+   - **Comments**: New employee IT setup for Arne Albrecht
+   - **Address**: Lippenslaan 347, Knokke, 8300, Belgium
+
+2. **Order ID**: ORD-URMOM-001
+   - **Customer**: ur mom
+   - **Date**: 15 April 2026
+   - **Total Amount**: €0 (after discount)
+   - **Comments**: Home office equipment order
+   - **Address**: Rue de France 1, Brussels, 1000, BE
+
+3. **Order ID**: ORD-GLOBALMEDIA-001
+   - **Customer**: Global Media
+   - **Date**: 15 April 2026
+   - **Total Amount**: €0 (after discount)
+   - **Comments**: Bulk order for media production team
+   - **Address**: Mediastraat 10, Brussels, 1000, BE
+
+4. **Order ID**: TEST-001
+   - **Customer**: Customer1
+   - **Date**: 25 March 2026
+   - **Total Amount**: €0 (after discount)
+   - **Comments**: Test order created via Postman
+   - **Address**: Markt 5, Bruges, 8000, Belgium
+
+### Summary
+- All recent orders have been approved and have a total amount of €0 due to discounts applied.

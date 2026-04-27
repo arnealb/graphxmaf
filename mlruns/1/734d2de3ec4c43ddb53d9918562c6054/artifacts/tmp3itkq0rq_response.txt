@@ -1,0 +1,37 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (graph)...
+Synthesizing...
+Here is the content extracted from the two Excel files found in OneDrive:
+
+### From **Book.xlsx**
+- **Description**: This file contains a simple dataset.
+- **Data**:
+  ```
+  Date        | Description | Value
+  ---------------------------------------
+  01 February 2026 | dag 1      | 12
+  02 February 2026 | dag 2      | 24
+  03 February 2026 | dag 3      | 36
+  04 February 2026 | dag 4      | 48
+  05 February 2026 | dag 5      | 60
+  06 February 2026 | dag 6      | 72
+  07 February 2026 | dag 7      | 84
+  08 February 2026 | dag 8      | 96
+  09 February 2026 | dag 9      | 108
+  ```
+
+### From **Demande produits.xlsx**
+- **Description**: This file provides detailed information on product requests.
+- **Data**: (Sample of the first few rows)
+  ```
+  Produit                         | Unité consommateur | Marque          | Conditionnement complet | Conditionnement minimum
+  ---------------------------------------------------------------------------------------------
+  CHIPS NATUREL 175GR            | Unit quantity      | Lays            | KG                    | 452
+  CHIPS NATUREL 40GR             | Unit quantity      | Lays            | KG                    | 652
+  CHIPS PAPRIKA 175GR            | Unit quantity      | Lays            | KG                    | 552
+  CHIPS PAPRIKA 40GR             | Unit quantity      | Lays            | KG                    | 592
+  ```
+
+If you need any more specific details from either file or have further questions, feel free to ask!

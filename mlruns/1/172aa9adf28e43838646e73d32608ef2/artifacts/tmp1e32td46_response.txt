@@ -1,0 +1,36 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are your upcoming events and meetings in the next 14 days:
+
+### Events
+- **Event**: nog e meeting  
+  **Date**: 21 April 2026  
+  **Time**: 12:30 PM - 1:00 PM  
+  **Organizer**: SmartAdmin  
+  **Attendees**: Arne Albrecht (a.albrecht@easi.net)
+
+- **Event**: meeting about numbers or something  
+  **Date**: 21 April 2026  
+  **Time**: 4:30 PM - 5:00 PM  
+  **Organizer**: SmartAdmin  
+  **Attendees**: Arne Albrecht (albrecht.arne@gmail.com)
+
+- **Event**: gym  
+  **Date**: 22 April 2026  
+  **Time**: 8:30 PM - 9:00 PM  
+  **Organizer**: SmartAdmin  
+
+- **Event**: anotha one  
+  **Date**: 23 April 2026  
+  **Time**: 11:00 AM - 11:30 AM  
+  **Organizer**: SmartAdmin  
+
+- **Event**: zup me de boys  
+  **Date**: 17 April 2026  
+  **Time**: 10:30 AM - 11:00 AM  
+  **Organizer**: SmartAdmin  
+  **Attendees**: Ur Mom (ur.mom@grandpa.com)  
+
+All events are organized by SmartAdmin. Note that some events may have attendees listed while others do not.
