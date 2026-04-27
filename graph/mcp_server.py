@@ -9,6 +9,7 @@ from starlette.responses import JSONResponse, Response, RedirectResponse
 from starlette.types import ASGIApp, Receive, Scope, Send
 
 from graph.mcp_router import register_graph_tools
+from shared.mcp_utils import extract_session_token
 
 
 mcp = FastMCP("graph", port=8000, host="0.0.0.0")
@@ -97,15 +98,6 @@ _ROUTES = {
 }
 
 
-def _extract_token(ctx: Context) -> str:
-    http_request = ctx.request_context.request
-    if http_request is None:
-        raise RuntimeError("No HTTP request in context.")
-    auth = http_request.headers.get("authorization", "")
-    if not auth.lower().startswith("bearer "):
-        raise RuntimeError("Missing or invalid Authorization header.")
-    return auth[7:]
-
 async def _extract_and_exchange_token(ctx: Context) -> str:
     """Extract the incoming token and exchange it for a Graph token via OBO."""
     # Haal het inkomende token op (api://... scope)
@@ -136,9 +128,8 @@ async def _extract_and_exchange_token(ctx: Context) -> str:
     return resp.json()["access_token"]
 
 
-# register_graph_tools(mcp, _azure_settings, _extract_token)
 # register_graph_tools(mcp, _azure_settings, _extract_and_exchange_token)
-register_graph_tools(mcp, _azure_settings, _extract_token)
+register_graph_tools(mcp, _azure_settings, extract_session_token)
 
 
 

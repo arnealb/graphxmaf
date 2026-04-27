@@ -1,5 +1,4 @@
 # mcp_server.py
-import json
 import logging
 import os
 from pathlib import Path
@@ -7,7 +6,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
 
-from mcp.server.fastmcp import FastMCP, Context
+from mcp.server.fastmcp import FastMCP
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 
@@ -18,6 +17,7 @@ from smartsales.auth import (
 )
 from smartsales.mcp_router import register_smartsales_tools, _get_repo
 from smartsales.token_store import StoredTokens, build_token_store
+from shared.mcp_utils import extract_session_token, write_session_ref, read_session_ref
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -36,17 +36,11 @@ _SESSION_REF_FILE = Path(os.environ.get("SS_SESSION_REF_FILE", ".ss_session.json
 
 
 def _write_session_ref(session_token: str) -> None:
-    _SESSION_REF_FILE.write_text(json.dumps({"session_token": session_token}), encoding="utf-8")
-    log.info("Session ref written  session=%s", session_token)
+    write_session_ref(_SESSION_REF_FILE, session_token, log)
 
 
 def _read_session_ref() -> str | None:
-    if not _SESSION_REF_FILE.exists():
-        return None
-    try:
-        return json.loads(_SESSION_REF_FILE.read_text(encoding="utf-8")).get("session_token")
-    except Exception:
-        return None
+    return read_session_ref(_SESSION_REF_FILE)
 
 
 async def _ensure_session() -> str:
@@ -130,24 +124,7 @@ async def _resolve_session(session_token: str) -> SmartSalesCredentials:
     )
 
 
-# ──────────────────────────────────────────────────────────────────────────────
-# Token extraction helper (reads Bearer UUID from the Authorization header)
-# ──────────────────────────────────────────────────────────────────────────────
-
-def _extract_session_token(ctx: Context) -> str:
-    http_request = ctx.request_context.request
-    if http_request is None:
-        raise RuntimeError(
-            "No HTTP request in context. "
-            "This tool requires streamable-http transport."
-        )
-    auth = http_request.headers.get("authorization", "")
-    if not auth.lower().startswith("bearer "):
-        raise RuntimeError("Missing or invalid Authorization header.")
-    return auth[7:]
-
-
-register_smartsales_tools(mcp, _extract_session_token, _resolve_session)
+register_smartsales_tools(mcp, extract_session_token, _resolve_session)
 
 
 if __name__ == "__main__":

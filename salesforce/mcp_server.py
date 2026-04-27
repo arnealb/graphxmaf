@@ -1,5 +1,4 @@
 # mcp_server.py
-import json
 import logging
 import os
 import uuid
@@ -8,7 +7,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
 
-from mcp.server.fastmcp import FastMCP, Context
+from mcp.server.fastmcp import FastMCP
 from starlette.requests import Request
 from starlette.responses import JSONResponse, RedirectResponse
 
@@ -21,6 +20,7 @@ from salesforce.auth import (
 )
 from salesforce.mcp_router import register_salesforce_tools
 from salesforce.token_store import StoredTokens, build_token_store
+from shared.mcp_utils import extract_session_token, write_session_ref, read_session_ref
 
 log = logging.getLogger("salesforce.mcp_server")
 
@@ -54,18 +54,11 @@ _SESSION_REF_FILE = Path(os.environ.get("SF_SESSION_REF_FILE", ".sf_session.json
 
 
 def _write_session_ref(session_token: str) -> None:
-    """Persist the active session UUID so main.py can discover it automatically."""
-    _SESSION_REF_FILE.write_text(json.dumps({"session_token": session_token}), encoding="utf-8")
-    log.info("Session ref written to %s  session=%s", _SESSION_REF_FILE, session_token)
+    write_session_ref(_SESSION_REF_FILE, session_token, log)
 
 
 def _read_session_ref() -> str | None:
-    if not _SESSION_REF_FILE.exists():
-        return None
-    try:
-        return json.loads(_SESSION_REF_FILE.read_text(encoding="utf-8")).get("session_token")
-    except Exception:
-        return None
+    return read_session_ref(_SESSION_REF_FILE)
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -241,24 +234,7 @@ async def _resolve_session(session_token: str) -> SalesforceCredentials:
     )
 
 
-# ──────────────────────────────────────────────────────────────────────────────
-# Token extraction helper (reads Bearer UUID from the Authorization header)
-# ──────────────────────────────────────────────────────────────────────────────
-
-def _extract_session_token(ctx: Context) -> str:
-    http_request = ctx.request_context.request
-    if http_request is None:
-        raise RuntimeError(
-            "No HTTP request in context. "
-            "This tool requires streamable-http transport."
-        )
-    auth = http_request.headers.get("authorization", "")
-    if not auth.lower().startswith("bearer "):
-        raise RuntimeError("Missing or invalid Authorization header.")
-    return auth[7:]
-
-
-register_salesforce_tools(mcp, _extract_session_token, _resolve_session)
+register_salesforce_tools(mcp, extract_session_token, _resolve_session)
 
 
 if __name__ == "__main__":
