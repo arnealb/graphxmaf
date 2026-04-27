@@ -1,0 +1,21 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+### Email Senders in the Past 7 Days
+- **albrecht.arne@gmail.com**
+  - **Matching Salesforce Contact:**
+    - Name: Arne Albrecht
+    - Account Name: Displaytech
+- **no-reply@notify.microsoft.com**
+  - **Matching Salesforce Contact:** None
+- **no-reply@sharepointonline.com**
+  - **Matching Salesforce Contact:** None
+- **SmartAdmin@easigroupdemo.onmicrosoft.com**
+  - **Matching Salesforce Contact:** None
+- **azure-noreply@microsoft.com**
+  - **Matching Salesforce Contact:** None
+
+### Summary
+Only the email address "albrecht.arne@gmail.com" has a corresponding Salesforce contact with the information provided. The other senders did not match any contacts in Salesforce.

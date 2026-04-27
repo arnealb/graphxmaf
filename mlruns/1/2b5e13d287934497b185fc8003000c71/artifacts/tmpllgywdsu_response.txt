@@ -1,0 +1,43 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Here is the list of your Microsoft 365 contacts along with their phone numbers, as well as their existence status in Salesforce:
+
+### Microsoft 365 Contacts:
+1. **John Lastname**
+   - Email: john.lastname@globalmedia.com
+   - Phone: 0326243426
+   - Found in Salesforce: Yes (Global Media)
+
+2. **ur dog**
+   - Email: ur.dog@doghouse.com
+   - Phone: 0483922818
+   - Found in Salesforce: No
+
+3. **ur mom**
+   - Email: ur.mom@grandpa.com
+   - Phone: 0427277501
+   - Found in Salesforce: No
+
+4. **test**
+   - Email: test.test@gmail.com
+   - Phone: Not available
+   - Found in Salesforce: No
+
+5. **Arne Albrecht**
+   - Email: a.albrecht@easi.net
+   - Phone: Not available
+   - Found in Salesforce: Yes (Displaytech)
+
+### Summary:
+- **Contacts found in both Microsoft 365 and Salesforce**: 
+  - John Lastname
+  - Arne Albrecht
+- **Contacts only in Microsoft 365**: 
+  - ur dog
+  - ur mom
+  - test
+
+If you need further assistance or additional details, feel free to ask!
