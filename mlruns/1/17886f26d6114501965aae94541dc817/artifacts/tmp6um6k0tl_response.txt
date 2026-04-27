@@ -1,0 +1,42 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the upcoming calendar events scheduled in the next 30 days:
+
+### Upcoming Events:
+- **Event:** anotha one
+  - **Date:** 23 April 2026
+  - **Time:** 11:00 AM - 11:30 AM
+  - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+- **Event:** gym
+  - **Date:** 22 April 2026
+  - **Time:** 8:30 PM - 9:00 PM
+  - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+- **Event:** meeting about numbers or something
+  - **Date:** 21 April 2026
+  - **Time:** 4:30 PM - 5:00 PM
+  - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Attendee:** Arne Albrecht (albrecht.arne@gmail.com)
+
+- **Event:** nog e meeting
+  - **Date:** 21 April 2026
+  - **Time:** 12:30 PM - 1:00 PM
+  - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Attendee:** Arne Albrecht (a.albrecht@easi.net)
+
+- **Event:** zup me de boys
+  - **Date:** 17 April 2026
+  - **Time:** 10:30 AM - 11:00 AM
+  - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Attendee:** ur mom (ur.mom@grandpa.com)
+
+- **Event:** meeting
+  - **Date:** 15 April 2026
+  - **Time:** 1:00 PM - 1:30 PM
+  - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Attendee:** John Lastname (john.lastname@globalmedia.com)
+
+These events will take place from now until 23 April 2026.

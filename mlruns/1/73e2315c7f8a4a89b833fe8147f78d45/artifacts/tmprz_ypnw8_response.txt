@@ -1,0 +1,40 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Here is the summary of the email senders from the past 7 days and their corresponding Salesforce contact matches:
+
+### Email Senders:
+- **Microsoft Azure**
+  - Email: `azure-noreply@microsoft.com`
+- **Arne Albrecht**
+  - Email: `albrecht.arne@gmail.com`
+- **SharePoint Online**
+  - Email: `no-reply@sharepointonline.com`
+- **SmartAdmin**
+  - Email: `SmartAdmin@easigroupdemo.onmicrosoft.com`
+- **Microsoft Notifications**
+  - Email: `no-reply@notify.microsoft.com`
+- **Microsoft Security**
+  - Email: `MSSecurity-noreply@microsoft.com`
+- **Microsoft Outlook**
+  - Email: `MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@easigroupdemo.onmicrosoft.com`
+
+### Salesforce Contacts Matches:
+- **Arne Albrecht**
+  - Email: `albrecht.arne@gmail.com`
+  - Contact ID: `003KI00000964NzYAI`
+  - Account Name: `Displaytech`
+
+- **Other Senders**:
+  - No Salesforce contacts found for:
+    - Microsoft Azure
+    - SharePoint Online
+    - SmartAdmin
+    - Microsoft Notifications
+    - Microsoft Security
+    - Microsoft Outlook
+
+### Conclusion:
+Only the email from Arne Albrecht matches a Salesforce contact in the system.

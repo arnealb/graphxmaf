@@ -1,0 +1,25 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the emails that contain the word "meeting" in the subject:
+
+- **Subject:** Accepted: meeting about numbers or something  
+  **Sender:** Arne Albrecht (albrecht.arne@gmail.com)  
+  **Received:** 16 April 2026  
+  **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANR%2BIE1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Confirmation of your registration to meetingMeetingFDE  
+  **Sender:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+  **Received:** 15 April 2025  
+  **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAFEZy9hAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Undeliverable: meeting  
+  **Sender:** Microsoft Outlook (MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@easigroupdemo.onmicrosoft.com)  
+  **Received:** 14 April 2026  
+  **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANJTK74AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** test meeting 2  
+  **Sender:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+  **Received:** 25 March 2026  
+  **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAMKyW3%2BAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)

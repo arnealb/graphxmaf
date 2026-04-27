@@ -1,0 +1,41 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Here's an overview of your upcoming meetings, related Salesforce opportunities, and SmartSales locations for the involved companies:
+
+### Upcoming Meetings from Microsoft 365
+- **30 April 2026 - 1 May 2026**: Closing opportunity (SmartAdmin)
+- **23 April 2026, 11:00 - 11:30**: Anotha one (SmartAdmin)
+- **22 April 2026, 20:30 - 21:00**: Gym (SmartAdmin)
+- **21 April 2026, 16:30 - 17:00**: Meeting about numbers or something (SmartAdmin)
+- **21 April 2026, 12:30 - 13:00**: Nog e meeting (SmartAdmin)
+- **17 April 2026, 10:30 - 11:00**: Zup me de boys (SmartAdmin)
+- **15 April 2026, 13:00 - 13:30**: Meeting (SmartAdmin)
+- **10 April 2026, 10:30 - 11:00**: Find me (SmartAdmin)
+- **25 March 2026, 15:00 - 15:30**: Test Meeting FDE (SmartAdmin)
+- **25 March 2026, 09:00 - 09:30**: Test Meeting 2 (SmartAdmin)
+
+### Related Salesforce Opportunities
+- **No related Salesforce opportunities were found.**
+
+### SmartSales Locations for Companies
+- **AACO DAVIDSON**
+  - Address: Havenkant 6, Leuven, 3000, Belgium
+- **Stream Software**
+  - Address: Potvlietlaan 4, Antwerpen, 2600, Belgium
+- **Michelles Brasserie**
+  - Address: Ingelmunstersestraat 46, Izegem, 8870, Belgium
+- **Medimarket Zaventem**
+  - Address: Zaventem, Belgium
+- **Unnamed Location**
+  - Address: Stationsplein 14, Antwerp, 2018, Belgium
+- **Customer1**
+  - Address: Markt 5, Bruges, 8000, Belgium
+- **Arne Albrecht**
+  - Address: Lippenslaan 347, Knokke, 8300, Belgium
+- **Acme Logistics Ltd**
+  - Address: Baker Street 221B, London, NW1 6XE, United Kingdom
+
+This overview encompasses your meetings and relevant locations, although there were no related opportunities found in Salesforce.

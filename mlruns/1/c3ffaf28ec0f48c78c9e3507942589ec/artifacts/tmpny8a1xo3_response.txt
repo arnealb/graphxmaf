@@ -1,0 +1,42 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the most recently created Salesforce contacts:
+
+- **Contact 1**
+  - **First Name**: mister
+  - **Last Name**: maestro
+  - **Email**: mist.maestro@gmail.com
+  - **Account Name**: account in france
+  
+- **Contact 2**
+  - **First Name**: supplier1_contact
+  - **Last Name**: lastname
+  - **Account Name**: supplier1
+  
+- **Contact 3**
+  - **First Name**: Arne
+  - **Last Name**: Albrecht
+  - **Email**: albrecht.arne@gmail.com
+  - **Account Name**: Displaytech
+  
+- **Contact 4**
+  - **First Name**: testaccount
+  - **Last Name**: francestuff
+  - **Email**: test.testaccount@grandpa.com
+  - **Account Name**: account in france
+  
+- **Contact 5**
+  - **First Name**: John
+  - **Last Name**: lastname
+  - **Email**: john.lastname@globalmedia.com
+  - **Account Name**: Global Media
+  
+- **Contact 6**
+  - **First Name**: Leo
+  - **Last Name**: Snickers
+  - **Email**: leo.snickers@candybar.com
+  - **Account Name**: account in france
+
+*Note: Some contacts do not have available phone numbers, mobile phones, or specific address information.*

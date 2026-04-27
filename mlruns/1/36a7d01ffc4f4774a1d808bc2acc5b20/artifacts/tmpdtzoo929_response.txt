@@ -1,0 +1,9 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The email addresses associated with the contact named Dorian are:
+
+- D.Feaux@easi.net
+- d.termolle@easi.net
+- dfea@easi.net

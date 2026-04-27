@@ -1,0 +1,23 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here is a list of SmartSales locations in Brussels:
+
+- **Global Media**
+  - **Address:** Mediastraat 10, Brussels, 1000, BE
+  - **Latitude:** 50.8427501, **Longitude:** 4.3515499
+
+- **Test**
+  - **Address:** Teststraat 1, Brussels, 1000, BE
+  - **Latitude:** 50.8427501, **Longitude:** 4.3515499
+
+- **ur mom**
+  - **Address:** Rue de France 1, Brussels, 1000, BE
+  - **Latitude:** 50.8347303, **Longitude:** 4.332933
+
+- **supplier1**
+  - **Address:** Rue du Commerce 1, Brussels, 1000, Belgium
+  - **Latitude:** 50.8394667, **Longitude:** 4.3673141
+
+If you need any more information about these locations, feel free to ask!

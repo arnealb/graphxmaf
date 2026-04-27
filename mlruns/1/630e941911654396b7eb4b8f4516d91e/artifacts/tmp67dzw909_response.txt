@@ -1,0 +1,43 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+You have received several emails in the last 7 days. Here is a list of the senders and subjects:
+
+- **Sender:** Microsoft Azure  
+  **Subject:** Retirement notice: Azure Content Understanding preview APIs will be retired on 15 July 2026  
+  **Received:** 24 April 2026
+
+- **Sender:** Microsoft Azure  
+  **Subject:** Retirement notice: Transition Azure OpenAI Assistants APIs to Microsoft Foundry Agent Service by 26 August 2026  
+  **Received:** 23 April 2026
+
+- **Sender:** Microsoft Azure  
+  **Subject:** Retirement notice: We're improving the high availability experience for Azure Database for PostgreSQL  
+  **Received:** 23 April 2026
+
+- **Sender:** Arne Albrecht  
+  **Subject:** delivery of headphones  
+  **Received:** 23 April 2026
+
+- **Sender:** SharePoint Online  
+  **Subject:** Your files have been reactivated  
+  **Received:** 22 April 2026
+
+- **Sender:** SmartAdmin  
+  **Subject:** Your mailbox is now connected to Dynamics 365  
+  **Received:** 22 April 2026
+
+- **Sender:** SharePoint Online  
+  **Subject:** Your file has been reactivated  
+  **Received:** 22 April 2026
+
+- **Sender:** Microsoft Notifications  
+  **Subject:** 59080341 is de verificatiecode voor Microsoft SharePoint.  
+  **Received:** 20 April 2026
+
+- **Sender:** Arne Albrecht  
+  **Subject:** supplier1 possible order  
+  **Received:** 20 April 2026
+
+This compilation includes all relevant emails received within the specified time frame.

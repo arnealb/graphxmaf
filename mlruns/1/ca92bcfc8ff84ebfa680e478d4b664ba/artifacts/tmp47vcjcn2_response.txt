@@ -1,0 +1,32 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce, smartsales, graph)...
+Synthesizing...
+Here is a 360 view of the Salesforce account "supplier1":
+
+### Open Opportunities (From Salesforce)
+- **Opportunity Name**: supp_opportyunity
+- **Stage**: On-going Approval
+- **Close Date**: 8 May 2026
+- **Amount**: Not specified
+- **Probability**: Not specified
+- **Type**: Not specified
+- **Lead Source**: Not specified
+- **Description**: Not specified
+
+### SmartSales Locations (From SmartSales)
+- **Account Name**: supplier1
+- **Address**: 
+  - **Street**: Rue du Commerce 1
+  - **City**: Brussels
+  - **Zip Code**: 1000
+  - **Country**: Belgium
+- **Coordinates**: 
+  - **Latitude**: 50.8394667
+  - **Longitude**: 4.3673141
+- **Extranet Access**: No
+
+### Emails (From Graph)
+- **Result**: No emails found related to the account "supplier1". 
+
+This summary provides an overview of the current open opportunities, location details, and the status regarding emails connected to the account "supplier1".

@@ -1,0 +1,50 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+You can filter SmartSales locations using the following fields:
+
+- **Text Fields:**
+  - `code`
+  - `name`
+  - `street`
+  - `city`
+  - `country`
+  - `zip`
+  - `vatNumber`
+  - `externalId`
+  - `tag`
+  - `email`
+  - `VAT`
+  - `userUid`
+  - `userGroupUid`
+  - `extranetUsername`
+  - `techCreationUserUid`
+  - `techUpdateUserUid`
+  - `techServerCreationDate`
+  - `techServerUpdateDate`
+  
+- **Decimal Fields:**
+  - `latitude`
+  - `longitude`
+
+- **Datetime Fields:**
+  - `lastVisitDate`
+  - `lastOrderDate`
+  - `extranetStartDate`
+  - `extranetEndDate`
+  - `since`
+
+- **Boolean Fields:**
+  - `hasExtranetAccess`
+  - `deleted`
+  - `includeDeleted`
+  - `includeContextualDisplayableRelationChildrenOf`
+
+- **Relationship Fields:**
+  - `CHILDREN_OF_LOCATION_RELATION:86acdbc2-18a4-11f1-84f0-005056010707`
+  - `CHILDREN_OF_LOCATION_RELATION:86ae86e5-18a4-11f1-84f0-005056010707`
+  - `PARENTS_OF_LOCATION_RELATION:86ae86e5-18a4-11f1-84f0-005056010707`
+  - `CHILDREN_OF_LOCATION_RELATION:86af3bc8-18a4-11f1-84f0-005056010707`
+
+These fields allow for comprehensive filtering of location data within SmartSales.

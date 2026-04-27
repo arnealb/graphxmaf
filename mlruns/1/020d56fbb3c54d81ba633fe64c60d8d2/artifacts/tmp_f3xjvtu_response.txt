@@ -1,0 +1,36 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+From SmartSales, you can use the following fields to sort locations:
+
+- **Technical Information:**
+  - `techServerCreationDate`
+  - `techServerUpdateDate`
+  - `techClientCreationDate`
+  - `techClientUpdateDate`
+
+- **Identifiers:**
+  - `code`
+  - `externalId`
+  - `name`
+
+- **Extranet Information:**
+  - `extranetUsername`
+  - `extranetStartDate`
+  - `extranetEndDate`
+
+- **Operational Dates:**
+  - `lastVisitDate`
+  - `lastOrderDate`
+
+- **Address Details:**
+  - `street`
+  - `city`
+  - `zip`
+  - `country`
+  - `email`
+  - `vatnumber`
+  - `latitude`
+  - `longitude`
+  - `VAT`

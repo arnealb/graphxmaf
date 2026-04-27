@@ -1,0 +1,26 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the three largest open Salesforce opportunities along with the billing country of each related account:
+
+### Largest Open Opportunities
+1. **Opportunity Name:** new opp
+   - **Amount:** $1,000,000.00
+   - **Account Name:** Global Media
+   - **Billing Country:** USA
+
+2. **Opportunity Name:** salesforce.com - 1,000 Widgets
+   - **Amount:** $100,000.00
+   - **Account Name:** salesforce.com
+   - **Billing Country:** Belgium
+
+3. **Opportunity Name:** salesforce.com - 500 Widgets
+   - **Amount:** $50,000.00
+   - **Account Name:** Global Media
+   - **Billing Country:** USA
+
+### Summary
+- The largest opportunity is with Global Media in the USA.
+- The second is with salesforce.com in Belgium.
+- The third opportunity is again with Global Media in the USA.
