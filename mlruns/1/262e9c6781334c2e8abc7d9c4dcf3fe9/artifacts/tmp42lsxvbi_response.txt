@@ -1,0 +1,42 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (smartsales)...
+️Executing (smartsales)...
+Synthesizing...
+### First SmartSales Order Details
+
+**Order ID:** 332cb4b2-285d-11f1-a2fe-005056010707  
+**Order Date:** 25 March 2026  
+**Internal Reference:** TEST-001  
+**External Reference:** EXT-001  
+**Customer Name:** Customer1  
+**Customer Code:** CUS-001  
+**Customer Address:**  
+- **Street:** Markt 5  
+- **City:** Bruges  
+- **Zip:** 8000  
+- **Country:** Belgium  
+**Total Amount:** 0  
+**Total Without Discount:** 100  
+**Total Discount:** 100  
+**Discount Percentage:** 100%  
+**Status:** APPROVED  
+**Comments:** Test order created via Postman  
+
+**Order Items:**
+- **Item Code:** ITEM-001  
+  - **Description:** Test product  
+  - **Quantity:** 2  
+  - **Price per Unit:** 50  
+  - **Total Price:** 100  
+
+**Creation User:**  
+- **Username:** client_app_2318267df1de286a20967c57da410f45@75490.local  
+- **First Name:** AI Assistant  
+- **Last Name:** External Client Application  
+
+**Related Supplier:**  
+- **Supplier Name:** supplier1  
+- **Supplier Code:** SUP-001  
+
+This encapsulates the complete details of the first order retrieved from SmartSales.

@@ -481,7 +481,9 @@ def setup_agents(
         except Exception as exc:
             print(f"WARNING: Microsoft Graph unavailable ({exc}). Graph prompts will score 1.")
             print("         Use --skip-graph to suppress this warning.")
+        
 
+    print("graph-done")
     # ── Salesforce ─────────────────────────────────────────────────
     if not skip_sf:
         sf_url = sf_section.get("mcpServerUrl", "http://localhost:8001/mcp")

@@ -1,0 +1,28 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the three largest open Salesforce opportunities along with the billing countries of each related account:
+
+1. **Opportunity Name:** new opp
+   - **Amount:** $1,000,000
+   - **Stage:** Value Proposition
+   - **Close Date:** 30 April 2026
+   - **Account Name:** Global Media
+   - **Billing Country:** Canada
+
+2. **Opportunity Name:** Project Smile V2
+   - **Amount:** $45,000
+   - **Stage:** Value Proposition
+   - **Close Date:** 21 August 2025
+   - **Account Name:** Omega SA-NV
+   - **Billing Country:** Belgium
+
+3. **Opportunity Name:** Renewal @ Assurity
+   - **Amount:** $35,000
+   - **Stage:** Negotiation/Review
+   - **Close Date:** 20 February 2025
+   - **Account Name:** Assurity Corporation
+   - **Billing Country:** UK
+
+(Note: Only the top 3 largest opportunities are shown as per the request, despite having a larger number of opportunities.)

@@ -1,0 +1,38 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Your most recent email is as follows:
+
+---
+
+**Subject:** Retirement notice: Transition Azure OpenAI Assistants APIs to Microsoft Foundry Agent Service by 26 August 2026  
+**Sender:** Microsoft Azure  
+**Received:** 23 April 2026  
+
+We're retiring Azure OpenAI Assistants Preview APIs.  
+**Transition**: Azure Open AI Assistants APIs to Microsoft Foundry Agent Service by 26 August 2026.
+
+You're receiving this notification because you're associated with one or more Azure subscriptions that use the Azure OpenAI Assistants API. For reference, you can find this notification in the Azure portal under Service Health/Health advisories using tracking ID: LZ_6-Y1Z.
+
+On 26 August 2026, we'll retire the Azure OpenAI Assistants API. To avoid disruptions, transition to Foundry Agent Service by that date. If your workloads are purely model-inferencing and don't require agentic capabilities, you can use the Azure OpenAI Responses API instead.
+
+Foundry Agent Service provides consistency and OpenAI compatibility, reducing fragmentation, eliminating overlapping preview surfaces, and providing a clear long-term investment path.
+
+Classic agents, which are similar to the Assistants API, are not impacted by this retirement and will continue to work.
+
+**Recommended action**:  
+To avoid service disruptions, transition to Foundry Agent Service by 26 August 2026. After that date, the Azure OpenAI Assistants API won't work.
+
+**Help and support**:  
+If you have questions, get answers from community experts in Microsoft Q&A. If you have a support plan and need technical help, create a support request.
+
+**Account Information**:  
+- Subscription ID: c09ac68d-3470-4d30-8946-078f5fd2808c  
+- Subscription name: MICROSOFT AZURE SPONSORSHIP - AZURECREDIT2_EASIGROUPDEMO  
+- Subscription ID: 403a3c46-e68d-48c7-b0c9-e195af022619  
+- Subscription name: Microsoft Azure Easi - Subscription Smart AI on Easigroupdemo
+
+--- 
+
+For further details, you can view the email [here](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANpSjHJAAA%3D&exvsurl=1&viewmodel=ReadMessageItem).

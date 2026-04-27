@@ -1,0 +1,23 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the high-priority open cases retrieved from Salesforce:
+
+- **Case ID:** 5000600006465TiAAI
+  - **Case Number:** 00001001
+  - **Subject:** Sample Case 2: The widgets we received are the wrong size.
+  - **Status:** New
+  - **Priority:** High
+  - **Account Name:** Pairi Daiza
+  - **Created Date:** 29 June 2023
+
+- **Case ID:** 5000600006465TkAAI
+  - **Case Number:** 00001000
+  - **Subject:** Sample Case: Our Widgets have not been delivered.
+  - **Status:** Escalated
+  - **Priority:** High
+  - **Account Name:** Global Media
+  - **Created Date:** 29 June 2023
+
+These cases are currently marked as high priority and are still open.

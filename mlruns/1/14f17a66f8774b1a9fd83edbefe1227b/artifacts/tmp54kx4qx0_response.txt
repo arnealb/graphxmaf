@@ -1,0 +1,52 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+You can filter SmartSales catalog items by the following fields:
+
+### Text Fields
+- **fulltext**
+- **code**
+- **title**
+- **description**
+- **measurementUnitUid**
+- **tag**
+- **availability**
+- **unitofmeasure**
+- **group**
+- **Client - Supplies to** (related to specific client)
+- **Client - Headquarter** (related to specific client)
+- **Client - Headquarter of** (related to specific client)
+- **Client - Billing company of** (related to specific client)
+
+### Date/Time Fields
+- **techServerCreationDate**
+- **techServerUpdateDate**
+- **since**
+- **contextualDate** (hidden field)
+
+### Boolean Fields
+- **deleted**
+- **hideEmptyGroups**
+- **includeContextualDisplayableRelationChildrenOf**
+
+### Decimal Fields
+- **price**
+- **measure**
+
+### Integer Fields
+- **salesunit**
+- **packagingunit**
+
+### Other Fields
+- **groupUid** (hidden field)
+- **layoutUid** (hidden field)
+- **linkParentUid** (hidden field)
+- **includeDisplayableRelationChildrenOf** (hidden field)
+- **contextualLocationUid** (hidden field)
+
+### Notes
+- Some fields are marked as hidden and may not be visible in typical user interfaces.
+- Certain client-related fields are designated for specific relationships within the catalog. 
+
+These fields provide a variety of options for filtering catalog items based on text, date, boolean, numerical, and relation attributes.

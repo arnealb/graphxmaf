@@ -1,0 +1,14 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (graph)...
+Synthesizing...
+The search for Excel files in OneDrive yielded the following results:
+
+1. **Demande produits.xlsx**:
+   - The contents could not be directly extracted in a human-readable format, as the file contains structured binary data typical of Excel spreadsheets.
+
+2. **Book.xlsx**:
+   - Similar to the first file, this file also contains structured binary data, making human-readable content extraction impossible without specialized software.
+
+To view the actual content of these files, you will need to download and open them using an Excel application. If you need specific data analyzed or extracted, please let me know!

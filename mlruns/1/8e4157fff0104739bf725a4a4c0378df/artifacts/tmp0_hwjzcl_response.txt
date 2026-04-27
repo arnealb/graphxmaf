@@ -1,0 +1,95 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here is a list of SmartSales orders along with their full projection details:
+
+### Order List
+
+1. **Order UID**: 332cb4b2-285d-11f1-a2fe-005056010707
+   - **Creation Date**: 25 March 2026
+   - **Internal Reference**: TEST-001
+   - **External Reference**: EXT-001
+   - **Customer**: Customer1 (Code: CUS-001)
+   - **Supplier**: supplier1 (Code: SUP-001)
+   - **Date**: 25 March 2026
+   - **Comments**: Test order created via Postman
+   - **Total Quantity**: 2
+   - **Subtotal**: 100.0
+   - **Total**: 0
+   - **Items**:
+     - Test product (Code: ITEM-001)
+       - Quantity: 2
+       - Price: 50
+       - Total Price: 100
+
+2. **Order UID**: e8333fcf-38ad-11f1-a803-005056010707
+   - **Creation Date**: 15 April 2026
+   - **Internal Reference**: ORD-ARNE-001
+   - **External Reference**: EXT-ARNE-001
+   - **Customer**: Arne Albrecht (Code: CUS-002)
+   - **Supplier**: supplier1 (Code: SUP-001)
+   - **Date**: 15 April 2026
+   - **Comments**: New employee IT setup for Arne Albrecht
+   - **Total Quantity**: 3
+   - **Subtotal**: 2047.99
+   - **Total**: 0
+   - **Items**:
+     - Business Laptop Pro 15 (Code: CAT-LAPTOP-01)
+       - Quantity: 1
+       - Price: 1299.99
+       - Total Price: 1299.99
+     - USB-C Docking Station (Code: CAT-DOCK-01)
+       - Quantity: 1
+       - Price: 249
+       - Total Price: 249
+     - Software License Pack (Code: CAT-LICENSE-01)
+       - Quantity: 1
+       - Price: 499
+       - Total Price: 499
+
+3. **Order UID**: f63830a6-38ad-11f1-a2fe-005056010707
+   - **Creation Date**: 15 April 2026
+   - **Internal Reference**: ORD-URMOM-001
+   - **External Reference**: EXT-URMOM-001
+   - **Customer**: ur mom (Code: LOC-URMOM-01)
+   - **Supplier**: supplier1 (Code: SUP-001)
+   - **Date**: 15 April 2026
+   - **Comments**: Home office equipment order
+   - **Total Quantity**: 4
+   - **Subtotal**: 1356.0
+   - **Total**: 0
+   - **Items**:
+     - Ultra Wide Monitor 34 (Code: CAT-MONITOR-01)
+       - Quantity: 2
+       - Price: 549
+       - Total Price: 1098
+     - Ergonomic Keyboard (Code: CAT-KEYBOARD-01)
+       - Quantity: 2
+       - Price: 129
+       - Total Price: 258
+
+4. **Order UID**: fced9d92-38ad-11f1-a2fe-005056010707
+   - **Creation Date**: 15 April 2026
+   - **Internal Reference**: ORD-GLOBALMEDIA-001
+   - **External Reference**: EXT-GLOBALMEDIA-001
+   - **Customer**: Global Media (Code: LOC-GLOBALMEDIA-01)
+   - **Supplier**: supplier1 (Code: SUP-001)
+   - **Date**: 15 April 2026
+   - **Comments**: Bulk order for media production team
+   - **Total Quantity**: 8
+   - **Subtotal**: 2444.5
+   - **Total**: 0
+   - **Items**:
+     - Wireless Headset UC (Code: CAT-HEADSET-01)
+       - Quantity: 5
+       - Price: 189.5
+       - Total Price: 947.5
+     - Software License Pack (Code: CAT-LICENSE-01)
+       - Quantity: 3
+       - Price: 499
+       - Total Price: 1497
+
+### Summary
+- Total Orders: 4
+- Comments and details are included for each order, providing clarity on items and totals.

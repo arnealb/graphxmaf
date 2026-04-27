@@ -1,0 +1,44 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are your upcoming events and meetings scheduled in the next 14 days:
+
+- **Meeting Title:** closing opportunity  
+  **Start Time:** 30 April 2026, 00:00 UTC  
+  **End Time:** 1 May 2026, 00:00 UTC  
+  **Organizer:** SmartAdmin  
+
+- **Meeting Title:** anotha one  
+  **Start Time:** 23 April 2026, 11:00 UTC  
+  **End Time:** 23 April 2026, 11:30 UTC  
+  **Organizer:** SmartAdmin  
+
+- **Meeting Title:** gym  
+  **Start Time:** 22 April 2026, 20:30 UTC  
+  **End Time:** 22 April 2026, 21:00 UTC  
+  **Organizer:** SmartAdmin  
+
+- **Meeting Title:** meeting about numbers or something  
+  **Start Time:** 21 April 2026, 16:30 UTC  
+  **End Time:** 21 April 2026, 17:00 UTC  
+  **Organizer:** SmartAdmin  
+  **Attendees:** albrecht.arne@gmail.com  
+
+- **Meeting Title:** nog e meeting  
+  **Start Time:** 21 April 2026, 12:30 UTC  
+  **End Time:** 21 April 2026, 13:00 UTC  
+  **Organizer:** SmartAdmin  
+  **Attendees:** a.albrecht@easi.net  
+
+- **Meeting Title:** zup me de boys  
+  **Start Time:** 17 April 2026, 10:30 UTC  
+  **End Time:** 17 April 2026, 11:00 UTC  
+  **Organizer:** SmartAdmin  
+  **Attendees:** ur.mom@grandpa.com  
+
+- **Meeting Title:** meeting  
+  **Start Time:** 15 April 2026, 13:00 UTC  
+  **End Time:** 15 April 2026, 13:30 UTC  
+  **Organizer:** SmartAdmin  
+  **Attendees:** john.lastname@globalmedia.com  

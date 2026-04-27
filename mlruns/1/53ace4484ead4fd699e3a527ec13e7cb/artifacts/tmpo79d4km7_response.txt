@@ -1,0 +1,54 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The content of the report file retrieved from OneDrive is a comprehensive financial research report on NVIDIA Corporation (NVDA). Here are the key sections:
+
+### Company Overview
+- **Full Legal Name**: NVIDIA Corporation
+- **Ticker**: NVDA
+- **Exchange**: NASDAQ Global Select Market
+- **Sector / Industry**: Technology / Semiconductors
+- **Headquarters**: 2788 San Tomas Expressway, Santa Clara, California 95051
+- **CEO**: Jensen Huang (Founder)
+- **CFO**: Colette Kress (EVP & CFO)
+- **Employees**: 42,000 (as of January 25, 2026)
+
+### Business Description
+- NVIDIA is known for pioneering accelerated computing. 
+- Offers a range of products including GPUs, CPUs, DPUs, and comprehensive software platforms, supporting AI training and data analytics.
+
+### Reporting Segments
+1. **Compute & Networking**: Includes Data Center platforms, AI solutions, and automotive platforms.
+2. **Graphics**: Focuses on GeForce GPUs for gaming and professional visualization products.
+
+### Market-Facing Revenue Breakdown (FY2026)
+| Segment                     | FY2026 Revenue | % of Total |
+|-----------------------------|----------------|------------|
+| Data Center                 | $193.7B        | 89.7%      |
+| Gaming                      | $16.0B         | 7.4%       |
+| Professional Visualization   | $3.2B          | 1.5%       |
+| Automotive                  | $2.3B          | 1.1%       |
+| **Total**                   | **$215.9B**    | **100%**   |
+
+### Market Data
+- **Current Stock Price**: ~$186.50
+- **Market Capitalization**: ~$4.5 trillion
+- **YTD Return**: -1.4%
+- **1-Year Return**: ~60.9%
+
+### Income Statement (FY2026)
+| Line Item         | Value       |
+|-------------------|-------------|
+| **Revenue**       | $215,938M  |
+| **Net Income**    | $120,067M  |
+| **Diluted EPS**   | $4.90      |
+
+### Balance Sheet Observations
+- Significant net cash position with total cash and short-term investments exceeding $62 billion.
+- Total assets have nearly doubled within the fiscal year due to growth from acquisitions and investments.
+
+### Cash Flow Statement
+- Highlights positive operating cash flow generation, indicating effective management of resources.
+
+This report is prepared as of April 10, 2026.

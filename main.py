@@ -46,12 +46,14 @@ def _build_msal_app(
         with open(_TOKEN_CACHE_FILE, "r") as f:
             cache.deserialize(f.read())
 
+    print("[auth] calling msal.ConfidentialClientApplication...", flush=True)
     app = msal.ConfidentialClientApplication(
         client_id,
         authority=f"https://login.microsoftonline.com/{tenant_id}",
         client_credential=client_secret,
         token_cache=cache,
     )
+    print("[auth] MSAL app created, getting accounts...", flush=True)
     return app, cache
 
 
@@ -69,14 +71,18 @@ def authenticate(client_id: str, tenant_id: str, scopes: list[str], client_secre
     app, cache = _build_msal_app(client_id, tenant_id, client_secret)
 
     # Try silent first (cached token).
+    print("[auth] get_accounts...", flush=True)
     accounts = app.get_accounts()
+    print(f"[auth] {len(accounts)} account(s) cached", flush=True)
     if accounts:
+        print("[auth] acquire_token_silent...", flush=True)
         result = app.acquire_token_silent(scopes, account=accounts[0])
         if result and "access_token" in result:
             _persist_cache(cache)
             return result["access_token"]
 
     # Auth code flow — open browser, catch redirect on localhost.
+    print("[auth] initiate_auth_code_flow...", flush=True)
     flow = app.initiate_auth_code_flow(scopes=scopes, redirect_uri=_LOCAL_REDIRECT_URI)
     if "auth_uri" not in flow:
         raise RuntimeError(f"Failed to create auth flow: {flow}")

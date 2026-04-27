@@ -1,0 +1,37 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here are the order approbation statuses from SmartSales:
+
+### Ongoing Approval
+- **Type**: OFFER, ORDER
+- **Code**: PENDING
+- **Icon**: Yellow (QUARTER_0)
+- **Description**: Awaiting approval.
+  
+### Approved
+- **Type**: OFFER, ORDER
+- **Code**: APPROVED
+- **Icon**: Green (QUARTER_4)
+- **Description**: The offer/order has been approved.
+
+### Rejected
+- **Type**: OFFER, ORDER
+- **Code**: REJECTED
+- **Icon**: Red (SYMBOL_CROSS)
+- **Description**: The offer/order has been rejected.
+
+### On Hold
+- **Type**: OFFER, ORDER
+- **Code**: ON_HOLD
+- **Icon**: Blue (QUARTER_2)
+- **Description**: The offer/order is currently on hold.
+
+### Invalid Status
+- **Type**: OFFER, ORDER
+- **Code**: INVALID
+- **Icon**: Red (FLAG)
+- **Description**: The offer/order has an invalid status. This typically occurs if it was created after a status was removed.
+
+This summary includes all the relevant information about the approbation statuses retrieved from the SmartSales system.

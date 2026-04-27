@@ -1,0 +1,30 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are your 5 most recent emails:
+
+1. **Subject:** Retirement notice: Transition Azure OpenAI Assistants APIs to Microsoft Foundry Agent Service by 26 August 2026  
+   **Sender:** Microsoft Azure (azure-noreply@microsoft.com)  
+   **Received:** 23 April 2026  
+   **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANpSjHJAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+2. **Subject:** Retirement notice: We're improving the high availability experience for Azure Database for PostgreSQL  
+   **Sender:** Microsoft Azure (azure-noreply@microsoft.com)  
+   **Received:** 23 April 2026  
+   **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANpSjHIAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+3. **Subject:** delivery of headphones  
+   **Sender:** Arne Albrecht (albrecht.arne@gmail.com)  
+   **Received:** 23 April 2026  
+   **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANpSjHHAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+4. **Subject:** Your files have been reactivated  
+   **Sender:** SharePoint Online (no-reply@sharepointonline.com)  
+   **Received:** 22 April 2026  
+   **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANkJIFuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+5. **Subject:** Your mailbox is now connected to Dynamics 365  
+   **Sender:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+   **Received:** 22 April 2026  
+   **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANkJIFsAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**

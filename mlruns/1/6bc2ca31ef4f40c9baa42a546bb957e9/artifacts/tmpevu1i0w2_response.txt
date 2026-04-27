@@ -1,0 +1,127 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (smartsales)...
+️Executing (smartsales)...
+Synthesizing...
+### SmartSales Locations
+
+Here is a list of all SmartSales locations:
+
+1. **AACO DAVIDSON**
+   - **Street:** Havenkant 6
+   - **City:** Leuven
+   - **Zip:** 3000
+   - **Country:** Belgium
+
+2. **Stream Software**
+   - **Street:** Potvlietlaan 4
+   - **City:** Antwerpen
+   - **Zip:** 2600
+   - **Country:** Not Specified
+
+3. **Michelles Brasserie**
+   - **Street:** Ingelmunstersestraat 46
+   - **City:** Izegem
+   - **Zip:** 8870
+   - **Country:** Belgium
+
+4. **Unnamed Location**
+   - **Street:** Stationsplein 14
+   - **City:** Antwerp
+   - **Zip:** 2018
+   - **Country:** Belgium
+
+5. **Customer1**
+   - **Street:** Markt 5
+   - **City:** Bruges
+   - **Zip:** 8000
+   - **Country:** Belgium
+
+6. **Arne Albrecht**
+   - **Street:** Lippenslaan 347
+   - **City:** Knokke
+   - **Zip:** 8300
+   - **Country:** Belgium
+
+7. **Acme Logistics Ltd**
+   - **Street:** Baker Street 221B
+   - **City:** London
+   - **Zip:** NW1 6XE
+   - **Country:** United Kingdom
+
+8. **Advanced Communications**
+   - **Street:** Mediapark 5
+   - **City:** Ghent
+   - **Zip:** 9000
+   - **Country:** Belgium
+
+9. **Displaytech**
+   - **Street:** Technologielaan 12
+   - **City:** Leuven
+   - **Zip:** 3001
+   - **Country:** Belgium
+
+10. **EASI**
+    - **Street:** Rue d'Arlon 50
+    - **City:** Namur
+    - **Zip:** 5000
+    - **Country:** Belgium
+
+11. **Global Media**
+    - **Street:** Mediastraat 10
+    - **City:** Brussels
+    - **Zip:** 1000
+    - **Country:** Belgium
+
+12. **Test**
+    - **Street:** Teststraat 1
+    - **City:** Brussels
+    - **Zip:** 1000
+    - **Country:** Belgium
+
+13. **Universal Services**
+    - **Street:** Serviceweg 22
+    - **City:** Mechelen
+    - **Zip:** 2800
+    - **Country:** Belgium
+
+14. **Upstyle Inc.**
+    - **Street:** Fashion Avenue 88
+    - **City:** Antwerp
+    - **Zip:** 2000
+    - **Country:** Belgium
+
+15. **ur mom**
+    - **Street:** Rue de France 1
+    - **City:** Brussels
+    - **Zip:** 1000
+    - **Country:** Belgium
+
+16. **supplier1**
+    - **Street:** Rue du Commerce 1
+    - **City:** Brussels
+    - **Zip:** 1000
+    - **Country:** Belgium
+
+---
+
+### Details of the First Location: AACO DAVIDSON
+
+- **Name:** AACO DAVIDSON
+- **Street:** Havenkant 6
+- **City:** Leuven
+- **Zip:** 3000
+- **Country:** Belgium
+- **UID:** 77538c4e-2135-11f1-84f0-005056010707
+- **Created On:** 16 March 2026
+- **Last Updated On:** 6 April 2026
+- **Latitude:** 50.8873413
+- **Longitude:** 4.7005038
+- **Email:** info@aacodavidson.com
+- **Deleted:** No
+- **Users:** 
+  - Username: smaa@easi-ai-demo.net
+  - Name: Supervisor Account
+- **Last Visit Date:** 5 April 2026
+
+This summarizes the list of locations and the details for the first listed location, AACO DAVIDSON.

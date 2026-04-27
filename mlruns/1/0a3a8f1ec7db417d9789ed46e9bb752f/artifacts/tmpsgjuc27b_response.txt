@@ -1,0 +1,63 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is the list of Excel and PDF files found in your OneDrive:
+
+### Excel Files
+- **[Book.xlsx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BB2ACB596-C068-4B11-A34E-BFFA49A20736%7D&file=Book.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+  - Size: 6,177 bytes
+  - Created: 18 March 2026
+
+- **[Demande produits.xlsx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BD23762FE-A7D1-4347-97B5-C43173348CF9%7D&file=Demande%20produits.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+  - Size: 154,960 bytes
+  - Created: 9 April 2026
+
+- **[Personeelsfeest aanwezigheden.xlsx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B01B3C0BC-5E0E-4E0F-9B7E-F5F6CC86B702%7D&file=Personeelsfeest%20aanwezigheden.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+  - Size: 9,532 bytes
+  - Created: 26 February 2026
+
+- **[Accounts Sample data.xlsx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B203B603B-4E9D-4F1C-A315-5B027570CC39%7D&file=Accounts%20Sample%20data.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+  - Size: 9,583 bytes
+  - Created: 4 April 2025
+
+- **[Prospects_Filled.xlsx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B144B0D44-0527-4B59-BF80-8F4EBE10A1CF%7D&file=Prospects_Filled.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+  - Size: 17,502 bytes
+  - Created: 20 April 2025
+
+- **[CoffeeMachineData.xlsx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BF864DA9E-A43F-4392-B641-122C6B6724CD%7D&file=CoffeeMachineData.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+  - Size: 29,485 bytes
+  - Created: 4 April 2025
+
+- **[HR_Data.xlsx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B58EA2BB2-77D0-4FFF-B4B4-281DF84A8FDE%7D&file=HR_Data.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+  - Size: 21,404 bytes
+  - Created: 1 April 2026
+
+- **[NVIDIA_NVDA_Financials.xlsx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B9959D2D6-2D01-4D8C-BDEF-8729ADFC44A1%7D&file=NVIDIA_NVDA_Financials.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+  - Size: 13,393 bytes
+  - Created: 10 April 2026
+
+### PDF Files
+- **[Contract_Customer_ABY.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/Contract_Customer_ABY.pdf)**
+  - Size: 307,012 bytes
+  - Created: 3 June 2025
+
+- **[Contract_Customer_DB 1.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/Contract_Customer_DB%201.pdf)**
+  - Size: 307,012 bytes
+  - Created: 3 June 2025
+
+- **[Contract_Customer.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/Contract_Customer.pdf)**
+  - Size: 307,012 bytes
+  - Created: 3 June 2025
+
+- **[Contract_Customer 1.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/Contract_Customer%201.pdf)**
+  - Size: 307,012 bytes
+  - Created: 3 June 2025
+
+- **[3. DHL T&C 5.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/3.%20DHL%20T%26C%205.pdf)**
+  - Size: 155,035 bytes
+  - Created: 30 May 2025
+
+- **[Contract_Customer_DB.pdf](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/Contract_Customer_DB.pdf)**
+  - Size: 307,012 bytes
+  - Created: 3 June 2025

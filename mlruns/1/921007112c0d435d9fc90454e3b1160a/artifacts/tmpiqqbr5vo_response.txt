@@ -1,0 +1,25 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+From SmartSales: 
+
+- **Comment Allowed:** Yes
+- **Customer VAT Number Required:** No
+- **Discounts:**
+  - Per Item Discount Allowed: Yes (via "SWIPE")
+  - Global Discount Allowed: Yes (via "SWIPE")
+- **Disclaimer:** Not present
+- **Signature Input:**
+  - Show Signature Input: Yes
+  - Signature Required: No
+- **VAT Display:**
+  - Show VAT Per Item: No
+- **Total Modifiers:** None listed
+- **Order Sections:**
+  - Name: Section
+  - Display Name: Section
+  - Read-Only: No
+  - Fields: None listed
+
+This configuration outlines the options and requirements for placing an order in SmartSales.

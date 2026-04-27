@@ -1,0 +1,42 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are 5 leads retrieved from Salesforce:
+
+- **Lead 1**
+  - **ID**: 00QKI000002KQCj2AO
+  - **First Name**: Bert
+  - **Last Name**: Coppens
+  - **Company**: another-company
+  - **Status**: New
+
+- **Lead 2**
+  - **ID**: 00QKI000002KPFT2A4
+  - **First Name**: Arne
+  - **Last Name**: Albrecht
+  - **Email**: albrecht.arne@gmail.com
+  - **Company**: easi_dupe
+  - **Status**: Contacted
+
+- **Lead 3**
+  - **ID**: 00QKI000002KPEZ2A4
+  - **First Name**: another
+  - **Last Name**: lead
+  - **Email**: mr.another.lead@gmail.com
+  - **Company**: another-company
+  - **Status**: New
+
+- **Lead 4**
+  - **ID**: 00QKI000002KMUE2A4
+  - **First Name**: Open leada
+  - **Last Name**: openlead last name
+  - **Company**: bakery of sam
+  - **Status**: New
+
+- **Lead 5**
+  - **ID**: 00QKI000002KMU92AO
+  - **First Name**: ur moms lead
+  - **Last Name**: ur dads lead
+  - **Company**: grandmas bakery
+  - **Status**: New

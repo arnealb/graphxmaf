@@ -164,6 +164,7 @@ def _setup_sync() -> dict:
 
     mcp_url = azure.get("mcpServerUrl", "http://localhost:8000/mcp")
     log.info(f"[mcp_url_graph] {mcp_url}")
+    log.info("[auth] building MSAL app...")
     token = authenticate(
         azure["clientId"],
         azure["tenantId"],

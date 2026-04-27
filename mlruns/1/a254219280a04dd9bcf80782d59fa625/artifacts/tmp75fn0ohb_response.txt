@@ -1,0 +1,50 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the emails found with the word 'meeting' in the subject line:
+
+- **Subject:** Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)  
+  **Sender:** SmartAdmin  
+  **Received:** 15 April 2025  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt4AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)  
+  **Sender:** SmartAdmin  
+  **Received:** 15 April 2025  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt5AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)  
+  **Sender:** SmartAdmin  
+  **Received:** 15 April 2025  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt6AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)  
+  **Sender:** SmartAdmin  
+  **Received:** 15 April 2025  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt7AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Confirmation of your registration to meeting01-10-2025 - Workshop on Corporate Sustainability Reporting Directive (CSRD)  
+  **Sender:** SmartAdmin  
+  **Received:** 15 April 2025  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt8AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** meeting  
+  **Sender:** SmartAdmin  
+  **Received:** 14 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt7AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** meeting about numbers or something  
+  **Sender:** SmartAdmin  
+  **Received:** 16 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFEZyt8AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Proposal for a short meeting  
+  **Sender:** Arne Albrecht  
+  **Received:** 13 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAAM7uOKEAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** test meeting 2  
+  **Sender:** SmartAdmin  
+  **Received:** 25 March 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAAMKyW3%2BAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)

@@ -1,0 +1,40 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+You can filter SmartSales locations using the following fields:
+
+- **uid**
+- **code**
+- **name**
+- **street**
+- **city**
+- **country**
+- **zip**
+- **vatNumber**
+- **externalId**
+- **latitude**
+- **longitude**
+- **lastVisitDate**
+- **lastOrderDate**
+- **tag**
+- **userUid**
+- **userGroupUid**
+- **extranetUsername**
+- **extranetStartDate**
+- **extranetEndDate**
+- **extranetLanguage**
+- **techCreationUserUid**
+- **techUpdateUserUid**
+- **techServerCreationDate**
+- **techServerUpdateDate**
+- **since**
+- **deleted**
+- **email**
+- **VAT**
+- Relation fields such as:
+  - **CHILDREN_OF_LOCATION_RELATION**
+  - **NOT_CHILD_OF_LOCATION_RELATION**
+  - **PARENTS_OF_LOCATION_RELATION**
+
+Please note that some fields may be hidden or not allow expressions.

@@ -1,0 +1,26 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the Salesforce accounts located in Belgium, along with their billing addresses:
+
+- **Supplier1**
+  - Billing City: Brussels
+  - Billing Country: Belgium
+
+- **Cityaccount**
+  - Billing City: Leuven
+  - Billing Country: Belgium
+
+- **Omega SA-NV**
+  - Billing Street: 132 Avenue Louise
+  - Billing City: Bruxelles
+  - Billing Postal Code: 1050
+  - Billing Country: Belgium
+  - Website: [http://www.omegaincorporated.com](http://www.omegaincorporated.com)
+
+- **Easi Be**
+  - Billing Street: 12 Avenue Robert Schuman
+  - Billing City: Nivelles
+  - Billing Postal Code: 1400
+  - Billing Country: Belgium

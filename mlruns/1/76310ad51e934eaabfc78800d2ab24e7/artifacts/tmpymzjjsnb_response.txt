@@ -1,0 +1,41 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the most recently created Salesforce contacts:
+
+- **Contact 1**:
+  - ID: 003KI000009um9iYAA
+  - First Name: mister
+  - Last Name: maestro
+  - Email: mist.maestro@gmail.com
+  - Account Name: account in france
+
+- **Contact 2**:
+  - ID: 003KI0000096IJLYA2
+  - First Name: supplier1_contact
+  - Last Name: lastname
+  - Account Name: supplier1
+
+- **Contact 3**:
+  - ID: 003KI00000964NzYAI
+  - First Name: Arne
+  - Last Name: Albrecht
+  - Email: albrecht.arne@gmail.com
+  - Account Name: Displaytech
+
+- **Contact 4**:
+  - ID: 003KI00000964ONYAY
+  - First Name: testaccount
+  - Last Name: francestuff
+  - Email: test.testaccount@grandpa.com
+  - Account Name: account in france
+
+- **Contact 5**:
+  - ID: 003KI00000964NyYAI
+  - First Name: John
+  - Last Name: lastname
+  - Email: john.lastname@globalmedia.com
+  - Account Name: Global Media
+
+*Note: No phone, mobile phone, title, department, or mailing address information is available for these contacts, and the creation dates are not specified.*

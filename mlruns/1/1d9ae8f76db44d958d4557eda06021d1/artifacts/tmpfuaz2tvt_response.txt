@@ -1,0 +1,29 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here is the list of SmartSales locations in Belgium, sorted by name:
+
+- **AACO DAVIDSON**
+  - Address: Havenkant 6, Leuven, 3000
+  - UID: 77538c4e-2135-11f1-84f0-005056010707
+
+- **Arne Albrecht**
+  - Address: Lippenslaan 347, Knokke, 8300
+  - UID: e99a8663-38a8-11f1-a803-005056010707
+
+- **Customer1**
+  - Address: Markt 5, Bruges, 8000
+  - UID: fa4acd29-285c-11f1-a2fe-005056010707
+
+- **Michelles Brasserie**
+  - Address: Ingelmunstersestraat 46, Izegem, 8870
+  - UID: e1c00878-3e4e-11f1-a803-005056010707
+
+- **name-v1**
+  - Address: Stationsplein 14, Antwerp, 2018
+  - UID: 44b3e977-2783-11f1-a2fe-005056010707
+
+- **supplier1**
+  - Address: Rue du Commerce 1, Brussels, 1000
+  - UID: cac5b20d-285c-11f1-a2fe-005056010707

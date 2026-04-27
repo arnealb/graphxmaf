@@ -1,0 +1,134 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is the list of emails you received in the last 14 days:
+
+### Emails Received
+
+- **Subject:** English version of "Home" was updated  
+  **From:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+  **Received:** 10 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAMxWW-PAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** English version of "Home" was updated  
+  **From:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+  **Received:** 10 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAMlMAhwAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** SmartAdmin has invited you to 'DM Process Dump Test'  
+  **From:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+  **Received:** 10 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAM23lytAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** SmartAdmin has invited you to 'DM Process Dump Test'  
+  **From:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+  **Received:** 10 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM2-OEuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Out of office - Automatic reply: SmartAdmin has invited you to 'DM Process Dump Test'  
+  **From:** Jonas Mariën (j.marien@easi.net)  
+  **Received:** 10 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM2%2FOEvAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)  
+  **From:** Microsoft Security (MSSecurity-noreply@microsoft.com)  
+  **Received:** 12 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOJ_AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Aankoop office supplies  
+  **From:** Arne Albrecht (albrecht.arne@gmail.com)  
+  **Received:** 13 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOJ%2FAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Vraag over vertraagde levering  
+  **From:** Arne Albrecht (albrecht.arne@gmail.com)  
+  **Received:** 13 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKAAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Voorstel voor kort overleg  
+  **From:** Arne Albrecht (albrecht.arne@gmail.com)  
+  **Received:** 13 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKBAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Vraag over factuur  
+  **From:** Arne Albrecht (albrecht.arne@gmail.com)  
+  **Received:** 13 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKCAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Question about delayed delivery  
+  **From:** Arne Albrecht (albrecht.arne@gmail.com)  
+  **Received:** 13 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKDAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Proposal for a short meeting  
+  **From:** Arne Albrecht (albrecht.arne@gmail.com)  
+  **Received:** 13 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKEAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Question regarding invoice  
+  **From:** Arne Albrecht (albrecht.arne@gmail.com)  
+  **Received:** 13 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** meeting  
+  **From:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+  **Received:** 14 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANJHug1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Undeliverable: meeting  
+  **From:** Microsoft Outlook (MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@easigroupdemo.onmicrosoft.com)  
+  **Received:** 14 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANJTK74AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** zup me de boys  
+  **From:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+  **Received:** 14 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANJHug2AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** nog e meeting  
+  **From:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+  **Received:** 15 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANO3voEAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** DM Process sync failed  
+  **From:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+  **Received:** 15 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANO3voFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** meeting about numbers or something  
+  **From:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+  **Received:** 16 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANO3voGAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Accepted: meeting about numbers or something @ di 21 apr 2026 18:30 - 19:00 (CEST) (SmartAdmin)  
+  **From:** Arne Albrecht (albrecht.arne@gmail.com)  
+  **Received:** 16 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANR%2BIE1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** DM Process sync failed  
+  **From:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+  **Received:** 16 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANO3voHAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** New recommendation available for EasiGroupDemo  
+  **From:** Microsoft Security (MSSecurity-noreply@microsoft.com)  
+  **Received:** 17 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANUrxQfAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** DM Process sync failed  
+  **From:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+  **Received:** 17 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANVOHRJAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)  
+  **From:** Microsoft Security (MSSecurity-noreply@microsoft.com)  
+  **Received:** 19 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmsAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** this is a test  
+  **From:** Arne Albrecht (albrecht.arne@gmail.com)  
+  **Received:** 20 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmtAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+This list includes all relevant emails you received within the specified period.

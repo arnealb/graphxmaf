@@ -1,0 +1,47 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+You can filter SmartSales orders by the following fields:
+
+- **UID** (hidden)
+- **Internal Reference** 
+- **External Reference** 
+- **Has Manual Discount**
+- **Email** 
+- **VAT Number** 
+- **Order Date**
+- **Comments** 
+- **Total**
+- **Version Key**
+- **User UID** 
+- **Username** (hidden)
+- **User Group UID** 
+- **Creator UID** (hidden)
+- **Location Code** 
+- **Location UID** 
+- **Location External ID** 
+- **Location Country** 
+- **Location City** 
+- **Catalog Item UID** 
+- **Measurement Unit UID** 
+- **Approbation Modification Date** 
+- **Percent of Success** 
+- **Approbation Status UID** 
+- **Approbation Modification User UID** 
+- **Exclude Secured**
+- **Type** 
+- **Since**
+- **Deleted**
+- **Include Deleted**
+- **Fulltext** 
+- **Total Without Discount**
+- **Total Discount**
+- **Total Discount Percentage**
+- **Client - Supplies to**
+- **Client - Headquarter**
+- **Client - Headquarter of**
+- **Client - Billing company of** 
+- **Include Contextual Displayable Relation Children Of** 
+
+Note: Some fields are hidden and not typically shown in the UI (like UID, Username, Creator UID).

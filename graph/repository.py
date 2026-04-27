@@ -504,18 +504,40 @@ class GraphRepository(IGraphRepository):
     async def get_file_text(self, file_id: str) -> str:
         content_bytes = await self.get_file_content(file_id)
 
-        # Detect docx by ZIP magic bytes (docx is a zip archive)
+        # Detect ZIP-based Office formats (docx, xlsx) by magic bytes
         if content_bytes[:4] == b'PK\x03\x04':
+            import io, zipfile
             try:
-                import io
-                from docx import Document
-                doc = Document(io.BytesIO(content_bytes))
-                text = "\n".join(p.text for p in doc.paragraphs if p.text)
+                with zipfile.ZipFile(io.BytesIO(content_bytes)) as zf:
+                    names = zf.namelist()
+                is_xlsx = any(n.startswith("xl/") for n in names)
             except Exception:
+                is_xlsx = False
+
+            if is_xlsx:
                 try:
-                    text = content_bytes.decode("utf-8")
-                except UnicodeDecodeError:
-                    text = content_bytes.decode("latin-1")
+                    import openpyxl
+                    wb = openpyxl.load_workbook(io.BytesIO(content_bytes), read_only=True, data_only=True)
+                    parts = []
+                    for sheet in wb.worksheets:
+                        parts.append(f"=== Sheet: {sheet.title} ===")
+                        for row in sheet.iter_rows(values_only=True):
+                            line = "\t".join("" if v is None else str(v) for v in row)
+                            if line.strip():
+                                parts.append(line)
+                    text = "\n".join(parts)
+                except Exception as exc:
+                    text = f"[Could not parse Excel file: {exc}]"
+            else:
+                try:
+                    from docx import Document
+                    doc = Document(io.BytesIO(content_bytes))
+                    text = "\n".join(p.text for p in doc.paragraphs if p.text)
+                except Exception:
+                    try:
+                        text = content_bytes.decode("utf-8")
+                    except UnicodeDecodeError:
+                        text = content_bytes.decode("latin-1")
         else:
             try:
                 text = content_bytes.decode("utf-8")

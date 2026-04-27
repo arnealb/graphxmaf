@@ -1,0 +1,25 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+You have 4 calendar events scheduled this week. Here is the list of those events:
+
+- **Meeting about numbers or something**
+  - **Start:** 21 April 2026, 16:30
+  - **End:** 21 April 2026, 17:00
+  - **Organizer:** SmartAdmin
+
+- **Nog e meeting**
+  - **Start:** 21 April 2026, 12:30
+  - **End:** 21 April 2026, 13:00
+  - **Organizer:** SmartAdmin
+
+- **Anotha one**
+  - **Start:** 23 April 2026, 11:00
+  - **End:** 23 April 2026, 11:30
+  - **Organizer:** SmartAdmin
+
+- **Gym**
+  - **Start:** 22 April 2026, 20:30
+  - **End:** 22 April 2026, 21:00
+  - **Organizer:** SmartAdmin
