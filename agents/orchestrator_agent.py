@@ -1,3 +1,4 @@
+import logging
 import os
 from datetime import datetime, timezone
 from typing import Annotated
@@ -9,6 +10,7 @@ from dotenv import load_dotenv
 from agents.routing_trace import AgentInvocation, get_trace
 
 load_dotenv()
+log = logging.getLogger(__name__)
 deployment = os.environ["deployment"]
 endpoint = os.environ["AZURE_OPENAI_ENDPOINT"]
 subscription_key = os.environ["AZURE_OPENAI_API_KEY"]
@@ -39,7 +41,7 @@ def create_orchestrator_agent(
                         ended_at=datetime.now(timezone.utc).isoformat(),
                         success=True, error=None,
                     ))
-                print(f"GraphAgent response: {response}")
+                log.debug("GraphAgent response: %s", response)
                 return result
             except Exception as exc:
                 if trace is not None:
@@ -78,7 +80,7 @@ def create_orchestrator_agent(
                         ended_at=datetime.now(timezone.utc).isoformat(),
                         success=True, error=None,
                     ))
-                print(f"salesforce response: {response}")
+                log.debug("SalesforceAgent response: %s", response)
                 return result
             except Exception as exc:
                 if trace is not None:
@@ -116,7 +118,7 @@ def create_orchestrator_agent(
                     ended_at=datetime.now(timezone.utc).isoformat(),
                     success=True, error=None,
                 ))
-            print(f"SmartSalesAgent response: {response}")
+            log.debug("SmartSalesAgent response: %s", response)
             return result
         except Exception as exc:
             if trace is not None:

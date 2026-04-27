@@ -134,7 +134,6 @@ def authenticate_salesforce(login_url: str) -> SalesforceCredentials:
 
     private_key_path = os.environ.get("SF_PRIVATE_KEY_PATH")
     private_key = os.environ.get("SF_PRIVATE_KEY")
-    print("private_key: ", private_key)
 
     return authenticate_jwt(
         client_id=client_id,
