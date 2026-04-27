@@ -1,0 +1,58 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here is the list of SmartSales locations:
+
+- **AACO DAVIDSON**
+  - Address: Havenkant 6, Leuven, 3000, Belgium
+  
+- **Stream Software**
+  - Address: Potvlietlaan 4, Antwerpen, 2600, Belgium
+  
+- **Michelles Brasserie**
+  - Address: Ingelmunstersestraat 46, Izegem, 8870, Belgium
+  
+- **Medimarket Zaventem**
+  - Address: Zaventem, (No specific street or zip provided), Belgium
+  
+- **name-v1**
+  - Address: Stationsplein 14, Antwerp, 2018, Belgium
+  
+- **Customer1**
+  - Address: Markt 5, Bruges, 8000, Belgium
+  
+- **Arne Albrecht**
+  - Address: Lippenslaan 347, Knokke, 8300, Belgium
+  
+- **Acme Logistics Ltd**
+  - Address: Baker Street 221B, London, NW1 6XE, United Kingdom
+  
+- **Advanced Communications**
+  - Address: Mediapark 5, Ghent, 9000, Belgium
+  
+- **Displaytech**
+  - Address: Technologielaan 12, Leuven, 3001, Belgium
+  
+- **EASI**
+  - Address: Rue d'Arlon 50, Namur, 5000, Belgium
+  
+- **Global Media**
+  - Address: Mediastraat 10, Brussels, 1000, Belgium
+  
+- **Test**
+  - Address: Teststraat 1, Brussels, 1000, Belgium
+  
+- **Universal Services**
+  - Address: Serviceweg 22, Mechelen, 2800, Belgium
+  
+- **Upstyle Inc.**
+  - Address: Fashion Avenue 88, Antwerp, 2000, Belgium
+  
+- **ur mom**
+  - Address: Rue de France 1, Brussels, 1000, Belgium
+  
+- **supplier1**
+  - Address: Rue du Commerce 1, Brussels, 1000, Belgium
+
+This information is retrieved from the SmartSales system.

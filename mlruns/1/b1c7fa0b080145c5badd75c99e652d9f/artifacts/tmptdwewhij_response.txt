@@ -1,0 +1,23 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (salesforce)...
+Synthesizing...
+Here is the comprehensive list of Salesforce accounts in France and their linked contacts:
+
+### Account Information
+- **Account Name**: account in france
+  - **Industry**: Technology
+  - **Website**: www.google.com
+
+### Linked Contacts
+1. **Contact Name**: Mister Maestro
+   - **Email**: mist.maestro@gmail.com
+   
+2. **Contact Name**: Testaccount Francestuff
+   - **Email**: test.testaccount@grandpa.com
+   
+3. **Contact Name**: Leo Snickers
+   - **Email**: leo.snickers@candybar.com
+
+This includes all relevant information gathered from Salesforce.
