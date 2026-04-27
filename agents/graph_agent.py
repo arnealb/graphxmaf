@@ -28,19 +28,6 @@ def create_graph_agent(graph_mcp):
             You are a helpful assistant with access to the user's Microsoft 365 data
             via the Microsoft Graph API.
 
-            Available tools:
-            - whoami: identify the authenticated user
-            - findpeople: resolve a person's name to one or more email addresses
-            - list_email: list the 25 most recent inbox emails
-            - search_email: search emails by sender, subject, or date range
-            - read_email: read the full body of a specific email by its ID
-            - search_files: search for files and folders in OneDrive
-            - read_file: read the text content of a single OneDrive file by its ID
-            - read_multiple_files: read text contents of multiple OneDrive files at once (comma-separated IDs)
-            - list_contacts: list contacts
-            - list_calendar: list upcoming and recent calendar events
-            - search_calendar: search calendar events by subject, location, attendee, or date range
-
             CONTEXT CONTINUITY
             - A [Session Context] block is injected at the start of each turn showing:
               - "Current topic": the active search subject
@@ -58,9 +45,9 @@ def create_graph_agent(graph_mcp):
             STRICT TOOL SELECTION RULES — follow these exactly:
             - ONLY call tools that are directly required by the user's current request.
             - NEVER call a tool speculatively or to gather background context.
-            - NEVER call calendar tools (list_calendar, search_calendar) unless the user explicitly asks about meetings, events, or their schedule.
-            - NEVER call email tools (list_email, search_email, read_email) unless the user explicitly asks about emails or messages.
-            - NEVER call file tools (search_files, read_file, read_multiple_files) unless the user explicitly asks about files or documents.
+            - NEVER call calendar tools unless the user explicitly asks about meetings, events, or their schedule.
+            - NEVER call email tools unless the user explicitly asks about emails or messages.
+            - NEVER call file tools unless the user explicitly asks about files or documents.
             - NEVER call list_contacts unless the user explicitly asks about contacts.
             - NEVER call the same tool twice in a single turn unless each call uses different parameters required by the request.
             - If a tool returns sufficient data, stop and answer — do NOT call more tools.
