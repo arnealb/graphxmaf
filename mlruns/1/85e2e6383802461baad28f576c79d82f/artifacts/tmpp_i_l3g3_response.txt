@@ -1,0 +1,37 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+️Executing (smartsales)...
+Synthesizing...
+### Summary of Results
+
+- **Sender of the Most Recent Email**:
+  - **Name**: Microsoft Azure
+  - **Email**: azure-noreply@microsoft.com
+  - This data is from the email service.
+
+- **Salesforce Lookup**:
+  - No relevant contact or lead information was found for the sender (Microsoft Azure) in Salesforce.
+  - This data is from the Salesforce lookup.
+
+- **SmartSales Location Check**:
+  - Multiple locations were found in SmartSales. Here are the details:
+    - **AACO DAVIDSON**
+      - Address: Havenkant 6, Leuven, Belgium
+      - Last Visit Date: 5 April 2026
+    - **Michelles Brasserie**
+      - Address: Ingelmunstersestraat 46, Izegem, Belgium
+      - Last Order Date: 7 April 2026
+    - **Medimarket Zaventem**
+      - Address: Zaventem, Belgium (specific street details not available)
+    - **Location in Antwerp**
+      - Address: Stationsplein 14, Antwerp, Belgium
+      - Last Visit Date: 10 March 2026
+    - **Customer1**
+      - Address: Markt 5, Bruges, Belgium
+      - Last Order Date: 25 March 2026
+
+### Final Answer
+- The sender of your most recent email, Microsoft Azure, did not have matching contact or lead details in Salesforce.
+- However, there are various SmartSales locations associated with companies in Belgium, but none directly linked to Microsoft Azure.

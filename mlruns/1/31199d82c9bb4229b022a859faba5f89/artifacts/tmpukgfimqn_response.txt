@@ -1,0 +1,33 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are 5 open opportunities in Salesforce:
+
+1. **Opportunity Name:** supp_opportyunity
+   - **Stage:** On-going Approval
+   - **Close Date:** 8 May 2026
+   - **Account Name:** supplier1
+
+2. **Opportunity Name:** new opp
+   - **Stage:** Value Proposition
+   - **Amount:** $1,000,000
+   - **Close Date:** 30 April 2026
+   - **Account Name:** Global Media
+
+3. **Opportunity Name:** abc
+   - **Stage:** On-going Approval
+   - **Close Date:** 13 February 2026
+   - **Account Name:** abs
+
+4. **Opportunity Name:** IT Parc replacement
+   - **Stage:** Offer sent
+   - **Amount:** $19,625
+   - **Close Date:** 30 September 2025
+   - **Account Name:** Advanced Communications
+
+5. **Opportunity Name:** Project Smile V2
+   - **Stage:** Value Proposition
+   - **Amount:** $45,000
+   - **Close Date:** 21 August 2025
+   - **Account Name:** Omega SA-NV

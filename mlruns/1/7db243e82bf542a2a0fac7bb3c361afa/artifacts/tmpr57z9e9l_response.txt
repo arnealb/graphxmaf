@@ -1,0 +1,26 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+### Salesforce Opportunities Closing This Month
+
+From Salesforce:
+- **Opportunity Name**: new opp
+  - **Stage**: Value Proposition
+  - **Close Date**: 30 April 2026
+  - **Account Name**: Global Media
+  - **Amount**: $1,000,000
+
+### Calendar Events Related to Opportunities
+
+From Graph:
+- **Meeting Subject**: meeting about numbers or something
+  - **Date**: 21 April 2026
+  - **Organizer**: SmartAdmin
+  - **Attendees**: albrecht.arne@gmail.com
+  - **Web Link**: [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANRyrptAAA%3D&exvsurl=1&path=/calendar/item)
+
+### Summary
+- There is one opportunity closing this month (30 April 2026) with the account name "Global Media".
+- There is a calendar event scheduled for 21 April 2026, which may be relevant to the account but does not directly list "Global Media" as an attendee or subject matter focus.

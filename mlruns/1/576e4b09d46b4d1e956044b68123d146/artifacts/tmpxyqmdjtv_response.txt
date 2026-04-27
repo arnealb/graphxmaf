@@ -1,0 +1,10 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+- **File Found**: **"Demande produits.xlsx"**
+  - **Type**: Excel spreadsheet
+  - **Contents**: Contains binary data, likely structured data such as tables or forms related to products.
+  - **Specific Details**: The specific contents and relevance to "Nutella" are not readable directly as text and would require Microsoft Excel or a compatible application to view. 
+
+For more detailed information about the data, please access the file using Excel.

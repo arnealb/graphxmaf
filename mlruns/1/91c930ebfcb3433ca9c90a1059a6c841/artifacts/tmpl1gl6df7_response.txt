@@ -1,0 +1,47 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the Salesforce leads with the status 'New':
+
+- **Lead ID:** 00QKI000002KQCj2AO
+  - **Name:** Bert Coppens
+  - **Company:** another-company
+  - **Email:** Not provided
+  
+- **Lead ID:** 00QKI000002KPEZ2A4
+  - **Name:** another lead
+  - **Company:** another-company
+  - **Email:** mr.another.lead@gmail.com
+  
+- **Lead ID:** 00QKI000002KMUE2A4
+  - **Name:** Open leada openlead last name
+  - **Company:** bakery of sam
+  - **Email:** Not provided
+
+- **Lead ID:** 00QKI000002KMU92AO
+  - **Name:** ur moms lead ur dads lead
+  - **Company:** grandmas bakery
+  - **Email:** Not provided
+
+- **Lead ID:** 00QKI000002KLga2AG
+  - **Name:** Ur Mom
+  - **Company:** Breadsticks and sons
+  - **Email:** breads.sticks.sons@gmail.com
+
+- **Lead ID:** 00QJ6000001AurSMAS
+  - **Name:** Bill Murray
+  - **Company:** MuncherWall
+  - **Email:** Not provided
+
+- **Lead ID:** 00Q0600000aULJuEAO
+  - **Name:** Menard Marc
+  - **Company:** GSheet Test 2
+  - **Email:** marc.test.gsheet@lol.com
+
+- **Lead ID:** 00Q0600000Y9D9cEAF
+  - **Name:** Sarah Loehr
+  - **Company:** MedLife, Inc.
+  - **Email:** info@salesforce.com
+
+These leads are currently categorized as 'New' in Salesforce.

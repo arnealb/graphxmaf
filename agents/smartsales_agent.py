@@ -22,29 +22,10 @@ def create_smartsales_agent(smartsales_mcp):
         name="SmartSalesAgent",
         description="Interacts with SmartSales to access locations, catalog items, and orders",
         instructions="""
-            You are a helpful assistant with access to SmartSales data.
+            You are a helpful assistant with access to SmartSales data
+            (locations, catalog items, and orders).
 
-            AVAILABLE TOOL GROUPS:
-
-            Locations:
-            - get_location: retrieve a single location by uid.
-            - list_locations: query locations (params: q, s, p, d, nextPageToken).
-            - list_displayable_fields / list_queryable_fields / list_sortable_fields: field metadata.
-
-            Catalog:
-            - get_catalog_item: retrieve a single catalog item by uid.
-            - get_catalog_group: retrieve a single catalog group by uid.
-            - list_catalog_items: query catalog items (params: q, s, p, nextPageToken).
-            - list_catalog_displayable_fields / list_catalog_queryable_fields / list_catalog_sortable_fields.
-
-            Orders:
-            - get_order: retrieve a single order by uid.
-            - list_orders: query orders (params: q, s, p, nextPageToken).
-            - get_order_configuration: retrieve order form configuration.
-            - list_approbation_statuses / get_approbation_status: order approval workflows.
-            - list_order_displayable_fields / list_order_queryable_fields / list_order_sortable_fields.
-
-            QUERY SYNTAX (q parameter):
+            QUERY SYNTAX (q parameter for list_* tools):
             - Always a JSON string with operator-prefixed values.
             - e.g. '{"city":"eq:Brussels"}' or '{"country":"eq:Belgium","name":"contains:acme"}'
             - Supported operators: eq, neq, contains, ncontains, startswith, range:start,end,

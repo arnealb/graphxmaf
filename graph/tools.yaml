@@ -1,26 +1,62 @@
 - name: whoami
-  description: Identify the currently authenticated user
+  description: >
+    Return the identity of the currently authenticated Microsoft 365 user.
+    Returns: display_name, email (mail or userPrincipalName).
+    Call this when the user asks "who am I", "what is my email", or when you need
+    the current user's identity before making other calls.
   method: whoami
 
-# ------------------------------------------------------------------------------- 
+# -------------------------------------------------------------------------------
 
 - name: findpeople
-  description: Resolve a person name to one or more email addresses
+  description: >
+    Resolve a person's name to one or more email addresses.
+    Searches three sources in parallel: personal Outlook contacts, Azure AD
+    directory users, and recent mailbox senders. Results are deduplicated and
+    merged. Returns a list of {name, address} objects (up to 5 matches).
+
+    ALWAYS call this before search_email or search_calendar when the user refers
+    to a person by name (sender, colleague, attendee). Never guess or fabricate
+    an email address.
+
+    `name` — plain text name or partial name to search (e.g. "Jan", "De Smedt").
+    Matching uses startswith on displayName, mail, and userPrincipalName.
   method: find_people
   params:
     - name: name
       type: str
 
-# ------------------------------------------------------------------------------- 
+# -------------------------------------------------------------------------------
 
 - name: list_email
-  description: List the 25 most recent emails from the inbox
+  description: >
+    List the 25 most recent emails from the inbox, sorted newest first.
+    Returns: id, subject, sender_name, sender_email, received (datetime), web_link.
+    Does NOT include the email body — call read_email with the message id to get
+    the full text.
+
+    Use this only for "show me my latest emails" requests with no filter.
+    Prefer search_email over this when any filter is implied (sender, subject,
+    date range).
   method: list_email
 
-# ------------------------------------------------------------------------------- 
+# -------------------------------------------------------------------------------
 
 - name: search_email
-  description: Search emails by sender address, subject, or received date range
+  description: >
+    Search emails across all mailbox folders by sender, subject, and/or date range.
+    Returns: id, subject, sender_name, sender_email, received, web_link (no body).
+    Call read_email to get the full text of a specific result.
+
+    Parameters:
+    - sender: email address for a contains match. Must be a resolved email address
+      — call findpeople first if the user provides a person's name.
+    - subject: substring match on the email subject line.
+    - received_after / received_before: ISO 8601 datetime strings
+      (e.g. "2026-01-01T00:00:00"). Use to filter by date range.
+
+    All parameters are optional; omit any you do not need.
+    Returns up to 25 results. Prefer this over list_email whenever any filter applies.
   method: search_emails
   params:
     - name: sender
@@ -32,19 +68,38 @@
     - name: received_before
       type: "str | None"
 
-# ------------------------------------------------------------------------------- 
+# -------------------------------------------------------------------------------
 
 - name: read_email
-  description: Read the full body of a specific email by its ID
+  description: >
+    Read the full plain-text body of a specific email by its message ID.
+    Returns: id, subject, sender_name, sender_email, received, body, web_link.
+
+    The body is returned as plain text (HTML is automatically stripped).
+    Body is truncated at 8,000 characters if the email is very long.
+    Call this at most ONCE per message ID — retrying the same ID will not
+    produce more content. If the body is empty, report that to the user.
+
+    `message_id` — the id field from list_email or search_email results.
   method: read_email
   params:
     - name: message_id
       type: str
 
-# ------------------------------------------------------------------------------- 
+# -------------------------------------------------------------------------------
 
 - name: search_files
-  description: Search files and folders in OneDrive
+  description: >
+    Search for files and folders in the user's OneDrive by keyword.
+    Returns: id, name, is_folder, size, created, modified, parent_id, web_link.
+    Returns up to 25 results. Does NOT return file contents — call read_file
+    or read_multiple_files to get the actual text of a file.
+
+    `query` — keyword to search across file and folder names (e.g. "budget",
+    "Q1 report"). Searches the entire drive recursively from the root.
+
+    `drive_id` — optional, leave null to use the authenticated user's default drive.
+    `folder_id` — optional, defaults to "root" to search from the drive root.
   method: search_files
   params:
     - name: query
@@ -58,7 +113,20 @@
 # -------------------------------------------------------------------------------
 
 - name: read_file
-  description: Read the text content of a OneDrive file by its ID. Use this after search_files to retrieve the actual contents of a file.
+  description: >
+    Read and return the text content of a single OneDrive file by its ID.
+    Returns plain text, NOT JSON.
+
+    Supported formats:
+    - .docx: paragraph text is extracted.
+    - .xlsx: each sheet is rendered as tab-separated rows.
+    - plain text / markdown / .csv: returned as-is.
+
+    Content is truncated at 12,000 characters.
+    Use read_multiple_files when the question spans several documents — it
+    reads them in parallel and is more efficient than multiple read_file calls.
+
+    `file_id` — the id field from search_files results.
   method: read_file
   params:
     - name: file_id
@@ -67,30 +135,69 @@
 # -------------------------------------------------------------------------------
 
 - name: read_multiple_files
-  description: Read the text contents of multiple OneDrive files at once.
-    Pass a comma-separated list of file IDs (e.g. "id1,id2,id3").
-    Use this when the user asks a question that spans multiple documents.
+  description: >
+    Read the text content of multiple OneDrive files in parallel.
+    Returns a list of plain-text strings, one per file. Same format support
+    and 12,000-character truncation as read_file.
+
+    Use this instead of multiple sequential read_file calls when the user's
+    question spans or compares several documents (e.g. "summarise all reports
+    from last quarter"). More efficient than calling read_file in a loop.
+
+    `file_ids` — comma-separated string of file IDs
+    (e.g. "id1,id2,id3"). IDs come from search_files results.
   method: read_multiple_files
   params:
     - name: file_ids
       type: str
 
-# ------------------------------------------------------------------------------- 
+# -------------------------------------------------------------------------------
 
 - name: list_contacts
-  description: List the user's contacts
+  description: >
+    List the user's personal Outlook contacts (up to 15).
+    Returns: id, name, email (first address only), phone (mobile or first
+    business phone).
+
+    These are contacts the user has saved personally — not the same as Azure AD
+    directory users. Use findpeople to resolve names across both contacts and
+    the directory.
   method: list_contacts
 
-# ------------------------------------------------------------------------------- 
+# -------------------------------------------------------------------------------
 
 - name: list_calendar
-  description: List upcoming and recent calendar events
+  description: >
+    List the user's upcoming and recent calendar events.
+    Returns up to 10 upcoming events (start >= now) and up to 10 recent past
+    events (start < now), combined into one list sorted by start time.
+    Fields per event: id, subject, start, end, organizer (name + email),
+    attendees (list of name + email), web_link.
+
+    Use this for "what is on my calendar" or "do I have meetings this week"
+    type queries with no specific filter. Use search_calendar when filtering
+    by subject, location, attendee, or date range.
   method: list_calendar
 
-# ------------------------------------------------------------------------------- 
+# -------------------------------------------------------------------------------
 
 - name: search_calendar
-  description: Search calendar events by subject text, location, attendee, or date range
+  description: >
+    Search calendar events by subject, location, attendee, and/or date range.
+    Returns up to 25 events sorted by start time.
+    Fields per event: id, subject, start, end, organizer, attendees, web_link.
+
+    Parameters (all optional, combine as needed):
+    - text: substring match on the event subject (e.g. "standup", "review").
+    - location: substring match on the event location name.
+    - attendee: person name or email. Resolved via findpeople first, then
+      matched client-side — call findpeople before this when the user gives
+      a name.
+    - start_after / start_before: ISO 8601 datetime strings
+      (e.g. "2026-04-01T00:00:00"). Use to filter events within a date range.
+
+    Note: attendee filtering is applied client-side after the server-side
+    filters, so it may reduce the result set below 25.
   method: search_events
   params:
     - name: text

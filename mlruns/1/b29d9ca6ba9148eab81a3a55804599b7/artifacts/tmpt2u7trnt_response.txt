@@ -1,0 +1,25 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is the list of your Microsoft 365 contacts along with their phone numbers:
+
+- **John Lastname**
+  - Phone: 0326243426
+  - Email: john.lastname@globalmedia.com
+
+- **ur dog**
+  - Phone: 0483922818
+  - Email: ur.dog@doghouse.com
+
+- **ur mom**
+  - Phone: 0427277501
+  - Email: ur.mom@grandpa.com
+
+- **test**
+  - Phone: Not available
+  - Email: test.test@gmail.com
+
+- **Arne Albrecht**
+  - Phone: Not available
+  - Email: a.albrecht@easi.net

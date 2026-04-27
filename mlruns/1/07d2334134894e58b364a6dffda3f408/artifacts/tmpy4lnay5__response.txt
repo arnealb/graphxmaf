@@ -1,0 +1,43 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the emails you received in the last 14 days:
+
+### 24 April 2026
+- **Subject:** Retirement notice: Azure Content Understanding preview APIs will be retired on 15 July 2026  
+  **From:** Microsoft Azure (azure-noreply@microsoft.com)  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANuako4AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### 23 April 2026
+- **Subject:** Retirement notice: Transition Azure OpenAI Assistants APIs to Microsoft Foundry Agent Service by 26 August 2026  
+  **From:** Microsoft Azure (azure-noreply@microsoft.com)  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANpSjHJAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Retirement notice: We're improving the high availability experience for Azure Database for PostgreSQL  
+  **From:** Microsoft Azure (azure-noreply@microsoft.com)  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANpSjHIAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** delivery of headphones  
+  **From:** Arne Albrecht (albrecht.arne@gmail.com)  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANpSjHHAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### 22 April 2026
+- **Subject:** Your files have been reactivated  
+  **From:** SharePoint Online (no-reply@sharepointonline.com)  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANkJIFuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Your mailbox is now connected to Dynamics 365  
+  **From:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANkJIFsAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Subject:** Your file has been reactivated  
+  **From:** SharePoint Online (no-reply@sharepointonline.com)  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANkJIFrAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### 20 April 2026
+- **Subject:** 59080341 is de verificatiecode voor Microsoft SharePoint.  
+  **From:** Microsoft Notifications (no-reply@notify.microsoft.com)  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmvAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+This list includes all emails received within the specified date range.

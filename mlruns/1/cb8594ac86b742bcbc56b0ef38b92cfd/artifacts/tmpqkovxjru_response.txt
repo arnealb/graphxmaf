@@ -1,0 +1,29 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here is the list of fields that can be displayed for SmartSales catalog items:
+
+- **techServerCreationDate** (DATETIME)
+- **techServerUpdateDate** (DATETIME)
+- **code** (TEXT)
+- **externalId** (TEXT)
+- **commented** (BOOLEAN)
+- **title** (TEXT)
+- **searchKeywordText** (TEXT)
+- **group** (TEXT)
+- **description** (TEXT)
+- **price** (DECIMAL)
+- **salesUnit** (INTEGER)
+- **packagingUnit** (INTEGER)
+- **measure** (DECIMAL)
+- **measurementUnitDecimalPrecision** (DECIMAL)
+- **measurementUnitReferenceUnitCode** (TEXT)
+- **measurementUnitTitle** (TEXT)
+- **unitOfMeasure** (TEXT)
+- **availability** (TEXT)
+- **position** (INTEGER)
+- **quantitySold** (INTEGER)
+- **tags** (TEXT)
+
+These fields are available for display in both WEB and MOBILE audiences, with varying data types.

@@ -1,0 +1,50 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+You can filter SmartSales catalog items by the following fields:
+
+- **Text Fields**:
+  - fulltext
+  - type (hidden)
+  - code
+  - title
+  - description
+  - measurementUnitUid
+  - tag
+  - availability
+  - unitofmeasure
+  - group
+  - CHILDREN_OF_LOCATION_RELATION:86acdbc2-18a4-11f1-84f0-005056010707 (Client - Supplies to)
+  - CHILDREN_OF_LOCATION_RELATION:86ae86e5-18a4-11f1-84f0-005056010707 (Client - Headquarter)
+  - PARENTS_OF_LOCATION_RELATION:86ae86e5-18a4-11f1-84f0-005056010707 (Client - Headquarter of)
+  - CHILDREN_OF_LOCATION_RELATION:86af3bc8-18a4-11f1-84f0-005056010707 (Client - Billing company of)
+  - includeDisplayableRelationChildrenOf (hidden)
+  
+- **Date/Time Fields**:
+  - techServerCreationDate
+  - techServerUpdateDate
+  - since
+  - contextualDate (hidden)
+  
+- **Boolean Fields**:
+  - deleted
+  - hideEmptyGroups
+  - includeContextualDisplayableRelationChildrenOf
+  
+- **Decimal Fields**:
+  - price
+  - measure
+  
+- **Integer Fields**:
+  - salesunit
+  - packagingunit
+
+- **Hidden Fields**:
+  - catalogItemUid
+  - groupUid
+  - layoutUid
+  - linkParentUid
+  - contextualLocationUid
+
+Use these fields to customize your filtering of catalog items in SmartSales.

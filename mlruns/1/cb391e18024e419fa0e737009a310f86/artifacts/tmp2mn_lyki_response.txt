@@ -1,0 +1,27 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here is a list of SmartSales locations in Belgium, sorted by name:
+
+- **AACO DAVIDSON**
+  - Address: Havenkant 6, Leuven, 3000
+  - Email: info@aacodavidson.com
+
+- **Arne Albrecht**
+  - Address: Lippenslaan 347, Knokke, 8300
+
+- **Customer1**
+  - Address: Markt 5, Bruges, 8000
+
+- **Michelles Brasserie**
+  - Address: Ingelmunstersestraat 46, Izegem, 8870
+  - VAT Number: BE4565.876.1098
+  - Email: hankar@michellespub.be
+
+- **name-v1**
+  - Address: Stationsplein 14, Antwerp, 2018
+  - VAT Number: BE0897654321
+  - Attributes: Tier - gold, Industry - healthcare
+
+This list includes the name, address, and additional relevant details of each location.

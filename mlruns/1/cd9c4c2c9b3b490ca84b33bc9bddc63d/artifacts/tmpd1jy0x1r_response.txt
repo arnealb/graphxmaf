@@ -1,0 +1,25 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are 5 Salesforce contacts along with their email addresses:
+
+- **Mister Maestro**
+  - Email: mist.maestro@gmail.com
+  - Account Name: account in france
+
+- **Testaccount Francestuff**
+  - Email: test.testaccount@grandpa.com
+  - Account Name: account in france
+
+- **Arne Albrecht**
+  - Email: albrecht.arne@gmail.com
+  - Account Name: Displaytech
+
+- **John Lastname**
+  - Email: john.lastname@globalmedia.com
+  - Account Name: Global Media
+
+- **Leo Snickers**
+  - Email: leo.snickers@candybar.com
+  - Account Name: account in france

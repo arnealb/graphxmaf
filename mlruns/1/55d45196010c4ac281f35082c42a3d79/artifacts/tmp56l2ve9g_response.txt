@@ -1,0 +1,47 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The body of your most recent email is as follows:
+
+---
+
+**Retirement notice: Azure Content Understanding preview APIs will be retired on 15 July 2026**
+
+Migrate to 2025-11-01 generally available API version.
+
+You're receiving this notification because you're associated with one or more Azure subscriptions that use Azure Content Understanding preview API versions: 2024-12-01-preview, 2025-05-01-preview. For reference, you can find this notification in the Azure portal under Service Health/Health advisories using tracking ID: LJB6-KHG.
+
+On 15 July 2026, the following Azure Content Understanding preview API versions will be retired:
+
+- 2024-12-01-preview
+- 2025-05-01-preview
+
+Please migrate to the latest generally available Azure Content Understanding API version 2025-11-01 (GA) by 15 July 2026.
+
+After 15 July 2026, these preview API versions will stop functioning and no longer be supported.
+
+**Recommended action**
+
+Follow the detailed migration guidance to move to Azure Content Understanding API version 2025-11-01 (GA).
+
+**Help and support**
+
+If you have questions, get answers from community experts in Microsoft Q&A. If you have a support plan and you need technical help, create a support request.
+
+Learn more about service retirements that may impact your resources in the Azure Retirement Workbook. Please note that retirements may not be visible in the workbook for up to two weeks after being announced.
+
+**Account Information**
+
+- Subscription ID: 9fedfa8f-14e9-4474-9bb2-dd0b98ff1920
+- Subscription name: MICROSOFT AZURE EASI - SPONSORSHIP
+
+Please help us improve our communication by telling us what you think about this email in a survey.
+
+This message from Microsoft is an important part of a program, service, or product that you or your company purchased or participates in. Microsoft respects your privacy. Please read our Privacy Statement.
+
+This is a mandatory service communication. To set your contact preferences for other communications, visit the Promotional Communications Manager.
+
+Microsoft Corporation, One Microsoft Way, Redmond, WA 98052
+
+---

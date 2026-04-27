@@ -1,0 +1,121 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (smartsales)...
+️Executing (smartsales)...
+Synthesizing...
+### SmartSales Locations
+
+1. **AACO DAVIDSON**
+   - **UID**: 77538c4e-2135-11f1-84f0-005056010707
+   - **Street**: Havenkant 6
+   - **City**: Leuven
+   - **Zip**: 3000
+   - **Country**: Belgium
+   - **Latitude**: 50.8873413
+   - **Longitude**: 4.7005038
+   - **Last Visit Date**: 05 April 2026
+
+2. **Stream Software**
+   - **UID**: e6d82255-2861-11f1-a2fe-005056010707
+   - **Street**: Potvlietlaan 4
+   - **City**: Antwerpen
+   - **Zip**: 2600
+   - **Country**: Not specified
+   - **Last Visit Date**: 22 April 2026
+
+3. **Michelles Brasserie**
+   - **UID**: e1c00878-3e4e-11f1-a803-005056010707
+   - **Street**: Ingelmunstersestraat 46
+   - **City**: Izegem
+   - **Zip**: 8870
+   - **Country**: Belgium
+   - **Last Visit Date**: 22 April 2026
+
+4. **Medimarket Zaventem**
+   - **UID**: db9b62b8-4220-11f1-a803-005056010707
+   - **City**: Zaventem
+   - **Last Visit Date**: Not available
+
+5. **Advanced Communications**
+   - **UID**: 2d0dcc47-38aa-11f1-a803-005056010707
+   - **Street**: Mediapark 5
+   - **City**: Ghent
+   - **Zip**: 9000
+   - **Country**: BE
+   - **Last Visit Date**: Not available
+
+6. **Displaytech**
+   - **UID**: 1cdabf58-38aa-11f1-a803-005056010707
+   - **Street**: Technologielaan 12
+   - **City**: Leuven
+   - **Zip**: 3001
+   - **Country**: BE
+   - **Last Visit Date**: Not available
+
+7. **EASI**
+   - **UID**: 479a3ea8-38aa-11f1-a803-005056010707
+   - **Street**: Rue d'Arlon 50
+   - **City**: Namur
+   - **Zip**: 5000
+   - **Country**: BE
+   - **Last Visit Date**: Not available
+
+8. **Global Media**
+   - **UID**: c7f1a08e-38ad-11f1-a803-005056010707
+   - **Street**: Mediastraat 10
+   - **City**: Brussels
+   - **Zip**: 1000
+   - **Country**: BE
+   - **Last Visit Date**: Not available
+
+9. **Test**
+   - **UID**: 0266c124-38aa-11f1-a803-005056010707
+   - **Street**: Teststraat 1
+   - **City**: Brussels
+   - **Zip**: 1000
+   - **Country**: BE
+   - **Last Visit Date**: Not available
+
+10. **Universal Services**
+    - **UID**: 58a4562b-38ad-11f1-a803-005056010707
+    - **Street**: Serviceweg 22
+    - **City**: Mechelen
+    - **Zip**: 2800
+    - **Country**: BE
+    - **Last Visit Date**: Not available
+
+11. **Upstyle Inc.**
+    - **UID**: 4e0cceab-38aa-11f1-a803-005056010707
+    - **Street**: Fashion Avenue 88
+    - **City**: Antwerp
+    - **Zip**: 2000
+    - **Country**: BE
+    - **Last Visit Date**: Not available
+
+12. **supplier1**
+    - **UID**: cac5b20d-285c-11f1-a2fe-005056010707
+    - **Street**: Rue du Commerce 1
+    - **City**: Brussels
+    - **Zip**: 1000
+    - **Country**: Belgium
+    - **Last Visit Date**: Not available
+
+### Detailed Information for the First Location: AACO DAVIDSON
+
+- **UID**: 77538c4e-2135-11f1-84f0-005056010707
+- **Code**: 20260316134107
+- **External ID**: 2033
+- **Street**: Havenkant 6
+- **City**: Leuven
+- **Zip**: 3000
+- **Country**: Belgium
+- **Latitude**: 50.8873413
+- **Longitude**: 4.7005038
+- **Last Visit Date**: 05 April 2026
+- **Email**: info@aacodavidson.com
+- **Created By**: Supervisor Account (smaa@easi-ai-demo.net)
+- **Last Updated By**: Supervisor Account (smaa@easi-ai-demo.net)
+- **Deleted**: No
+- **Has Extranet Access**: No
+
+This summary provides both a list of locations as well as detailed information for the first one, AACO DAVIDSON.

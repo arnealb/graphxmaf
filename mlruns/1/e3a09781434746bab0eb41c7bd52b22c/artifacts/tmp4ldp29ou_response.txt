@@ -1,0 +1,126 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the Salesforce cases along with their related account names:
+
+### Cases with Related Account Names
+
+- **Case Number:** 00001018  
+  **Subject:** Verification statut case  
+  **Status:** In progress  
+  **Priority:** Medium  
+  **Account Name:** Easi Be  
+  **Created Date:** 6 March 2025  
+
+- **Case Number:** 00001017  
+  **Subject:** Test  
+  **Status:** New  
+  **Priority:** Medium  
+  **Account Name:** Easi Be  
+  **Created Date:** 6 March 2025  
+
+- **Case Number:** 00001016  
+  **Subject:** Hello - Problem with WIFI connexion  
+  **Status:** Closed  
+  **Priority:** Medium  
+  **Account Name:** EASI  
+  **Created Date:** 27 February 2025  
+
+- **Case Number:** 00001015  
+  **Subject:** Test Entitlement Case  
+  **Status:** Closed  
+  **Priority:** Medium  
+  **Account Name:** Easi Be  
+  **Created Date:** 27 February 2025  
+
+- **Case Number:** 00001014  
+  **Subject:** Ceci est un test 2  
+  **Status:** Waiting for Customer  
+  **Priority:** Medium  
+  **Account Name:** Easi Be  
+  **Created Date:** 26 February 2025  
+
+- **Case Number:** 00001013  
+  **Subject:** Ceci est un nouveau case (Test)  
+  **Status:** Waiting for Customer  
+  **Priority:** Medium  
+  **Account Name:** Easi Be  
+  **Created Date:** 26 February 2025  
+
+- **Case Number:** 00001011  
+  **Subject:** Problème avec projecteur Espon EPS003131434  
+  **Status:** Waiting for Customer  
+  **Priority:** Medium  
+  **Account Name:** Easi Be  
+  **Created Date:** 22 March 2024  
+
+- **Case Number:** 00001010  
+  **Subject:** Problème accèss site  
+  **Status:** Closed  
+  **Priority:** Medium  
+  **Account Name:** Easi Be  
+  **Created Date:** 19 March 2024  
+
+- **Case Number:** 00001009  
+  **Subject:** Test  
+  **Status:** Closed  
+  **Priority:** Medium  
+  **Account Name:** Easi Be  
+  **Created Date:** 18 March 2024  
+
+- **Case Number:** 00001008  
+  **Subject:** Problème accèss site  
+  **Status:** Closed  
+  **Priority:** Medium  
+  **Account Name:** Easi Be  
+  **Created Date:** 18 March 2024  
+
+- **Case Number:** 00001007  
+  **Subject:** Ordinateur ne fonctionne pas  
+  **Status:** Waiting for Customer  
+  **Priority:** Medium  
+  **Account Name:** Easi Be  
+  **Created Date:** 18 March 2024  
+
+- **Case Number:** 00001006  
+  **Subject:** Issue with order  
+  **Status:** New  
+  **Priority:** Medium  
+  **Account Name:** Pairi Daiza  
+  **Created Date:** 18 March 2024  
+
+- **Case Number:** 00001005  
+  **Subject:** Produits  
+  **Status:** Waiting for Customer  
+  **Priority:** Medium  
+  **Account Name:** Pairi Daiza  
+  **Created Date:** 13 March 2024  
+
+- **Case Number:** 00001003  
+  **Subject:** Delivery issues with order #544  
+  **Status:** New  
+  **Priority:** Medium  
+  **Account Name:** Omega SA-NV  
+  **Created Date:** 31 July 2023  
+
+- **Case Number:** 00001001  
+  **Subject:** Sample Case 2: The widgets we received are the wrong size.  
+  **Status:** New  
+  **Priority:** High  
+  **Account Name:** Pairi Daiza  
+  **Created Date:** 29 June 2023  
+
+- **Case Number:** 00001002  
+  **Subject:** Sample Case 3: Cannot track our order.  
+  **Status:** Closed  
+  **Priority:** Low  
+  **Account Name:** Pairi Daiza  
+  **Created Date:** 29 June 2023  
+
+- **Case Number:** 00001000  
+  **Subject:** Sample Case: Our Widgets have not been delivered.  
+  **Status:** Escalated  
+  **Priority:** High  
+  **Account Name:** Global Media  
+  **Created Date:** 29 June 2023  

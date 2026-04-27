@@ -1,0 +1,15 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is the full body of the most recent email containing "meeting" in the subject:
+
+**Body of Email:**
+
+Dear Smart Admin,
+
+Your registration for the meeting has been confirmed.
+
+Click [here](https://easigroupdemo.sharepoint.com/sites/EMMI-POC/Lists/Registration/AllItems.aspx?FilterField1=LinkTitle&FilterValue1=04-09-2025%20-%20INVITATION%20-%20Joint%20FIA-NUTRITION-INCO%20online%20meeting%2C%2009%20April%20%2814.00%20-%2015.30%29&FilterType1=Computed&viewid=ba9c1945%2D1a79%2D4e43%2D91d6%2D148f50f35d18&newTargetListUrl=%2Fsites%2FEMMI%2DPOC%2FLists%2FRegistration&viewpath=%2Fsites%2FEMMI%2DPOC%2FLists%2FRegistration%2FAllItems%2Easpx) to see all participants of the meeting, and [here](https://easigroupdemo.sharepoint.com/sites/EMMI-POC/_layouts/15/listform.aspx?PageType=4&ListId=7809571f%2D1451%2D4657%2D9c57%2Df01db857698b&ID=22&ContentTypeID=0x01003448EF8981939E4D8821A943CAD8573B00BD8F82357D8CE3498C2CDA49E77D4545) to edit your registration.
+
+You can view the email in Outlook [here](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAAFMUMIRAAA%3D&exvsurl=1&viewmodel=ReadMessageItem).

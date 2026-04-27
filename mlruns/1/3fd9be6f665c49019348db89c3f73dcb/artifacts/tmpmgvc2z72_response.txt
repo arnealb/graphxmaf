@@ -1,0 +1,19 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the emails with 'invoice' in the subject:
+
+- **Email 1**
+  - **Subject:** Marc Dardenne wants to access 'invoice'
+  - **Sender Name:** SharePoint Online
+  - **Sender Email:** no-reply@sharepointonline.com
+  - **Received Date:** 27 May 2025
+  - **Link to Email:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAFbM2OqAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Email 2**
+  - **Subject:** Question regarding invoice
+  - **Sender Name:** Arne Albrecht
+  - **Sender Email:** albrecht.arne@gmail.com
+  - **Received Date:** 13 April 2026
+  - **Link to Email:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
