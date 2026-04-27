@@ -413,9 +413,9 @@ def setup_agents(
 ):
     """Authenticate, start MCP servers, and return (orchestrator, procs).
 
-    Reuses authentication helpers from main.py to avoid duplication.
+    Reuses authentication helpers from startup.py to avoid duplication.
     """
-    from main import (  # noqa: PLC0415  (local import to avoid circular deps)
+    from startup import (  # noqa: PLC0415  (local import to avoid circular deps)
         authenticate,
         _is_local_url,
         _start_graph_mcp_server,

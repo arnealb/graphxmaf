@@ -19,11 +19,31 @@ class SmartSalesRepository:
         return {"Authorization": f"Bearer {self.access_token}"}
 
     async def _get(self, url: str, params: dict | None = None) -> httpx.Response:
-        """Make a GET request with a consistent timeout. Raises on HTTP errors."""
         async with httpx.AsyncClient(timeout=_SS_TIMEOUT) as client:
             r = await client.get(url, params=params, headers=self._headers())
             r.raise_for_status()
         return r
+
+    def _validate_query(self, q: str | None, cache_key: str) -> dict | None:
+        if not q or cache_key not in _field_cache:
+            return None
+        try:
+            valid_fields = {f["fieldName"] for f in _field_cache[cache_key]}
+            invalid = set(json.loads(q).keys()) - valid_fields
+            if invalid:
+                return {"error": f"Unknown filter field(s): {sorted(invalid)}. Valid fields: {sorted(valid_fields)}"}
+        except (json.JSONDecodeError, KeyError):
+            pass
+        return None
+
+    def _validate_sort(self, s: str | None, cache_key: str) -> dict | None:
+        if not s or cache_key not in _field_cache:
+            return None
+        sort_field = s.split(":")[0]
+        valid = {f["keyName"] for f in _field_cache[cache_key]}
+        if sort_field not in valid:
+            return {"error": f"Unknown sort field: '{sort_field}'. Valid fields: {sorted(valid)}"}
+        return None
 
     # ------------------------------------------------------------------
     # Locations
@@ -52,40 +72,16 @@ class SmartSalesRepository:
         nextPageToken   — pagination token from previous response
         skipResultSize  — skip total count calculation (default True)
         """
-
-        params: dict = {}
-        if q is not None:
-            params["q"] = q
-        if s is not None:
-            params["s"] = s
-        if p is not None:
-            params["p"] = p
-        if d is not None:
-            params["d"] = d
-        if nextPageToken is not None:
-            params["nextPageToken"] = nextPageToken
+        params = {k: v for k, v in {"q": q, "s": s, "p": p, "d": d, "nextPageToken": nextPageToken}.items() if v is not None}
         if skipResultSize is not None:
             params["skipResultSize"] = str(skipResultSize).lower()
 
-
-
         log.info("[list_locations] params=%s", params)
 
-        if "location_queryable" in _field_cache and q is not None:
-            try:
-                q_fields = set(json.loads(q).keys())
-                valid_fields = {f["fieldName"] for f in _field_cache["location_queryable"]}
-                invalid = q_fields - valid_fields
-                if invalid:
-                    return {"error": f"Unknown filter field(s): {sorted(invalid)}. Valid fields: {sorted(valid_fields)}"}
-            except (json.JSONDecodeError, KeyError):
-                pass
-
-        if "location_sortable" in _field_cache and s is not None:
-            sort_field = s.split(":")[0]
-            valid_sort = {f["keyName"] for f in _field_cache["location_sortable"]}
-            if sort_field not in valid_sort:
-                return {"error": f"Unknown sort field: '{sort_field}'. Valid fields: {sorted(valid_sort)}"}
+        if err := self._validate_query(q, "location_queryable"):
+            return err
+        if err := self._validate_sort(s, "location_sortable"):
+            return err
 
         r = await self._get(f"{_BASE_URL}/api/v3/location/list", params)
         data = r.json()
@@ -94,7 +90,6 @@ class SmartSalesRepository:
             "nextPageToken": data.get("nextPageToken"),
             "resultSizeEstimate": data.get("resultSizeEstimate"),
         }
-
 
     async def list_displayable_fields(self) -> list:
         """Return the fields that can be displayed in a location list view."""
@@ -173,35 +168,16 @@ class SmartSalesRepository:
         nextPageToken   — pagination token from previous response
         skipResultSize  — skip total count calculation (default False)
         """
-        params: dict = {}
-        if q is not None:
-            params["q"] = q
-        if s is not None:
-            params["s"] = s
-        if p is not None:
-            params["p"] = p
-        if nextPageToken is not None:
-            params["nextPageToken"] = nextPageToken
+        params = {k: v for k, v in {"q": q, "s": s, "p": p, "nextPageToken": nextPageToken}.items() if v is not None}
         if skipResultSize is not None:
             params["skipResultSize"] = str(skipResultSize).lower()
 
         log.info("list_catalog_items params=%s", params)
 
-        if "catalog_queryable" in _field_cache and q is not None:
-            try:
-                q_fields = set(json.loads(q).keys())
-                valid_fields = {f["fieldName"] for f in _field_cache["catalog_queryable"]}
-                invalid = q_fields - valid_fields
-                if invalid:
-                    return {"error": f"Unknown filter field(s): {sorted(invalid)}. Valid fields: {sorted(valid_fields)}"}
-            except (json.JSONDecodeError, KeyError):
-                pass
-
-        if "catalog_sortable" in _field_cache and s is not None:
-            sort_field = s.split(":")[0]
-            valid_sort = {f["keyName"] for f in _field_cache["catalog_sortable"]}
-            if sort_field not in valid_sort:
-                return {"error": f"Unknown sort field: '{sort_field}'. Valid fields: {sorted(valid_sort)}"}
+        if err := self._validate_query(q, "catalog_queryable"):
+            return err
+        if err := self._validate_sort(s, "catalog_sortable"):
+            return err
 
         r = await self._get(f"{_BASE_URL}/api/v3/catalog/list", params)
         data = r.json()
@@ -257,35 +233,16 @@ class SmartSalesRepository:
         nextPageToken   — pagination token from previous response
         skipResultSize  — skip total count calculation (default False)
         """
-        params: dict = {}
-        if q is not None:
-            params["q"] = q
-        if s is not None:
-            params["s"] = s
-        if p is not None:
-            params["p"] = p
-        if nextPageToken is not None:
-            params["nextPageToken"] = nextPageToken
+        params = {k: v for k, v in {"q": q, "s": s, "p": p, "nextPageToken": nextPageToken}.items() if v is not None}
         if skipResultSize is not None:
             params["skipResultSize"] = str(skipResultSize).lower()
 
         log.info("list_orders params=%s", params)
 
-        if "order_queryable" in _field_cache and q is not None:
-            try:
-                q_fields = set(json.loads(q).keys())
-                valid_fields = {f["fieldName"] for f in _field_cache["order_queryable"]}
-                invalid = q_fields - valid_fields
-                if invalid:
-                    return {"error": f"Unknown filter field(s): {sorted(invalid)}. Valid fields: {sorted(valid_fields)}"}
-            except (json.JSONDecodeError, KeyError):
-                pass
-
-        if "order_sortable" in _field_cache and s is not None:
-            sort_field = s.split(":")[0]
-            valid_sort = {f["keyName"] for f in _field_cache["order_sortable"]}
-            if sort_field not in valid_sort:
-                return {"error": f"Unknown sort field: '{sort_field}'. Valid fields: {sorted(valid_sort)}"}
+        if err := self._validate_query(q, "order_queryable"):
+            return err
+        if err := self._validate_sort(s, "order_sortable"):
+            return err
 
         r = await self._get(f"{_BASE_URL}/api/v3/order/list", params)
         data = r.json()
@@ -308,15 +265,7 @@ class SmartSalesRepository:
         nextPageToken: str | None = None,
     ) -> dict:
         """Query SmartSales order approbation statuses."""
-        params: dict = {}
-        if q is not None:
-            params["q"] = q
-        if s is not None:
-            params["s"] = s
-        if p is not None:
-            params["p"] = p
-        if nextPageToken is not None:
-            params["nextPageToken"] = nextPageToken
+        params = {k: v for k, v in {"q": q, "s": s, "p": p, "nextPageToken": nextPageToken}.items() if v is not None}
 
         log.info("list_approbation_statuses params=%s", params)
 

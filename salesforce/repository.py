@@ -12,7 +12,6 @@ from salesforce.models import (
 
 import logging
 log = logging.getLogger(__name__)
-logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s — %(message)s")
 
 _API_VERSION = "v59.0"
 _SF_TIMEOUT = 30.0  # seconds; Salesforce API calls exceeding this are cancelled
