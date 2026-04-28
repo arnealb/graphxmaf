@@ -1,0 +1,45 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Overview of Dorian Feaux
+
+- **Name:** Dorian Feaux
+- **Contact Details:** [Not provided in the output]
+  
+### Communication History
+- **Recent Emails:**
+  1. **Subject:** New request for transport order  
+     **Received:** 11 December 2025  
+     **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAH1XydTAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+  2. **Subject:** Intro: Dorian Feaux — EASI collaboration proposal  
+     **Received:** 28 April 2026  
+     **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7sAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Upcoming Calendar Events Involving Dorian:**
+  1. **Weekly sync — Dorian Feaux**  
+     **Start:** 6 May 2026, 07:00  
+     **End:** 6 May 2026, 07:30  
+
+  2. **Sprint review — Arne Albrecht**  
+     **Start:** 8 May 2026, 12:00  
+     **End:** 8 May 2026, 13:00  
+
+  3. **Supplier1 — Q2 Delivery Review**  
+     **Start:** 10 May 2026, 08:00  
+     **End:** 10 May 2026, 09:00  
+
+  4. **GreenTech Solutions — Technical Qualification Call**  
+     **Start:** 12 May 2026, 09:00  
+     **End:** 12 May 2026, 10:00  
+
+  5. **Colruyt Group — SmartSales Rollout Kickoff**  
+     **Start:** 15 May 2026, 12:00  
+     **End:** 15 May 2026, 13:30  
+
+### Commercial Relationship Data
+- **Salesforce Data:** No relevant data found.
+- **SmartSales Data:** No relevant data found.
+
+This overview provides information on Dorian's recent communications and scheduled meetings, but it lacks specific commercial relationship details from Salesforce and SmartSales. If you need further assistance or additional information, please let me know!

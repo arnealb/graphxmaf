@@ -1,0 +1,44 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce)...
+️Executing (graph, smartsales)...
+Synthesizing...
+Here is a comprehensive profile of Colruyt Group, based on the data from Salesforce, Graph, and SmartSales:
+
+### Company Overview:
+- **Name**: Colruyt Group
+- **Industry**: Retail
+- **Website**: [colruytgroup.com](https://www.colruytgroup.com)
+
+### Recent Support Case:
+- **Case Number**: 00001021
+- **Subject**: Integration issue with POS system
+- **Status**: New
+- **Priority**: Medium
+- **Created Date**: 28 April 2026
+
+### Opportunities:
+- **Opportunity Name**: Colruyt Group — SmartSales Rollout 2026
+- **Stage**: Proposal/Price Quote
+- **Amount**: $220,000
+- **Close Date**: 30 September 2026
+
+### Communication History:
+- **Upcoming Calendar Event**:
+  - **Subject**: SmartSales Rollout Kickoff
+  - **Date**: 15 May 2026
+  - **Time**: 12:00 PM - 1:30 PM UTC
+  - **Organizer**: SmartAdmin
+  - **Event Link**: [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLeAAA%3D&exvsurl=1&path=/calendar/item)
+
+### Product Catalog (from SmartSales):
+- **IT Hardware & Software**
+- **Specific Items**:
+  - **Business Laptop Pro 15**: $1,299.99 (High-performance laptop for enterprise use)
+  - **Colruyt House Brand — Retail Display Kit**: $89.50 (In-store display kit)
+  - **Nutella 750g**: $5.99 (Hazelnut spread)
+  - **Ergonomic Keyboard**: $129.00 (Wireless keyboard)
+  - **Wireless Headset UC**: $189.50 (Noise-cancelling headset)
+
+### Summary:
+Colruyt Group is a retail company that has active support issues and ongoing opportunities with a focus on technology and retail solutions. Key communication events indicate engagement in ongoing projects, specifically in their rollout of SmartSales. Products listed showcase a combination of IT and retail-oriented items, suggesting a diverse range of operational needs.

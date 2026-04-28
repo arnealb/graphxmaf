@@ -1,0 +1,30 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Based on the upcoming calendar events and the records from Salesforce, here are the findings regarding companies that do not exist in the CRM:
+
+### Upcoming Calendar Events:
+- **30 April - 1 May 2026**: Closing opportunity
+- **6 May 2026**: Weekly sync — Dorian Feaux
+- **8 May 2026**: Sprint review — Arne Albrecht
+- **10 May 2026**: Supplier1 — Q2 Delivery Review
+- **12 May 2026**: GreenTech Solutions — Technical Qualification Call
+- **15 May 2026**: Colruyt Group — SmartSales Rollout Kickoff
+
+### Companies in Salesforce:
+- **GreenTech Solutions**: Exists in Salesforce.
+- **Colruyt Group**: Exists in Salesforce.
+
+### Conclusion:
+- **Supplier1**: No record found in Salesforce.
+- **Dorian Feaux** and **Arne Albrecht**: No company records were checked against them and might also not exist in Salesforce.
+
+### Result:
+- **Companies without CRM records**: 
+  - Supplier1
+  - Dorian Feaux (if treated as a company)
+  - Arne Albrecht (if treated as a company)
+
+These findings indicate that "Supplier1" is currently unrecorded in your CRM, while "Dorian Feaux" and "Arne Albrecht" need clarification on whether they represent companies or individual contacts.

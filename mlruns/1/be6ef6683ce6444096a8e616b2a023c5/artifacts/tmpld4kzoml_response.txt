@@ -1,0 +1,64 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Here is a comprehensive overview of the people you have meetings with this week, including their communication history, CRM details, and related locations:
+
+### 1. **Arne Albrecht**
+- **Emails:**
+  - From: Arne Albrecht (albrecht.arne@gmail.com) regarding **delivery issues**.
+  - Attending meetings organized by SmartAdmin.
+- **CRM Details:**
+  - **Full Name:** Arne Albrecht
+  - **Email:** a.albrecht@easi.net
+  - **Company:** EASI
+  - **Title:** Business Analyst
+- **Location:**
+  - **Name:** Arne Albrecht (customer)
+  - **Address:** Lippenslaan 347, Knokke, 8300, Belgium
+  - **Last Order Date:** 15 April 2026
+
+### 2. **Marc Supplier**
+- **Emails:**
+  - From: Marc Supplier (marc.supplier@supplier1.be) regarding **updated pricing** and **contract follow-up**.
+- **CRM Details:**
+  - **Full Name:** Marc Supplier
+  - **Company:** supplier1
+  - **Title:** Account Manager
+  
+### 3. **John Lastname**
+- **Emails:**
+  - Attending a meeting organized by SmartAdmin.
+- **CRM Details:**
+  - **Full Name:** John Lastname
+  - **Email:** john.lastname@globalmedia.com
+  - **Company:** Global Media
+  - **Phone:** 0272700252
+
+### 4. **Dorian Féaux**
+- **Emails:**
+  - From: Dorian Féaux (d.feaux@easi.net) regarding an **EASI collaboration proposal**.
+  
+### 5. **Ferrero Benelux Marketing**
+- **Emails:**
+  - Regarding a **Nutella spring campaign inquiry**.
+  
+### 6. **GreenTech Solutions**
+- **Emails:**
+  - Inquiry about a **sustainability dashboard**.
+- **Location:**
+  - **Name:** GreenTech Solutions - Ghent
+  - **Address:** Technologiepark 122, Ghent, 9052, Belgium
+
+### 7. **Colruyt Group**
+- **Emails:**
+  - Confirmation for a **SmartSales pilot**.
+  
+### Locations Summary
+- **Ferrero Benelux - Brussels:**
+  - **Address:** Bld de la Woluwe 42, Brussels, 1200, Belgium
+- **GreenTech Solutions - Ghent:**
+  - **Address:** Technologiepark 122, Ghent, 9052, Belgium
+
+No additional meetings or relevant information was found in the data that could further assist with your meetings this week.

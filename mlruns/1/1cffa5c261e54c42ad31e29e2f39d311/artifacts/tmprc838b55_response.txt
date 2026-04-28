@@ -1,0 +1,57 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here are your follow-up tasks for today based on the information gathered:
+
+### Emails to Follow Up
+- **Belgium region — Q1 2026 commercial summary**
+  - **From:** SmartAdmin
+  - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7tAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **Intro: Dorian Feaux — EASI collaboration proposal**
+  - **From:** Dorian Féaux
+  - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7sAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **Ferrero Benelux — Nutella spring campaign inquiry**
+  - **From:** Ferrero Benelux Marketing
+  - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7rAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **GreenTech Solutions — Interest in sustainability dashboard**
+  - **From:** GreenTech Solutions
+  - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7qAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **Colruyt Group — SmartSales pilot bevestiging**
+  - **From:** Colruyt Group Procurement
+  - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7pAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **supplier1 — Updated pricing for H2 2026**
+  - **From:** Marc Supplier
+  - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7oAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **Follow-up: supplier1 Q2 2026 Delivery Contract**
+  - **From:** Marc Supplier
+  - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7nAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+### Calendar Events
+- **30 April 2026:** Closing Opportunity
+- **6 May 2026:** Weekly sync with Dorian Feaux
+- **8 May 2026:** Sprint review with Arne Albrecht 
+- **10 May 2026:** Review of supplier1 — Q2 Deliveries
+- **12 May 2026:** Technical Qualification Call with GreenTech Solutions
+- **15 May 2026:** SmartSales Rollout Kickoff with Colruyt Group
+
+### Salesforce Opportunities
+- Follow up on the status of these opportunities:
+  - **Ferrero — Nutella In-Store Display Campaign** (Close Date: 1 October 2026)
+  - **Colruyt Group — SmartSales Rollout 2026** (Close Date: 30 September 2026)
+  - **GreenTech Solutions — Sustainability Dashboard** (Close Date: 15 August 2026)
+  - **supplier1 — Q2 Delivery Contract** (Close Date: 30 June 2026)
+  - **supp_opportunity** (Close Date: 8 May 2026)
+  - **new opportunity** (Close Date: 30 April 2026)
+
+### Cases in Salesforce
+- **Colruyt — Integration issue with POS system** (Priority: Medium, Status: New)
+- **Delayed shipment — supplier1 April batch** (Priority: High, Status: Working)
+
+Stay on top of your follow-ups by addressing these items today.

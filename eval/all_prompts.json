@@ -4,773 +4,1488 @@
     "category": "identity",
     "difficulty": "simple",
     "expected_answer": "The response contains the authenticated user's display name and email address from Microsoft 365.",
-    "tags": ["whoami"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "whoami"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Show me my 5 most recent emails.",
     "category": "email",
     "difficulty": "simple",
     "expected_answer": "A list of the 5 most recent inbox emails, each with at minimum the subject line, sender name or email address, and received date/time.",
-    "tags": ["list_email"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "list_email"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Search for emails that have the word 'meeting' in the subject.",
     "category": "email",
     "difficulty": "medium",
     "expected_answer": "A list of emails whose subject contains 'meeting', showing subject, sender, and date. If no results are found, the response clearly states so.",
-    "tags": ["search_email"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "search_email"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Have I received any emails in the last 7 days? List sender and subject.",
     "category": "email",
     "difficulty": "medium",
     "expected_answer": "A list of emails received in the past 7 days, each showing the sender and subject. If none, the response clearly states the inbox was empty for that period.",
-    "tags": ["search_email"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "search_email"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "What does my most recent email say? Give me the full body.",
     "category": "email",
     "difficulty": "hard",
     "expected_answer": "The full body text of the most recent email, preceded by its subject and sender. The body is not truncated or summarised.",
-    "tags": ["list_email", "read_email"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "list_email",
+      "read_email"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Find the email address of Dorian.",
     "category": "people",
     "difficulty": "simple",
     "expected_answer": "The email address(es) associated with a person named Dorian found in the Microsoft 365 directory, along with their display name.",
-    "tags": ["findpeople"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "findpeople"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "What are my upcoming calendar events this week?",
     "category": "calendar",
     "difficulty": "simple",
     "expected_answer": "A list of calendar events for the current week, each with event title, start date and time, and optionally end time or location.",
-    "tags": ["list_calendar"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "list_calendar"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Search my calendar for any events or meetings in the next 14 days.",
     "category": "calendar",
     "difficulty": "medium",
     "expected_answer": "A list of calendar events occurring in the next 14 days, each showing the event title and start date/time",
-    "tags": ["search_calendar"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "search_calendar"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Show me my Microsoft 365 contacts.",
     "category": "contacts",
     "difficulty": "simple",
     "expected_answer": "A list of the user's Microsoft 365 contacts, each with display name and email address.",
-    "tags": ["list_contacts"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "list_contacts"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Find any Excel or PDF files in my OneDrive.",
     "category": "files",
     "difficulty": "medium",
     "expected_answer": "A list of Excel (.xlsx/.xls) or PDF files found in OneDrive, each with the file name and its ID.",
-    "tags": ["search_files"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "search_files"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Search OneDrive for a file called 'report' and read its content.",
     "category": "files",
     "difficulty": "hard",
     "expected_answer": "The text content of a file whose name contains 'report', preceded by the file name. If no such file is found, the response clearly states so.",
-    "tags": ["search_files", "read_file"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "search_files",
+      "read_file"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Show me emails I received in the last 14 days.",
     "category": "email",
     "difficulty": "medium",
     "expected_answer": "A list of emails received in the past 14 days, each showing at minimum subject, sender, and received date, mind the format: year-month-day",
-    "tags": ["search_email"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "search_email"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Find emails with 'invoice' in the subject.",
     "category": "email",
     "difficulty": "medium",
     "expected_answer": "A list of emails where the subject contains 'invoice', showing sender, subject, and date. If none found, the response states so clearly.",
-    "tags": ["search_email"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "search_email"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Find the most recent email with 'meeting' in the subject and read its full body.",
     "category": "email",
     "difficulty": "hard",
     "expected_answer": "The full body of the most recent email whose subject contains 'meeting', preceded by the sender and subject line.",
-    "tags": ["search_email", "read_email"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "search_email",
+      "read_email"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Look up the email address of Arne in the organization.",
     "category": "people",
     "difficulty": "simple",
     "expected_answer": "The email address and display name of one or more people named Arne found in the Microsoft 365 directory.",
-    "tags": ["findpeople"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "findpeople"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Find all Word documents in my OneDrive.",
     "category": "files",
     "difficulty": "simple",
     "expected_answer": "A list of Word (.docx or .doc) files found in OneDrive, each with the file name and its ID.",
-    "tags": ["search_files"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "search_files"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Find a document called 'agenda' in OneDrive and show its content.",
     "category": "files",
     "difficulty": "medium",
     "expected_answer": "The text content of a file named 'agenda' retrieved from OneDrive.",
-    "tags": ["search_files", "read_file"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "search_files",
+      "read_file"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
-
   {
     "text": "Search OneDrive for Excel files and read the content of the first two found.",
     "category": "files",
     "difficulty": "hard",
     "expected_answer": "The text content of the first two Excel files found in OneDrive, each clearly labelled with its filename.",
-    "tags": ["search_files", "read_multiple_files"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "search_files",
+      "read_multiple_files"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Find any files related to 'nutella' in OneDrive and read all of them.",
     "category": "files",
     "difficulty": "hard",
     "expected_answer": "The text content of every file matching 'nutella' found in OneDrive, each labelled with its filename. If no files are found, states so clearly.",
-    "tags": ["search_files", "read_multiple_files"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "search_files",
+      "read_multiple_files"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "List my Microsoft 365 contacts and include their phone numbers.",
     "category": "contacts",
     "difficulty": "medium",
     "expected_answer": "A list of Microsoft 365 contacts, each showing display name, email address, and phone number (if available).",
-    "tags": ["list_contacts"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "list_contacts"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "How many calendar events do I have scheduled this week? List them all.",
     "category": "calendar",
     "difficulty": "medium",
     "expected_answer": "A count and a complete list of all calendar events in the current week, each with event title and start date/time.",
-    "tags": ["list_calendar"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "list_calendar"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "Search my calendar for events scheduled in the next 30 days.",
     "category": "calendar",
     "difficulty": "medium",
     "expected_answer": "A list of calendar events occurring in the next 30 days, each showing event title, start date/time, and optionally location. Today is the 14th of april 2026",
-    "tags": ["search_calendar"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "search_calendar"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
-
   {
     "text": "List 5 Salesforce accounts.",
     "category": "accounts",
     "difficulty": "simple",
     "expected_answer": "A list of exactly 5 Salesforce account records, each with at minimum the Id and Name fields.",
-    "tags": ["find_accounts"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "find_accounts"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Find Salesforce accounts in Belgium, including their billing address.",
     "category": "accounts",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce accounts where BillingCountry is Belgium, each showing Name and billing address fields (BillingStreet, BillingCity, BillingCountry).",
-    "tags": ["find_accounts"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "find_accounts"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Show me 5 Salesforce contacts with their email addresses.",
     "category": "contacts",
     "difficulty": "simple",
     "expected_answer": "A list of 5 Salesforce contact records, each with Name and Email fields.",
-    "tags": ["find_contacts"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "find_contacts"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Find Salesforce contacts in the Sales department.",
     "category": "contacts",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce contacts where Department equals 'Sales', each showing Name and Department. If none found, the response states so clearly.",
-    "tags": ["find_contacts"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "find_contacts"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Show me 5 leads in Salesforce.",
     "category": "leads",
     "difficulty": "simple",
     "expected_answer": "A list of 5 Salesforce lead records, each with at minimum Name and Company fields.",
-    "tags": ["find_leads"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "find_leads"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Find Salesforce leads from the Technology or Software industry.",
     "category": "leads",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce leads where Industry is Technology or Software, each showing Name and Industry.",
-    "tags": ["find_leads"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "find_leads"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "List 5 open opportunities in Salesforce.",
     "category": "opportunities",
     "difficulty": "simple",
     "expected_answer": "A list of 5 open Salesforce opportunities, each with Name and StageName fields.",
-    "tags": ["get_opportunities"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "get_opportunities"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Show me Salesforce opportunities with an amount greater than 10,000. Include probability.",
     "category": "opportunities",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce opportunities where Amount > 10000, each showing Name, Amount, and Probability.",
-    "tags": ["get_opportunities"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "get_opportunities"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "List open support cases in Salesforce.",
     "category": "cases",
     "difficulty": "simple",
     "expected_answer": "A list of open Salesforce cases (Status != Closed), each with CaseNumber and Status fields.",
-    "tags": ["get_cases"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "get_cases"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Show me 5 closed Salesforce cases including their close date and description.",
     "category": "cases",
     "difficulty": "medium",
     "expected_answer": "A list of 5 closed Salesforce cases, each with CaseNumber, Status (Closed), ClosedDate, and Description fields.",
-    "tags": ["get_cases"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "get_cases"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Find Salesforce accounts that have 'Group' in their name.",
     "category": "accounts",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce accounts where Name contains 'Group', each showing Id and Name.",
-    "tags": ["find_accounts"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "find_accounts"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Show me Salesforce accounts with their phone numbers.",
     "category": "accounts",
     "difficulty": "simple",
     "expected_answer": "A list of Salesforce accounts each showing Id, Name, and Phone. Accounts without a phone number may show an empty value.",
-    "tags": ["find_accounts"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "find_accounts"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Find Salesforce contacts with 'Manager' in their title.",
     "category": "contacts",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce contacts where Title contains 'Manager', each showing Name, Title, and Email.",
-    "tags": ["find_contacts"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "find_contacts"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Show me the most recently created Salesforce contacts.",
     "category": "contacts",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce contacts each showing Name, Email",
-    "tags": ["find_contacts"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "find_contacts"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Find Salesforce leads that have been converted.",
     "category": "leads",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce leads where IsConverted is true, each showing Name, Company, and Status.",
-    "tags": ["find_leads"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "find_leads"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Show me Salesforce leads with the status 'New'.",
     "category": "leads",
     "difficulty": "simple",
     "expected_answer": "A list of Salesforce leads where Status is 'new', each showing Name, Company, and Status.",
-    "tags": ["find_leads"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "find_leads"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Show me Salesforce opportunities in the 'Qualification' stage.",
     "category": "opportunities",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce opportunities where StageName is 'Qualification', each showing Name, Amount, and StageName.",
-    "tags": ["get_opportunities"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "get_opportunities"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "List Salesforce opportunities sorted by amount, highest first.",
     "category": "opportunities",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce opportunities ordered by Amount descending, each showing Name, Amount, and StageName.",
-    "tags": ["get_opportunities"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "get_opportunities"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Find high-priority open cases in Salesforce.",
     "category": "cases",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce cases where Status is not Closed and Priority is High, each showing CaseNumber, Subject, and Priority.",
-    "tags": ["get_cases"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "get_cases"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Show me Salesforce cases with their related account names.",
     "category": "cases",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce cases each showing CaseNumber, Status, Subject, and the Name of the related Account.",
-    "tags": ["get_cases"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "get_cases"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Find Salesforce accounts in France and list the contacts linked to those accounts.",
     "category": "accounts",
     "difficulty": "hard",
     "expected_answer": "First a list of Salesforce accounts where BillingCountry is France, then the contacts associated with each of those accounts.",
-    "tags": ["find_accounts", "find_contacts"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "find_accounts",
+      "find_contacts"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
   {
     "text": "Show me the 3 largest open Salesforce opportunities and the billing country of each related account.",
     "category": "opportunities",
     "difficulty": "hard",
     "expected_answer": "The 3 open Salesforce opportunities with the highest Amount, each showing Name, Amount, and the BillingCountry of the related Account.",
-    "tags": ["get_opportunities", "find_accounts"],
-    "expected_agents": ["salesforce"]
+    "tags": [
+      "get_opportunities",
+      "find_accounts"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
   },
-
-
   {
     "text": "List all SmartSales locations.",
     "category": "locations",
     "difficulty": "simple",
     "expected_answer": "A JSON array of SmartSales location objects. Each object contains at minimum the uid and name fields. The response also reports the total count.",
-    "tags": ["list_locations"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_locations"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "Find SmartSales locations in Brussels.",
     "category": "locations",
     "difficulty": "medium",
     "expected_answer": "A JSON array of SmartSales locations where city equals Brussels. Each object has at minimum uid and name. If none found, states so clearly.",
-    "tags": ["list_locations"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_locations"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "List SmartSales locations in Belgium sorted by name, using full projection.",
     "category": "locations",
     "difficulty": "medium",
     "expected_answer": "A JSON array of SmartSales locations in Belgium (country eq Belgium), sorted alphabetically by name, with full projection fields for each entry.",
-    "tags": ["list_locations"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_locations"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "List all SmartSales locations, then retrieve the full details of the first result.",
     "category": "locations",
     "difficulty": "hard",
     "expected_answer": "First the list of locations, then the complete detail object of the first location retrieved by its uid, containing all available fields.",
-    "tags": ["list_locations", "get_location"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_locations",
+      "get_location"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "What fields are available to display in the SmartSales location list?",
     "category": "locations",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors indicating which fields can be shown in the SmartSales location list view (e.g. name, city, country, uid).",
-    "tags": ["list_displayable_fields"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_displayable_fields"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "What fields can I use to filter SmartSales locations?",
     "category": "locations",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors showing which fields support query/filter operators for SmartSales locations (e.g. city, country, name).",
-    "tags": ["list_queryable_fields"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_queryable_fields"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "What fields can I use to sort SmartSales locations?",
     "category": "locations",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors showing which fields can be used as sort keys for SmartSales locations.",
-    "tags": ["list_sortable_fields"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_sortable_fields"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "List SmartSales catalog items.",
     "category": "catalog",
     "difficulty": "simple",
     "expected_answer": "A JSON array of SmartSales catalog item objects. Each object contains at minimum the uid field.",
-    "tags": ["list_catalog_items"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_catalog_items"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "List SmartSales catalog items with simple projection, sorted by name.",
     "category": "catalog",
     "difficulty": "medium",
     "expected_answer": "A JSON array of catalog items with simple projection fields, returned in alphabetical order by name.",
-    "tags": ["list_catalog_items"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_catalog_items"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "List SmartSales catalog items, then retrieve the full details of the first one.",
     "category": "catalog",
     "difficulty": "hard",
     "expected_answer": "First the list of catalog items, then the full detail object of the first item retrieved by its uid, containing all available fields.",
-    "tags": ["list_catalog_items", "get_catalog_item"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_catalog_items",
+      "get_catalog_item"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "What fields can be displayed for SmartSales catalog items?",
     "category": "catalog",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors indicating which fields can be shown in the SmartSales catalog item list view.",
-    "tags": ["list_catalog_displayable_fields"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_catalog_displayable_fields"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "What fields can I filter SmartSales catalog items by?",
     "category": "catalog",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors showing which fields support query/filter operators for SmartSales catalog items.",
-    "tags": ["list_catalog_queryable_fields"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_catalog_queryable_fields"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "What fields can I sort SmartSales catalog items by?",
     "category": "catalog",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors showing which fields can be used as sort keys for SmartSales catalog items.",
-    "tags": ["list_catalog_sortable_fields"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_catalog_sortable_fields"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "List recent SmartSales orders.",
     "category": "orders",
     "difficulty": "simple",
     "expected_answer": "A JSON array of SmartSales order objects. Each object contains at minimum the uid field.",
-    "tags": ["list_orders"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_orders"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "List SmartSales orders with full projection.",
     "category": "orders",
     "difficulty": "medium",
     "expected_answer": "A JSON array of SmartSales orders with the full projection applied, meaning each order object contains all available fields.",
-    "tags": ["list_orders"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_orders"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "List SmartSales orders, then retrieve the full details of the first order.",
     "category": "orders",
     "difficulty": "hard",
     "expected_answer": "First the list of orders, then the complete detail object of the first order retrieved by its uid, containing all available fields.",
-    "tags": ["list_orders", "get_order"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_orders",
+      "get_order"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "What is the SmartSales order configuration?",
     "category": "orders",
     "difficulty": "simple",
     "expected_answer": "A JSON object describing the global SmartSales order configuration, including form sections, configurable fields, and order settings.",
-    "tags": ["get_order_configuration"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "get_order_configuration"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "List all SmartSales order approbation statuses.",
     "category": "orders",
     "difficulty": "simple",
     "expected_answer": "A JSON array of SmartSales order approbation (approval) status objects, each with at minimum a uid field.",
-    "tags": ["list_approbation_statuses"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_approbation_statuses"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "List SmartSales approbation statuses, then get the full details of the first one.",
     "category": "orders",
     "difficulty": "hard",
     "expected_answer": "First the list of approbation statuses, then the full detail object of the first status retrieved by its uid.",
-    "tags": ["list_approbation_statuses", "get_approbation_status"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_approbation_statuses",
+      "get_approbation_status"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "What fields can be displayed for SmartSales orders?",
     "category": "orders",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors indicating which fields can be shown in the SmartSales order list view.",
-    "tags": ["list_order_displayable_fields"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_order_displayable_fields"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "What fields can I filter SmartSales orders by?",
     "category": "orders",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors showing which fields support query/filter operators for SmartSales orders.",
-    "tags": ["list_order_queryable_fields"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_order_queryable_fields"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
   {
     "text": "What fields can I sort SmartSales orders by?",
     "category": "orders",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors showing which fields can be used as sort keys for SmartSales orders.",
-    "tags": ["list_order_sortable_fields"],
-    "expected_agents": ["smartsales"]
+    "tags": [
+      "list_order_sortable_fields"
+    ],
+    "expected_agents": [
+      "smartsales"
+    ]
   },
-
   {
     "text": "Give me an overview of my upcoming meetings from Microsoft 365, related Salesforce opportunities, and SmartSales locations for the companies involved.",
     "category": "cross-system",
     "difficulty": "hard",
     "expected_answer": "Upcoming calendar events from Microsoft 365, followed by any Salesforce opportunities related to the meeting subjects or attendees, followed by SmartSales locations for any recognized company names.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "List my Microsoft 365 contacts with their phone numbers and check if those contacts also exist in Salesforce.",
     "category": "cross-system",
     "difficulty": "hard",
     "expected_answer": "Microsoft 365 contacts each showing name, email, and phone number, followed by a note for each contact on whether they appear in Salesforce (matched by email or name).",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce"],
-    "expected_agents": ["graph", "salesforce"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
   },
   {
     "text": "Find Salesforce leads in Belgium and check if there are SmartSales locations in the same country.",
     "category": "cross-system",
     "difficulty": "hard",
     "expected_answer": "Salesforce leads with County = Belgium (name, email, company), followed by SmartSales locations in Belgium, shown in two labelled sections.",
-    "tags": ["orchestrator", "multi-agent", "salesforce", "smartsales"],
-    "expected_agents": ["salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "salesforce",
+      "smartsales"
+    ],
+    "expected_agents": [
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "Who sent me emails in the past 7 days? For each sender's email domain, check if there is a matching Salesforce contact for these adresses.",
     "category": "cross-system",
     "difficulty": "hard",
     "expected_answer": "Emails received this week with sender names and domains, followed by a check per domain whether a Salesforce has a matching contact. today is the 20th of april 2026",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce"],
-    "expected_agents": ["graph", "salesforce"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
   },
   {
     "text": "List Salesforce opportunities that are closing this month and check if I have any calendar events related to those account names.",
     "category": "cross-system",
     "difficulty": "hard",
     "expected_answer": "Salesforce opportunities closing this month (Name, Account, CloseDate, Amount), followed by any Microsoft 365 calendar events whose subject or attendees match the account names.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce"],
-    "expected_agents": ["graph", "salesforce"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
   },
   {
     "text": "Search my OneDrive for files about 'locations' and find those locations in SmartSales.",
     "category": "cross-system",
     "difficulty": "hard",
     "expected_answer": "Files found in OneDrive matching 'locations' with names and links, followed by SmartSales location search results for any location names mentioned in those files.",
-    "tags": ["orchestrator", "multi-agent", "graph", "smartsales"],
-    "expected_agents": ["graph", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "smartsales"
+    ],
+    "expected_agents": [
+      "graph",
+      "smartsales"
+    ]
   },
   {
     "text": "Take the sender of my most recent email, look them up in Salesforce as a contact or lead, and check if their company has a SmartSales location.",
     "category": "cross-system",
     "difficulty": "hard",
     "expected_answer": "The sender name and email of the most recent email, their Salesforce record (contact or lead) if found, and SmartSales location results for their company name.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "Read the most recently modified OneDrive file and check if any company names in it are Salesforce accounts.",
     "category": "cross-system",
     "difficulty": "hard",
     "expected_answer": "The content or summary of the most recently modified OneDrive file, followed by a Salesforce account lookup for any company names found in it.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce"],
-    "expected_agents": ["graph", "salesforce"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
   },
   {
     "text": "Give me a 360 view of this salesforce account: supplier1 : open opportunities, any SmartSales locations for that account, and any emails I have about that company.",
     "category": "cross-system",
     "difficulty": "hard",
     "expected_answer": "(1) open opportunities for that account, (2) SmartSales locations matching the company name, (3) Microsoft 365 emails mentioning the company name.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
-
   {
     "text": "Tell me everything you know about supplier1.",
-    "category": "entity-centric",
+    "category": "entity-centric1",
     "difficulty": "hard",
     "expected_answer": "A combined overview from all available systems: CRM data (Salesforce accounts, contacts, opportunities), communication history (emails and calendar events from Microsoft 365), and physical presence (SmartSales locations). Each section clearly labelled by source.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "Give me a full briefing on Colruyt.",
-    "category": "entity-centric",
+    "category": "entity-centric1",
     "difficulty": "hard",
     "expected_answer": "A combined overview from all available systems covering Colruyt: CRM records (accounts, opportunities, cases), recent emails or calendar events mentioning Colruyt, and any SmartSales locations linked to Colruyt.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "What is the current status of our relationship with supplier1?",
-    "category": "entity-centric",
+    "category": "entity-centric1",
     "difficulty": "hard",
     "expected_answer": "A summary of the current relationship status: open Salesforce opportunities or cases for supplier1, recent emails or meetings from Microsoft 365, and SmartSales location data if available.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "Who is Dorian and how do we work with him?",
-    "category": "entity-centric",
+    "category": "entity-centric1",
     "difficulty": "hard",
     "expected_answer": "A person-centric overview: Dorian's contact details and email address from Microsoft 365 directory, his Salesforce record (contact or lead) if present, any recent emails or meetings involving him, and any SmartSales location linked to his company.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "Give me a complete overview of everything related to Arne.",
-    "category": "entity-centric",
+    "category": "entity-centric1",
     "difficulty": "hard",
     "expected_answer": "A combined overview: Arne's identity and email from Microsoft 365, his Salesforce record if present, recent emails or calendar events involving him, and any SmartSales locations linked to his organization.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "What do we know about GreenTech Solutions?",
-    "category": "entity-centric",
+    "category": "entity-centric1",
     "difficulty": "hard",
     "expected_answer": "All available information about GreenTech Solutions across systems: Salesforce account and opportunity data, emails or meetings mentioning the company in Microsoft 365, and SmartSales location data.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "Prepare me for my next meeting. What do I have coming up and what do I know about the companies involved?",
-    "category": "entity-centric",
+    "category": "entity-centric1",
     "difficulty": "hard",
     "expected_answer": "Upcoming calendar events from Microsoft 365, followed by Salesforce account and opportunity data for the companies of the attendees, and SmartSales locations for those companies if available.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "Who are the most important companies we work with right now?",
-    "category": "entity-centric",
+    "category": "entity-centric1",
     "difficulty": "hard",
     "expected_answer": "A combined view of key companies: top Salesforce accounts or open opportunities, companies that have recently appeared in emails or calendar events, and SmartSales locations for those companies.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "Is there anything I should follow up on today?",
-    "category": "entity-centric",
+    "category": "entity-centric1",
     "difficulty": "hard",
     "expected_answer": "A combined follow-up overview: today's or upcoming calendar events, recent unread or action-requiring emails from Microsoft 365, open high-priority Salesforce cases or opportunities with a near close date.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "360-view"],
-    "expected_agents": ["graph", "salesforce"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
   },
   {
-    "text": "Give me a 360° view of the most recent email sender.",
-    "category": "entity-centric",
+    "text": "Give me a 360Ã‚Â° view of the most recent email sender.",
+    "category": "entity-centric1",
     "difficulty": "hard",
     "expected_answer": "The sender of the most recent email, followed by their Salesforce record (contact or lead) if found, any SmartSales location for their company, and a brief communication history (recent emails or meetings).",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "What files, meetings, and deals are linked to supplier1?",
-    "category": "entity-centric",
+    "category": "entity-centric2",
     "difficulty": "hard",
     "expected_answer": "OneDrive files mentioning supplier1 from Microsoft 365, calendar events involving supplier1, and Salesforce opportunities or accounts for supplier1.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "360-view"],
-    "expected_agents": ["graph", "salesforce"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
   },
   {
     "text": "Show me everything related to Belgium across all our systems.",
-    "category": "entity-centric",
+    "category": "entity-centric2",
     "difficulty": "hard",
     "expected_answer": "Salesforce accounts and leads based in Belgium, SmartSales locations in Belgium, and any emails or calendar events referencing Belgium from Microsoft 365.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "What is the full picture of our top open deal?",
-    "category": "entity-centric",
+    "category": "entity-centric2",
     "difficulty": "hard",
     "expected_answer": "The highest-value open Salesforce opportunity with its account name, followed by any emails or calendar events in Microsoft 365 mentioning that account, and any SmartSales locations for that company.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "How active have we been with supplier1 over the past month?",
-    "category": "entity-centric",
+    "category": "entity-centric2",
     "difficulty": "hard",
     "expected_answer": "A summary of recent activity related to supplier1: emails received or sent in the past month from Microsoft 365, calendar events involving supplier1, and Salesforce opportunity or case updates.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "360-view"],
-    "expected_agents": ["graph", "salesforce"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
   },
   {
     "text": "Find everything related to the word 'nutella' across all our systems.",
-    "category": "entity-centric",
+    "category": "entity-centric2",
     "difficulty": "hard",
     "expected_answer": "OneDrive files mentioning nutella, emails with nutella in subject or body, Salesforce accounts or contacts linked to nutella, and SmartSales locations or catalog items related to nutella.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "Give me a summary of all activity related to my next calendar event.",
-    "category": "entity-centric",
+    "category": "entity-centric2",
     "difficulty": "hard",
     "expected_answer": "The next upcoming calendar event with its attendees, followed by Salesforce records for the attendees or their companies, and any recent emails related to the event subject or participants.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "360-view"],
-    "expected_agents": ["graph", "salesforce"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
   },
   {
     "text": "Which companies appear both in our CRM and in our email history?",
-    "category": "entity-centric",
+    "category": "entity-centric2",
     "difficulty": "hard",
     "expected_answer": "A list of companies found in Salesforce accounts, cross-referenced with company or domain names appearing in recent Microsoft 365 emails, highlighting overlapping names.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "360-view"],
-    "expected_agents": ["graph", "salesforce"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
   },
   {
     "text": "What locations do we have and what deals are linked to them?",
-    "category": "entity-centric",
+    "category": "entity-centric2",
     "difficulty": "hard",
     "expected_answer": "A list of SmartSales locations, followed by any Salesforce accounts or opportunities whose names match those locations or their cities.",
-    "tags": ["orchestrator", "multi-agent", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "Tell me about the companies behind my open support cases.",
-    "category": "entity-centric",
+    "category": "entity-centric2",
     "difficulty": "hard",
     "expected_answer": "Open Salesforce cases with their related account names, followed by any emails or calendar events in Microsoft 365 referencing those account names, and SmartSales locations for those companies if available.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "What do I need to know about the people I have meetings with this week?",
-    "category": "entity-centric",
+    "category": "entity-centric2",
     "difficulty": "hard",
     "expected_answer": "This week's calendar events with attendee names and companies, followed by Salesforce records (contacts, leads, or account) for those people or their companies, and any SmartSales locations linked to those companies.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
   },
   {
     "text": "Give me a full picture of our commercial activity in Brussels.",
-    "category": "entity-centric",
+    "category": "entity-centric2",
     "difficulty": "hard",
     "expected_answer": "SmartSales locations in Brussels, Salesforce accounts or opportunities linked to Brussels-based companies, and any emails or calendar events related to Brussels from Microsoft 365.",
-    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
-    "expected_agents": ["graph", "salesforce", "smartsales"]
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce",
+      "smartsales"
+    ]
+  },
+  {
+    "text": "Who is the contact person behind my most expensive open order?",
+    "category": "implicit-cross-system",
+    "difficulty": "hard",
+    "expected_answer": "The most expensive open SmartSales order is ORD-GTS-2026-001 for GreenTech Solutions (1x Dashboard License @ EUR 2,500.00). GreenTech Solutions has a Salesforce account but no contact person is linked to that account. The response should identify GreenTech as the supplier of the most expensive order and note that no named contact is available in Salesforce for this account.",
+    "tags": [
+      "implicit-link",
+      "ss-to-sf"
+    ],
+    "expected_agents": [
+      "smartsales",
+      "salesforce"
+    ]
+  },
+  {
+    "text": "Which of my recent email senders also have an active deal with us?",
+    "category": "implicit-cross-system",
+    "difficulty": "hard",
+    "expected_answer": "Four recent email senders have active deals: supplier1 (marc.supplier@supplier1.be, deal EUR 85,000), Colruyt Group (procurement@colruyt.be, deal EUR 220,000), GreenTech Solutions (info@greentechsolutions.be, deal EUR 45,000), and Ferrero Benelux (marketing@ferrero.be, deal EUR 30,000). SmartAdmin (internal) and Microsoft Azure (azure-noreply@microsoft.com) have no Salesforce deals. Dorian Feaux (d.feaux@easi.net) is a contact at EASI which has no open opportunity.",
+    "tags": [
+      "implicit-link",
+      "graph-to-sf"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
+  },
+  {
+    "text": "Are there companies in my upcoming calendar that we have no record of?",
+    "category": "implicit-cross-system",
+    "difficulty": "hard",
+    "expected_answer": "All companies in the upcoming calendar have a Salesforce record. Calendar events include supplier1 (account + opportunity in SF), Colruyt Group (account + opportunity in SF), GreenTech Solutions (account + opportunity in SF), and EASI (Dorian Feaux and Arne Albrecht are both SF contacts linked to EASI). The correct answer is that no calendar company is missing from the CRM.",
+    "tags": [
+      "implicit-link",
+      "graph-to-sf",
+      "gap-analysis"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
+  },
+  {
+    "text": "Which companies that emailed me recently do not seem to have a location registered with us?",
+    "category": "implicit-cross-system",
+    "difficulty": "hard",
+    "expected_answer": "Only two recent email senders have no SmartSales location: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com, internal system account) and Microsoft Azure (azure-noreply@microsoft.com). The following senders DO have registered locations and must NOT be listed as missing: supplier1 (location 'supplier1'), Colruyt Group (location 'Colruyt - Halle'), GreenTech Solutions (location 'GreenTech Solutions - Ghent'), Ferrero Benelux (location 'Ferrero Benelux - Brussels (Nutella)'), and Dorian Feaux whose company EASI also has a location.",
+    "tags": [
+      "implicit-link",
+      "graph-to-ss",
+      "gap-analysis"
+    ],
+    "expected_agents": [
+      "graph",
+      "smartsales"
+    ]
+  },
+  {
+    "text": "For the company behind my most recent open support case, what else do we know about them?",
+    "category": "implicit-cross-system",
+    "difficulty": "hard",
+    "expected_answer": "The most recent open Salesforce case is linked to supplier1. Other known data about supplier1: open opportunity 'supplier1 — Q2 Delivery Contract' (EUR 85,000, Negotiation/Review); SmartSales order ORD-SUP1-2026-001 (EUR 1,499.90, 10x Industrial Components Pack); contact Marc Supplier (marc.supplier@supplier1.be); emails about Q2 delivery delay and updated pricing; OneDrive file 'supplier1_delivery_report_Q2_2026.txt'; calendar event May 10 'supplier1 — Q2 Delivery Review'.",
+    "tags": [
+      "implicit-link",
+      "sf-to-graph",
+      "sf-to-ss"
+    ],
+    "expected_agents": [
+      "salesforce",
+      "graph",
+      "smartsales"
+    ]
+  },
+  {
+    "text": "What is the total order value for companies that currently have an open support case?",
+    "category": "implicit-cross-system",
+    "difficulty": "hard",
+    "expected_answer": "Two companies have open Salesforce support cases: supplier1 and Colruyt Group. Their SmartSales order values are: supplier1 EUR 1,499.90 (ORD-SUP1-2026-001) and Colruyt EUR 447.50 (ORD-COL-2026-001). The total order value is EUR 1,947.40. A response that reports a different total or includes other companies (GreenTech, Ferrero) is incorrect.",
+    "tags": [
+      "implicit-link",
+      "sf-to-ss",
+      "aggregation"
+    ],
+    "expected_agents": [
+      "salesforce",
+      "smartsales"
+    ]
+  },
+  {
+    "text": "Which companies am I meeting this week that have no active deal with us?",
+    "category": "implicit-cross-system",
+    "difficulty": "hard",
+    "expected_answer": "Today is April 28, 2026. This week (April 27–May 3) has NO calendar events scheduled. The correct response is that there are no meetings this week. If the agent broadens the scope to upcoming meetings (May 6–15), all companies encountered (EASI/Dorian, EASI/Arne, supplier1, GreenTech, Colruyt) have active deals or are linked to known accounts. No company is without a deal.",
+    "tags": [
+      "implicit-link",
+      "graph-to-sf",
+      "gap-analysis"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
+  },
+  {
+    "text": "For each person I have a meeting with this week, give me everything we know about them.",
+    "category": "implicit-cross-system",
+    "difficulty": "hard",
+    "expected_answer": "Today is April 28, 2026. This week (April 27–May 3) has NO calendar events. The correct response is that no meetings are scheduled this week. If the agent broadens scope to the coming week (May 4–10), it should cover Dorian Feaux (May 6: SF contact at EASI, Sales Engineer, d.feaux@easi.net, email received about EASI collaboration) and Arne Albrecht (May 8: SF contact at EASI, Business Analyst, a.albrecht@easi.net), and supplier1 review (May 10, no named attendee).",
+    "tags": [
+      "implicit-link",
+      "graph-to-sf",
+      "graph-to-graph"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
+  },
+  {
+    "text": "Which of our accounts have both an active deal and a recent order?",
+    "category": "implicit-cross-system",
+    "difficulty": "hard",
+    "expected_answer": "All four main accounts have both an active Salesforce opportunity and a recent SmartSales order: supplier1 (deal EUR 85,000 + order EUR 1,499.90), Colruyt Group (deal EUR 220,000 + order EUR 447.50), GreenTech Solutions (deal EUR 45,000 + order EUR 2,500.00), and Ferrero Benelux (deal EUR 30,000 + order EUR 239.52). The response should list all four accounts.",
+    "tags": [
+      "implicit-link",
+      "sf-to-ss",
+      "intersection"
+    ],
+    "expected_agents": [
+      "salesforce",
+      "smartsales"
+    ]
+  },
+  {
+    "text": "Find any files we have related to our most valuable open deal and summarise them.",
+    "category": "implicit-cross-system",
+    "difficulty": "hard",
+    "expected_answer": "The most valuable open Salesforce deal is 'new opp' for Global Media (EUR 1,000,000). There is no OneDrive file related to Global Media. The only relevant file in OneDrive is 'supplier1_delivery_report_Q2_2026.docx' which belongs to supplier1 (EUR 85,000), a different account. The correct response identifies Global Media as the most valuable deal and reports no related file found. A response that names Colruyt (EUR 220,000) or supplier1 as the most valuable deal is incorrect.",
+    "tags": [
+      "implicit-link",
+      "sf-to-graph"
+    ],
+    "expected_agents": [
+      "salesforce",
+      "graph"
+    ]
   }
 ]

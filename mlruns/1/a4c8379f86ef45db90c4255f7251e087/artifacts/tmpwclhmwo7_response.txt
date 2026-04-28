@@ -1,0 +1,22 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+### Summary of Files Related to the Most Valuable Open Deal
+
+- **Deal Overview**:
+  - **Name**: New Opp
+  - **Stage**: Value Proposition
+  - **Amount**: $1,000,000
+  - **Close Date**: 30 April 2026
+  - **Account Name**: Global Media
+
+#### Related Files:
+1. **Contract_GlobalMedia_2026.docx**
+   - [View File](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B9CC62011-7652-4EEE-9DC8-C80201C99BBD%7D&file=Contract_GlobalMedia_2026.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+2. **agenda.docx**
+   - [View File](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B8BB0C73E-6AED-4FEB-8D5E-440279145EBF%7D&file=agenda.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+This summary provides an overview of the most valuable open deal and lists the files associated with it for further review.

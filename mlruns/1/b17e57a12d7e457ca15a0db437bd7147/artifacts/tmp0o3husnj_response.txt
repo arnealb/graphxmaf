@@ -1,0 +1,112 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is a comprehensive overview of all data related to Belgium aggregated from various systems:
+
+### 1. Recent Emails and Calendar Events (from Microsoft 365)
+#### Emails:
+- **Subject:** Belgium region — Q1 2026 commercial summary  
+  **Sender:** SmartAdmin  
+  **Received:** 28 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7tAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+#### Calendar Events:
+1. **Subject:** Closing opportunity  
+   **Start:** 30 April 2026  
+   **End:** 1 May 2026  
+   **Organizer:** SmartAdmin  
+
+2. **Subject:** Weekly sync — Dorian Feaux  
+   **Date:** 6 May 2026  
+   **Organizer:** SmartAdmin  
+
+3. **Subject:** Sprint review — Arne Albrecht  
+   **Date:** 8 May 2026  
+   **Organizer:** SmartAdmin  
+
+4. **Subject:** Supplier1 — Q2 Delivery Review  
+   **Date:** 10 May 2026  
+   **Organizer:** SmartAdmin  
+
+5. **Subject:** GreenTech Solutions — Technical Qualification Call  
+   **Date:** 12 May 2026  
+   **Organizer:** SmartAdmin  
+
+6. **Subject:** Colruyt Group — SmartSales Rollout Kickoff  
+   **Date:** 15 May 2026  
+   **Organizer:** SmartAdmin  
+
+---
+
+### 2. Accounts, Contacts, and Opportunities (from Salesforce)
+#### Accounts:
+- **Brussels Retail Partners** (Industry: Retail)
+- **Ferrero Benelux** (Industry: Food & Beverage)
+- **GreenTech Solutions** (Industry: Technology, Website: [greentechsolutions.be](https://www.greentechsolutions.be))
+- **Colruyt Group** (Industry: Retail, Website: [colruytgroup.com](https://www.colruytgroup.com))
+- **supplier1**
+- **cityaccount** (Website: [google.com](http://www.google.com))
+- **Omega SA-NV** (Industry: Technology, Website: [omegaincorporated.com](http://www.omegaincorporated.com))
+- **Easi Be**
+
+#### Contacts:
+- **supplier1_contact lastname**
+   - Account Name: supplier1  
+
+#### Leads:
+1. **Bert Coppens** (Company: another-company, Status: New, Country: Belgium)
+2. **Arne Albrecht** (Company: easi_dupe, Status: Contacted, Email: albrecht.arne@gmail.com, Country: Belgium)
+3. **ur moms lead ur dads lead** (Company: grandmas bakery, Status: New, Country: Belgium)
+
+#### Opportunities:
+- **Ferrero — Nutella In-Store Display Campaign** (Amount: €30,000, Close Date: 1 October 2026)
+- **Colruyt Group — SmartSales Rollout 2026** (Amount: €220,000, Close Date: 30 September 2026)
+- **GreenTech Solutions — Sustainability Dashboard** (Amount: €45,000, Close Date: 15 August 2026)
+- **supplier1 — Q2 Delivery Contract** (Amount: €85,000, Close Date: 30 June 2026)
+- **supp_opportyunity** (Close Date: 8 May 2026)
+- **new opp** (Amount: €1,000,000, Close Date: 30 April 2026)
+
+#### Cases:
+1. **Colruyt — Integration issue with POS system** (Status: New)
+2. **Delayed shipment — supplier1 April batch** (Status: Working)
+3. **Verification statut case** (Status: In progress)
+
+---
+
+### 3. Locations and Catalog Items (from SmartSales)
+#### Locations:
+- **AACO DAVIDSON**  
+  **Address:** Havenkant 6, Leuven, 3000, Belgium  
+  **Email:** info@aacodavidson.com  
+
+- **Michelles Brasserie**  
+  **Address:** Ingelmunstersestraat 46, Izegem, 8870, Belgium  
+  **Email:** hankar@michellespub.be  
+
+- **Colruyt - Halle**  
+  **Address:** Edingensesteenweg 196, Halle, 1500, Belgium  
+
+- **Customer1**  
+  **Address:** Markt 5, Bruges, 8000, Belgium  
+
+- **EASI - Brussels**  
+  **Address:** Avenue Louise 65, Brussels, 1050, Belgium  
+
+- **Ferrero Benelux - Brussels (Nutella)**  
+  **Address:** Bld de la Woluwe 42, Brussels, 1200, Belgium  
+
+- **GreenTech Solutions - Ghent**  
+  **Address:** Technologiepark 122, Ghent, 9052, Belgium  
+
+- **supplier1**  
+  **Address:** Rue du Commerce 1, Brussels, 1000, Belgium  
+
+#### Catalog Items:
+- **Nutella 750g** - Price: €5.99 (In Stock)
+- **Colruyt House Brand — Retail Display Kit** - Price: €89.50 (In Stock)
+- **GreenTech Solutions — Dashboard License** - Price: €2,500 (In Stock)
+
+---
+
+This overview consolidates all information regarding Belgium across the mentioned systems, providing insights on communications, projects, contacts, locations, and product offerings.

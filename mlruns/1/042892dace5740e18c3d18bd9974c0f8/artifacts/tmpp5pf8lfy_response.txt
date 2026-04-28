@@ -1,0 +1,15 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+The total order value for companies with an open support case, based on the data provided from Salesforce, is as follows:
+
+- Colruyt Group: 220,000.0
+- supplier1: 85,000.0
+- Easi Be: 1,000,000.0
+- Global Media: 215,199.0
+
+**Total Order Value:**
+- 220,000.0 + 85,000.0 + 1,000,000.0 + 215,199.0 = **1,520,199.0**
+
+**Final Total:** 1,520,199.0

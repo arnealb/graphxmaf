@@ -1,0 +1,67 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is a complete overview of everything related to Arne:
+
+### Basic Information
+- **Arne Albrecht**
+  - Email Addresses: 
+    - a.albrecht@easi.net
+    - albrecht.arne@gmail.com
+  - Associated Accounts:
+    - EASI (Salesforce ID: 003KI000009uzRbYAI)
+    - Displaytech (Salesforce ID: 003KI00000964NzYAI)
+
+- **Arne Vermeulen**
+  - Email Address: a.vermeulen@easi.net
+
+### Calendar Events
+- **Upcoming Events:**
+  - **Closing Opportunity**
+    - Start: 30 April 2026
+    - End: 1 May 2026
+    - Organizer: SmartAdmin
+  - **Weekly Sync — Dorian Feaux**
+    - Start: 6 May 2026
+    - End: 6 May 2026
+    - Organizer: SmartAdmin
+  - **Sprint Review — Arne Albrecht**
+    - Start: 8 May 2026
+    - End: 8 May 2026
+    - Organizer: SmartAdmin
+  - **Q2 Delivery Review**
+    - Start: 10 May 2026
+    - End: 10 May 2026
+    - Organizer: SmartAdmin
+  - **Technical Qualification Call**
+    - Start: 12 May 2026
+    - End: 12 May 2026
+    - Organizer: SmartAdmin
+  - **SmartSales Rollout Kickoff**
+    - Start: 15 May 2026
+    - End: 15 May 2026
+    - Organizer: SmartAdmin
+
+### Email Correspondence
+- **Recent Emails Sent by Arne Albrecht:**
+  - **Subject:** Aankoop office supplies
+    - Received: 13 April 2026
+    - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOJ%2FAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+  - **Subject:** Vraag over vertraagde levering
+    - Received: 13 April 2026
+    - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKAAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+  - **Subject:** Accepted: meeting about numbers or something
+    - Received: 16 April 2026
+    - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANR%2BIE1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### Additional Data Points
+- **Location Information (from SmartSales):**
+  - **Address:** Lippenslaan 347, Knokke, 8300, Belgium
+  - **Last Order Date:** 15 April 2026
+- **Accounts Linked to Arne:**
+  - EASI (Salesforce account)
+  - Displaytech (Salesforce account with industry technology)
+
+### Summary
+The comprehensive overview of Arne includes details on his email addresses, associated accounts and contacts, upcoming calendar events, recent email correspondence, and location information.

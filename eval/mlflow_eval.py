@@ -318,6 +318,7 @@ async def run_benchmark_case(
             scorer_client, scorer_deployment,
             question=prompt.text,
             routing_trace_json=json.dumps(result["routing_trace"]),
+            expected_agents=prompt.expected_agents,
         )
 
         # ── Compute routing precision / recall ────────────────────────────────
