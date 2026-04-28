@@ -603,5 +603,174 @@
     "expected_answer": "(1) open opportunities for that account, (2) SmartSales locations matching the company name, (3) Microsoft 365 emails mentioning the company name.",
     "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales"],
     "expected_agents": ["graph", "salesforce", "smartsales"]
+  },
+
+  {
+    "text": "Tell me everything you know about supplier1.",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "A combined overview from all available systems: CRM data (Salesforce accounts, contacts, opportunities), communication history (emails and calendar events from Microsoft 365), and physical presence (SmartSales locations). Each section clearly labelled by source.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["graph", "salesforce", "smartsales"]
+  },
+  {
+    "text": "Give me a full briefing on Colruyt.",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "A combined overview from all available systems covering Colruyt: CRM records (accounts, opportunities, cases), recent emails or calendar events mentioning Colruyt, and any SmartSales locations linked to Colruyt.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["graph", "salesforce", "smartsales"]
+  },
+  {
+    "text": "What is the current status of our relationship with supplier1?",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "A summary of the current relationship status: open Salesforce opportunities or cases for supplier1, recent emails or meetings from Microsoft 365, and SmartSales location data if available.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["graph", "salesforce", "smartsales"]
+  },
+  {
+    "text": "Who is Dorian and how do we work with him?",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "A person-centric overview: Dorian's contact details and email address from Microsoft 365 directory, his Salesforce record (contact or lead) if present, any recent emails or meetings involving him, and any SmartSales location linked to his company.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["graph", "salesforce", "smartsales"]
+  },
+  {
+    "text": "Give me a complete overview of everything related to Arne.",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "A combined overview: Arne's identity and email from Microsoft 365, his Salesforce record if present, recent emails or calendar events involving him, and any SmartSales locations linked to his organization.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["graph", "salesforce", "smartsales"]
+  },
+  {
+    "text": "What do we know about GreenTech Solutions?",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "All available information about GreenTech Solutions across systems: Salesforce account and opportunity data, emails or meetings mentioning the company in Microsoft 365, and SmartSales location data.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["graph", "salesforce", "smartsales"]
+  },
+  {
+    "text": "Prepare me for my next meeting. What do I have coming up and what do I know about the companies involved?",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "Upcoming calendar events from Microsoft 365, followed by Salesforce account and opportunity data for the companies of the attendees, and SmartSales locations for those companies if available.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["graph", "salesforce", "smartsales"]
+  },
+  {
+    "text": "Who are the most important companies we work with right now?",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "A combined view of key companies: top Salesforce accounts or open opportunities, companies that have recently appeared in emails or calendar events, and SmartSales locations for those companies.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["graph", "salesforce", "smartsales"]
+  },
+  {
+    "text": "Is there anything I should follow up on today?",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "A combined follow-up overview: today's or upcoming calendar events, recent unread or action-requiring emails from Microsoft 365, open high-priority Salesforce cases or opportunities with a near close date.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "360-view"],
+    "expected_agents": ["graph", "salesforce"]
+  },
+  {
+    "text": "Give me a 360° view of the most recent email sender.",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "The sender of the most recent email, followed by their Salesforce record (contact or lead) if found, any SmartSales location for their company, and a brief communication history (recent emails or meetings).",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["graph", "salesforce", "smartsales"]
+  },
+  {
+    "text": "What files, meetings, and deals are linked to supplier1?",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "OneDrive files mentioning supplier1 from Microsoft 365, calendar events involving supplier1, and Salesforce opportunities or accounts for supplier1.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "360-view"],
+    "expected_agents": ["graph", "salesforce"]
+  },
+  {
+    "text": "Show me everything related to Belgium across all our systems.",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "Salesforce accounts and leads based in Belgium, SmartSales locations in Belgium, and any emails or calendar events referencing Belgium from Microsoft 365.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["graph", "salesforce", "smartsales"]
+  },
+  {
+    "text": "What is the full picture of our top open deal?",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "The highest-value open Salesforce opportunity with its account name, followed by any emails or calendar events in Microsoft 365 mentioning that account, and any SmartSales locations for that company.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["graph", "salesforce", "smartsales"]
+  },
+  {
+    "text": "How active have we been with supplier1 over the past month?",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "A summary of recent activity related to supplier1: emails received or sent in the past month from Microsoft 365, calendar events involving supplier1, and Salesforce opportunity or case updates.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "360-view"],
+    "expected_agents": ["graph", "salesforce"]
+  },
+  {
+    "text": "Find everything related to the word 'nutella' across all our systems.",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "OneDrive files mentioning nutella, emails with nutella in subject or body, Salesforce accounts or contacts linked to nutella, and SmartSales locations or catalog items related to nutella.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["graph", "salesforce", "smartsales"]
+  },
+  {
+    "text": "Give me a summary of all activity related to my next calendar event.",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "The next upcoming calendar event with its attendees, followed by Salesforce records for the attendees or their companies, and any recent emails related to the event subject or participants.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "360-view"],
+    "expected_agents": ["graph", "salesforce"]
+  },
+  {
+    "text": "Which companies appear both in our CRM and in our email history?",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "A list of companies found in Salesforce accounts, cross-referenced with company or domain names appearing in recent Microsoft 365 emails, highlighting overlapping names.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "360-view"],
+    "expected_agents": ["graph", "salesforce"]
+  },
+  {
+    "text": "What locations do we have and what deals are linked to them?",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "A list of SmartSales locations, followed by any Salesforce accounts or opportunities whose names match those locations or their cities.",
+    "tags": ["orchestrator", "multi-agent", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["salesforce", "smartsales"]
+  },
+  {
+    "text": "Tell me about the companies behind my open support cases.",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "Open Salesforce cases with their related account names, followed by any emails or calendar events in Microsoft 365 referencing those account names, and SmartSales locations for those companies if available.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["graph", "salesforce", "smartsales"]
+  },
+  {
+    "text": "What do I need to know about the people I have meetings with this week?",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "This week's calendar events with attendee names and companies, followed by Salesforce records (contacts, leads, or account) for those people or their companies, and any SmartSales locations linked to those companies.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["graph", "salesforce", "smartsales"]
+  },
+  {
+    "text": "Give me a full picture of our commercial activity in Brussels.",
+    "category": "entity-centric",
+    "difficulty": "hard",
+    "expected_answer": "SmartSales locations in Brussels, Salesforce accounts or opportunities linked to Brussels-based companies, and any emails or calendar events related to Brussels from Microsoft 365.",
+    "tags": ["orchestrator", "multi-agent", "graph", "salesforce", "smartsales", "360-view"],
+    "expected_agents": ["graph", "salesforce", "smartsales"]
   }
 ]
