@@ -1,0 +1,36 @@
+2026-04-29 21:14:27.0525 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for azure/text-embedding-3-small: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 1.1158592700958252,
+  "compute_duration_per_response_seconds": 1.1158592700958252,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 14,
+  "total_tokens": 14,
+  "tokens_per_response": 14.0,
+  "responses_with_cost": 1,
+  "input_cost": 2.8e-07,
+  "total_cost": 2.8e-07,
+  "cost_per_response": 2.8e-07
+}
+2026-04-29 21:14:27.0526 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for azure/gpt-4o-mini: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
