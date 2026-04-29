@@ -957,7 +957,7 @@
     "text": "Tell me everything you know about supplier1.",
     "category": "entity-centric1",
     "difficulty": "hard",
-    "expected_answer": "A combined overview from all available systems: CRM data (Salesforce accounts, contacts, opportunities), communication history (emails and calendar events from Microsoft 365), and physical presence (SmartSales locations). Each section clearly labelled by source.",
+    "expected_answer": "Must cover all three systems. SF: account supplier1, contact Marc Supplier (marc.supplier@supplier1.be), opportunity 'supplier1 — Q2 Delivery Contract' (€85,000, Negotiation/Review, close 30 Jun 2026), case 'Delayed shipment — supplier1 April batch' (Working, High). Graph: emails from Marc Supplier ('Follow-up: supplier1 Q2 2026 Delivery Contract', 'supplier1 — Updated pricing for H2 2026'), calendar event 'supplier1 — Q2 Delivery Review' (10 May 2026). SmartSales: location supplier1 (Rue du Commerce 1, Brussels, SUP-001), catalog item PROD-SUP1-001 'supplier1 — Industrial Components Pack' (€149.99). Missing Graph entirely = max 3. Missing catalog items = minor deduction. Additional pre-existing data (extra contacts, locations, opportunities) is acceptable.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -976,7 +976,7 @@
     "text": "Give me a full briefing on Colruyt.",
     "category": "entity-centric1",
     "difficulty": "hard",
-    "expected_answer": "A combined overview from all available systems covering Colruyt: CRM records (accounts, opportunities, cases), recent emails or calendar events mentioning Colruyt, and any SmartSales locations linked to Colruyt.",
+    "expected_answer": "Must cover all three systems. SF: account 'Colruyt Group' (Halle, Retail), opportunity 'Colruyt Group — SmartSales Rollout 2026' (€220,000, Proposal/Price Quote, close 30 Sep 2026), case 'Colruyt — Integration issue with POS system' (New, Medium). Graph: email from procurement@colruyt.be 'Colruyt Group — SmartSales pilot bevestiging', calendar event 'Colruyt Group — SmartSales Rollout Kickoff' (15 May 2026, 14:00–15:30 CET). SmartSales: location 'Colruyt - Halle' (Edingensesteenweg 196, COLRUYT-HAL-001), catalog item PROD-COL-001 'Colruyt House Brand — Retail Display Kit' (€89.50), order ORD-COL-2026-001 (5× display kit, total €447.50). Missing Graph entirely = max 3. Missing catalog/order = minor deduction.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -995,7 +995,7 @@
     "text": "What is the current status of our relationship with supplier1?",
     "category": "entity-centric1",
     "difficulty": "hard",
-    "expected_answer": "A summary of the current relationship status: open Salesforce opportunities or cases for supplier1, recent emails or meetings from Microsoft 365, and SmartSales location data if available.",
+    "expected_answer": "Must cover all three systems. SF: open opportunity 'supplier1 — Q2 Delivery Contract' (€85,000, Negotiation/Review, close 30 Jun 2026), open case 'Delayed shipment — supplier1 April batch' (Working, High), contact Marc Supplier (marc.supplier@supplier1.be). Graph: recent emails from Marc Supplier ('Follow-up: supplier1 Q2 2026 Delivery Contract', 'supplier1 — Updated pricing for H2 2026'), upcoming calendar event 'supplier1 — Q2 Delivery Review' (10 May 2026). SmartSales: location supplier1 (Rue du Commerce 1, Brussels, SUP-001), active order ORD-SUP1-2026-001 (10× Industrial Components Pack, €1,499.90). Missing Graph entirely = max 3. Missing SS order = minor deduction. Additional pre-existing data (extra contacts, locations, opportunities) is acceptable.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1014,45 +1014,41 @@
     "text": "Who is Dorian and how do we work with him?",
     "category": "entity-centric1",
     "difficulty": "hard",
-    "expected_answer": "A person-centric overview: Dorian's contact details and email address from Microsoft 365 directory, his Salesforce record (contact or lead) if present, any recent emails or meetings involving him, and any SmartSales location linked to his company.",
+    "expected_answer": "SF: contact Dorian Feaux (d.feaux@easi.net, Sales Engineer, account EASI). No open opportunities or cases for EASI. Graph: email 'Intro: Dorian Feaux — EASI collaboration proposal' from d.feaux@easi.net, calendar event 'Weekly sync — Dorian Feaux' (6 May 2026, 09:00–09:30). Missing Graph or SF entirely = max 3. Missing calendar event = minor deduction. SmartSales (EASI - Brussels location) is optional bonus. Additional pre-existing emails or calendar events involving Dorian are acceptable.",
     "tags": [
       "orchestrator",
       "multi-agent",
       "graph",
       "salesforce",
-      "smartsales",
       "360-view"
     ],
     "expected_agents": [
       "graph",
-      "salesforce",
-      "smartsales"
+      "salesforce"
     ]
   },
   {
     "text": "Give me a complete overview of everything related to Arne.",
     "category": "entity-centric1",
     "difficulty": "hard",
-    "expected_answer": "A combined overview: Arne's identity and email from Microsoft 365, his Salesforce record if present, recent emails or calendar events involving him, and any SmartSales locations linked to his organization.",
+    "expected_answer": "SF: contact Arne Albrecht (a.albrecht@easi.net, Business Analyst, account EASI). No open opportunities or cases for EASI. Graph: calendar event 'Sprint review — Arne Albrecht' (8 May 2026, 14:00–15:00). Missing Graph or SF entirely = max 3. Missing calendar event = minor deduction. SmartSales (EASI - Brussels location) is optional bonus. Additional pre-existing data (emails from albrecht.arne@gmail.com, secondary Displaytech contact) is acceptable.",
     "tags": [
       "orchestrator",
       "multi-agent",
       "graph",
       "salesforce",
-      "smartsales",
       "360-view"
     ],
     "expected_agents": [
       "graph",
-      "salesforce",
-      "smartsales"
+      "salesforce"
     ]
   },
   {
     "text": "What do we know about GreenTech Solutions?",
     "category": "entity-centric1",
     "difficulty": "hard",
-    "expected_answer": "All available information about GreenTech Solutions across systems: Salesforce account and opportunity data, emails or meetings mentioning the company in Microsoft 365, and SmartSales location data.",
+    "expected_answer": "Must cover all three systems. SF: account GreenTech Solutions (Ghent, Technology), opportunity 'GreenTech Solutions — Sustainability Dashboard' (€45,000, Qualification, close 15 Aug 2026). Graph: email 'GreenTech Solutions — Interest in sustainability dashboard' from info@greentechsolutions.be, calendar event 'GreenTech Solutions — Technical Qualification Call' (12 May 2026, 11:00–12:00). SmartSales: location 'GreenTech Solutions - Ghent' (Technologiepark 122, GTS-GNT-001), catalog item PROD-GTS-001 'GreenTech Solutions — Dashboard License' (€2,500), order ORD-GTS-2026-001 (1× Dashboard License, €2,500). Missing Graph entirely = max 3. Missing SS order = minor deduction. Showing the full shared catalog (USB-C, Headset, Laptop, etc.) instead of only GreenTech-linked items = minor deduction for information overload.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1071,7 +1067,7 @@
     "text": "Prepare me for my next meeting. What do I have coming up and what do I know about the companies involved?",
     "category": "entity-centric1",
     "difficulty": "hard",
-    "expected_answer": "Upcoming calendar events from Microsoft 365, followed by Salesforce account and opportunity data for the companies of the attendees, and SmartSales locations for those companies if available.",
+"expected_answer": "Identifies the single next upcoming calendar event from today's date. For that event, provides: the meeting title, date/time, and a 360-view of the person or company involved — pulling SF account/contact details (industry, open opportunities, open cases) and SS location/order data where available. If the next meeting involves a person, SF contact details and their linked account (EASI) should be included. Optionally lists subsequent meetings with brief context. Does NOT dump all meetings without identifying which is next." ,
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1090,7 +1086,7 @@
     "text": "Who are the most important companies we work with right now?",
     "category": "entity-centric1",
     "difficulty": "hard",
-    "expected_answer": "A combined view of key companies: top Salesforce accounts or open opportunities, companies that have recently appeared in emails or calendar events, and SmartSales locations for those companies.",
+    "expected_answer": "Returns a ranked or grouped list of companies based on commercial importance, drawing from multiple systems. For each company: SF account details (industry, open opportunity with stage and amount, open cases if any), optionally recent email or calendar activity from Graph, and optionally SS location and order data. Importance ranking should be grounded in measurable signals such as open opportunity value, case activity, recent email/meeting interactions, or SS order volume — not arbitrary.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1109,7 +1105,7 @@
     "text": "Is there anything I should follow up on today?",
     "category": "entity-centric1",
     "difficulty": "hard",
-    "expected_answer": "A combined follow-up overview: today's or upcoming calendar events, recent unread or action-requiring emails from Microsoft 365, open high-priority Salesforce cases or opportunities with a near close date.",
+   "expected_answer": "Provides a prioritized follow-up list combining signals from Graph and Salesforce. Time-sensitive items take priority: imminent calendar events (today or within hours), recent emails requiring action, then high-priority open SF cases, then SF opportunities with near close dates. Items should be ranked by urgency, not just listed.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1123,10 +1119,10 @@
     ]
   },
   {
-    "text": "Give me a 360Ã‚Â° view of the most recent email sender.",
+    "text": "Give me a 360° view of the most recent email sender.",
     "category": "entity-centric1",
     "difficulty": "hard",
-    "expected_answer": "The sender of the most recent email, followed by their Salesforce record (contact or lead) if found, any SmartSales location for their company, and a brief communication history (recent emails or meetings).",
+    "expected_answer": "Identifies the most recent email sender from the inbox (time-dependent, likely Proximus based on test data). Provides a full 360-view: sender name/email/subject, SF account and contact lookup, SS location and order data for their company, and recent email/calendar history. If no SF or SS record exists (e.g. Proximus is a gap — email only, no CRM or SS entry), this should be explicitly flagged as a gap rather than silently returning nothing. Does not need to list other recent senders.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1145,7 +1141,7 @@
     "text": "What files, meetings, and deals are linked to supplier1?",
     "category": "entity-centric2",
     "difficulty": "hard",
-    "expected_answer": "OneDrive files mentioning supplier1 from Microsoft 365, calendar events involving supplier1, and Salesforce opportunities or accounts for supplier1.",
+   "expected_answer": "Returns files, meetings, and deals linked to supplier1 across Graph and Salesforce. Files (OneDrive): at minimum 'supplier1_delivery_report_Q2_2026.txt'; contact_draftQ1 is also a file about supplier1 but doesn't specifically list it in the tiltle, smartsales_locations.docx is acceptable. Meetings (Calendar): 'supplier1 — Q2 Delivery Review' on 10 May 2026 if still upcoming, may be absent if run after that date. Deals (SF Opportunities): 'supplier1 — Q2 Delivery Contract' €85.000 Negotiation/Review, close 30 Jun 2026; additional pre-existing opportunities (e.g. supp_opportyunity) are acceptable. Cases (SF): 'Delayed shipment — supplier1 April batch' High/Working. Missing the delivery report file = significant deduction.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1162,7 +1158,7 @@
     "text": "Show me everything related to Belgium across all our systems.",
     "category": "entity-centric2",
     "difficulty": "hard",
-    "expected_answer": "Salesforce accounts and leads based in Belgium, SmartSales locations in Belgium, and any emails or calendar events referencing Belgium from Microsoft 365.",
+  "expected_answer": "Broad geographic query covering all systems. SF Accounts: all Belgian accounts (supplier1, Colruyt Group, GreenTech Solutions, Ferrero Benelux, EASI, Brussels Retail Partners, Carrefour Belgium SA, Delhaize Group, Anheuser-Busch InBev) plus pre-existing accounts are acceptable. SF Opportunities: all 7 (+ pre-existing). SF Cases: all 4. SS Locations: all 10 Belgian locations (supplier1 Brussels, Colruyt-Halle, GreenTech-Ghent, Ferrero-Brussels, EASI-Brussels, CRF-Anderlecht, AD Delhaize-Forest, AB InBev-Leuven, Lidl-Antwerp, Customer1-Bruges).",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1181,7 +1177,7 @@
     "text": "What is the full picture of our top open deal?",
     "category": "entity-centric2",
     "difficulty": "hard",
-    "expected_answer": "The highest-value open Salesforce opportunity with its account name, followed by any emails or calendar events in Microsoft 365 mentioning that account, and any SmartSales locations for that company.",
+    "expected_answer": "Identifies the highest-value open SF opportunity by amount — at time of writing: Anheuser-Busch InBev — Distribution Network Mapping (€520.000, Qualification, close 15 Sep 2026), but may change if pre-existing opportunities with higher amounts exist. For the identified company: SF account details, linked SS location and order data, relevant emails and upcoming calendar events if any. Calendar events are time-dependent and may be absent if run after their date. Missing SS data = significant deduction. Picking wrong opportunity (not highest value) = significant deduction.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1197,27 +1193,10 @@
     ]
   },
   {
-    "text": "How active have we been with supplier1 over the past month?",
-    "category": "entity-centric2",
-    "difficulty": "hard",
-    "expected_answer": "A summary of recent activity related to supplier1: emails received or sent in the past month from Microsoft 365, calendar events involving supplier1, and Salesforce opportunity or case updates.",
-    "tags": [
-      "orchestrator",
-      "multi-agent",
-      "graph",
-      "salesforce",
-      "360-view"
-    ],
-    "expected_agents": [
-      "graph",
-      "salesforce"
-    ]
-  },
-  {
     "text": "Find everything related to the word 'nutella' across all our systems.",
     "category": "entity-centric2",
     "difficulty": "hard",
-    "expected_answer": "OneDrive files mentioning nutella, emails with nutella in subject or body, Salesforce accounts or contacts linked to nutella, and SmartSales locations or catalog items related to nutella.",
+   "expected_answer": "Keyword search across all systems for 'nutella'. Graph emails: 'Ferrero Benelux — Nutella spring campaign inquiry' (marketing@ferrero.be). OneDrive files: 'nutella recept.docx' and 'nutella verkoopcijfers.docx' appear in root and/or paste/ folder all acceptable. SF: account Ferrero Benelux, opportunity 'Ferrero — Nutella In-Store Display Campaign' €30.000 Prospecting. SS: location 'Ferrero Benelux - Brussels (Nutella)' (FERR-BRU-001), catalog item PROD-NUT-001 'Nutella 750g — Display Jar' €4,99, order ORD-NUT-2026-001 48× €239,52. Missing SS catalog item or order = significant deduction.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1236,7 +1215,7 @@
     "text": "Give me a summary of all activity related to my next calendar event.",
     "category": "entity-centric2",
     "difficulty": "hard",
-    "expected_answer": "The next upcoming calendar event with its attendees, followed by Salesforce records for the attendees or their companies, and any recent emails related to the event subject or participants.",
+   "expected_answer": "Time-dependent query — correct answer depends on when it is run. Expected behavior: (1) identifies the single next upcoming calendar event from the current date/time, (2) extracts the company or person from the event subject, (3) retrieves SF records for that entity (account details, open opportunities, open cases, contacts), (4) retrieves recent emails related to that entity or event subject. If next event involves a person contact details can be included. If next event involves a company (e.g. supplier1, GreenTech, Colruyt): full SF + optionally SS context are acceptable.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1253,7 +1232,7 @@
     "text": "Which companies appear both in our CRM and in our email history?",
     "category": "entity-centric2",
     "difficulty": "hard",
-    "expected_answer": "A list of companies found in Salesforce accounts, cross-referenced with company or domain names appearing in recent Microsoft 365 emails, highlighting overlapping names.",
+   "expected_answer": "Lists companies present in both SF (CRM) and email history, with correct fuzzy/entity resolution across name mismatches. Expected overlaps: supplier1 (marc.supplier@supplier1.be), Colruyt Group (procurement@colruyt.be), GreenTech Solutions (info@greentechsolutions.be), Ferrero Benelux (marketing@ferrero.be), EASI (d.feaux@easi.net), Carrefour Belgium SA (ops/procurement@carrefour-be.eu — fuzzy), Delhaize Group (it/procurement@delhaize.eu — fuzzy), Anheuser-Busch InBev (sales@ab-inbev.com — fuzzy). Gap: Proximus (email only, no SF account) should ideally be flagged. Missing fuzzy matches deduction. Missing obvious direct matches significant deduction.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1270,7 +1249,7 @@
     "text": "What locations do we have and what deals are linked to them?",
     "category": "entity-centric2",
     "difficulty": "hard",
-    "expected_answer": "A list of SmartSales locations, followed by any Salesforce accounts or opportunities whose names match those locations or their cities.",
+  "expected_answer": "Lists SS locations and links each to corresponding SF opportunities via entity resolution. Testdata locations and expected links: supplier1 (Brussels) → Q2 Delivery Contract €85k; Colruyt-Halle → SmartSales Rollout 2026 €220k; GreenTech-Ghent → Sustainability Dashboard €45k; Ferrero-Brussels → Nutella In-Store Display Campaign €30k; CRF-Anderlecht → Carrefour Belgium SA In-Store Analytics Pilot €175k (fuzzy); AD Delhaize-Forest → Delhaize Group Supply Chain Optimisation €310k (fuzzy); AB InBev-Leuven → Distribution Network Mapping €520k (fuzzy). Pre-existing SS locations without deals are acceptable. Missing fuzzy links (Carrefour/Delhaize/AB InBev) = significant deduction.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1306,7 +1285,7 @@
     "text": "What do I need to know about the people I have meetings with this week?",
     "category": "entity-centric2",
     "difficulty": "hard",
-    "expected_answer": "This week's calendar events with attendee names and companies, followed by Salesforce records (contacts, leads, or account) for those people or their companies, and any SmartSales locations linked to those companies.",
+   "expected_answer": "Time-dependent query — 'this week' depends on when it is run. Expected behavior: retrieves all calendar events within the current week, extracts people and companies, and provides a 360-view per person/company. For contacts with SF records: name, title, email, linked account. For companies: SF account details, open opportunities, open cases, SS location.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1325,7 +1304,7 @@
     "text": "Give me a full picture of our commercial activity in Brussels.",
     "category": "entity-centric2",
     "difficulty": "hard",
-    "expected_answer": "SmartSales locations in Brussels, Salesforce accounts or opportunities linked to Brussels-based companies, and any emails or calendar events related to Brussels from Microsoft 365.",
+  "expected_answer": "Geographic query for Brussels commercial activity across all systems. SF accounts in Brussels: supplier1, Ferrero Benelux, EASI, Brussels Retail Partners, Delhaize Group; pre-existing Brussels accounts acceptable. SS locations in Brussels: supplier1 (SUP-001), Ferrero-Brussels (FERR-BRU-001), EASI-Brussels (EASI-BRU-001), CRF-Anderlecht (CRF-AND-001), AD Delhaize-Forest (ADL-FOR-001); pre-existing Brussels locations acceptable. SS orders linked to those locations expected. Dumping full SS catalog without Brussels filter = minor deduction.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1344,7 +1323,7 @@
     "text": "Who is the contact person behind my most expensive open order?",
     "category": "implicit-cross-system",
     "difficulty": "hard",
-    "expected_answer": "The most expensive open SmartSales order is ORD-GTS-2026-001 for GreenTech Solutions (1x Dashboard License @ EUR 2,500.00). GreenTech Solutions has a Salesforce account but no contact person is linked to that account. The response should identify GreenTech as the supplier of the most expensive order and note that no named contact is available in Salesforce for this account.",
+   "expected_answer": "Identifies the most expensive open order — either from SS or from SF opportunities. For the identified company, attempts to find a named contact in SF. If no contact exists for that company, this should be explicitly stated. Pre-existing orders/opportunities with higher value are acceptable. Returning a contact from a different company than the order = critical failure.",
     "tags": [
       "implicit-link",
       "ss-to-sf"
@@ -1372,7 +1351,7 @@
     "text": "Are there companies in my upcoming calendar that we have no record of?",
     "category": "implicit-cross-system",
     "difficulty": "hard",
-    "expected_answer": "All companies in the upcoming calendar have a Salesforce record. Calendar events include supplier1 (account + opportunity in SF), Colruyt Group (account + opportunity in SF), GreenTech Solutions (account + opportunity in SF), and EASI (Dorian Feaux and Arne Albrecht are both SF contacts linked to EASI). The correct answer is that no calendar company is missing from the CRM.",
+ "expected_answer": "Retrieves recent email senders and cross-references with SF opportunities via entity resolution, including fuzzy matching across domain/name mismatches. For each sender: identifies the linked SF account and any open opportunity. Senders with no SF deal should be noted as gaps. A correct answer handles both direct matches (exact domain-to-account) and fuzzy matches (e.g. ab-inbev.com → Anheuser-Busch InBev, carrefour-be.eu → Carrefour Belgium SA). Missing direct matches = significant deduction. Missing fuzzy matches = significant deduction. Not flagging no-match senders = minor deduction.",
     "tags": [
       "implicit-link",
       "graph-to-sf",
@@ -1402,7 +1381,7 @@
     "text": "For the company behind my most recent open support case, what else do we know about them?",
     "category": "implicit-cross-system",
     "difficulty": "hard",
-    "expected_answer": "The most recent open Salesforce case is linked to supplier1. Other known data about supplier1: open opportunity 'supplier1 — Q2 Delivery Contract' (EUR 85,000, Negotiation/Review); SmartSales order ORD-SUP1-2026-001 (EUR 1,499.90, 10x Industrial Components Pack); contact Marc Supplier (marc.supplier@supplier1.be); emails about Q2 delivery delay and updated pricing; OneDrive file 'supplier1_delivery_report_Q2_2026.txt'; calendar event May 10 'supplier1 — Q2 Delivery Review'.",
+   "expected_answer": "Time-dependent query — most recent open SF case depends on when it is run. Expected behavior: (1) identifies the most recently created open SF case and extracts the linked company, (2) retrieves full 360-view for that company: SF account details, all open opportunities, all open cases, named contacts if any, (3) SS location and order data for that company, (4) relevant emails and calendar events from Graph. A correct answer integrates all three systems for the identified company. Picking wrong company = significant deduction. Only returning SF data without SS or Graph = significant deduction.",
     "tags": [
       "implicit-link",
       "sf-to-graph",
@@ -1418,7 +1397,7 @@
     "text": "What is the total order value for companies that currently have an open support case?",
     "category": "implicit-cross-system",
     "difficulty": "hard",
-    "expected_answer": "Two companies have open Salesforce support cases: supplier1 and Colruyt Group. Their SmartSales order values are: supplier1 EUR 1,499.90 (ORD-SUP1-2026-001) and Colruyt EUR 447.50 (ORD-COL-2026-001). The total order value is EUR 1,947.40. A response that reports a different total or includes other companies (GreenTech, Ferrero) is incorrect.",
+"expected_answer": "Retrieves all companies with open SF cases, finds their corresponding SS orders via entity resolution (including fuzzy matches), and sums the total order value. A correct answer identifies the case companies, links each to their SS location and order(s), and reports a non-zero aggregated total. Pre-existing cases and orders may affect the final number. Reporting total as 0 = critical failure. Missing fuzzy-linked orders (Carrefour/Delhaize) = significant deduction.",
     "tags": [
       "implicit-link",
       "sf-to-ss",
@@ -1433,7 +1412,7 @@
     "text": "Which companies am I meeting this week that have no active deal with us?",
     "category": "implicit-cross-system",
     "difficulty": "hard",
-    "expected_answer": "Today is April 28, 2026. This week (April 27–May 3) has NO calendar events scheduled. The correct response is that there are no meetings this week. If the agent broadens the scope to upcoming meetings (May 6–15), all companies encountered (EASI/Dorian, EASI/Arne, supplier1, GreenTech, Colruyt) have active deals or are linked to known accounts. No company is without a deal.",
+   "expected_answer": "Time-dependent query — 'this week' depends on when it is run. Expected behavior: (1) retrieves all calendar events within the current week, (2) extracts companies or people from event subjects, (3) checks each against SF for an active opportunity, (4) reports only those without an active deal. A correct answer explicitly states if no such companies exist. If no meetings are scheduled this week, this should be stated rather than broadening scope arbitrarily. Widening scope without mentioning it = minor deduction. Not checking SF for deals = significant deduction.",
     "tags": [
       "implicit-link",
       "graph-to-sf",
@@ -1448,7 +1427,7 @@
     "text": "For each person I have a meeting with this week, give me everything we know about them.",
     "category": "implicit-cross-system",
     "difficulty": "hard",
-    "expected_answer": "Today is April 28, 2026. This week (April 27–May 3) has NO calendar events. The correct response is that no meetings are scheduled this week. If the agent broadens scope to the coming week (May 4–10), it should cover Dorian Feaux (May 6: SF contact at EASI, Sales Engineer, d.feaux@easi.net, email received about EASI collaboration) and Arne Albrecht (May 8: SF contact at EASI, Business Analyst, a.albrecht@easi.net), and supplier1 review (May 10, no named attendee).",
+   "expected_answer": "Time-dependent query — 'this week' depends on when it is run. Expected behavior: retrieves all calendar events within the current week, extracts named attendees or people from event subjects, and provides a full view per person: SF contact details, SF account info, SS location for their company, and relevant emails. If no meetings this week, this should be stated explicitly rather than broadening scope. Missing a named person from calendar = significant deduction. Returning pre-existing duplicate contacts without disambiguation = minor deduction.",
     "tags": [
       "implicit-link",
       "graph-to-sf",
@@ -1463,7 +1442,7 @@
     "text": "Which of our accounts have both an active deal and a recent order?",
     "category": "implicit-cross-system",
     "difficulty": "hard",
-    "expected_answer": "All four main accounts have both an active Salesforce opportunity and a recent SmartSales order: supplier1 (deal EUR 85,000 + order EUR 1,499.90), Colruyt Group (deal EUR 220,000 + order EUR 447.50), GreenTech Solutions (deal EUR 45,000 + order EUR 2,500.00), and Ferrero Benelux (deal EUR 30,000 + order EUR 239.52). The response should list all four accounts.",
+   "expected_answer": "Identifies accounts that appear in both SF (active opportunity) and SS (recent order), via entity resolution including fuzzy matches. For each match: opportunity name/amount and order reference/amount. Pre-existing accounts with both a deal and order are also acceptable. Missing direct matches (supplier1, GreenTech, Ferrero) = significant deduction. Missing fuzzy matches = significant deduction.",
     "tags": [
       "implicit-link",
       "sf-to-ss",
@@ -1478,7 +1457,7 @@
     "text": "Find any files we have related to our most valuable open deal and summarise them.",
     "category": "implicit-cross-system",
     "difficulty": "hard",
-    "expected_answer": "The most valuable open Salesforce deal is 'new opp' for Global Media (EUR 1,000,000). There is no OneDrive file related to Global Media. The only relevant file in OneDrive is 'supplier1_delivery_report_Q2_2026.docx' which belongs to supplier1 (EUR 85,000), a different account. The correct response identifies Global Media as the most valuable deal and reports no related file found. A response that names Colruyt (EUR 220,000) or supplier1 as the most valuable deal is incorrect.",
+   "expected_answer": "Identifies the most valuable open SF opportunity by amount — may be a testdata deal (e.g. Anheuser-Busch InBev €520k) or a pre-existing deal with higher value. Searches OneDrive for files related to that specific company. If no files are found for that company, this should be explicitly stated. A correct answer does not return files for a different company than the identified deal. Returning files for the wrong company without noting the mismatch = significant deduction. Not stating absence of files when none exist = minor deduction.",
     "tags": [
       "implicit-link",
       "sf-to-graph"
