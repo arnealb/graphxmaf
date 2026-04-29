@@ -34,3 +34,75 @@
   "tokens_per_response": 0.0,
   "cost_per_response": 0.0
 }
+2026-04-29 21:26:24.0376 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for azure/text-embedding-3-small: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 1.3908238410949707,
+  "compute_duration_per_response_seconds": 1.3908238410949707,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 22,
+  "total_tokens": 22,
+  "tokens_per_response": 22.0,
+  "responses_with_cost": 1,
+  "input_cost": 4.4e-07,
+  "total_cost": 4.4e-07,
+  "cost_per_response": 4.4e-07
+}
+2026-04-29 21:26:24.0376 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for azure/gpt-4o-mini: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-04-29 21:29:08.0720 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for azure/text-embedding-3-small: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 1.0334835052490234,
+  "compute_duration_per_response_seconds": 1.0334835052490234,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 1,
+  "prompt_tokens": 22,
+  "total_tokens": 22,
+  "tokens_per_response": 22.0,
+  "responses_with_cost": 1,
+  "input_cost": 4.4e-07,
+  "total_cost": 4.4e-07,
+  "cost_per_response": 4.4e-07
+}
+2026-04-29 21:29:08.0720 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for azure/gpt-4o-mini: {
+  "attempted_request_count": 1,
+  "successful_response_count": 1,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 1,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}

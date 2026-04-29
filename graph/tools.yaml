@@ -156,6 +156,31 @@
 
 # -------------------------------------------------------------------------------
 
+- name: search_documents
+  description: >
+    Search the GraphRAG knowledge graph built from indexed OneDrive documents
+    (HR policies, contracts, procedures, onboarding guides, etc.).
+
+    Use this tool when the user asks about internal company rules, policies,
+    agreements, or procedures — e.g. expense reimbursement, support SLAs,
+    onboarding steps, complaint handling, supplier contact rules.
+
+    This tool performs graph-based semantic search: it finds relevant entities
+    and relationships across all indexed documents even when the exact keywords
+    are not present in the question.
+
+    Prefer this over search_files + read_file for policy/procedure questions.
+    Use search_files when the user explicitly asks to browse or list files.
+
+    `query` — the user's question in natural language. Be specific and include
+    relevant context (e.g. "expense reimbursement for train travel to client").
+  method: search_documents
+  params:
+    - name: query
+      type: str
+
+# -------------------------------------------------------------------------------
+
 - name: list_contacts
   description: >
     List the user's personal Outlook contacts (up to 15).
