@@ -1,0 +1,13 @@
+{
+  "query": "Find SmartSales locations in Brussels.",
+  "reasoning": "The only task needed is to retrieve SmartSales locations specifically in Brussels, which can be handled directly by the smartsales agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve all SmartSales locations in Brussels.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved SmartSales locations in Brussels as the final answer."
+}

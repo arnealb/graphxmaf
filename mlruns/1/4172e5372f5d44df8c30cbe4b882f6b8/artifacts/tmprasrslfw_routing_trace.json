@@ -1,0 +1,27 @@
+{
+  "user_query": "What fields can I sort SmartSales catalog items by?",
+  "plan": {
+    "query": "What fields can I sort SmartSales catalog items by?",
+    "reasoning": "To answer the user's query about sorting fields in SmartSales catalog items, only the smartsales agent needs to be involved to fetch the relevant catalog item fields.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve the list of fields available for sorting catalog items in SmartSales.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Provide the retrieved list of sorting fields from the smartsales agent as the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve the list of fields available for sorting catalog items in SmartSales.",
+      "started_at": "2026-04-20T15:38:07.528254+00:00",
+      "ended_at": "2026-04-20T15:38:16.475868+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "query": "Show me Salesforce cases with their related account names.",
+  "reasoning": "I can fetch the Salesforce cases along with their related account names in a single step, as the Salesforce agent is capable of retrieving both the cases and their associated accounts at the same time.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all Salesforce cases along with their associated account names.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of Salesforce cases with their respective account names."
+}

@@ -1,0 +1,13 @@
+{
+  "query": "Show me emails I received in the last 14 days.",
+  "reasoning": "The graph agent is capable of retrieving emails, so I will use it to fetch the necessary emails based on the specified time frame.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve emails received in the last 14 days.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the output from the graph agent as the list of received emails."
+}

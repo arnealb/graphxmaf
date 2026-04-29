@@ -1,0 +1,19 @@
+{
+  "query": "Who am I in Microsoft 365, and what are the first 3 SmartSales locations?",
+  "reasoning": "To answer the query, I need to retrieve the user's information from Microsoft 365 and the first 3 locations from SmartSales. Both tasks can be done in parallel since they are independent of each other.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the user's identity information from Microsoft 365.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Fetch the first 3 locations from SmartSales.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from the Microsoft 365 user identity retrieval and the first 3 SmartSales locations to provide a complete response."
+}

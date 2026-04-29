@@ -1,0 +1,19 @@
+{
+  "query": "Which companies am I meeting this week that have no active deal with us?",
+  "reasoning": "The query requires identifying meetings scheduled within the week and cross-referencing those companies with active deals in the CRM. Both graph and salesforce agents are necessary to gather the required information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the calendar events scheduled for the current week, including the names of companies involved in these meetings.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Find all companies that currently have no active deals in the CRM.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Cross-reference the list of companies from step 1 with the list from step 2 to determine which companies you are meeting this week that have no active deal with us."
+}

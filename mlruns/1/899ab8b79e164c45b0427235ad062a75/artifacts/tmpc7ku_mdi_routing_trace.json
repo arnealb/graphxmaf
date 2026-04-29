@@ -1,0 +1,27 @@
+{
+  "user_query": "Show me emails I received in the last 14 days.",
+  "plan": {
+    "query": "Show me emails I received in the last 14 days.",
+    "reasoning": "To retrieve the emails received in the last 14 days, the graph agent, which has access to Microsoft 365 emails, is the only agent needed for this task.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Fetch the emails received in the last 14 days.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the fetched email data to the user."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Fetch the emails received in the last 14 days.",
+      "started_at": "2026-04-20T15:26:07.151386+00:00",
+      "ended_at": "2026-04-20T15:27:44.121582+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

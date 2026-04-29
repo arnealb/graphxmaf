@@ -1,0 +1,31 @@
+{
+  "user_query": "Show me the most recently created Salesforce contacts.",
+  "plan": {
+    "query": "Show me the most recently created Salesforce contacts.",
+    "reasoning": "The query directly pertains to retrieving contact information from Salesforce, making it efficient to execute in a single step.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve the most recently created contacts from Salesforce.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the retrieved contacts as the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve the most recently created contacts from Salesforce.",
+      "started_at": "2026-04-27T13:11:04.360989+00:00",
+      "ended_at": "2026-04-27T13:11:16.342391+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "find_contacts"
+      ]
+    }
+  ]
+}

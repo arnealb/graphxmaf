@@ -1,0 +1,13 @@
+{
+  "query": "What are my upcoming calendar events this week?",
+  "reasoning": "The only necessary step to fulfill the user query is to retrieve the upcoming calendar events from the user's Microsoft 365 account via the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Fetch the user's upcoming calendar events for the current week.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of upcoming calendar events retrieved from the graph agent."
+}

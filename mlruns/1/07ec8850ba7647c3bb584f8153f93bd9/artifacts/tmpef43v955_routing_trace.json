@@ -1,0 +1,17 @@
+{
+  "user_query": "List 5 open opportunities in Salesforce.",
+  "plan": {
+    "query": "List 5 open opportunities in Salesforce.",
+    "reasoning": "The user is asking for a specific set of data, which can be retrieved in a single call to the Salesforce agent. There are no dependencies needed for this task.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve a list of 5 open opportunities from Salesforce.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of open opportunities retrieved from the Salesforce agent."
+  },
+  "invoked_agents": []
+}

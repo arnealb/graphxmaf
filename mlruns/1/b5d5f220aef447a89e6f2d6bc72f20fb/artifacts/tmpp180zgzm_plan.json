@@ -1,0 +1,13 @@
+{
+  "query": "What does my most recent email say? Give me the full body.",
+  "reasoning": "The only information needed to respond to this query is the content of the user's most recent email, which can be obtained directly from the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the full body of the user's most recent email.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved email body as the final response."
+}

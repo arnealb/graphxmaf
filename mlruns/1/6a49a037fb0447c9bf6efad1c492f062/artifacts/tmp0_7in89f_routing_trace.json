@@ -1,0 +1,31 @@
+{
+  "user_query": "Show me Salesforce opportunities in the 'Qualification' stage.",
+  "plan": {
+    "query": "Show me Salesforce opportunities in the 'Qualification' stage.",
+    "reasoning": "The task can be accomplished with a single query to Salesforce, as it involves retrieving opportunities based on their stage without needing any additional information from other agents.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch all opportunities currently in the 'Qualification' stage.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of opportunities retrieved in step 1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Fetch all opportunities currently in the 'Qualification' stage.",
+      "started_at": "2026-04-24T09:40:16.874218+00:00",
+      "ended_at": "2026-04-24T09:40:25.804509+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_opportunities"
+      ]
+    }
+  ]
+}

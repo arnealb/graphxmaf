@@ -1,0 +1,13 @@
+{
+  "query": "Find any files related to 'nutella' in OneDrive and read all of them.",
+  "reasoning": "The task involves searching for files in OneDrive specifically related to 'nutella', which can be accomplished with a single call to the graph agent. Reading the files can also be integrated into that search since the graph agent can provide the necessary details about the files.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for files in OneDrive that are related to 'nutella' and return their details and contents.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Output the details and contents of the files found in step 1."
+}

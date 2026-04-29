@@ -1,0 +1,27 @@
+{
+  "user_query": "Show me my 5 most recent emails.",
+  "plan": {
+    "query": "Show me my 5 most recent emails.",
+    "reasoning": "The task requires accessing the user's recent emails, which can be obtained through the graph agent that interfaces with Microsoft 365 services.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the 5 most recent emails from the user's inbox.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the results from step 1 as the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the 5 most recent emails from the user's inbox.",
+      "started_at": "2026-04-21T07:28:09.355554+00:00",
+      "ended_at": "2026-04-21T07:28:26.009583+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+
+
+
+supplier1: 
+
+
+{
+    "uid": "cac5b20d-285c-11f1-a2fe-005056010707",
+    "techServerCreationDate": "20260325151042923+0000",
+    "techServerUpdateDate": "20260325151042923+0000",
+    "techCreationUserUid": "c447d22d-23ad-11f1-a2fe-005056010707",
+    "techUpdateUserUid": "c447d22d-23ad-11f1-a2fe-005056010707",
+    "techCreationUser": {
+        "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+        "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+        "firstname": "AI Assistant",
+        "lastname": "External Client Application",
+        "displayName": null,
+        "businessId": null
+    },
+    "techUpdateUser": {
+        "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+        "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+        "firstname": "AI Assistant",
+        "lastname": "External Client Application",
+        "displayName": null,
+        "businessId": null
+    },
+    "toSynchronize": true,
+    "techClientCreationDate": "20260325151042910+0000",
+    "techClientUpdateDate": "20260325151042910+0000",
+    "code": "SUP-001",
+    "externalId": null,
+    "street": "Rue du Commerce 1",
+    "city": "Brussels",
+    "zip": "1000",
+    "country": "Belgium",
+
+    "latitude": null,
+    "longitude": null,
+    "name": "supplier1",
+    "vatNumber": null,
+    "deleted": false,
+    "suppliers": [],
+    "parentRelationships": [],
+    "childRelationships": [],
+    "attributes": [],
+    "users": [
+        {
+            "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+            "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+            "firstname": "AI Assistant",
+            "lastname": "External Client Application",
+            "displayName": null,
+            "businessId": null
+        }
+    ],
+    "groups": [],
+    "documents": [],
+    "tags": [],
+    "commented": false,
+    "lastVisitDate": null,
+    "lastOrderDate": null,
+    "targetGoals": [],
+    "hasExtranetAccess": false,
+    "extranetUser": null,
+    "fieldValues": []
+}
+
+
+customer 1:[{
+    "uid": "fa4acd29-285c-11f1-a2fe-005056010707",
+    "techServerCreationDate": "20260325151202648+0000",
+    "techServerUpdateDate": "20260325151202648+0000",
+    "techCreationUserUid": "c447d22d-23ad-11f1-a2fe-005056010707",
+    "techUpdateUserUid": "c447d22d-23ad-11f1-a2fe-005056010707",
+    "techCreationUser": {
+        "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+        "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+        "firstname": "AI Assistant",
+        "lastname": "External Client Application",
+        "displayName": null,
+        "businessId": null
+    },
+    "techUpdateUser": {
+        "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+        "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+        "firstname": "AI Assistant",
+        "lastname": "External Client Application",
+        "displayName": null,
+        "businessId": null
+    },
+    "toSynchronize": true,
+    "techClientCreationDate": "20260325151202631+0000",
+    "techClientUpdateDate": "20260325151202631+0000",
+    "code": "CUS-001",
+    "externalId": null,
+    "street": "Markt 5",
+    "city": "Bruges",
+    "zip": "8000",
+    "country": "Belgium",
+    "latitude": null,
+    "longitude": null,
+    "name": "Customer1",
+    "vatNumber": null,
+    "deleted": false,
+    "suppliers": [],
+    "parentRelationships": [],
+    "childRelationships": [],
+    "attributes": [],
+    "users": [
+        {
+            "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+            "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+            "firstname": "AI Assistant",
+            "lastname": "External Client Application",
+            "displayName": null,
+            "businessId": null
+        }
+    ],
+    "groups": [],
+    "documents": [],
+    "tags": [],
+    "commented": false,
+    "lastVisitDate": null,
+    "lastOrderDate": null,
+    "targetGoals": [],
+    "hasExtranetAccess": false,
+    "extranetUser": null,
+    "fieldValues": []
+}]
+
+
+
+order: {
+    "uid": "332cb4b2-285d-11f1-a2fe-005056010707",
+    "techServerCreationDate": "20260325151338081+0000",
+    "techServerUpdateDate": "20260325151338111+0000",
+    "techCreationUserUid": "c447d22d-23ad-11f1-a2fe-005056010707",
+    "techUpdateUserUid": "c447d22d-23ad-11f1-a2fe-005056010707",
+    "techCreationUser": {
+        "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+        "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+        "firstname": "AI Assistant",
+        "lastname": "External Client Application",
+        "displayName": null,
+        "businessId": null
+    },
+    "techUpdateUser": {
+        "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+        "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+        "firstname": "AI Assistant",
+        "lastname": "External Client Application",
+        "displayName": null,
+        "businessId": null
+    },
+    "toSynchronize": true,
+    "techClientCreationDate": "20260325151338013+0000",
+    "techClientUpdateDate": "20260325151338013+0000",
+    "date": "20260325000000000+0000",
+    "internalReference": "TEST-001",
+    "externalReference": "EXT-001",
+    "versionKey": null,
+    "versionHistory": false,
+    "hasManualDiscount": false,
+    "hadManualDiscount": false,
+    "checkManualDiscountStatus": null,
+    "comments": "Test order created via Postman",
+    "locale": "en",
+    "total": 0,
+    "subtotal": 100.00,
+    "totalQuantity": 2,
+    "type": "ORDER",
+    "approbationStatus": "APPROVED",
+    "approbationModificationDate": null,
+    "approbationModificationUser": null,
+    "user": {
+        "uid": "c447d22d-23ad-11f1-a2fe-005056010707",
+        "username": "client_app_2318267df1de286a20967c57da410f45@75490.local",
+        "firstname": "AI Assistant",
+        "lastname": "External Client Application",
+        "displayName": null,
+        "businessId": null
+    },
+    "customer": {
+        "uid": "fa4acd29-285c-11f1-a2fe-005056010707",
+        "code": "CUS-001",
+        "externalId": null,
+        "name": "Customer1"
+    },
+    "customerEmail": null,
+    "supplier": {
+        "uid": "cac5b20d-285c-11f1-a2fe-005056010707",
+        "code": "SUP-001",
+        "externalId": null,
+        "name": "supplier1"
+    },
+    "supplierEmail": null,
+    "relatedLocations": [
+        {
+            "relationship": {
+                "uid": "86acdbc2-18a4-11f1-84f0-005056010707",
+                "code": "SUPPLIER",
+                "title": "Supplier"
+            },
+            "email": null,
+            "location": {
+                "uid": "cac5b20d-285c-11f1-a2fe-005056010707",
+                "code": "SUP-001",
+                "externalId": null,
+                "name": "supplier1"
+            }
+        }
+    ],
+    "person": null,
+    "commented": false,
+    "signatureImage": null,
+    "companyLogoImage": null,
+    "discountVisible": false,
+    "form": {},
+    "customFields": {},
+    "items": [
+        {
+            "code": "ITEM-001",
+            "description": "Test product",
+            "quantity": 2,
+            "price": 50,
+            "salesUnit": null,
+            "packagingUnit": null,
+            "measure": null,
+            "unitOfMeasure": null,
+            "measurementUnit": null,
+            "discount": 0,
+            "discountIsPercentage": false,
+            "totalPrice": 100,
+            "finalDiscountPrice": 100,
+            "free": false,
+            "autoDiscounts": [],
+            "hasOverriddenAutoDiscount": false,
+            "comment": null,
+            "freeReason": null,
+            "priceManuallySet": false,
+            "lineExternalId": null,
+            "lineUid": "3326c89c-285d-11f1-a2fe-005056010707",
+            "hasAutoDiscounts": false
+        }
+    ],
+    "autoDiscounts": [],
+    "totalModifiers": [],
+    "totalWithoutDiscount": 100,
+    "totalDiscount": 100,
+    "totalDiscountPercentage": 100,
+    "offer": false,
+    "creationUid": null,
+    "hasAutoDiscounts": false
+l}

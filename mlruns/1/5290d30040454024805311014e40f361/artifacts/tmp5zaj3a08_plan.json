@@ -1,0 +1,21 @@
+{
+  "query": "Which of our accounts have both an active deal and a recent order?",
+  "reasoning": "To answer the query, I will need to check for accounts with active deals using Salesforce and then look for recent orders related to those accounts using Salesforce as well. This way, I will get accounts matching both criteria in a relevant context.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Find all accounts with an active deal.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Using the accounts from step 1, find all recent orders related to those accounts.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from step 1 and step 2 to identify which accounts have both an active deal and a recent order."
+}

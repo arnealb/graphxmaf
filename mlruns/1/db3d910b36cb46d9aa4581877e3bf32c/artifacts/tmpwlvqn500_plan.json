@@ -1,0 +1,13 @@
+{
+  "query": "What fields can I sort SmartSales catalog items by?",
+  "reasoning": "The query specifically asks for information related to the SmartSales catalog items, which falls under the smartsales agent. A single step can retrieve the necessary information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Provide a list of fields that can be used to sort catalog items.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Use the output of step 1 to directly answer the user's query about sorting fields."
+}

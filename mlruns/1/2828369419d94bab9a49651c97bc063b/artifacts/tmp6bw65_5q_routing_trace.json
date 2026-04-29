@@ -1,0 +1,32 @@
+{
+  "user_query": "Who is the contact person behind my most expensive open order?",
+  "plan": {
+    "query": "Who is the contact person behind my most expensive open order?",
+    "reasoning": "This query requires first identifying the most expensive open order using Salesforce, and then finding the contact person associated with that order. Therefore, I will use Salesforce to fetch the order details and the relevant contact information.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Identify the most expensive open order and retrieve its associated contact information.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Output the contact person associated with the identified most expensive open order."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Identify the most expensive open order and retrieve its associated contact information.",
+      "started_at": "2026-04-28T12:32:55.190704+00:00",
+      "ended_at": "2026-04-28T12:33:00.801891+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_opportunities",
+        "find_contacts"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "query": "Search OneDrive for a file called 'report' and read its content.",
+  "reasoning": "The task involves searching OneDrive for a specific file and retrieving its content, which can be accomplished in a single step.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search OneDrive for a file named 'report' and retrieve its content if it exists.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the content of the found file 'report' or state that the file was not found."
+}

@@ -1,0 +1,17 @@
+{
+  "user_query": "Show me Salesforce cases with their related account names.",
+  "plan": {
+    "query": "Show me Salesforce cases with their related account names.",
+    "reasoning": "I need to retrieve cases from Salesforce along with the corresponding account names. This requires a single query to fetch all relevant data together.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve all cases from Salesforce including their related account names.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of cases along with their associated account names."
+  },
+  "invoked_agents": []
+}

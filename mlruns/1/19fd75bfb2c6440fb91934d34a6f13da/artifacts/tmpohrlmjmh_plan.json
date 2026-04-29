@@ -1,0 +1,25 @@
+{
+  "query": "What do we know about GreenTech Solutions?",
+  "reasoning": "The query asks for a comprehensive overview of GreenTech Solutions, requiring information from all available agents to provide a complete picture.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for emails, calendar events, and personal contacts related to GreenTech Solutions.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Retrieve CRM accounts, contacts, leads, opportunities, and cases associated with GreenTech Solutions.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Gather information about the locations and catalog items related to GreenTech Solutions.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Aggregate the results from steps 1, 2, and 3 to compile a full picture of GreenTech Solutions."
+}

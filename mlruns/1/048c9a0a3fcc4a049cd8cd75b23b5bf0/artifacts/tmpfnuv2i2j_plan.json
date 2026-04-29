@@ -1,0 +1,13 @@
+{
+  "query": "Find Salesforce leads from the Technology or Software industry.",
+  "reasoning": "Only one step is required to query the Salesforce leads based on the specified industries, as no additional data or processing is needed from other agents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all leads that belong to the Technology or Software industry.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved leads as the final result."
+}

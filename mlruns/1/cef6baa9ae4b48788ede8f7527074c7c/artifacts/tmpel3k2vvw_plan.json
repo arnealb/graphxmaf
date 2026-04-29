@@ -1,0 +1,13 @@
+{
+  "query": "What fields can I use to filter SmartSales locations?",
+  "reasoning": "The user is seeking specific fields related to SmartSales locations, which can be provided directly by the smartsales agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the available fields that can be used to filter locations in SmartSales.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the list of fields returned from the smartsales agent as the final answer."
+}

@@ -1,0 +1,13 @@
+{
+  "query": "Look up the email address of Arne in the organization.",
+  "reasoning": "The graph agent is best suited to retrieve email addresses from Microsoft 365, which includes organizational data such as contacts.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the email address of the contact named Arne from the organization's database.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the email address obtained from the graph agent as the final answer."
+}

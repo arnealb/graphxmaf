@@ -1,0 +1,27 @@
+{
+  "user_query": "What does my most recent email say? Give me the full body.",
+  "plan": {
+    "query": "What does my most recent email say? Give me the full body.",
+    "reasoning": "The task requires accessing the user's most recent email, which is a direct function of the graph agent that manages emails.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the full body of the user's most recent email.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the result of step 1 as the answer to the user query."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the full body of the user's most recent email.",
+      "started_at": "2026-04-21T15:07:16.289181+00:00",
+      "ended_at": "2026-04-21T15:07:25.313722+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

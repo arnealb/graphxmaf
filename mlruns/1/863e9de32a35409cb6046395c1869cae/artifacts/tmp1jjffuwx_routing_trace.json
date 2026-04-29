@@ -1,0 +1,27 @@
+{
+  "user_query": "Find any Excel or PDF files in my OneDrive.",
+  "plan": {
+    "query": "Find any Excel or PDF files in my OneDrive.",
+    "reasoning": "The task requires checking the user's OneDrive for specific file types, which is best handled by the graph agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Search for Excel and PDF files in the user's OneDrive.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Return the list of Excel and PDF files found in the user's OneDrive."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Search for Excel and PDF files in the user's OneDrive.",
+      "started_at": "2026-04-20T15:23:55.219089+00:00",
+      "ended_at": "2026-04-20T15:24:37.066473+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

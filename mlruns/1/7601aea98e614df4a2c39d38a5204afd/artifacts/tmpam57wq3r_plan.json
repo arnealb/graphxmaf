@@ -1,0 +1,13 @@
+{
+  "query": "Show me my Microsoft 365 contacts.",
+  "reasoning": "The query requires retrieving personal contacts stored in Microsoft 365, which can be handled directly by the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Fetch all personal Outlook contacts from Microsoft 365.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of contacts fetched from step 1."
+}

@@ -1,0 +1,31 @@
+{
+  "user_query": "How many calendar events do I have scheduled this week? List them all.",
+  "plan": {
+    "query": "How many calendar events do I have scheduled this week? List them all.",
+    "reasoning": "The query specifically asks for calendar events, so I will utilize the graph agent to retrieve the relevant data regarding the user's calendar for the week.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Fetch all calendar events scheduled for this week.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Count the number of events retrieved in step 1 and list their details."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Fetch all calendar events scheduled for this week.",
+      "started_at": "2026-04-27T13:14:09.787101+00:00",
+      "ended_at": "2026-04-27T13:14:23.365974+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_calendar"
+      ]
+    }
+  ]
+}

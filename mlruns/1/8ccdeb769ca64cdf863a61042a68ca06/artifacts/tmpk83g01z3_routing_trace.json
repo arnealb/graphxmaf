@@ -1,0 +1,17 @@
+{
+  "user_query": "Find the email address of Dorian.",
+  "plan": {
+    "query": "Find the email address of Dorian.",
+    "reasoning": "The query is straightforward and requires a single step to extract the email address from the data available in the graph agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the email address of the contact named Dorian from the Microsoft 365 contacts.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Provide the email address retrieved in step 1 as the final answer."
+  },
+  "invoked_agents": []
+}

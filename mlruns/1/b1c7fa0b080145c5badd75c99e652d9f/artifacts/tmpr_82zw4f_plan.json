@@ -1,0 +1,21 @@
+{
+  "query": "Find Salesforce accounts in France and list the contacts linked to those accounts.",
+  "reasoning": "The first step is to retrieve the accounts in France from Salesforce. The second step will use the results of the first step to find the contacts linked to those accounts.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all Salesforce accounts located in France.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "List all contacts linked to the accounts retrieved in step 1 (if any). If step 1 returned no accounts, state that there are no contacts to list.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results of step 1 and step 2 to provide a comprehensive list of accounts and their linked contacts in France."
+}

@@ -1,0 +1,25 @@
+{
+  "query": "Give me a complete overview of everything related to Arne.",
+  "reasoning": "The query requests a comprehensive overview of a specific individual named Arne, which necessitates information from all available agents to capture different aspects of their interactions, associations, and related data.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Find all emails, calendar events, and personal Outlook contacts related to Arne.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Retrieve all CRM contacts, leads, and opportunities associated with Arne.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Gather all locations and catalog items tied to Arne.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from steps 1, 2, and 3 to provide a complete overview of everything related to Arne."
+}

@@ -1,0 +1,27 @@
+{
+  "user_query": "Show me 5 closed Salesforce cases including their close date and description.",
+  "plan": {
+    "query": "Show me 5 closed Salesforce cases including their close date and description.",
+    "reasoning": "The query specifically requests information about closed Salesforce cases, which can be retrieved in a single call to the Salesforce agent. There are no other data sources needed.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve 5 closed cases including their close date and description.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of cases obtained from the Salesforce agent."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve 5 closed cases including their close date and description.",
+      "started_at": "2026-04-22T13:02:50.956584+00:00",
+      "ended_at": "2026-04-22T13:03:03.790980+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

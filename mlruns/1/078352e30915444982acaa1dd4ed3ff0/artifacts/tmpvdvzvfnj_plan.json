@@ -1,0 +1,13 @@
+{
+  "query": "What is the SmartSales order configuration?",
+  "reasoning": "I chose to use the smartsales agent to directly retrieve information about the SmartSales order configuration since it specifically handles order-related data.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the current SmartSales order configuration details.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the details obtained from the smartsales agent as the final answer."
+}

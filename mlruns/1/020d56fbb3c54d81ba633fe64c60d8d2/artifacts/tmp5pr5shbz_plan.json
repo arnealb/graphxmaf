@@ -1,0 +1,13 @@
+{
+  "query": "What fields can I use to sort SmartSales locations?",
+  "reasoning": "The user is specifically asking about the sorting fields for SmartSales locations, so only the smartsales agent is required to provide this information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the available fields that can be used to sort locations in SmartSales.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of sortable fields obtained from step 1."
+}

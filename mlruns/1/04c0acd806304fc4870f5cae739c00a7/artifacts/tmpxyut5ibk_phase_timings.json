@@ -1,0 +1,57 @@
+{
+  "plan": {
+    "latency_s": 3.722,
+    "steps": 3,
+    "input_tokens": 544,
+    "output_tokens": 258,
+    "total_tokens": 802
+  },
+  "steps": [
+    {
+      "step_id": 3,
+      "agent": "graph",
+      "latency_s": 5.141,
+      "llm_turns": 2,
+      "n_tool_calls": 1,
+      "tool_calls": [
+        "search_email"
+      ],
+      "input_tokens": 1460,
+      "output_tokens": 184,
+      "total_tokens": 1644
+    },
+    {
+      "step_id": 1,
+      "agent": "salesforce",
+      "latency_s": 5.696,
+      "llm_turns": 3,
+      "n_tool_calls": 2,
+      "tool_calls": [
+        "find_accounts",
+        "get_opportunities"
+      ],
+      "input_tokens": 4170,
+      "output_tokens": 299,
+      "total_tokens": 4469
+    },
+    {
+      "step_id": 2,
+      "agent": "smartsales",
+      "latency_s": 8.228,
+      "llm_turns": 2,
+      "n_tool_calls": 1,
+      "tool_calls": [
+        "list_locations"
+      ],
+      "input_tokens": 7709,
+      "output_tokens": 796,
+      "total_tokens": 8505
+    }
+  ],
+  "synthesis": {
+    "latency_s": 4.249,
+    "input_tokens": 1037,
+    "output_tokens": 378,
+    "total_tokens": 1415
+  }
+}

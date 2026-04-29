@@ -1,0 +1,13 @@
+{
+  "query": "List SmartSales locations in Belgium sorted by name, using full projection.",
+  "reasoning": "Only one step is necessary to retrieve the locations from SmartSales and sort them as specified in the query.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve all locations in Belgium and sort them by name using full projection.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of SmartSales locations in Belgium as retrieved in step 1."
+}

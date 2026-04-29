@@ -1,0 +1,13 @@
+{
+  "query": "Find Salesforce leads that have been converted.",
+  "reasoning": "The user query requires access to sales data specific to Salesforce leads, focusing on their conversion status. Only the Salesforce agent can provide this information directly.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all leads from Salesforce that have been marked as converted.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of leads returned from the Salesforce step."
+}

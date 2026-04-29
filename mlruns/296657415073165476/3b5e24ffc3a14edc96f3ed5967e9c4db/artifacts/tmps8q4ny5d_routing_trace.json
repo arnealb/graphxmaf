@@ -1,0 +1,42 @@
+{
+  "user_query": "Who am I in Microsoft 365 and list 3 Salesforce accounts?",
+  "plan": {
+    "query": "Who am I in Microsoft 365 and list 3 Salesforce accounts?",
+    "reasoning": "The query requires two separate pieces of information: the user's identity in Microsoft 365 and a list of Salesforce accounts. Each of these can be addressed independently and in parallel using the respective agents.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the user's profile information in Microsoft 365.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Fetch a list of 3 accounts from Salesforce.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results of step 1 and step 2 to provide a complete response to the user."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the user's profile information in Microsoft 365.",
+      "started_at": "2026-04-20T13:40:16.279969+00:00",
+      "ended_at": "2026-04-20T13:40:19.791916+00:00",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Fetch a list of 3 accounts from Salesforce.",
+      "started_at": "2026-04-20T13:40:16.279969+00:00",
+      "ended_at": "2026-04-20T13:40:19.791916+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

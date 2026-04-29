@@ -1,0 +1,52 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+️Executing (smartsales)...
+Synthesizing...
+Here is a 360° view of the most recent email sender, including their email communication history, CRM contacts/leads, and associated physical locations:
+
+### Most Recent Email Sender
+- **Sender:** Proximus Business
+  - **Email Address:** info@proximus.be
+  - **Received Date:** 28 April 2026
+  - **Subject:** Proximus — partnership inquiry
+  - **Body:**
+    ```
+    Hello,
+
+    I'm reaching out from Proximus Business Solutions.
+    We are exploring potential partnerships for field sales tooling.
+    Would you be available for a short call next week?
+
+    Kind regards,
+    Business Development — Proximus
+    ```
+  - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7zAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+### CRM Contacts/Leads
+No useful results were found from the CRM.
+
+### Associated Physical Locations
+- **AB InBev - Leuven**
+  - **Street:** Vaartstraat 94
+  - **City:** Leuven
+  - **Zip Code:** 3000
+  - **Country:** Belgium
+  - **Coordinates:** Latitude 50.8857468, Longitude 4.7012076
+
+- **AD Delhaize - Forest**
+  - **Street:** Chaussée de Neerstalle 800
+  - **City:** Brussels
+  - **Zip Code:** 1190
+  - **Country:** Belgium
+  - **Coordinates:** Latitude 50.7961794, Longitude 4.3215302
+
+- **List of Additional Locations:**
+  - **Lidl Belgium - Antwerp**
+    - **Street:** Noordersingel 10, Antwerp, Zip: 2140
+  - **Colruyt - Halle**
+    - **Street:** Edingensesteenweg 196, Halle, Zip: 1500
+  - **Various supplier and customer locations across Belgium and beyond...**
+  
+This overview encapsulates the critical information regarding the most recent email interaction with Proximus Business and its context within the broader CRM and physical location framework.

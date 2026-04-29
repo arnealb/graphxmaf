@@ -1,0 +1,13 @@
+{
+  "query": "Find Salesforce leads from the Technology or Software industry.",
+  "reasoning": "The query specifically requires retrieval of leads from Salesforce based on industry criteria, so a single call to the salesforce agent can effectively handle this requirement.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all leads from the Technology or Software industry.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of leads retrieved from the salesforce step."
+}

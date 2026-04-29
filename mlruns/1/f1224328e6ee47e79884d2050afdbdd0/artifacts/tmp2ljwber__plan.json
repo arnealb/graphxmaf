@@ -1,0 +1,21 @@
+{
+  "query": "Which companies that emailed me recently do not seem to have a location registered with us?",
+  "reasoning": "The plan involves checking recent emails to identify companies and then checking their registered locations in our system. I will first retrieve emails to find the relevant companies and then look for their corresponding locations.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the companies from the emails I received recently.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Check the location status for the companies identified from the recent emails (if any). If no locations are found, note that they do not seem to have a location registered with us.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Compile the list of companies from step 1 that do not have a registered location according to step 2."
+}

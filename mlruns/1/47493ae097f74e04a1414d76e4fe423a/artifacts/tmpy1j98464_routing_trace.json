@@ -1,0 +1,57 @@
+{
+  "user_query": "Who am I in Microsoft 365?",
+  "plan": {
+    "query": "Who am I in Microsoft 365?",
+    "reasoning": "To answer this query, I will need to retrieve information about the user's contacts and calendar, which are stored in Microsoft 365.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the user's profile information including their name and email from Microsoft 365.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "graph",
+        "task": "Retrieve the user's calendar events to understand their schedule and activities in Microsoft 365.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "graph",
+        "task": "Retrieve the user's contacts from Microsoft 365 to provide additional context about their connections.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the profile information, calendar events, and contacts to provide a comprehensive overview of the user's identity in Microsoft 365."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the user's profile information including their name and email from Microsoft 365.",
+      "started_at": "2026-04-21T07:27:35.438542+00:00",
+      "ended_at": "2026-04-21T07:27:58.317762+00:00",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "graph",
+      "order": 2,
+      "input": "Retrieve the user's calendar events to understand their schedule and activities in Microsoft 365.",
+      "started_at": "2026-04-21T07:27:35.438542+00:00",
+      "ended_at": "2026-04-21T07:27:58.317762+00:00",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "graph",
+      "order": 3,
+      "input": "Retrieve the user's contacts from Microsoft 365 to provide additional context about their connections.",
+      "started_at": "2026-04-21T07:27:35.438542+00:00",
+      "ended_at": "2026-04-21T07:27:58.317762+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

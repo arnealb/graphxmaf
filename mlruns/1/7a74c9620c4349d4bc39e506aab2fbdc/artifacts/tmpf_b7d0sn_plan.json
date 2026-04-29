@@ -1,0 +1,13 @@
+{
+  "query": "Who am I in Microsoft 365?",
+  "reasoning": "To answer the query about who the user is in Microsoft 365, we need to gather the user's account information which can be accessed through the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the user's account information from Microsoft 365, including their name, email address, and any other relevant profile details.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the user with the account information retrieved from Microsoft 365."
+}

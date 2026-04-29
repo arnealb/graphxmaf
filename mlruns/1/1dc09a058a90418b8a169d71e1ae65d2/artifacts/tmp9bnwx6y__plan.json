@@ -1,0 +1,13 @@
+{
+  "query": "List open support cases in Salesforce.",
+  "reasoning": "The user is asking for support cases, which is relevant to Salesforce. A single step can query Salesforce for open support cases.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch all open support cases in Salesforce.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of open support cases retrieved from Salesforce."
+}

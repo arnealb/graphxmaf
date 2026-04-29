@@ -1,0 +1,21 @@
+{
+  "query": "List all SmartSales locations, then retrieve the full details of the first result.",
+  "reasoning": "Two steps are needed: one to get the locations and a second to get the details of the first location. The second step relies on the output of the first step.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Fetch all SmartSales locations.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Retrieve the full details of the first location returned from step 1 (if any). State that there are no results if step 1 returned none.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from step 2 to present the details of the first SmartSales location."
+}

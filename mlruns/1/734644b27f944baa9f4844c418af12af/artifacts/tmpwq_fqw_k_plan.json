@@ -1,0 +1,13 @@
+{
+  "query": "Find the most recent email with 'meeting' in the subject and read its full body.",
+  "reasoning": "The query specifically requires searching for an email based on a subject string and retrieving its content, which can be accomplished with a single call to the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Find the most recent email with 'meeting' in the subject and retrieve its full body.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the full body of the email obtained from step 1."
+}

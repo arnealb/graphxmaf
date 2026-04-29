@@ -1,0 +1,13 @@
+{
+  "query": "Search my calendar for events scheduled in the next 30 days.",
+  "reasoning": "The query requires accessing the user's calendar to retrieve events within a specific time frame. Therefore, a single step using the graph agent is sufficient.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search your calendar for events scheduled in the next 30 days.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of events retrieved from the calendar search."
+}

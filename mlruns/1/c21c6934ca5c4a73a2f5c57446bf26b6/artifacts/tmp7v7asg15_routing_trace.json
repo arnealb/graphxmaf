@@ -1,0 +1,27 @@
+{
+  "user_query": "What fields are available to display in the SmartSales location list?",
+  "plan": {
+    "query": "What fields are available to display in the SmartSales location list?",
+    "reasoning": "The SmartSales agent is needed to retrieve the list of available fields for locations since this information pertains directly to its functionality.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve the list of available fields for displaying locations in SmartSales.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the results obtained from the SmartSales step as the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve the list of available fields for displaying locations in SmartSales.",
+      "started_at": "2026-04-21T08:04:44.625535+00:00",
+      "ended_at": "2026-04-21T08:05:12.107662+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

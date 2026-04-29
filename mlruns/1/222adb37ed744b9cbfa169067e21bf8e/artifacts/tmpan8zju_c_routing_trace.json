@@ -1,0 +1,31 @@
+{
+  "user_query": "List Salesforce opportunities sorted by amount, highest first.",
+  "plan": {
+    "query": "List Salesforce opportunities sorted by amount, highest first.",
+    "reasoning": "The user query requires retrieving and sorting data from the Salesforce service. This can be done in a single step without any dependencies.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch all opportunities sorted by amount in descending order.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Return the list of opportunities as received from the Salesforce agent."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Fetch all opportunities sorted by amount in descending order.",
+      "started_at": "2026-04-27T13:12:31.739285+00:00",
+      "ended_at": "2026-04-27T13:12:45.730570+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_opportunities"
+      ]
+    }
+  ]
+}

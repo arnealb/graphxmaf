@@ -1,0 +1,17 @@
+{
+  "user_query": "What fields can be displayed for SmartSales catalog items?",
+  "plan": {
+    "query": "What fields can be displayed for SmartSales catalog items?",
+    "reasoning": "The query only requires information from the smartsales agent about the fields related to catalog items.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Fetch a list of all fields that can be displayed for catalog items.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of fields obtained from the smartsales agent in a clear format."
+  },
+  "invoked_agents": []
+}

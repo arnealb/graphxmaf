@@ -1,0 +1,31 @@
+{
+  "user_query": "Show me Salesforce opportunities in the 'Qualification' stage.",
+  "plan": {
+    "query": "Show me Salesforce opportunities in the 'Qualification' stage.",
+    "reasoning": "The query is directly related to Salesforce opportunities, therefore only one step is needed to fetch the relevant data.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch all opportunities that are in the 'Qualification' stage.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of opportunities retrieved from the Salesforce query."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Fetch all opportunities that are in the 'Qualification' stage.",
+      "started_at": "2026-04-27T13:12:12.204943+00:00",
+      "ended_at": "2026-04-27T13:12:22.404291+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_opportunities"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "user_query": "Find the email address of Dorian.",
+  "plan": {
+    "query": "Find the email address of Dorian.",
+    "reasoning": "The most appropriate agent to retrieve the email address is the graph agent, as it manages email addresses within Microsoft 365.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the email address of the contact named Dorian.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Use the result from step 1 to provide Dorian's email address."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the email address of the contact named Dorian.",
+      "started_at": "2026-04-21T07:29:53.119496+00:00",
+      "ended_at": "2026-04-21T07:29:56.638172+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

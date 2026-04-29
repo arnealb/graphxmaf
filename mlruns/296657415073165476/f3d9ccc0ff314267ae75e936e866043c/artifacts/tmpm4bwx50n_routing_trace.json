@@ -1,0 +1,42 @@
+{
+  "user_query": "Who am I in Microsoft 365, and what are the first 3 SmartSales locations?",
+  "plan": {
+    "query": "Who am I in Microsoft 365, and what are the first 3 SmartSales locations?",
+    "reasoning": "I need to retrieve user information from the Microsoft 365 environment via the graph agent and also get the first three locations from the smartsales agent. These tasks are independent and can be executed in parallel.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve user profile information from Microsoft 365.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "smartsales",
+        "task": "Fetch the first 3 locations from SmartSales.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from step 1 and step 2 to provide a response that includes both the user information from Microsoft 365 and the first three SmartSales locations."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve user profile information from Microsoft 365.",
+      "started_at": "2026-04-20T13:39:54.628682+00:00",
+      "ended_at": "2026-04-20T13:40:08.512908+00:00",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "smartsales",
+      "order": 2,
+      "input": "Fetch the first 3 locations from SmartSales.",
+      "started_at": "2026-04-20T13:39:54.628682+00:00",
+      "ended_at": "2026-04-20T13:40:08.512908+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

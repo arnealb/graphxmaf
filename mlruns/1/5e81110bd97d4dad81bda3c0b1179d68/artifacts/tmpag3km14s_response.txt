@@ -1,0 +1,89 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is an overview of everything related to Belgium from all systems:
+
+### Email Insights
+- **Email Subject**: Belgium region — Q1 2026 commercial summary
+  - **Sender**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Received**: 28 April 2026
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7tAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)  
+  - **From Microsoft 365**
+
+### Files
+- **SmartSales_Locations.docx**
+  - **Created**: 20 April 2026
+  - **Link**: [View Document](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BF23C8827-CC49-4607-A0B8-FF47034DC9E8%7D&file=SmartSales_Locations.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+  - **From Microsoft 365**
+
+- **Contract_Displaytech_2026.docx**
+  - **Created**: 15 April 2026
+  - **Link**: [View Document](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B0B210C4F-FD0F-459E-8810-7347B8B1E9D0%7D&file=Contract_Displaytech_2026.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+  - **From Microsoft 365**
+
+- **Contract_GlobalMedia_2026.docx**
+  - **Created**: 15 April 2026
+  - **Link**: [View Document](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B9CC62011-7652-4EEE-9DC8-C80201C99BBD%7D&file=Contract_GlobalMedia_2026.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+  - **From Microsoft 365**
+
+- **Partnership_AccountFrance_2026.docx**
+  - **Created**: 15 April 2026
+  - **Link**: [View Document](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BDD8E8864-3D6B-4C67-ADE3-52D1B09CDD8B%7D&file=Partnership_AccountFrance_2026.docx&action=default&mobileredirect=true&DefaultItemOpen=1)  
+  - **From Microsoft 365**
+
+### Salesforce Insights
+#### Accounts Related to Belgium
+- **Anheuser-Busch InBev** (Food & Beverage)  
+  [Website](https://www.ab-inbev.com)
+
+- **Delhaize Group** (Retail)  
+  [Website](https://www.delhaize.be)
+
+- **Carrefour Belgium SA** (Retail)  
+  [Website](https://www.carrefour.be)
+
+- **Brussels Retail Partners** (Retail)
+
+- **Ferrero Benelux** (Food & Beverage)
+
+- **GreenTech Solutions** (Technology)  
+  [Website](https://www.greentechsolutions.be)
+
+- **Colruyt Group** (Retail)  
+  [Website](https://www.colruytgroup.com)
+
+#### Leads Related to Belgium
+- **Bert Coppens**  
+  - **Company**: another-company  
+  - **Status**: New
+  - **Country**: Belgium
+
+- **Arne Albrecht**  
+  - **Company**: easi_dupe  
+  - **Email**: albrecht.arne@gmail.com  
+  - **Status**: Contacted 
+  - **Country**: Belgium  
+  - **From Salesforce**
+
+### SmartSales Locations in Belgium
+- **AACO DAVIDSON**, Leuven (3000)  
+  - Address: Havenkant 6
+
+- **Michelles Brasserie**, Izegem (8870)  
+  - Address: Ingelmunstersestraat 46
+
+- **AB InBev - Leuven**, Leuven (3000)  
+  - Address: Vaartstraat 94
+
+- **AD Delhaize - Forest**, Brussels (1190)  
+  - Address: Chaussée de Neerstalle 800
+
+- **Colruyt - Halle**, Halle (1500)  
+  - Address: Edingensesteenweg 196
+
+- **Customer1**, Bruges (8000)  
+  - Address: Markt 5  
+  - **From SmartSales**
+
+This summarizes the details relevant to Belgium across all integrated systems.

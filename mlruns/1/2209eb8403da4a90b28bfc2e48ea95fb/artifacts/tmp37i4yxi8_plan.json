@@ -1,0 +1,21 @@
+{
+  "query": "Are there companies in my upcoming calendar that we have no record of?",
+  "reasoning": "The query requires checking calendar events for companies and then cross-referencing those against the CRM records. Therefore, we'll first need to gather the calendar events, and once we have that information, we'll check the CRM for any records related to those companies.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve upcoming calendar events with their associated company names.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Using the company names from step 1 (if any), check for records of those companies in the CRM. If step 1 returned no results, state that there are no upcoming calendar events to cross-reference.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results of step 1 and step 2 to identify any companies from the calendar events that do not have corresponding records in the CRM."
+}

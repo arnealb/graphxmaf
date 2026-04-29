@@ -1,0 +1,29 @@
+{
+  "query": "Take the sender of my most recent email, look them up in Salesforce as a contact or lead, and check if their company has a SmartSales location.",
+  "reasoning": "The plan includes fetching the most recent email to get the sender first, then looking up that sender in Salesforce to find their contact or lead information, and finally checking SmartSales for the corresponding company location. All steps are sequential as each depends on the information from the previous one.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the sender information of my most recent email.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Look up the sender from step 1 in Salesforce to check if they are a contact or lead.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Check if the company associated with the contact or lead from step 2 has a SmartSales location.",
+      "depends_on": [
+        2
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from all three steps to provide a comprehensive answer regarding the sender, their Salesforce status, and SmartSales location information."
+}

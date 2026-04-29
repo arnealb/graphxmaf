@@ -1,0 +1,13 @@
+{
+  "query": "Find Salesforce leads from the Technology or Software industry.",
+  "reasoning": "The user is looking for specific leads categorized under certain industries within Salesforce. A single step with the Salesforce agent can accomplish this by filtering leads based on the industry criteria.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all leads filtered by the Technology and Software industries.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the retrieved Salesforce leads as the final answer."
+}

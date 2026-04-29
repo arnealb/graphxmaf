@@ -1,0 +1,13 @@
+{
+  "query": "Look up the email address of Arne in the organization.",
+  "reasoning": "To find the email address of Arne, I will use the graph agent to search for contacts in Microsoft 365, which includes the ability to retrieve email addresses.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for the contact named Arne and retrieve his email address.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the email address retrieved from the contact search for Arne."
+}

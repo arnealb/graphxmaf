@@ -1,0 +1,13 @@
+{
+  "query": "What is the total order value for companies that currently have an open support case?",
+  "reasoning": "To answer the user's query about the total order value for companies with open support cases, I will first gather data on the companies with those cases from Salesforce and then determine their order values also from Salesforce in one go, given that the associated order data can be retrieved alongside the case information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch all companies with open support cases along with their total order values.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Sum the total order values from the results of step 1 and present the final total."
+}

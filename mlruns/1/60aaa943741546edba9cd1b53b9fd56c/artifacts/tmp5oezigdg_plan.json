@@ -1,0 +1,13 @@
+{
+  "query": "Look up the email address of Arne in the organization.",
+  "reasoning": "To find Arne's email address, the salesforce agent can be used to search for Arne within the organization's contacts.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Search for Arne in the organization's contacts and return his email address.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the email address retrieved from the salesforce step."
+}

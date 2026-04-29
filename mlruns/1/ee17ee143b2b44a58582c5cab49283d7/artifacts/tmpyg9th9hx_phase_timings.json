@@ -1,0 +1,68 @@
+{
+  "plan": {
+    "latency_s": 4.033,
+    "steps": 3,
+    "input_tokens": 847,
+    "output_tokens": 253,
+    "total_tokens": 1100
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "graph",
+      "latency_s": 8.809,
+      "llm_turns": 4,
+      "n_tool_calls": 6,
+      "tool_calls": [
+        "search_email",
+        "search_calendar",
+        "search_email",
+        "search_calendar",
+        "search_email",
+        "search_calendar"
+      ],
+      "input_tokens": 3357,
+      "output_tokens": 19,
+      "total_tokens": 3376
+    },
+    {
+      "step_id": 2,
+      "agent": "salesforce",
+      "latency_s": 12.049,
+      "llm_turns": 3,
+      "n_tool_calls": 5,
+      "tool_calls": [
+        "find_accounts",
+        "find_contacts",
+        "find_leads",
+        "get_opportunities",
+        "get_cases"
+      ],
+      "input_tokens": 6746,
+      "output_tokens": 733,
+      "total_tokens": 7479
+    },
+    {
+      "step_id": 3,
+      "agent": "smartsales",
+      "latency_s": 30.802,
+      "llm_turns": 5,
+      "n_tool_calls": 4,
+      "tool_calls": [
+        "list_locations",
+        "list_orders",
+        "list_orders",
+        "list_catalog_items"
+      ],
+      "input_tokens": 13388,
+      "output_tokens": 3362,
+      "total_tokens": 16750
+    }
+  ],
+  "synthesis": {
+    "latency_s": 5.374,
+    "input_tokens": 3585,
+    "output_tokens": 418,
+    "total_tokens": 4003
+  }
+}

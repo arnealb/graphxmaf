@@ -1,0 +1,25 @@
+{
+  "plan": {
+    "latency_s": 2.366,
+    "steps": 1,
+    "input_tokens": 522,
+    "output_tokens": 124,
+    "total_tokens": 646
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "graph",
+      "latency_s": 15.56,
+      "input_tokens": 4263,
+      "output_tokens": 1101,
+      "total_tokens": 5364
+    }
+  ],
+  "synthesis": {
+    "latency_s": 4.967,
+    "input_tokens": 1292,
+    "output_tokens": 371,
+    "total_tokens": 1663
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "query": "Find all Word documents in my OneDrive.",
+  "reasoning": "The task requires accessing the OneDrive files to locate Word documents, which can be done using the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "List all files in OneDrive and filter for Word documents.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the output of the step to present a list of all Word documents found in OneDrive."
+}

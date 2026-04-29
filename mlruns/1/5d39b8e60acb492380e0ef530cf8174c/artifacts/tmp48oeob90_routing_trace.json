@@ -1,0 +1,17 @@
+{
+  "user_query": "List SmartSales catalog items.",
+  "plan": {
+    "query": "List SmartSales catalog items.",
+    "reasoning": "The query is straightforward and requires only one action from the Smartsales agent to retrieve the catalog items.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve all catalog items from SmartSales.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the retrieved catalog items as the final answer."
+  },
+  "invoked_agents": []
+}

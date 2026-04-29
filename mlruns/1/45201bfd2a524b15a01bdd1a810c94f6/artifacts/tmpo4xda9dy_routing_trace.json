@@ -1,0 +1,17 @@
+{
+  "user_query": "Show me 5 leads in Salesforce.",
+  "plan": {
+    "query": "Show me 5 leads in Salesforce.",
+    "reasoning": "The user is requesting leads, which can be retrieved directly from Salesforce. One step is sufficient to gather this information.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve 5 leads from Salesforce.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of 5 leads obtained from Salesforce."
+  },
+  "invoked_agents": []
+}

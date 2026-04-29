@@ -1,0 +1,13 @@
+{
+  "query": "What fields are available to display in the SmartSales location list?",
+  "reasoning": "The only relevant agent for this query is SmartSales, which manages location data. Therefore, only one step is needed to retrieve the available fields.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve a list of all available fields that can be displayed in the SmartSales location list.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of fields available from step 1 as the final answer."
+}

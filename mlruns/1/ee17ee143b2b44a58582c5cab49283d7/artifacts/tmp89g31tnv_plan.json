@@ -1,0 +1,25 @@
+{
+  "query": "How active have we been with supplier1 over the past month?",
+  "reasoning": "The query involves understanding the relationship with the supplier, which requires data from all available agents to get a comprehensive view of communications, CRM interactions, and any physical presence related to the supplier.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Find all emails and calendar events with supplier1 from the past month.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Gather all CRM accounts, contacts, leads, opportunities, and cases related to supplier1 for the past month.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Retrieve any location-related data and catalog items associated with supplier1 from the past month.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all three agents to provide a comprehensive overview of the activity with supplier1 over the past month, including communications, CRM interactions, and location data."
+}

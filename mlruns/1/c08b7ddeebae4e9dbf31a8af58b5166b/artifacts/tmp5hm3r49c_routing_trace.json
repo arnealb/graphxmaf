@@ -1,0 +1,31 @@
+{
+  "user_query": "Who am I in Microsoft 365?",
+  "plan": {
+    "query": "Who am I in Microsoft 365?",
+    "reasoning": "The query is asking for user-specific information within Microsoft 365, which can be handled by accessing user details through the graph agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the user's profile information in Microsoft 365, including name, email, and other relevant details.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the user profile information retrieved from step 1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the user's profile information in Microsoft 365, including name, email, and other relevant details.",
+      "started_at": "2026-04-24T09:01:17.330769+00:00",
+      "ended_at": "2026-04-24T09:01:23.834280+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "whoami"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+To calculate the total order value for companies with open support cases, we have identified the following companies with corresponding opportunities:
+
+### Companies with Open Support Cases
+- **Delhaize Group**
+- **Carrefour Belgium SA**
+- **Colruyt Group**
+- **supplier1**
+- **Easi Be** (Note: Easi Be does not have any corresponding opportunities.)
+
+### Opportunities and Their Values
+1. **Delhaize Group**
+   - Opportunity: Supply Chain Optimisation
+   - Amount: €310,000.00
+
+2. **Carrefour Belgium SA**
+   - Opportunity: In-Store Analytics Pilot
+   - Amount: €175,000.00
+
+3. **Colruyt Group**
+   - Opportunity: SmartSales Rollout 2026
+   - Amount: €220,000.00
+
+4. **supplier1**
+   - Opportunity: Q2 Delivery Contract
+   - Amount: €85,000.00
+
+### Total Order Value Calculation
+- **Sum of Opportunities**: 
+  - Delhaize Group: €310,000.00
+  - Carrefour Belgium SA: €175,000.00
+  - Colruyt Group: €220,000.00
+  - supplier1: €85,000.00
+
+#### Total Order Value:
+- Total: **€790,000.00**
+
+Thus, the total order value for companies that currently have an open support case is **€790,000.00**.

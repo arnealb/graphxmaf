@@ -1,0 +1,27 @@
+{
+  "user_query": "Show me my Microsoft 365 contacts.",
+  "plan": {
+    "query": "Show me my Microsoft 365 contacts.",
+    "reasoning": "The user wants to access their contacts stored in Microsoft 365, which can be done with one step using the graph agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the user's Microsoft 365 contacts.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the results from step 1 as the user's Microsoft 365 contacts."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the user's Microsoft 365 contacts.",
+      "started_at": "2026-04-22T07:27:58.375665+00:00",
+      "ended_at": "2026-04-22T07:28:08.532760+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

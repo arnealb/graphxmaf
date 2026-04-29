@@ -1,0 +1,13 @@
+{
+  "query": "Find all Word documents in my OneDrive.",
+  "reasoning": "The query requires retrieving specific files from OneDrive. The graph agent is responsible for handling Microsoft 365 services, including OneDrive, and can directly fetch the needed documents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve all Word documents stored in my OneDrive.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of Word documents retrieved from OneDrive."
+}

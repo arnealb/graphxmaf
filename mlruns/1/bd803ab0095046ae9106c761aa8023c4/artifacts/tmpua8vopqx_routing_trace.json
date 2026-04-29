@@ -1,0 +1,27 @@
+{
+  "user_query": "List 5 Salesforce accounts.",
+  "plan": {
+    "query": "List 5 Salesforce accounts.",
+    "reasoning": "The task requires fetching data from the Salesforce CRM, so one step is sufficient to obtain the list of accounts.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve a list of 5 accounts from Salesforce.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of accounts retrieved from Salesforce."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve a list of 5 accounts from Salesforce.",
+      "started_at": "2026-04-21T14:17:09.346941+00:00",
+      "ended_at": "2026-04-21T14:17:40.393349+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "query": "What fields can be displayed for SmartSales orders?",
+  "reasoning": "The query directly relates to the capabilities of the SmartSales agent for displaying order fields, requiring only one step.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the list of fields that can be displayed for SmartSales orders.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved list of fields as the final answer."
+}

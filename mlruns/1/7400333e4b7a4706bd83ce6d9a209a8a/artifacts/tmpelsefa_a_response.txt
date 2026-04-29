@@ -1,0 +1,43 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (smartsales)...
+Synthesizing...
+Based on the results from the email senders and the location data, here are the companies that emailed you recently and do not seem to have a location registered with you:
+
+- **Proximus Business**
+  - Email: info@proximus.be
+  
+- **AB InBev Sales**
+  - Email: sales@ab-inbev.com
+  
+- **Delhaize Procurement**
+  - Email: procurement@delhaize.eu
+  
+- **AD Delhaize IT**
+  - Email: it@delhaize.eu
+  
+- **CRF Belgium Procurement**
+  - Email: procurement@carrefour-be.eu
+  
+- **Carrefour BE Operations**
+  - Email: ops@carrefour-be.eu
+  
+- **SmartAdmin**
+  - Email: SmartAdmin@easigroupdemo.onmicrosoft.com
+  
+- **Ferrero Benelux Marketing**
+  - Email: marketing@ferrero.be
+  
+- **GreenTech Solutions**
+  - Email: info@greentechsolutions.be
+  
+- **Colruyt Group Procurement**
+  - Email: procurement@colruyt.be
+
+The only sender registered with a location is:
+- **Arne Albrecht**
+  - Email: albrecht.arne@gmail.com
+  - Location: Knokke, Belgium
+
+All other companies listed do not have a registered location in your system.

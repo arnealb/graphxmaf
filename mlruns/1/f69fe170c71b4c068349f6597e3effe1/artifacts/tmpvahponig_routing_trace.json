@@ -1,0 +1,17 @@
+{
+  "user_query": "Find Salesforce contacts in the Sales department.",
+  "plan": {
+    "query": "Find Salesforce contacts in the Sales department.",
+    "reasoning": "A single query to Salesforce is sufficient to retrieve the contacts filtered by the Sales department as it can handle both the search and retrieval of the necessary data in one call.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve all contacts that belong to the Sales department.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of contacts retrieved from the Salesforce step."
+  },
+  "invoked_agents": []
+}

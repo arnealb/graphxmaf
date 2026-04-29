@@ -1,0 +1,25 @@
+{
+  "user_query": "List SmartSales approbation statuses, then get the full details of the first one.",
+  "plan": {
+    "query": "List SmartSales approbation statuses, then get the full details of the first one.",
+    "reasoning": "The task requires listing approbation statuses and fetching details of the first status, which necessitates two steps: first to retrieve the list and second to get the details of the first item from that list.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve the list of SmartSales approbation statuses.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "smartsales",
+        "task": "Using the approbation statuses from step 1, get the full details of the first approbation status (if any). If step 1 returned no results, state that and skip fetching details.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the list of approbation statuses from step 1 with the details from step 2 into a final response."
+  },
+  "invoked_agents": []
+}

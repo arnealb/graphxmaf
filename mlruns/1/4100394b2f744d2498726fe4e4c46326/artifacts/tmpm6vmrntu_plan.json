@@ -1,0 +1,21 @@
+{
+  "query": "List SmartSales catalog items, then retrieve the full details of the first one.",
+  "reasoning": "The query requires two steps: first, to fetch the catalog items and, second, to retrieve details about the first item from the list obtained in the first step.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "List all catalog items.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Retrieve full details of the first catalog item from step 1 (if available). If no items were returned, state that and do not perform any detail retrieval.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from step 1 and step 2, presenting the list of catalog items and the details of the first one, or indicate if no items were found."
+}

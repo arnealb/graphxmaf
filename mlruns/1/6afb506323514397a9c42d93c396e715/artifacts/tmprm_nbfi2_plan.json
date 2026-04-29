@@ -1,0 +1,13 @@
+{
+  "query": "List SmartSales catalog items.",
+  "reasoning": "The task requires retrieving catalog items from the SmartSales agent, which is the only relevant source for this information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve all catalog items available in SmartSales.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the catalog items retrieved from SmartSales."
+}

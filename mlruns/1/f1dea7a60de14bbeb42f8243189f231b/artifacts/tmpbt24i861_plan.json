@@ -1,0 +1,13 @@
+{
+  "query": "Search for emails that have the word 'meeting' in the subject.",
+  "reasoning": "The task requires searching through emails, which can be done efficiently using the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for all emails with 'meeting' in the subject line.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the results of the email search as the final output."
+}

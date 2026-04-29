@@ -1,0 +1,4840 @@
+​​{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "OpenAPI definition",
+        "version": "v0"
+    },
+    "servers": [
+        {
+            "url": "http://acc-tech-console-smartsales.easi.net",
+            "description": "Generated server url"
+        }
+    ],
+    "paths": {
+        "/server/v3/cluster/shutdown": {
+            "put": {
+                "tags": [
+                    "cluster-rest-controller"
+                ],
+                "operationId": "shutdown",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/server/v3/rateLimit/synchronize": {
+            "put": {
+                "tags": [
+                    "rate-limit-rest-controller"
+                ],
+                "operationId": "synchronize",
+                "parameters": [
+                    {
+                        "name": "dto",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/RateLimitCountersDTO"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/rest/public/v3/password/**": {
+            "get": {
+                "tags": [
+                    "password-rest-controller"
+                ],
+                "operationId": "proxyGet",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "password-rest-controller"
+                ],
+                "operationId": "proxyPut",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "password-rest-controller"
+                ],
+                "operationId": "proxyPost",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "password-rest-controller"
+                ],
+                "operationId": "proxyDelete",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/auth/v3/**": {
+            "get": {
+                "tags": [
+                    "auth-rest-controller"
+                ],
+                "operationId": "proxyGet_1",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "auth-rest-controller"
+                ],
+                "operationId": "proxyPut_1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "auth-rest-controller"
+                ],
+                "operationId": "proxyPost_1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "auth-rest-controller"
+                ],
+                "operationId": "proxyDelete_1",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/user/me/password": {
+            "put": {
+                "tags": [
+                    "user-rest-controller"
+                ],
+                "operationId": "changeCurrentUserPassword",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserPasswordChangeDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AuthCredentialDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/user/me/password/complexity": {
+            "put": {
+                "tags": [
+                    "user-rest-controller"
+                ],
+                "operationId": "getPasswordComplexity",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserPasswordChangeDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PasswordComplexityDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/user/**": {
+            "get": {
+                "tags": [
+                    "user-rest-controller"
+                ],
+                "operationId": "proxyGet_2",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "user-rest-controller"
+                ],
+                "operationId": "proxyPut_2",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "user-rest-controller"
+                ],
+                "operationId": "proxyPost_2",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "user-rest-controller"
+                ],
+                "operationId": "proxyDelete_2",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/translation/**": {
+            "get": {
+                "tags": [
+                    "translation-rest-controller"
+                ],
+                "operationId": "proxyGet_3",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "translation-rest-controller"
+                ],
+                "operationId": "proxyPut_3",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "translation-rest-controller"
+                ],
+                "operationId": "proxyPost_3",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "translation-rest-controller"
+                ],
+                "operationId": "proxyDelete_3",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/person/{uid}": {
+            "get": {
+                "tags": [
+                    "person-rest-controller"
+                ],
+                "operationId": "getPerson",
+                "parameters": [
+                    {
+                        "name": "uid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "person-rest-controller"
+                ],
+                "operationId": "updatePerson",
+                "parameters": [
+                    {
+                        "name": "uid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ExtranetPersonDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/person/{uid}/": {
+            "get": {
+                "tags": [
+                    "person-rest-controller"
+                ],
+                "operationId": "getPerson_1",
+                "parameters": [
+                    {
+                        "name": "uid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "person-rest-controller"
+                ],
+                "operationId": "updatePerson_1",
+                "parameters": [
+                    {
+                        "name": "uid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ExtranetPersonDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/person/**": {
+            "get": {
+                "tags": [
+                    "person-rest-controller"
+                ],
+                "operationId": "proxyGet_4",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "person-rest-controller"
+                ],
+                "operationId": "proxyPut_4",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "person-rest-controller"
+                ],
+                "operationId": "proxyPost_4",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "person-rest-controller"
+                ],
+                "operationId": "proxyDelete_4",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/order/**": {
+            "get": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "proxyGet_5",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "proxyPut_5",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "proxyPost_5",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "proxyDelete_5",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/location/{uid}": {
+            "get": {
+                "tags": [
+                    "location-rest-controller"
+                ],
+                "operationId": "getLocation",
+                "parameters": [
+                    {
+                        "name": "uid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "location-rest-controller"
+                ],
+                "operationId": "updateLocation",
+                "parameters": [
+                    {
+                        "name": "uid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ExtranetLocationDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/location/**": {
+            "get": {
+                "tags": [
+                    "location-rest-controller"
+                ],
+                "operationId": "proxyGet_6",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "location-rest-controller"
+                ],
+                "operationId": "proxyPut_6",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "location-rest-controller"
+                ],
+                "operationId": "proxyPost_6",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "location-rest-controller"
+                ],
+                "operationId": "proxyDelete_6",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/listPreset/**": {
+            "get": {
+                "tags": [
+                    "list-preset-rest-controller"
+                ],
+                "operationId": "proxyGet_7",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "list-preset-rest-controller"
+                ],
+                "operationId": "proxyPut_7",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "list-preset-rest-controller"
+                ],
+                "operationId": "proxyPost_7",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "list-preset-rest-controller"
+                ],
+                "operationId": "proxyDelete_7",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/licence/**": {
+            "get": {
+                "tags": [
+                    "licence-rest-controller"
+                ],
+                "operationId": "proxyGet_8",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "licence-rest-controller"
+                ],
+                "operationId": "proxyPut_8",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "licence-rest-controller"
+                ],
+                "operationId": "proxyPost_8",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "licence-rest-controller"
+                ],
+                "operationId": "proxyDelete_8",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/data/export/**": {
+            "get": {
+                "tags": [
+                    "data-export-rest-controller"
+                ],
+                "operationId": "proxyGet_9",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "data-export-rest-controller"
+                ],
+                "operationId": "proxyPut_9",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "data-export-rest-controller"
+                ],
+                "operationId": "proxyPost_9",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "data-export-rest-controller"
+                ],
+                "operationId": "proxyDelete_9",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/dashboard/**": {
+            "get": {
+                "tags": [
+                    "dashboard-rest-controller"
+                ],
+                "operationId": "proxyGet_10",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "dashboard-rest-controller"
+                ],
+                "operationId": "proxyPut_10",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "dashboard-rest-controller"
+                ],
+                "operationId": "proxyPost_10",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "dashboard-rest-controller"
+                ],
+                "operationId": "proxyDelete_10",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/custom/**": {
+            "get": {
+                "tags": [
+                    "custom-rest-controller"
+                ],
+                "operationId": "proxyGet_11",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "custom-rest-controller"
+                ],
+                "operationId": "proxyPut_11",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "custom-rest-controller"
+                ],
+                "operationId": "proxyPost_11",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "custom-rest-controller"
+                ],
+                "operationId": "proxyDelete_11",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/configuration/**": {
+            "get": {
+                "tags": [
+                    "configuration-rest-controller"
+                ],
+                "operationId": "proxyGet_12",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "configuration-rest-controller"
+                ],
+                "operationId": "proxyPut_12",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "configuration-rest-controller"
+                ],
+                "operationId": "proxyPost_12",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "configuration-rest-controller"
+                ],
+                "operationId": "proxyDelete_12",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/catalog/**": {
+            "get": {
+                "tags": [
+                    "catalog-rest-controller"
+                ],
+                "operationId": "proxyGet_13",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "catalog-rest-controller"
+                ],
+                "operationId": "proxyPut_13",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "catalog-rest-controller"
+                ],
+                "operationId": "proxyPost_13",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "catalog-rest-controller"
+                ],
+                "operationId": "proxyDelete_13",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/**": {
+            "get": {
+                "tags": [
+                    "tenant-rest-controller"
+                ],
+                "operationId": "proxyGet_14",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "tenant-rest-controller"
+                ],
+                "operationId": "proxyPut_14",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "tenant-rest-controller"
+                ],
+                "operationId": "proxyPost_14",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "tenant-rest-controller"
+                ],
+                "operationId": "proxyDelete_14",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/public/v3/password/reset/username/{username}": {
+            "post": {
+                "tags": [
+                    "password-rest-controller"
+                ],
+                "operationId": "resetExtranetPasswordByUsername",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/auth/v3/token": {
+            "get": {
+                "tags": [
+                    "auth-rest-controller"
+                ],
+                "operationId": "getToken",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "auth-rest-controller"
+                ],
+                "operationId": "getOAuth2Token",
+                "requestBody": {
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "grant_type": {
+                                        "type": "string"
+                                    },
+                                    "code": {
+                                        "type": "string"
+                                    },
+                                    "refresh_token": {
+                                        "type": "string"
+                                    },
+                                    "redirect_uri": {
+                                        "type": "string"
+                                    },
+                                    "client_id": {
+                                        "type": "string"
+                                    },
+                                    "client_secret": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/OAuth2AccessTokenDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/person": {
+            "post": {
+                "tags": [
+                    "person-rest-controller"
+                ],
+                "operationId": "createPerson",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ExtranetPersonDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/order": {
+            "post": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "createOrder",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ExtranetCatalogOrderDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/order/discount/apply": {
+            "post": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "applyDiscount",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ExtranetCatalogOrderDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/server/v3/cluster/tenant/{tenantId}/job/list": {
+            "get": {
+                "tags": [
+                    "cluster-rest-controller"
+                ],
+                "operationId": "getTenantJobList",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/server/v3/cluster/log/line": {
+            "get": {
+                "tags": [
+                    "cluster-rest-controller"
+                ],
+                "operationId": "getLogLines",
+                "parameters": [
+                    {
+                        "name": "maxLines",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": 100
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/LogLineDTO"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/server/v3/cluster/log/file": {
+            "get": {
+                "tags": [
+                    "cluster-rest-controller"
+                ],
+                "operationId": "getLogFile",
+                "parameters": [
+                    {
+                        "name": "filename",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/server/v3/cluster/log/file/list": {
+            "get": {
+                "tags": [
+                    "cluster-rest-controller"
+                ],
+                "operationId": "getLogFiles",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/server/v3/cluster/job/trace": {
+            "get": {
+                "tags": [
+                    "cluster-rest-controller"
+                ],
+                "operationId": "getAllJobList",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/server/v3/cluster/jmx/list": {
+            "get": {
+                "tags": [
+                    "cluster-rest-controller"
+                ],
+                "operationId": "getJmxManagedOperations",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/server/v3/cluster/jmx/invoke": {
+            "get": {
+                "tags": [
+                    "cluster-rest-controller"
+                ],
+                "operationId": "jmxInvoke",
+                "parameters": [
+                    {
+                        "name": "managedOperation",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/server/v3/cluster/health/state": {
+            "get": {
+                "tags": [
+                    "cluster-rest-controller"
+                ],
+                "operationId": "getNodeHealthState",
+                "parameters": [
+                    {
+                        "name": "skipVerifications",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean",
+                            "default": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/auth/v3/token/inspect": {
+            "get": {
+                "tags": [
+                    "auth-rest-controller"
+                ],
+                "operationId": "getTokenInspect",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "deprecated": true
+            }
+        },
+        "/rest/auth/v3/login/method": {
+            "get": {
+                "tags": [
+                    "auth-rest-controller"
+                ],
+                "operationId": "getLoginMethod",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AuthLoginMethodInfoDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/auth/v3/applications": {
+            "get": {
+                "tags": [
+                    "auth-rest-controller"
+                ],
+                "operationId": "getApplicationIds",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/TenantDTOMinimal"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3": {
+            "get": {
+                "tags": [
+                    "tenant-rest-controller"
+                ],
+                "operationId": "getTenant",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/user/me": {
+            "get": {
+                "tags": [
+                    "user-rest-controller"
+                ],
+                "operationId": "getCurrentUser",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/person/list": {
+            "get": {
+                "tags": [
+                    "person-rest-controller"
+                ],
+                "operationId": "query",
+                "parameters": [
+                    {
+                        "name": "nextPageToken",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "s",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "p",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "simple"
+                        }
+                    },
+                    {
+                        "name": "skipResultSize",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/person/list/sortableFields": {
+            "get": {
+                "tags": [
+                    "person-rest-controller"
+                ],
+                "operationId": "listOrderSortableFields",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/person/list/queryableFields": {
+            "get": {
+                "tags": [
+                    "person-rest-controller"
+                ],
+                "operationId": "listOrderQueryableFields",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/order/{uid}/": {
+            "get": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "getOrder",
+                "parameters": [
+                    {
+                        "name": "uid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/order/{uid}": {
+            "get": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "getOrder_1",
+                "parameters": [
+                    {
+                        "name": "uid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/order/list": {
+            "get": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "query_1",
+                "parameters": [
+                    {
+                        "name": "nextPageToken",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "s",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/order/list/sortableFields": {
+            "get": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "listOrderSortableFields_1",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/order/list/queryableFields": {
+            "get": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "listOrderQueryableFields_1",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/order/configuration": {
+            "get": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "getOrderConfiguration",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/order/approbation/status/{uid}": {
+            "get": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "getApprobationStatus",
+                "parameters": [
+                    {
+                        "name": "uid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/order/approbation/status/list": {
+            "get": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "queryApprobationStatus",
+                "parameters": [
+                    {
+                        "name": "nextPageToken",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "s",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "p",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "simple"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/order/approbation/status/list/sortableFields": {
+            "get": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "listApprobationStatusSortableFields",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/order/approbation/status/list/queryableFields": {
+            "get": {
+                "tags": [
+                    "order-rest-controller"
+                ],
+                "operationId": "listApprobationStatusQueryableFields",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/location/list": {
+            "get": {
+                "tags": [
+                    "location-rest-controller"
+                ],
+                "operationId": "query_2",
+                "parameters": [
+                    {
+                        "name": "nextPageToken",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "s",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/location/list/sortableFields": {
+            "get": {
+                "tags": [
+                    "location-rest-controller"
+                ],
+                "operationId": "listOrderSortableFields_2",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/location/list/queryableFields": {
+            "get": {
+                "tags": [
+                    "location-rest-controller"
+                ],
+                "operationId": "listOrderQueryableFields_2",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/dashboard/{uid}": {
+            "get": {
+                "tags": [
+                    "dashboard-rest-controller"
+                ],
+                "operationId": "getDashboard",
+                "parameters": [
+                    {
+                        "name": "uid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/dashboard/widget/render/queryableFields": {
+            "get": {
+                "tags": [
+                    "dashboard-rest-controller"
+                ],
+                "operationId": "renderQueryableFields",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/dashboard/list": {
+            "get": {
+                "tags": [
+                    "dashboard-rest-controller"
+                ],
+                "operationId": "queryDashboards",
+                "parameters": [
+                    {
+                        "name": "nextPageToken",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "s",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "p",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/custom/template/{source}": {
+            "get": {
+                "tags": [
+                    "custom-rest-controller"
+                ],
+                "operationId": "getTemplate",
+                "parameters": [
+                    {
+                        "name": "source",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "LOCATION",
+                                "PERSON",
+                                "EVENT",
+                                "TASK",
+                                "CATALOG",
+                                "CATALOG_IMAGE",
+                                "CATALOG_LAYOUT",
+                                "CATALOG_ORDER",
+                                "CATALOG_ITEM_CHANGEREQUEST",
+                                "CATALOG_ITEM_LINK",
+                                "DISCOUNT",
+                                "PRICING",
+                                "DOCUMENT",
+                                "SURVEY_V2_RESPONSE",
+                                "VISIT_TIMER",
+                                "ANALYTICS_DATA",
+                                "TARGETING_GOAL",
+                                "USER",
+                                "NOTIFICATION",
+                                "CUSTOM_MODULE",
+                                "CUSTOM_MODULE_ENTRY",
+                                "TIMESHEET_PROJECT",
+                                "TIMESHEET_SUB_PROJECT",
+                                "TIMESHEET_SIGNING",
+                                "TIMESHEET_PROJECT_REVIEW",
+                                "TIMESHEET_FIN_OPERATION",
+                                "TIMESHEET_INVOICE_ANNEX"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/catalog/list": {
+            "get": {
+                "tags": [
+                    "catalog-rest-controller"
+                ],
+                "operationId": "query_3",
+                "parameters": [
+                    {
+                        "name": "nextPageToken",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "s",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "p",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "minimal"
+                        }
+                    },
+                    {
+                        "name": "skipResultSize",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    },
+                    {
+                        "name": "configurationMode",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/catalog/list/sortableFields": {
+            "get": {
+                "tags": [
+                    "catalog-rest-controller"
+                ],
+                "operationId": "listOrderSortableFields_3",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/catalog/list/queryableFields": {
+            "get": {
+                "tags": [
+                    "catalog-rest-controller"
+                ],
+                "operationId": "listOrderQueryableFields_3",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/catalog/item/{uid}/": {
+            "get": {
+                "tags": [
+                    "catalog-rest-controller"
+                ],
+                "operationId": "getItem",
+                "parameters": [
+                    {
+                        "name": "uid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "locationUid",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "withDiscountPrice",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/rest/api/v3/catalog/item/{uid}": {
+            "get": {
+                "tags": [
+                    "catalog-rest-controller"
+                ],
+                "operationId": "getItem_1",
+                "parameters": [
+                    {
+                        "name": "uid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "locationUid",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "withDiscountPrice",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/public/v3/monitoring/alive": {
+            "get": {
+                "tags": [
+                    "monitoring-rest-controller"
+                ],
+                "operationId": "getAliveStatus",
+                "parameters": [
+                    {
+                        "name": "skipVerifications",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean",
+                            "default": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "RateLimitCountersDTO": {
+                "type": "object",
+                "properties": {
+                    "clusterNodeName": {
+                        "type": "string"
+                    },
+                    "consumeCounters": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    },
+                    "errorCounters": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                }
+            },
+            "UserPasswordChangeDTO": {
+                "type": "object",
+                "properties": {
+                    "newPassword": {
+                        "type": "string"
+                    }
+                }
+            },
+            "AuthCredentialDTO": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "type": "string"
+                    },
+                    "accessToken": {
+                        "type": "string"
+                    },
+                    "expires": {
+                        "type": "string"
+                    },
+                    "mfaCodeRequired": {
+                        "type": "boolean"
+                    },
+                    "allowedToImpersonate": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "PasswordComplexityDTO": {
+                "type": "object",
+                "properties": {
+                    "complexity": {
+                        "type": "string",
+                        "enum": [
+                            "DANGEROUS",
+                            "INSUFFICIENT",
+                            "SUFFICIENT",
+                            "COMPLEX",
+                            "AWESOME"
+                        ]
+                    }
+                }
+            },
+            "AbstractCustomFieldDTO": {
+                "type": "object",
+                "properties": {
+                    "field": {
+                        "$ref": "#/components/schemas/EmbeddedCustomFieldDTO"
+                    },
+                    "values": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AbstractExtendedCustomFieldValueDTO"
+                        }
+                    }
+                }
+            },
+            "AbstractExtendedCustomFieldValueDTO": {
+                "type": "object",
+                "properties": {
+                    "valueAsText": {
+                        "type": "string"
+                    },
+                    "valueAsDate": {
+                        "type": "string"
+                    },
+                    "valueAsTime": {
+                        "type": "string"
+                    },
+                    "valueAsDatetime": {
+                        "type": "string"
+                    },
+                    "valueAsInteger": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "valueAsDecimal": {
+                        "type": "number"
+                    },
+                    "valueAsBoolean": {
+                        "type": "boolean"
+                    },
+                    "choice": {
+                        "$ref": "#/components/schemas/EmbeddedCustomFieldChoiceDTO"
+                    },
+                    "techClientUid": {
+                        "type": "string"
+                    },
+                    "attachmentFileSize": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "attachmentFileName": {
+                        "type": "string"
+                    },
+                    "attachmentExtension": {
+                        "type": "string"
+                    },
+                    "attachmentUid": {
+                        "type": "string"
+                    },
+                    "location": {
+                        "$ref": "#/components/schemas/EmbeddedLocationDTO"
+                    },
+                    "person": {
+                        "$ref": "#/components/schemas/EmbeddedPersonDTO"
+                    },
+                    "catalogItem": {
+                        "$ref": "#/components/schemas/EmbeddedCatalogItemDTO"
+                    },
+                    "catalogOrder": {
+                        "$ref": "#/components/schemas/EmbeddedCatalogOrderDTO"
+                    },
+                    "user": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "event": {
+                        "$ref": "#/components/schemas/EmbeddedEventDTO"
+                    },
+                    "task": {
+                        "$ref": "#/components/schemas/EmbeddedTaskDTO"
+                    },
+                    "customModuleEntry": {
+                        "$ref": "#/components/schemas/EmbeddedCustomModuleEntryDTO"
+                    },
+                    "surveyResponse": {
+                        "$ref": "#/components/schemas/EmbeddedSurveyResponseDTO"
+                    },
+                    "empty": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "EmbeddedAttributeDTO": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    }
+                }
+            },
+            "EmbeddedCatalogItemDTO": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "type": "string"
+                    },
+                    "code": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "price": {
+                        "type": "number"
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "EmbeddedCatalogOrderDTO": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "type": "string"
+                    },
+                    "date": {
+                        "type": "string"
+                    },
+                    "internalReference": {
+                        "type": "string"
+                    },
+                    "externalReference": {
+                        "type": "string"
+                    },
+                    "user": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "customer": {
+                        "$ref": "#/components/schemas/EmbeddedLocationDTO"
+                    },
+                    "total": {
+                        "type": "number"
+                    },
+                    "approbationStatus": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "ORDER",
+                            "OFFER"
+                        ]
+                    }
+                }
+            },
+            "EmbeddedCustomFieldChoiceDTO": {
+                "type": "object",
+                "properties": {
+                    "accessorName": {
+                        "type": "string"
+                    },
+                    "text": {
+                        "type": "string"
+                    }
+                }
+            },
+            "EmbeddedCustomFieldDTO": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string"
+                    },
+                    "accessorName": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "TEXT",
+                            "DATE",
+                            "TIME",
+                            "DATETIME",
+                            "INTEGER",
+                            "DECIMAL",
+                            "BOOLEAN",
+                            "ATTACHMENT",
+                            "OBJECT"
+                        ]
+                    },
+                    "relatedType": {
+                        "type": "string",
+                        "enum": [
+                            "SUPER_USER",
+                            "SUPER_USER_GROUP",
+                            "SUPER_USER_RESTRICT_REQUEST",
+                            "TENANT",
+                            "USER",
+                            "EXTERNAL_CLIENT_APPLICATION",
+                            "TAG",
+                            "DATA_EXPORT",
+                            "DEVICE",
+                            "TRANSLATION_LABEL",
+                            "SUPPORT_REQUEST",
+                            "SUPPORT_FORWARD",
+                            "WEBHOOK_SUBSCRIPTION",
+                            "WEBHOOK_REQUEST",
+                            "EMAIL",
+                            "ATTACHMENT",
+                            "AUDIT_EVENT",
+                            "CATALOG",
+                            "CATALOG_GROUP",
+                            "CATALOG_IMAGE",
+                            "CATALOG_CHANGE_REQUEST",
+                            "CATALOG_ITEM_LINK",
+                            "CATALOG_LAYOUT",
+                            "CATALOG_ORDER",
+                            "CATALOG_ORDER_APPROBATION_STATUS",
+                            "CATALOG_ORDER_LOCATION",
+                            "COMPUTED_VALUE",
+                            "COMPUTED_VALUE_RUN",
+                            "MEASUREMENT_UNIT",
+                            "DASHBOARD",
+                            "DISCOUNT",
+                            "DISCOUNT_PRICING",
+                            "LIST_PRESET",
+                            "LIST_PRESET_NEWSLETTER",
+                            "LIST_PRESET_AUDIENCE",
+                            "EXTRANET_USER",
+                            "SURVEY",
+                            "SURVEY_QUESTION",
+                            "SURVEY_RESPONSE",
+                            "SURVEY_RESPONSE_STATUS",
+                            "USER_SECURITY_PROFILES",
+                            "USER_WORKSITE",
+                            "USER_DEPARTMENT",
+                            "USER_BUSINESS_LINE",
+                            "USER_TRACK",
+                            "USER_IMPERSONATE",
+                            "USER_GROUP",
+                            "NOTIFICATION",
+                            "EVENT",
+                            "TASK",
+                            "NEWS_INTERNAL_ITEM",
+                            "NEWS_EXTERNAL_ITEM",
+                            "LOCATION",
+                            "LOCATION_RELATIONSHIP",
+                            "PERSON",
+                            "COMMENT",
+                            "DOCUMENT",
+                            "DOCUMENT_SHARING",
+                            "VISIT_TIMER",
+                            "ANALYTICS_DATA",
+                            "TARGET_GOAL",
+                            "TARGET_DEFINITION",
+                            "CUSTOM_MODULE",
+                            "CUSTOM_MODULE_ENTRY",
+                            "SECURITY_PROFILE",
+                            "TIMESHEET_HOLIDAY",
+                            "TIMESHEET_HOLIDAY_YEAR",
+                            "TIMESHEET_PROJECT",
+                            "TIMESHEET_SUB_PROJECT",
+                            "TIMESHEET_PROJECT_DIVISION",
+                            "TIMESHEET_PROJECT_NATURE",
+                            "TIMESHEET_PROJECT_COLLABORATION_TYPE",
+                            "TIMESHEET_PROJECT_FOLLOW_UP_STATUS",
+                            "TIMESHEET_PROJECT_REVIEW",
+                            "TIMESHEET_FIN_OPERATION",
+                            "TIMESHEET_FIN_OPERATION_APPROBATION_STATUS",
+                            "TIMESHEET_SIGNING",
+                            "TIMESHEET_SIGNING_CALENDAR",
+                            "TIMESHEET_SIGNING_APPROBATION_STATUS",
+                            "TIMESHEET_SIGNING_OVERTIME_STATUS",
+                            "TIMESHEET_SIGNING_OVERTIME_WISHED_OUTCOME",
+                            "TIMESHEET_INVOICE_ANNEX",
+                            "TIMESHEET_INVOICE_ANNEX_APPROBATION_STATUS"
+                        ]
+                    },
+                    "contextualUsage": {
+                        "type": "boolean"
+                    },
+                    "highlightedIndex": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "multiple": {
+                        "type": "boolean"
+                    },
+                    "system": {
+                        "type": "boolean"
+                    },
+                    "hasChoices": {
+                        "type": "boolean"
+                    },
+                    "uid": {
+                        "type": "string"
+                    }
+                }
+            },
+            "EmbeddedCustomModuleDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "icon": {
+                        "type": "string",
+                        "enum": [
+                            "ADD",
+                            "ANNOUNCEMENT",
+                            "APPROVED",
+                            "ATTACHMENT",
+                            "BACKHOE_LOADER",
+                            "BALANCE",
+                            "BEAMER",
+                            "BRICK_WALL",
+                            "CALCULATOR",
+                            "CALENDAR",
+                            "CAMERA_1",
+                            "CAMERA_2",
+                            "CAMERA_3",
+                            "CANCELLED",
+                            "CASH_MACHINE",
+                            "CHAT",
+                            "CHAT_BUBBLE_SQUARE",
+                            "CHECK",
+                            "CHECK_CIRCLE",
+                            "CINEMA",
+                            "CLIP",
+                            "COFFEE_CUP_1",
+                            "COFFEE_CUP_2",
+                            "COFFEE_PAPER_GLASS",
+                            "COMBINED_SHAPE",
+                            "COMPLETELY_PAID",
+                            "CONSTRUCTION_CRANE",
+                            "CONSTRUCTION_FENCE",
+                            "CONSTRUCTION_HOOK",
+                            "CONSTRUCTION_LIFT",
+                            "CONSTRUCTION_ROCK_DRILLER",
+                            "CONSTRUCTION_TRUCK_1",
+                            "CONSTRUCTION_TRUCK_2",
+                            "CONSTRUCTION_WALL",
+                            "CONTACT_BOOK",
+                            "CONTENT_LAYERS_SHOW",
+                            "COOKING_OIL_BOTTLE",
+                            "DISLIKE",
+                            "DOC",
+                            "DONE",
+                            "EMAIL_ENVELOPE",
+                            "ESPRESSO_MACHINE",
+                            "FILE_NEW",
+                            "FILE_OFFICE_DOC",
+                            "FILE_OFFICE_PDF",
+                            "FLAG_RECTANGLE",
+                            "FLAG_TRIANGLE",
+                            "FOLDERS",
+                            "FOOD_APPLE",
+                            "FOOD_BANANA",
+                            "FOOD_BOILED_EGG",
+                            "FOOD_BREAD_JAM",
+                            "FOOD_BURGER",
+                            "FOOD_CAKE_PIECE",
+                            "FOOD_CAKE_WHOLE",
+                            "FOOD_CANDY",
+                            "FOOD_CHEESE",
+                            "FOOD_CHERRY",
+                            "FOOD_CHICKEN_DRUM_STICK",
+                            "FOOD_CHOCOLATE_BAR",
+                            "FOOD_COOKIE",
+                            "FOOD_CORNDOG",
+                            "FOOD_CROISSANT",
+                            "FOOD_CUPCAKE",
+                            "FOOD_FISH",
+                            "FOOD_FRENCH_FRIES",
+                            "FOOD_FRIED_EGG_PAN",
+                            "FOOD_GRAPE",
+                            "FOOD_ICECREAM_1",
+                            "FOOD_ICECREAM_2",
+                            "FOOD_ICECREAM_3",
+                            "FOOD_ICECREAM_4",
+                            "FOOD_NOODLE",
+                            "FOOD_PIZZA",
+                            "FOOD_PLATE_KNIFE_FORK",
+                            "FOOD_POPCORN",
+                            "FOOD_STEAK",
+                            "FOOD_STRAWBERRY",
+                            "FOOD_SUSHI",
+                            "FOOD_WATERMELON",
+                            "FREE",
+                            "GLASS_BEER",
+                            "GLASS_COCKTAIL_1",
+                            "GLASS_COCKTAIL_2",
+                            "GLASS_WATER",
+                            "HANDDRILL",
+                            "HEADSET",
+                            "HEALTH_AMBULANCE",
+                            "HEALTH_BANDAGE",
+                            "HEALTH_BLOOD_DROP",
+                            "HEALTH_DENTIST_1",
+                            "HEALTH_DENTIST_2",
+                            "HEALTH_FIRST_AID_KIT",
+                            "HEALTH_GRAPH_1",
+                            "HEALTH_GRAPH_2",
+                            "HEALTH_HEART_PULSE",
+                            "HEALTH_HOSPITAL_1",
+                            "HEALTH_HOSPITAL_2",
+                            "HEALTH_HOSPITAL_SIGN_1",
+                            "HEALTH_HOSPITAL_SIGN_2",
+                            "HEALTH_MEDICINE_BOTTLE",
+                            "HEALTH_MORTAR_PESTLE",
+                            "HEALTH_NURSE_CAP",
+                            "HEALTH_PATIENT_BED",
+                            "HEALTH_SALINE",
+                            "HEALTH_SCISSORS",
+                            "HEALTH_STETHOSCOPE",
+                            "HEALTH_SYRINGE",
+                            "HEALTH_WALKER",
+                            "HOME",
+                            "HOURGLASS",
+                            "HOUSE",
+                            "INVOICED",
+                            "KEY",
+                            "KEY_DOCUMENT",
+                            "LANDLINE_PHONE",
+                            "LAPTOP",
+                            "LIKE",
+                            "LIST",
+                            "LOCK",
+                            "MAIL",
+                            "MEDICAL_CROSS",
+                            "MEDICAL_CROSS_SNAKE",
+                            "MILK_CARTON",
+                            "MONEYBOX",
+                            "ORGANIC_MILK",
+                            "ORGANIGRAM",
+                            "PARTIALLY_PAID",
+                            "PDF",
+                            "PENCIL",
+                            "PHONE",
+                            "PHONE_SYMBOLE",
+                            "PICTURE_LAYER",
+                            "PIE_CHART",
+                            "PLASTIC_GLASS",
+                            "PPT",
+                            "RADIO",
+                            "READY_TO_SEND",
+                            "REMOVE",
+                            "SCREEN",
+                            "SHOVEL_CEMENT",
+                            "SMARTPHONE",
+                            "SODA_CAN",
+                            "SODA_GLASS",
+                            "SUITCASE",
+                            "TICKET",
+                            "TIMER",
+                            "TRUCK_CEMENT_MIXER",
+                            "TRUCK_DUMP",
+                            "TXT",
+                            "USER",
+                            "VIDEO_CALL",
+                            "VIDEO_CONFERENCE",
+                            "VOTE_HEART",
+                            "VOTE_STAR",
+                            "WALLET",
+                            "WALLET_COINS",
+                            "WALLET_DOLLAR",
+                            "WALLET_EURO",
+                            "WARNING",
+                            "WATCH",
+                            "WATER_MUG",
+                            "WHEELBARROW",
+                            "WINDOW",
+                            "WINE_GLASS",
+                            "XLS"
+                        ]
+                    },
+                    "readOnlyEntries": {
+                        "type": "boolean"
+                    },
+                    "uid": {
+                        "type": "string"
+                    }
+                }
+            },
+            "EmbeddedCustomModuleEntryDTO": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "type": "string"
+                    },
+                    "externalId": {
+                        "type": "string"
+                    },
+                    "module": {
+                        "$ref": "#/components/schemas/EmbeddedCustomModuleDTO"
+                    },
+                    "creator": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "techServerCreationDate": {
+                        "type": "string"
+                    }
+                }
+            },
+            "EmbeddedEventDTO": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "type": "string"
+                    },
+                    "user": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "creator": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "startDate": {
+                        "type": "string"
+                    },
+                    "endDate": {
+                        "type": "string"
+                    },
+                    "allDay": {
+                        "type": "boolean"
+                    },
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "CONFIRMED",
+                            "CANCELLED"
+                        ]
+                    }
+                }
+            },
+            "EmbeddedLocationDTO": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "type": "string"
+                    },
+                    "code": {
+                        "type": "string"
+                    },
+                    "externalId": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            },
+            "EmbeddedPersonDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "uid": {
+                        "type": "string"
+                    },
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "type": "string"
+                    },
+                    "phone": {
+                        "type": "string"
+                    },
+                    "mobile": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "type": "string"
+                    }
+                }
+            },
+            "EmbeddedSurveyDTO": {
+                "type": "object",
+                "properties": {
+                    "techServerCreationDate": {
+                        "type": "string"
+                    },
+                    "techServerUpdateDate": {
+                        "type": "string"
+                    },
+                    "uid": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "SURVEY",
+                            "VISITREPORT",
+                            "SUB_SURVEY"
+                        ]
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "editableDays": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "published": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "EmbeddedSurveyResponseDTO": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "type": "string"
+                    },
+                    "survey": {
+                        "$ref": "#/components/schemas/EmbeddedSurveyDTO"
+                    },
+                    "startDate": {
+                        "type": "string"
+                    },
+                    "submittedDate": {
+                        "type": "string"
+                    },
+                    "answeredDate": {
+                        "type": "string"
+                    },
+                    "submitter": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "locale": {
+                        "type": "string"
+                    },
+                    "location": {
+                        "$ref": "#/components/schemas/EmbeddedLocationDTO"
+                    },
+                    "deleted": {
+                        "type": "boolean"
+                    },
+                    "draft": {
+                        "type": "boolean"
+                    },
+                    "externalId": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "$ref": "#/components/schemas/EmbeddedSurveyResponseStatusDTO"
+                    }
+                }
+            },
+            "EmbeddedSurveyResponseStatusDTO": {
+                "type": "object",
+                "properties": {
+                    "techServerCreationDate": {
+                        "type": "string"
+                    },
+                    "techServerUpdateDate": {
+                        "type": "string"
+                    },
+                    "uid": {
+                        "type": "string"
+                    },
+                    "code": {
+                        "type": "string"
+                    },
+                    "iconCode": {
+                        "type": "string",
+                        "enum": [
+                            "QUARTER_0",
+                            "QUARTER_1",
+                            "QUARTER_2",
+                            "QUARTER_3",
+                            "QUARTER_4",
+                            "LIKE",
+                            "STAR",
+                            "SYMBOL_CROSS",
+                            "SYMBOL_EXCLAMATION",
+                            "SYMBOL_MINUS",
+                            "UNLIKE",
+                            "FLAG"
+                        ]
+                    },
+                    "iconColor": {
+                        "type": "string",
+                        "enum": [
+                            "BLUE",
+                            "GREEN",
+                            "RED",
+                            "YELLOW"
+                        ]
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    }
+                }
+            },
+            "EmbeddedTaskDTO": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "type": "string"
+                    },
+                    "user": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "creator": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "startDate": {
+                        "type": "string"
+                    },
+                    "priority": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "alert": {
+                        "type": "boolean"
+                    },
+                    "alertMinute": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "CONFIRMED",
+                            "COMPLETED",
+                            "CANCELLED"
+                        ]
+                    },
+                    "location": {
+                        "$ref": "#/components/schemas/EmbeddedLocationDTO"
+                    },
+                    "person": {
+                        "$ref": "#/components/schemas/EmbeddedPersonDTO"
+                    },
+                    "freeLocationText": {
+                        "type": "string"
+                    },
+                    "commented": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "EmbeddedUserDTO": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "type": "string"
+                    },
+                    "username": {
+                        "type": "string"
+                    },
+                    "firstname": {
+                        "type": "string"
+                    },
+                    "lastname": {
+                        "type": "string"
+                    },
+                    "displayName": {
+                        "type": "string"
+                    },
+                    "businessId": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ExtranetPersonDTO": {
+                "type": "object",
+                "properties": {
+                    "techServerCreationDate": {
+                        "type": "string"
+                    },
+                    "techServerUpdateDate": {
+                        "type": "string"
+                    },
+                    "uid": {
+                        "type": "string"
+                    },
+                    "techCreationUserUid": {
+                        "type": "string",
+                        "deprecated": true
+                    },
+                    "techUpdateUserUid": {
+                        "type": "string",
+                        "deprecated": true
+                    },
+                    "techCreationUser": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "techUpdateUser": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "toSynchronize": {
+                        "type": "boolean"
+                    },
+                    "techClientCreationDate": {
+                        "type": "string"
+                    },
+                    "techClientUpdateDate": {
+                        "type": "string"
+                    },
+                    "code": {
+                        "type": "string"
+                    },
+                    "externalId": {
+                        "type": "string"
+                    },
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "type": "string"
+                    },
+                    "phone": {
+                        "type": "string"
+                    },
+                    "mobile": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "type": "string"
+                    },
+                    "attributes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/EmbeddedAttributeDTO"
+                        }
+                    },
+                    "locations": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/EmbeddedLocationDTO"
+                        }
+                    },
+                    "commented": {
+                        "type": "boolean"
+                    },
+                    "deleted": {
+                        "type": "boolean"
+                    },
+                    "hasExtranetAccess": {
+                        "type": "boolean"
+                    },
+                    "extranetUser": {
+                        "$ref": "#/components/schemas/ExtranetUserDTO"
+                    },
+                    "fieldValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AbstractCustomFieldDTO"
+                        },
+                        "uniqueItems": true
+                    }
+                }
+            },
+            "ExtranetUserDTO": {
+                "type": "object",
+                "properties": {
+                    "techServerCreationDate": {
+                        "type": "string"
+                    },
+                    "techServerUpdateDate": {
+                        "type": "string"
+                    },
+                    "uid": {
+                        "type": "string"
+                    },
+                    "username": {
+                        "type": "string"
+                    },
+                    "startDate": {
+                        "type": "string"
+                    },
+                    "endDate": {
+                        "type": "string"
+                    },
+                    "lang": {
+                        "type": "string",
+                        "enum": [
+                            "fr",
+                            "nl",
+                            "en",
+                            "pl",
+                            "de",
+                            "pt",
+                            "it",
+                            "cs",
+                            "sk",
+                            "es",
+                            "tr"
+                        ]
+                    },
+                    "modules": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ExtranetUserModuleDTO"
+                        }
+                    }
+                }
+            },
+            "ExtranetUserModuleDTO": {
+                "type": "object",
+                "properties": {
+                    "moduleCode": {
+                        "type": "string",
+                        "enum": [
+                            "CORE",
+                            "ANALYTICS",
+                            "CATALOG",
+                            "CLIENT_AND_CONTACT",
+                            "COLLABORATION",
+                            "CUSTOM_MODULE",
+                            "DOCUMENT",
+                            "NEWS",
+                            "PLANNING",
+                            "SURVEY",
+                            "TARGETING",
+                            "TIMESHEET"
+                        ]
+                    },
+                    "active": {
+                        "type": "boolean"
+                    },
+                    "roles": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "CORE_WEB_USE",
+                                "CLIENT_GET_ALL",
+                                "CLIENT_UPDATE_ACCESSIBLE",
+                                "CLIENT_EXTRANET_USER_MANAGE",
+                                "CONTACT_GET_ALL",
+                                "CONTACT_CREATE",
+                                "CONTACT_UPDATE_ACCESSIBLE",
+                                "CONTACT_EXTRANET_USER_MANAGE",
+                                "CATALOG_GET_PRICE",
+                                "CATALOG_GET_DISCOUNT",
+                                "CATALOG_ORDER_DISABLED",
+                                "CATALOG_ORDER_GET_ALL",
+                                "CATALOG_ORDER_CREATE_OWN"
+                            ]
+                        },
+                        "uniqueItems": true
+                    }
+                }
+            },
+            "EmbeddedChildRelationshipDTO": {
+                "type": "object",
+                "properties": {
+                    "relationship": {
+                        "$ref": "#/components/schemas/EmbeddedRelationshipDTO"
+                    },
+                    "parent": {
+                        "$ref": "#/components/schemas/EmbeddedLocationDTO"
+                    }
+                }
+            },
+            "EmbeddedDocumentDTO": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            },
+            "EmbeddedParentRelationshipDTO": {
+                "type": "object",
+                "properties": {
+                    "relationship": {
+                        "$ref": "#/components/schemas/EmbeddedRelationshipDTO"
+                    },
+                    "child": {
+                        "$ref": "#/components/schemas/EmbeddedLocationDTO"
+                    }
+                }
+            },
+            "EmbeddedRelationshipDTO": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "type": "string"
+                    },
+                    "code": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    }
+                }
+            },
+            "EmbeddedTargetDefinitionDTO": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "COUNTER",
+                            "TARGET"
+                        ]
+                    },
+                    "period": {
+                        "type": "string",
+                        "enum": [
+                            "DAILY",
+                            "WEEKLY",
+                            "MONTHLY",
+                            "BIMONTHLY",
+                            "QUARTERLY",
+                            "SEMESTERLY",
+                            "YEARLY"
+                        ]
+                    },
+                    "subject": {
+                        "type": "string",
+                        "enum": [
+                            "CATALOG_ORDER",
+                            "SURVEY_RESPONSE",
+                            "PLANNING_EVENT",
+                            "ENTRY_OF_ALL_CUSTOM_MODULES",
+                            "ENTRY_OF_ONE_CUSTOM_MODULE"
+                        ]
+                    },
+                    "subjectTargetField": {
+                        "type": "string"
+                    },
+                    "subjectCustomModule": {
+                        "$ref": "#/components/schemas/EmbeddedCustomModuleDTO"
+                    },
+                    "system": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "EmbeddedTargetGoalDTO": {
+                "type": "object",
+                "properties": {
+                    "techServerCreationDate": {
+                        "type": "string"
+                    },
+                    "techServerUpdateDate": {
+                        "type": "string"
+                    },
+                    "uid": {
+                        "type": "string"
+                    },
+                    "targetDefinition": {
+                        "$ref": "#/components/schemas/EmbeddedTargetDefinitionDTO"
+                    },
+                    "startDateInclusive": {
+                        "type": "string"
+                    },
+                    "endDateInclusive": {
+                        "type": "string"
+                    },
+                    "targetValue": {
+                        "type": "number"
+                    },
+                    "realizedValue": {
+                        "type": "number"
+                    },
+                    "realizedValueWeighted": {
+                        "type": "number"
+                    },
+                    "targetReachedDate": {
+                        "type": "string"
+                    }
+                }
+            },
+            "EmbeddedUserGroupDTO": {
+                "type": "object",
+                "properties": {
+                    "uid": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "system": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "ExtranetLocationDTO": {
+                "type": "object",
+                "properties": {
+                    "techServerCreationDate": {
+                        "type": "string"
+                    },
+                    "techServerUpdateDate": {
+                        "type": "string"
+                    },
+                    "uid": {
+                        "type": "string"
+                    },
+                    "techCreationUserUid": {
+                        "type": "string",
+                        "deprecated": true
+                    },
+                    "techUpdateUserUid": {
+                        "type": "string",
+                        "deprecated": true
+                    },
+                    "techCreationUser": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "techUpdateUser": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "toSynchronize": {
+                        "type": "boolean"
+                    },
+                    "techClientCreationDate": {
+                        "type": "string"
+                    },
+                    "techClientUpdateDate": {
+                        "type": "string"
+                    },
+                    "code": {
+                        "type": "string"
+                    },
+                    "externalId": {
+                        "type": "string"
+                    },
+                    "street": {
+                        "type": "string"
+                    },
+                    "city": {
+                        "type": "string"
+                    },
+                    "zip": {
+                        "type": "string"
+                    },
+                    "country": {
+                        "type": "string"
+                    },
+                    "latitude": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "longitude": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "vatNumber": {
+                        "type": "string"
+                    },
+                    "deleted": {
+                        "type": "boolean"
+                    },
+                    "suppliers": {
+                        "type": "array",
+                        "deprecated": true,
+                        "items": {
+                            "$ref": "#/components/schemas/EmbeddedLocationDTO"
+                        }
+                    },
+                    "parentRelationships": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/EmbeddedParentRelationshipDTO"
+                        }
+                    },
+                    "childRelationships": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/EmbeddedChildRelationshipDTO"
+                        }
+                    },
+                    "attributes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/EmbeddedAttributeDTO"
+                        }
+                    },
+                    "users": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/EmbeddedUserDTO"
+                        }
+                    },
+                    "groups": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/EmbeddedUserGroupDTO"
+                        }
+                    },
+                    "documents": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/EmbeddedDocumentDTO"
+                        }
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "commented": {
+                        "type": "boolean"
+                    },
+                    "lastVisitDate": {
+                        "type": "string"
+                    },
+                    "lastOrderDate": {
+                        "type": "string"
+                    },
+                    "targetGoals": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/EmbeddedTargetGoalDTO"
+                        }
+                    },
+                    "hasExtranetAccess": {
+                        "type": "boolean"
+                    },
+                    "extranetUser": {
+                        "$ref": "#/components/schemas/ExtranetUserDTO"
+                    },
+                    "fieldValues": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AbstractCustomFieldDTO"
+                        },
+                        "uniqueItems": true
+                    }
+                }
+            },
+            "OAuth2AccessTokenDTO": {
+                "type": "object",
+                "properties": {
+                    "token_type": {
+                        "type": "string"
+                    },
+                    "scope": {
+                        "type": "string"
+                    },
+                    "expires_in": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "access_token": {
+                        "type": "string"
+                    },
+                    "refresh_token": {
+                        "type": "string"
+                    }
+                }
+            },
+            "AutoDiscount": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "discount": {
+                        "type": "number"
+                    },
+                    "discountType": {
+                        "type": "string",
+                        "enum": [
+                            "PERCENTAGE_OFF",
+                            "FIXED_PRICE",
+                            "FREE_QUANTITY",
+                            "FIXED_DISCOUNT"
+                        ]
+                    },
+                    "discountIsPercentage": {
+                        "type": "boolean"
+                    },
+                    "discountIsFixedPrice": {
+                        "type": "boolean"
+                    },
+                    "discountIsFreeQuantity": {
+                        "type": "boolean"
+                    },
+                    "discountIsFixedDiscount": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "CatalogOrderRelatedLocationDTO": {
+                "type": "object",
+                "properties": {
+                    "relationship": {
+                        "$ref": "#/components/schemas/EmbeddedRelationshipDTO"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "location": {
+                        "$ref": "#/components/schemas/EmbeddedLocationDTO"
+                    }
+                }
+            },
+            "EmbeddedMeasurementUnitDTO": {
+                "type": "object",
+                "properties": {
+                    "techServerCreationDate": {
+                        "type": "string"
+                    },
+                    "techServerUpdateDate": {
+                        "type": "string"
+                    },
+                    "uid": {
+                        "type": "string"
+                    },
+                    "code": {
+                        "type": "string"
+                    },
+                    "referenceUnitCode": {
+                        "type": "string"
+                    },
+                    "minimumUnitCode": {
+                        "type": "string"
+                    },
+                    "decimalAllowed": {
+                        "type": "boolean"
+                    },
+                    "decimalPrecision": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "referenceUnitCodeTitle": {
+                        "type": "string"
+                    },
+                    "minimumUnitCodeTitle": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ExtranetCatalogOrderDTO": {
+                "type": "object",
+                "properties": {
+                    "techServerCreationDate": {
+                        "type": "string"
+                    },
+                    "techServerUpdateDate": {
+                        "type": "string"
+                    },
+                    "uid": {
+                        "type": "string"
+                    },
+                    "techCreationUserUid": {
+                        "type": "string",
+                        "deprecated": true
+                    },
+                    "techUpdateUserUid": {
+                        "type": "string",
+                        "deprecated": true
+                    },
+                    "techCreationUser": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "techUpdateUser": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "toSynchronize": {
+                        "type": "boolean"
+                    },
+                    "techClientCreationDate": {
+                        "type": "string"
+                    },
+                    "techClientUpdateDate": {
+                        "type": "string"
+                    },
+                    "date": {
+                        "type": "string"
+                    },
+                    "internalReference": {
+                        "type": "string"
+                    },
+                    "externalReference": {
+                        "type": "string"
+                    },
+                    "versionKey": {
+                        "type": "string"
+                    },
+                    "versionHistory": {
+                        "type": "boolean"
+                    },
+                    "hasManualDiscount": {
+                        "type": "boolean"
+                    },
+                    "hadManualDiscount": {
+                        "type": "boolean"
+                    },
+                    "checkManualDiscountStatus": {
+                        "type": "boolean"
+                    },
+                    "comments": {
+                        "type": "string"
+                    },
+                    "locale": {
+                        "type": "string"
+                    },
+                    "total": {
+                        "type": "number"
+                    },
+                    "subtotal": {
+                        "type": "number"
+                    },
+                    "totalQuantity": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "ORDER",
+                            "OFFER"
+                        ]
+                    },
+                    "approbationStatus": {
+                        "type": "string"
+                    },
+                    "approbationModificationDate": {
+                        "type": "string"
+                    },
+                    "approbationModificationUser": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "user": {
+                        "$ref": "#/components/schemas/EmbeddedUserDTO"
+                    },
+                    "customer": {
+                        "$ref": "#/components/schemas/EmbeddedLocationDTO"
+                    },
+                    "customerEmail": {
+                        "type": "string"
+                    },
+                    "supplier": {
+                        "$ref": "#/components/schemas/EmbeddedLocationDTO",
+                        "deprecated": true
+                    },
+                    "supplierEmail": {
+                        "type": "string",
+                        "deprecated": true
+                    },
+                    "relatedLocations": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/CatalogOrderRelatedLocationDTO"
+                        }
+                    },
+                    "person": {
+                        "$ref": "#/components/schemas/EmbeddedPersonDTO"
+                    },
+                    "commented": {
+                        "type": "boolean"
+                    },
+                    "signatureImage": {
+                        "type": "string",
+                        "format": "byte"
+                    },
+                    "companyLogoImage": {
+                        "type": "string",
+                        "format": "byte"
+                    },
+                    "discountVisible": {
+                        "type": "boolean"
+                    },
+                    "form": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "customFields": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Item"
+                        }
+                    },
+                    "autoDiscounts": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AutoDiscount"
+                        }
+                    },
+                    "totalModifiers": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/TotalModifier"
+                        }
+                    },
+                    "totalWithoutDiscount": {
+                        "type": "number"
+                    },
+                    "totalDiscount": {
+                        "type": "number"
+                    },
+                    "totalDiscountPercentage": {
+                        "type": "number"
+                    },
+                    "offer": {
+                        "type": "boolean"
+                    },
+                    "creationUid": {
+                        "type": "string"
+                    },
+                    "hasAutoDiscounts": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "Item": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "quantity": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "price": {
+                        "type": "number"
+                    },
+                    "salesUnit": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "packagingUnit": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "measure": {
+                        "type": "number"
+                    },
+                    "unitOfMeasure": {
+                        "type": "string"
+                    },
+                    "measurementUnit": {
+                        "$ref": "#/components/schemas/EmbeddedMeasurementUnitDTO"
+                    },
+                    "discount": {
+                        "type": "number"
+                    },
+                    "discountIsPercentage": {
+                        "type": "boolean"
+                    },
+                    "totalPrice": {
+                        "type": "number"
+                    },
+                    "finalDiscountPrice": {
+                        "type": "number"
+                    },
+                    "free": {
+                        "type": "boolean"
+                    },
+                    "autoDiscounts": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AutoDiscount"
+                        }
+                    },
+                    "hasOverriddenAutoDiscount": {
+                        "type": "boolean"
+                    },
+                    "comment": {
+                        "type": "string"
+                    },
+                    "freeReason": {
+                        "type": "string"
+                    },
+                    "priceManuallySet": {
+                        "type": "boolean"
+                    },
+                    "lineExternalId": {
+                        "type": "string"
+                    },
+                    "lineUid": {
+                        "type": "string"
+                    },
+                    "hasAutoDiscounts": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "TotalModifier": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "number"
+                    },
+                    "valueIsPercentage": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "LogLineDTO": {
+                "type": "object",
+                "properties": {
+                    "line": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    }
+                }
+            },
+            "AuthLoginMethodInfoDTO": {
+                "type": "object",
+                "properties": {
+                    "method": {
+                        "type": "string",
+                        "enum": [
+                            "BASIC",
+                            "REDIRECT"
+                        ]
+                    },
+                    "redirectUrl": {
+                        "type": "string"
+                    }
+                }
+            },
+            "TenantDTOMinimal": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

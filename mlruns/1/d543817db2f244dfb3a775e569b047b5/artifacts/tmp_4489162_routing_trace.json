@@ -1,0 +1,5 @@
+{
+  "user_query": "List all SmartSales locations, then retrieve the full details of the first result.",
+  "plan": null,
+  "invoked_agents": []
+}

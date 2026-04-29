@@ -1,0 +1,17 @@
+{
+  "user_query": "Show me emails I received in the last 14 days.",
+  "plan": {
+    "query": "Show me emails I received in the last 14 days.",
+    "reasoning": "The query requires accessing the user's emails within a specific timeframe, which can be directly handled by the graph agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Fetch the emails received in the last 14 days.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the results from the graph agent's email fetch as the final output."
+  },
+  "invoked_agents": []
+}

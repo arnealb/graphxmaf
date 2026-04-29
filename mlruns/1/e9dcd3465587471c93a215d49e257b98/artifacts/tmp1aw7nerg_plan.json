@@ -1,0 +1,13 @@
+{
+  "query": "What fields can I filter SmartSales orders by?",
+  "reasoning": "To answer the query about filtering SmartSales orders, I will need to consult the smartsales agent to retrieve the relevant fields.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the list of fields that can be used to filter orders in SmartSales.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the list of fields retrieved from the smartsales agent as the final answer."
+}

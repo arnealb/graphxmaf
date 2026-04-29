@@ -1,0 +1,61 @@
+{
+  "user_query": "Take the sender of my most recent email, look them up in Salesforce as a contact or lead, and check if their company has a SmartSales location.",
+  "plan": {
+    "query": "Take the sender of my most recent email, look them up in Salesforce as a contact or lead, and check if their company has a SmartSales location.",
+    "reasoning": "The plan requires two main steps: first, to get the sender of the most recent email, and second to check if the sender is a contact or lead in Salesforce and retrieve their company information. Finally, we will check if that company has a location in SmartSales.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the sender of my most recent email.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Look up the sender's email from step 1 in Salesforce as a contact or lead and retrieve their company information.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Check if the company from step 2 has a SmartSales location.",
+        "depends_on": [
+          2
+        ]
+      }
+    ],
+    "synthesis": "Combine the results from all steps to provide the final answer regarding the sender's details and their company's SmartSales location status."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the sender of my most recent email.",
+      "started_at": "2026-04-21T15:06:59.885551+00:00",
+      "ended_at": "2026-04-21T15:07:03.829394+00:00",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "[Result from step 1]:\n{\"sender_name\":\"Microsoft Notifications\",\"sender_email\":\"no-reply@notify.microsoft.com\"}\n\n[Task]:\nLook up the sender's email from step 1 in Salesforce as a contact or lead and retrieve their company information.",
+      "started_at": "2026-04-21T15:07:03.829714+00:00",
+      "ended_at": "2026-04-21T15:07:07.550880+00:00",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "[Result from step 2]:\n[]\n\n[Task]:\nCheck if the company from step 2 has a SmartSales location.",
+      "started_at": "2026-04-21T15:07:07.551232+00:00",
+      "ended_at": "2026-04-21T15:07:10.148419+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

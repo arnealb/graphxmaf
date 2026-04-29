@@ -1,0 +1,27 @@
+{
+  "user_query": "List SmartSales locations in Belgium sorted by name, using full projection.",
+  "plan": {
+    "query": "List SmartSales locations in Belgium sorted by name, using full projection.",
+    "reasoning": "The task requires retrieving location data specifically from the SmartSales agent and ensuring it is sorted by name. There is no need for prior data.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve a list of all locations in Belgium with full projection and sort them by name.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Return the sorted list of SmartSales locations in Belgium from step 1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve a list of all locations in Belgium with full projection and sort them by name.",
+      "started_at": "2026-04-20T15:35:45.251898+00:00",
+      "ended_at": "2026-04-20T15:35:57.854638+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

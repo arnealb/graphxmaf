@@ -1,0 +1,32 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.4/schema.json",
+    "schema_version": "v2.4",
+    "name_for_human": "jj",
+    "description_for_human": "jj${{APP_NAME_SUFFIX}}",
+    "contact_email": "publisher-email@example.com",
+    "namespace": "jj",
+    "functions": [
+        {
+            "name": "ask",
+            "description": "Ask the multi-agent system a question. Handles Microsoft 365 data (emails, calendar, files, contacts) and SmartSales data (locations, catalog items, orders)."
+        }
+    ],
+    "runtimes": [
+        {
+            "type": "RemoteMCPServer",
+            "spec": {
+                "url": "https://orchestrator-mcp.whitemushroom-38caf70a.swedencentral.azurecontainerapps.io/mcp",
+                "mcp_tool_description": {
+                    "file": "mcp-tools.json"
+                }
+            },
+            "run_for_functions": [
+                "ask"
+            ],
+            "auth": {
+                "type": "OAuthPluginVault",
+                "reference_id": "${{MCP_DA_AUTH_ID_ORCHESTRATORMCP}}"
+            }
+        }
+    ]
+}

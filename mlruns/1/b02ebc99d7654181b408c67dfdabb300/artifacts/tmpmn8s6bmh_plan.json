@@ -1,0 +1,21 @@
+{
+  "query": "Search OneDrive for Excel files and read the content of the first two found.",
+  "reasoning": "The task can be done in two steps: first, search for Excel files in OneDrive, and then read the content of the first two files returned from that search.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search OneDrive for Excel files and return the first two found.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Read the content of the Excel files using the IDs from step 1 (if any). If step 1 returned fewer than two files, handle accordingly and read content for available files.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the content results from step 2 into a final answer detailing the contents of the first two Excel files."
+}

@@ -1,0 +1,13 @@
+{
+  "query": "List 5 Salesforce accounts.",
+  "reasoning": "Only one step is needed to retrieve the accounts from Salesforce, as this query does not require any additional processing or information from other agents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch a list of 5 accounts from Salesforce.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved accounts as a list."
+}

@@ -1,0 +1,21 @@
+{
+  "query": "Which companies that emailed me recently do not seem to have a location registered with us?",
+  "reasoning": "The query demands a comprehensive approach: first to identify recent emails from companies and then to verify their locations against the records we have. Therefore, we need to fetch recent emails and check the locations in a thorough manner.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve a list of companies that have emailed me recently, including the sender's email addresses.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Check the registered locations for the companies identified in step 1 based on their email addresses. List those that do not have a location registered.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from step 1 and step 2 to identify which companies emailed me recently and do not have a registered location."
+}

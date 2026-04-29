@@ -1,0 +1,21 @@
+{
+  "query": "Who is the contact person behind my most expensive open order?",
+  "reasoning": "The query involves identifying a specific contact person associated with an open order, which requires examining both Salesforce for the order details and Graph to retrieve contact information. This necessitates both systems to provide a complete answer.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch the details of the most expensive open order, including its related contact ID.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Using the contact ID from step 1, retrieve the contact person's information including name and email.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the contact person's information from step 2 with the order details from step 1 to present a complete overview of the contact person behind the most expensive open order."
+}

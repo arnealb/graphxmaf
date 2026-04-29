@@ -1,0 +1,29 @@
+{
+  "query": "For the company behind my most recent open support case, what else do we know about them?",
+  "reasoning": "The query involves gathering comprehensive information about a specific company related to an open support case. This requires data from all available agents to create a complete overview of the company including their CRM details, communication history, and physical presence.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve the company details associated with the most recent open support case, including accounts, contacts, and any related opportunities.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Using the company name retrieved from step 1, gather communication history including emails and calendar events related to the company.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Using the company name retrieved from step 1, retrieve information about physical locations and any product catalog items related to the company.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Compile the results from steps 1, 2, and 3 to create a full profile of the company, including CRM data, communication history, and location/product information."
+}

@@ -1,0 +1,17 @@
+{
+  "user_query": "List my Microsoft 365 contacts and include their phone numbers.",
+  "plan": {
+    "query": "List my Microsoft 365 contacts and include their phone numbers.",
+    "reasoning": "The query requires fetching data directly from the graph agent, which handles Microsoft 365 contacts, including their phone numbers. A single step is sufficient.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve all Microsoft 365 contacts along with their phone numbers.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Compile the list of contacts with their phone numbers from step 1 into a final response."
+  },
+  "invoked_agents": []
+}

@@ -1,0 +1,25 @@
+{
+  "query": "Show my last 2 emails, list 3 SmartSales locations in Belgium, and show 2 Salesforce accounts.",
+  "reasoning": "To fulfill the user's request, I need to gather data from three different agents simultaneously. Each agent will handle a distinct part of the query: the graph agent will retrieve emails, the smartSales agent will get locations, and the salesforce agent will fetch accounts.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the last 2 emails from the user's inbox.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "List 3 SmartSales locations in Belgium.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "salesforce",
+      "task": "Show 2 Salesforce accounts from the user's CRM.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all three steps to provide a comprehensive response to the user."
+}

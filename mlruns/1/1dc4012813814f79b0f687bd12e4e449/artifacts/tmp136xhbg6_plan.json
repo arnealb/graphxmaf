@@ -1,0 +1,19 @@
+{
+  "query": "Which companies am I meeting this week that have no active deal with us?",
+  "reasoning": "To answer the query, I need to first identify the companies the user is meeting with this week using the graph agent and then check if there are active deals with those companies using the salesforce agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve all companies the user has meetings scheduled for this week, including details about the meeting times and associated company names.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Get a list of companies with active deals related to the user. Include company names and deal statuses.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Cross-reference the list of companies from step 1 against the list from step 2 to identify companies with no active deals."
+}
