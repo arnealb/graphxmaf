@@ -77,6 +77,15 @@ Handling dependent steps with potentially empty parents:
   check for matching calendar events. If step 1 returned no results, state that and skip
   the calendar lookup."
 
+Document and policy queries:
+- Questions about internal company rules, procedures, HR policies, expense reimbursement,
+  onboarding, contracts, or how-to questions about internal processes should route to the
+  graph agent with a task to search OneDrive for the relevant document.
+- These queries do NOT require salesforce or smartsales unless they also ask for CRM or
+  location data.
+- Examples: "what is the expense policy?", "how do I request leave?", "what are the support
+  terms with client X?", "what should I do if my car breaks down on the way to work?"
+
 Entity-centric and 360° view queries:
 - When the user asks for a "full picture", "overview", "briefing", "360 view", "everything
   about", or "what do we know about" a specific company, person, or topic — use ALL available
@@ -302,7 +311,10 @@ class PlanningOrchestrator:
             agents.append(
                 "graph (Microsoft 365: emails, calendar events, OneDrive files, "
                 "personal Outlook contacts / address book — use for communication history, "
-                "documents, and scheduling related to a person or company)"
+                "documents, and scheduling related to a person or company. "
+                "Also use for internal company documents stored in OneDrive such as HR policies, "
+                "expense rules, onboarding guides, contracts, and procedure documents — "
+                "i.e. any question about internal rules, processes, or company documentation)"
             )
         if self._sf_agent is not None:
             agents.append(

@@ -1466,5 +1466,101 @@
       "salesforce",
       "graph"
     ]
+  },
+
+  {
+    "text": "What should I do if my car gets damaged on the way to work?",
+    "category": "onedrive-rag",
+    "difficulty": "hard",
+    "expected_answer": "Finds 'arbeidsreglement_easi_group.docx' in OneDrive/HR/. Correct answer must include: (1) schade aan privévoertuig tijdens woon-werkverkeer is NIET gedekt door de arbeidsongevallenverzekering van de werkgever, (2) werknemer moet eigen omniumverzekering aanspreken, (3) schadeaangifte indienen via hr@easi.net binnen 24 uur na het incident, met vermelding van het trajectnummer. Not finding the document = max 2. Finding the document but missing the 24u deadline or the omnium-instruction = significant deduction. Answering generically without referencing the document = max 3.",
+    "tags": [
+      "onedrive-rag",
+      "semantic-gap",
+      "hr-policy",
+      "graph"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
+  },
+
+  {
+    "text": "How much do I get reimbursed if I travel by train to visit a client?",
+    "category": "onedrive-rag",
+    "difficulty": "medium",
+    "expected_answer": "Finds 'onkostenbeleid_easi_group.docx' in OneDrive/HR/. Correct answer must include: openbaar vervoer (trein, tram, bus) wordt 100% terugbetaald op basis van het ticket of factuur. Bonus: vermeldt dat taxi enkel terugbetaalbaar is tot max €35 per rit bij afwezigheid openbaar vervoer. Answering with a generic amount without referencing the document = max 3. Not finding the document = max 2.",
+    "tags": [
+      "onedrive-rag",
+      "semantic-gap",
+      "expenses",
+      "graph"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
+  },
+
+  {
+    "text": "What is the best way to get in touch with supplier1?",
+    "category": "onedrive-rag",
+    "difficulty": "medium",
+    "expected_answer": "Finds 'raamovereenkomst_easi_supplier1.docx' in OneDrive/contracten/. Correct answer must include: (1) alle operationele communicatie verloopt uitsluitend via Microsoft Teams, kanaal 'EASI–supplier1 Operaties', (2) e-mail wordt NIET aanvaard als officieel escalatiekanaal, (3) accountbeheerder is Marc Supplier (marc.supplier@supplier1.be), Teams-alias marc.supplier. Answering with only the email address without mentioning the Teams-only clause = significant deduction. Not finding the contract = max 2.",
+    "tags": [
+      "onedrive-rag",
+      "contract",
+      "communication",
+      "graph"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
+  },
+
+  {
+    "text": "What are our agreed support terms with Colruyt?",
+    "category": "onedrive-rag",
+    "difficulty": "medium",
+    "expected_answer": "Finds 'samenwerkingsovereenkomst_easi_colruyt.docx' in OneDrive/contracten/. Correct answer must include: (1) kritieke incidenten (Prio 1) worden binnen 4 kantooruren (ma–vr 8–18u) opgepakt, (2) dedicated supportlijn voor Colruyt: +32 2 123 45 67, (3) vaste contactpersoon bij EASI: Arne Albrecht (a.albrecht@easi.net). Mentioning general SLA without the specific response time or contact details = significant deduction. Not finding the document = max 2.",
+    "tags": [
+      "onedrive-rag",
+      "contract",
+      "sla",
+      "graph"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
+  },
+
+  {
+    "text": "A client is threatening to end their collaboration with us. What steps should I take?",
+    "category": "onedrive-rag",
+    "difficulty": "hard",
+    "expected_answer": "Finds 'procedure_klachtenafhandeling_easi.docx' in OneDrive/procedures/. Correct answer must identify this as a niveau 2 klacht (dreiging contractbeëindiging) and include: (1) accountmanager informeert Sales Director Nathalie Pieters (n.pieters@easi.net) binnen 2 uur via Teams-bericht, (2) Sales Director neemt binnen 24 uur telefonisch contact op met de klant (niet via e-mail), (3) remediëringsplan opstellen binnen 5 werkdagen, (4) klacht registreren in Salesforce als Case met prioriteit High en label 'churn-risk'. Missing the Salesforce registration step = significant deduction. Answering generically without referencing escalatieprocedure = max 3. Not finding the document = max 2.",
+    "tags": [
+      "onedrive-rag",
+      "semantic-gap",
+      "procedure",
+      "graph"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
+  },
+
+  {
+    "text": "How do I request access to Salesforce as a new employee?",
+    "category": "onedrive-rag",
+    "difficulty": "simple",
+    "expected_answer": "Finds 'onboarding_gids_easi.docx' in OneDrive/HR/. Correct answer must include: (1) IT-ticket aanvragen via servicedesk.easi.net, (2) vermeld je afdeling en de naam van je manager in het ticket, (3) doorlooptijd is 2–3 werkdagen. Bonus: vermeldt dat SmartSales admin-toegang aparte goedkeuring van de Sales Director vereist. Answering without the servicedesk URL or ticket procedure = significant deduction. Not finding the document = max 2.",
+    "tags": [
+      "onedrive-rag",
+      "onboarding",
+      "access-management",
+      "graph"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   }
 ]

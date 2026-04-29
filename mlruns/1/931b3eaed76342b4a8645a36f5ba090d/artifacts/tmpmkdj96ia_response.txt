@@ -1,0 +1,22 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+To get in touch with **supplier1**, here are the best contact methods and relevant information gathered:
+
+### Contact Methods
+- **Email**: 
+  - Marc Supplier (Account Manager) can be reached at **marc.supplier@supplier1.be**. 
+- **Upcoming Meeting**: 
+  - There is a scheduled calendar event titled "supplier1 — Q2 Delivery Review" on **10 May 2026** from **08:00 to 09:00 UTC**. This might be a good opportunity to discuss matters directly.
+
+### Physical Presence
+- **Address**:  
+  - Supplier1 is located at **Rue du Commerce 1, Brussels, 1000, Belgium**.
+
+### Communication History
+- Two recent emails regarding supplier1 were received on **28 April 2026** concerning:
+  - Q2 2026 Delivery Contract
+  - Updated pricing for H2 2026
+  
+This information suggests that email communication is currently active, and you may want to follow up with Marc via email or plan to attend the scheduled meeting if it's relevant to your needs.

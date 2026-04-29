@@ -175,7 +175,7 @@
 
 ---
 
-### OneDrive (1) — via `test_mails.py`
+### OneDrive (12) — via `test_mails.py` + manueel
 
 | Bestandsnaam | Pad | Entiteit | Sleutelwoorden |
 |---|---|---|---|
@@ -184,7 +184,20 @@
 | `paste/origin.docx` | root/paste | Nutella / Ferrero | Nutella, Ferrero, origin, history |
 | `paste/nutella verkoopcijfers.docx` | root/paste | Nutella / Ferrero | Nutella, Ferrero Benelux, verkoopcijfers, sales figures |
 | `paste/nutella recept.docx` | root/paste | Nutella / Ferrero | Nutella, recept, recipe, Ferrero |
-| `ABinbev deal draft.docx` | root | AB InBev / Anheuser-Busch InBev | AB InBev, Anheuser-Busch InBev, deal draft, Distribution Network Mapping, €520.000, Leuven, 006KI000005bIGNYA2 |
+| `ABinbev deal draft.docx` | root | AB InBev / Anheuser-Busch InBev | AB InBev, Anheuser-Busch InBev, deal draft, Distribution Network Mapping, €520.000, Leuven |
+
+#### OneDrive RAG-documenten (6) — manueel aangemaakt
+
+> Bedoeld voor Graph RAG baseline. Elk document bevat informatie die **niet via keyword search vindbaar** is — enkel via semantisch zoeken.
+
+| Bestandsnaam | Pad | Entiteit | RAG-query | Semantische gap |
+|---|---|---|---|---|
+| `contracten/framework_agreement_easi_supplier1.docx` | root/contracts | supplier1 | What is the best way to get in touch with supplier1? | "contact" ↔ "communicatie uitsluitend via Teams" |
+| `contracten/collaboration_agreement_easi_colruyt.docx` | root/contracts | Colruyt Group | What are our agreed support terms with Colruyt? | "support terms" ↔ "SLA, 4 kantooruren, dedicated lijn" |
+| `HR/employment_regulations_easi_group.docx` | root/HR | EASI Group (intern) | What should I do if my car gets damaged on the way to work? | "car damaged" ↔ "woon-werkverkeer, omniumverzekering" |
+| `HR/expense_policy_easi_group.docx` | root/HR | EASI Group (intern) | How much do I get reimbursed if I travel by train to visit a client? | "train to client" ↔ "openbaar vervoer, 100% terugbetaling" |
+| `HR/onboarding_guide_easi.docx` | root/HR | EASI Group (intern) | How do I request access to Salesforce as a new employee? | "request access" ↔ "IT-ticket servicedesk.easi.net" |
+| `procedures/complaint_handling_procedure_easi.docx` | root/procedures | EASI Group (intern) | A client is threatening to end their collaboration with us. What steps should I take? | "threatening to end" ↔ "niveau 2 klacht, escalatie" |
 
 ---
 
@@ -224,5 +237,5 @@ Bewuste naaminconsitenties tussen systemen, bedoeld om **entity resolution** te 
 | SmartSales | Orders | 8 |
 | M365 | Emails | 13 |
 | M365 | Calendar events | 5 |
-| M365 | OneDrive bestanden | 6 |
-| **Totaal** | | **73** |
+| M365 | OneDrive bestanden | 12 |
+| **Totaal** | | **79** |

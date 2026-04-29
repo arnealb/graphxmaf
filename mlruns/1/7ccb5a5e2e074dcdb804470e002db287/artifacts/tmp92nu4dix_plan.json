@@ -1,0 +1,25 @@
+{
+  "query": "A client is threatening to end their collaboration with us. What steps should I take?",
+  "reasoning": "The query involves understanding the relationship with the client and reviewing internal policies that may guide how to handle client disputes. All available agents will contribute relevant insights from different perspectives.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Search for the current CRM account details, opportunities, and support history related to the client threatening to end collaboration.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Search for any internal company documents that provide guidelines on handling client disputes or collaboration terminations.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "graph",
+      "task": "Check for any recent emails or calendar events related to the client in question to identify any discussions or agreements that may inform my approach.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from the salesforce step to understand the client relationship, insights from the graph agent about internal guidelines, and any communications with the client to formulate a cohesive plan of action."
+}

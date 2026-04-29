@@ -1,0 +1,25 @@
+{
+  "query": "What is the best way to get in touch with supplier1?",
+  "reasoning": "The user is asking for a communication method to reach out to a specific supplier, which involves looking up their contact information and possibly any relevant communication history. Therefore, all available agents will be used to gather a comprehensive overview.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Find any emails or calendar events related to supplier1 to understand previous communication and preferred contact methods.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Search for CRM contacts related to supplier1 to gather official contact details and any associated notes on communication preferences.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Look up the physical address and additional contact details of supplier1, including store or site information.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine results from all steps to provide a comprehensive answer on the best ways to contact supplier1, including contact methods, history of communication, and physical presence information."
+}

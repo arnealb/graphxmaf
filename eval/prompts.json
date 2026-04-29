@@ -1,162 +1,33 @@
 [
-  {
-    "text": "Prepare me for my next meeting. What do I have coming up and what do I know about the companies involved?",
-    "category": "entity-centric1",
-    "difficulty": "hard",
-    "expected_answer": "Identifies the single next upcoming calendar event from today's date. For that event, provides: the meeting title, date/time, and a 360-view of the person or company involved — pulling SF account/contact details (industry, open opportunities, open cases) and SS location/order data where available. If the next meeting involves a person, SF contact details and their linked account (EASI) should be included. Optionally lists subsequent meetings with brief context. Does NOT dump all meetings without identifying which is next.",
+    {
+    "text": "What is the best way to get in touch with supplier1?",
+    "category": "onedrive-rag",
+    "difficulty": "medium",
+    "expected_answer": "Finds 'framework_agreement_easi_supplier1.docx' in OneDrive/contracts/. Correct answer must include: (1) alle operationele communicatie verloopt uitsluitend via Microsoft Teams, kanaal 'EASI–supplier1 Operaties', (2) e-mail wordt NIET aanvaard als officieel escalatiekanaal, (3) accountbeheerder is Marc Supplier (marc.supplier@supplier1.be), Teams-alias marc.supplier. Answering with only the email address without mentioning the Teams-only clause = significant deduction. Not finding the contract = max 2.",
     "tags": [
-      "orchestrator",
-      "multi-agent",
-      "graph",
-      "salesforce",
-      "smartsales",
-      "360-view"
+      "onedrive-rag",
+      "contract",
+      "communication",
+      "graph"
     ],
     "expected_agents": [
-      "graph",
-      "salesforce",
-      "smartsales"
+      "graph"
     ]
   },
-  {
-    "text": "Give me a summary of all activity related to my next calendar event.",
-    "category": "entity-centric2",
+    {
+    "text": "What should I do if my car gets damaged on the way to work?",
+    "category": "onedrive-rag",
     "difficulty": "hard",
-    "expected_answer": "Time-dependent query — correct answer depends on when it is run. Expected behavior: (1) identifies the single next upcoming calendar event from the current date/time, (2) extracts the company or person from the event subject, (3) retrieves SF records for that entity (account details, open opportunities, open cases, contacts), (4) retrieves recent emails related to that entity or event subject. If next event involves a person contact details can be included. If next event involves a company (e.g. supplier1, GreenTech, Colruyt): full SF + optionally SS context are acceptable.",
+    "expected_answer": "Finds 'arbeidsreglement_easi_group.docx' in OneDrive/HR/. Correct answer must include: (1) schade aan privévoertuig tijdens woon-werkverkeer is NIET gedekt door de arbeidsongevallenverzekering van de werkgever, (2) werknemer moet eigen omniumverzekering aanspreken, (3) schadeaangifte indienen via hr@easi.net binnen 24 uur na het incident, met vermelding van het trajectnummer. Not finding the document = max 2. Finding the document but missing the 24u deadline or the omnium-instruction = significant deduction. Answering generically without referencing the document = max 3.",
     "tags": [
-      "orchestrator",
-      "multi-agent",
-      "graph",
-      "salesforce",
-      "360-view"
+      "onedrive-rag",
+      "semantic-gap",
+      "hr-policy",
+      "graph"
     ],
     "expected_agents": [
-      "graph",
-      "salesforce"
-    ]
-  },
-  {
-    "text": "What locations do we have and what deals are linked to them?",
-    "category": "entity-centric2",
-    "difficulty": "hard",
-    "expected_answer": "Lists SS locations and links each to corresponding SF opportunities via entity resolution. Testdata locations and expected links: supplier1 (Brussels) → Q2 Delivery Contract €85k; Colruyt-Halle → SmartSales Rollout 2026 €220k; GreenTech-Ghent → Sustainability Dashboard €45k; Ferrero-Brussels → Nutella In-Store Display Campaign €30k; CRF-Anderlecht → Carrefour Belgium SA In-Store Analytics Pilot €175k (fuzzy); AD Delhaize-Forest → Delhaize Group Supply Chain Optimisation €310k (fuzzy); AB InBev-Leuven → Distribution Network Mapping €520k (fuzzy). Pre-existing SS locations without deals are acceptable. Missing fuzzy links (Carrefour/Delhaize/AB InBev) = significant deduction.",
-    "tags": [
-      "orchestrator",
-      "multi-agent",
-      "salesforce",
-      "smartsales",
-      "360-view"
-    ],
-    "expected_agents": [
-      "salesforce",
-      "smartsales"
-    ]
-  },
-  {
-    "text": "Tell me about the companies behind my high priority cases.",
-    "category": "entity-centric2",
-    "difficulty": "hard",
-    "expected_answer": "Must cover all 4 open SF cases and provide multi-system context for each linked company. Cases: (1) Carrefour Belgium SA — POS integration delay (New, High) → emails from carrefour-be.eu (fuzzy), SS location CRF-Anderlecht; (2) Delhaize Group — EDI connection issue (Working, Medium) → emails from delhaize.eu (fuzzy), SS location AD Delhaize-Forest; (3) supplier1 — Delayed shipment April batch (Working, High) → emails from Marc Supplier (marc.supplier@supplier1.be), SS location supplier1 (SUP-001); (4) Colruyt Group — Integration issue with POS system (New, Medium) → email from procurement@colruyt.be, SS location Colruyt-Halle. Missing Graph context entirely = max 3. Missing SS locations entirely = significant deduction. Not resolving fuzzy company names (Carrefour/Delhaize) to their emails or locations = significant deduction per missed match.",
-    "tags": [
-      "orchestrator",
-      "multi-agent",
-      "graph",
-      "salesforce",
-      "smartsales",
-      "360-view"
-    ],
-    "expected_agents": [
-      "graph",
-      "salesforce",
-      "smartsales"
-    ]
-  },
-  {
-    "text": "Give me a full picture of our commercial activity in Brussels.",
-    "category": "entity-centric2",
-    "difficulty": "hard",
-    "expected_answer": "Geographic query for Brussels commercial activity across all systems. SF accounts in Brussels: supplier1, Ferrero Benelux, EASI, Brussels Retail Partners, Delhaize Group; pre-existing Brussels accounts acceptable. SS locations in Brussels: supplier1 (SUP-001), Ferrero-Brussels (FERR-BRU-001), EASI-Brussels (EASI-BRU-001), CRF-Anderlecht (CRF-AND-001), AD Delhaize-Forest (ADL-FOR-001); pre-existing Brussels locations acceptable. SS orders linked to those locations expected. Dumping full SS catalog without Brussels filter = minor deduction.",
-    "tags": [
-      "orchestrator",
-      "multi-agent",
-      "graph",
-      "salesforce",
-      "smartsales",
-      "360-view"
-    ],
-    "expected_agents": [
-      "graph",
-      "salesforce",
-      "smartsales"
-    ]
-  },
-  {
-    "text": "Are there companies in my upcoming calendar that we have no record of?",
-    "category": "implicit-cross-system",
-    "difficulty": "hard",
-    "expected_answer": "Time-dependent query — depends on which calendar events are upcoming. Expected behavior: (1) retrieves all upcoming calendar events, (2) extracts companies or people from event subjects, (3) checks each against SF (accounts + contacts) for any record, (4) flags those with no SF record as a gap. Based on testdata calendar events (supplier1, Colruyt Group, GreenTech Solutions, Dorian Feaux/EASI, Arne Albrecht/EASI): all have SF records, so a correct answer should report no gaps for these. Pre-existing calendar events with unknown companies are acceptable gaps. Missing the SF lookup step = significant deduction. Confusing calendar companies with email senders = significant deduction.",
-    "tags": [
-      "implicit-link",
-      "graph-to-sf",
-      "gap-analysis"
-    ],
-    "expected_agents": [
-      "graph",
-      "salesforce"
-    ]
-  },
-  {
-    "text": "Which companies that emailed me recently do not seem to have a location registered with us?",
-    "category": "implicit-cross-system",
-    "difficulty": "hard",
-    "expected_answer": "Senders with no SmartSales location: Proximus (info@proximus.be — gap detection case: email only, no SS entry, no SF account), SmartAdmin (smartadmin@easigroupdemo.onmicrosoft.com — internal account), and Microsoft Azure (azure-noreply@microsoft.com — pre-existing, no SS entry) are acceptable. The following senders DO have registered SS locations and must NOT be listed as missing — including via fuzzy entity resolution: supplier1 → 'supplier1' (SUP-001), Colruyt Group → 'Colruyt - Halle' (COLRUYT-HAL-001), GreenTech Solutions → 'GreenTech Solutions - Ghent' (GTS-GNT-001), Ferrero Benelux → 'Ferrero Benelux - Brussels (Nutella)' (FERR-BRU-001), EASI → 'EASI - Brussels' (EASI-BRU-001), Carrefour → 'CRF - Anderlecht' (fuzzy), Delhaize → 'AD Delhaize - Forest' (fuzzy), AB InBev → 'AB InBev - Leuven' (fuzzy). Not flagging Proximus as a gap = significant deduction. Incorrectly flagging fuzzy-matched companies (Carrefour, Delhaize, AB InBev) as missing = significant deduction per incorrectly flagged company.",
-    "tags": [
-      "implicit-link",
-      "graph-to-ss",
-      "gap-analysis"
-    ],
-    "expected_agents": [
-      "graph",
-      "smartsales"
-    ]
-  },
-  {
-    "text": "Which of our accounts have both an active deal and a recent order?",
-    "category": "implicit-cross-system",
-    "difficulty": "hard",
-    "expected_answer": "Identifies accounts that appear in both SF (active opportunity) and SS (recent order), via entity resolution including fuzzy matches. For each match: opportunity name/amount and order reference/amount. Pre-existing accounts with both a deal and order are also acceptable. Missing direct matches (supplier1, GreenTech, Ferrero) = significant deduction. Missing fuzzy matches = significant deduction.",
-    "tags": [
-      "implicit-link",
-      "sf-to-ss",
-      "intersection"
-    ],
-    "expected_agents": [
-      "salesforce",
-      "smartsales"
-    ]
-  },
-
-
-
-
-
-
-
-
-
-
-  {
-    "text": "Find any files we have related to our most valuable open deal and summarise them.",
-    "category": "implicit-cross-system",
-    "difficulty": "hard",
-    "expected_answer": "Identifies the most valuable open SF opportunity by amount — at time of writing: Anheuser-Busch InBev — Distribution Network Mapping (€520k, Qualification, close 15 Sep 2026), but may be superseded by a pre-existing opportunity with higher value. Searches OneDrive for files related to that specific company. Expected file: 'ABinbev deal draft.docx' in OneDrive root — should be found and summarised. A correct answer includes the file name and a brief summary of its contents. Returning files for a different company without noting the mismatch = significant deduction. Not finding 'ABinbev deal draft.docx' when AB InBev is the identified company = significant deduction.",
-    "tags": [
-      "implicit-link",
-      "sf-to-graph"
-    ],
-    "expected_agents": [
-      "salesforce",
       "graph"
     ]
   }
+
 ]

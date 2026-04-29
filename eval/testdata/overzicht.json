@@ -726,6 +726,56 @@
         "sf_opportunity_id": "006KI000005bIGNYA2",
         "ss_location_uid": "2f355296-4310-11f1-a803-005056010707",
         "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "framework_agreement_easi_supplier1.docx",
+        "pad": "OneDrive root/contracts",
+        "entiteit": "supplier1",
+        "sleutelwoorden": ["supplier1", "raamovereenkomst", "Teams", "EASI-supplier1 Operaties", "marc.supplier@supplier1.be", "communicatie", "escalatie", "e-mail niet aanvaard"],
+        "sf_account_id": "001KI00000N7MjVYAV",
+        "rag_query": "What is the best way to get in touch with supplier1?",
+        "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "collaboration_agreement_easi_colruyt.docx",
+        "pad": "OneDrive root/contracts",
+        "entiteit": "Colruyt Group",
+        "sleutelwoorden": ["Colruyt", "SmartSales", "SLA", "4 kantooruren", "supportlijn", "+32 2 123 45 67", "Arne Albrecht", "a.albrecht@easi.net"],
+        "sf_account_id": "001KI00000N7zHSYAZ",
+        "rag_query": "What are our agreed support terms with Colruyt?",
+        "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "employment_regulations_easi_group.docx",
+        "pad": "OneDrive root/HR",
+        "entiteit": "EASI Group (intern)",
+        "sleutelwoorden": ["arbeidsreglement", "woon-werkverkeer", "autoschade", "omniumverzekering", "arbeidsongevallenverzekering", "hr@easi.net", "24 uur", "trajectnummer"],
+        "rag_query": "What should I do if my car gets damaged on the way to work?",
+        "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "expense_policy_easi_group.docx",
+        "pad": "OneDrive root/HR",
+        "entiteit": "EASI Group (intern)",
+        "sleutelwoorden": ["onkostenbeleid", "openbaar vervoer", "100% terugbetaling", "trein", "taxi", "35 euro", "kilometervergoeding", "0,4237"],
+        "rag_query": "How much do I get reimbursed if I travel by train to visit a client?",
+        "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "onboarding_guide_easi.docx",
+        "pad": "OneDrive root/HR",
+        "entiteit": "EASI Group (intern)",
+        "sleutelwoorden": ["onboarding", "Salesforce", "servicedesk.easi.net", "IT-ticket", "2-3 werkdagen", "Sales Director", "SmartSales", "goedkeuring"],
+        "rag_query": "How do I request access to Salesforce as a new employee?",
+        "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "complaint_handling_procedure_easi.docx",
+        "pad": "OneDrive root/procedures",
+        "entiteit": "EASI Group (intern)",
+        "sleutelwoorden": ["klachtenafhandeling", "niveau 2", "dreiging contractbeeindiging", "churn-risk", "Nathalie Pieters", "n.pieters@easi.net", "Salesforce", "escalatie", "remediëring"],
+        "rag_query": "A client is threatening to end their collaboration with us. What steps should I take?",
+        "bron": "manueel"
       }
     ]
   },
@@ -801,8 +851,8 @@
     "microsoft365": {
       "emails": 13,
       "calendar_events": 5,
-      "onedrive_bestanden": 6
+      "onedrive_bestanden": 12
     },
-    "totaal_records": 73
+    "totaal_records": 79
   }
 }
