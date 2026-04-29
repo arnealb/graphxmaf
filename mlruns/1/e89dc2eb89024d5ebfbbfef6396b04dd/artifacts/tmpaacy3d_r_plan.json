@@ -1,0 +1,21 @@
+{
+  "query": "Are there companies in my upcoming calendar that we have no record of?",
+  "reasoning": "The query requires information about upcoming calendar events (to identify companies) and then a check against the company records in Salesforce. Therefore, both graph and salesforce agents are needed to execute the task.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve all upcoming calendar events, including the company names associated with each event.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Check for records of companies mentioned in the upcoming calendar events from step 1. If no companies are present in the calendar events, provide a statement indicating there are no events to check.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from Salesforce to list any companies from the calendar events that do not exist in the CRM records."
+}

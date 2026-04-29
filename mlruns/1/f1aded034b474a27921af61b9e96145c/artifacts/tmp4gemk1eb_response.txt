@@ -1,0 +1,17 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Based on the provided information:
+
+- **Recent Email Senders:** 
+  - SmartAdmin (emails received on 13 September 2024 and 25 November 2024)
+  
+- **Active Deals:** 
+  - There were no results found for active deals from Salesforce.
+
+### Conclusion:
+- **Active Deal Status:**
+  - Currently, there are no active deals associated with any recent email senders. 
+  - SmartAdmin is the only sender, but no deals were identified in Salesforce.

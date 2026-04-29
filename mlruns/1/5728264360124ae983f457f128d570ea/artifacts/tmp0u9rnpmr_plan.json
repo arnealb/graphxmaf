@@ -1,0 +1,25 @@
+{
+  "query": "Give me a 360 view of this salesforce account: supplier1 : open opportunities, any SmartSales locations for that account, and any emails I have about that company.",
+  "reasoning": "The query requires pulling open opportunities from Salesforce, locations from SmartSales, and emails related to the account from Microsoft 365. Each step can be executed independently based on the same account information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch all open opportunities for the Salesforce account 'supplier1'.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Retrieve any locations associated with the account 'supplier1'.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "graph",
+      "task": "Gather all emails related to the account 'supplier1'.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from the three steps to create a comprehensive 360 view of the Salesforce account 'supplier1', including open opportunities, SmartSales locations, and related emails."
+}

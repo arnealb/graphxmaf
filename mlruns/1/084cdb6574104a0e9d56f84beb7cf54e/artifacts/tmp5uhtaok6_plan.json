@@ -1,0 +1,13 @@
+{
+  "query": "Find a document called 'agenda' in OneDrive and show its content.",
+  "reasoning": "The task involves searching for a specific document in OneDrive and retrieving its content, which can be handled by the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for a document called 'agenda' in OneDrive and retrieve its content.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Use the content retrieved from the agent to provide the final answer."
+}

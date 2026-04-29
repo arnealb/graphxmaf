@@ -1,0 +1,54 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Based on the provided results, here is a list of accounts that have both an active deal and a recent order:
+
+### Accounts with Active Deals
+- **Ferrero Benelux**
+  - Active Deal: Nutella In-Store Display Campaign
+    - Stage: Prospecting
+    - Close Date: 1 October 2026
+    - Amount: $30,000
+
+- **Colruyt Group**
+  - Active Deal: SmartSales Rollout 2026
+    - Stage: Proposal/Price Quote
+    - Close Date: 30 September 2026
+    - Amount: $220,000
+
+- **Anheuser-Busch InBev**
+  - Active Deal: Distribution Network Mapping
+    - Stage: Qualification
+    - Close Date: 15 September 2026
+    - Amount: $520,000
+
+- **Delhaize Group**
+  - Active Deal: Supply Chain Optimisation
+    - Stage: Negotiation/Review
+    - Close Date: 31 August 2026
+    - Amount: $310,000
+
+- **GreenTech Solutions**
+  - Active Deal: Sustainability Dashboard
+    - Stage: Qualification
+    - Close Date: 15 August 2026
+    - Amount: $45,000
+
+- **Carrefour Belgium SA**
+  - Active Deal: In-Store Analytics Pilot
+    - Stage: Proposal/Price Quote
+    - Close Date: 31 July 2026
+    - Amount: $175,000
+
+- **supplier1**
+  - Active Deal: Q2 Delivery Contract
+    - Stage: Negotiation/Review
+    - Close Date: 30 June 2026
+    - Amount: $85,000
+  
+### Accounts with Recent Orders
+- **Note:** The results from the order search step did not return any data regarding recent orders.
+
+### Conclusion
+- Currently, there are accounts with active deals, but no data was found regarding recent orders. Therefore, it's not possible to compile a list of accounts that meet the criteria of having both an active deal and a recent order.

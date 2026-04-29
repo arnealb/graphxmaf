@@ -1,0 +1,29 @@
+{
+  "query": "Tell me about the companies behind my open support cases.",
+  "reasoning": "The query requires information about open support cases, which involves understanding both the cases themselves from Salesforce and the associated companies. To get a complete view, I'll retrieve details from all available agents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all open support cases along with their associated account information.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "For the accounts retrieved in step 1, find any related emails and calendar events that can provide additional context about communications with those companies.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "For the accounts retrieved in step 1, gather information on the physical locations and store presence of those companies to provide a complete overview.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the information from all three steps to provide a comprehensive overview of the companies behind the open support cases, including case details, communication history, and physical location information."
+}

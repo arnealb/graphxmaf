@@ -1,0 +1,13 @@
+{
+  "query": "Have I received any emails in the last 7 days? List sender and subject.",
+  "reasoning": "The task requires checking for emails received in the past week and retrieving relevant details such as sender and subject. The graph agent is suitable for accessing email data.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve all emails received in the last 7 days and include the sender and subject fields.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Extract the sender and subject information from the results of step 1 and present them as a list."
+}

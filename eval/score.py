@@ -106,17 +106,20 @@ User query:
 Sub-agents invoked by the orchestrator (in order):
 {invoked_agents}
 
+Expected sub-agents (ground truth):
+{expected_agents}
+
 Available sub-agents and their domains:
   graph       – Microsoft 365: emails, OneDrive files, contacts, calendar
   salesforce  – CRM: accounts, contacts, leads, opportunities, cases
   smartsales  – Field sales app: locations, catalog items, orders, approbation statuses
 
-Rate the routing on a scale of 1 to 5:
-  1 – Wrong agent(s) called, or no agent called when one was needed
-  2 – Partially correct: mostly wrong domain or many unnecessary calls
+Rate the routing on a scale of 1 to 5 based on how well the invoked agents match the expected agents:
+  1 – Wrong agent(s) called, or a required agent was completely missed
+  2 – Partially correct: at least one required agent missing or many unnecessary calls
   3 – Correct agent(s) called but with notable issues (redundant calls, wrong order, missing agent)
   4 – Correct routing with only minor inefficiencies
-  5 – Optimal: exactly the right agent(s) called in the right order, no unnecessary calls
+  5 – Optimal: exactly the expected agent(s) called, no unnecessary calls
 
 Respond ONLY with valid JSON in this exact format:
 {{"score": <integer 1-5>, "rationale": "<one or two sentence justification>"}}
@@ -145,12 +148,17 @@ async def evaluate_routing(
     deployment: str,
     question: str,
     routing_trace_json: str,
+    expected_agents: list[str] | None = None,
 ) -> tuple[int | None, str]:
     """Return (routing_score 1-5 or None, rationale)."""
     if not routing_trace_json or not routing_trace_json.strip():
         return None, "No routing trace available."
 
     invoked_agents_str = _format_invocations(routing_trace_json)
+    if expected_agents:
+        expected_agents_str = ", ".join(expected_agents)
+    else:
+        expected_agents_str = "(not specified — infer from the query)"
     try:
         resp = await client.chat.completions.create(
             model=deployment,
@@ -159,6 +167,7 @@ async def evaluate_routing(
                 {"role": "user",   "content": _ROUTING_USER_TMPL.format(
                     question=question,
                     invoked_agents=invoked_agents_str,
+                    expected_agents=expected_agents_str,
                 )},
             ],
             temperature=0,
@@ -265,9 +274,15 @@ async def score_sheet(
 
         if needs_routing:
             routing_trace = str(_cell(row, "routing_trace", col_map) or "")
+            raw_expected = _cell(row, "expected_agents", col_map)
+            if raw_expected:
+                exp_agents = [a.strip() for a in str(raw_expected).split(",") if a.strip()]
+            else:
+                exp_agents = None
             r_score, r_rationale = await evaluate_routing(
                 client, deployment,
                 question, routing_trace,
+                expected_agents=exp_agents,
             )
             updates["routing_score"]     = r_score
             updates["routing_rationale"] = r_rationale

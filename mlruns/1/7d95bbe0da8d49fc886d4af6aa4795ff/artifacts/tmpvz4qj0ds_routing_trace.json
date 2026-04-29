@@ -1,0 +1,27 @@
+{
+  "user_query": "Find the email address of Dorian.",
+  "plan": {
+    "query": "Find the email address of Dorian.",
+    "reasoning": "The task requires fetching the email address from the graph agent, which handles Microsoft 365 email data.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the email address for the contact named Dorian.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the email address found in step 1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the email address for the contact named Dorian.",
+      "started_at": "2026-04-21T15:07:35.285174+00:00",
+      "ended_at": "2026-04-21T15:07:38.140917+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

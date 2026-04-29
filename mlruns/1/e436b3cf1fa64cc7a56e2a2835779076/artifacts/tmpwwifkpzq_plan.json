@@ -1,0 +1,25 @@
+{
+  "query": "What is the current status of our relationship with supplier1?",
+  "reasoning": "The query involves assessing the status of a business relationship, which requires insights from multiple agents about communication history, CRM records, and physical presence related to 'supplier1'.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Find any emails and calendar events involving 'supplier1' to understand communication history.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Retrieve CRM accounts, contacts, leads, and opportunities associated with 'supplier1' to evaluate the commercial relationship.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Get information on the physical locations and catalog items related to 'supplier1' to assess their presence and offerings.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from steps 1, 2, and 3 to provide a comprehensive overview of the current status of the relationship with 'supplier1'."
+}

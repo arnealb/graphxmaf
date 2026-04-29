@@ -1,0 +1,47 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+### Total Order Value for Companies with Open Support Cases
+
+**Companies with Open Support Cases:**
+1. **Colruyt Group**
+   - Case Number: 00001021
+   - Open case status: New
+2. **supplier1**
+   - Case Numbers: 00001020
+   - Open case status: Working
+3. **Easi Be**
+   - Case Numbers: 00001018 (In Progress), 00001017 (New), 00001014 (Waiting for Customer), 00001013 (Waiting for Customer), 00001011 (Waiting for Customer), 00001007 (Waiting for Customer)
+4. **Pairi Daiza**
+   - Case Numbers: 00001006 (New), 00001005 (Waiting for Customer), 00001001 (New)
+5. **Omega SA-NV**
+   - Case Number: 00001003 (New)
+6. **Global Media**
+   - Case Number: 00001000 (Escalated)
+
+**Total Order Value Calculation from Opportunities:**
+
+- **Colruyt Group**
+  - Opportunity Amount: 220,000.0 (SmartSales)
+
+- **supplier1**
+  - Opportunity Amount: 85,000.0 (SmartSales)
+
+- **Easi Be**
+  - No relevant opportunities found.
+
+- **Pairi Daiza**
+  - No relevant opportunities found.
+
+- **Omega SA-NV**
+  - Opportunity Amount: 45,000.0 (SmartSales)
+
+- **Global Media**
+  - Opportunity Amount: 1,000,000.0 (SmartSales)
+
+### Total Order Value
+- **Total Order Value = 220,000.0 + 85,000.0 + 45,000.0 + 1,000,000.0 = 1,350,000.0**
+
+### Final Result
+- **The total order value for companies that currently have an open support case is 1,350,000.0.**

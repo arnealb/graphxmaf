@@ -1,0 +1,17 @@
+{
+  "user_query": "List SmartSales orders with full projection.",
+  "plan": {
+    "query": "List SmartSales orders with full projection.",
+    "reasoning": "The SmartSales agent is required to fetch the list of orders with their full projection, which includes all relevant details. No additional steps or data from other agents are necessary.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve a comprehensive list of SmartSales orders along with their full projection details.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the full list of SmartSales orders retrieved from step 1."
+  },
+  "invoked_agents": []
+}

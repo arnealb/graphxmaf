@@ -1,0 +1,80 @@
+{
+  "user_query": "Give me a complete overview of everything related to Arne.",
+  "plan": {
+    "query": "Give me a complete overview of everything related to Arne.",
+    "reasoning": "The query requests a comprehensive view of everything related to Arne, which involves collating information from all available agents. This approach ensures that we capture communication history, relationships, and any relevant physical locations or documents associated with Arne.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve all emails, calendar events, and personal Outlook contacts related to Arne.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Fetch all CRM contacts, accounts, leads, opportunities, and cases related to Arne.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Gather any locations and catalog items associated with Arne.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from steps 1, 2, and 3 to provide a complete overview of everything related to Arne."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "Gather any locations and catalog items associated with Arne.",
+      "started_at": "2026-04-28T12:00:07.375985+00:00",
+      "ended_at": "2026-04-28T12:00:13.845688+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Fetch all CRM contacts, accounts, leads, opportunities, and cases related to Arne.",
+      "started_at": "2026-04-28T12:00:07.373643+00:00",
+      "ended_at": "2026-04-28T12:00:21.577875+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 4,
+      "tool_calls": [
+        "find_contacts",
+        "find_accounts",
+        "find_leads",
+        "find_accounts",
+        "find_accounts",
+        "get_opportunities",
+        "get_opportunities",
+        "get_cases",
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve all emails, calendar events, and personal Outlook contacts related to Arne.",
+      "started_at": "2026-04-28T12:00:07.371292+00:00",
+      "ended_at": "2026-04-28T12:01:30.752175+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "findpeople",
+        "list_calendar",
+        "search_email"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "query": "Find any Excel or PDF files in my OneDrive.",
+  "reasoning": "The only relevant agent for searching files in OneDrive is the graph agent. A single step will suffice to locate both Excel and PDF files.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for all files in OneDrive with the extensions .xlsx or .pdf.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of found files."
+}

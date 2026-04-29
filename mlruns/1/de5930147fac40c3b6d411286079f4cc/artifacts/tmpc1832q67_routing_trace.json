@@ -1,0 +1,27 @@
+{
+  "user_query": "Show me emails I received in the last 14 days.",
+  "plan": {
+    "query": "Show me emails I received in the last 14 days.",
+    "reasoning": "The task requires accessing email data, which can only be done through the graph agent. Therefore, only one step is necessary to complete the request.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve all emails received in the last 14 days.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the results of the email retrieval directly to the user."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve all emails received in the last 14 days.",
+      "started_at": "2026-04-21T07:33:31.566679+00:00",
+      "ended_at": "2026-04-21T07:35:05.199460+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

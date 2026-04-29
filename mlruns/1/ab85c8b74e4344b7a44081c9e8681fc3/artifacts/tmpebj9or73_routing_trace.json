@@ -1,0 +1,27 @@
+{
+  "user_query": "What fields can be displayed for SmartSales catalog items?",
+  "plan": {
+    "query": "What fields can be displayed for SmartSales catalog items?",
+    "reasoning": "The user is asking specifically about the fields related to catalog items in SmartSales, so I will use the smartsales agent to retrieve this information directly.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve the available fields that can be displayed for catalog items in SmartSales.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of fields retrieved in step 1 as the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve the available fields that can be displayed for catalog items in SmartSales.",
+      "started_at": "2026-04-21T15:11:27.723450+00:00",
+      "ended_at": "2026-04-21T15:11:44.892660+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

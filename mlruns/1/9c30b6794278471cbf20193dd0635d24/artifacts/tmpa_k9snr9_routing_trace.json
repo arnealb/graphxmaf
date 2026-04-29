@@ -1,0 +1,31 @@
+{
+  "user_query": "Find Salesforce accounts in Belgium, including their billing address.",
+  "plan": {
+    "query": "Find Salesforce accounts in Belgium, including their billing address.",
+    "reasoning": "The query requires fetching information specifically related to Salesforce accounts. Since the query is solely focused on Salesforce data and involves a straightforward retrieval, one step will suffice to gather all necessary details about the accounts.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve all accounts located in Belgium along with their billing addresses.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of accounts retrieved from step 1, highlighting their names and billing addresses."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve all accounts located in Belgium along with their billing addresses.",
+      "started_at": "2026-04-24T09:24:36.026187+00:00",
+      "ended_at": "2026-04-24T09:24:42.841153+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "find_accounts"
+      ]
+    }
+  ]
+}

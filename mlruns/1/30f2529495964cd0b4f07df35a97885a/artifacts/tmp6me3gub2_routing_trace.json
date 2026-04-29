@@ -1,0 +1,31 @@
+{
+  "user_query": "List SmartSales orders with full projection.",
+  "plan": {
+    "query": "List SmartSales orders with full projection.",
+    "reasoning": "The query specifically requires information from the SmartSales agent, as it pertains to orders and projections related to catalog items.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve a complete list of SmartSales orders along with their full projections.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the detailed list of SmartSales orders received from the agent."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve a complete list of SmartSales orders along with their full projections.",
+      "started_at": "2026-04-27T13:15:38.635890+00:00",
+      "ended_at": "2026-04-27T13:16:35.857691+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_orders"
+      ]
+    }
+  ]
+}

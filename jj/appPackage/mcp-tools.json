@@ -1,0 +1,22 @@
+{
+    "tools": [
+        {
+            "name": "ask",
+            "description": "Ask the multi-agent system a question. Handles Microsoft 365 data (emails, calendar, files, contacts) and SmartSales data (locations, catalog items, orders).",
+            "inputSchema": {
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "title": "Query",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "query"
+                ],
+                "title": "askArguments"
+            },
+            "title": "Ask"
+        }
+    ]
+}

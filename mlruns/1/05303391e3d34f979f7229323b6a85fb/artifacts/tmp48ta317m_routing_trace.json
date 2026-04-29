@@ -1,0 +1,17 @@
+{
+  "user_query": "Find SmartSales locations in Brussels.",
+  "plan": {
+    "query": "Find SmartSales locations in Brussels.",
+    "reasoning": "The user is looking for locations specifically within the SmartSales system. This can be achieved with a single call to the SmartSales agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve all available locations in Brussels from the SmartSales database.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of locations obtained from the SmartSales database."
+  },
+  "invoked_agents": []
+}

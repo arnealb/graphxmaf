@@ -1,0 +1,28 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Overview of GreenTech Solutions
+
+#### General Information
+- **Email Contact:** info@greentechsolutions.be
+- **Recent Email:** Interest in sustainability dashboard received on **28 April 2026**.
+
+#### Events
+- **Upcoming Event:** 
+  - **Technical Qualification Call**
+  - **Date and Time:** 12 May 2026, from 09:00 AM to 10:00 AM
+  - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+#### Opportunities
+- **Current Opportunity:** 
+  - **Name:** GreenTech Solutions — Sustainability Dashboard
+  - **Stage:** Qualification
+  - **Amount:** €45,000
+  - **Close Date:** 15 August 2026
+
+### Additional Notes
+- There were no additional contacts or leads found in Salesforce relevant to GreenTech Solutions.
+- No location or catalog information was retrieved from SmartSales.
+
+This information collectively portrays GreenTech Solutions as a business focused on sustainability, currently engaged in developing a dashboard solution with an upcoming technical qualification call scheduled.

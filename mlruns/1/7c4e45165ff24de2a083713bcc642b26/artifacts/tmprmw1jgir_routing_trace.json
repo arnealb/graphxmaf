@@ -1,0 +1,27 @@
+{
+  "user_query": "Who am I in Microsoft 365?",
+  "plan": {
+    "query": "Who am I in Microsoft 365?",
+    "reasoning": "The user is asking for information about their identity or account details in Microsoft 365, which can be retrieved using the graph agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve my account details, including display name, email address, and profile information.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the account details retrieved from the graph agent."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve my account details, including display name, email address, and profile information.",
+      "started_at": "2026-04-21T15:04:09.503455+00:00",
+      "ended_at": "2026-04-21T15:04:37.851686+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

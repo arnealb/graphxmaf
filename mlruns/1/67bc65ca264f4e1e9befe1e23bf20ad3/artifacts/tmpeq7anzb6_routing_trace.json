@@ -1,0 +1,17 @@
+{
+  "user_query": "List recent SmartSales orders.",
+  "plan": {
+    "query": "List recent SmartSales orders.",
+    "reasoning": "The user needs information specifically about recent orders from the SmartSales system, so a single query to the smartsales agent will suffice.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve the most recent orders from the SmartSales system.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Provide the list of recent orders retrieved from the smartsales step."
+  },
+  "invoked_agents": []
+}

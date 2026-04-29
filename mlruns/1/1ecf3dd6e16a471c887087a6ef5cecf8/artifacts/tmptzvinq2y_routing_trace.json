@@ -1,0 +1,17 @@
+{
+  "user_query": "Show me my Microsoft 365 contacts.",
+  "plan": {
+    "query": "Show me my Microsoft 365 contacts.",
+    "reasoning": "The user is asking for their contacts from Microsoft 365, which can be retrieved directly using the graph agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Fetch all contacts from Microsoft 365 for the user.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the contacts retrieved from the graph agent."
+  },
+  "invoked_agents": []
+}

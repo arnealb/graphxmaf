@@ -1,0 +1,13 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce, graph)...
+Synthesizing...
+The following companies appear in both your CRM and email history:
+
+- **From Salesforce**:
+  - Ferrero Benelux
+  - GreenTech Solutions
+  - Colruyt Group
+  - supplier1
+
+These matches indicate that there is active communication or recorded interactions with these companies in your email history.

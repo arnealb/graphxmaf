@@ -1,0 +1,14 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+The most valuable open deal identified is:
+
+- **Deal Name**: new opp
+- **Account Name**: Global Media
+- **Stage**: Value Proposition
+- **Deal Amount**: $1,000,000
+- **Close Date**: 30 April 2026
+
+From the results of Step 2 (graph), there are no relevant files related to this deal. Therefore, no files can be summarized.

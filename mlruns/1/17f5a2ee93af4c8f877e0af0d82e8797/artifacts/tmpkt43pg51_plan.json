@@ -1,0 +1,21 @@
+{
+  "query": "Find any files we have related to our most valuable open deal and summarise them.",
+  "reasoning": "The query requires information about open deals and their associated documents. First, I will retrieve details about the most valuable open deal from Salesforce, and then I will fetch related files from Graph using that information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Find the details of our most valuable open deal, including any identifiers needed to search for related files.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Using the identifiers from step 1, find any files related to the most valuable open deal.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Summarize the relevant files obtained from step 2 in relation to the most valuable open deal."
+}

@@ -1,0 +1,25 @@
+{
+  "user_query": "List SmartSales orders, then retrieve the full details of the first order.",
+  "plan": {
+    "query": "List SmartSales orders, then retrieve the full details of the first order.",
+    "reasoning": "Two steps are necessary: first, to retrieve the list of SmartSales orders, and second, to fetch the details of the first order from that list.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve a list of all SmartSales orders.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "smartsales",
+        "task": "Fetch the full details of the first SmartSales order from the list retrieved in step 1 (if any). If there are no orders, state that there are no orders available.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the results from step 2 to provide the user with the details of the first SmartSales order, or a message indicating that no orders are available."
+  },
+  "invoked_agents": []
+}

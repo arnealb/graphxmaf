@@ -1,0 +1,38 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce)...
+️Executing (graph, smartsales)...
+Synthesizing...
+### Overview of the Top Open Deal
+
+#### Deal Specifics
+- **Deal Name:** Anheuser-Busch InBev — Distribution Network Mapping
+- **Stage:** Qualification
+- **Deal Amount:** $520,000
+- **Expected Close Date:** 15 September 2026
+- **Account Name:** Anheuser-Busch InBev
+  
+*From Salesforce: Deal details on the top opportunity.*
+
+#### Communication History
+- **Recent Emails:**
+  1. **Subject:** [Supply chain project — follow-up meeting](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAANz2u7xAAA=)  
+     **Sender:** Delhaize Procurement (procurement@delhaize.eu)  
+     **Received:** 28 April 2026
+     
+  2. **Subject:** [Distribution mapping — scope confirmation](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAANz2u7yAAA=)  
+     **Sender:** AB InBev Sales (sales@ab-inbev.com)  
+     **Received:** 28 April 2026
+
+*From Graph: Detailed email communication history related to the deal.*
+
+#### Related Physical Locations or Products
+- **Locations:** No specific physical locations were provided for this deal.
+- **Catalog Items Related to the Deal:**
+  - **IT Hardware**
+  - **IT Software**
+  - **Spreads**
+
+*From SmartSales: Information on product categories relevant to the deal.*
+
+This summary presents a comprehensive view of the top open deal involving Anheuser-Busch InBev, highlighting essential deal details, communication history, and associated product categories.

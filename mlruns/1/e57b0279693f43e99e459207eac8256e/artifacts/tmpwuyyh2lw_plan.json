@@ -1,0 +1,13 @@
+{
+  "query": "What fields can be displayed for SmartSales catalog items?",
+  "reasoning": "The query specifically pertains to obtaining information about catalog items, which falls under the capabilities of the smartsales agent. One step is sufficient to retrieve the relevant details.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the fields that can be displayed for catalog items.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the fields retrieved from the smartsales agent as the final answer."
+}

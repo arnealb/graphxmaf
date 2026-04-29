@@ -1,0 +1,27 @@
+{
+  "user_query": "Find any files related to 'nutella' in OneDrive and read all of them.",
+  "plan": {
+    "query": "Find any files related to 'nutella' in OneDrive and read all of them.",
+    "reasoning": "The task requires searching for files in OneDrive using the graph agent, which can access OneDrive data directly. The step involves retrieving all relevant files in a single call.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Search for and retrieve all files related to 'nutella' from OneDrive.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from the OneDrive search to create a comprehensive list of files related to 'nutella'."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Search for and retrieve all files related to 'nutella' from OneDrive.",
+      "started_at": "2026-04-21T15:14:43.495221+00:00",
+      "ended_at": "2026-04-21T15:14:52.460979+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

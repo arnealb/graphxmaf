@@ -1,0 +1,79 @@
+{
+  "user_query": "What is the full picture of our top open deal?",
+  "plan": {
+    "query": "What is the full picture of our top open deal?",
+    "reasoning": "The query requires comprehensive information about the top open deal, which involves multiple aspects such as relationship data (salesforce), communication history (graph), and any physical presence or product details (smartsales). Thus, I will engage all agents to gather a complete overview.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch details of the top open deal, including associated accounts, contacts, opportunities, and cases.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "graph",
+        "task": "Using the account and contact names from step 1, retrieve communication history, calendar events, and any documents related to the deal.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Using the account name from step 1, gather any physical presence information or product catalog details that are relevant to the top open deal.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the results from all steps to provide a comprehensive overview of the top open deal, including CRM data, communication records, and physical presence or product details."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Fetch details of the top open deal, including associated accounts, contacts, opportunities, and cases.",
+      "started_at": "2026-04-28T12:00:25.921085+00:00",
+      "ended_at": "2026-04-28T12:00:33.179537+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 4,
+      "tool_calls": [
+        "get_opportunities",
+        "find_accounts",
+        "find_contacts",
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 2,
+      "input": "[Result from step 1]:\n[\n    {\n        \"id\": \"00606000018RlzoAAC\",\n        \"name\": \"Prospection Gusto\",\n        \"stage\": \"Qualification\",\n        \"amount\": null,\n        \"close_date\": \"2024-12-31\",\n        \"account_name\": \"Gusto Manufacturing\"\n    },\n    {\n        \"account\": {\n            \"id\": \"001060000261z2LAAQ\",\n            \"name\": \"Gusto Manufacturing\",\n            \"industry\": \"Technology\",\n            \"website\": \"www.gustodistributing.com\"\n        },\n        \"contacts\": [\n            {\n                \"id\": \"00306000026Pt21AAC\",\n                \"first_name\": \"Bruce\",\n                \"last_name\": \"Watkins\",\n                \"email\": \"bwatkins@example.com\"\n            }\n        ],\n        \"cases\": []\n    }\n]\n\n[Task]:\nUsing the account and contact names from step 1, retrieve communication history, calendar events, and any documents related to the deal.",
+      "started_at": "2026-04-28T12:00:33.221199+00:00",
+      "ended_at": "2026-04-28T12:00:37.635685+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "search_calendar",
+        "search_files"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "[Result from step 1]:\n[\n    {\n        \"id\": \"00606000018RlzoAAC\",\n        \"name\": \"Prospection Gusto\",\n        \"stage\": \"Qualification\",\n        \"amount\": null,\n        \"close_date\": \"2024-12-31\",\n        \"account_name\": \"Gusto Manufacturing\"\n    },\n    {\n        \"account\": {\n            \"id\": \"001060000261z2LAAQ\",\n            \"name\": \"Gusto Manufacturing\",\n            \"industry\": \"Technology\",\n            \"website\": \"www.gustodistributing.com\"\n        },\n        \"contacts\": [\n            {\n                \"id\": \"00306000026Pt21AAC\",\n                \"first_name\": \"Bruce\",\n                \"last_name\": \"Watkins\",\n                \"email\": \"bwatkins@example.com\"\n            }\n        ],\n        \"cases\": []\n    }\n]\n\n[Task]:\nUsing the account name from step 1, gather any physical presence information or product catalog details that are relevant to the top open deal.",
+      "started_at": "2026-04-28T12:00:33.223471+00:00",
+      "ended_at": "2026-04-28T12:00:46.181709+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items"
+      ]
+    }
+  ]
+}

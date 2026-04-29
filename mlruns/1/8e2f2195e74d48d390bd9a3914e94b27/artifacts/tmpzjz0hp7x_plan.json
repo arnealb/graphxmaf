@@ -1,0 +1,21 @@
+{
+  "query": "Show me the 3 largest open Salesforce opportunities and the billing country of each related account.",
+  "reasoning": "The first step is to retrieve the largest open Salesforce opportunities, and the second step is to gather the billing countries for the related accounts. Both tasks are necessary and can be executed in parallel to efficiently provide the required information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve the 3 largest open opportunities from the Salesforce system.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "For each of the 3 largest open opportunities, retrieve the related account's billing country.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results of the largest open opportunities with their corresponding billing countries for a complete overview."
+}

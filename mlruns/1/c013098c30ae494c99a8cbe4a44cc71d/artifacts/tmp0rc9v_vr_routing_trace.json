@@ -1,0 +1,77 @@
+{
+  "user_query": "Tell me everything you know about supplier1.",
+  "plan": {
+    "query": "Tell me everything you know about supplier1.",
+    "reasoning": "The query requires a comprehensive overview of the entity 'supplier1', which necessitates data from all available agents to provide a full picture across different domains.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Find and retrieve all emails, calendar events, and OneDrive files related to supplier1.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Look up all CRM accounts, contacts, leads, opportunities, and cases related to supplier1.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Gather information about the physical locations and product catalog items related to supplier1.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from all agents to provide a comprehensive overview of supplier1, including communication history, commercial relationships, and location information."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "Gather information about the physical locations and product catalog items related to supplier1.",
+      "started_at": "2026-04-28T11:57:57.734050+00:00",
+      "ended_at": "2026-04-28T11:58:07.639368+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 4,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items",
+        "list_catalog_items"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Look up all CRM accounts, contacts, leads, opportunities, and cases related to supplier1.",
+      "started_at": "2026-04-28T11:57:57.733647+00:00",
+      "ended_at": "2026-04-28T11:58:13.530984+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "find_accounts",
+        "find_contacts",
+        "find_leads",
+        "get_opportunities",
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Find and retrieve all emails, calendar events, and OneDrive files related to supplier1.",
+      "started_at": "2026-04-28T11:57:57.732710+00:00",
+      "ended_at": "2026-04-28T11:58:16.531600+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "search_calendar",
+        "search_files"
+      ]
+    }
+  ]
+}

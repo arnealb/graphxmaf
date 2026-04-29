@@ -1,0 +1,21 @@
+{
+  "query": "Are there companies in my upcoming calendar that we have no record of?",
+  "reasoning": "To determine if there are companies in the upcoming calendar without a record, we first need to fetch the calendar events and then check those against the CRM records.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve all upcoming calendar events, including the associated company names if available.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Check the CRM for existing records of companies based on the names retrieved from the upcoming calendar events in step 1.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Compare the list of companies from the calendar events (step 1) against the records from the CRM (step 2) to identify any companies that do not have a corresponding record."
+}

@@ -1,0 +1,27 @@
+{
+  "user_query": "Show me Salesforce accounts with their phone numbers.",
+  "plan": {
+    "query": "Show me Salesforce accounts with their phone numbers.",
+    "reasoning": "The query requires retrieving Salesforce account data, specifically focusing on accounts and their associated phone numbers, which can be directly fetched from the Salesforce agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve a list of Salesforce accounts along with their phone numbers.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of Salesforce accounts and their phone numbers obtained from the step."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve a list of Salesforce accounts along with their phone numbers.",
+      "started_at": "2026-04-21T07:51:03.169025+00:00",
+      "ended_at": "2026-04-21T07:51:20.145044+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

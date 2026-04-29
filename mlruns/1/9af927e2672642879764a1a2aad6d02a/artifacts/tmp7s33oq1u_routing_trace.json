@@ -1,0 +1,5 @@
+{
+  "user_query": "List SmartSales orders, then retrieve the full details of the first order.",
+  "plan": null,
+  "invoked_agents": []
+}

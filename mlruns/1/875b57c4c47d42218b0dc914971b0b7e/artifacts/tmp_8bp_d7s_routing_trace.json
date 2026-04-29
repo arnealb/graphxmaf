@@ -1,0 +1,31 @@
+{
+  "user_query": "What fields can I filter SmartSales orders by?",
+  "plan": {
+    "query": "What fields can I filter SmartSales orders by?",
+    "reasoning": "The query is related to the SmartSales agent, which provides information on catalog items and locations. As the user is asking specifically about fields for filtering orders, the SmartSales agent is the only one needed to answer this query directly.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve a list of fields that can be used to filter SmartSales orders.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of fields returned by the SmartSales agent as the answer to the user's query."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve a list of fields that can be used to filter SmartSales orders.",
+      "started_at": "2026-04-24T09:58:29.037275+00:00",
+      "ended_at": "2026-04-24T09:59:20.570308+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_order_queryable_fields"
+      ]
+    }
+  ]
+}

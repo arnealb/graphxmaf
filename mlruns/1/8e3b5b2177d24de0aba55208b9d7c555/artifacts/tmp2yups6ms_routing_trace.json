@@ -1,0 +1,27 @@
+{
+  "user_query": "Find Salesforce leads from the Technology or Software industry.",
+  "plan": {
+    "query": "Find Salesforce leads from the Technology or Software industry.",
+    "reasoning": "The task requires querying Salesforce for leads that match specified criteria. Therefore, a single step using the Salesforce agent is sufficient to retrieve the relevant leads.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve all leads that belong to the Technology or Software industry.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the retrieved leads in a clear format."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve all leads that belong to the Technology or Software industry.",
+      "started_at": "2026-04-21T09:50:39.662420+00:00",
+      "ended_at": "2026-04-21T09:50:49.522789+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

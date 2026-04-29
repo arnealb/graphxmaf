@@ -1,0 +1,41 @@
+{
+  "user_query": "List all SmartSales order approbation statuses.",
+  "plan": {
+    "query": "List all SmartSales order approbation statuses.",
+    "reasoning": "Since the query specifically asks for information regarding order approbation statuses, it can be addressed directly by a single step utilizing the smartsales agent, which specializes in relevant order-related data.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve all order approbation statuses available in the SmartSales system.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Provide the retrieved order approbation statuses as the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve all order approbation statuses available in the SmartSales system.",
+      "started_at": "2026-04-27T13:18:04.417256+00:00",
+      "ended_at": "2026-04-27T13:18:51.337981+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "list_approbation_statuses",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status"
+      ]
+    }
+  ]
+}

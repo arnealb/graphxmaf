@@ -1,0 +1,21 @@
+{
+  "query": "Search my OneDrive for files about 'locations' and find those locations in SmartSales.",
+  "reasoning": "The plan involves two steps: first, to search for relevant files in OneDrive, and then to use the results of that search to find matching locations in SmartSales.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search OneDrive for files containing the keyword 'locations'.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Using the file names and content from step 1 (if any), find matching locations in SmartSales. If step 1 returned no results, state that and skip the location search.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from step 2 and include any relevant locations, or state if there were no files found in OneDrive."
+}

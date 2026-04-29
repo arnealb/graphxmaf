@@ -1,0 +1,11 @@
+{
+  "plan": {
+    "latency_s": 2.22,
+    "steps": 1,
+    "input_tokens": 518,
+    "output_tokens": 115,
+    "total_tokens": 633
+  },
+  "steps": [],
+  "synthesis": {}
+}

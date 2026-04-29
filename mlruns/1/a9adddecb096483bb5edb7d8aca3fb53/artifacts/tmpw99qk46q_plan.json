@@ -1,0 +1,13 @@
+{
+  "query": "Find emails with 'invoice' in the subject.",
+  "reasoning": "The graph agent is capable of accessing emails and can directly search for emails that match the specified criteria.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for emails with 'invoice' in the subject line.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of emails obtained from the graph agent."
+}

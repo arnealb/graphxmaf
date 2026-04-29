@@ -1,0 +1,21 @@
+{
+  "query": "Read the most recently modified OneDrive file and check if any company names in it are Salesforce accounts.",
+  "reasoning": "The first step is to retrieve the most recently modified OneDrive file. The second step will utilize that file's content to check for company names against Salesforce accounts. Both steps are necessary and are dependent on each other, with the Salesforce check needing the company names derived from the OneDrive file.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the most recently modified OneDrive file along with its content.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Check if any company names from the content of the OneDrive file retrieved in step 1 match Salesforce accounts.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from step 2 to provide a final answer regarding which company names are Salesforce accounts."
+}

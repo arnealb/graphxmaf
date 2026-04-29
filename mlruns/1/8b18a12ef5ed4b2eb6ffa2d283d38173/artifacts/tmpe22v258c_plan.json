@@ -1,0 +1,13 @@
+{
+  "query": "What are my upcoming calendar events this week?",
+  "reasoning": "The query requires accessing the user's calendar to retrieve information about upcoming events. The 'graph' agent is designated for managing calendar data.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the user's calendar events for the current week.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved calendar events as a list of upcoming events for the week."
+}

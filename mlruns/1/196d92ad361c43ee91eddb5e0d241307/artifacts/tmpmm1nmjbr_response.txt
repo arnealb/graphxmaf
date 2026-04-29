@@ -1,0 +1,40 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Here's the comprehensive profile for each person you have meetings with this week:
+
+### Arne Albrecht
+- **Email**: albrecht.arne@gmail.com
+- **Account**: Displaytech
+- **Location**: 
+  - Address: Lippenslaan 347
+  - City: Knokke
+  - Zip Code: 8300
+  - Country: Belgium
+- **Catalog Items**:
+  - IT Hardware
+  - IT Software
+  - Spreads
+  - **USB-C Docking Station**: Universal docking station with dual display support, Price: $249.00
+  - **Wireless Headset UC**: Noise-cancelling headset for unified communications, Price: $189.50
+  - **Ergonomic Keyboard**: Split ergonomic wireless keyboard, Price: $129.00
+  - **Business Laptop Pro 15**: High-performance laptop for enterprise use, Price: $1,299.99
+  - **Software License Pack**: Annual enterprise software license bundle, Price: $499.00
+  - **Ultra Wide Monitor 34**: 34 inch curved ultrawide display, Price: $549.00
+  - **Nutella 750g**: Hazelnut spread in 750g jar, Price: $5.99
+
+### John Lastname
+- **Email**: john.lastname@globalmedia.com
+- **Account**: Global Media
+- **Phone**: 0272700252
+- **Catalog Items**:
+  - IT Hardware
+  - IT Software
+  - Spreads
+  - **USB-C Docking Station**: Universal docking station with dual display support, Price: $249.00
+  - **Wireless Headset UC**: Noise-cancelling headset for unified communications, Price: $189.50
+  - **Ergonomic Keyboard**: Split ergonomic wireless keyboard, Price: $129.00
+  - **Business Laptop Pro 15**: High-performance laptop for enterprise use, Price: $1,299.99
+  - **Software License Pack**:

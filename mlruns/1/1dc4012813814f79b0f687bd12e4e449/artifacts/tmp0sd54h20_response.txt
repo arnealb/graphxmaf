@@ -1,0 +1,9 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph, salesforce)...
+Synthesizing...
+Here are the companies you are meeting with this week that have no active deal with you:
+
+- **No companies identified**: The meeting details did not provide any associated company names, so I could not cross-reference them with the active deals list from Salesforce.
+
+If you have more specific details about the companies scheduled for these meetings, I could assist you further.

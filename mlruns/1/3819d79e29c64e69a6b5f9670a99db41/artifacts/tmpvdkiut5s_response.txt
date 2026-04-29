@@ -1,0 +1,38 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+Here is the information regarding the contact person behind your most expensive open order:
+
+### Order Details
+- **Order ID**: 006KI000005b78GYAQ
+- **Order Name**: new opp
+- **Stage**: Value Proposition
+- **Amount**: $1,000,000
+- **Close Date**: 30 April 2026
+- **Account Name**: Global Media
+
+### Contact Person(s)
+From the account associated with the order, the following contacts are listed:
+
+1. **John Lastname**
+   - **Email**: john.lastname@globalmedia.com
+   - **Account Name**: Global Media
+
+2. **Geoff Minor**
+   - **Email**: info@salesforce.com
+   - **Account Name**: Global Media
+
+3. **Carole White**
+   - **Email**: info@salesforce.com
+   - **Account Name**: Global Media
+
+4. **Jon Amos**
+   - **Email**: info@salesforce.com
+   - **Account Name**: Global Media
+
+### Notes
+- John Lastname appears to be the primary contact as he has a specific email listed. The others use a general email, but all are associated with Global Media. 
+
+If you need help with anything else or more specific information, feel free to ask!

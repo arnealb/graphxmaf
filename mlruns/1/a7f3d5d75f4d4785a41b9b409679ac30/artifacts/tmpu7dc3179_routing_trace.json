@@ -1,0 +1,5 @@
+{
+  "user_query": "Find emails with 'invoice' in the subject.",
+  "plan": null,
+  "invoked_agents": []
+}

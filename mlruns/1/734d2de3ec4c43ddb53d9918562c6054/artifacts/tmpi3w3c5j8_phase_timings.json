@@ -1,0 +1,44 @@
+{
+  "plan": {
+    "latency_s": 2.842,
+    "steps": 2,
+    "input_tokens": 533,
+    "output_tokens": 195,
+    "total_tokens": 728
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "graph",
+      "latency_s": 6.899,
+      "llm_turns": 2,
+      "n_tool_calls": 1,
+      "tool_calls": [
+        "search_files"
+      ],
+      "input_tokens": 4141,
+      "output_tokens": 260,
+      "total_tokens": 4401
+    },
+    {
+      "step_id": 2,
+      "agent": "graph",
+      "latency_s": 10.637,
+      "llm_turns": 2,
+      "n_tool_calls": 2,
+      "tool_calls": [
+        "read_file",
+        "read_file"
+      ],
+      "input_tokens": 10667,
+      "output_tokens": 533,
+      "total_tokens": 11200
+    }
+  ],
+  "synthesis": {
+    "latency_s": 4.3,
+    "input_tokens": 999,
+    "output_tokens": 383,
+    "total_tokens": 1382
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "query": "Find any files related to 'nutella' in OneDrive and read all of them.",
+  "reasoning": "The query requires retrieving files from OneDrive that contain 'nutella' in their content or name. Since the graph agent can access OneDrive files directly, it will execute the necessary task to find and read those files.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for all files in OneDrive that are related to 'nutella' and read their content.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Aggregate the content of the retrieved files related to 'nutella' into a final answer."
+}

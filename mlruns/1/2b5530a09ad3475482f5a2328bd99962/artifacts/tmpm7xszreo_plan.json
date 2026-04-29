@@ -1,0 +1,13 @@
+{
+  "query": "How do I request access to Salesforce as a new employee?",
+  "reasoning": "This query pertains to an internal company procedure regarding access requests. Therefore, it should be routed to the graph agent to find the relevant document stored in OneDrive.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search OneDrive for the document that outlines the procedure for requesting access to Salesforce as a new employee.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the information from the document found in step 1 regarding the process of requesting access to Salesforce."
+}

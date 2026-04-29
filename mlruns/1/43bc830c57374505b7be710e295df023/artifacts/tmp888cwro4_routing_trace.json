@@ -1,0 +1,50 @@
+{
+  "user_query": "What locations do we have and what deals are linked to them?",
+  "plan": {
+    "query": "What locations do we have and what deals are linked to them?",
+    "reasoning": "The query requires information about locations and their associated deals, which can be retrieved from both the smartsales and salesforce agents. Since it involves two different systems, both steps must be executed to gather all relevant data.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve all locations associated with our company.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Fetch all deals linked to the locations obtained in step 1 (if any). If step 1 returned no locations, return no deals as well.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the location data from step 1 with the deal data from step 2 and provide a comprehensive overview."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve all locations associated with our company.",
+      "started_at": "2026-04-28T12:02:54.085469+00:00",
+      "ended_at": "2026-04-28T12:02:56.723186+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "[Result from step 1]:\n{\"locations\":[],\"resultSizeEstimate\":0}\n\n[Task]:\nFetch all deals linked to the locations obtained in step 1 (if any). If step 1 returned no locations, return no deals as well.",
+      "started_at": "2026-04-28T12:02:56.774756+00:00",
+      "ended_at": "2026-04-28T12:02:58.531726+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 1,
+      "tool_calls": []
+    }
+  ]
+}

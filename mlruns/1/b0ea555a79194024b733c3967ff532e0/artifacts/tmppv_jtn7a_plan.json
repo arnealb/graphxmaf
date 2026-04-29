@@ -1,0 +1,13 @@
+{
+  "query": "Find Salesforce contacts with 'Manager' in their title.",
+  "reasoning": "The query specifically requires searching for contacts in Salesforce based on their title, which is a task suited for the Salesforce agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Search for contacts with 'Manager' in their title.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of contacts found in step 1."
+}

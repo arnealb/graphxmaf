@@ -1,0 +1,13 @@
+{
+  "query": "List SmartSales orders with full projection.",
+  "reasoning": "The query specifically requests information related to SmartSales orders, which falls under the smartsales agent's capabilities. A single step is sufficient to accomplish this without the need for additional steps or dependencies.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve a comprehensive list of all SmartSales orders with their full projection data.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the detailed list of SmartSales orders retrieved from step 1."
+}

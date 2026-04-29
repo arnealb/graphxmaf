@@ -1,0 +1,13 @@
+{
+  "query": "List Salesforce opportunities sorted by amount, highest first.",
+  "reasoning": "The query requires retrieving opportunities from Salesforce and sorting them by amount. Only one step is needed since Salesforce can handle both the retrieval and sorting in one go.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all opportunities from Salesforce and sort them by amount in descending order.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the sorted list of opportunities as the final answer."
+}

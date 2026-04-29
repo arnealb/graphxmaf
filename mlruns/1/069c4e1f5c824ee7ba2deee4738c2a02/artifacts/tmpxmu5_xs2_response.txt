@@ -1,0 +1,104 @@
+Planning query...
+Plan: 4 stap(pen)
+️Executing (salesforce)...
+️Executing (salesforce, graph, smartsales)...
+Synthesizing...
+Here is a comprehensive overview of the companies behind your open support cases:
+
+### Companies and Their Information:
+
+1. **Delhaize Group**
+   - **Industry:** Retail
+   - **Website:** [delhaize.be](https://www.delhaize.be)
+   - **Location:** Brussels, Belgium
+   - **Description:** Belgian supermarket group operating under AD Delhaize brand.
+   - **Open Cases:**
+     - **Case Number:** 00001023
+       - **Subject:** EDI connection issue
+       - **Status:** Working
+       - **Priority:** Medium
+       - **Created:** 28 April 2026
+
+2. **Carrefour Belgium SA**
+   - **Industry:** Retail
+   - **Website:** [carrefour.be](https://www.carrefour.be)
+   - **Location:** Evere, Belgium
+   - **Description:** Belgian subsidiary of Carrefour Group operating hypermarkets and supermarkets.
+   - **Open Cases:**
+     - **Case Number:** 00001022
+       - **Subject:** POS integration delay
+       - **Status:** New
+       - **Priority:** High
+       - **Created:** 28 April 2026
+
+3. **Colruyt Group**
+   - **Industry:** Retail
+   - **Website:** [colruytgroup.com](https://www.colruytgroup.com)
+   - **Location:** Halle, Belgium
+   - **Open Cases:**
+     - **Case Number:** 00001021
+       - **Subject:** Integration issue with POS system
+       - **Status:** New
+       - **Priority:** Medium
+       - **Created:** 28 April 2026
+   - **Recent Communication:**
+     - Received email on **28 April 2026** regarding "SmartSales pilot bevestiging".
+
+4. **supplier1**
+   - **Industry:** Not specified
+   - **Location:** Brussels, Belgium
+   - **Open Cases:**
+     - **Case Number:** 00001020
+       - **Subject:** Delayed shipment — supplier1 April batch
+       - **Status:** Working
+       - **Priority:** High
+       - **Created:** 28 April 2026
+   - **Recent Communication:**
+     - Follow-up on Q2 Delivery Contract received on **28 April 2026**.
+
+5. **Easi Be**
+   - **Industry:** Internal
+   - **Location:** Nivelles, Belgium
+   - **Open Cases:**
+     - **Number of open cases:** Multiple with varying statuses and created dates.
+  
+6. **Pairi Daiza**
+   - **Industry:** Retail
+   - **Website:** [morponbrothers.com](http://www.morponbrothers.com)
+   - **Location:** Brugelette, Belgium
+   - **Open Cases:**
+     - **Case Number:** 00001006
+       - **Subject:** Issue with order
+       - **Status:** New
+       - **Priority:** Medium
+       - **Created:** 18 March 2024
+
+7. **Omega SA-NV**
+   - **Industry:** Technology
+   - **Website:** [omegaincorporated.com](http://www.omegaincorporated.com)
+   - **Location:** Bruxelles, Belgium
+   - **Open Cases:**
+     - **Case Number:** 00001003
+       - **Subject:** Delivery issues with order #544
+       - **Status:** New
+       - **Priority:** Medium
+       - **Created:** 31 July 2023
+
+8. **Global Media**
+   - **Industry:** Media
+   - **Location:** Toronto, Ontario, Canada
+   - **Open Cases:**
+     - **Case Number:** 00001000
+       - **Subject:** Our Widgets have not been delivered.
+       - **Status:** Escalated
+       - **Priority:** High
+       - **Created:** 29 June 2023
+
+### Summary of Case Statuses:
+- **Working:** 2 cases
+- **New:** 5 cases
+- **In Progress:** 1 case
+- **Waiting for Customer:** 4 cases
+- **Escalated:** 1 case
+
+This overview consolidates the companies and relevant case details. If you need more specific data on any particular case or company, feel free to ask!

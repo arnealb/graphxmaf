@@ -1,0 +1,30 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+To contact supplier1 effectively, consider the following options based on past communications and available contact details:
+
+### Primary Contact Method:
+- **Email**: 
+  - **Marc Supplier (Account Manager)**
+    - **Email Address**: [marc.supplier@supplier1.be](mailto:marc.supplier@supplier1.be)
+    - Relevant recent emails:
+      - **Follow-up on Q2 2026 Delivery Contract** (Received on 28 April 2026)
+      - **Updated pricing for H2 2026** (Received on 28 April 2026)
+      - **Possible order communication** (Received on 20 April 2026)
+  
+### Upcoming Meeting:
+- **Calendar Event**:
+  - **Subject**: Q2 Delivery Review
+  - **Date**: 10 May 2026
+  - **Time**: 8:00 AM - 9:00 AM
+  - **Organizer**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  
+### Summary of Contact Information:
+- **Contact Person**: Marc Supplier
+- **Title**: Account Manager
+- **Email**: marc.supplier@supplier1.be
+
+There are no phone numbers available for Marc Supplier through the CRM data. 
+
+You can reach out via email as a reliable contact method and consider attending the upcoming meeting for further discussions.

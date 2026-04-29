@@ -1,0 +1,21 @@
+{
+  "query": "List Salesforce opportunities that are closing this month and check if I have any calendar events related to those account names.",
+  "reasoning": "The query requires retrieving opportunities from Salesforce and then checking the calendar for relevant events. Step 1 gathers the opportunities, and Step 2 checks the calendar for any events related to those opportunities.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all active opportunities that are closing this month.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Check for any calendar events related to the account names retrieved from the Salesforce opportunities in the previous step.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from step 1 and step 2 to provide a list of opportunities along with any related calendar events."
+}

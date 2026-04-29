@@ -1,0 +1,25 @@
+{
+  "query": "Show me everything related to Belgium across all our systems.",
+  "reasoning": "The query is about gathering information regarding Belgium from all available agents to provide a comprehensive overview.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for emails, calendar events, and other documents related to Belgium.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Fetch all accounts, contacts, leads, and opportunities related to Belgium.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Gather information on locations and catalog items associated with Belgium.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all three agents to present a complete overview of everything related to Belgium."
+}

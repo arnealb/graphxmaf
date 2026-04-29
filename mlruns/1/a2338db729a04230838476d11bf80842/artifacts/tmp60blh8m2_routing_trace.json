@@ -1,0 +1,32 @@
+{
+  "user_query": "Which of our accounts have both an active deal and a recent order?",
+  "plan": {
+    "query": "Which of our accounts have both an active deal and a recent order?",
+    "reasoning": "The query requires information about accounts that have both an active deal (which can be retrieved from Salesforce) and a recent order (which can be derived from Salesforce as well). Therefore, a single step can be used to query the necessary data.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Find all accounts that have at least one active deal and at least one recent order in the last 30 days. Return the account names along with the details of the active deals and recent orders.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Compile the results from step 1 to generate a list of accounts with their active deals and recent orders."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Find all accounts that have at least one active deal and at least one recent order in the last 30 days. Return the account names along with the details of the active deals and recent orders.",
+      "started_at": "2026-04-29T11:54:54.472618+00:00",
+      "ended_at": "2026-04-29T11:55:09.626667+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_opportunities",
+        "get_cases"
+      ]
+    }
+  ]
+}

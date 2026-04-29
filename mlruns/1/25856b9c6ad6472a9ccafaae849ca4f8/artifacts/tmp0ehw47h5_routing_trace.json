@@ -1,0 +1,53 @@
+{
+  "user_query": "Find any files we have related to our most valuable open deal and summarise them.",
+  "plan": {
+    "query": "Find any files we have related to our most valuable open deal and summarise them.",
+    "reasoning": "The query requires information from both the CRM for identifying the most valuable open deal and the files associated with that deal from Microsoft 365. Therefore, multiple steps are needed to gather this information.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Identify the most valuable open deal, including its details.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "graph",
+        "task": "Find any files related to the deal identified in step 1, if any.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Summarize the files found in step 2 and include details about the deal from step 1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Identify the most valuable open deal, including its details.",
+      "started_at": "2026-04-29T09:29:41.602383+00:00",
+      "ended_at": "2026-04-29T09:29:44.997484+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_opportunities"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 2,
+      "input": "[Result from step 1]:\n{\"id\":\"006KI000005b7EEYAY\",\"name\":\"supp_opportyunity\",\"stage\":\"On-going Approval\",\"amount\":null,\"close_date\":\"2026-05-08\",\"account_name\":\"supplier1\",\"probability\":null,\"type\":null,\"lead_source\":null,\"forecast_category\":null,\"description\":null,\"created_date\":null,\"last_modified_date\":null}\n\n[Task]:\nFind any files related to the deal identified in step 1, if any.",
+      "started_at": "2026-04-29T09:29:45.049140+00:00",
+      "ended_at": "2026-04-29T09:29:59.703743+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "search_files",
+        "search_files"
+      ]
+    }
+  ]
+}

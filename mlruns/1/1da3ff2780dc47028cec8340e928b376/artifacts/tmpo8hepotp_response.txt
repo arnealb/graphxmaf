@@ -1,0 +1,51 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph, salesforce)...
+Synthesizing...
+Based on the provided data, here are the companies you are meeting this week that have no active deal with you:
+
+### Meetings Scheduled:
+1. **Meeting Subject:** Closing Opportunity
+   - **Date:** 30 April 2026 to 1 May 2026
+   - **Organizer:** SmartAdmin
+
+2. **Meeting Subject:** Meeting About Numbers or Something
+   - **Date:** 21 April 2026 from 16:30 to 17:00
+   - **Organizer:** SmartAdmin
+   - **Attendees:** 
+     - Albrecht Arne (albrecht.arne@gmail.com)
+
+3. **Meeting Subject:** Nog E Meeting
+   - **Date:** 21 April 2026 from 12:30 to 13:00
+   - **Organizer:** SmartAdmin
+   - **Attendees:** 
+     - Arne Albrecht (a.albrecht@easi.net)
+
+### Companies with No Active Deals:
+- **Anheuser-Busch InBev** (Food & Beverage) - [Website](https://www.ab-inbev.com)
+- **Delhaize Group** (Retail) - [Website](https://www.delhaize.be)
+- **Carrefour Belgium SA** (Retail) - [Website](https://www.carrefour.be)
+- **Brussels Retail Partners** (Retail)
+- **Ferrero Benelux** (Food & Beverage)
+- **GreenTech Solutions** (Technology) - [Website](https://www.greentechsolutions.be)
+- **Colruyt Group** (Retail) - [Website](https://www.colruytgroup.com)
+- **Supplier1**
+- **Cityaccount** - [Website](www.google.com)
+- **Account in France** (Technology) - [Website](www.google.com)
+- **ABS**
+- **Omega SA-NV** (Technology) - [Website](http://www.omegaincorporated.com)
+- **Summit Resellers** (Technology) - [Website](www.ctwresellers.com)
+- **Umedia**
+- **Silodyne Company** (Healthcare & Life Sciences) - [Website](www.silodyne.com)
+- **Roseburg Products** (Manufacturing) - [Website](www.roseburgproducts.net)
+- **Tyconet** (Financial Services) - [Website](www.tyconet.net)
+- **Towson Inc.** (Retail) - [Website](www.towsoninc.com)
+- **Southern Solutions** (Technology) - [Website](www.southernresearchco.com)
+- **Tech Labs** (Technology) - [Website](www.techlabsinc.com)
+- **Test** (Technology) - [Website](www.acmepartners.com)
+- **Valley Supply Inc.** (Manufacturing) - [Website](www.valleysupplyinc.net)
+- **Universal Containers** (Manufacturing) - [Website](www.universalcontainers.net)
+- **Zenith Distributors** (Technology) - [Website](www.zenithdistributors.com)
+- **Upstyle Inc.** (Retail) - [Website](www.stylesandsound.com)
+
+None of these companies are mentioned as having an active deal with you.

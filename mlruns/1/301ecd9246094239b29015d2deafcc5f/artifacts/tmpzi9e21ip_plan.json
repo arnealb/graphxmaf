@@ -1,0 +1,29 @@
+{
+  "query": "Give me an overview of my upcoming meetings from Microsoft 365, related Salesforce opportunities, and SmartSales locations for the companies involved.",
+  "reasoning": "To provide a comprehensive overview, we need to gather upcoming meetings from Microsoft 365, find related opportunities in Salesforce, and get the locations related to those companies from SmartSales. Each task is dependent on the previous results for context but can be performed in parallel where possible.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the upcoming meetings from Microsoft 365 calendar.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Fetch the opportunities related to the companies mentioned in the upcoming meetings retrieved from the previous step.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Get the locations of the companies involved in the opportunities from Salesforce retrieved in the previous step.",
+      "depends_on": [
+        2
+      ]
+    }
+  ],
+  "synthesis": "Combine the details of the upcoming meetings, associated Salesforce opportunities, and related SmartSales locations to create a comprehensive overview."
+}

@@ -1,0 +1,19 @@
+{
+  "query": "Who am I in Microsoft 365 and list 3 Salesforce accounts?",
+  "reasoning": "I need to retrieve user information from Microsoft 365 and also list accounts from Salesforce. These two tasks can be executed in parallel as they do not depend on each other.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the user's profile information in Microsoft 365.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Fetch a list of 3 accounts from Salesforce.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the user's profile information from Microsoft 365 with the list of 3 Salesforce accounts for the final response."
+}

@@ -1,0 +1,39 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Based on the provided sales data, here are the accounts that have both an active deal and a recent order:
+
+### Active Deals from Salesforce
+- **Ferrero Benelux**
+  - Deal: Nutella In-Store Display Campaign
+  - Stage: Prospecting
+  - Close Date: 1 October 2026
+
+- **Colruyt Group**
+  - Deal: SmartSales Rollout 2026
+  - Stage: Proposal/Price Quote
+  - Close Date: 30 September 2026
+
+- **Global Media**
+  - Deal: new opp
+  - Stage: Value Proposition
+  - Close Date: 30 April 2026
+
+### Recent Orders from SmartSales
+- **Customer1**
+  - Orders dated: 28 April 2026 
+    - Nutella in-store promotion stock
+    - Retail display materials for Q3 rollout
+    
+- **Global Media**
+  - Order dated: 15 April 2026 
+    - Bulk order for media production team 
+
+### Cross-Referenced Results
+- **Global Media**
+  - Has an active deal and a recent order.
+- **Colruyt Group** and **Ferrero Benelux** do not have corresponding recent orders.
+
+### Conclusion
+The account **Global Media** has both an active deal and a recent order as of now.

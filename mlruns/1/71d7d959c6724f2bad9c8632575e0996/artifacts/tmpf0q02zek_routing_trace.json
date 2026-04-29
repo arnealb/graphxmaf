@@ -1,0 +1,44 @@
+{
+  "user_query": "Search my OneDrive for files about 'locations' and find those locations in SmartSales.",
+  "plan": {
+    "query": "Search my OneDrive for files about 'locations' and find those locations in SmartSales.",
+    "reasoning": "The plan includes two parallel steps: first to search OneDrive for relevant files and second to retrieve locations from SmartSales based on those files. This allows for efficiency without unnecessary delays.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Search OneDrive for files related to 'locations'.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "smartsales",
+        "task": "Find locations based on the results from the file search regarding 'locations'.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the results from the OneDrive search and the locations found in SmartSales to provide a comprehensive response."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Search OneDrive for files related to 'locations'.",
+      "started_at": "2026-04-21T09:48:54.175766+00:00",
+      "ended_at": "2026-04-21T09:49:02.673884+00:00",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "smartsales",
+      "order": 2,
+      "input": "[Result from step 1]:\n[\n    {\n        \"id\": \"017GPJUIRHRA6PESOMA5DKBOH7I4BU3SPI\",\n        \"name\": \"SmartSales_Locations.docx\",\n        \"web_link\": \"https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BF23C8827-CC49-4607-A0B8-FF47034DC9E8%7D&file=SmartSales_Locations.docx&action=default&mobileredirect=true&DefaultItemOpen=1\"\n    },\n    {\n        \"id\": \"017GPJUIR6Y6YIX3LK5NHY2XSEAJ4RIXV7\",\n        \"name\": \"agenda.docx\",\n        \"web_link\": \"https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B8BB0C73E-6AED-4FEB-8D5E-440279145EBF%7D&file=agenda.docx&action=default&mobileredirect=true&DefaultItemOpen=1\"\n    },\n    {\n        \"id\": \"017GPJUISEBVFRIJYFLFF37AEPJ27BBIOP\",\n        \"name\": \"Prospects_Filled.xlsx\",\n        \"web_link\": \"https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B144B0D44-0527-4B59-BF80-8F4EBE10A1CF%7D&file=Prospects_Filled.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1\"\n    }\n]\n\n[Task]:\nFind locations based on the results from the file search regarding 'locations'.",
+      "started_at": "2026-04-21T09:49:02.673919+00:00",
+      "ended_at": "2026-04-21T09:49:17.469038+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

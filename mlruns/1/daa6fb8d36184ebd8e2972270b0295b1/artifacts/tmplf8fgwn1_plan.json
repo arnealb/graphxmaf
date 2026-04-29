@@ -1,0 +1,13 @@
+{
+  "query": "What fields are available to display in the SmartSales location list?",
+  "reasoning": "The query specifically requests information about fields related to SmartSales locations, which can be obtained directly from the smartsales agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the list of available fields for displaying SmartSales locations.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of fields retrieved in step 1."
+}

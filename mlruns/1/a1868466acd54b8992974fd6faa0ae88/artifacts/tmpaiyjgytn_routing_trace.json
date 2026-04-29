@@ -1,0 +1,17 @@
+{
+  "user_query": "Who am I in Microsoft 365?",
+  "plan": {
+    "query": "Who am I in Microsoft 365?",
+    "reasoning": "To answer the user's query regarding their identity in Microsoft 365, the 'graph' agent can provide the necessary information related to their account, likely including their name and related details.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Fetch the user's profile information from Microsoft 365, including name, email, and any other relevant details.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the user's profile information obtained from the graph agent."
+  },
+  "invoked_agents": []
+}

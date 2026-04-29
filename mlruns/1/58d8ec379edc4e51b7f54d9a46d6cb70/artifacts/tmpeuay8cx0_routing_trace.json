@@ -1,0 +1,5 @@
+{
+  "user_query": "List SmartSales catalog items with simple projection, sorted by name.",
+  "plan": null,
+  "invoked_agents": []
+}

@@ -1,0 +1,21 @@
+{
+  "query": "Find any files we have related to our most valuable open deal and summarise them.",
+  "reasoning": "The query requires information from both the CRM for identifying the most valuable open deal and the files associated with that deal from Microsoft 365. Therefore, multiple steps are needed to gather this information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Identify the most valuable open deal, including its details.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Find any files related to the deal identified in step 1, if any.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Summarize the files found in step 2 and include details about the deal from step 1."
+}

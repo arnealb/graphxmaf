@@ -1,0 +1,27 @@
+{
+  "user_query": "Search my calendar for any events or meetings in the next 14 days.",
+  "plan": {
+    "query": "Search my calendar for any events or meetings in the next 14 days.",
+    "reasoning": "The user wants to retrieve events or meetings from their calendar, so the graph agent is the most suitable for this task as it manages calendar data.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve all events or meetings from the calendar for the next 14 days.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the retrieved calendar events or meetings to the user."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve all events or meetings from the calendar for the next 14 days.",
+      "started_at": "2026-04-20T15:23:01.457932+00:00",
+      "ended_at": "2026-04-20T15:23:22.692549+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

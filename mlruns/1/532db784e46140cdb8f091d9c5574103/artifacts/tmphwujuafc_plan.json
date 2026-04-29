@@ -1,0 +1,13 @@
+{
+  "query": "Find Salesforce accounts that have 'Group' in their name.",
+  "reasoning": "Only one step is needed to query Salesforce for accounts matching the specified criteria, as all required data can be obtained in a single call.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all accounts that have 'Group' in their name.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of accounts retrieved in step 1."
+}

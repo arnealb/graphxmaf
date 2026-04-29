@@ -1,0 +1,27 @@
+{
+  "user_query": "Show me Salesforce opportunities in the 'Qualification' stage.",
+  "plan": {
+    "query": "Show me Salesforce opportunities in the 'Qualification' stage.",
+    "reasoning": "The query requires retrieving opportunities from Salesforce that are specifically in the 'Qualification' stage. A single step with the Salesforce agent is sufficient to complete this task without dependencies.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve all opportunities that are in the 'Qualification' stage.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of opportunities retrieved from the Salesforce agent."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve all opportunities that are in the 'Qualification' stage.",
+      "started_at": "2026-04-22T13:05:47.293032+00:00",
+      "ended_at": "2026-04-22T13:05:55.337276+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "query": "Show me Salesforce opportunities with an amount greater than 10,000. Include probability.",
+  "reasoning": "The query requires fetching Salesforce opportunities with specific criteria. One step will retrieve all necessary data concurrently, including the opportunity amount and probability.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all opportunities from Salesforce where the amount is greater than 10,000 and include their probability.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of opportunities retrieved in step 1."
+}

@@ -1,0 +1,27 @@
+{
+  "user_query": "What fields can be displayed for SmartSales orders?",
+  "plan": {
+    "query": "What fields can be displayed for SmartSales orders?",
+    "reasoning": "The query pertains specifically to the fields available for SmartSales orders, making it straightforward to query the Smartsales agent directly without the need for dependencies.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve all the fields that can be displayed for SmartSales orders.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of fields retrieved from the Smartsales agent as the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve all the fields that can be displayed for SmartSales orders.",
+      "started_at": "2026-04-21T15:17:03.863017+00:00",
+      "ended_at": "2026-04-21T15:17:25.376629+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "query": "Have I received any emails in the last 7 days? List sender and subject.",
+  "reasoning": "The only available agent that can assist with email-related queries is the graph agent, which has access to Microsoft 365 email functionality. This step will check for emails received in the last 7 days and retrieve the sender and subject details.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve emails received in the last 7 days and list the sender and subject for each email.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Compile the list of sender and subject from the results of step 1 into a final response."
+}

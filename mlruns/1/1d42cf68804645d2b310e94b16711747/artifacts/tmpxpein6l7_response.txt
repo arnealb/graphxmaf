@@ -1,0 +1,85 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+### Upcoming Meetings Overview
+
+You have the following meetings scheduled:
+
+1. **Closing Opportunity**
+   - **Date:** 30 April 2026 - 1 May 2026
+   - **Organizer:** SmartAdmin
+   - **Attendees:** None
+
+2. **Weekly Sync with Dorian Feaux**
+   - **Date:** 6 May 2026, 07:00 - 07:30 UTC
+   - **Organizer:** SmartAdmin
+   - **Attendees:** None
+
+3. **Sprint Review with Arne Albrecht**
+   - **Date:** 8 May 2026, 12:00 - 13:00 UTC
+   - **Organizer:** SmartAdmin
+   - **Attendees:** None
+
+4. **Supplier1 Q2 Delivery Review**
+   - **Date:** 10 May 2026, 08:00 - 09:00 UTC
+   - **Organizer:** SmartAdmin
+   - **Attendees:** None
+
+5. **GreenTech Solutions - Technical Qualification Call**
+   - **Date:** 12 May 2026, 09:00 - 10:00 UTC
+   - **Organizer:** SmartAdmin
+   - **Attendees:** None
+
+6. **Colruyt Group - SmartSales Rollout Kickoff**
+   - **Date:** 15 May 2026, 12:00 - 13:30 UTC
+   - **Organizer:** SmartAdmin
+   - **Attendees:** None
+
+### Company Information
+
+#### 1. GreenTech Solutions
+- **Industry:** Technology
+- **Website:** [GreenTech Solutions](https://www.greentechsolutions.be)
+- **Upcoming Opportunities:**
+  - **Sustainability Dashboard**
+    - **Stage:** Qualification
+    - **Amount:** €45,000
+    - **Close Date:** 15 August 2026
+- **Location:** 
+  - **Ghent Office**
+    - Address: Technologiepark 122, Ghent, 9052, Belgium
+
+#### 2. Colruyt Group
+- **Industry:** Retail
+- **Website:** [Colruyt Group](https://www.colruytgroup.com)
+- **Upcoming Opportunities:**
+  - **SmartSales Rollout 2026**
+    - **Stage:** Proposal/Price Quote
+    - **Amount:** €220,000
+    - **Close Date:** 30 September 2026
+- **Case Report:**
+  - **Subject:** Integration issue with POS system
+  - **Case Number:** 00001021
+  - **Status:** New (Created on 28 April 2026)
+
+#### 3. Supplier1
+- **Website:** Not available.
+- **Upcoming Opportunities:**
+  - **Q2 Delivery Contract**
+    - **Stage:** Negotiation/Review
+    - **Amount:** €85,000
+    - **Close Date:** 30 June 2026
+  - **Ongoing Opportunity**
+    - **Stage:** On-going Approval
+    - **Close Date:** 8 May 2026
+- **Case Report:**
+  - **Subject:** Delayed shipment — April batch
+  - **Case Number:** 00001020
+  - **Status:** Working (Created on 28 April 2026)
+- **Location:**
+  - **Brussels HQ**
+    - Address: Rue de la Loi 42, Brussels, 1000, Belgium
+
+This overview should help you prepare for the upcoming meetings effectively.

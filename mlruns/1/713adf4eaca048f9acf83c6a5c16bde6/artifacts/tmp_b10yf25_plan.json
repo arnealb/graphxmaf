@@ -1,0 +1,13 @@
+{
+  "query": "Find emails with 'invoice' in the subject.",
+  "reasoning": "The query requires only one step to retrieve relevant emails using the graph agent, which is responsible for accessing Microsoft 365 email data.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve all emails that have 'invoice' in the subject line.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of retrieved emails that contain 'invoice' in the subject."
+}

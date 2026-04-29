@@ -1,0 +1,25 @@
+{
+  "query": "What do we know about GreenTech Solutions?",
+  "reasoning": "The user is asking for a comprehensive overview of the entity 'GreenTech Solutions'. To provide a full picture, I will gather information from all available agents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Fetch all emails, calendar events, and documents related to GreenTech Solutions, focusing on communication history and meetings.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Retrieve all CRM accounts, contacts, leads, opportunities, and cases associated with GreenTech Solutions to understand the commercial relationship data.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Get all location and catalog item information associated with GreenTech Solutions to provide details on their physical presence and products.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all three steps to generate a comprehensive profile of GreenTech Solutions, including communication history, commercial relationships, and location/product details."
+}

@@ -1,0 +1,61 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Overview of supplier1
+
+#### Communication History
+- **Emails**:
+  - **Subject**: Follow-up: supplier1 Q2 2026 Delivery Contract
+    - **Sender**: Marc Supplier
+    - **Email**: marc.supplier@supplier1.be
+    - **Received**: 28 April 2026
+    - **Link**: [Email Link](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7nAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+  
+  - **Subject**: supplier1 — Updated pricing for H2 2026
+    - **Sender**: Marc Supplier
+    - **Email**: marc.supplier@supplier1.be
+    - **Received**: 28 April 2026
+    - **Link**: [Email Link](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7oAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Calendar Events**:
+  - **Event**: supplier1 — Q2 Delivery Review
+    - **Date**: 10 May 2026
+    - **Organizer**: SmartAdmin
+    - **Link**: [Event Link](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLdAAA%3D&exvsurl=1&path=/calendar/item)
+
+#### Commercial Relationship Data
+- **Contacts**:
+  - **Marc Supplier**
+    - **Email**: marc.supplier@supplier1.be
+    - **Account Name**: supplier1
+
+- **Opportunities**:
+  - **Name**: supplier1 — Q2 Delivery Contract
+    - **Stage**: Negotiation/Review
+    - **Amount**: $85,000
+    - **Close Date**: 30 June 2026
+  
+  - **Name**: supp_opportyunity
+    - **Stage**: On-going Approval
+    - **Close Date**: 8 May 2026
+
+- **Cases**:
+  - **Case Number**: 00001020
+    - **Subject**: Delayed shipment — supplier1 April batch
+    - **Status**: Working
+    - **Priority**: High
+    - **Created Date**: 28 April 2026
+
+#### Location Information
+- **Address**: 
+  - **Street**: Rue du Commerce 1
+  - **City**: Brussels
+  - **ZIP Code**: 1000
+  - **Country**: Belgium
+  
+- **Coordinates**: 
+  - **Latitude**: 50.8394667
+  - **Longitude**: 4.3673141
+
+This overview compiles the available communications, commercial relationship data, and location specifics pertaining to supplier1.

@@ -1,0 +1,13 @@
+{
+  "query": "Search OneDrive for Excel files and read the content of the first two found.",
+  "reasoning": "I need to search OneDrive for Excel files and then read their contents, so a single step is required to handle both the search and the retrieval of content for the first two files.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search OneDrive for Excel files and return the content of the first two files found.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the content retrieved from step 1."
+}

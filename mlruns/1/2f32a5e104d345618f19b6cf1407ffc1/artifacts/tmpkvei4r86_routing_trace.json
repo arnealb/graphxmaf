@@ -1,0 +1,17 @@
+{
+  "user_query": "What fields can be displayed for SmartSales orders?",
+  "plan": {
+    "query": "What fields can be displayed for SmartSales orders?",
+    "reasoning": "The query is specifically about the fields related to SmartSales, and there are no dependencies on other systems to answer it.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve and list all the fields that can be displayed for SmartSales orders.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the fields retrieved from step 1 as a comprehensive answer to the user's query."
+  },
+  "invoked_agents": []
+}

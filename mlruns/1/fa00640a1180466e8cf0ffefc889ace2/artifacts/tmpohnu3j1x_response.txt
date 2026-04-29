@@ -1,0 +1,39 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph, salesforce)...
+Synthesizing...
+Based on the recent email senders and the active deals, the following senders have active deals with your company:
+
+### Active Deals with Recent Email Senders:
+- **Ferrero Benelux Marketing**
+  - **Account Name**: Ferrero Benelux
+  - **Deal Name**: Nutella In-Store Display Campaign
+  - **Stage**: Prospecting
+  - **Expected Close Date**: 1 October 2026
+  - **Amount**: €30,000
+
+- **Colruyt Group Procurement**
+  - **Account Name**: Colruyt Group
+  - **Deal Name**: SmartSales Rollout 2026
+  - **Stage**: Proposal/Price Quote
+  - **Expected Close Date**: 30 September 2026
+  - **Amount**: €220,000
+
+- **GreenTech Solutions**
+  - **Account Name**: GreenTech Solutions
+  - **Deal Name**: Sustainability Dashboard
+  - **Stage**: Qualification
+  - **Expected Close Date**: 15 August 2026
+  - **Amount**: €45,000
+
+- **Marc Supplier**
+  - **Account Name**: supplier1
+  - **Deal Name**: Q2 Delivery Contract
+  - **Stage**: Negotiation/Review
+  - **Expected Close Date**: 30 June 2026
+  - **Amount**: €85,000
+
+### Summary of Email Senders:
+- All four companies listed above — Ferrero Benelux Marketing, Colruyt Group Procurement, GreenTech Solutions, and Marc Supplier — sent emails to you recently.
+
+This information can help you prioritize follow-ups based on active deals with these email senders.

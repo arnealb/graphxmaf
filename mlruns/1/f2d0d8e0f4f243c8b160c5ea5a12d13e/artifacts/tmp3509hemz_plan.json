@@ -1,0 +1,13 @@
+{
+  "query": "What is the SmartSales order configuration?",
+  "reasoning": "The query requires information regarding order configuration, which is within the scope of the smartsales agent. No other agents are needed as they do not pertain to order configurations.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the current SmartSales order configuration details.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Use the retrieved SmartSales order configuration details to provide the final answer."
+}

@@ -1,0 +1,5 @@
+{
+  "user_query": "Find a document called 'agenda' in OneDrive and show its content.",
+  "plan": null,
+  "invoked_agents": []
+}

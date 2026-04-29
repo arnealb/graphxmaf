@@ -1,0 +1,13 @@
+{
+  "query": "What fields are available to display in the SmartSales location list?",
+  "reasoning": "The SmartSales agent is needed to retrieve the list of available fields for locations since this information pertains directly to its functionality.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the list of available fields for displaying locations in SmartSales.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the results obtained from the SmartSales step as the final answer."
+}

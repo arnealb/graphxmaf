@@ -1,0 +1,50 @@
+{
+  "user_query": "Which of my recent email senders also have an active deal with us?",
+  "plan": {
+    "query": "Which of my recent email senders also have an active deal with us?",
+    "reasoning": "The query requires checking recent email senders to identify those who also have active deals in Salesforce, necessitating the use of both graph and Salesforce agents.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve a list of recent email senders from my Outlook account.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Find all active deals in Salesforce and their associated accounts.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Compare the list of recent email senders from step 1 with the active deals from step 2 to identify any common entities."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve a list of recent email senders from my Outlook account.",
+      "started_at": "2026-04-29T09:24:22.228466+00:00",
+      "ended_at": "2026-04-29T09:24:32.835545+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_email"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Find all active deals in Salesforce and their associated accounts.",
+      "started_at": "2026-04-29T09:24:22.228994+00:00",
+      "ended_at": "2026-04-29T09:24:36.482803+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_opportunities"
+      ]
+    }
+  ]
+}

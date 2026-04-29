@@ -1,0 +1,29 @@
+{
+  "query": "Take the sender of my most recent email, look them up in Salesforce as a contact or lead, and check if their company has a SmartSales location.",
+  "reasoning": "The steps are structured to first retrieve the most recent email sender, then check the sender's details in Salesforce, and finally verify the company's location in SmartSales. Each step builds on the previous one where necessary.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the sender of the most recent email.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Look up the retrieved sender in Salesforce to check for a contact or lead.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Check if the company of the retrieved contact or lead has a location in SmartSales.",
+      "depends_on": [
+        2
+      ]
+    }
+  ],
+  "synthesis": "Combine the results of steps 1, 2, and 3 to provide a complete response regarding the sender's Salesforce status and associated SmartSales location."
+}

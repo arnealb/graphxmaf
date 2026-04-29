@@ -1,0 +1,25 @@
+{
+  "query": "What files, meetings, and deals are linked to supplier1?",
+  "reasoning": "The query involves gathering information from multiple sources to provide a comprehensive overview of the entity 'supplier1', including communication history, documents, scheduling, and commercial relationship data.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve all emails, calendar events, and OneDrive files related to 'supplier1'.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Fetch all CRM accounts, contacts, leads, and opportunities associated with 'supplier1'.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Get any physical locations or catalog items linked to 'supplier1'.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all three agents to provide a comprehensive overview of files, meetings, and deals related to 'supplier1'."
+}

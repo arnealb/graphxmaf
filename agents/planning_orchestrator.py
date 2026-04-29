@@ -76,6 +76,29 @@ Handling dependent steps with potentially empty parents:
   agent can handle the empty case. Example: "Using the account names from step 1 (if any),
   check for matching calendar events. If step 1 returned no results, state that and skip
   the calendar lookup."
+
+Document and policy queries:
+- Questions about internal company rules, procedures, HR policies, expense reimbursement,
+  onboarding, contracts, or how-to questions about internal processes should route to the
+  graph agent with a task to search OneDrive for the relevant document.
+- These queries do NOT require salesforce or smartsales unless they also ask for CRM or
+  location data.
+- Examples: "what is the expense policy?", "how do I request leave?", "what are the support
+  terms with client X?", "what should I do if my car breaks down on the way to work?"
+
+Entity-centric and 360° view queries:
+- When the user asks for a "full picture", "overview", "briefing", "360 view", "everything
+  about", or "what do we know about" a specific company, person, or topic — use ALL available
+  agents. Do not wait for the user to name the individual systems.
+- These queries are about a named entity (e.g. a company name, a person's name) and the goal
+  is to aggregate what each system knows about that entity. Each agent should search for that
+  entity by name within its own domain.
+- Similarly, when the user asks about a relationship ("what is our relationship with X",
+  "how do we work with X") or a status ("what is the current situation with X"), treat this
+  as a 360° query and involve all agents.
+- For person-centric queries ("who is X", "tell me about contact X"): use graph to find emails
+  and calendar events involving that person, salesforce to look up CRM contacts/leads, and
+  smartsales for any linked locations.
 """
 
 SYNTHESIS_SYSTEM_PROMPT = """You are a synthesis agent. Given a user query, an execution plan, and
@@ -285,12 +308,30 @@ class PlanningOrchestrator:
     def _available_agents_description(self) -> str:
         agents = []
         if self._graph_agent is not None:
-            agents.append("graph (Microsoft 365: emails, calendar, OneDrive, personal Outlook contacts / address book)")
+            agents.append(
+                "graph (Microsoft 365: emails, calendar events, OneDrive files, "
+                "personal Outlook contacts / address book — use for communication history, "
+                "documents, and scheduling related to a person or company. "
+                "Also use for internal company documents stored in OneDrive such as HR policies, "
+                "expense rules, onboarding guides, contracts, and procedure documents — "
+                "i.e. any question about internal rules, processes, or company documentation)"
+            )
         if self._sf_agent is not None:
-            agents.append("salesforce (CRM: accounts, CRM contacts, leads, opportunities, cases)")
+            agents.append(
+                "salesforce (CRM: accounts, CRM contacts, leads, opportunities, cases — "
+                "use for commercial relationship data, deal pipeline, and support history "
+                "related to a company or contact)"
+            )
         if self._ss_agent is not None:
-            agents.append("smartsales (locations, catalog items)")
-        return ", ".join(agents)
+            agents.append(
+                "smartsales (locations, catalog items — use for physical presence, "
+                "store or site information, and product catalog related to a company)"
+            )
+        hint = (
+            " | For open-ended entity queries ('tell me about X', 'full picture of X', "
+            "'what do we know about X') — use ALL agents."
+        )
+        return ", ".join(agents) + hint
 
     # ── Internal: DAG execution ────────────────────────────────────────────────
 

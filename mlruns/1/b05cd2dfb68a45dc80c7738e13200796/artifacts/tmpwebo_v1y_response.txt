@@ -1,0 +1,13 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce, salesforce)...
+Synthesizing...
+The following accounts have both an active deal and a recent order based on the results from Salesforce:
+
+- **Anheuser-Busch InBev**
+- **Delhaize Group**
+- **Carrefour Belgium SA**
+- **Ferrero Benelux**
+- **Colruyt Group**
+
+These accounts were identified as present in the results from both step 1 and step 2.

@@ -1,0 +1,13 @@
+{
+  "query": "List 5 open opportunities in Salesforce.",
+  "reasoning": "The relevant agent to handle requests regarding open opportunities in Salesforce is the salesforce agent. This step will directly retrieve the needed information without requiring any previous steps.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve a list of 5 open opportunities from the Salesforce CRM.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the retrieved list of 5 open opportunities as the final answer."
+}

@@ -1,0 +1,72 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+### Summary of Files Related to the Most Valuable Open Deal
+
+- **Prospects_Filled.xlsx**
+  - **File Type:** Excel
+  - **Size:** 17,502 bytes
+  - **Created:** 20 April 2025
+  - **Modified:** 20 April 2025
+  - **Link:** [Access File](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B144B0D44-0527-4B59-BF80-8F4EBE10A1CF%7D&file=Prospects_Filled.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1)
+  - **Relevance:** Likely contains information on prospects, valuable for understanding potential clients and optimizing the deal.
+
+- **Contract_Customer_ABY.pdf**
+  - **File Type:** PDF
+  - **Size:** 307,012 bytes
+  - **Created:** 3 June 2025
+  - **Modified:** 3 June 2025
+  - **Link:** [Access File](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/Contract_Customer_ABY.pdf)
+  - **Relevance:** Contains a customer contract, important for legal and financial context of the deal.
+
+- **Contract_Customer_DB 1.pdf**
+  - **File Type:** PDF
+  - **Size:** 307,012 bytes
+  - **Created:** 3 June 2025
+  - **Modified:** 3 June 2025
+  - **Link:** [Access File](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/Contract_Customer_DB%201.pdf)
+  - **Relevance:** Contains another customer contract, useful for comparative analysis and understanding terms.
+
+- **Contract_Customer.pdf**
+  - **File Type:** PDF
+  - **Size:** 307,012 bytes
+  - **Created:** 3 June 2025
+  - **Modified:** 3 June 2025
+  - **Link:** [Access File](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/Contract_Customer.pdf)
+  - **Relevance:** Core contract document, vital for referencing agreement terms.
+
+- **Contract_Customer 1.pdf**
+  - **File Type:** PDF
+  - **Size:** 307,012 bytes
+  - **Created:** 3 June 2025
+  - **Modified:** 3 June 2025
+  - **Link:** [Access File](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/Contract_Customer%201.pdf)
+  - **Relevance:** Another customer contract version, useful for clause and provision review.
+
+- **Contract_Customer_DB.pdf**
+  - **File Type:** PDF
+  - **Size:** 307,012 bytes
+  - **Created:** 3 June 2025
+  - **Modified:** 3 June 2025
+  - **Link:** [Access File](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/Contract_Customer_DB.pdf)
+  - **Relevance:** Important for understanding the customer's obligations and rights in the deal.
+
+- **3. DHL T&C 5.pdf**
+  - **File Type:** PDF
+  - **Size:** 155,035 bytes
+  - **Created:** 30 May 2025
+  - **Modified:** 30 May 2025
+  - **Link:** [Access File](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/3.%20DHL%20T%26C%205.pdf)
+  - **Relevance:** Contains terms and conditions related to DHL, relevant for logistics or delivery aspects of the deal.
+
+- **3. DHL T&C.pdf**
+  - **File Type:** PDF
+  - **Size:** 155,035 bytes
+  - **Created:** 3 April 2025
+  - **Modified:** 3 April 2025
+  - **Link:** [Access File](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/Documents/Microsoft%20Teams%20Chat%20Files/3.%20DHL%20T%26C.pdf)
+  - **Relevance:** Provides foundational terms and conditions for shipping, essential for contract negotiations.
+
+These files collectively support the management, legal obligations, and execution of the most valuable open deal.

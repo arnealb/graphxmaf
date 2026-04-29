@@ -1,0 +1,27 @@
+{
+  "user_query": "Have I received any emails in the last 7 days? List sender and subject.",
+  "plan": {
+    "query": "Have I received any emails in the last 7 days? List sender and subject.",
+    "reasoning": "The graph agent is suitable for retrieving email information, including details about senders and subjects.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve any received emails from the last 7 days, including sender and subject.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Compile the list of emails with their senders and subjects from the results provided by the graph agent."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve any received emails from the last 7 days, including sender and subject.",
+      "started_at": "2026-04-20T13:58:52.749585+00:00",
+      "ended_at": "2026-04-20T13:58:57.970583+00:00",
+      "success": false,
+      "error": ""
+    }
+  ]
+}

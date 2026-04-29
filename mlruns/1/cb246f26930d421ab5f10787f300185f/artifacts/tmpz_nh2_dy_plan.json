@@ -1,0 +1,13 @@
+{
+  "query": "Show me emails I received in the last 14 days.",
+  "reasoning": "The user is requesting a specific set of emails, which can be retrieved directly using the graph agent without any dependencies.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Fetch all emails received in the last 14 days.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of emails retrieved from step 1."
+}

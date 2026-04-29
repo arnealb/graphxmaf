@@ -1,0 +1,27 @@
+{
+  "user_query": "Find Salesforce accounts that have 'Group' in their name.",
+  "plan": {
+    "query": "Find Salesforce accounts that have 'Group' in their name.",
+    "reasoning": "The query specifically requires information about Salesforce accounts. Therefore, I will use the salesforce agent to search for accounts with 'Group' in their name.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Search for all accounts that contain 'Group' in their name.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Return the results from the salesforce step as the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Search for all accounts that contain 'Group' in their name.",
+      "started_at": "2026-04-20T15:33:35.370195+00:00",
+      "ended_at": "2026-04-20T15:33:38.664138+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

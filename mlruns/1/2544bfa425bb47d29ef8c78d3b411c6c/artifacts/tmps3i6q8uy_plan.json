@@ -1,0 +1,13 @@
+{
+  "query": "Show me Salesforce accounts with their phone numbers.",
+  "reasoning": "The user is asking for information about Salesforce accounts, specifically their phone numbers. Thus, a single query to the Salesforce agent to retrieve accounts and their phone numbers is sufficient.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch all Salesforce accounts along with their phone numbers.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the results from step 1 as a list of accounts and their corresponding phone numbers."
+}

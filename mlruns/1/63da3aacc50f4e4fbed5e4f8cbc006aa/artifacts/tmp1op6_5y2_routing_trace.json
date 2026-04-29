@@ -1,0 +1,27 @@
+{
+  "user_query": "Look up the email address of Arne in the organization.",
+  "plan": {
+    "query": "Look up the email address of Arne in the organization.",
+    "reasoning": "The task requires fetching contact information from the available agents. The 'graph' agent is suitable for accessing email information.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Look up the email address of the contact named Arne in the organization.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Return the email address retrieved from the step."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Look up the email address of the contact named Arne in the organization.",
+      "started_at": "2026-04-21T15:12:31.386237+00:00",
+      "ended_at": "2026-04-21T15:12:34.803851+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

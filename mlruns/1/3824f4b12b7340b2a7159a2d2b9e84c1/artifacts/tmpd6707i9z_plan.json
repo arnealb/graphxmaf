@@ -1,0 +1,13 @@
+{
+  "query": "Show me 5 leads in Salesforce.",
+  "reasoning": "The query requires fetching leads from the Salesforce CRM, which can be done in a single step without additional dependencies.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch 5 leads from the Salesforce CRM.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of leads obtained from step 1."
+}

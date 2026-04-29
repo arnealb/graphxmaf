@@ -1,0 +1,33 @@
+{
+  "plan": {
+    "latency_s": 2.778,
+    "steps": 2,
+    "input_tokens": 340,
+    "output_tokens": 190,
+    "total_tokens": 530
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "graph",
+      "latency_s": 8.064,
+      "input_tokens": 5822,
+      "output_tokens": 194,
+      "total_tokens": 6016
+    },
+    {
+      "step_id": 2,
+      "agent": "salesforce",
+      "latency_s": 9.904,
+      "input_tokens": 12165,
+      "output_tokens": 757,
+      "total_tokens": 12922
+    }
+  ],
+  "synthesis": {
+    "latency_s": 4.435,
+    "input_tokens": 978,
+    "output_tokens": 377,
+    "total_tokens": 1355
+  }
+}

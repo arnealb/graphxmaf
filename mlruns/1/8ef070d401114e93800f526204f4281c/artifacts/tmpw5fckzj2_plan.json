@@ -1,0 +1,13 @@
+{
+  "query": "List recent SmartSales orders.",
+  "reasoning": "The task requires interacting with the smartsales agent to fetch recent orders. Only one step is needed since all order data can be retrieved in a single query.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the list of recent orders from the SmartSales system.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of recent orders obtained from the smartsales agent."
+}

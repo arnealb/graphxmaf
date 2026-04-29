@@ -1,0 +1,32 @@
+{
+  "user_query": "Find Salesforce leads from the Technology or Software industry.",
+  "plan": {
+    "query": "Find Salesforce leads from the Technology or Software industry.",
+    "reasoning": "The task can be accomplished with a single call to the Salesforce agent to retrieve leads that match the specified industries.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Find and return all leads associated with the Technology or Software industry.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Compile the list of leads returned from the Salesforce query and present them as the final result."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Find and return all leads associated with the Technology or Software industry.",
+      "started_at": "2026-04-27T14:03:59.847337+00:00",
+      "ended_at": "2026-04-27T14:04:09.374806+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "find_leads",
+        "find_leads"
+      ]
+    }
+  ]
+}

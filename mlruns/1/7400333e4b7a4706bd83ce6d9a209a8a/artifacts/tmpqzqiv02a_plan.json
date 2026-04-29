@@ -1,0 +1,21 @@
+{
+  "query": "Which companies that emailed me recently do not seem to have a location registered with us?",
+  "reasoning": "The query involves finding recent email correspondences and checking the associated companies' location data. This requires using all available agents to get both email data and company location information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve a list of companies that have sent emails to me in the recent past, including their associated email addresses.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Fetch the location data for the companies identified in step 1 to check if they are registered with us.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Cross-reference the list of companies from step 1 with the location data from step 2 to identify which companies do not have a location registered."
+}

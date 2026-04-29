@@ -1,0 +1,80 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is a summary of follow-up actions for today, compiled from emails, Salesforce cases, and relevant locations/items:
+
+### Emails to Follow Up
+- **Proximus — partnership inquiry**
+  - From: Proximus Business
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7zAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Distribution mapping — scope confirmation**
+  - From: AB InBev Sales
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7yAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Supply chain project — follow-up meeting**
+  - From: Delhaize Procurement
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7xAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **EDI connector — technische vraag**
+  - From: AD Delhaize IT
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7wAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Offerte aanvraag — POS koppeling modules**
+  - From: CRF Belgium Procurement
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7vAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Q2 pilot update — analytics rollout**
+  - From: Carrefour BE Operations
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7uAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Follow-up: supplier1 Q2 2026 Delivery Contract**
+  - From: Marc Supplier
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN2u7tAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### Salesforce Cases to Follow Up
+- **Delhaize Group — EDI connection issue**
+  - Status: Working
+  - Priority: Medium
+  - Created: 28 April 2026
+
+- **Carrefour Belgium SA — POS integration delay**
+  - Status: New
+  - Priority: High
+  - Created: 28 April 2026
+
+- **Colruyt — Integration issue with POS system**
+  - Status: New
+  - Priority: Medium
+  - Created: 28 April 2026
+
+- **Delayed shipment — supplier1 April batch**
+  - Status: Working
+  - Priority: High
+  - Created: 28 April 2026
+
+### Relevant Locations to Consider for Follow Up
+1. **AACO DAVIDSON**
+   - Address: Havenkant 6, Leuven, 3000, Belgium
+
+2. **Stream Software**
+   - Address: Potvlietlaan 4, Antwerpen, 2600, Belgium
+
+3. **Michelles Brasserie**
+   - Address: Ingelmunstersestraat 46, Izegem, 8870, Belgium
+
+4. **Medimarket Zaventem**
+   - Address: Zaventem, Belgium (specific address not provided)
+
+5. **AB InBev - Leuven**
+   - Address: Vaartstraat 94, Leuven, 3000, Belgium
+
+### Catalog Items Available
+- **USB-C Docking Station** - €249.00 (IN STOCK)
+- **Wireless Headset UC** - €189.50 (IN STOCK)
+- **Ergonomic Keyboard** - €129.00 (IN STOCK)
+- **Business Laptop Pro 15** - €1,299.99 (IN STOCK)
+- **Software License Pack** - €499.00 (IN STOCK)
+
+This list should help you prioritize your follow-ups for today across emails, cases, and locations.

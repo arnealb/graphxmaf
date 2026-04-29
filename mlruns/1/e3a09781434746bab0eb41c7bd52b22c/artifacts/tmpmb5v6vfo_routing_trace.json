@@ -1,0 +1,31 @@
+{
+  "user_query": "Show me Salesforce cases with their related account names.",
+  "plan": {
+    "query": "Show me Salesforce cases with their related account names.",
+    "reasoning": "The task requires fetching cases and their related accounts from Salesforce in one step, as the data can be retrieved simultaneously.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch Salesforce cases along with their related account names.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from step 1 to display the cases alongside their related account names."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Fetch Salesforce cases along with their related account names.",
+      "started_at": "2026-04-27T12:49:49.091823+00:00",
+      "ended_at": "2026-04-27T12:50:11.018515+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_cases"
+      ]
+    }
+  ]
+}

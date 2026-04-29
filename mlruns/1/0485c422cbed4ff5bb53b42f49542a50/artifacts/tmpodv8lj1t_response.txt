@@ -1,0 +1,64 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Overview of Arne Albrecht
+
+#### Contact Information
+- **Arne Albrecht**
+  - Email: [a.albrecht@easi.net](mailto:a.albrecht@easi.net)
+  - Email: [albrecht.arne@gmail.com](mailto:albrecht.arne@gmail.com)
+
+#### Email Correspondence (Recent Emails)
+- **13 April 2026**
+  - **Subject:** Aankoop office supplies  
+    [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOJ%2FAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+  - **Subject:** Vraag over vertraagde levering  
+    [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKAAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+  - **Subject:** Voorstel voor kort overleg  
+    [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKBAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+  - **Additional Emails on 13 April 2026:**  
+    - Question about Invoice [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKCAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **20 April 2026**
+  - **Subject:** this is a test  
+    [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmtAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **23 April 2026**
+  - **Subject:** delivery of headphones  
+    [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANpSjHHAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+#### Calendar Events
+- **21 April 2026**
+  - **Event:** nog e meeting  
+    Time: 12:30 - 13:00  
+    [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhVAAA%3D&exvsurl=1&path=/calendar/item)
+
+  - **Event:** meeting about numbers or something  
+    Time: 16:30 - 17:00  
+    [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANRyrptAAA%3D&exvsurl=1&path=/calendar/item)
+
+#### Salesforce Information
+- **Contacts:**
+  - Arne Albrecht, Email: [a.albrecht@easi.net](mailto:a.albrecht@easi.net), Account: EASI
+  - Arne Albrecht, Email: [albrecht.arne@gmail.com](mailto:albrecht.arne@gmail.com), Account: Displaytech
+  
+- **Leads:**
+  - Arne Albrecht, Email: [albrecht.arne@gmail.com](mailto:albrecht.arne@gmail.com), Company: easi_dupe, Status: Contacted
+
+#### SmartSales Information
+- **Location:**
+  - **Name:** Arne Albrecht
+  - **Address:** Lippenslaan 347, Knokke, Belgium
+  - **Last Order Date:** 15 April 2026
+
+- **Catalog Items:**
+  - **USB-C Docking Station:** Price $249.00, Available
+  - **Wireless Headset UC:** Price $189.50, Available
+  - **Business Laptop Pro 15:** Price $1299.99, Available
+  - **Software License Pack:** Price $499.00, Available
+
+This overview provides a detailed snapshot of Arne Albrecht, including contact details, recent emails, scheduled meetings, Salesforce records, and SmartSales data.

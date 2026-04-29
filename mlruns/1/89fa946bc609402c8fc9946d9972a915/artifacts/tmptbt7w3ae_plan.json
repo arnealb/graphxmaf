@@ -1,0 +1,29 @@
+{
+  "query": "Who are the most important companies we work with right now?",
+  "reasoning": "The user is asking for information about key companies associated with their current commercial relationships. This requires a 360° view using all available agents to obtain a comprehensive understanding of the important companies from different perspectives.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve a list of key accounts and their associated opportunity statuses from the CRM to identify the most important companies we are currently working with.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Fetch information on physical locations related to the key accounts obtained from the Salesforce data to understand their geographical presence.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "graph",
+      "task": "Look up communication history, including emails and calendar events, related to the key accounts identified in Salesforce to gather insights on interactions with these companies.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from steps 1, 2, and 3 to create a comprehensive overview of the most important companies, including their account details, locations, and communication history."
+}

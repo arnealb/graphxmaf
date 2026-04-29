@@ -1,0 +1,5 @@
+{
+  "user_query": "Who sent me emails in the past 7 days? For each sender's email domain, check if there is a matching Salesforce contact for these adresses.",
+  "plan": null,
+  "invoked_agents": []
+}

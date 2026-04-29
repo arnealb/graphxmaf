@@ -1,0 +1,13 @@
+{
+  "query": "Find high-priority open cases in Salesforce.",
+  "reasoning": "The step focuses on retrieving specific data related to open cases in Salesforce, which is solely handled by the Salesforce agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch all high-priority open cases from Salesforce with their relevant details.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the details of the high-priority open cases retrieved from Salesforce."
+}

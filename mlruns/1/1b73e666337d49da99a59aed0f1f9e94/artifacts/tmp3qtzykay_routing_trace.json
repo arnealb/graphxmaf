@@ -1,0 +1,27 @@
+{
+  "user_query": "List SmartSales orders with full projection.",
+  "plan": {
+    "query": "List SmartSales orders with full projection.",
+    "reasoning": "The SmartSales agent is responsible for handling orders and can provide a comprehensive view of the available orders. We do not need to involve other agents as they are not relevant to this specific task.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve a list of SmartSales orders with complete projections.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Return the list of SmartSales orders obtained from the agent."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve a list of SmartSales orders with complete projections.",
+      "started_at": "2026-04-20T15:38:33.632731+00:00",
+      "ended_at": "2026-04-20T15:38:38.864693+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

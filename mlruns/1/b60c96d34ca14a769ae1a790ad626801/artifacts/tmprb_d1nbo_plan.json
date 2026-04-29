@@ -1,0 +1,21 @@
+{
+  "query": "List SmartSales orders, then retrieve the full details of the first order.",
+  "reasoning": "I chose to first list the SmartSales orders, which is necessary to identify the first order that needs to be detailed. The retrieval of the first order's full details depends on the output of the first step.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve a list of SmartSales orders.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Retrieve full details of the first order from the list of SmartSales orders.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the list of SmartSales orders with the full details of the first order to provide a comprehensive answer."
+}

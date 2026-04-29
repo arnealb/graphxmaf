@@ -1,0 +1,13 @@
+{
+  "query": "Search for emails that have the word 'meeting' in the subject.",
+  "reasoning": "The query requires searching for specific emails in the Microsoft 365 system, which can be accomplished with a single step using the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for emails that contain the word 'meeting' in the subject.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the results from step 1 as the final output."
+}

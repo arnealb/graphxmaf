@@ -1,0 +1,13 @@
+{
+  "query": "Show me my Microsoft 365 contacts.",
+  "reasoning": "The user wants to retrieve their contacts from Microsoft 365, which is available through the graph agent. No additional steps are necessary since a single call can fetch all required contact information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve all contacts from Microsoft 365.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the contacts retrieved from the graph agent."
+}

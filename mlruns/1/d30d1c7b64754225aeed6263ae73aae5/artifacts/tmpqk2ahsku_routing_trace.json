@@ -1,0 +1,5 @@
+{
+  "user_query": "Take the sender of my most recent email, look them up in Salesforce as a contact or lead, and check if their company has a SmartSales location.",
+  "plan": null,
+  "invoked_agents": []
+}

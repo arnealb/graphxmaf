@@ -1,0 +1,27 @@
+{
+  "user_query": "List the first 5 SmartSales locations.",
+  "plan": {
+    "query": "List the first 5 SmartSales locations.",
+    "reasoning": "Only one agent is required to execute the task of retrieving locations, so only one step is necessary.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve the first 5 locations from the SmartSales database.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Provide the list of locations retrieved from the SmartSales agent."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve the first 5 locations from the SmartSales database.",
+      "started_at": "2026-04-20T13:38:39.111845+00:00",
+      "ended_at": "2026-04-20T13:38:48.674024+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

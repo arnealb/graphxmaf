@@ -1,0 +1,31 @@
+{
+  "user_query": "Find the email address of Dorian.",
+  "plan": {
+    "query": "Find the email address of Dorian.",
+    "reasoning": "The query requires obtaining contact information, specifically Dorian's email address, which can be fetched directly from the graph agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the email address of the contact named Dorian.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the email address retrieved from the graph agent as the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the email address of the contact named Dorian.",
+      "started_at": "2026-04-27T13:08:10.278072+00:00",
+      "ended_at": "2026-04-27T13:08:12.571190+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "findpeople"
+      ]
+    }
+  ]
+}

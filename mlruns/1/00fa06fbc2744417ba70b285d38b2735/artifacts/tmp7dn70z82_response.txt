@@ -1,0 +1,24 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Based on the meetings scheduled for this week and the information regarding active deals, here are the companies you are meeting that have no active deal with your organization:
+
+### Companies Meeting This Week with No Active Deals:
+- **Dorian Feaux** (Meeting Date: 6 May 2026)
+- **Arne Albrecht** (Meeting Date: 8 May 2026)
+
+### Meetings Scheduled:
+1. **Weekly sync — Dorian Feaux**
+   - Date: 6 May 2026
+
+2. **Sprint review — Arne Albrecht**
+   - Date: 8 May 2026
+
+### Companies with Active Deals:
+- **Supplier1** (with two active deals)
+- **GreenTech Solutions** (with an active deal)
+- **Colruyt Group** (with an active deal)
+
+These companies do not have meetings scheduled this week based on your active deals. If you require any additional information, please let me know.

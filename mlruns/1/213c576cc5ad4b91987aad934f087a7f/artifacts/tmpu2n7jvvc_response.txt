@@ -1,0 +1,78 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Here's an overview of your upcoming meetings along with relevant information about the companies involved:
+
+### Upcoming Meetings
+
+1. **Closing Opportunity**
+   - **Date:** 30 April - 1 May 2026
+   - **Organizer:** SmartAdmin
+   - **Company:** SmartAdmin
+
+2. **Weekly Sync — Dorian Feaux**
+   - **Date:** 6 May 2026
+   - **Time:** 07:00 - 07:30
+   - **Organizer:** SmartAdmin
+   - **Company:** SmartAdmin
+
+3. **Sprint Review — Arne Albrecht**
+   - **Date:** 8 May 2026
+   - **Time:** 12:00 - 13:00
+   - **Organizer:** SmartAdmin
+   - **Company:** SmartAdmin
+
+4. **Supplier1 — Q2 Delivery Review**
+   - **Date:** 10 May 2026
+   - **Time:** 08:00 - 09:00
+   - **Organizer:** SmartAdmin
+   - **Company:** SmartAdmin
+
+5. **GreenTech Solutions — Technical Qualification Call**
+   - **Date:** 12 May 2026
+   - **Time:** 09:00 - 10:00
+   - **Organizer:** SmartAdmin
+   - **Company:** GreenTech Solutions
+
+6. **Colruyt Group — SmartSales Rollout Kickoff**
+   - **Date:** 15 May 2026
+   - **Time:** 12:00 - 13:30
+   - **Organizer:** SmartAdmin
+   - **Company:** Colruyt Group
+
+### Company Insights
+
+#### SmartAdmin
+- **Website:** Not available
+- **Industry:** Not specified
+- **Notable Info:** No accounts, contacts, or opportunities listed.
+
+#### GreenTech Solutions
+- **Industry:** Technology
+- **Website:** [greentechsolutions.be](https://www.greentechsolutions.be)
+- **Opportunities:**
+  - **Name:** GreenTech Solutions — Sustainability Dashboard
+  - **Stage:** Qualification
+  - **Amount:** €45,000
+  - **Close Date:** 15 August 2026
+- **Relevant Catalog Item:**
+  - **Title:** Dashboard License
+  - **Description:** Annual software license for the GreenTech sustainability dashboard.
+  - **Price:** €2,500
+
+#### Colruyt Group
+- **Industry:** Retail
+- **Website:** [colruytgroup.com](https://www.colruytgroup.com)
+- **Opportunities:**
+  - **Name:** Colruyt Group — SmartSales Rollout 2026
+  - **Stage:** Proposal/Price Quote
+  - **Amount:** €220,000
+  - **Close Date:** 30 September 2026
+- **Relevant Catalog Item:**
+  - **Title:** Retail Display Kit
+  - **Description:** In-store display kit for Colruyt Group retail locations.
+  - **Price:** €89.50
+
+Feel free to ask for any additional details or specific preparations for your meetings!

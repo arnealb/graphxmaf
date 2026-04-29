@@ -1,0 +1,17 @@
+{
+  "user_query": "Find Salesforce leads from the Technology or Software industry.",
+  "plan": {
+    "query": "Find Salesforce leads from the Technology or Software industry.",
+    "reasoning": "Only a single step is necessary to retrieve leads from the specified industries using the Salesforce agent. This can be done in one go since all required data can be encapsulated in one query.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve all leads that are categorized under the Technology or Software industry.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of leads retrieved from the Salesforce query."
+  },
+  "invoked_agents": []
+}

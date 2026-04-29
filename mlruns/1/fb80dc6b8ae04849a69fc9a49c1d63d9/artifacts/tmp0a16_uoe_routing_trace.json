@@ -1,0 +1,27 @@
+{
+  "user_query": "List 5 open opportunities in Salesforce.",
+  "plan": {
+    "query": "List 5 open opportunities in Salesforce.",
+    "reasoning": "The user is looking for specific data regarding open opportunities, which can be obtained directly using the Salesforce agent in a single step.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve 5 open opportunities from Salesforce, including details such as opportunity name, value, and stage.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of 5 open opportunities retrieved from the Salesforce agent."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve 5 open opportunities from Salesforce, including details such as opportunity name, value, and stage.",
+      "started_at": "2026-04-22T07:12:31.916021+00:00",
+      "ended_at": "2026-04-22T07:12:38.790290+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

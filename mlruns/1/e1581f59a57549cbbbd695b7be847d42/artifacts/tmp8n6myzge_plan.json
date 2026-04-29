@@ -1,0 +1,13 @@
+{
+  "query": "Show me the 3 largest open Salesforce opportunities and the billing country of each related account.",
+  "reasoning": "I need to retrieve open opportunities along with their related account information to get the billing countries in one step, as they are linked data points.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch the 3 largest open opportunities along with their related account's billing country information.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from step 1 to present the 3 largest open opportunities along with respective billing countries."
+}

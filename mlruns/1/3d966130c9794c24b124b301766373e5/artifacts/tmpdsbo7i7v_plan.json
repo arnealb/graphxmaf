@@ -1,0 +1,27 @@
+{
+  "query": "Give me a full picture of our commercial activity in Brussels.",
+  "reasoning": "The query seeks a comprehensive overview of commercial activities, which necessitates insights from all available agents regarding CRM data, communication history, and physical locations related to Brussels.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all accounts, CRM contacts, leads, opportunities, and cases related to commercial activities in Brussels.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Gather communication history and calendar events related to the contacts and accounts associated with our commercial activities in Brussels.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Find physical locations, store or site information, and product catalog related to our commercial presence in Brussels.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from each step to create a comprehensive overview of commercial activity in Brussels, including CRM data, communication records, and location details."
+}
