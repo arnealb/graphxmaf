@@ -1,0 +1,13 @@
+{
+  "query": "Look up the email address of Arne in the organization.",
+  "reasoning": "Since the task requires looking up a specific individual's email address, I will use the graph agent to search for Arne's email in the organization, as it handles emails and contacts.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Find the email address of Arne in the organization.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the result obtained from step 1 as the email address of Arne."
+}

@@ -1,0 +1,21 @@
+{
+  "query": "Find any files we have related to our most valuable open deal and summarise them.",
+  "reasoning": "To address the user's request, it's necessary to first identify the most valuable open deal through the salesforce agent. Once this deal is identified, the graph agent can then be used to find any related files in OneDrive. Since this involves multiple agents to gather necessary information, we'll employ both salesforce and graph in a structured manner.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Identify the most valuable open deal from the pipeline.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Find any files related to the deal identified in step 1.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Summarize the results from the files found in step 2, highlighting key information and insights related to the most valuable open deal."
+}

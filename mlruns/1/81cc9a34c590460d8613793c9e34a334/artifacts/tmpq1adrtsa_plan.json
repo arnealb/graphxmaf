@@ -1,0 +1,13 @@
+{
+  "query": "List open support cases in Salesforce.",
+  "reasoning": "The user is specifically asking for information regarding support cases, which can be retrieved directly from the Salesforce agent without needing additional context or information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch all open support cases from Salesforce.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of open support cases retrieved from Salesforce."
+}

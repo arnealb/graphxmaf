@@ -1,0 +1,13 @@
+{
+  "query": "List 5 Salesforce accounts.",
+  "reasoning": "The user is requesting a list of Salesforce accounts, which can be directly obtained using the salesforce agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve a list of 5 accounts from Salesforce.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of 5 accounts retrieved from Salesforce."
+}

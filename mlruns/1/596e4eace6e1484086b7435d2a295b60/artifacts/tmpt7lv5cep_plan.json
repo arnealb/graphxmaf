@@ -1,0 +1,13 @@
+{
+  "query": "Search OneDrive for Excel files and read the content of the first two found.",
+  "reasoning": "The task involves searching for Excel files in OneDrive and reading their content, which can be accomplished by the graph agent alone without dependencies on other tasks.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search OneDrive for Excel files and read the content of the first two found.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the content of the two Excel files found in OneDrive as the final answer."
+}

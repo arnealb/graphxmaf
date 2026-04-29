@@ -1,0 +1,40 @@
+{
+  "plan": {
+    "latency_s": 2.507,
+    "steps": 1,
+    "input_tokens": 519,
+    "output_tokens": 133,
+    "total_tokens": 652
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "smartsales",
+      "latency_s": 46.921,
+      "llm_turns": 3,
+      "n_tool_calls": 11,
+      "tool_calls": [
+        "list_approbation_statuses",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status",
+        "get_approbation_status"
+      ],
+      "input_tokens": 7385,
+      "output_tokens": 3729,
+      "total_tokens": 11114
+    }
+  ],
+  "synthesis": {
+    "latency_s": 5.646,
+    "input_tokens": 3918,
+    "output_tokens": 215,
+    "total_tokens": 4133
+  }
+}

@@ -1,0 +1,52 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is a comprehensive overview of the files, meetings, and deals linked to **supplier1**.
+
+### Files
+- **supplier1_delivery_report_Q2_2026.docx**
+  - Size: 11,874 bytes
+  - Created on: 28 April 2026
+  - [View File](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BD85C356D-46B4-4F1F-91BF-83529C86BBA0%7D&file=supplier1_delivery_report_Q2_2026.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+- **contract_draft_Q1.docx**
+  - Size: 12,609 bytes
+  - Created on: 29 April 2026
+  - [View File](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B549E60A0-E809-49CA-BC1A-42886C064537%7D&file=contract_draft_Q1.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+- **SmartSales_Locations.docx**
+  - Size: 9,528 bytes
+  - Created on: 20 April 2026
+  - [View File](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BF23C8827-CC49-4607-A0B8-FF47034DC9E8%7D&file=SmartSales_Locations.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+### Meetings
+- **supplier1 — Q2 Delivery Review**
+  - Date: 10 May 2026
+  - Time: 08:00 - 09:00 (UTC)
+  - Organizer: SmartAdmin
+  - [View Meeting](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLdAAA%3D&exvsurl=1&path=/calendar/item)
+
+### Deals
+- **supplier1 — Q2 Delivery Contract**
+  - ID: 006KI000005bHkXYAU
+  - Stage: Negotiation/Review
+  - Amount: €85,000.00
+  - Close Date: 30 June 2026
+
+- **supp_opportunity**
+  - ID: 006KI000005b7EEYAY
+  - Stage: On-going Approval
+  - Close Date: 8 May 2026
+
+### Other Information
+- **Case: Delayed shipment — supplier1 April batch**
+  - Case Number: 00001020
+  - Status: Working
+  - Priority: High
+  - Created on: 28 April 2026
+
+### Supplier Location
+- Address: Rue du Commerce 1, Brussels, 1000, Belgium
+
+This summary encapsulates all relevant information associated with **supplier1** as retrieved from various systems.

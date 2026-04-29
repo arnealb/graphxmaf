@@ -1,0 +1,67 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce, smartsales)...
+️Executing (graph)...
+Synthesizing...
+Here is a comprehensive overview of our commercial activity in Brussels:
+
+### Contacts
+- **Supplier Contact**:
+  - **Name**: supplier1_contact.lastname
+  - **Company**: supplier1
+  - **Email & Phone**: Not available
+  
+  *From Salesforce: Contact information is incomplete.*
+
+### Opportunities
+- **Active Opportunity**:
+  - **Name**: supplier1 — Q2 Delivery Contract
+  - **Stage**: Negotiation/Review
+  - **Amount**: €85,000
+  - **Close Date**: 30 June 2026
+  
+  *From Salesforce: This opportunity is currently under negotiation.*
+
+### Cases
+- **Open Case**:
+  - **Case Number**: 00001020
+  - **Subject**: Delayed shipment — supplier1 April batch
+  - **Status**: Working
+  - **Priority**: High
+  - **Creation Date**: 28 April 2026
+
+  *From Salesforce: This case is currently being addressed with high priority.*
+
+### Locations
+- **Commercial Locations in Brussels**:
+  - **EASI - Brussels**
+    - **Address**: Avenue Louise 65, 1050 Brussels
+  - **Ferrero Benelux - Brussels (Nutella)**
+    - **Address**: Bld de la Woluwe 42, 1200 Brussels
+  - **Global Media**
+    - **Address**: Mediastraat 10, 1000 Brussels
+  - **Test**
+    - **Address**: Teststraat 1, 1000 Brussels
+  - **Supplier1**
+    - **Address**: Rue du Commerce 1, 1000 Brussels
+  - **Supplier1 - Brussels HQ**
+    - **Address**: Rue de la Loi 42, 1000 Brussels
+
+  *From SmartSales: These locations highlight key commercial presences in Brussels.*
+
+### Products
+- **Available Products**:
+  - **Nutella 750g**: €5.99
+  - **Business Laptop Pro 15**: €1,299.99
+  - **Wireless Headset UC**: €189.50
+  - **USB-C Docking Station**: €249.00
+  - **Software License Pack**: €499.00
+  
+  *From SmartSales: The product list includes various IT hardware and Nutella as a consumer product.*
+
+### Communication Records
+- There are no recent communication histories or calendar events related to the contact at this time.
+
+  *From Graph: No communication data was found for the identified contact.* 
+
+This summary encapsulates the current commercial activities, opportunities, cases, and key locations tied to our operations in Brussels.

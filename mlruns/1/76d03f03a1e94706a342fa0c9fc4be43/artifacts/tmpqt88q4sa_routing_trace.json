@@ -1,0 +1,27 @@
+{
+  "user_query": "Show me Salesforce leads with the status 'New'.",
+  "plan": {
+    "query": "Show me Salesforce leads with the status 'New'.",
+    "reasoning": "The query requires retrieving specific lead information from Salesforce based on their status, which can be done directly with a single step.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve all leads from Salesforce that have the status 'New'.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Return the list of leads retrieved in step 1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve all leads from Salesforce that have the status 'New'.",
+      "started_at": "2026-04-21T07:52:50.941869+00:00",
+      "ended_at": "2026-04-21T07:53:06.493038+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

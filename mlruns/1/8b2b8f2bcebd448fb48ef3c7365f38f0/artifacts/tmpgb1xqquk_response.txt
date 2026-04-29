@@ -1,0 +1,50 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Here is the comprehensive overview of the people with whom you have meetings this week:
+
+### Meetings Scheduled
+
+1. **Meeting about numbers or something**
+   - **Date:** 21 April 2026
+   - **Time:** 16:30 - 17:00
+   - **Attendee:** 
+     - **Arne Albrecht**
+       - **Emails:** 
+         - a.albrecht@easi.net
+         - albrecht.arne@gmail.com
+
+2. **nog e meeting**
+   - **Date:** 21 April 2026
+   - **Time:** 12:30 - 13:00
+   - **Attendee:** 
+     - **Arne Albrecht**
+       - **Email:** albrecht.arne@gmail.com
+
+3. **Gym**
+   - **Date:** 22 April 2026
+   - **Time:** 20:30 - 21:00
+   - **No specific attendees listed.**
+
+### Contact Information
+
+- **Arne Albrecht**
+  - **Primary Email:** a.albrecht@easi.net
+  - **Secondary Email:** albrecht.arne@gmail.com
+  - **Account Name (EASI):** 
+      - **Address:** Lippenslaan 347, Knokke, Belgium
+      - **Last Order Date:** 15 April 2026 (From SmartSales)
+
+- **John Lastname**
+  - **Email:** john.lastname@globalmedia.com
+  - **Account Name (Global Media):** 
+      - No additional information available from CRM.
+
+### Summary
+- You will have two meetings with **Arne Albrecht** on 21 April 2026. Ensure to follow up on any relevant agenda or topics.
+- There is no additional physical presence information available for the scheduled gym meeting.
+- **John Lastname's** contact details are also noted but without additional CRM insights. 
+
+Let me know if you need further details or specific insights on any individual.

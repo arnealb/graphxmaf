@@ -1,0 +1,13 @@
+{
+  "query": "Find the email address of Dorian.",
+  "reasoning": "The most appropriate agent to retrieve the email address is the graph agent, as it manages email addresses within Microsoft 365.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the email address of the contact named Dorian.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Use the result from step 1 to provide Dorian's email address."
+}

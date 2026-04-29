@@ -1,0 +1,13 @@
+{
+  "query": "List all SmartSales order approbation statuses.",
+  "reasoning": "Since the query specifically asks for information regarding order approbation statuses, it can be addressed directly by a single step utilizing the smartsales agent, which specializes in relevant order-related data.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve all order approbation statuses available in the SmartSales system.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the retrieved order approbation statuses as the final answer."
+}

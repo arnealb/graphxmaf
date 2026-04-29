@@ -1,0 +1,21 @@
+{
+  "query": "What locations do we have and what deals are linked to them?",
+  "reasoning": "The query requires information about locations and their associated deals, which can be retrieved from both the smartsales and salesforce agents. Since it involves two different systems, both steps must be executed to gather all relevant data.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve all locations associated with our company.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Fetch all deals linked to the locations obtained in step 1 (if any). If step 1 returned no locations, return no deals as well.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the location data from step 1 with the deal data from step 2 and provide a comprehensive overview."
+}

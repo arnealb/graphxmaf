@@ -1,0 +1,858 @@
+{
+  "meta": {
+    "beschrijving": "Volledig overzicht van alle testdata aangemaakt via testdata_setup.ipynb, testdata_fuzzy.ipynb en test_mails.py",
+    "mailbox": "smartadmin@easigroupdemo.onmicrosoft.com",
+    "systemen": ["Salesforce", "SmartSales", "Microsoft 365 (Outlook + Calendar + OneDrive)"],
+    "bronnen": ["testdata_setup.ipynb", "testdata_fuzzy.ipynb", "test_mails.py"]
+  },
+
+  "salesforce": {
+    "accounts": [
+      {
+        "naam": "supplier1",
+        "industry": "Manufacturing",
+        "stad": "Brussels",
+        "land": "Belgium",
+        "telefoon": "+32 2 123 45 67",
+        "beschrijving": "Main test supplier for evaluation scenarios.",
+        "id": "001KI00000N7MjVYAV",
+        "bron": "testdata_setup"
+      },
+      {
+        "naam": "Colruyt Group",
+        "industry": "Retail",
+        "stad": "Halle",
+        "land": "Belgium",
+        "telefoon": "+32 2 360 10 40",
+        "website": "https://www.colruytgroup.com",
+        "id": "001KI00000N7zHSYAZ",
+        "bron": "testdata_setup"
+      },
+      {
+        "naam": "GreenTech Solutions",
+        "industry": "Technology",
+        "stad": "Ghent",
+        "land": "Belgium",
+        "website": "https://www.greentechsolutions.be",
+        "id": "001KI00000N7zqXYAR",
+        "bron": "testdata_setup"
+      },
+      {
+        "naam": "Ferrero Benelux",
+        "industry": "Food & Beverage",
+        "stad": "Brussels",
+        "land": "Belgium",
+        "beschrijving": "Belgian subsidiary of Ferrero — produces Nutella, Kinder, Tic Tac.",
+        "id": "001KI00000N7zhFYAR",
+        "bron": "testdata_setup"
+      },
+      {
+        "naam": "EASI",
+        "industry": "Technology",
+        "stad": "Brussels",
+        "land": "Belgium",
+        "id": "001J6000002LijjIAC",
+        "bron": "testdata_setup"
+      },
+      {
+        "naam": "Brussels Retail Partners",
+        "industry": "Retail",
+        "stad": "Brussels",
+        "land": "Belgium",
+        "straat": "Grand Place 1",
+        "postcode": "1000",
+        "id": "001KI00000N7zSNYAZ",
+        "bron": "testdata_setup"
+      },
+      {
+        "naam": "Carrefour Belgium SA",
+        "industry": "Retail",
+        "stad": "Evere",
+        "land": "Belgium",
+        "website": "https://www.carrefour.be",
+        "beschrijving": "Belgian subsidiary of Carrefour Group. Operates hypermarkets and supermarkets.",
+        "id": "001KI00000N80nMYAR",
+        "fuzzy_note": "Juridische naam — SS gebruikt 'CRF - Anderlecht', emails komen van carrefour-be.eu",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "naam": "Delhaize Group",
+        "industry": "Retail",
+        "stad": "Brussels",
+        "land": "Belgium",
+        "website": "https://www.delhaize.be",
+        "beschrijving": "Belgian supermarket group. Franchise stores operate under AD Delhaize brand.",
+        "id": "001KI00000N7zVuYAJ",
+        "fuzzy_note": "Groepsnaam — SS gebruikt 'AD Delhaize - Forest', emails komen van delhaize.eu",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "naam": "Anheuser-Busch InBev",
+        "industry": "Food & Beverage",
+        "stad": "Leuven",
+        "land": "Belgium",
+        "website": "https://www.ab-inbev.com",
+        "beschrijving": "World largest brewer. Belgian HQ in Leuven. Known as AB InBev.",
+        "id": "001KI00000N80nRYAR",
+        "fuzzy_note": "Juridische naam — SS gebruikt 'AB InBev - Leuven', emails komen van ab-inbev.com",
+        "bron": "testdata_fuzzy"
+      }
+    ],
+
+    "contacts": [
+      {
+        "voornaam": "Marc",
+        "achternaam": "Supplier",
+        "email": "marc.supplier@supplier1.be",
+        "titel": "Account Manager",
+        "account": "supplier1",
+        "id": "003KI000009uzQsYAI",
+        "bron": "testdata_setup"
+      },
+      {
+        "voornaam": "Dorian",
+        "achternaam": "Feaux",
+        "email": "d.feaux@easi.net",
+        "titel": "Sales Engineer",
+        "account": "EASI",
+        "id": "003KI000009uzRRYAY",
+        "bron": "testdata_setup"
+      },
+      {
+        "voornaam": "Arne",
+        "achternaam": "Albrecht",
+        "email": "a.albrecht@easi.net",
+        "titel": "Business Analyst",
+        "account": "EASI",
+        "id": "003KI000009uzRbYAI",
+        "bron": "testdata_setup"
+      }
+    ],
+
+    "opportunities": [
+      {
+        "naam": "supplier1 — Q2 Delivery Contract",
+        "stage": "Negotiation/Review",
+        "bedrag": 85000,
+        "sluitdatum": "2026-06-30",
+        "account": "supplier1",
+        "id": "006KI000005bHekYAE",
+        "bron": "testdata_setup"
+      },
+      {
+        "naam": "Colruyt Group — SmartSales Rollout 2026",
+        "stage": "Proposal/Price Quote",
+        "bedrag": 220000,
+        "sluitdatum": "2026-09-30",
+        "account": "Colruyt Group",
+        "id": "006KI000005bHl1YAE",
+        "bron": "testdata_setup"
+      },
+      {
+        "naam": "GreenTech Solutions — Sustainability Dashboard",
+        "stage": "Qualification",
+        "bedrag": 45000,
+        "sluitdatum": "2026-08-15",
+        "account": "GreenTech Solutions",
+        "id": "006KI000005bHl6YAE",
+        "bron": "testdata_setup"
+      },
+      {
+        "naam": "Ferrero — Nutella In-Store Display Campaign",
+        "stage": "Prospecting",
+        "bedrag": 30000,
+        "sluitdatum": "2026-10-01",
+        "account": "Ferrero Benelux",
+        "id": "006KI000005bHlBYAU",
+        "bron": "testdata_setup"
+      },
+      {
+        "naam": "Carrefour Belgium SA — In-Store Analytics Pilot",
+        "stage": "Proposal/Price Quote",
+        "bedrag": 175000,
+        "sluitdatum": "2026-07-31",
+        "account": "Carrefour Belgium SA",
+        "beschrijving": "Pilot for in-store analytics across 12 Belgian hypermarkets.",
+        "id": "006KI000005bIGDYA2",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "naam": "Delhaize Group — Supply Chain Optimisation",
+        "stage": "Negotiation/Review",
+        "bedrag": 310000,
+        "sluitdatum": "2026-08-31",
+        "account": "Delhaize Group",
+        "id": "006KI000005bIGIYA2",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "naam": "Anheuser-Busch InBev — Distribution Network Mapping",
+        "stage": "Qualification",
+        "bedrag": 520000,
+        "sluitdatum": "2026-09-15",
+        "account": "Anheuser-Busch InBev",
+        "id": "006KI000005bIGNYA2",
+        "bron": "testdata_fuzzy"
+      }
+    ],
+
+    "cases": [
+      {
+        "subject": "Delayed shipment — supplier1 April batch",
+        "status": "Working",
+        "prioriteit": "High",
+        "account": "supplier1",
+        "beschrijving": "The April delivery batch arrived 5 days late. Investigating root cause.",
+        "id": "500KI000001mJjsYAE",
+        "bron": "testdata_setup"
+      },
+      {
+        "subject": "Colruyt — Integration issue with POS system",
+        "status": "New",
+        "prioriteit": "Medium",
+        "account": "Colruyt Group",
+        "id": "500KI000001mJiCYAU",
+        "bron": "testdata_setup"
+      },
+      {
+        "subject": "Carrefour Belgium SA — POS integration delay",
+        "status": "New",
+        "prioriteit": "High",
+        "account": "Carrefour Belgium SA",
+        "id": "500KI000001mK0yYAE",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "subject": "Delhaize Group — EDI connection issue",
+        "status": "Working",
+        "prioriteit": "Medium",
+        "account": "Delhaize Group",
+        "id": "500KI000001mK13YAE",
+        "bron": "testdata_fuzzy"
+      }
+    ]
+  },
+
+  "smartsales": {
+    "locaties": [
+      {
+        "naam": "supplier1",
+        "code": "SUP-001",
+        "stad": "Brussels",
+        "land": "Belgium",
+        "straat": "Rue du Commerce 1",
+        "postcode": "1000",
+        "uid": "cac5b20d-285c-11f1-a2fe-005056010707",
+        "bron": "testdata_setup"
+      },
+      {
+        "naam": "Colruyt - Halle",
+        "code": "COLRUYT-HAL-001",
+        "stad": "Halle",
+        "land": "Belgium",
+        "straat": "Edingensesteenweg 196",
+        "postcode": "1500",
+        "uid": "329a7e6c-42da-11f1-a803-005056010707",
+        "bron": "testdata_setup"
+      },
+      {
+        "naam": "GreenTech Solutions - Ghent",
+        "code": "GTS-GNT-001",
+        "stad": "Ghent",
+        "land": "Belgium",
+        "straat": "Technologiepark 122",
+        "postcode": "9052",
+        "uid": "3d28b72d-42da-11f1-a803-005056010707",
+        "bron": "testdata_setup"
+      },
+      {
+        "naam": "Ferrero Benelux - Brussels (Nutella)",
+        "code": "FERR-BRU-001",
+        "stad": "Brussels",
+        "land": "Belgium",
+        "straat": "Bld de la Woluwe 42",
+        "postcode": "1200",
+        "uid": "741d5f40-42da-11f1-a803-005056010707",
+        "bron": "testdata_setup"
+      },
+      {
+        "naam": "EASI - Brussels",
+        "code": "EASI-BRU-001",
+        "stad": "Brussels",
+        "land": "Belgium",
+        "straat": "Avenue Louise 65",
+        "postcode": "1050",
+        "uid": "51f9e686-42da-11f1-a803-005056010707",
+        "bron": "testdata_setup"
+      },
+      {
+        "naam": "CRF - Anderlecht",
+        "code": "CRF-AND-001",
+        "stad": "Brussels",
+        "land": "Belgium",
+        "straat": "Bergensesteenweg 1424",
+        "postcode": "1070",
+        "uid": "2d79461f-4310-11f1-a803-005056010707",
+        "fuzzy_note": "Staat voor 'Carrefour Belgium SA' in SF — naam komt niet overeen",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "naam": "AD Delhaize - Forest",
+        "code": "ADL-FOR-001",
+        "stad": "Brussels",
+        "land": "Belgium",
+        "straat": "Chaussée de Neerstalle 800",
+        "postcode": "1190",
+        "uid": "2e532129-4310-11f1-a803-005056010707",
+        "fuzzy_note": "Franchise prefix 'AD' — SF gebruikt 'Delhaize Group'",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "naam": "AB InBev - Leuven",
+        "code": "ABI-LEU-001",
+        "stad": "Leuven",
+        "land": "Belgium",
+        "straat": "Vaartstraat 94",
+        "postcode": "3000",
+        "uid": "2f355296-4310-11f1-a803-005056010707",
+        "fuzzy_note": "Afkorting — SF gebruikt 'Anheuser-Busch InBev'",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "naam": "Lidl Belgium - Antwerp",
+        "code": "LDL-ANT-001",
+        "stad": "Antwerp",
+        "land": "Belgium",
+        "straat": "Noordersingel 10",
+        "postcode": "2140",
+        "uid": "301c94e5-4310-11f1-a803-005056010707",
+        "fuzzy_note": "Alleen in SS — geen SF account, geen emails (gap detection case)",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "naam": "Customer1",
+        "code": "CUS-001",
+        "stad": "Bruges",
+        "straat": "Markt 5",
+        "postcode": "8000",
+        "land": "Belgium",
+        "uid": "fa4acd29-285c-11f1-a2fe-005056010707",
+        "rol": "customer — gebruikt als customer-locatie in alle 8 orders",
+        "bron": "pre-existing"
+      }
+    ],
+
+    "catalog_items": [
+      {
+        "code": "PROD-SUP1-001",
+        "titel": "supplier1 — Industrial Components Pack",
+        "beschrijving": "Standard component package delivered by supplier1. Used in manufacturing processes.",
+        "prijs": 149.99,
+        "eenheid": "piece",
+        "groep": "IT Hardware",
+        "uid": "6ed4f5e9-42e3-11f1-a803-005056010707",
+        "bron": "testdata_setup"
+      },
+      {
+        "code": "PROD-COL-001",
+        "titel": "Colruyt House Brand — Retail Display Kit",
+        "beschrijving": "In-store display kit for Colruyt Group retail locations.",
+        "prijs": 89.50,
+        "eenheid": "piece",
+        "groep": "IT Hardware",
+        "uid": "6fd1e538-42e3-11f1-a803-005056010707",
+        "bron": "testdata_setup"
+      },
+      {
+        "code": "PROD-NUT-001",
+        "titel": "Nutella 750g — Display Jar",
+        "beschrijving": "Nutella hazelnut spread 750g. Ferrero Benelux product for in-store promotion.",
+        "prijs": 4.99,
+        "sales_unit": 12,
+        "eenheid": "jar",
+        "groep": "Spreads",
+        "uid": "70b59307-42e3-11f1-a803-005056010707",
+        "bron": "testdata_setup"
+      },
+      {
+        "code": "PROD-GTS-001",
+        "titel": "GreenTech Solutions — Dashboard License",
+        "beschrijving": "Annual software license for the GreenTech sustainability dashboard.",
+        "prijs": 2500.00,
+        "eenheid": "license",
+        "groep": "IT Software",
+        "uid": "718ccfb1-42e3-11f1-a803-005056010707",
+        "bron": "testdata_setup"
+      },
+      {
+        "code": "PROD-CRF-001",
+        "titel": "Carrefour — In-Store Analytics Module",
+        "beschrijving": "Analytics module for Carrefour hypermarket locations.",
+        "prijs": 4500.00,
+        "eenheid": "license",
+        "groep": "IT Hardware",
+        "uid": "31d61ac2-4310-11f1-a803-005056010707",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "code": "PROD-ADL-001",
+        "titel": "Delhaize — EDI Connector Pack",
+        "beschrijving": "EDI integration package for Delhaize franchise stores.",
+        "prijs": 1200.00,
+        "eenheid": "piece",
+        "groep": "IT Hardware",
+        "uid": "32a9422b-4310-11f1-a803-005056010707",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "code": "PROD-ABI-001",
+        "titel": "AB InBev — Distribution Mapping License",
+        "beschrijving": "Annual license for distribution network mapping tool. AB InBev Leuven HQ.",
+        "prijs": 8750.00,
+        "eenheid": "license",
+        "groep": "IT Hardware",
+        "uid": "33676a4f-4310-11f1-a803-005056010707",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "code": "PROD-LDL-001",
+        "titel": "Lidl — Shelf Replenishment Kit",
+        "beschrijving": "Standard shelf replenishment package for Lidl Belgium stores.",
+        "prijs": 299.00,
+        "sales_unit": 5,
+        "eenheid": "piece",
+        "groep": "IT Hardware",
+        "uid": "34579c1a-4310-11f1-a803-005056010707",
+        "bron": "testdata_fuzzy"
+      }
+    ],
+
+    "orders": [
+      {
+        "referentie": "ORD-SUP1-2026-001",
+        "supplier": "supplier1",
+        "customer": "Customer1",
+        "items": [{"code": "PROD-SUP1-001", "titel": "supplier1 — Industrial Components Pack", "qty": 10, "prijs": 149.99, "totaal": 1499.90}],
+        "totaal": 1499.90,
+        "comments": "Q2 2026 component delivery. Linked to open SF opportunity.",
+        "uid": "76012bb6-42e3-11f1-a803-005056010707",
+        "bron": "testdata_setup"
+      },
+      {
+        "referentie": "ORD-COL-2026-001",
+        "supplier": "Colruyt - Halle",
+        "customer": "Customer1",
+        "items": [{"code": "PROD-COL-001", "titel": "Colruyt House Brand — Retail Display Kit", "qty": 5, "prijs": 89.50, "totaal": 447.50}],
+        "totaal": 447.50,
+        "comments": "Retail display materials for Q3 rollout.",
+        "uid": "76e7ca8d-42e3-11f1-a803-005056010707",
+        "bron": "testdata_setup"
+      },
+      {
+        "referentie": "ORD-NUT-2026-001",
+        "supplier": "Ferrero Benelux - Brussels (Nutella)",
+        "customer": "Customer1",
+        "items": [{"code": "PROD-NUT-001", "titel": "Nutella 750g — Display Jar", "qty": 48, "prijs": 4.99, "totaal": 239.52}],
+        "totaal": 239.52,
+        "comments": "Nutella in-store promotion stock for spring campaign.",
+        "uid": "77a50163-42e3-11f1-a803-005056010707",
+        "bron": "testdata_setup"
+      },
+      {
+        "referentie": "ORD-GTS-2026-001",
+        "supplier": "GreenTech Solutions - Ghent",
+        "customer": "Customer1",
+        "items": [{"code": "PROD-GTS-001", "titel": "GreenTech Solutions — Dashboard License", "qty": 1, "prijs": 2500.00, "totaal": 2500.00}],
+        "totaal": 2500.00,
+        "comments": "Annual sustainability dashboard license. Matches open SF opportunity.",
+        "uid": "78655f28-42e3-11f1-a803-005056010707",
+        "bron": "testdata_setup"
+      },
+      {
+        "referentie": "ORD-CRF-2026-001",
+        "supplier": "CRF - Anderlecht",
+        "customer": "Customer1",
+        "items": [{"code": "PROD-CRF-001", "titel": "Carrefour — In-Store Analytics Module", "qty": 12, "prijs": 4500.00, "totaal": 54000.00}],
+        "totaal": 54000.00,
+        "comments": "Analytics pilot across 12 Carrefour BE hypermarkets. Ref: Carrefour Belgium SA opp.",
+        "uid": "36cc5831-4310-11f1-a803-005056010707",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "referentie": "ORD-ADL-2026-001",
+        "supplier": "AD Delhaize - Forest",
+        "customer": "Customer1",
+        "items": [{"code": "PROD-ADL-001", "titel": "Delhaize — EDI Connector Pack", "qty": 8, "prijs": 1200.00, "totaal": 9600.00}],
+        "totaal": 9600.00,
+        "comments": "EDI connectors for AD Delhaize franchise rollout. Parent account: Delhaize Group.",
+        "uid": "37bc49f5-4310-11f1-a803-005056010707",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "referentie": "ORD-ABI-2026-001",
+        "supplier": "AB InBev - Leuven",
+        "customer": "Customer1",
+        "items": [{"code": "PROD-ABI-001", "titel": "AB InBev — Distribution Mapping License", "qty": 1, "prijs": 8750.00, "totaal": 8750.00}],
+        "totaal": 8750.00,
+        "comments": "Distribution mapping for Anheuser-Busch InBev network. Largest order this quarter.",
+        "uid": "38ad6cf1-4310-11f1-a803-005056010707",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "referentie": "ORD-LDL-2026-001",
+        "supplier": "Lidl Belgium - Antwerp",
+        "customer": "Customer1",
+        "items": [{"code": "PROD-LDL-001", "titel": "Lidl — Shelf Replenishment Kit", "qty": 20, "prijs": 299.00, "totaal": 5980.00}],
+        "totaal": 5980.00,
+        "comments": "Shelf replenishment stock for Lidl Belgium Antwerp. No SF account linked.",
+        "uid": "39821838-4310-11f1-a803-005056010707",
+        "bron": "testdata_fuzzy"
+      }
+    ]
+  },
+
+  "microsoft365": {
+    "mailbox": "smartadmin@easigroupdemo.onmicrosoft.com",
+    "auth_methode": "client_credentials (app-only) via test_email_injector_* env vars",
+
+    "emails": [
+      {
+        "subject": "Follow-up: supplier1 Q2 2026 Delivery Contract",
+        "afzender_naam": "Marc Supplier",
+        "afzender_email": "marc.supplier@supplier1.be",
+        "entiteit": "supplier1",
+        "sleutelwoorden": ["supplier1", "Q2 2026 Delivery Contract", "April delay", "Brussels"],
+        "bron": "test_mails.py + testdata_setup"
+      },
+      {
+        "subject": "supplier1 — Updated pricing for H2 2026",
+        "afzender_naam": "Marc Supplier",
+        "afzender_email": "marc.supplier@supplier1.be",
+        "entiteit": "supplier1",
+        "sleutelwoorden": ["supplier1", "PROD-SUP1-001", "July 2026", "price adjustment"],
+        "bron": "test_mails.py + testdata_setup"
+      },
+      {
+        "subject": "Colruyt Group — SmartSales pilot bevestiging",
+        "afzender_naam": "Colruyt Group Procurement",
+        "afzender_email": "procurement@colruyt.be",
+        "entiteit": "Colruyt",
+        "sleutelwoorden": ["Colruyt Group", "SmartSales", "Halle", "EUR 220,000"],
+        "bron": "test_mails.py + testdata_setup"
+      },
+      {
+        "subject": "GreenTech Solutions — Interest in sustainability dashboard",
+        "afzender_naam": "GreenTech Solutions",
+        "afzender_email": "info@greentechsolutions.be",
+        "entiteit": "GreenTech Solutions",
+        "sleutelwoorden": ["GreenTech Solutions", "Ghent", "sustainability dashboard", "EUR 2,500"],
+        "bron": "test_mails.py + testdata_setup"
+      },
+      {
+        "subject": "Ferrero Benelux — Nutella spring campaign inquiry",
+        "afzender_naam": "Ferrero Benelux Marketing",
+        "afzender_email": "marketing@ferrero.be",
+        "entiteit": "Nutella / Ferrero",
+        "sleutelwoorden": ["Ferrero Benelux", "Nutella", "Brussels", "display jars"],
+        "bron": "test_mails.py + testdata_setup"
+      },
+      {
+        "subject": "Intro: Dorian Feaux — EASI collaboration proposal",
+        "afzender_naam": "Dorian Feaux",
+        "afzender_email": "d.feaux@easi.net",
+        "entiteit": "Dorian",
+        "sleutelwoorden": ["Dorian Feaux", "EASI", "Avenue Louise 65", "Brussels"],
+        "bron": "test_mails.py + testdata_setup"
+      },
+      {
+        "subject": "Belgium region — Q1 2026 commercial summary",
+        "afzender_naam": "SmartAdmin",
+        "afzender_email": "smartadmin@easigroupdemo.onmicrosoft.com",
+        "entiteit": "België / Brussel",
+        "sleutelwoorden": ["Belgium", "Brussels", "EUR 375,000", "supplier1", "Colruyt Group", "Ferrero Benelux"],
+        "bron": "test_mails.py + testdata_setup"
+      },
+      {
+        "subject": "Q2 pilot update — analytics rollout",
+        "afzender_naam": "Carrefour BE Operations",
+        "afzender_email": "ops@carrefour-be.eu",
+        "entiteit": "Carrefour",
+        "sleutelwoorden": ["Carrefour Belgium", "Anderlecht", "12 pilot locations", "May 20"],
+        "fuzzy_note": "carrefour-be.eu ≠ 'Carrefour Belgium SA' in SF",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "subject": "Offerte aanvraag — POS koppeling modules",
+        "afzender_naam": "CRF Belgium Procurement",
+        "afzender_email": "procurement@carrefour-be.eu",
+        "entiteit": "Carrefour",
+        "sleutelwoorden": ["Carrefour Belgium SA", "47 hypermarkten", "analytics module"],
+        "fuzzy_note": "carrefour-be.eu ≠ 'Carrefour Belgium SA' in SF",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "subject": "EDI connector — technische vraag",
+        "afzender_naam": "AD Delhaize IT",
+        "afzender_email": "it@delhaize.eu",
+        "entiteit": "Delhaize",
+        "sleutelwoorden": ["AD Delhaize", "Forest", "ORD-ADL-2026-001", "EDI"],
+        "fuzzy_note": "delhaize.eu + prefix 'AD' ≠ 'Delhaize Group' in SF",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "subject": "Supply chain project — follow-up meeting",
+        "afzender_naam": "Delhaize Procurement",
+        "afzender_email": "procurement@delhaize.eu",
+        "entiteit": "Delhaize",
+        "sleutelwoorden": ["Delhaize", "supply chain", "AD Delhaize franchise", "Belgium"],
+        "fuzzy_note": "delhaize.eu ≠ 'Delhaize Group' in SF",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "subject": "Distribution mapping — scope confirmation",
+        "afzender_naam": "AB InBev Sales",
+        "afzender_email": "sales@ab-inbev.com",
+        "entiteit": "AB InBev",
+        "sleutelwoorden": ["AB InBev", "Anheuser-Busch InBev", "Leuven", "distribution network"],
+        "fuzzy_note": "ab-inbev.com ≠ 'Anheuser-Busch InBev' in SF",
+        "bron": "testdata_fuzzy"
+      },
+      {
+        "subject": "Proximus — partnership inquiry",
+        "afzender_naam": "Proximus Business",
+        "afzender_email": "info@proximus.be",
+        "entiteit": "Proximus",
+        "sleutelwoorden": ["Proximus", "field sales tooling", "partnership"],
+        "fuzzy_note": "Alleen in email — geen SF account, geen SS locatie (gap detection)",
+        "bron": "testdata_fuzzy"
+      }
+    ],
+
+    "calendar_events": [
+      {
+        "subject": "supplier1 — Q2 Delivery Review",
+        "start": "2026-05-10T10:00:00",
+        "einde": "2026-05-10T11:00:00",
+        "tijdzone": "Europe/Brussels",
+        "entiteit": "supplier1",
+        "bron": "test_mails.py + testdata_setup"
+      },
+      {
+        "subject": "Colruyt Group — SmartSales Rollout Kickoff",
+        "start": "2026-05-15T14:00:00",
+        "einde": "2026-05-15T15:30:00",
+        "tijdzone": "Europe/Brussels",
+        "entiteit": "Colruyt",
+        "bron": "test_mails.py + testdata_setup"
+      },
+      {
+        "subject": "GreenTech Solutions — Technical Qualification Call",
+        "start": "2026-05-12T11:00:00",
+        "einde": "2026-05-12T12:00:00",
+        "tijdzone": "Europe/Brussels",
+        "entiteit": "GreenTech Solutions",
+        "bron": "test_mails.py + testdata_setup"
+      },
+      {
+        "subject": "Weekly sync — Dorian Feaux",
+        "start": "2026-05-06T09:00:00",
+        "einde": "2026-05-06T09:30:00",
+        "tijdzone": "Europe/Brussels",
+        "entiteit": "Dorian",
+        "bron": "test_mails.py + testdata_setup"
+      },
+      {
+        "subject": "Sprint review — Arne Albrecht",
+        "start": "2026-05-08T14:00:00",
+        "einde": "2026-05-08T15:00:00",
+        "tijdzone": "Europe/Brussels",
+        "entiteit": "Arne",
+        "bron": "test_mails.py + testdata_setup"
+      }
+    ],
+
+    "onedrive_bestanden": [
+      {
+        "bestandsnaam": "supplier1_delivery_report_Q2_2026.txt",
+        "pad": "OneDrive root",
+        "entiteit": "supplier1",
+        "sleutelwoorden": ["supplier1", "SUP-001", "Q2 2026", "ORD-SUP1-2026-001", "delayed", "marc.supplier@supplier1.be"],
+        "sf_account_id": "001KI00000N7MjVYAV",
+        "ss_location_uid": "cac5b20d-285c-11f1-a2fe-005056010707",
+        "bron": "test_mails.py + testdata_setup"
+      },
+      {
+        "bestandsnaam": "contact_draftQ1.docx",
+        "pad": "OneDrive root",
+        "entiteit": "supplier1",
+        "sleutelwoorden": ["supplier1", "SUP-001", "Q1 2026", "contact draft", "Marc Supplier"],
+        "sf_account_id": "001KI00000N7MjVYAV",
+        "ss_location_uid": "cac5b20d-285c-11f1-a2fe-005056010707",
+        "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "origin.docx",
+        "pad": "OneDrive root/paste",
+        "entiteit": "Nutella / Ferrero",
+        "sleutelwoorden": ["Nutella", "Ferrero", "origin", "history"],
+        "sf_account_id": "001KI00000N7zhFYAR",
+        "ss_location_uid": "741d5f40-42da-11f1-a803-005056010707",
+        "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "nutella verkoopcijfers.docx",
+        "pad": "OneDrive root/paste",
+        "entiteit": "Nutella / Ferrero",
+        "sleutelwoorden": ["Nutella", "Ferrero Benelux", "verkoopcijfers", "sales figures"],
+        "sf_account_id": "001KI00000N7zhFYAR",
+        "ss_location_uid": "741d5f40-42da-11f1-a803-005056010707",
+        "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "nutella recept.docx",
+        "pad": "OneDrive root/paste",
+        "entiteit": "Nutella / Ferrero",
+        "sleutelwoorden": ["Nutella", "recept", "recipe", "Ferrero"],
+        "sf_account_id": "001KI00000N7zhFYAR",
+        "ss_location_uid": "741d5f40-42da-11f1-a803-005056010707",
+        "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "ABinbev deal draft.docx",
+        "pad": "OneDrive root",
+        "entiteit": "AB InBev / Anheuser-Busch InBev",
+        "sleutelwoorden": ["AB InBev", "Anheuser-Busch InBev", "deal draft", "Distribution Network Mapping", "520000", "Leuven"],
+        "sf_account_id": "001KI00000N80nRYAR",
+        "sf_opportunity_id": "006KI000005bIGNYA2",
+        "ss_location_uid": "2f355296-4310-11f1-a803-005056010707",
+        "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "framework_agreement_easi_supplier1.docx",
+        "pad": "OneDrive root/contracts",
+        "entiteit": "supplier1",
+        "sleutelwoorden": ["supplier1", "raamovereenkomst", "Teams", "EASI-supplier1 Operaties", "marc.supplier@supplier1.be", "communicatie", "escalatie", "e-mail niet aanvaard"],
+        "sf_account_id": "001KI00000N7MjVYAV",
+        "rag_query": "What is the best way to get in touch with supplier1?",
+        "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "collaboration_agreement_easi_colruyt.docx",
+        "pad": "OneDrive root/contracts",
+        "entiteit": "Colruyt Group",
+        "sleutelwoorden": ["Colruyt", "SmartSales", "SLA", "4 kantooruren", "supportlijn", "+32 2 123 45 67", "Arne Albrecht", "a.albrecht@easi.net"],
+        "sf_account_id": "001KI00000N7zHSYAZ",
+        "rag_query": "What are our agreed support terms with Colruyt?",
+        "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "employment_regulations_easi_group.docx",
+        "pad": "OneDrive root/HR",
+        "entiteit": "EASI Group (intern)",
+        "sleutelwoorden": ["arbeidsreglement", "woon-werkverkeer", "autoschade", "omniumverzekering", "arbeidsongevallenverzekering", "hr@easi.net", "24 uur", "trajectnummer"],
+        "rag_query": "What should I do if my car gets damaged on the way to work?",
+        "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "expense_policy_easi_group.docx",
+        "pad": "OneDrive root/HR",
+        "entiteit": "EASI Group (intern)",
+        "sleutelwoorden": ["onkostenbeleid", "openbaar vervoer", "100% terugbetaling", "trein", "taxi", "35 euro", "kilometervergoeding", "0,4237"],
+        "rag_query": "How much do I get reimbursed if I travel by train to visit a client?",
+        "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "onboarding_guide_easi.docx",
+        "pad": "OneDrive root/HR",
+        "entiteit": "EASI Group (intern)",
+        "sleutelwoorden": ["onboarding", "Salesforce", "servicedesk.easi.net", "IT-ticket", "2-3 werkdagen", "Sales Director", "SmartSales", "goedkeuring"],
+        "rag_query": "How do I request access to Salesforce as a new employee?",
+        "bron": "manueel"
+      },
+      {
+        "bestandsnaam": "complaint_handling_procedure_easi.docx",
+        "pad": "OneDrive root/procedures",
+        "entiteit": "EASI Group (intern)",
+        "sleutelwoorden": ["klachtenafhandeling", "niveau 2", "dreiging contractbeeindiging", "churn-risk", "Nathalie Pieters", "n.pieters@easi.net", "Salesforce", "escalatie", "remediëring"],
+        "rag_query": "A client is threatening to end their collaboration with us. What steps should I take?",
+        "bron": "manueel"
+      }
+    ]
+  },
+
+  "fuzzy_mapping": {
+    "beschrijving": "Bewuste naaminconsitenties tussen systemen — bedoeld om entity resolution te testen",
+    "entiteiten": [
+      {
+        "echte_entiteit": "Carrefour",
+        "sf_naam": "Carrefour Belgium SA",
+        "sf_id": "001KI00000N80nMYAR",
+        "ss_locatie": "CRF - Anderlecht",
+        "ss_uid": "2d79461f-4310-11f1-a803-005056010707",
+        "email_domeinen": ["carrefour-be.eu"],
+        "gap": null,
+        "uitdaging": "Afkorting + andere TLD"
+      },
+      {
+        "echte_entiteit": "Delhaize",
+        "sf_naam": "Delhaize Group",
+        "sf_id": "001KI00000N7zVuYAJ",
+        "ss_locatie": "AD Delhaize - Forest",
+        "ss_uid": "2e532129-4310-11f1-a803-005056010707",
+        "email_domeinen": ["delhaize.eu"],
+        "gap": null,
+        "uitdaging": "Franchise prefix, .eu domein"
+      },
+      {
+        "echte_entiteit": "AB InBev",
+        "sf_naam": "Anheuser-Busch InBev",
+        "sf_id": "001KI00000N80nRYAR",
+        "ss_locatie": "AB InBev - Leuven",
+        "ss_uid": "2f355296-4310-11f1-a803-005056010707",
+        "email_domeinen": ["ab-inbev.com"],
+        "gap": null,
+        "uitdaging": "Juridische naam vs afkorting"
+      },
+      {
+        "echte_entiteit": "Proximus",
+        "sf_naam": null,
+        "sf_id": null,
+        "ss_locatie": null,
+        "ss_uid": null,
+        "email_domeinen": ["proximus.be"],
+        "gap": "Alleen in email — geen SF account, geen SS locatie",
+        "uitdaging": "Gap detection"
+      },
+      {
+        "echte_entiteit": "Lidl",
+        "sf_naam": null,
+        "sf_id": null,
+        "ss_locatie": "Lidl Belgium - Antwerp",
+        "ss_uid": "301c94e5-4310-11f1-a803-005056010707",
+        "email_domeinen": [],
+        "gap": "Alleen in SS — geen SF account, geen emails",
+        "uitdaging": "Gap detection"
+      }
+    ]
+  },
+
+  "tellingen": {
+    "salesforce": {
+      "accounts": 9,
+      "contacts": 3,
+      "opportunities": 7,
+      "cases": 4
+    },
+    "smartsales": {
+      "locaties": 10,
+      "catalog_items": 8,
+      "orders": 8
+    },
+    "microsoft365": {
+      "emails": 13,
+      "calendar_events": 5,
+      "onedrive_bestanden": 12
+    },
+    "totaal_records": 79
+  }
+}

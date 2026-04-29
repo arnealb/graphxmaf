@@ -1,0 +1,5 @@
+{
+  "user_query": "Show me 5 closed Salesforce cases including their close date and description.",
+  "plan": null,
+  "invoked_agents": []
+}

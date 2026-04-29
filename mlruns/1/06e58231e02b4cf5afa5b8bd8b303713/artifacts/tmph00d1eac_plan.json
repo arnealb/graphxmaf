@@ -1,0 +1,13 @@
+{
+  "query": "Find Salesforce leads from the Technology or Software industry.",
+  "reasoning": "The task requires accessing leads specifically from Salesforce filtered by the industry type. Therefore, only the Salesforce agent is needed to perform this task.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve leads that belong to the Technology or Software industry.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of leads obtained from the Salesforce query."
+}

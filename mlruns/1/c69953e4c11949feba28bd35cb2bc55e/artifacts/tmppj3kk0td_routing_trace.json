@@ -1,0 +1,80 @@
+{
+  "user_query": "For the company behind my most recent open support case, what else do we know about them?",
+  "plan": {
+    "query": "For the company behind my most recent open support case, what else do we know about them?",
+    "reasoning": "The query involves gathering comprehensive information about a specific company related to an open support case. This requires data from all available agents to create a complete overview of the company including their CRM details, communication history, and physical presence.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve the company details associated with the most recent open support case, including accounts, contacts, and any related opportunities.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "graph",
+        "task": "Using the company name retrieved from step 1, gather communication history including emails and calendar events related to the company.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Using the company name retrieved from step 1, retrieve information about physical locations and any product catalog items related to the company.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Compile the results from steps 1, 2, and 3 to create a full profile of the company, including CRM data, communication history, and location/product information."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve the company details associated with the most recent open support case, including accounts, contacts, and any related opportunities.",
+      "started_at": "2026-04-28T13:11:18.903114+00:00",
+      "ended_at": "2026-04-28T13:11:32.502954+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 4,
+      "tool_calls": [
+        "get_cases",
+        "find_accounts",
+        "find_contacts",
+        "get_opportunities"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 2,
+      "input": "[Result from step 1]:\n[\n    {\n        \"tool\": \"get_cases\",\n        \"result\": {\n            \"id\": \"500KI000001mJiCYAU\",\n            \"case_number\": \"00001021\",\n            \"subject\": \"Colruyt — Integration issue with POS system\",\n            \"status\": \"New\",\n            \"priority\": \"Medium\",\n            \"account_name\": \"Colruyt Group\",\n            \"created_date\": \"2026-04-28T08:13:49Z\",\n            \"description\": null,\n            \"origin\": null,\n            \"type\": null,\n            \"reason\": null,\n            \"closed_date\": null,\n            \"last_modified_date\": null\n        }\n    },\n    {\n        \"tool\": \"find_accounts\",\n        \"result\": {\n            \"id\": \"001KI00000N7zHSYAZ\",\n            \"name\": \"Colruyt Group\",\n            \"industry\": \"Retail\",\n            \"website\": \"https://www.colruytgroup.com\",\n            \"phone\": null,\n            \"type\": null,\n            \"billing_street\": null,\n            \"billing_city\": null,\n            \"billing_state\": null,\n            \"billing_postal_code\": null,\n            \"billing_country\": null,\n            \"number_of_employees\": null,\n            \"annual_revenue\": null,\n            \"description\": null,\n            \"created_date\": null,\n            \"last_modified_date\": null\n        }\n    },\n    {\n        \"tool\": \"find_contacts\",\n        \"result\": []\n    },\n    {\n        \"tool\": \"get_opportunities\",\n        \"result\": {\n            \"id\": \"006KI000005bHl1YAE\",\n            \"name\": \"Colruyt Group — SmartSales Rollout 2026\",\n            \"stage\": \"Proposal/Price Quote\",\n            \"amount\": 220000.0,\n            \"close_date\": \"2026-09-30\",\n            \"account_name\": \"Colruyt Group\",\n            \"probability\": null,\n            \"type\": null,\n            \"lead_source\": null,\n            \"forecast_category\": null,\n            \"description\": null,\n            \"created_date\": null,\n            \"last_modified_date\": null\n        }\n    }\n]\n\n[Task]:\nUsing the company name retrieved from step 1, gather communication history including emails and calendar events related to the company.",
+      "started_at": "2026-04-28T13:11:32.558000+00:00",
+      "ended_at": "2026-04-28T13:11:37.894489+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "search_calendar"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "[Result from step 1]:\n[\n    {\n        \"tool\": \"get_cases\",\n        \"result\": {\n            \"id\": \"500KI000001mJiCYAU\",\n            \"case_number\": \"00001021\",\n            \"subject\": \"Colruyt — Integration issue with POS system\",\n            \"status\": \"New\",\n            \"priority\": \"Medium\",\n            \"account_name\": \"Colruyt Group\",\n            \"created_date\": \"2026-04-28T08:13:49Z\",\n            \"description\": null,\n            \"origin\": null,\n            \"type\": null,\n            \"reason\": null,\n            \"closed_date\": null,\n            \"last_modified_date\": null\n        }\n    },\n    {\n        \"tool\": \"find_accounts\",\n        \"result\": {\n            \"id\": \"001KI00000N7zHSYAZ\",\n            \"name\": \"Colruyt Group\",\n            \"industry\": \"Retail\",\n            \"website\": \"https://www.colruytgroup.com\",\n            \"phone\": null,\n            \"type\": null,\n            \"billing_street\": null,\n            \"billing_city\": null,\n            \"billing_state\": null,\n            \"billing_postal_code\": null,\n            \"billing_country\": null,\n            \"number_of_employees\": null,\n            \"annual_revenue\": null,\n            \"description\": null,\n            \"created_date\": null,\n            \"last_modified_date\": null\n        }\n    },\n    {\n        \"tool\": \"find_contacts\",\n        \"result\": []\n    },\n    {\n        \"tool\": \"get_opportunities\",\n        \"result\": {\n            \"id\": \"006KI000005bHl1YAE\",\n            \"name\": \"Colruyt Group — SmartSales Rollout 2026\",\n            \"stage\": \"Proposal/Price Quote\",\n            \"amount\": 220000.0,\n            \"close_date\": \"2026-09-30\",\n            \"account_name\": \"Colruyt Group\",\n            \"probability\": null,\n            \"type\": null,\n            \"lead_source\": null,\n            \"forecast_category\": null,\n            \"description\": null,\n            \"created_date\": null,\n            \"last_modified_date\": null\n        }\n    }\n]\n\n[Task]:\nUsing the company name retrieved from step 1, retrieve information about physical locations and any product catalog items related to the company.",
+      "started_at": "2026-04-28T13:11:32.560864+00:00",
+      "ended_at": "2026-04-28T13:11:56.079138+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items",
+        "list_locations",
+        "list_catalog_items"
+      ]
+    }
+  ]
+}

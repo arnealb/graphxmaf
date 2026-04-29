@@ -1,0 +1,34 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here are the results related to "nutella" across the systems:
+
+### From Microsoft 365:
+- **Emails:**
+  - **Subject:** Ferrero Benelux — Nutella spring campaign inquiry  
+    **Sender:** Ferrero Benelux Marketing (marketing@ferrero.be)  
+    **Received:** April 28, 2026  
+    [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7rAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Documents:**
+  - **Document Name:** Demande produits.xlsx  
+    **Size:** 154,960 bytes  
+    **Created:** April 9, 2026  
+    [View Document](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BD23762FE-A7D1-4347-97B5-C43173348CF9%7D&file=Demande%20produits.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+- **Calendar Events:** No relevant events found.
+
+### From Salesforce:
+- No related results found for "nutella".
+
+### From SmartSales:
+- **Location:** Ferrero Benelux - Brussels (Nutella)
+  - **Address:** Bld de la Woluwe 42, Brussels, 1200, Belgium
+  - **Creation Date:** April 28, 2026
+  - **Last Update Date:** April 28, 2026
+
+### Summary:
+- The primary findings relate to a campaign inquiry email and a products document from Microsoft 365.
+- There are no additional results from Salesforce.
+- SmartSales has a location entry tied to Ferrero Benelux in Brussels, linked to Nutella.

@@ -1,0 +1,69 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Here’s an overview of the individuals you'll meet with this week, including their communication history, CRM details, and location information:
+
+### 1. Dorian Feaux
+- **Email**: d.feaux@easi.net
+- **Title**: Sales Engineer
+- **Account**: EASI
+- **Next Meeting**: 
+  - **Subject**: Weekly sync — Dorian Feaux
+  - **Date**: 6 May 2026, 07:00 - 07:30
+- **Communication History**:
+  - **Email** (from Dorian Féaux):
+    - **Subject**: Intro: Dorian Feaux — EASI collaboration proposal
+    - **Received on**: 28 April 2026
+    - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7sAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### 2. Arne Albrecht
+- **Emails**: 
+  - **Email**: a.albrecht@easi.net (Account: EASI)
+  - **Email**: albrecht.arne@gmail.com (Accounts: Displaytech, GreenTech Solutions, Colruyt Group, Ferrero Benelux)
+- **Titles**: Business Analyst (EASI)
+- **Accounts**: 
+  - EASI
+  - Displaytech
+  - GreenTech Solutions
+  - Colruyt Group
+  - Ferrero Benelux
+- **Communication History**:
+  - **Email** (from Ferrero Benelux Marketing):
+    - **Subject**: Ferrero Benelux — Nutella spring campaign inquiry
+    - **Received on**: 28 April 2026
+    - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7rAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+  
+- **Next Meeting**:
+  - **Subject**: Sprint review — Arne Albrecht
+  - **Date**: 8 May 2026, 12:00 - 13:00
+- **Location**:
+  - **Address**: Lippenslaan 347, Knokke, 8300, Belgium
+  
+- **Opportunities**:
+  - **GreenTech Solutions**:
+    - Name: Sustainability Dashboard
+    - Stage: Qualification
+    - Amount: €45,000
+    - Close Date: 15 August 2026
+  - **Colruyt Group**:
+    - Name: SmartSales Rollout 2026
+    - Stage: Proposal/Price Quote
+    - Amount: €220,000
+    - Close Date: 30 September 2026
+  - **Ferrero Benelux**:
+    - Name: Nutella In-Store Display Campaign
+    - Stage: Prospecting
+    - Amount: €30,000
+    - Close Date: 1 October 2026
+    
+- **Cases**:
+  - **Colruyt Group**:
+    - Case Number: 00001021
+    - Subject: Integration issue with POS system
+    - Status: New
+    - Priority: Medium
+    - Created on: 28 April 2026
+
+This summary combines relevant details from email communications, CRM data, and location information to give you a comprehensive understanding of your meeting attendees.

@@ -1,0 +1,31 @@
+{
+  "user_query": "What are my upcoming calendar events this week?",
+  "plan": {
+    "query": "What are my upcoming calendar events this week?",
+    "reasoning": "The task requires accessing user's calendar data to retrieve information about upcoming events, which can be done by the graph agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve all upcoming calendar events for this week.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of calendar events retrieved from step 1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve all upcoming calendar events for this week.",
+      "started_at": "2026-04-24T09:14:03.040066+00:00",
+      "ended_at": "2026-04-24T09:14:16.236130+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_calendar"
+      ]
+    }
+  ]
+}

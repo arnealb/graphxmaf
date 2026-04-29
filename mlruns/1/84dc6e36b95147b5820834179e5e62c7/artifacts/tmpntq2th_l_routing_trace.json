@@ -1,0 +1,32 @@
+{
+  "user_query": "Find a document called 'agenda' in OneDrive and show its content.",
+  "plan": {
+    "query": "Find a document called 'agenda' in OneDrive and show its content.",
+    "reasoning": "The task involves a single system, Graph, which can be used to search for a document in OneDrive and retrieve its content in one step.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Search for a document named 'agenda' in OneDrive and retrieve its content.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the content retrieved from the search for the document 'agenda'."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Search for a document named 'agenda' in OneDrive and retrieve its content.",
+      "started_at": "2026-04-24T09:19:32.683578+00:00",
+      "ended_at": "2026-04-24T09:19:59.102876+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "search_files",
+        "read_file"
+      ]
+    }
+  ]
+}

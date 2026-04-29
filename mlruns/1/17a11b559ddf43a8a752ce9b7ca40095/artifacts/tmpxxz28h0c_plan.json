@@ -1,0 +1,13 @@
+{
+  "query": "How much do I get reimbursed if I travel by train to visit a client?",
+  "reasoning": "This query involves seeking information about internal reimbursement policies, which should be addressed through the graph agent to find the relevant document related to travel reimbursement.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search OneDrive for the internal document related to travel reimbursement policies.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the information retrieved from the travel reimbursement policy document."
+}

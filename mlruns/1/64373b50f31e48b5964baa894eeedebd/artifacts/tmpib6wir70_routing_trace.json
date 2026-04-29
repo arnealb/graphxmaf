@@ -1,0 +1,17 @@
+{
+  "user_query": "Show me the most recently created Salesforce contacts.",
+  "plan": {
+    "query": "Show me the most recently created Salesforce contacts.",
+    "reasoning": "The user is asking for specific data regarding Salesforce contacts, which can be retrieved in a single query to the Salesforce agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve the most recently created contacts from the Salesforce CRM.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of recently created Salesforce contacts retrieved from step 1."
+  },
+  "invoked_agents": []
+}

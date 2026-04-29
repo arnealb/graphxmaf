@@ -1,0 +1,16 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+### Summary of Activity Related to Your Next Calendar Event
+
+- **Event Subject:** Closing Opportunity
+- **Start Time:** 30 April 2026, 00:00 UTC
+- **End Time:** 1 May 2026, 00:00 UTC
+- **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+- **Attendees:** None
+
+#### Related Communications
+- **Emails or Events:** No related emails or events found.
+
+There is currently no activity or correspondence linked to this event.

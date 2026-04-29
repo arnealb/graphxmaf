@@ -1,0 +1,5 @@
+{
+  "user_query": "Find the most recent email with 'meeting' in the subject and read its full body.",
+  "plan": null,
+  "invoked_agents": []
+}

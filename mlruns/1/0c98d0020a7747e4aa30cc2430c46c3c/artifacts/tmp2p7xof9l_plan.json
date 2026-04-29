@@ -1,0 +1,13 @@
+{
+  "query": "Show me Salesforce opportunities in the 'Qualification' stage.",
+  "reasoning": "The task requires retrieving specific data from Salesforce about opportunities that meet a certain condition. Therefore, only the Salesforce agent is needed to fulfill this request.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all opportunities that are in the 'Qualification' stage.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of opportunities retrieved from Salesforce that are in the 'Qualification' stage."
+}

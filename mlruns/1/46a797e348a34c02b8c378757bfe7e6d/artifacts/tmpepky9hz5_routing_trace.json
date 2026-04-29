@@ -1,0 +1,79 @@
+{
+  "user_query": "Give me a full briefing on Colruyt.",
+  "plan": {
+    "query": "Give me a full briefing on Colruyt.",
+    "reasoning": "The query is an entity-centric request for comprehensive information about Colruyt, requiring data from all available agents to provide a complete overview.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Fetch all communication history, emails, calendar events, and documents related to Colruyt.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Retrieve all CRM accounts, contacts, leads, opportunities, and cases associated with Colruyt.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Gather information on locations, catalog items, and physical presence related to Colruyt.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from all steps to create a comprehensive briefing on Colruyt."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "Gather information on locations, catalog items, and physical presence related to Colruyt.",
+      "started_at": "2026-04-28T11:55:45.183440+00:00",
+      "ended_at": "2026-04-28T11:55:53.672428+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Retrieve all CRM accounts, contacts, leads, opportunities, and cases associated with Colruyt.",
+      "started_at": "2026-04-28T11:55:45.177376+00:00",
+      "ended_at": "2026-04-28T11:55:54.479734+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "find_accounts",
+        "find_contacts",
+        "find_leads",
+        "get_opportunities",
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Fetch all communication history, emails, calendar events, and documents related to Colruyt.",
+      "started_at": "2026-04-28T11:55:45.168751+00:00",
+      "ended_at": "2026-04-28T11:56:02.448476+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 4,
+      "tool_calls": [
+        "search_email",
+        "search_calendar",
+        "search_files",
+        "read_email",
+        "read_file",
+        "search_files"
+      ]
+    }
+  ]
+}

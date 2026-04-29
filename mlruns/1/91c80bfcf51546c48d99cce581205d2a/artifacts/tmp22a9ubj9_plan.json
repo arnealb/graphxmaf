@@ -1,0 +1,13 @@
+{
+  "query": "What are our agreed support terms with Colruyt?",
+  "reasoning": "The query requires information regarding internal company documentation related to agreements with Colruyt, which falls under the graph agent's domain for document searching.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search OneDrive for documents related to support terms with Colruyt.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the results of the document search from step 1 as the answer."
+}

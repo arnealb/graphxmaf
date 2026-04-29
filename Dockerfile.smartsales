@@ -8,6 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY config.cfg .
 COPY auth/ auth/
 COPY smartsales/ smartsales/
+COPY shared/ shared/
 
 EXPOSE 8002
 

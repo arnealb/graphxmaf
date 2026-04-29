@@ -1,0 +1,13 @@
+{
+  "query": "Look up the email address of Arne in the organization.",
+  "reasoning": "The task requires fetching contact information from the available agents. The 'graph' agent is suitable for accessing email information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Look up the email address of the contact named Arne in the organization.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the email address retrieved from the step."
+}

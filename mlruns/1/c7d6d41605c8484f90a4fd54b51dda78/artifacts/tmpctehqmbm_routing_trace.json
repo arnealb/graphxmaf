@@ -1,0 +1,57 @@
+{
+  "user_query": "Give me a 360 view of this salesforce account: supplier1 : open opportunities, any SmartSales locations for that account, and any emails I have about that company.",
+  "plan": {
+    "query": "Give me a 360 view of this salesforce account: supplier1 : open opportunities, any SmartSales locations for that account, and any emails I have about that company.",
+    "reasoning": "I need to gather information from Salesforce about open opportunities for the account 'supplier1', then check SmartSales for any relevant location data for that account, and finally retrieve emails related to 'supplier1' from the Graph agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve open opportunities for the account named 'supplier1'.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "smartsales",
+        "task": "Find any SmartSales locations associated with the account 'supplier1'.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "graph",
+        "task": "Search for any emails that mention 'supplier1'.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from steps 1, 2, and 3 to provide a comprehensive overview of opportunities, locations, and emails related to the account 'supplier1'."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve open opportunities for the account named 'supplier1'.",
+      "started_at": "2026-04-21T15:08:00.088997+00:00",
+      "ended_at": "2026-04-21T15:08:06.218516+00:00",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "smartsales",
+      "order": 2,
+      "input": "Find any SmartSales locations associated with the account 'supplier1'.",
+      "started_at": "2026-04-21T15:08:00.088997+00:00",
+      "ended_at": "2026-04-21T15:08:06.218516+00:00",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "graph",
+      "order": 3,
+      "input": "Search for any emails that mention 'supplier1'.",
+      "started_at": "2026-04-21T15:08:00.088997+00:00",
+      "ended_at": "2026-04-21T15:08:06.218516+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

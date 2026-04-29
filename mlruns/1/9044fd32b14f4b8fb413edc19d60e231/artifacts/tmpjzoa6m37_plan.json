@@ -1,0 +1,13 @@
+{
+  "query": "Show me Salesforce opportunities in the 'Qualification' stage.",
+  "reasoning": "The Salesforce agent can directly access and retrieve opportunities based on their stage without requiring further data from other steps.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch all opportunities that are currently in the 'Qualification' stage.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved opportunities from step 1 as the final answer."
+}

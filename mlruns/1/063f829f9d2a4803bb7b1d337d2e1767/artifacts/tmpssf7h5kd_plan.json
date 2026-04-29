@@ -1,0 +1,13 @@
+{
+  "query": "List 5 open opportunities in Salesforce.",
+  "reasoning": "The query directly involves retrieving opportunities data from Salesforce. Only one step is needed to get the information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch 5 open opportunities, including their details such as name, amount, and expected close date.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of open opportunities retrieved from Salesforce."
+}

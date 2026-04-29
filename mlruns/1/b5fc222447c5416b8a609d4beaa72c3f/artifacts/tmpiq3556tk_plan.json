@@ -1,0 +1,13 @@
+{
+  "query": "Find Salesforce leads that have been converted.",
+  "reasoning": "Only one step is necessary to query the Salesforce system for leads that have been converted. No further enrichment is needed.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all leads from Salesforce that have been converted.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of converted leads obtained from the Salesforce query."
+}

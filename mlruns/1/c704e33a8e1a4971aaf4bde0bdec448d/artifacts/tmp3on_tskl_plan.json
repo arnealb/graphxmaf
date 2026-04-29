@@ -1,0 +1,13 @@
+{
+  "query": "Search my calendar for events in the next 14 days.",
+  "reasoning": "The user is looking for calendar events, which can be directly retrieved using the graph agent that specializes in Microsoft 365 services.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve events from my calendar for the next 14 days.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved events from the calendar."
+}

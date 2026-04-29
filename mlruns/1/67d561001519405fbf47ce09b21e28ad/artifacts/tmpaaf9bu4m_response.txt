@@ -1,0 +1,30 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is a comprehensive overview of everything related to the word 'Nutella' across the systems queried:
+
+### From Email System:
+- **Subject**: Ferrero Benelux — Nutella spring campaign inquiry
+  - **Sender**: Ferrero Benelux Marketing (marketing@ferrero.be)
+  - **Received Date**: 28 April 2026
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7rAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### From Calendar:
+- **No specific calendar events related to 'Nutella'** were identified, but several unrelated meetings were noted.
+
+### From Salesforce:
+- **No accounts, contacts, leads, opportunities, or cases** related to 'Nutella' were found.
+
+### From SmartSales:
+- **Location Identified**: 
+  - **Name**: Ferrero Benelux - Brussels (Nutella)
+  - **Address**: Bld de la Woluwe 42, Brussels, 1200, Belgium
+  - **Creation Date**: 28 April 2026
+  - **Server Update Date**: 28 April 2026
+
+- **Catalog Item Search**: 
+  - An error occurred due to unknown filter fields, hence no catalog items related to 'Nutella' were retrieved.
+
+### Summary:
+- The primary lead related to 'Nutella' comes from the email inquiry about a spring campaign from Ferrero Benelux and a location in Brussels specifically tied to Ferrero Benelux - Nutella. No useful results were found in Salesforce or calendar entries directly corresponding to 'Nutella'.

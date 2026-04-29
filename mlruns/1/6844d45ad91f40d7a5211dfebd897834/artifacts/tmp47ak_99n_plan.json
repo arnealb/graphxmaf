@@ -1,0 +1,13 @@
+{
+  "query": "Find the email address of Dorian.",
+  "reasoning": "To find Dorian's email address, the graph agent, which has access to emails and contacts, is the most suitable choice.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the email address of the contact named Dorian.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the email address retrieved from the graph agent."
+}

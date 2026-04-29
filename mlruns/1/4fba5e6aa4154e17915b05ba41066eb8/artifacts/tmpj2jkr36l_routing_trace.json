@@ -1,0 +1,31 @@
+{
+  "user_query": "Find Salesforce contacts with 'Manager' in their title.",
+  "plan": {
+    "query": "Find Salesforce contacts with 'Manager' in their title.",
+    "reasoning": "The query directly relates to fetching specific contacts from Salesforce based on a title match, making a single call sufficient.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Search for contacts in Salesforce where the title contains 'Manager'.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Return the list of contacts found in step 1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Search for contacts in Salesforce where the title contains 'Manager'.",
+      "started_at": "2026-04-24T09:38:48.886843+00:00",
+      "ended_at": "2026-04-24T09:39:01.484670+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "find_contacts"
+      ]
+    }
+  ]
+}

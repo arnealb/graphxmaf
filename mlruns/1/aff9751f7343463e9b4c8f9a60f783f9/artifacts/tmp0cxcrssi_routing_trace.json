@@ -1,0 +1,61 @@
+{
+  "user_query": "Give me an overview of my upcoming meetings from Microsoft 365, related Salesforce opportunities, and SmartSales locations for the companies involved.",
+  "plan": {
+    "query": "Give me an overview of my upcoming meetings from Microsoft 365, related Salesforce opportunities, and SmartSales locations for the companies involved.",
+    "reasoning": "The query requires three distinct types of data: upcoming meetings, related Salesforce opportunities, and locations from SmartSales. Each can be gathered independently and synthesized into a final overview.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve an overview of my upcoming meetings from Microsoft 365.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Find all opportunities related to the companies involved in my upcoming meetings.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Gather locations for the companies involved in my upcoming meetings.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the results from steps 1, 2, and 3 to create a comprehensive overview of upcoming meetings, related Salesforce opportunities, and SmartSales locations."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve an overview of my upcoming meetings from Microsoft 365.",
+      "started_at": "2026-04-21T09:01:41.601415+00:00",
+      "ended_at": "2026-04-21T09:01:50.899480+00:00",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "[Result from step 1]:\nHere is an overview of your upcoming meetings:\n\n1. **Meeting: nog e meeting**\n   - **Date:** April 21, 2026\n   - **Time:** 12:30 PM - 1:00 PM\n   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)\n   - **Attendee:** Arne Albrecht (a.albrecht@easi.net)\n\n2. **Meeting: meeting about numbers or something**\n   - **Date:** April 21, 2026\n   - **Time:** 4:30 PM - 5:00 PM\n   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)\n   - **Attendee:** albrecht.arne@gmail.com\n\n3. **Meeting: gym**\n   - **Date:** April 22, 2026\n   - **Time:** 8:30 PM - 9:00 PM\n   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)\n   - **Attendees:** None\n\n4. **Meeting: anotha one**\n   - **Date:** April 23, 2026\n   - **Time:** 11:00 AM - 11:30 AM\n   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)\n   - **Attendees:** None\n\n5. **Meeting: closing opportunity**\n   - **Date:** April 30, 2026\n   - **Time:** Starts at midnight (00:00 AM) and ends on May 1, 2026\n   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)\n   - **Attendees:** None\n\n[Task]:\nFind all opportunities related to the companies involved in my upcoming meetings.",
+      "started_at": "2026-04-21T09:01:50.899533+00:00",
+      "ended_at": "2026-04-21T09:02:02.187698+00:00",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "[Result from step 1]:\nHere is an overview of your upcoming meetings:\n\n1. **Meeting: nog e meeting**\n   - **Date:** April 21, 2026\n   - **Time:** 12:30 PM - 1:00 PM\n   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)\n   - **Attendee:** Arne Albrecht (a.albrecht@easi.net)\n\n2. **Meeting: meeting about numbers or something**\n   - **Date:** April 21, 2026\n   - **Time:** 4:30 PM - 5:00 PM\n   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)\n   - **Attendee:** albrecht.arne@gmail.com\n\n3. **Meeting: gym**\n   - **Date:** April 22, 2026\n   - **Time:** 8:30 PM - 9:00 PM\n   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)\n   - **Attendees:** None\n\n4. **Meeting: anotha one**\n   - **Date:** April 23, 2026\n   - **Time:** 11:00 AM - 11:30 AM\n   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)\n   - **Attendees:** None\n\n5. **Meeting: closing opportunity**\n   - **Date:** April 30, 2026\n   - **Time:** Starts at midnight (00:00 AM) and ends on May 1, 2026\n   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)\n   - **Attendees:** None\n\n[Task]:\nGather locations for the companies involved in my upcoming meetings.",
+      "started_at": "2026-04-21T09:01:50.899533+00:00",
+      "ended_at": "2026-04-21T09:02:02.187698+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

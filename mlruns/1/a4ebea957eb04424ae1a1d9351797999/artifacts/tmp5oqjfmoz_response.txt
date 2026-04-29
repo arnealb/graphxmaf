@@ -1,0 +1,61 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is a comprehensive overview of supplier1 based on the gathered information:
+
+### Communication History
+- **Emails from Marc Supplier:**
+  - **Subject:** Follow-up: supplier1 Q2 2026 Delivery Contract
+    - **Received:** 28 April 2026
+    - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7nAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+  - **Subject:** supplier1 — Updated pricing for H2 2026
+    - **Received:** 28 April 2026
+    - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7oAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+  - **Subject:** supplier1 possible order from Arne Albrecht
+    - **Received:** 20 April 2026
+    - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### Upcoming Engagements
+- **Calendar Event:**
+  - **Subject:** supplier1 — Q2 Delivery Review
+  - **Date:** 10 May 2026, 08:00 AM - 09:00 AM
+  - [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLdAAA%3D&exvsurl=1&path=/calendar/item)
+
+### Commercial Relationships
+- **Contacts:**
+  - **Marc Supplier**
+    - **Email:** marc.supplier@supplier1.be
+  - **supplier1_contact lastname**
+  
+- **Opportunities:**
+  - **Opportunity Name:** supplier1 — Q2 Delivery Contract
+    - **Stage:** Negotiation/Review
+    - **Amount:** 85,000.00 EUR
+    - **Close Date:** 30 June 2026
+  
+  - **Opportunity Name:** supp_opportyunity
+    - **Stage:** On-going Approval
+    - **Close Date:** 8 May 2026
+
+- **Case:**
+  - **Case Number:** 00001020
+    - **Subject:** Delayed shipment — supplier1 April batch
+    - **Status:** Working
+    - **Priority:** High
+    - **Created Date:** 28 April 2026
+
+### Physical Presence
+- **Location:**
+  - **Name:** supplier1
+  - **Address:** Rue du Commerce 1, Brussels, 1000, Belgium
+  - **Coordinates:** Latitude 50.8394667, Longitude 4.3673141
+
+### Catalog Items Offered
+- **IT Hardware**
+- **IT Software**
+- **Spreads**
+
+This comprehensive summary provides a clear understanding of supplier1’s communication history, commercial relationships, and physical presence. If you need further details on any aspect, please specify!

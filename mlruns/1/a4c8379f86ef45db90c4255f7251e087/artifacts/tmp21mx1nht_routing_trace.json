@@ -1,0 +1,57 @@
+{
+  "user_query": "Find any files we have related to our most valuable open deal and summarise them.",
+  "plan": {
+    "query": "Find any files we have related to our most valuable open deal and summarise them.",
+    "reasoning": "To address the user's request, it's necessary to first identify the most valuable open deal through the salesforce agent. Once this deal is identified, the graph agent can then be used to find any related files in OneDrive. Since this involves multiple agents to gather necessary information, we'll employ both salesforce and graph in a structured manner.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Identify the most valuable open deal from the pipeline.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "graph",
+        "task": "Find any files related to the deal identified in step 1.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Summarize the results from the files found in step 2, highlighting key information and insights related to the most valuable open deal."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Identify the most valuable open deal from the pipeline.",
+      "started_at": "2026-04-28T12:37:08.626194+00:00",
+      "ended_at": "2026-04-28T12:37:12.108496+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_opportunities"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 2,
+      "input": "[Result from step 1]:\n{\"id\":\"006KI000005b78GYAQ\",\"name\":\"new opp\",\"stage\":\"Value Proposition\",\"amount\":1000000.0,\"close_date\":\"2026-04-30\",\"account_name\":\"Global Media\"}\n\n[Task]:\nFind any files related to the deal identified in step 1.",
+      "started_at": "2026-04-28T12:37:12.167318+00:00",
+      "ended_at": "2026-04-28T12:37:31.523250+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 7,
+      "tool_calls": [
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files"
+      ]
+    }
+  ]
+}

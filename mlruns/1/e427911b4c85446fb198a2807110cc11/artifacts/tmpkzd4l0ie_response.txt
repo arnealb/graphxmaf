@@ -1,0 +1,70 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce)...
+️Executing (graph, smartsales)...
+Synthesizing...
+Here is a comprehensive overview of the companies associated with your open support cases, including case details and physical location information.
+
+### Open Support Cases Overview
+
+#### Colruyt Group
+- **Case Number**: 00001021
+  - **Subject**: Integration issue with POS system
+  - **Status**: New
+  - **Priority**: Medium
+  - **Created Date**: 28 April 2026
+- **Location Information**: No location data available.
+
+#### supplier1
+- **Case Number**: 00001020
+  - **Subject**: Delayed shipment — supplier1 April batch
+  - **Status**: Working
+  - **Priority**: High
+  - **Created Date**: 28 April 2026
+- **Location Information**:
+  - **Street**: Rue du Commerce 1
+  - **City**: Brussels
+  - **Zip**: 1000
+  - **Country**: Belgium
+
+#### Easi Be
+- **Case Numbers**:
+  - 00001018: Verification statut case (In progress, Medium, Created on 6 March 2025)
+  - 00001017: Test (New, Medium, Created on 6 March 2025)
+  - 00001014: Ceci est un test 2 (Waiting for Customer, Medium, Created on 26 February 2025)
+  - 00001013: Ceci est un nouveau case (Test) (Waiting for Customer, Medium, Created on 26 February 2025)
+  - 00001011: Problème avec projecteur Espon EPS003131434 (Waiting for Customer, Medium, Created on 22 March 2024)
+  - 00001007: Ordinateur ne fonctionne pas (Waiting for Customer, Medium, Created on 18 March 2024)
+- **Location Information**: No location data available.
+
+#### Pairi Daiza
+- **Case Numbers**:
+  - 00001006: Issue with order (New, Medium, Created on 18 March 2024)
+  - 00001005: Produits (Waiting for Customer, Medium, Created on 13 March 2024)
+  - 00001001: Sample Case 2: The widgets we received are the wrong size. (New, High, Created on 29 June 2023)
+- **Location Information**: No location data available.
+
+#### Omega SA-NV
+- **Case Number**: 00001003
+  - **Subject**: Delivery issues with order #544
+  - **Status**: New
+  - **Priority**: Medium
+  - **Created Date**: 31 July 2023
+- **Location Information**: No location data available.
+
+#### Global Media
+- **Case Number**: 00001000
+  - **Subject**: Sample Case: Our Widgets have not been delivered.
+  - **Status**: Escalated
+  - **Priority**: High
+  - **Created Date**: 29 June 2023
+- **Location Information**:
+  - **Street**: Mediastraat 10
+  - **City**: Brussels
+  - **Zip**: 1000
+  - **Country**: Belgium
+
+### Communication History
+- No related emails or calendar events were found for the accounts associated with the cases.
+
+This summary should provide you with a clear overview of the companies involved in your open support cases and their relevant details. If you need any further information, feel free to ask!

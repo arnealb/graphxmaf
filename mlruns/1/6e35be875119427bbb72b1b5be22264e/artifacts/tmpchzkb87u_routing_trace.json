@@ -1,0 +1,31 @@
+{
+  "user_query": "Show me my 5 most recent emails.",
+  "plan": {
+    "query": "Show me my 5 most recent emails.",
+    "reasoning": "The user is requesting recent emails, which can be fetched directly from the graph agent without any dependencies.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Fetch the 5 most recent emails from the user's inbox.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the results of step 1 as the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Fetch the 5 most recent emails from the user's inbox.",
+      "started_at": "2026-04-24T09:01:41.361391+00:00",
+      "ended_at": "2026-04-24T09:01:57.610976+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_email"
+      ]
+    }
+  ]
+}

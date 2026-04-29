@@ -1,0 +1,5 @@
+{
+  "user_query": "List SmartSales locations in Belgium sorted by name, using full projection.",
+  "plan": null,
+  "invoked_agents": []
+}

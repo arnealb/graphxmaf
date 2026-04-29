@@ -1,0 +1,13 @@
+{
+  "query": "Show me 5 Salesforce contacts with their email addresses.",
+  "reasoning": "The query requires retrieving a list of contacts from Salesforce along with their email addresses. A single call to the Salesforce agent can retrieve the necessary data without needing separate steps.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch 5 contacts from Salesforce along with their email addresses.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of contacts retrieved in step 1."
+}

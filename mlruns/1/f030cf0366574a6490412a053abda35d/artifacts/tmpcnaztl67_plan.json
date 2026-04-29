@@ -1,0 +1,28 @@
+{
+  "query": "Which companies appear both in our CRM and in our email history?",
+  "reasoning": "To answer the query, I will need to gather data from both the CRM (salesforce) and the email history (graph) to identify common companies represented in both systems.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve a list of companies from the CRM, including their names.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Retrieve a list of companies related to the email history, including their names.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "graph",
+      "task": "Using the company names from step 1 and step 2, identify the companies that appear in both the CRM and email history.",
+      "depends_on": [
+        1,
+        2
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from step 3 to provide a list of companies present in both the CRM and the email history."
+}

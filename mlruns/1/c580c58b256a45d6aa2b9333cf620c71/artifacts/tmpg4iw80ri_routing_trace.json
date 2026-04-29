@@ -1,0 +1,27 @@
+{
+  "user_query": "What fields can I filter SmartSales catalog items by?",
+  "plan": {
+    "query": "What fields can I filter SmartSales catalog items by?",
+    "reasoning": "The query is directly related to obtaining information about the fields in the SmartSales catalog items, which is best handled by the smartsales agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve the available fields that can be used to filter catalog items.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Display the list of available filter fields obtained from the SmartSales agent."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve the available fields that can be used to filter catalog items.",
+      "started_at": "2026-04-21T08:08:41.154417+00:00",
+      "ended_at": "2026-04-21T08:09:18.001371+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

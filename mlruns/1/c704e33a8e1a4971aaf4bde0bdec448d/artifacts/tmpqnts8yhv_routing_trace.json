@@ -1,0 +1,27 @@
+{
+  "user_query": "Search my calendar for events in the next 14 days.",
+  "plan": {
+    "query": "Search my calendar for events in the next 14 days.",
+    "reasoning": "The user is looking for calendar events, which can be directly retrieved using the graph agent that specializes in Microsoft 365 services.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve events from my calendar for the next 14 days.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the retrieved events from the calendar."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve events from my calendar for the next 14 days.",
+      "started_at": "2026-04-20T14:08:03.844658+00:00",
+      "ended_at": "2026-04-20T14:08:16.570162+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

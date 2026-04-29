@@ -1,0 +1,27 @@
+{
+  "user_query": "List 5 open opportunities in Salesforce.",
+  "plan": {
+    "query": "List 5 open opportunities in Salesforce.",
+    "reasoning": "The relevant agent to handle requests regarding open opportunities in Salesforce is the salesforce agent. This step will directly retrieve the needed information without requiring any previous steps.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve a list of 5 open opportunities from the Salesforce CRM.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Provide the retrieved list of 5 open opportunities as the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve a list of 5 open opportunities from the Salesforce CRM.",
+      "started_at": "2026-04-20T15:32:54.653501+00:00",
+      "ended_at": "2026-04-20T15:32:57.483118+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph, salesforce)...
+Synthesizing...
+Based on the recent email senders and the active deals identified, here are the common entities:
+
+### Common Senders with Active Deals
+
+- **Ferrero Benelux**
+  - Email Sender: Ferrero Benelux Marketing (marketing@ferrero.be)
+  - Active Deal: Ferrero — Nutella In-Store Display Campaign, Stage: Prospecting, Close Date: 1 October 2026
+
+- **Anheuser-Busch InBev**
+  - Email Sender: AB InBev Sales (sales@ab-inbev.com)
+  - Active Deal: Anheuser-Busch InBev — Distribution Network Mapping, Stage: Qualification, Close Date: 15 September 2026
+
+- **Delhaize Group**
+  - Email Sender: Delhaize Procurement (procurement@delhaize.eu)
+  - Active Deal: Delhaize Group — Supply Chain Optimisation, Stage: Negotiation/Review, Close Date: 31 August 2026
+
+- **GreenTech Solutions**
+  - Email Sender: GreenTech Solutions (info@greentechsolutions.be)
+  - Active Deal: GreenTech Solutions — Sustainability Dashboard, Stage: Qualification, Close Date: 15 August 2026
+
+These entities represent the email senders who currently have active deals with your organization.

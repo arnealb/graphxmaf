@@ -1,0 +1,25 @@
+{
+  "query": "What is the current status of our relationship with supplier1?",
+  "reasoning": "The query is about a specific relationship, which requires information from all available agents to provide a comprehensive overview of the relationship with supplier1.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve communication history, emails, and calendar events related to supplier1.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Look up accounts, contacts, and any ongoing opportunities or cases related to supplier1.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Gather information about the locations and catalog items associated with supplier1.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all steps to provide a comprehensive overview of the current status of the relationship with supplier1."
+}

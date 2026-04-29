@@ -1,0 +1,27 @@
+{
+  "user_query": "Search my calendar for events scheduled in the next 30 days.",
+  "plan": {
+    "query": "Search my calendar for events scheduled in the next 30 days.",
+    "reasoning": "The query requires accessing the user's calendar to retrieve events within a specific time frame. Therefore, a single step using the graph agent is sufficient.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Search your calendar for events scheduled in the next 30 days.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of events retrieved from the calendar search."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Search your calendar for events scheduled in the next 30 days.",
+      "started_at": "2026-04-21T15:15:43.841595+00:00",
+      "ended_at": "2026-04-21T15:15:59.132627+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

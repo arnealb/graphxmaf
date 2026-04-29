@@ -1,0 +1,13 @@
+{
+  "query": "Show me the most recently created Salesforce contacts.",
+  "reasoning": "The query directly pertains to retrieving contact information from Salesforce, making it efficient to execute in a single step.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve the most recently created contacts from Salesforce.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved contacts as the final answer."
+}

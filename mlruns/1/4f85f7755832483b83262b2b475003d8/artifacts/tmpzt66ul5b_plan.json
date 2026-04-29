@@ -1,0 +1,13 @@
+{
+  "query": "Show me emails I received in the last 14 days.",
+  "reasoning": "The user is asking for specific email data from Microsoft 365, which can be obtained through the graph agent. A single step is sufficient to retrieve the needed information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Fetch emails received in the last 14 days.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the list of emails retrieved in step 1 as the final answer."
+}

@@ -1,0 +1,13 @@
+{
+  "query": "Find Salesforce contacts in the Sales department.",
+  "reasoning": "The task requires querying the Salesforce database to specifically filter and retrieve contacts from the Sales department.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all contacts from the Sales department.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved contacts from Salesforce."
+}

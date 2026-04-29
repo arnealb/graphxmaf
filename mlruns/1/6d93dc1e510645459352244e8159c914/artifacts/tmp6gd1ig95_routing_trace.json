@@ -1,0 +1,25 @@
+{
+  "user_query": "Who sent me emails in the past 7 days? For each sender's email domain, check if there is a matching Salesforce contact for these adresses.",
+  "plan": {
+    "query": "Who sent me emails in the past 7 days? For each sender's email domain, check if there is a matching Salesforce contact for these addresses.",
+    "reasoning": "The first step is to gather the email senders from the past week using the graph agent. The second step involves checking for matching Salesforce contacts based on the email domains from the first step's output.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the email addresses of all senders who sent me emails in the past 7 days.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Find Salesforce contacts that match the email domains of the senders retrieved from step 1.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the list of email senders from step 1 with the corresponding Salesforce contacts found in step 2 to provide a complete overview."
+  },
+  "invoked_agents": []
+}

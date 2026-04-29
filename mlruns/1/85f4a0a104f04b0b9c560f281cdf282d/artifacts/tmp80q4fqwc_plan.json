@@ -1,0 +1,13 @@
+{
+  "query": "Show me my 5 most recent emails.",
+  "reasoning": "I will use the graph agent to access and retrieve the user's most recent emails as it is specialized for handling emails and calendar data.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the 5 most recent emails from the user's email account.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved emails as the final output."
+}

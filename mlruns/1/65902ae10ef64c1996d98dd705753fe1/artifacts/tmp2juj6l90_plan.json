@@ -1,0 +1,21 @@
+{
+  "query": "Search my OneDrive for files about 'locations' and find those locations in SmartSales.",
+  "reasoning": "The first step involves searching OneDrive for relevant files. The second step requires retrieving location data from SmartSales based on the results from the first step, as the locations may be derived from the content of the found files.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search OneDrive for files related to 'locations'.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Using the locations identified from the OneDrive files in step 1, find those locations in SmartSales. If no locations are found in step 1, state that and skip the SmartSales lookup.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from SmartSales with the context of the found files in OneDrive to provide a comprehensive overview of 'locations'."
+}

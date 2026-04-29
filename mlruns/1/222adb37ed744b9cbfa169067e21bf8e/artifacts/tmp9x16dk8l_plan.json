@@ -1,0 +1,13 @@
+{
+  "query": "List Salesforce opportunities sorted by amount, highest first.",
+  "reasoning": "The user query requires retrieving and sorting data from the Salesforce service. This can be done in a single step without any dependencies.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch all opportunities sorted by amount in descending order.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of opportunities as received from the Salesforce agent."
+}

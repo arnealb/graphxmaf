@@ -1,0 +1,27 @@
+{
+  "user_query": "What is the SmartSales order configuration?",
+  "plan": {
+    "query": "What is the SmartSales order configuration?",
+    "reasoning": "The query requires information regarding order configuration, which is within the scope of the smartsales agent. No other agents are needed as they do not pertain to order configurations.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve the current SmartSales order configuration details.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Use the retrieved SmartSales order configuration details to provide the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve the current SmartSales order configuration details.",
+      "started_at": "2026-04-21T08:12:59.776915+00:00",
+      "ended_at": "2026-04-21T08:13:03.720997+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

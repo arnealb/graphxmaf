@@ -1,0 +1,37 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (salesforce)...
+Synthesizing...
+Based on the provided account data and opportunity details from Salesforce, the accounts that have both an active deal and a recent order are as follows:
+
+### Accounts with Both Active Deal and Recent Order:
+
+- **Ferrero Benelux**
+  - Active Deal: "*Ferrero — Nutella In-Store Display Campaign*" (close date: 1 October 2026)
+  
+- **Colruyt Group**
+  - Active Deal: "*Colruyt Group — SmartSales Rollout 2026*" (close date: 30 September 2026)
+  
+- **GreenTech Solutions**
+  - Active Deal: "*GreenTech Solutions — Sustainability Dashboard*" (close date: 15 August 2026)
+  
+- **supplier1**
+  - Active Deal: "*supplier1 — Q2 Delivery Contract*" (close date: 30 June 2026)
+  
+- **Global Media**
+  - Active Deal: "*new opp*" (close date: 30 April 2026)
+  
+- **Omega SA-NV**
+  - Active Deal: "*Project Smile V2*" (close date: 21 August 2025)
+  
+- **Nivea**
+  - Active Deal: "*Prospection Nivea*" (close date: 24 April 2025)
+  
+- **Assurity Corporation**
+  - Active Deal: "*Renewal @ Assurity*" (close date: 20 February 2025)
+
+### None with Identified Recent Orders
+- Other accounts listed from the available data did not meet both criteria of having an active deal and a recent order within the timeframe considered.
+
+This synthesized information provides clarity on the accounts that are currently engaged in both active deals and recent transactions.

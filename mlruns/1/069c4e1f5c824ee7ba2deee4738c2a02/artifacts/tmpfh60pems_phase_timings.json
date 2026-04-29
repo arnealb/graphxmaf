@@ -1,0 +1,114 @@
+{
+  "plan": {
+    "latency_s": 4.951,
+    "steps": 4,
+    "input_tokens": 845,
+    "output_tokens": 342,
+    "total_tokens": 1187
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "salesforce",
+      "latency_s": 13.945,
+      "llm_turns": 2,
+      "n_tool_calls": 1,
+      "tool_calls": [
+        "get_cases"
+      ],
+      "input_tokens": 4545,
+      "output_tokens": 1314,
+      "total_tokens": 5859
+    },
+    {
+      "step_id": 2,
+      "agent": "salesforce",
+      "latency_s": 18.993,
+      "llm_turns": 2,
+      "n_tool_calls": 8,
+      "tool_calls": [
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts"
+      ],
+      "input_tokens": 5980,
+      "output_tokens": 1280,
+      "total_tokens": 7260
+    },
+    {
+      "step_id": 4,
+      "agent": "smartsales",
+      "latency_s": 36.982,
+      "llm_turns": 4,
+      "n_tool_calls": 24,
+      "tool_calls": [
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items"
+      ],
+      "input_tokens": 18125,
+      "output_tokens": 4035,
+      "total_tokens": 22160
+    },
+    {
+      "step_id": 3,
+      "agent": "graph",
+      "latency_s": 38.019,
+      "llm_turns": 3,
+      "n_tool_calls": 16,
+      "tool_calls": [
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar"
+      ],
+      "input_tokens": 23967,
+      "output_tokens": 5174,
+      "total_tokens": 29141
+    }
+  ],
+  "synthesis": {
+    "latency_s": 13.51,
+    "input_tokens": 6719,
+    "output_tokens": 894,
+    "total_tokens": 7613
+  }
+}

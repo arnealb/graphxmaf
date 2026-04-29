@@ -1,0 +1,13 @@
+{
+  "query": "List the first 5 SmartSales locations.",
+  "reasoning": "Only one agent is required to execute the task of retrieving locations, so only one step is necessary.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the first 5 locations from the SmartSales database.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the list of locations retrieved from the SmartSales agent."
+}

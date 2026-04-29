@@ -1,0 +1,13 @@
+{
+  "query": "Show me Salesforce opportunities in the 'Qualification' stage.",
+  "reasoning": "The user is requesting specific data related to Salesforce opportunities at a particular stage. This can be accomplished in a single step using the Salesforce agent, which can filter opportunities based on their current stage.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch all opportunities that are currently in the 'Qualification' stage.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the results from step 1 as the final answer."
+}

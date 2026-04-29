@@ -1,0 +1,13 @@
+{
+  "query": "List SmartSales catalog items.",
+  "reasoning": "Only one step is necessary to retrieve the catalog items from SmartSales.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the list of catalog items available in SmartSales.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved catalog items as the final answer."
+}

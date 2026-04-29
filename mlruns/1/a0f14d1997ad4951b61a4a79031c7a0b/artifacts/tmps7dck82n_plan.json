@@ -1,0 +1,13 @@
+{
+  "query": "Show me Salesforce leads with the status 'New'.",
+  "reasoning": "The task requires fetching leads from Salesforce that match a specific status. Only one step is necessary since we can retrieve all required data in a single Salesforce query.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch all leads from Salesforce with the status 'New'.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of leads retrieved from Salesforce in response to the query."
+}

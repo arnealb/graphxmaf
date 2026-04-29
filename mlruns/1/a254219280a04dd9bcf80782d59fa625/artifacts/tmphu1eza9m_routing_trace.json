@@ -1,0 +1,31 @@
+{
+  "user_query": "Search for emails that have the word 'meeting' in the subject.",
+  "plan": {
+    "query": "Search for emails that have the word 'meeting' in the subject.",
+    "reasoning": "The user is looking for emails specifically, so the graph agent is appropriate for fetching the requested email data.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Search for all emails that contain the word 'meeting' in the subject.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Return the list of emails found in step 1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Search for all emails that contain the word 'meeting' in the subject.",
+      "started_at": "2026-04-24T09:02:12.981620+00:00",
+      "ended_at": "2026-04-24T09:02:41.419227+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email"
+      ]
+    }
+  ]
+}

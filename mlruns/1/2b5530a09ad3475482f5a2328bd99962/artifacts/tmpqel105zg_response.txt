@@ -1,0 +1,9 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+To request access to Salesforce as a new employee, please refer to the Onboarding Guide available at the link below:
+
+- [Onboarding Guide](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BEDA3CC1C-EA81-4721-B534-662D7942DE88%7D&file=onboarding_guide_easi.docx.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+This document contains step-by-step instructions for the access request process.

@@ -1,0 +1,25 @@
+{
+  "query": "Tell me everything you know about supplier1.",
+  "reasoning": "The query requires a comprehensive overview of the entity 'supplier1', which necessitates data from all available agents to provide a full picture across different domains.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Find and retrieve all emails, calendar events, and OneDrive files related to supplier1.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Look up all CRM accounts, contacts, leads, opportunities, and cases related to supplier1.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Gather information about the physical locations and product catalog items related to supplier1.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all agents to provide a comprehensive overview of supplier1, including communication history, commercial relationships, and location information."
+}

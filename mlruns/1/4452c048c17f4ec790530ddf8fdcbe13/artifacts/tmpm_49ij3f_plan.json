@@ -1,0 +1,13 @@
+{
+  "query": "List my Microsoft 365 contacts and include their phone numbers.",
+  "reasoning": "The query is focused solely on retrieving contacts and their phone numbers from the Microsoft 365 system, which is handled by the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve a list of my Microsoft 365 contacts along with their phone numbers.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of contacts retrieved from the graph agent in a clear format."
+}

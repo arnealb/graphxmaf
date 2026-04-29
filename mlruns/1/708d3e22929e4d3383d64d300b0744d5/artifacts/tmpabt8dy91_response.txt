@@ -1,0 +1,23 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+### Summary of Upcoming Calendar Event
+
+- **Event**: Closing Opportunity
+- **Start Date**: April 30, 2026
+- **End Date**: May 1, 2026
+- **Organizer**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+#### Related Emails
+1. **Email from Arne Albrecht**
+   - **Subject**: Accepted: meeting about numbers or something
+   - **Received**: April 16, 2026
+   - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANR%2BIE1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+2. **Email from SmartAdmin**
+   - **Subject**: meeting about numbers or something
+   - **Received**: April 16, 2026
+   - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANO3voGAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+This information summarizes your next calendar event and the relevant emails.

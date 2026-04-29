@@ -1,0 +1,27 @@
+{
+  "user_query": "What fields can be displayed for SmartSales orders?",
+  "plan": {
+    "query": "What fields can be displayed for SmartSales orders?",
+    "reasoning": "The best step is to query the Smartsales agent since it specializes in catalog items and locations, which is where the order fields would likely be defined.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve the list of fields that can be displayed for SmartSales orders.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Provide the retrieved fields as the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve the list of fields that can be displayed for SmartSales orders.",
+      "started_at": "2026-04-20T15:39:51.034762+00:00",
+      "ended_at": "2026-04-20T15:40:06.675960+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

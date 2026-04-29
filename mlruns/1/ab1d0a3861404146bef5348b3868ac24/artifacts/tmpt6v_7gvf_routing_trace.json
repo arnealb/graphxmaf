@@ -1,0 +1,57 @@
+{
+  "user_query": "Give me a 360 view of this salesforce account: supplier1 : open opportunities, any SmartSales locations for that account, and any emails I have about that company.",
+  "plan": {
+    "query": "Give me a 360 view of this salesforce account: supplier1 : open opportunities, any SmartSales locations for that account, and any emails I have about that company.",
+    "reasoning": "To provide a comprehensive view of the 'supplier1' account, I need to gather open opportunities from Salesforce, find any relevant locations from SmartSales, and retrieve emails from Graph. Each data source is independent, allowing them to run in parallel.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve open opportunities for the account named 'supplier1'.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "smartsales",
+        "task": "Find any locations associated with the account 'supplier1'.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "graph",
+        "task": "Fetch all emails related to the company 'supplier1'.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from steps 1, 2, and 3 to provide a comprehensive view of the 'supplier1' account, including open opportunities, SmartSales locations, and relevant email communications."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve open opportunities for the account named 'supplier1'.",
+      "started_at": "2026-04-20T14:44:12.141164+00:00",
+      "ended_at": "2026-04-20T14:44:20.106582+00:00",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "smartsales",
+      "order": 2,
+      "input": "Find any locations associated with the account 'supplier1'.",
+      "started_at": "2026-04-20T14:44:12.141164+00:00",
+      "ended_at": "2026-04-20T14:44:20.106582+00:00",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "graph",
+      "order": 3,
+      "input": "Fetch all emails related to the company 'supplier1'.",
+      "started_at": "2026-04-20T14:44:12.141164+00:00",
+      "ended_at": "2026-04-20T14:44:20.106582+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

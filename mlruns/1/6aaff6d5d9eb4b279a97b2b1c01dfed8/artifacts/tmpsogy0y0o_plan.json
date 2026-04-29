@@ -1,0 +1,13 @@
+{
+  "query": "List all SmartSales locations.",
+  "reasoning": "The query specifically asks for locations, which can be directly retrieved using the smartsales agent without any dependencies.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve a list of all available locations from SmartSales.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of locations obtained from step 1 as the final answer."
+}

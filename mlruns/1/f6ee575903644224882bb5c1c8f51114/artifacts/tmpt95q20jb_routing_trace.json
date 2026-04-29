@@ -1,0 +1,92 @@
+{
+  "user_query": "Give me an overview of my upcoming meetings from Microsoft 365, related Salesforce opportunities, and SmartSales locations for the companies involved.",
+  "plan": {
+    "query": "Give me an overview of my upcoming meetings from Microsoft 365, related Salesforce opportunities, and SmartSales locations for the companies involved.",
+    "reasoning": "This plan requires retrieving calendar events from Microsoft 365, then using the returned details to find related opportunities in Salesforce and locations from SmartSales for the corresponding companies. The steps are structured to minimize the number of calls required and to gather comprehensive data efficiently.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve a list of my upcoming meetings, including titles, times, and any related company details.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Fetch opportunities related to the companies mentioned in the upcoming meetings from step 1.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Get the locations for the companies associated with the upcoming meetings from step 1.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the data from steps 1, 2, and 3 to provide an overview of upcoming meetings, related Salesforce opportunities, and SmartSales locations."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve a list of my upcoming meetings, including titles, times, and any related company details.",
+      "started_at": "2026-04-27T13:06:11.748177+00:00",
+      "ended_at": "2026-04-27T13:06:25.436976+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_calendar"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "[Result from step 1]:\n[\n    {\n        \"subject\": \"closing opportunity\",\n        \"start\": \"2026-04-30T00:00:00.0000000\",\n        \"end\": \"2026-05-01T00:00:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"anotha one\",\n        \"start\": \"2026-04-23T11:00:00.0000000\",\n        \"end\": \"2026-04-23T11:30:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"gym\",\n        \"start\": \"2026-04-22T20:30:00.0000000\",\n        \"end\": \"2026-04-22T21:00:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"meeting about numbers or something\",\n        \"start\": \"2026-04-21T16:30:00.0000000\",\n        \"end\": \"2026-04-21T17:00:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"nog e meeting\",\n        \"start\": \"2026-04-21T12:30:00.0000000\",\n        \"end\": \"2026-04-21T13:00:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"zup me de boys\",\n        \"start\": \"2026-04-17T10:30:00.0000000\",\n        \"end\": \"2026-04-17T11:00:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"meeting\",\n        \"start\": \"2026-04-15T13:00:00.0000000\",\n        \"end\": \"2026-04-15T13:30:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"find me \",\n        \"start\": \"2026-04-10T10:30:00.0000000\",\n        \"end\": \"2026-04-10T11:00:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"Test Meeting FDE\",\n        \"start\": \"2026-03-25T15:00:00.0000000\",\n        \"end\": \"2026-03-25T15:30:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"test meeting 2\",\n        \"start\": \"2026-03-25T09:00:00.0000000\",\n        \"end\": \"2026-03-25T09:30:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    }\n]\n\n[Task]:\nGet the locations for the companies associated with the upcoming meetings from step 1.",
+      "started_at": "2026-04-27T13:06:25.514151+00:00",
+      "ended_at": "2026-04-27T13:06:38.909431+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "list_locations",
+        "list_locations"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "[Result from step 1]:\n[\n    {\n        \"subject\": \"closing opportunity\",\n        \"start\": \"2026-04-30T00:00:00.0000000\",\n        \"end\": \"2026-05-01T00:00:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"anotha one\",\n        \"start\": \"2026-04-23T11:00:00.0000000\",\n        \"end\": \"2026-04-23T11:30:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"gym\",\n        \"start\": \"2026-04-22T20:30:00.0000000\",\n        \"end\": \"2026-04-22T21:00:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"meeting about numbers or something\",\n        \"start\": \"2026-04-21T16:30:00.0000000\",\n        \"end\": \"2026-04-21T17:00:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"nog e meeting\",\n        \"start\": \"2026-04-21T12:30:00.0000000\",\n        \"end\": \"2026-04-21T13:00:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"zup me de boys\",\n        \"start\": \"2026-04-17T10:30:00.0000000\",\n        \"end\": \"2026-04-17T11:00:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"meeting\",\n        \"start\": \"2026-04-15T13:00:00.0000000\",\n        \"end\": \"2026-04-15T13:30:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"find me \",\n        \"start\": \"2026-04-10T10:30:00.0000000\",\n        \"end\": \"2026-04-10T11:00:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"Test Meeting FDE\",\n        \"start\": \"2026-03-25T15:00:00.0000000\",\n        \"end\": \"2026-03-25T15:30:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    },\n    {\n        \"subject\": \"test meeting 2\",\n        \"start\": \"2026-03-25T09:00:00.0000000\",\n        \"end\": \"2026-03-25T09:30:00.0000000\",\n        \"company\": \"SmartAdmin\"\n    }\n]\n\n[Task]:\nFetch opportunities related to the companies mentioned in the upcoming meetings from step 1.",
+      "started_at": "2026-04-27T13:06:25.513018+00:00",
+      "ended_at": "2026-04-27T13:06:42.448222+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 11,
+      "tool_calls": [
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "find_accounts",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities"
+      ]
+    }
+  ]
+}

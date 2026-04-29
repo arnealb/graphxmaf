@@ -1,0 +1,29 @@
+{
+  "query": "Give me an overview of my upcoming meetings from Microsoft 365, related Salesforce opportunities, and SmartSales locations for the companies involved.",
+  "reasoning": "This plan includes three steps to gather the required information: upcoming meetings from Microsoft 365, related Salesforce opportunities, and SmartSales locations. Each step operates independently, avoiding unnecessary complexity.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Fetch all upcoming meetings from Microsoft 365 calendar.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Retrieve all opportunities linked to the accounts involved in the upcoming meetings from step 1.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Get the locations related to the companies in the opportunities identified from step 2.",
+      "depends_on": [
+        2
+      ]
+    }
+  ],
+  "synthesis": "Combine the results of steps 1, 2, and 3 into a coherent overview of upcoming meetings along with related Salesforce opportunities and their corresponding SmartSales locations."
+}

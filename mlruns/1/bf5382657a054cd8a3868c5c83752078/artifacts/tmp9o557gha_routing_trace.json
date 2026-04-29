@@ -1,0 +1,27 @@
+{
+  "user_query": "Find Salesforce leads from the Technology or Software industry.",
+  "plan": {
+    "query": "Find Salesforce leads from the Technology or Software industry.",
+    "reasoning": "The query specifically requests leads within Salesforce categorized by industry, making it efficient to retrieve relevant leads in one step.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch all leads that are categorized under the Technology or Software industry.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of leads retrieved from step 1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Fetch all leads that are categorized under the Technology or Software industry.",
+      "started_at": "2026-04-22T13:01:21.016974+00:00",
+      "ended_at": "2026-04-22T13:01:26.699668+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

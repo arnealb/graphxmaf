@@ -1,0 +1,21 @@
+{
+  "query": "List all SmartSales locations, then retrieve the full details of the first result.",
+  "reasoning": "The task is broken down into two steps: first, to retrieve all SmartSales locations, and secondly, to get the details of the first location found. The second step relies on the results of the first step.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "List all available locations from SmartSales.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Retrieve the full details of the first location from the results of step 1 (if any). If there are no locations, state that and skip the details retrieval.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the location details retrieved in step 2 with the list of locations from step 1 to provide a comprehensive response."
+}

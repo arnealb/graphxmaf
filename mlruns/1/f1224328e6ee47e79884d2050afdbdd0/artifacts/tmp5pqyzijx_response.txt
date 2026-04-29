@@ -1,0 +1,19 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (smartsales)...
+Synthesizing...
+Based on the recent emails you received and the registered locations, here is the list of companies that do not have a location registered with you:
+
+### Companies Without Registered Locations:
+- **Ferrero Benelux** - (marketing@ferrero.be)
+- **GreenTech Solutions** - (info@greentechsolutions.be)
+- **Colruyt Group** - (procurement@colruyt.be)
+- **Supplier 1** - (marc.supplier@supplier1.be)
+- **Microsoft Azure** - (azure-noreply@microsoft.com)
+- **SmartAdmin** - (SmartAdmin@easigroupdemo.onmicrosoft.com)
+- **SharePoint Online** - (no-reply@sharepointonline.com)
+- **Microsoft Notifications** - (no-reply@notify.microsoft.com)
+
+### Notes:
+- **EASI** and **Arne Albrecht** do have registered locations with you, hence they are not included in this list.

@@ -1,0 +1,29 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+### Summary of the Most Valuable Open Deal
+
+**Deal Information** (From Salesforce):
+- **ID**: 006KI000005b7EEYAY
+- **Name**: supp_opportyunity
+- **Stage**: On-going Approval
+- **Close Date**: 8 May 2026
+- **Account Name**: supplier1
+
+### Related Files
+
+1. **[supplier1_delivery_report_Q2_2026.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BD85C356D-46B4-4F1F-91BF-83529C86BBA0%7D&file=supplier1_delivery_report_Q2_2026.docx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+   - **Created**: 28 April 2026
+   - **Size**: 11,874 bytes
+
+2. **[contract_draft_Q1.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B549E60A0-E809-49CA-BC1A-42886C064537%7D&file=contract_draft_Q1.docx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+   - **Created**: 29 April 2026
+   - **Size**: 12,609 bytes
+
+3. **[SmartSales_Locations.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BF23C8827-CC49-4607-A0B8-FF47034DC9E8%7D&file=SmartSales_Locations.docx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+   - **Created**: 20 April 2026
+   - **Size**: 9,528 bytes
+
+These files are relevant to the ongoing approval process of the identified deal with supplier1.

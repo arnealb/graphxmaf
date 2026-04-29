@@ -1,0 +1,18 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph, salesforce)...
+Synthesizing...
+Here are the companies listed in your upcoming calendar events that are not recorded in Salesforce:
+
+- **Companies without records in Salesforce:**
+  - **Closing opportunity** (No company specified)
+  - **Weekly sync — Dorian Feaux** (No company specified)
+  - **Sprint review — Arne Albrecht** (No company specified)
+  - **Supplier1 — Q2 Delivery Review**
+  - **GreenTech Solutions** (Present in Salesforce)
+  - **Colruyt Group — SmartSales Rollout Kickoff** (Present in Salesforce)
+
+From the calendar events, the only company that **is not recorded in Salesforce** is:
+- **Supplier1**
+
+**Note:** The other events listed do not specify a company name, therefore those events can't be matched to a company record.

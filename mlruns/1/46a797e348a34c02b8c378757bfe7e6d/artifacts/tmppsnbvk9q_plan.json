@@ -1,0 +1,25 @@
+{
+  "query": "Give me a full briefing on Colruyt.",
+  "reasoning": "The query is an entity-centric request for comprehensive information about Colruyt, requiring data from all available agents to provide a complete overview.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Fetch all communication history, emails, calendar events, and documents related to Colruyt.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Retrieve all CRM accounts, contacts, leads, opportunities, and cases associated with Colruyt.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Gather information on locations, catalog items, and physical presence related to Colruyt.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all steps to create a comprehensive briefing on Colruyt."
+}

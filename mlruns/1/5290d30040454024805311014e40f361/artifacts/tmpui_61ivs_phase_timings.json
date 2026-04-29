@@ -1,0 +1,88 @@
+{
+  "plan": {
+    "latency_s": 3.062,
+    "steps": 2,
+    "input_tokens": 848,
+    "output_tokens": 200,
+    "total_tokens": 1048
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "salesforce",
+      "latency_s": 6.14,
+      "llm_turns": 2,
+      "n_tool_calls": 1,
+      "tool_calls": [
+        "get_opportunities"
+      ],
+      "input_tokens": 5676,
+      "output_tokens": 325,
+      "total_tokens": 6001
+    },
+    {
+      "step_id": 2,
+      "agent": "salesforce",
+      "latency_s": 38.549,
+      "llm_turns": 3,
+      "n_tool_calls": 46,
+      "tool_calls": [
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities",
+        "get_opportunities"
+      ],
+      "input_tokens": 9860,
+      "output_tokens": 2099,
+      "total_tokens": 11959
+    }
+  ],
+  "synthesis": {
+    "latency_s": 5.564,
+    "input_tokens": 2634,
+    "output_tokens": 346,
+    "total_tokens": 2980
+  }
+}

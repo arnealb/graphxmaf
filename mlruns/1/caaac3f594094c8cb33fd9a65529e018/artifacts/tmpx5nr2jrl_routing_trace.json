@@ -1,0 +1,27 @@
+{
+  "user_query": "List all SmartSales locations.",
+  "plan": {
+    "query": "List all SmartSales locations.",
+    "reasoning": "The task can be accomplished with a single step using the smartsales agent to fetch all locations.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve a list of all SmartSales locations.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of locations retrieved from the SmartSales agent."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve a list of all SmartSales locations.",
+      "started_at": "2026-04-22T12:00:56.009388+00:00",
+      "ended_at": "2026-04-22T12:02:08.585952+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

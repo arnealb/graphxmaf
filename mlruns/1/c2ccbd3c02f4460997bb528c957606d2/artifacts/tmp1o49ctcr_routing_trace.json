@@ -1,0 +1,31 @@
+{
+  "user_query": "What fields can I use to sort SmartSales locations?",
+  "plan": {
+    "query": "What fields can I use to sort SmartSales locations?",
+    "reasoning": "The user is inquiring specifically about SmartSales locations and the attributes available for sorting them, which can be directly addressed by querying the smartsales agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve the fields available for sorting SmartSales locations.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Provide the list of fields retrieved from the smartsales agent as the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve the fields available for sorting SmartSales locations.",
+      "started_at": "2026-04-24T09:49:57.615395+00:00",
+      "ended_at": "2026-04-24T09:50:07.045376+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_sortable_fields"
+      ]
+    }
+  ]
+}

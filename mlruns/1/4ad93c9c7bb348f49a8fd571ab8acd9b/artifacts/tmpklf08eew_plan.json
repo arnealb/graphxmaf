@@ -1,0 +1,13 @@
+{
+  "query": "Find Salesforce leads that have been converted.",
+  "reasoning": "To find the converted leads in Salesforce, I will utilize the salesforce agent as it directly handles leads and their statuses, including conversion.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all leads from Salesforce that have the status 'converted'.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of converted leads obtained from the Salesforce agent."
+}

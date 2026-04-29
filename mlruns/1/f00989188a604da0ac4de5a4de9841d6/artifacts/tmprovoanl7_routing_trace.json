@@ -1,0 +1,48 @@
+{
+  "user_query": "What locations do we have and what deals are linked to them?",
+  "plan": {
+    "query": "What locations do we have and what deals are linked to them?",
+    "reasoning": "The query requires information on locations which are linked to deals. Thus, we need to fetch both locations and relevant deal data from the available agents. The smartsales agent will provide location data, while the salesforce agent will provide deal-related information.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve all locations related to our operations.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Fetch all deals and their associated information.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the locations from step 1 with the deals information from step 2 to provide a comprehensive overview of locations and their linked deals."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Fetch all deals and their associated information.",
+      "started_at": "2026-04-29T11:54:19.451922+00:00",
+      "ended_at": "2026-04-29T11:54:21.432954+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 0,
+      "tool_calls": []
+    },
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve all locations related to our operations.",
+      "started_at": "2026-04-29T11:54:19.451199+00:00",
+      "ended_at": "2026-04-29T11:54:44.651643+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations"
+      ]
+    }
+  ]
+}

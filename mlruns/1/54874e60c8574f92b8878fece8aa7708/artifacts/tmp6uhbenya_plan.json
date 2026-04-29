@@ -1,0 +1,13 @@
+{
+  "query": "What should I do if my car gets damaged on the way to work?",
+  "reasoning": "This query is about internal company processes and procedures, which can be answered by searching for relevant documents such as HR policies or expense rules related to vehicle damages.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search OneDrive for company documents and policies regarding what to do if your car gets damaged on the way to work.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the user with the relevant guidelines or steps outlined in the document found in step 1."
+}

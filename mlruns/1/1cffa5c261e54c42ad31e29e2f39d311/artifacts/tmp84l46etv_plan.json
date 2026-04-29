@@ -1,0 +1,25 @@
+{
+  "query": "Is there anything I should follow up on today?",
+  "reasoning": "The user is asking for potential follow-up tasks which may include communication history, CRM opportunities, and any relevant information regarding locations or products that could require attention. To gather a comprehensive perspective, I will involve all available agents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve today's emails and calendar events for follow-up items related to any contacts or companies.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Check for any open opportunities, cases, or leads that have updates or require follow-up today.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Identify any relevant locations or catalog items that may need attention or follow-up based on today's activities.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Aggregate the results from all agents to compile a comprehensive list of follow-up tasks for today."
+}

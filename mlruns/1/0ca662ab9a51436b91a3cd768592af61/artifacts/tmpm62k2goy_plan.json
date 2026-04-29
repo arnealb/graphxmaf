@@ -1,0 +1,13 @@
+{
+  "query": "List open support cases in Salesforce.",
+  "reasoning": "The task requires querying the Salesforce agent to gather information about open support cases. No additional agents are needed as this is a single-task query.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all open support cases from the system.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of open support cases retrieved in step 1."
+}

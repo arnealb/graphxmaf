@@ -1,0 +1,17 @@
+{
+  "user_query": "Find a document called 'agenda' in OneDrive and show its content.",
+  "plan": {
+    "query": "Find a document called 'agenda' in OneDrive and show its content.",
+    "reasoning": "Since the task involves searching for a document in OneDrive, only the graph agent is necessary to find and retrieve the document's content in a single step.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Search for a document named 'agenda' in OneDrive and retrieve its content.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the content of the document retrieved in step 1."
+  },
+  "invoked_agents": []
+}

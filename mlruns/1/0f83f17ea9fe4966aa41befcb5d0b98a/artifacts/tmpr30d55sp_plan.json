@@ -1,0 +1,13 @@
+{
+  "query": "What is the SmartSales order configuration?",
+  "reasoning": "To provide information about the SmartSales order configuration, the smartsales agent can be directly queried without dependencies.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the current order configuration details for SmartSales.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the results of step 1 as the final answer."
+}

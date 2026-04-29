@@ -1,0 +1,60 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce)...
+️Executing (graph, smartsales)...
+Synthesizing...
+### Overview of the Company Behind Your Support Case
+
+#### Communication History
+- **Upcoming Meetings:**
+  - **Closing Opportunity**
+    - **Date:** 30 April 2026 - 01 May 2026
+    - **Organizer:** SmartAdmin
+  - **Weekly Sync with Dorian Feaux**
+    - **Date:** 6 May 2026, 07:00 - 07:30
+    - **Organizer:** SmartAdmin
+  - **Sprint Review with Arne Albrecht**
+    - **Date:** 8 May 2026, 12:00 - 13:00
+    - **Organizer:** SmartAdmin
+  - **Supplier1 - Q2 Delivery Review**
+    - **Date:** 10 May 2026, 08:00 - 09:00
+    - **Organizer:** SmartAdmin
+  - **GreenTech Solutions - Technical Qualification Call**
+    - **Date:** 12 May 2026, 09:00 - 10:00
+    - **Organizer:** SmartAdmin
+  - **Colruyt Group - SmartSales Rollout Kickoff**
+    - **Date:** 15 May 2026, 12:00 - 13:30
+    - **Organizer:** SmartAdmin
+
+#### Location Information
+- **AACO DAVIDSON**
+  - **Address:** Havenkant 6, Leuven, 3000, Belgium
+  - **Coordinates:** Latitude 50.8873413, Longitude 4.7005038
+- **Stream Software**
+  - **Address:** Potvlietlaan 4, Antwerpen, 2600, Belgium
+- **Michelles Brasserie**
+  - **Address:** Ingelmunstersestraat 46, Izegem, 8870, Belgium
+- **Medimarket Zaventem**
+  - **City:** Zaventem, Belgium
+- **Colruyt - Halle**
+  - **Address:** Edingensesteenweg 196, Halle, 1500, Belgium
+  - **Coordinates:** Latitude 50.7292372, Longitude 4.2219105
+- **Customer1**
+  - **Address:** Markt 5, Bruges, 8000, Belgium
+  - **Coordinates:** Latitude 51.2086225, Longitude 3.2250864
+
+#### CRM Data
+- **Available Items:**
+  - **IT Hardware**
+  - **IT Software**
+  - **USB-C Docking Station** - Price: €249.00, Description: Universal docking station with dual display support
+  - **Wireless Headset UC** - Price: €189.50, Description: Noise-cancelling headset for unified communications
+  - **Ergonomic Keyboard** - Price: €129.00, Description: Split ergonomic wireless keyboard
+  - **Business Laptop Pro 15** - Price: €1,299.99, Description: High-performance laptop for enterprise use
+  - **Software License Pack** - Price: €499.00, Description: Annual enterprise software license bundle
+  - **Ultra Wide Monitor 34** - Price: €549.00, Description: 34 inch curved ultrawide display
+  - **Nutella 750g** - Price: €5.99, Description: Hazelnut spread in 750g jar
+  - **Colruyt House Brand - Retail Display Kit** - Price: €89.50, Description: In-store display kit for Colruyt Group
+  - **GreenTech Solutions - Dashboard License** - Price: €2,500.00, Description: Annual software license for the GreenTech sustainability dashboard
+
+This information summarizes the company's communication, physical locations, and available products based on the most recent support case. Let me know if you need further details!

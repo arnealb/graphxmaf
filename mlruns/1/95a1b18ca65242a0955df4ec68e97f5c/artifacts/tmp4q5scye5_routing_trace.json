@@ -1,0 +1,27 @@
+{
+  "user_query": "Show me emails I received in the last 14 days.",
+  "plan": {
+    "query": "Show me emails I received in the last 14 days.",
+    "reasoning": "The task involves retrieving emails, which is a function of the graph agent. No additional data from other agents is required.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Fetch all emails received in the last 14 days.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the results of step 1 as the list of received emails."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Fetch all emails received in the last 14 days.",
+      "started_at": "2026-04-22T07:11:19.926504+00:00",
+      "ended_at": "2026-04-22T07:11:26.955921+00:00",
+      "success": false,
+      "error": "Failed to establish MCP connection."
+    }
+  ]
+}

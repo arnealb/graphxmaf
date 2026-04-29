@@ -1,0 +1,13 @@
+{
+  "query": "What should I do if my car gets damaged on the way to work?",
+  "reasoning": "This query pertains to internal company processes and policies, specifically related to handling incidents such as car damage while commuting. Therefore, it should be directed to the graph agent to search for the relevant documents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for company documents related to procedures for incidents or damage while commuting to work.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Summarize the document results from step 1 to provide a clear answer on the procedures to follow in case of car damage while commuting."
+}

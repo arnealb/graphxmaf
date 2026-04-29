@@ -1,0 +1,35 @@
+Planning query...
+Plan: 4 stap(pen)
+️Executing (salesforce)...
+️Executing (salesforce, graph, smartsales)...
+Synthesizing...
+Here is a comprehensive overview of the Delhaize Group, the company behind your most recent open support case:
+
+### General Information
+- **Company Name**: Delhaize Group
+- **Open Support Case**: 
+  - **Case Number**: 00001023
+  - **Subject**: EDI connection issue
+  - **Status**: Working
+  - **Priority**: Medium
+  - **Created Date**: 28 April 2026
+
+### Location
+- **Main Location**:
+  - **Name**: AD Delhaize - Forest
+  - **Address**: Chaussée de Neerstalle 800, Brussels, 1190, Belgium
+  - **Coordinates**: 
+    - **Latitude**: 50.7961794
+    - **Longitude**: 4.3215302
+
+### Product and Service Offerings
+- **Catalog Items**:
+  - **IT Hardware** (Group)
+  - **IT Software** (Group)
+  - **Spreads** (Group)
+
+### Additional Notes
+- No related emails or calendar events were found concerning Delhaize Group.
+- There were no opportunities or additional cases related to this account.
+
+This information provides insight into the Delhaize Group, their current case status, and some of the services they provide.

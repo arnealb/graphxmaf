@@ -1,0 +1,13 @@
+{
+  "query": "Find the email address of Dorian.",
+  "reasoning": "The query requires obtaining contact information, specifically Dorian's email address, which can be fetched directly from the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the email address of the contact named Dorian.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the email address retrieved from the graph agent as the final answer."
+}

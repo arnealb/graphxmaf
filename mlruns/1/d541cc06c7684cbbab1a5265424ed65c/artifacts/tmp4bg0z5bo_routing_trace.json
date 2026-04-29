@@ -1,0 +1,27 @@
+{
+  "user_query": "Search OneDrive for a file called 'report' and read its content.",
+  "plan": {
+    "query": "Search OneDrive for a file called 'report' and read its content.",
+    "reasoning": "The task requires accessing OneDrive to find a specific file and retrieving its content, which can be done directly using the graph agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Search for a file named 'report' in OneDrive and read its content.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Return the content of the 'report' file retrieved from OneDrive."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Search for a file named 'report' in OneDrive and read its content.",
+      "started_at": "2026-04-20T15:24:57.503127+00:00",
+      "ended_at": "2026-04-20T15:25:56.358887+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

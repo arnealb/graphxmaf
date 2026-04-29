@@ -1,0 +1,5 @@
+{
+  "user_query": "Give me a 360 view of this salesforce account: supplier1 : open opportunities, any SmartSales locations for that account, and any emails I have about that company.",
+  "plan": null,
+  "invoked_agents": []
+}

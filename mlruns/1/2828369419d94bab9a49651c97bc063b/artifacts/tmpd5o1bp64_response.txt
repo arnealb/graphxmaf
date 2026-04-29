@@ -1,0 +1,12 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+The contact person associated with your most expensive open order is:
+
+- **Name:** John Lastname
+- **Email:** john.lastname@globalmedia.com
+- **Phone:** 0272700252
+- **Account:** Global Media
+
+This information was retrieved from Salesforce.

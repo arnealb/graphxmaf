@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "graphmcpwh": {
+      "type": "http",
+      "url": "https://graph-mcp.whitemushroom-38caf70a.swedencentral.azurecontainerapps.io/mcp"
+    }
+  }
+}

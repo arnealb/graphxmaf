@@ -1,0 +1,65 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+### Upcoming Meetings
+
+1. **Closing Opportunity**
+   - **Date:** 30 April 2026 - 1 May 2026
+   - **Organizer:** SmartAdmin
+
+2. **Weekly Sync — Dorian Feaux**
+   - **Date:** 6 May 2026, 07:00 - 07:30
+   - **Organizer:** SmartAdmin
+
+3. **Sprint Review — Arne Albrecht**
+   - **Date:** 8 May 2026, 12:00 - 13:00
+   - **Organizer:** SmartAdmin
+
+4. **Supplier1 — Q2 Delivery Review**
+   - **Date:** 10 May 2026, 08:00 - 09:00
+   - **Organizer:** SmartAdmin
+
+5. **GreenTech Solutions — Technical Qualification Call**
+   - **Date:** 12 May 2026, 09:00 - 10:00
+   - **Organizer:** SmartAdmin
+
+6. **Colruyt Group — SmartSales Rollout Kickoff**
+   - **Date:** 15 May 2026, 12:00 - 13:30
+   - **Organizer:** SmartAdmin
+
+---
+
+### Company Details
+
+#### 1. Supplier1
+- **Contact:** Marc Supplier
+  - **Email:** marc.supplier@supplier1.be
+- **Location:** 
+  - Address: Rue du Commerce 1, Brussels, 1000, Belgium
+- **Relevant Opportunities:**
+  - **Q2 Delivery Contract**
+    - **Stage:** Negotiation/Review
+    - **Amount:** 85,000
+    - **Close Date:** 30 June 2026
+  - **On-going Approval Opportunity**
+    - **Close Date:** 8 May 2026
+
+#### 2. GreenTech Solutions
+- **Relevant Opportunity:**
+  - **Sustainability Dashboard**
+    - **Stage:** Qualification
+    - **Amount:** 45,000
+    - **Close Date:** 15 August 2026
+
+#### 3. Colruyt Group
+- **Relevant Opportunity:**
+  - **SmartSales Rollout 2026**
+    - **Stage:** Proposal/Price Quote
+    - **Amount:** 220,000
+    - **Close Date:** 30 September 2026
+
+---
+
+This briefing consolidates your upcoming meetings with attached opportunities related to the companies involved. Be prepared to discuss contracts and projects with Supplier1, GreenTech Solutions, and Colruyt Group.

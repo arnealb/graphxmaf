@@ -1,0 +1,69 @@
+{
+  "plan": {
+    "latency_s": 3.505,
+    "steps": 1,
+    "input_tokens": 1012,
+    "output_tokens": 144,
+    "total_tokens": 1156
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "graph",
+      "latency_s": 104.794,
+      "llm_turns": 41,
+      "n_tool_calls": 40,
+      "tool_calls": [
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files"
+      ],
+      "input_tokens": 3371,
+      "output_tokens": 48,
+      "total_tokens": 3419
+    }
+  ],
+  "synthesis": {
+    "latency_s": 1.155,
+    "input_tokens": 247,
+    "output_tokens": 46,
+    "total_tokens": 293
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "user_query": "Show me the 3 largest open Salesforce opportunities and the billing country of each related account.",
+  "plan": {
+    "query": "Show me the 3 largest open Salesforce opportunities and the billing country of each related account.",
+    "reasoning": "I will use a single step to fetch the necessary information from Salesforce, retrieving both the largest open opportunities and the associated billing countries for their accounts in one call.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch the 3 largest open opportunities along with their related account's billing country.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results of the fetched opportunities and their corresponding billing countries into a final response."
+  },
+  "invoked_agents": []
+}

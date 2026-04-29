@@ -1,0 +1,13 @@
+{
+  "query": "Show me my 5 most recent emails.",
+  "reasoning": "The query specifically asks for recent emails, which can be retrieved directly using the graph agent that has access to Microsoft 365 email functionalities.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the 5 most recent emails from the user's Microsoft 365 account.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved emails as the final answer."
+}

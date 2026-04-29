@@ -1,0 +1,13 @@
+{
+  "query": "Find any Excel or PDF files in my OneDrive.",
+  "reasoning": "The user wants to search for specific file types in their OneDrive, which falls under the capabilities of the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for all files in my OneDrive and filter the results to include only Excel and PDF files.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of found Excel and PDF files."
+}

@@ -1,0 +1,13 @@
+{
+  "query": "List SmartSales catalog items with simple projection, sorted by name.",
+  "reasoning": "Since the query is specific to listing catalog items from SmartSales, I only need one step to retrieve the items with the requested projection and sorting.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Fetch all catalog items with a simple projection sorted by name.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the results from step 1 as the final output."
+}

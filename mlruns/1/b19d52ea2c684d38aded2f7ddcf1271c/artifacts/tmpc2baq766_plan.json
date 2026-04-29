@@ -1,0 +1,13 @@
+{
+  "query": "Find Salesforce accounts that have 'Group' in their name.",
+  "reasoning": "The user request involves querying Salesforce accounts based on a specific naming criterion ('Group'). This requires checking the Salesforce database for account names without needing any additional data from other agents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Query the Salesforce database to find all accounts that contain 'Group' in their name.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of Salesforce accounts with 'Group' in their name from step 1."
+}

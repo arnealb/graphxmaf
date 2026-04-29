@@ -1,0 +1,21 @@
+{
+  "query": "List SmartSales orders, then retrieve the full details of the first order.",
+  "reasoning": "To fulfill the user's request, I first need to list the SmartSales orders. Once I have this list, I will take the first order and retrieve its full details, which requires a single call to the SmartSales agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "List all SmartSales orders.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Retrieve full details of the first SmartSales order from the list obtained in step 1 (if any). If no orders are found, note that and skip the details retrieval.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results of step 1 and step 2. If details of the first order were retrieved successfully, present them along with the list of orders; otherwise, indicate that no orders were found."
+}

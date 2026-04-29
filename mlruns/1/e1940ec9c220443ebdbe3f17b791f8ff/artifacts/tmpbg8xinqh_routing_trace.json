@@ -1,0 +1,27 @@
+{
+  "user_query": "How many calendar events do I have scheduled this week? List them all.",
+  "plan": {
+    "query": "How many calendar events do I have scheduled this week? List them all.",
+    "reasoning": "The query requires accessing the calendar to fetch the number of events scheduled for the week and listing them. The available agent for this task is 'graph', which manages calendar events.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve all calendar events scheduled for this week, including their details.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Count the number of events retrieved and list them for the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve all calendar events scheduled for this week, including their details.",
+      "started_at": "2026-04-21T07:46:32.522256+00:00",
+      "ended_at": "2026-04-21T07:46:44.789461+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

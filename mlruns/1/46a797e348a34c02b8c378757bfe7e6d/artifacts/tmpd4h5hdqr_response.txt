@@ -1,0 +1,42 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Comprehensive Briefing on Colruyt
+
+**Overview:**
+Colruyt Group is a prominent retail company based in Belgium, known for its commitment to providing high-quality products at competitive prices.
+
+**Recent Developments:**
+- **SmartSales Pilot Participation:**
+  - On April 28, 2026, Colruyt Group confirmed its participation in the SmartSales pilot project.
+  - The pilot is being initiated from their Halle location, with a total project budget of EUR 220,000, which includes implementation and the initial license period. 
+  - *Source: Email from Colruyt Group Procurement*
+
+- **SmartSales Rollout Kickoff:**
+  - A kickoff event for the SmartSales rollout is scheduled for May 15, 2026, from 12:00 PM to 1:30 PM.
+  - *Source: Calendar Event*
+
+**Operational Details:**
+- **Location:**
+  - ***Colruyt - Halle***
+    - Address: Edingensesteenweg 196, Halle, 1500, Belgium
+    - Latitude: 50.7292, Longitude: 4.2219
+  - Provides a central hub for their operations related to the SmartSales project.
+  - *Source: SmartSales Location Data*
+
+- **Current Initiatives:**
+  - Colruyt Group is actively pursuing opportunities for collaboration within the SmartSales context.
+  - They have an ongoing opportunity labeled "Colruyt Group — SmartSales Rollout 2026" with an expected close date of September 30, 2026. The opportunity is currently in the "Proposal/Price Quote" stage, valued at EUR 220,000.
+  - *Source: Salesforce Opportunity Data*
+
+- **Integration Issues:**
+  - There is an open case registered regarding an integration issue with the POS system at Colruyt, indicating ongoing technological challenges that the company is addressing.
+  - The case is currently marked as new with medium priority, created on April 28, 2026.
+  - *Source: Salesforce Case Data*
+
+**Key Contacts:**
+- No specific contact details were retrieved from the available data.
+
+### Conclusion
+Colruyt Group is embracing technological advancements through its participation in the SmartSales pilot. This includes substantial investment and planning, underscored by an active agenda of project rollout and addressing operational challenges in integration systems.

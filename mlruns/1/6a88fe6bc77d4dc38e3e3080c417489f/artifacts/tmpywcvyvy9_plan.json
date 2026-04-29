@@ -1,0 +1,21 @@
+{
+  "query": "Find Salesforce leads in Belgium and check if there are SmartSales locations in the same country.",
+  "reasoning": "The tasks involve fetching leads from Salesforce and checking for locations in SmartSales, making these two tasks depend on each other for a comprehensive result.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all leads located in Belgium.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Find all SmartSales locations in Belgium using the information from step 1 (if applicable). If no leads are found in step 1, skip searching for locations.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results of step 1 and step 2 to provide a comprehensive overview of the leads in Belgium and relevant SmartSales locations."
+}

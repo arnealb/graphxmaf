@@ -1,0 +1,13 @@
+{
+  "query": "Find Salesforce contacts with 'Manager' in their title.",
+  "reasoning": "The query requires an extraction of specific contacts from the Salesforce system based on a title criterion.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all contacts that contain 'Manager' in their title.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of retrieved contacts that meet the specified title criteria."
+}

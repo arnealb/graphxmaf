@@ -1,0 +1,13 @@
+{
+  "query": "Have I received any emails in the last 7 days? List sender and subject.",
+  "reasoning": "The task can be accomplished by querying the graph agent for recent emails, which allows me to retrieve both the sender and subject in a single call.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Fetch emails received in the last 7 days, including the sender and subject information.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of emails retrieved from step 1, focusing on the sender and subject details."
+}

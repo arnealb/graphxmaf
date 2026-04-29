@@ -1,0 +1,27 @@
+{
+  "user_query": "List 5 open opportunities in Salesforce.",
+  "plan": {
+    "query": "List 5 open opportunities in Salesforce.",
+    "reasoning": "The user is looking for open opportunities, which is directly managed by the Salesforce agent. Only one step is needed to fetch this information.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve a list of 5 open opportunities from Salesforce.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of 5 open opportunities retrieved from Salesforce."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve a list of 5 open opportunities from Salesforce.",
+      "started_at": "2026-04-21T15:05:36.123105+00:00",
+      "ended_at": "2026-04-21T15:05:40.342916+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

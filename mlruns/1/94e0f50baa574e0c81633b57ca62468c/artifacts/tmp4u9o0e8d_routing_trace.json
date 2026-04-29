@@ -1,0 +1,17 @@
+{
+  "user_query": "Show me my 5 most recent emails.",
+  "plan": {
+    "query": "Show me my 5 most recent emails.",
+    "reasoning": "The task requires accessing recent email data, which is provided by the graph agent. No other agents are necessary for this task.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the 5 most recent emails from the user's inbox.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the results of the email retrieval in a concise format."
+  },
+  "invoked_agents": []
+}

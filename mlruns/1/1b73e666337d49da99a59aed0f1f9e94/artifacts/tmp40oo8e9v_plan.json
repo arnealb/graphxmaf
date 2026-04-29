@@ -1,0 +1,13 @@
+{
+  "query": "List SmartSales orders with full projection.",
+  "reasoning": "The SmartSales agent is responsible for handling orders and can provide a comprehensive view of the available orders. We do not need to involve other agents as they are not relevant to this specific task.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve a list of SmartSales orders with complete projections.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of SmartSales orders obtained from the agent."
+}

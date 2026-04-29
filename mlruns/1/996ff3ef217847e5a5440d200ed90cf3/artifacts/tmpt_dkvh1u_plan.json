@@ -1,0 +1,13 @@
+{
+  "query": "Find SmartSales locations in Brussels.",
+  "reasoning": "The user is asking specifically for SmartSales locations, so only the smartsales agent is needed to fetch this information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve all SmartSales locations available in Brussels.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of locations retrieved in step 1 as the final answer."
+}

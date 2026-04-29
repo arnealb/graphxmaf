@@ -1,0 +1,17 @@
+{
+  "user_query": "Show me 5 Salesforce contacts with their email addresses.",
+  "plan": {
+    "query": "Show me 5 Salesforce contacts with their email addresses.",
+    "reasoning": "The task requires fetching contacts directly from Salesforce, and since only one call is needed to get the required information, I will only use one step.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch 5 contacts from the Salesforce database, including their names and email addresses.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of 5 Salesforce contacts along with their email addresses."
+  },
+  "invoked_agents": []
+}

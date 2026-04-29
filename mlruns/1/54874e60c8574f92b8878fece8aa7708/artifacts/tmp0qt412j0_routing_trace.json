@@ -1,0 +1,70 @@
+{
+  "user_query": "What should I do if my car gets damaged on the way to work?",
+  "plan": {
+    "query": "What should I do if my car gets damaged on the way to work?",
+    "reasoning": "This query is about internal company processes and procedures, which can be answered by searching for relevant documents such as HR policies or expense rules related to vehicle damages.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Search OneDrive for company documents and policies regarding what to do if your car gets damaged on the way to work.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Provide the user with the relevant guidelines or steps outlined in the document found in step 1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Search OneDrive for company documents and policies regarding what to do if your car gets damaged on the way to work.",
+      "started_at": "2026-04-29T13:51:01.924653+00:00",
+      "ended_at": "2026-04-29T13:52:46.722437+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 41,
+      "tool_calls": [
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files"
+      ]
+    }
+  ]
+}

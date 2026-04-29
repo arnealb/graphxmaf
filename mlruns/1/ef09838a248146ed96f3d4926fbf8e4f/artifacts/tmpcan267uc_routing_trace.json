@@ -1,0 +1,27 @@
+{
+  "user_query": "Find Salesforce leads that have been converted.",
+  "plan": {
+    "query": "Find Salesforce leads that have been converted.",
+    "reasoning": "The task requires querying the Salesforce CRM to retrieve information about leads that have been converted. Since it is a direct query to the Salesforce system, only one step is necessary.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch all leads from the CRM that have been converted.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Return the list of converted leads obtained from the Salesforce query."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Fetch all leads from the CRM that have been converted.",
+      "started_at": "2026-04-21T15:08:22.322264+00:00",
+      "ended_at": "2026-04-21T15:08:31.915110+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

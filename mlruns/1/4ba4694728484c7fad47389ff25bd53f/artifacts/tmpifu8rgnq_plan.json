@@ -1,0 +1,13 @@
+{
+  "query": "What fields can I filter SmartSales catalog items by?",
+  "reasoning": "Only the smartsales agent is needed to provide the relevant fields available for filtering catalog items, making a single step sufficient.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the fields that can be used to filter catalog items in SmartSales.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the list of fields retrieved from step 1 as the final answer."
+}

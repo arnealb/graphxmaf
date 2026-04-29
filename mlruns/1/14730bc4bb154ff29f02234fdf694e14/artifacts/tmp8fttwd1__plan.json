@@ -1,0 +1,13 @@
+{
+  "query": "What fields can I sort SmartSales orders by?",
+  "reasoning": "The query pertains directly to SmartSales and specifically asks about the sorting fields for orders. Since only one agent is involved in this query, only one step is necessary.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the fields available for sorting SmartSales orders.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the list of sorting fields as the final answer."
+}

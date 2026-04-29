@@ -1,0 +1,75 @@
+{
+  "user_query": "Is there anything I should follow up on today?",
+  "plan": {
+    "query": "Is there anything I should follow up on today?",
+    "reasoning": "The query requires a comprehensive view of any pending actions, emails, calendar events, and potential CRM items that might need follow-up. Therefore, all agents are used to gather relevant data across different platforms and contexts.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve all today's emails and calendar events that require a follow-up or response.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Query today's CRM contacts, cases, or opportunities that are open and may require follow-up.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Check for any locations or catalog items that need attention or follow-up today.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from all agents to provide a complete list of follow-up actions, including emails, calendar events, CRM items, and relevant locations or catalog items."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Query today's CRM contacts, cases, or opportunities that are open and may require follow-up.",
+      "started_at": "2026-04-29T09:30:21.657789+00:00",
+      "ended_at": "2026-04-29T09:30:30.623924+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "find_contacts",
+        "get_cases",
+        "get_opportunities"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "Check for any locations or catalog items that need attention or follow-up today.",
+      "started_at": "2026-04-29T09:30:21.660790+00:00",
+      "ended_at": "2026-04-29T09:30:36.586196+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items",
+        "list_locations",
+        "list_catalog_items"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve all today's emails and calendar events that require a follow-up or response.",
+      "started_at": "2026-04-29T09:30:21.654383+00:00",
+      "ended_at": "2026-04-29T09:31:00.613298+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_email",
+        "list_calendar"
+      ]
+    }
+  ]
+}

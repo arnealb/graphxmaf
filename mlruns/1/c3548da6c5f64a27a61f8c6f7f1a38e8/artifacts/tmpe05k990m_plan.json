@@ -1,0 +1,29 @@
+{
+  "query": "What is the full picture of our top open deal?",
+  "reasoning": "The query requires comprehensive information about the top open deal, which involves multiple aspects such as relationship data (salesforce), communication history (graph), and any physical presence or product details (smartsales). Thus, I will engage all agents to gather a complete overview.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch details of the top open deal, including associated accounts, contacts, opportunities, and cases.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Using the account and contact names from step 1, retrieve communication history, calendar events, and any documents related to the deal.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Using the account name from step 1, gather any physical presence information or product catalog details that are relevant to the top open deal.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from all steps to provide a comprehensive overview of the top open deal, including CRM data, communication records, and physical presence or product details."
+}

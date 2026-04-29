@@ -1,0 +1,27 @@
+{
+  "user_query": "Who am I in Microsoft 365?",
+  "plan": {
+    "query": "Who am I in Microsoft 365?",
+    "reasoning": "The query requires information specific to the user's Microsoft 365 identity, which can be obtained through the graph agent that handles details related to emails, calendar, OneDrive, and contacts.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the user's account information, including their email, name, and any associated contacts.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the account information obtained from the graph agent to the user."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the user's account information, including their email, name, and any associated contacts.",
+      "started_at": "2026-04-20T13:44:35.190408+00:00",
+      "ended_at": "2026-04-20T13:44:41.234351+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

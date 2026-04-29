@@ -1,0 +1,27 @@
+{
+  "user_query": "Find the most recent email with 'meeting' in the subject and read its full body.",
+  "plan": {
+    "query": "Find the most recent email with 'meeting' in the subject and read its full body.",
+    "reasoning": "The query requires accessing emails to find a specific email with a subject containing 'meeting'. The graph agent can retrieve emails and their contents.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the most recent email with 'meeting' in the subject and include its full body content.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Return the full body content of the email retrieved from the graph agent."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the most recent email with 'meeting' in the subject and include its full body content.",
+      "started_at": "2026-04-21T07:35:53.618252+00:00",
+      "ended_at": "2026-04-21T07:36:11.209906+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "query": "Show me 5 leads in Salesforce.",
+  "reasoning": "The user is asking for leads specifically within the Salesforce CRM, so a single step using the Salesforce agent will fulfill the request directly.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve 5 leads from the CRM system.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved leads to the user."
+}

@@ -1,0 +1,13 @@
+{
+  "query": "What fields can be displayed for SmartSales orders?",
+  "reasoning": "The best step is to query the Smartsales agent since it specializes in catalog items and locations, which is where the order fields would likely be defined.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the list of fields that can be displayed for SmartSales orders.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the retrieved fields as the final answer."
+}

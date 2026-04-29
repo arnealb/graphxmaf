@@ -1,0 +1,13 @@
+{
+  "query": "List recent SmartSales orders.",
+  "reasoning": "The user is asking for recent orders, which can be handled by the smartsales agent. Only one step is needed to retrieve the relevant data.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Fetch the most recent orders from the SmartSales system.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the results of the SmartSales orders retrieval as the final output."
+}

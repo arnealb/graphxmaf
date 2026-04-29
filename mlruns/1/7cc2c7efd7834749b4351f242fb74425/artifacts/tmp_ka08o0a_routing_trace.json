@@ -1,0 +1,17 @@
+{
+  "user_query": "Find all Word documents in my OneDrive.",
+  "plan": {
+    "query": "Find all Word documents in my OneDrive.",
+    "reasoning": "The query specifically asks for Word documents located in OneDrive, which requires a direct call to the graph agent for document retrieval.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve all Word documents from my OneDrive.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of Word documents retrieved from OneDrive."
+  },
+  "invoked_agents": []
+}

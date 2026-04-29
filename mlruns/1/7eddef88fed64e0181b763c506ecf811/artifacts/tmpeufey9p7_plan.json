@@ -1,0 +1,13 @@
+{
+  "query": "Show me 5 leads in Salesforce.",
+  "reasoning": "Since the query specifically requests leads from Salesforce, I will task the Salesforce agent to retrieve the required information directly.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve a list of 5 leads from Salesforce.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of 5 leads retrieved from Salesforce."
+}

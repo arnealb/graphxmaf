@@ -1,0 +1,27 @@
+{
+  "user_query": "Show me emails I received in the last 14 days.",
+  "plan": {
+    "query": "Show me emails I received in the last 14 days.",
+    "reasoning": "The graph agent is capable of retrieving emails, so I will use it to fetch the necessary emails based on the specified time frame.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve emails received in the last 14 days.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the output from the graph agent as the list of received emails."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve emails received in the last 14 days.",
+      "started_at": "2026-04-22T07:14:18.948641+00:00",
+      "ended_at": "2026-04-22T07:14:20.059382+00:00",
+      "success": false,
+      "error": "Failed to enter context manager."
+    }
+  ]
+}

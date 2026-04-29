@@ -1,0 +1,57 @@
+{
+  "user_query": "Show my last 2 emails, list 3 SmartSales locations in Belgium, and show 2 Salesforce accounts.",
+  "plan": {
+    "query": "Show my last 2 emails, list 3 SmartSales locations in Belgium, and show 2 Salesforce accounts.",
+    "reasoning": "The query requires retrieving emails from the graph agent, locations from the smartsales agent, and accounts from the salesforce agent. Each step is independent and does not rely on the output of another step, allowing them to be executed in parallel.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Fetch the last 2 emails from the user's inbox.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "smartsales",
+        "task": "Retrieve a list of 3 SmartSales locations in Belgium.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "salesforce",
+        "task": "Fetch 2 Salesforce accounts associated with the user.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results of the last 2 emails, the 3 SmartSales locations, and the 2 Salesforce accounts into a single response."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Fetch the last 2 emails from the user's inbox.",
+      "started_at": "2026-04-20T13:48:16.090305+00:00",
+      "ended_at": "2026-04-20T13:48:24.943198+00:00",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "smartsales",
+      "order": 2,
+      "input": "Retrieve a list of 3 SmartSales locations in Belgium.",
+      "started_at": "2026-04-20T13:48:16.090305+00:00",
+      "ended_at": "2026-04-20T13:48:24.943198+00:00",
+      "success": true,
+      "error": null
+    },
+    {
+      "agent": "salesforce",
+      "order": 3,
+      "input": "Fetch 2 Salesforce accounts associated with the user.",
+      "started_at": "2026-04-20T13:48:16.090305+00:00",
+      "ended_at": "2026-04-20T13:48:24.943198+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

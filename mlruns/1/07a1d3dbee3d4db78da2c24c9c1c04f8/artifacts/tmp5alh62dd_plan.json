@@ -1,0 +1,21 @@
+{
+  "query": "Find Salesforce accounts in France and list the contacts linked to those accounts.",
+  "reasoning": "The plan involves first retrieving Salesforce accounts located in France and then obtaining the contacts linked to those accounts. This requires two sequential steps, where the second depends on the output of the first.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch Salesforce accounts located in France.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "List the contacts linked to the accounts retrieved in step 1. If no accounts were found, note this in the output.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the lists of accounts from step 1 and their associated contacts from step 2 into a final report, ensuring to note if no accounts were found."
+}

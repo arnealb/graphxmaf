@@ -1,0 +1,37 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Overview of Dorian Feaux
+
+**Identity:**
+- **Name:** Dorian Feaux
+- **Email:** D.Feaux@easi.net
+- **Company:** EASI
+
+**Communication History:**
+- **Emails:**
+  - **New request for transport order**
+    - **Sender:** Dorian Feaux
+    - **Received:** 11 December 2025
+    - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAH1XydTAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+  - **Intro: Dorian Feaux — EASI collaboration proposal**
+    - **Sender:** Dorian Feaux
+    - **Received:** 28 April 2026
+    - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7sAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Calendar Events:**
+  - Weekly sync scheduled on **6 May 2026**
+  - Closing opportunity from **30 April to 1 May 2026**
+
+**CRM Relationship Data (from Salesforce):**
+- Found as a contact with the following details:
+  - **Contact ID:** 003KI000009uzRRYAY
+  - **Account Name:** EASI
+- No opportunities or cases associated.
+
+**Actionable Next Steps:**
+- Schedule a follow-up discussion based on the recent email about collaboration.
+- Prepare for the upcoming weekly sync on 6 May 2026 for further collaboration with Dorian. 
+
+This overview provides insight into Dorian Feaux's role in ongoing projects and communication, facilitating an informed approach when working with him.

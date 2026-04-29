@@ -1,0 +1,27 @@
+{
+  "user_query": "Find high-priority open cases in Salesforce.",
+  "plan": {
+    "query": "Find high-priority open cases in Salesforce.",
+    "reasoning": "The task requires retrieving specific data from the Salesforce platform. Since the query focuses solely on cases, only one step is necessary.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch all high-priority open cases from Salesforce.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of high-priority open cases returned from Salesforce."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Fetch all high-priority open cases from Salesforce.",
+      "started_at": "2026-04-22T07:13:11.383186+00:00",
+      "ended_at": "2026-04-22T07:13:16.054694+00:00",
+      "success": true,
+      "error": null
+    }
+  ]
+}

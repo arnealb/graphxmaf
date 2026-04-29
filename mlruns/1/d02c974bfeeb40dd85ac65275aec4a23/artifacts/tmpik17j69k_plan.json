@@ -1,0 +1,13 @@
+{
+  "query": "Show me 5 leads in Salesforce.",
+  "reasoning": "The task can be accomplished directly by querying Salesforce for leads without needing additional information from other agents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve the first 5 leads from the Salesforce database.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved leads as the final answer."
+}
