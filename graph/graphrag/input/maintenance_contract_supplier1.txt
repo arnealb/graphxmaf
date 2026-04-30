@@ -1,0 +1,36 @@
+Maintenance and Support Contract
+Reference EASI-SUP1-MAINT-2026-001 — Between EASI Group and supplier1
+1. Parties and reference
+This maintenance and support contract is concluded between EASI Group, Avenue Louise 65, 1050 Brussels, and supplier1, Rue du Commerce 1, 1000 Brussels (Salesforce account ID 001KI00000N7MjVYAV). The contract reference is EASI-SUP1-MAINT-2026-001. The EASI procurement contact is procurement@easi.net. The supplier1 commercial contact is Marc Supplier (marc.supplier@supplier1.be), Account Manager.
+2. Scope
+Under this contract, supplier1 provides:
+Preventive maintenance of the Industrial Components Pack (product code PROD-SUP1-001) units deployed by EASI, scheduled twice per year (Q1 and Q3).
+Corrective maintenance on demand when defects, malfunctions, or performance degradations are identified by EASI or by supplier1’s own monitoring.
+The contract is linked to the active Salesforce opportunity "supplier1 — Q2 Delivery Contract" (EUR 85,000, stage Negotiation/Review, close date 30 June 2026) and to the existing case "Delayed shipment — supplier1 April batch" (Case 00001022, priority High, status Working).
+3. Preventive maintenance schedule
+Preventive maintenance is performed during two annual windows:
+Q1 window: the second week of February.
+Q3 window: the second week of September.
+Marc Supplier confirms the dates and the technician assignment by email to procurement@easi.net at least 4 weeks before the start of each window. Each preventive visit results in a signed inspection report and a list of recommended replacements.
+4. Corrective maintenance
+EASI reports defects by email to marc.supplier@supplier1.be. The acknowledgement target is 4 business hours. An on-site technician is dispatched within 8 business hours on weekdays. Weekend response is available for issues classified as Priority High by EASI, subject to a call-out fee of EUR 200. All corrective interventions result in a signed work order specifying the diagnosis, the parts replaced, and the time spent.
+5. Open issue — April batch delay
+Case 00001022 (delayed shipment from the April batch) is a high-priority issue under active investigation. supplier1 commits to deliver a written root cause analysis to procurement@easi.net within 5 working days of the signature of this contract, including a remediation plan with concrete dates. EASI reserves the right to apply a contractual penalty of EUR 500 per additional day of delay beyond the agreed resolution date in the remediation plan.
+6. Spare parts
+supplier1 guarantees the availability of all spare parts for PROD-SUP1-001 for a minimum of 5 years from the date of the last delivery to EASI. Parts not held in stock are ordered and delivered within 10 business days. Spare parts used during preventive maintenance are billed separately at the prices listed in supplier1’s current parts catalogue, less any volume discount agreed in the underlying framework agreement EASI-SUP1-FWA-2025-001.
+7. Pricing
+A monthly retainer of EUR 850 excluding VAT covers the two preventive maintenance visits and up to 4 hours of corrective maintenance per month. Additional corrective maintenance hours are billed at EUR 120 per hour excluding VAT. Travel time within the Brussels region is included in the rate. Annual price adjustments are based on the ABEX construction cost index, applied on 1 January.
+8. Communication protocol
+All routine operational communications must be exchanged through the dedicated Microsoft Teams channel "EASI–supplier1 Operaties", as documented in the underlying framework agreement EASI-SUP1-FWA-2025-001. Email to marc.supplier@supplier1.be is acceptable as a fallback for urgent issues when Teams is unavailable. Phone communications are confirmed afterwards in writing through one of the two channels above so that an audit trail exists.
+9. Reporting
+supplier1 sends a quarterly service report to procurement@easi.net by the 15th of the month following each quarter. The report includes: the number of preventive visits, the number of corrective interventions, time spent, parts consumed, recurring issues, and recommendations for proactive replacement. The report is reviewed in a quarterly business review meeting with Marc Supplier.
+10. Compliance and Code of Conduct
+supplier1 confirms that its activities under this contract comply with the EASI Supplier Code of Conduct. Marc Supplier is the registered contact for the annual self-declaration submission to procurement@easi.net by 31 January each year. EASI may conduct or commission audits of supplier1’s compliance with the Code with at least 30 days’ written notice.
+11. Term and termination
+This contract is concluded for an initial term of 1 year from 1 January 2026 and is automatically renewed for successive 1-year periods. Either party may terminate by giving 2 months’ written notice by email to procurement@easi.net (for EASI) and marc.supplier@supplier1.be (for supplier1). EASI may terminate immediately for material breach, including a failure to deliver the root cause analysis described in clause 5 within the agreed timeline.
+12. Governing law
+Belgian law applies. Disputes are submitted to the Brussels Commercial Court.
+13. Liability and warranties
+supplier1 warrants that all maintenance services are performed in a professional manner by qualified technicians, in accordance with the manufacturer specifications of the Industrial Components Pack (PROD-SUP1-001) and the applicable Belgian safety standards. Replacement parts supplied during corrective maintenance are warranted for 12 months from the date of installation. supplier1’s aggregate liability under this contract is capped at the total amount invoiced by supplier1 to EASI in the 12 months preceding the event giving rise to the claim, except for liability arising from gross negligence, wilful misconduct, breach of confidentiality, or personal injury, where no cap applies. EASI’s remedies for breach are described in the relevant clauses (in particular clauses 5 and 11) and in the underlying framework agreement EASI-SUP1-FWA-2025-001.
+14. Force majeure
+Neither party is liable for delay or failure to perform caused by events beyond its reasonable control (force majeure), including natural disasters, war, civil unrest, government action, and large-scale disruption to public infrastructure. The party affected notifies the other within 48 hours, takes reasonable steps to mitigate, and resumes performance as soon as possible. Force majeure does not relieve either party from payment obligations for services already rendered.

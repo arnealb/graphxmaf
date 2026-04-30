@@ -1,0 +1,35 @@
+Service Level Agreement
+Reference EASI-COL-SLA-2026-001 — Between EASI Group and Colruyt Group — SmartSales platform managed services
+1. Parties and contract reference
+This Service Level Agreement ("SLA") is entered into between EASI Group, Avenue Louise 65, 1050 Brussels, acting as service provider, and Colruyt Group, Edingensesteenweg 196, 1500 Halle, acting as client. The reference of the present agreement is EASI-COL-SLA-2026-001. It is part of the broader commercial relationship documented under the Colruyt Group — SmartSales Rollout 2026 opportunity, with a contract value of EUR 220,000.
+2. Scope
+EASI provides managed operation, monitoring, and support of the SmartSales platform deployed at Colruyt Group locations. The scope covers the Colruyt head office at Edingensesteenweg 196 and all Colruyt retail outlets connected to the platform. As of the signature date of this SLA, 47 retail locations are in scope. Locations may be added or removed during the contract term by exchange of written notice between the EASI account team and Colruyt procurement.
+3. Account team and contacts
+EASI account manager: Arne Albrecht, a.albrecht@easi.net.
+EASI technical escalation: Dorian Feaux, d.feaux@easi.net.
+Colruyt commercial and procurement contact: procurement@colruyt.be.
+EASI service desk for end users: portal at servicedesk.easi.net or email it@easi.net.
+4. Priority levels
+Incidents are classified into four priority levels at the time of report. The level may be revised as new information becomes available.
+Open Case 00001021 (Colruyt — Integration issue with POS system, status: New, priority: Medium) is the baseline case at the date of signature. It is currently managed under priority P3 and will remain at P3 until the integration root cause is identified, after which it may be reclassified.
+5. Availability
+EASI commits to a monthly availability of 99.5 percent for the SmartSales platform, calculated over each calendar month. Scheduled maintenance windows do not count as downtime. The standard maintenance window is Saturday 22:00 to Sunday 02:00 Brussels time. Availability is measured by automated monitoring; downtime starts at the moment EASI acknowledges the incident in the ticketing system, or at the moment of automatic detection by the monitoring platform, whichever is earlier.
+6. Reporting
+EASI delivers a monthly service report to procurement@colruyt.be by the 5th day of each month. The report includes:
+Achieved availability versus the 99.5 percent target.
+Number of incidents per priority level, with average response and resolution times.
+Open cases, including ageing and current status.
+Planned changes for the next 60 days, with proposed implementation windows.
+Service credits, if any, applied for the reporting month.
+7. Service credits and penalties
+Where EASI fails to meet the response or resolution target for a P1 incident, a service credit of 10 percent of the monthly fee is applied for that month. Multiple breaches in the same month are aggregated, but the total service credit per month is capped at 30 percent of the monthly fee. Service credits are applied as a deduction on the next invoice. Service credits are the sole and exclusive financial remedy for missed support commitments under this SLA, except in cases of gross negligence or wilful misconduct.
+8. Maintenance and change communication
+Planned maintenance is announced at least 48 hours in advance to procurement@colruyt.be, with the planned start, end, and expected impact. Emergency maintenance — required to restore service or to apply a critical security patch — may be performed with shorter notice; in that case EASI notifies procurement@colruyt.be and the EASI account manager within 2 hours of the change starting. Detailed change governance is described in EASI’s Change Management Procedure.
+9. Escalation path
+For P1 incidents, EASI immediately notifies Arne Albrecht, Dorian Feaux, and the EASI Delivery Manager. If the incident is not resolved within 2 hours of acknowledgement, the EASI Chief Operating Officer is informed and joins the response. For P2 incidents, the EASI account manager is informed within 30 minutes. The Colruyt side may escalate at any time by emailing both the EASI account manager and procurement@colruyt.be with the case number.
+10. Term and termination
+This SLA enters into force on the date of last signature and runs for an initial term of 2 years. The agreement is automatically renewed for successive 1-year periods unless one of the parties notifies the other in writing at least 3 months before the end of the current term. Termination for material breach is governed by the underlying framework agreement between the parties.
+11. Governing law and disputes
+This SLA is governed by Belgian law. Any disputes arising from or relating to this SLA are submitted to the Brussels Commercial Court, after a documented attempt to resolve the dispute amicably between the EASI account manager and Colruyt procurement.
+12. Annexes
+Annex A lists the 47 in-scope Colruyt locations with their identifiers, addresses, and the SmartSales modules deployed at each. Annex B contains the schedule of monthly fees. The Data Processing Agreement EASI-COL-DPA-2026-001 is incorporated by reference and governs the processing of personal data under this SLA.

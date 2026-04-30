@@ -1,0 +1,37 @@
+Bilateral Non-Disclosure Agreement — Template
+EASI Group — Standard NDA used with new clients and partners — Owner: procurement@easi.net
+1. Parties
+This bilateral non-disclosure agreement ("NDA") is concluded between EASI Group, with registered office at Avenue Louise 65, 1050 Brussels, Belgium, and [Counterparty Name], with registered office at [address to be completed]. Both parties are referred to individually as a "Party" and collectively as the "Parties".
+2. Definition of confidential information
+"Confidential Information" means all non-public information disclosed by one Party (the "Disclosing Party") to the other Party (the "Receiving Party"), whether disclosed orally, in writing, electronically, visually, or in any other form. Confidential Information includes, without limitation:
+Client and partner lists, including EASI’s relationships with Colruyt Group, Carrefour Belgium SA, Delhaize Group, Anheuser-Busch InBev, Ferrero Benelux, GreenTech Solutions, and supplier1.
+Pricing structures and commercial terms, including SmartSales platform pricing, annual licence fees (such as the Distribution Mapping License at EUR 8,750 per year and the Sustainability Dashboard License at EUR 2,500 per year), and EASI professional services day rates.
+Technical architecture of EASI’s SmartSales platform, In-Store Analytics Module, EDI Connector Pack, and Distribution Mapping platform.
+Source code, specifications, and product roadmaps.
+Sales pipeline data, including opportunities held in Salesforce CRM and their values, stages, and projected close dates.
+Any personal data of EASI employees, EASI clients, or counterparty employees.
+Any other information marked or reasonably understood to be confidential.
+3. Exclusions
+Confidential Information does not include information that:
+Is or becomes publicly available without breach of this NDA.
+Was already in the possession of the Receiving Party prior to disclosure, free of any confidentiality obligation.
+Is independently developed by the Receiving Party without use of or reference to the Confidential Information.
+Is rightfully received from a third party without obligation of confidentiality.
+4. Permitted use and internal sharing
+The Receiving Party may use Confidential Information only for the purpose of evaluating or executing a potential business relationship between the Parties (the "Permitted Purpose"). The Receiving Party may share Confidential Information internally only with personnel who have a clear need-to-know for the Permitted Purpose, who have been informed of the confidentiality obligations, and who are themselves bound by equivalent obligations. The Receiving Party documents internal disclosures and provides a list to the Disclosing Party on request.
+5. Duration
+Confidentiality obligations apply for a period of 5 years from the date of last disclosure. This NDA itself may be terminated at any time by either Party with 30 days’ written notice to the other Party. Termination of this NDA does not release the Receiving Party from confidentiality obligations regarding information already disclosed; those obligations continue for the full 5-year period.
+6. Reverse engineering
+The Receiving Party may not reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code, structure, or internal logic of any software, hardware, prototype, or technical deliverable received under this NDA. Authorised testing of a product against documented interfaces, with the Disclosing Party’s written consent, does not constitute reverse engineering.
+7. Return or destruction of information
+Upon termination of this NDA, or upon written request from the Disclosing Party at any earlier moment, the Receiving Party returns all originals and copies of Confidential Information, or certifies in writing their destruction, within 5 business days of the request. This obligation includes electronic copies, backups (subject to standard backup rotation), and copies held by personnel who received the information internally.
+8. Penalty for breach
+Each separate breach of confidentiality obligations entitles the Disclosing Party to claim a contractual penalty of EUR 25,000, without prejudice to its right to claim additional damages, injunctive relief, or any other remedy available under Belgian law. Multiple breaches in different communications or different events count as separate breaches.
+9. No grant of rights
+Disclosure of Confidential Information does not grant the Receiving Party any licence, right, title, or interest in or to such information, in any intellectual property, or in any product or service of the Disclosing Party. All Confidential Information remains the property of the Disclosing Party.
+10. Governing law and disputes
+This NDA is governed by Belgian law. The Parties submit any dispute arising from or related to this NDA to the exclusive jurisdiction of the Brussels Commercial Court, after a documented attempt at amicable resolution.
+11. Signing process at EASI
+The counterparty’s countersigned NDA is returned by email to procurement@easi.net. The signed original is archived by the EASI legal/procurement team and retained for at least 7 years after expiry. Within EASI, the relationship owner — typically Arne Albrecht (Business Analyst) or Dorian Feaux (Sales Engineer) — must notify procurement@easi.net before any confidential presentation, product demonstration, or sharing of pricing materials with a new prospect, to confirm that an NDA is in place.
+12. Counterparts and electronic signature
+This NDA may be signed in counterparts and by electronic signature. Each Party retains a signed copy. Electronic signatures via DocuSign, Adobe Sign, or similar qualified providers are valid and binding.

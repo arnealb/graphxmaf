@@ -1469,98 +1469,139 @@
   },
 
   {
+    "text": "What is the best way to get in touch with supplier1?",
+    "category": "onedrive-rag",
+    "difficulty": "medium",
+    "expected_answer": "Finds 'framework_agreement_easi_supplier1.docx' in OneDrive/contracts/. Correct answer must include: (1) alle operationele communicatie verloopt uitsluitend via Microsoft Teams, kanaal 'EASI–supplier1 Operaties', (2) e-mail wordt NIET aanvaard als officieel escalatiekanaal, (3) accountbeheerder is Marc Supplier (marc.supplier@supplier1.be), Teams-alias marc.supplier. Answering with only the email address without mentioning the Teams-only clause = significant deduction. Not finding the contract = max 2.",
+    "tags": ["onedrive-rag", "contract", "communication", "graph"],
+    "expected_agents": ["graph"]
+  },
+  {
     "text": "What should I do if my car gets damaged on the way to work?",
     "category": "onedrive-rag",
     "difficulty": "hard",
     "expected_answer": "Finds 'arbeidsreglement_easi_group.docx' in OneDrive/HR/. Correct answer must include: (1) schade aan privévoertuig tijdens woon-werkverkeer is NIET gedekt door de arbeidsongevallenverzekering van de werkgever, (2) werknemer moet eigen omniumverzekering aanspreken, (3) schadeaangifte indienen via hr@easi.net binnen 24 uur na het incident, met vermelding van het trajectnummer. Not finding the document = max 2. Finding the document but missing the 24u deadline or the omnium-instruction = significant deduction. Answering generically without referencing the document = max 3.",
-    "tags": [
-      "onedrive-rag",
-      "semantic-gap",
-      "hr-policy",
-      "graph"
-    ],
-    "expected_agents": [
-      "graph"
-    ]
+    "tags": ["onedrive-rag", "semantic-gap", "hr-policy", "graph"],
+    "expected_agents": ["graph"]
   },
-
   {
     "text": "How much do I get reimbursed if I travel by train to visit a client?",
     "category": "onedrive-rag",
     "difficulty": "medium",
-    "expected_answer": "Finds 'onkostenbeleid_easi_group.docx' in OneDrive/HR/. Correct answer must include: openbaar vervoer (trein, tram, bus) wordt 100% terugbetaald op basis van het ticket of factuur. Bonus: vermeldt dat taxi enkel terugbetaalbaar is tot max €35 per rit bij afwezigheid openbaar vervoer. Answering with a generic amount without referencing the document = max 3. Not finding the document = max 2.",
-    "tags": [
-      "onedrive-rag",
-      "semantic-gap",
-      "expenses",
-      "graph"
-    ],
-    "expected_agents": [
-      "graph"
-    ]
+    "expected_answer": "Finds 'expense_policy_easi_group.docx'. Correct answer must include: (1) train travel to client visits is reimbursed at 100% of actual cost, (2) a valid ticket, e-ticket or invoice must be submitted, (3) taxi is capped at €35. Missing the 100% rate = significant deduction.",
+    "tags": ["onedrive-rag", "expense", "hr-policy", "graph"],
+    "expected_agents": ["graph"]
   },
-
-  {
-    "text": "What is the best way to get in touch with supplier1?",
-    "category": "onedrive-rag",
-    "difficulty": "medium",
-    "expected_answer": "Finds 'raamovereenkomst_easi_supplier1.docx' in OneDrive/contracten/. Correct answer must include: (1) alle operationele communicatie verloopt uitsluitend via Microsoft Teams, kanaal 'EASI–supplier1 Operaties', (2) e-mail wordt NIET aanvaard als officieel escalatiekanaal, (3) accountbeheerder is Marc Supplier (marc.supplier@supplier1.be), Teams-alias marc.supplier. Answering with only the email address without mentioning the Teams-only clause = significant deduction. Not finding the contract = max 2.",
-    "tags": [
-      "onedrive-rag",
-      "contract",
-      "communication",
-      "graph"
-    ],
-    "expected_agents": [
-      "graph"
-    ]
-  },
-
-  {
-    "text": "What are our agreed support terms with Colruyt?",
-    "category": "onedrive-rag",
-    "difficulty": "medium",
-    "expected_answer": "Finds 'samenwerkingsovereenkomst_easi_colruyt.docx' in OneDrive/contracten/. Correct answer must include: (1) kritieke incidenten (Prio 1) worden binnen 4 kantooruren (ma–vr 8–18u) opgepakt, (2) dedicated supportlijn voor Colruyt: +32 2 123 45 67, (3) vaste contactpersoon bij EASI: Arne Albrecht (a.albrecht@easi.net). Mentioning general SLA without the specific response time or contact details = significant deduction. Not finding the document = max 2.",
-    "tags": [
-      "onedrive-rag",
-      "contract",
-      "sla",
-      "graph"
-    ],
-    "expected_agents": [
-      "graph"
-    ]
-  },
-
-  {
-    "text": "A client is threatening to end their collaboration with us. What steps should I take?",
-    "category": "onedrive-rag",
-    "difficulty": "hard",
-    "expected_answer": "Finds 'procedure_klachtenafhandeling_easi.docx' in OneDrive/procedures/. Correct answer must identify this as a niveau 2 klacht (dreiging contractbeëindiging) and include: (1) accountmanager informeert Sales Director Nathalie Pieters (n.pieters@easi.net) binnen 2 uur via Teams-bericht, (2) Sales Director neemt binnen 24 uur telefonisch contact op met de klant (niet via e-mail), (3) remediëringsplan opstellen binnen 5 werkdagen, (4) klacht registreren in Salesforce als Case met prioriteit High en label 'churn-risk'. Missing the Salesforce registration step = significant deduction. Answering generically without referencing escalatieprocedure = max 3. Not finding the document = max 2.",
-    "tags": [
-      "onedrive-rag",
-      "semantic-gap",
-      "procedure",
-      "graph"
-    ],
-    "expected_agents": [
-      "graph"
-    ]
-  },
-
   {
     "text": "How do I request access to Salesforce as a new employee?",
     "category": "onedrive-rag",
     "difficulty": "simple",
-    "expected_answer": "Finds 'onboarding_gids_easi.docx' in OneDrive/HR/. Correct answer must include: (1) IT-ticket aanvragen via servicedesk.easi.net, (2) vermeld je afdeling en de naam van je manager in het ticket, (3) doorlooptijd is 2–3 werkdagen. Bonus: vermeldt dat SmartSales admin-toegang aparte goedkeuring van de Sales Director vereist. Answering without the servicedesk URL or ticket procedure = significant deduction. Not finding the document = max 2.",
-    "tags": [
-      "onedrive-rag",
-      "onboarding",
-      "access-management",
-      "graph"
-    ],
-    "expected_agents": [
-      "graph"
-    ]
+    "expected_answer": "Finds 'onboarding_guide_easi.docx'. Correct answer must include: (1) go to servicedesk.easi.net and submit an IT ticket, (2) ticket type must be 'Access Request' and application 'Salesforce', (3) Sales Director approval is required, (4) access takes 2-3 working days. Missing the portal URL or the approval step = deduction.",
+    "tags": ["onedrive-rag", "onboarding", "it-access", "graph"],
+    "expected_agents": ["graph"]
+  },
+  {
+    "text": "A client is threatening to end their collaboration with us. What steps should I take?",
+    "category": "onedrive-rag",
+    "difficulty": "hard",
+    "expected_answer": "Finds 'complaint_handling_procedure_easi.docx'. Correct answer must include: (1) this is a Level 2 complaint (churn-risk), (2) immediately escalate to Nathalie Pieters (n.pieters@easi.net), (3) a remediation plan must be drafted and logged in Salesforce, (4) do NOT offer contract discounts without management approval. Not identifying the escalation contact = significant deduction.",
+    "tags": ["onedrive-rag", "complaint", "escalation", "semantic-gap", "graph"],
+    "expected_agents": ["graph"]
+  },
+  {
+    "text": "What are our agreed support terms with Colruyt?",
+    "category": "onedrive-rag",
+    "difficulty": "medium",
+    "expected_answer": "Finds 'collaboration_agreement_easi_colruyt.docx' and/or 'sla_agreement_easi_colruyt.txt'. Correct answer must include: (1) dedicated support channel for Colruyt employees, (2) P1 incidents: response within 2 hours, resolution within 4 hours, (3) 99.5% monthly platform availability SLA, (4) service credit of 10% of monthly fee per breach, maximum 30%. Missing the response times or the availability target = significant deduction.",
+    "tags": ["onedrive-rag", "sla", "contract", "colruyt", "graph"],
+    "expected_agents": ["graph"]
+  },
+  {
+    "text": "How many vacation days do I get per year and can I save them up?",
+    "category": "onedrive-rag",
+    "difficulty": "simple",
+    "expected_answer": "Finds 'leave_policy_easi.txt'. Correct answer must include: (1) 20 statutory vacation days plus 12 ADV days = 32 total paid leave days per year, (2) maximum 5 days may be carried over to the next calendar year, (3) carried-over days expire on 31 March. Answering with only 20 days without mentioning ADV = deduction. Missing the carryover cap or expiry date = deduction.",
+    "tags": ["onedrive-rag", "leave", "hr-policy", "graph"],
+    "expected_agents": ["graph"]
+  },
+  {
+    "text": "I need to bring in a new supplier that will have access to Colruyt's data. What do they need to provide before we can work with them?",
+    "category": "onedrive-rag",
+    "difficulty": "hard",
+    "expected_answer": "Finds 'procurement_procedure_easi.txt' and/or 'data_processing_agreement_colruyt.txt'. Correct answer must include: (1) supplier must complete the EASI supplier registration form at intranet.easi.net/procurement, (2) must submit a signed Supplier Code of Conduct, (3) because they will handle personal data, a Data Processing Agreement is required, (4) proof of GDPR compliance required. Generic answer without mentioning the DPA or Supplier Code of Conduct = significant deduction.",
+    "tags": ["onedrive-rag", "procurement", "gdpr", "semantic-gap", "graph"],
+    "expected_agents": ["graph"]
+  },
+  {
+    "text": "If the SmartSales platform goes completely down for Colruyt, who at EASI do I need to contact and how often do I need to update Colruyt?",
+    "category": "onedrive-rag",
+    "difficulty": "medium",
+    "expected_answer": "Finds 'incident_management_procedure_easi.txt' and/or 'sla_agreement_easi_colruyt.txt'. Correct answer must include: (1) this is an S1/P1 incident — full platform outage, (2) immediately notify Arne Albrecht (a.albrecht@easi.net) and Dorian Feaux (d.feaux@easi.net), (3) if not resolved within 2 hours, escalate to COO, (4) Colruyt must be updated every 2 hours until the incident is resolved. Missing the 2-hour client update cadence or the escalation to COO = deduction.",
+    "tags": ["onedrive-rag", "incident", "escalation", "sla", "graph"],
+    "expected_agents": ["graph"]
+  },
+  {
+    "text": "I finished a €900 Salesforce training in March. If I resign in July, do I owe EASI anything?",
+    "category": "onedrive-rag",
+    "difficulty": "medium",
+    "expected_answer": "Finds 'training_policy_easi.txt'. Correct answer must include: (1) the repayment obligation applies because the training cost more than €500, (2) departure within 6 months of completion = 100% repayment, (3) July is 4 months after March, so the full €900 must be repaid. Giving the wrong percentage (50%) or wrong calculation = significant deduction. Not finding the repayment clause = max 2.",
+    "tags": ["onedrive-rag", "training", "repayment", "hr-policy", "graph"],
+    "expected_agents": ["graph"]
+  },
+  {
+    "text": "We think a laptop containing Colruyt employee data was lost. Who needs to be told, and by when?",
+    "category": "onedrive-rag",
+    "difficulty": "hard",
+    "expected_answer": "Finds 'data_breach_procedure_easi.txt' and/or 'data_processing_agreement_colruyt.txt'. Correct answer must include: (1) report to EASI DPO (dpo@easi.net) within 2 hours internally, (2) notify Colruyt (procurement@colruyt.be) within 24 hours — required under the DPA EASI-COL-DPA-2026-001, (3) if there is risk to data subjects, notify Belgian DPA (GBA) within 72 hours, (4) if high risk to individuals, Colruyt retail employees must be notified directly. Missing the 24h client notification or the 72h GBA deadline = significant deduction.",
+    "tags": ["onedrive-rag", "data-breach", "gdpr", "semantic-gap", "graph"],
+    "expected_agents": ["graph"]
+  },
+  {
+    "text": "Can I work remotely from France for a week while on holiday?",
+    "category": "onedrive-rag",
+    "difficulty": "medium",
+    "expected_answer": "Finds 'remote_work_policy_easi.txt'. Correct answer must include: (1) working from an EU country is allowed for up to 10 days per year on a case-by-case basis, (2) prior HR approval is required, (3) VPN is mandatory and the same security and confidentiality obligations apply as in Belgium. Answering with a flat yes or no without mentioning the 10-day cap or HR approval = significant deduction.",
+    "tags": ["onedrive-rag", "remote-work", "hr-policy", "graph"],
+    "expected_agents": ["graph"]
+  },
+  {
+    "text": "I'm leaving EASI next month. What happens to my company car and my health insurance?",
+    "category": "onedrive-rag",
+    "difficulty": "hard",
+    "expected_answer": "Finds 'offboarding_guide_easi.txt', 'company_car_policy_easi.txt', and/or 'health_insurance_guide_easi.txt'. Correct answer must include: (1) company car must be returned clean with all keys and documents on the last working day at Avenue Louise 65, plus a completed final mileage log, (2) any unreported damage will be charged to the employee, (3) health insurance (DKV) coverage ends on the last day of employment, (4) individual continuation of the DKV plan is available — employee must arrange this directly. Missing any of the car return or insurance end-date points = deduction.",
+    "tags": ["onedrive-rag", "offboarding", "multi-document", "semantic-gap", "graph"],
+    "expected_agents": ["graph"]
+  },
+  {
+    "text": "An emergency fix is needed on the Colruyt platform at midnight. Who approves it and when does the RFC need to be filed?",
+    "category": "onedrive-rag",
+    "difficulty": "medium",
+    "expected_answer": "Finds 'change_management_procedure_easi.txt'. Correct answer must include: (1) this is an emergency change — verbal approval from the IT Manager and Arne Albrecht (account owner for Colruyt) is sufficient to proceed, (2) a retroactive RFC must be submitted via servicedesk.easi.net within 24 hours, (3) Colruyt cannot have changes during Friday 18:00 to Monday 08:00 during promotional campaign weeks — verify the restriction does not apply. Missing the 24h RFC deadline or the verbal approval path = deduction.",
+    "tags": ["onedrive-rag", "change-management", "emergency", "colruyt", "graph"],
+    "expected_agents": ["graph"]
+  },
+  {
+    "text": "What is the maximum data loss EASI can have if its main data centre fails, and where does it fail over to?",
+    "category": "onedrive-rag",
+    "difficulty": "simple",
+    "expected_answer": "Finds 'business_continuity_plan_easi.txt'. Correct answer must include: (1) RPO (Recovery Point Objective) is 1 hour — maximum acceptable data loss is 1 hour of transactions, (2) RTO (Recovery Time Objective) is 4 hours for Priority 1 systems, (3) failover environment is Azure North Europe (Dublin, Ireland). Confusing RTO and RPO, or wrong failover location = significant deduction.",
+    "tags": ["onedrive-rag", "bcp", "disaster-recovery", "graph"],
+    "expected_agents": ["graph"]
+  },
+  {
+    "text": "A colleague failed a phishing test for the second time this year. What are the consequences?",
+    "category": "onedrive-rag",
+    "difficulty": "simple",
+    "expected_answer": "Finds 'it_security_procedure_easi.txt'. Correct answer must include: (1) first failure triggers automatic enrollment in a 30-minute online security awareness training and manager notification, (2) a second failure within 12 months triggers escalation to HR. Describing only the first-failure consequence without mentioning the HR escalation on second failure = deduction.",
+    "tags": ["onedrive-rag", "it-security", "phishing", "graph"],
+    "expected_agents": ["graph"]
+  },
+  {
+    "text": "How far in advance does supplier1 need to warn us before a scheduled maintenance visit?",
+    "category": "onedrive-rag",
+    "difficulty": "simple",
+    "expected_answer": "Finds 'maintenance_contract_supplier1.txt'. Correct answer must include: (1) preventive maintenance occurs twice per year: Q1 (second week of February) and Q3 (second week of September), (2) supplier1 (Marc Supplier, marc.supplier@supplier1.be) must confirm the schedule at least 4 weeks in advance via email to procurement@easi.net. Answering without the 4-week notice period or without the Q1/Q3 schedule = deduction.",
+    "tags": ["onedrive-rag", "supplier1", "maintenance", "graph"],
+    "expected_agents": ["graph"]
   }
 ]

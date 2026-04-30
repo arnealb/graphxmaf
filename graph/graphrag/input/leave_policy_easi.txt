@@ -1,0 +1,33 @@
+Leave Policy
+EASI Group — Avenue Louise 65, 1050 Brussels — Document owner: HR (hr@easi.net) — Version 2026.1
+1. Purpose and scope
+This policy describes all forms of paid and unpaid leave available to employees of EASI Group, the procedures to request and approve leave, and the rules governing balances, carryover, and special situations. It applies to every employee on a Belgian employment contract, regardless of role, seniority, or location of work. Questions about the application of this policy in an individual case should be sent to hr@easi.net.
+2. Annual paid leave
+Each employee is entitled to 20 statutory vacation days per calendar year, plus 12 ADV days (reduction of working hours), giving a total of 32 paid leave days for a full-time, full-year employee. Part-time staff and employees who join or leave EASI mid-year accrue leave on a pro-rata basis. For example, an employee joining in mid-year — as is the case for Dorian Feaux (Sales Engineer) and Arne Albrecht (Business Analyst), both of whom started part-way through the year — accrues only the share corresponding to the months actually worked in that calendar year. The current balance, including ADV days, is always visible in the HR portal.
+3. Requesting leave
+All leave requests are submitted through the HR portal at hr.easi.net. The portal automatically routes the request to the direct manager and updates the team calendar after approval. Two minimum notice periods apply:
+Up to 3 consecutive working days: submit at least 3 working days in advance.
+More than 3 consecutive working days: submit at least 2 weeks in advance.
+Managers should respond within 3 working days. Requests denied for operational reasons will state the reason in writing in the portal. Last-minute requests may be approved at managerial discretion when staffing allows; they should not be the norm.
+4. Carryover and expiry
+A maximum of 5 unused leave days may be carried over to the following calendar year. Days carried over expire on 31 March of that following year and cannot be paid out. Employees are encouraged to plan their leave during the year so they do not lose accrued days. HR sends a reminder in early February to anyone with carried-over days remaining.
+5. Sick leave
+In case of illness, the employee informs the direct manager and HR before 09:00 on the first day of absence. Self-certification is accepted for the first two days of any sick leave episode. From day three onwards a medical certificate from a licensed physician must be submitted to hr@easi.net the same day; failure to do so converts the absence into unjustified leave. If sickness lasts longer than 30 consecutive calendar days, HR convenes a mandatory meeting between the employee, the direct manager, and the occupational physician to discuss return-to-work arrangements and any temporary adjustments.
+6. Parental leave
+After 12 months of continuous service at EASI, every parent of a child under 12 may request up to 4 months of unpaid parental leave. The request is submitted to hr@easi.net at least 3 months before the planned start date and may be split into shorter blocks subject to manager agreement. The employee’s position is guaranteed upon return; salary, benefits, and seniority resume on the same terms as before the leave. The leave is recorded as unpaid in the payroll system; the employee may apply separately to RVA/ONEM for the statutory parental leave allowance.
+7. Breastfeeding breaks
+A nursing parent is entitled to two breaks of 30 minutes per working day, until the child reaches 9 months of age. The exact timing of the breaks is agreed with the direct manager so that workload and meetings can be planned around them. A medical certificate confirming the breastfeeding is uploaded to the HR portal once and is then valid for the entire period.
+8. Bereavement leave
+In the event of a death in the family, paid bereavement leave is granted as follows:
+Spouse, registered partner, or cohabiting partner: 3 working days.
+First-degree relative (parent, child, sibling): 3 working days.
+Second-degree relative (grandparent, grandchild, parent-in-law): 1 working day.
+Days may be taken between the date of death and the day after the funeral, or split with manager agreement. The leave is registered through the HR portal with the reason code "bereavement"; supporting documentation may be requested by HR.
+9. Volunteer leave
+EASI supports civic engagement. Each employee may take up to 1 paid day per year for recognised volunteer work with a registered Belgian non-profit, subject to manager approval and operational coverage. The request is submitted at least 5 working days in advance via the HR portal, with a short description of the volunteer activity and the organisation. HR may ask for confirmation from the organisation after the fact.
+10. Public holidays and bridge days
+EASI observes the 10 Belgian statutory public holidays. When a public holiday falls on a Saturday or Sunday, a replacement day is granted; the date of the replacement day is published by HR in December for the following year. So-called bridge days (a single working day between a public holiday and the weekend) are not collective closures unless announced as such by HR.
+11. Practical examples
+Two examples are useful for partial-year calculations. Arne Albrecht, Business Analyst, joined EASI on 1 April. For the calendar year of his start he accrues 9/12 of the full annual entitlement, that is 24 days (rounded down to the nearest half-day). Dorian Feaux, Sales Engineer, joined on 1 September; for that calendar year he accrues 4/12, that is roughly 11 days. From the following 1 January both accrue the full 32-day annual entitlement.
+12. Questions and disputes
+All questions about leave entitlements, balances, or interpretation of this policy go to hr@easi.net. Disputes about a refused request are first discussed with the direct manager; if not resolved, the employee may escalate to the HR Director by email to hr@easi.net. The HR Director responds within 10 working days.

@@ -1,0 +1,44 @@
+Data Breach Procedure
+EASI Group — Document owner: Data Protection Officer (dpo@easi.net) — GDPR-compliant
+1. Purpose and scope
+This procedure describes how EASI Group detects, assesses, contains, and reports personal data breaches under the General Data Protection Regulation. It applies to all personal data EASI processes either as a controller (e.g. data of EASI staff) or as a processor on behalf of clients. In its processor role, EASI processes personal data of clients including Colruyt Group retail employees using SmartSales, Carrefour Belgium SA store employees using the analytics module, Delhaize Group franchise employees using the EDI Connector Pack, and supplier contacts registered in EASI’s Salesforce CRM and the SmartSales supplier catalogue (including Marc Supplier, marc.supplier@supplier1.be, at supplier1).
+2. Definition of a personal data breach
+A personal data breach is any accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to personal data. Examples include:
+A laptop containing Colruyt employee data is lost or stolen during a field visit by Arne Albrecht or Dorian Feaux.
+An EASI system is compromised and client data are exfiltrated.
+An employee mistakenly emails a Salesforce data export to the wrong recipient.
+A configuration error exposes pseudonymised customer data on a publicly reachable URL.
+A USB drive containing personal data is misplaced.
+3. Internal reporting obligation
+Any EASI employee who suspects or discovers a personal data breach must report it within 2 hours to the EASI Data Protection Officer at privacy@easi.net or dpo@easi.net. The DPO direct line is 02 123 45 99. The reporter does not attempt to contain the breach independently before informing the DPO; they preserve all evidence (do not power off a compromised device, do not delete logs, do not "clean up" the inbox). Acting prematurely can destroy evidence needed for the investigation and the regulatory notification.
+4. Initial assessment
+Within 4 hours of the internal report, the DPO and the IT Security team complete an initial assessment covering:
+Is personal data actually involved? Some incidents involve only metadata or non-personal information.
+Which categories of data and approximately how many data subjects are affected?
+Is there a risk to the rights and freedoms of data subjects (financial loss, identity theft, discrimination, reputational damage)?
+Is cross-border processing involved? This is particularly relevant for clients with EU-wide operations such as Anheuser-Busch InBev or Ferrero Benelux.
+5. Notification to the Belgian DPA
+Where the assessment concludes there is a risk to data subjects, EASI notifies the Belgian Data Protection Authority (Gegevensbeschermingsautoriteit / Autorité de protection des données) at www.gegevensbeschermingsautoriteit.be within 72 hours of first becoming aware of the breach. The DPO at dpo@easi.net coordinates the notification. The notification includes the nature of the breach, the categories and approximate number of data subjects and records, the likely consequences, the contact point for follow-up, and the measures taken or proposed to address and mitigate the breach.
+6. Notification to data subjects
+Where the breach is likely to result in a high risk to the rights and freedoms of data subjects (e.g. risk of financial fraud, identity theft, or significant emotional harm), EASI together with the relevant data controller — for example Colruyt Group or Carrefour Belgium SA, under the respective Data Processing Agreements such as EASI-COL-DPA-2026-001 — communicates the breach directly to the affected individuals. The communication is in plain language; it describes the nature of the breach, the likely consequences, the contact point (DPO), and the steps already taken and recommended to the data subject (e.g. change passwords, monitor financial accounts).
+7. Notification to client controllers
+When a breach involves data processed on behalf of a client, EASI notifies the affected client within 24 hours of identifying the breach, irrespective of whether DPA notification is required. The relevant contacts are:
+Colruyt Group: procurement@colruyt.be.
+Carrefour Belgium SA: ops@carrefour-be.eu.
+Delhaize Group: procurement@delhaize.eu.
+Anheuser-Busch InBev: sales@ab-inbev.com.
+GreenTech Solutions: info@greentechsolutions.be.
+Ferrero Benelux: marketing@ferrero.be.
+The notification template is maintained by the DPO and includes all elements required under Article 33(3) GDPR. Notification to the client is required by the relevant Data Processing Agreements.
+8. Containment and remediation
+Containment activities run in parallel with notification. Typical actions include revoking compromised credentials, isolating affected systems from the network, restoring data from clean backups (see the Business Continuity Plan), and patching the underlying vulnerability. The DPO ensures that containment activities do not destroy evidence needed for forensic analysis or regulatory follow-up.
+9. Documentation
+All breaches — including those that do not require notification to the DPA — are logged in the internal breach register maintained by the DPO. The register records: the date of detection, the nature of the breach, the data categories and the number of data subjects affected, the assessment outcome, actions taken, notifications made, and the final outcome. The register supports compliance demonstrations under Article 33(5) GDPR and is reviewed during DPA inspections or client audits (see clause 8 of EASI-COL-DPA-2026-001).
+10. Annual review
+Each January, the DPO presents an anonymised summary of breaches and near-misses from the previous year to EASI management and to the Works Council. The security team (security@easi.net) uses the data to prioritise preventive controls and awareness campaigns. Lessons learned are also shared with the IT Security team and reflected in the IT Security Procedure where relevant.
+11. Roles
+EASI Data Protection Officer — leads the response, decides on notifications, owns the breach register.
+IT Security team (security@easi.net) — provides technical investigation and containment.
+Account managers (Arne Albrecht, Dorian Feaux) — coordinate communication with affected clients.
+Customer Success Manager (Nathalie Pieters) — supports client communication and follow-up.
+Legal — supports notification drafting and assesses contractual implications.

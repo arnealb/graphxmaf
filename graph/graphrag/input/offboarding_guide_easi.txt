@@ -1,0 +1,30 @@
+Offboarding Guide
+EASI Group — Document owner: HR (hr@easi.net) — Last reviewed: January 2026
+1. Purpose
+This guide describes the steps that must be completed when an employment contract at EASI Group ends, regardless of who initiated the termination. It covers notice periods under Belgian law, the exit interview, knowledge transfer, equipment return, IT access revocation, final pay, the non-compete clause, and reference letters. The objective is a respectful, complete, and risk-aware separation that protects both the employee and EASI.
+2. Notice periods
+Notice periods follow the Belgian Wet Eenheidsstatuut of 2014. The duration depends on whether the contract is terminated by the employer or the employee, and on the seniority of the employee. The table below shows representative values; the full schedule is included in the Belgian statute and in the employment regulations.
+When the employee is on garden leave, equipment and access are handled at the start of the notice period rather than on the last working day. This is an exception to the standard timing described below.
+3. Exit interview
+The exit interview is mandatory and is scheduled by HR within the first 2 weeks of the notice period. HR (hr@easi.net) sends the calendar invitation. The interview covers: reasons for departure, feedback on management and working conditions, suggestions for improvement, and the status of knowledge transfer. The interview lasts approximately 60 minutes; insights are aggregated, anonymised, and shared with management as part of the annual people analytics review.
+4. Knowledge transfer
+The departing employee prepares a written handover document covering all active projects, key client relationships, open tasks and tickets, and outstanding decisions. The handover is reviewed and signed off by the direct manager. For client-facing roles — particularly Sales Engineers, Business Analysts, and Customer Success Managers responsible for accounts such as Colruyt Group (SmartSales Rollout 2026, EUR 220,000) or GreenTech Solutions (Sustainability Dashboard, EUR 45,000) — the handover must include a client briefing. The briefing is shared with Nathalie Pieters (n.pieters@easi.net) for customer continuity, with the relevant successor account manager (Dorian Feaux for new accounts, Arne Albrecht for technical handovers), and with the client contact when appropriate.
+5. Equipment return
+On or before the last working day, the employee returns all EASI property to the reception desk at Avenue Louise 65. Items include the laptop and charger, the EASI access badge, the mobile phone (if issued), the company car together with all keys and documents, and any second screen or accessory taken home for remote work. The company car return follows the rules in the Company Car Policy, including the final mileage log and an inspection for damage that has not previously been reported.
+6. IT access revocation
+IT (it@easi.net) disables all individual accounts within 24 hours of the last working day. Disabling covers Microsoft 365 (mail, Teams, OneDrive), the Salesforce CRM, the SmartSales administration console, the corporate VPN, and any third-party tool issued for the role. Access to client environments is also revoked: this includes Colruyt Group’s Salesforce organisation, Carrefour Belgium SA’s analytics module, Delhaize Group’s EDI environment, AB InBev’s Distribution Mapping system, and any other client-side access granted under EASI’s managed services. Nathalie Pieters communicates the revocation and the name of the replacement contact to the relevant client.
+7. Final pay calculation
+The final payslip is issued within 5 working days of the last working day. It includes outstanding base salary, the value of remaining vacation days that were not consumed, holiday pay (single and, where applicable, double), accrued bonuses, meal voucher balance, and any reimbursable expenses approved before departure. Deductions may include amounts owed under the Training Policy repayment obligation (for example, repayment of a Salesforce certification cost when the employee leaves within 12 months of completion) and the value of equipment that has not been returned. Detailed calculations are explained in writing.
+8. Non-compete clause
+A non-compete clause applies to employees in commercial and customer-facing roles, including Sales Engineer, Business Analyst, and Customer Success Manager. Key terms:
+Duration: 12 months from the last working day.
+Geographic scope: Belgium.
+Sectoral scope: field sales software, CRM implementation, retail analytics.
+Compensation: 50 percent of the last gross monthly salary, paid for the duration of the clause.
+Waiver: EASI may waive the clause in writing within 15 days of the employee’s resignation. Waiver removes both the restriction and the compensation.
+9. Reference letter
+The employee may request a reference letter through hr@easi.net. The standard letter confirms the dates of employment, the role(s) held, and a neutral description of duties. A more detailed reference (with examples and an explicit recommendation) requires the direct manager’s consent and is drafted by the manager. Standard turnaround is 5 working days; detailed references typically take 10 working days.
+10. Continuity of insurance
+The end of employment ends the group hospitalisation cover with DKV. The Health Insurance Guide describes the optional individual continuity through DKV; the employee may also wish to organise pension and tax matters with the relevant authorities. HR provides a checklist and contact details on request.
+11. Closing
+A successful offboarding protects clients, colleagues, and the departing employee. EASI commits to handle the process professionally, on time, and with respect. Comments and improvement suggestions about this guide are welcome at hr@easi.net.

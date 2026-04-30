@@ -1,0 +1,31 @@
+Incident Management Procedure
+EASI Group — Document owner: Service Operations — ITIL-aligned
+1. Scope
+This procedure governs the end-to-end management of incidents affecting EASI-managed services at client locations and on EASI internal infrastructure. Services in scope include the SmartSales platform deployed at Colruyt Group (47 locations), Carrefour Belgium SA (12 hypermarkets), and Delhaize Group; the In-Store Analytics Module at Carrefour Belgium SA; the EDI Connector Pack at Delhaize Group AD-franchise stores; the Distribution Mapping platform at Anheuser-Busch InBev (Leuven); and the GreenTech Solutions Sustainability Dashboard.
+2. Definitions
+An incident is any unplanned interruption or quality reduction of a managed service. A service request — for example, the creation of a new SmartSales user account, a configuration change, or a routine catalogue update — is not an incident and is processed under the EASI Service Request workflow. A problem is a recurrent root cause behind multiple incidents and is processed under Problem Management.
+3. Severity levels
+Incidents are classified at the time of report:
+4. Reporting channels
+SmartSales client portal — for end-user-reported issues at any client location.
+Email to support@easi.net — for any client contact.
+Phone 02 123 45 67 — reserved for S1 and S2 incidents.
+Automatic creation by EASI monitoring — covered by the EASI internal escalation matrix.
+5. Escalation matrix
+S1 incidents trigger immediate notification to Arne Albrecht (a.albrecht@easi.net), Dorian Feaux (d.feaux@easi.net), and the EASI Delivery Manager. If the incident is not resolved within 2 hours, the EASI Chief Operating Officer is notified and joins the response. S2 incidents notify Arne Albrecht within 30 minutes. S3 and S4 incidents are handled by the service desk without escalation, unless the SLA target is at risk of being missed.
+6. Client communication
+For S1 and S2 incidents, the EASI account manager sends a status update to the relevant client contact every 2 hours until the incident is resolved. The account ownership is as follows: Arne Albrecht for Colruyt Group; Dorian Feaux for Carrefour Belgium SA and Delhaize Group; Nathalie Pieters (n.pieters@easi.net) coordinates client communication for any account she manages, and acts as a backup when the primary account manager is unavailable. Updates use a structured template covering current status, ETA for the next update, mitigation steps in progress, and impact summary.
+7. Response and resolution
+On receiving an incident, the service desk acknowledges it, validates the severity, and assigns it to the relevant resolver group. The resolver investigates, applies workarounds where possible, and records every action in the ticket. Communication with the client and within EASI is logged in the same ticket so that all stakeholders share the same source of truth. When the resolver believes the incident is resolved, they notify the requester and wait for confirmation; resolution without confirmation is allowed only after 2 working days of silence on S3 and S4.
+8. Post-mortem
+A formal post-mortem is mandatory for every S1 and S2 incident. The post-mortem must be completed within 5 working days of the resolution. It contains a chronological timeline, the identified root cause, contributing factors, the impact assessment (number of locations affected, estimated business impact in euro where it can be reasonably quantified), the remediation steps already applied, and the preventive measures planned with owners and dates. The post-mortem is shared with the affected client. Currently open post-mortems include Case 00001023 (Carrefour POS delay, S2) and Case 00001022 (the supplier1 shipment delay, classified separately as a supply chain incident under the Procurement Procedure).
+9. Roles
+Service desk agent — first responder for all incidents; categorisation, prioritisation, initial diagnosis, and routing.
+Resolver group lead — owns the technical resolution.
+Major incident manager — coordinates S1 and S2 response; convenes the war room; chairs the post-mortem.
+Account manager — owns client communication; ensures SLA implications are assessed (see SLA EASI-COL-SLA-2026-001 for Colruyt; comparable SLAs apply for Carrefour and Delhaize).
+Customer Success Manager (Nathalie Pieters) — coordinates communication and recovery actions for accounts under continuous customer success management.
+10. Continuous improvement
+Trends are reviewed in a monthly service operations meeting. Recurrent incidents trigger problem records under Problem Management. Patterns by client (e.g. POS-related issues at Colruyt and Carrefour) are flagged to the relevant account manager and product owner. Post-mortem actions are tracked to closure; overdue actions are escalated to the COO.
+11. Documentation and tools
+All incidents are recorded in the EASI service management platform. Standard reports are produced monthly and shared with each client as part of their service report (for Colruyt Group, see clause 6 of EASI-COL-SLA-2026-001). Internal weekly review meetings cover open S1, S2, and aged S3 tickets; participants include service desk leadership, account managers, the Delivery Manager, and the COO.

@@ -1,0 +1,38 @@
+Training and Certification Policy
+EASI Group — Document owner: HR (hr@easi.net) — Effective 1 January 2026
+1. Philosophy
+Continuous learning is a core value at EASI Group. Every employee is encouraged to invest in skills that strengthen both their current role and their longer-term career. This policy defines the annual training budget, the approval rules, the approved learning platforms and certifications, and the obligations that apply when an employee leaves shortly after completing a company-funded training.
+2. Annual budget
+Each employee has an annual training budget of EUR 1,500 per calendar year. The budget covers external course fees, certification examinations, books, and licences for self-paced platforms. The budget is reset every 1 January and unused amounts do not roll over to the following year. Conference attendance fees are tracked separately and do not consume the EUR 1,500 budget.
+3. Approval thresholds
+Approval rules scale with cost:
+Below EUR 500: direct manager approval through the HR portal.
+EUR 500 to EUR 1,500: direct manager and HR approval.
+Above EUR 1,500: direct manager, HR, and department director sign-off. Multi-day external programmes and expensive certifications fall in this band.
+Verbal approvals are not valid; every approval must be recorded in the HR portal.
+4. Approved self-paced platforms
+EASI maintains enterprise licences for three self-paced learning platforms: Pluralsight, Udemy Business, and LinkedIn Learning. These licences are managed centrally by IT. To request a seat, file a ticket via servicedesk.easi.net. Activation typically takes one working day. Time spent on these platforms during working hours must be logged against the project code "Internal — Training".
+5. Approved certifications
+Certifications are fully reimbursed when they are aligned with EASI’s technology stack and client demand. The most common certifications include:
+Salesforce certifications — Salesforce Administrator, Sales Cloud Consultant, Platform Developer. These are particularly encouraged for staff working with clients where EASI manages Salesforce environments, including Colruyt Group, Carrefour Belgium SA, and Delhaize Group.
+Microsoft Azure certifications — Azure Fundamentals, Azure Administrator, Azure Solutions Architect.
+TOGAF (architecture).
+Prince2 (project management).
+Other certifications can be approved case by case; submit a justification in the HR portal explaining the expected impact on client delivery.
+6. Repayment obligation
+When EASI funds a training or certification costing more than EUR 500, an early-departure clause applies. If the employee leaves EASI within 12 months of course completion:
+Departure within 6 months: 100 percent of the cost is reimbursed by the employee.
+Departure between 6 and 12 months: 50 percent of the cost is reimbursed.
+A practical example: Arne Albrecht (Business Analyst) completed his Salesforce Administrator certification in March 2026 at a cost of EUR 1,200. The repayment obligation applies until March 2027. The amount due is offset against the final pay, where possible, when the employee leaves within the relevant window.
+7. Study leave
+Employees preparing for a certification examination may take 1 paid study day per exam, with a maximum of 6 days per calendar year. Study leave is requested through the HR portal at least 2 weeks in advance, with the exam date and certification name. The leave is debited from a dedicated study-leave balance and does not consume vacation days.
+8. Conferences
+Attendance at external conferences such as Dreamforce, Microsoft Ignite, Gartner Symposium, or industry-specific events requires both manager and department director approval, regardless of cost. Conference fees are charged separately from the EUR 1,500 training budget. Travel and accommodation expenses follow the EASI Expense Policy. After the conference, the attendee shares a one-page summary of key takeaways with the team.
+9. Linking training to performance
+Training needs are discussed twice per year: during the mid-year check-in in April and during the formal performance review cycle between September and November. The discussion identifies skill gaps, agrees on certifications to target, and reserves part of the training budget for those goals. The Performance Review Procedure describes the wider process; this section only addresses the training dimension.
+10. Logging and evidence
+All completed trainings and certifications must be logged in the HR portal within 5 working days of completion, with the certificate or attendance proof attached. Centralised tracking allows EASI to maintain accurate skill profiles, support resource planning, and demonstrate competence to clients during audit visits. Questions go to hr@easi.net.
+11. Worked example
+A practical illustration helps clarify the rules. Suppose a Business Analyst working on the Colruyt Group SmartSales Rollout 2026 engagement wishes to deepen her Salesforce expertise. In April she discusses the development plan with her manager during the mid-year check-in. They agree on two targets for the year: the Sales Cloud Consultant certification (estimated cost EUR 800 for the official preparation course plus EUR 200 for the exam, total EUR 1,000) and a 3-month Pluralsight subscription within the corporate licence pool. Approval flow: the Pluralsight seat is requested through servicedesk.easi.net (no budget impact since EASI holds the enterprise licence); the certification falls in the EUR 500 to EUR 1,500 band, so manager and HR approval are obtained through the HR portal before booking the course. Upon successful completion in October, the certificate is uploaded to the HR portal within 5 working days, and the cost is debited from the EUR 1,500 annual training budget. The repayment obligation begins on the date of certification and lasts 12 months. Conference attendance later that year — for example, attendance at the Salesforce World Tour Brussels — would be treated separately under clause 8.
+12. Group sessions and internal training
+Beyond individually requested training, EASI organises group sessions on topics relevant to multiple teams (for example, Salesforce platform updates, GDPR refreshers, secure coding workshops). Group sessions are funded centrally and do not consume the individual EUR 1,500 budget. Attendance is logged automatically for participants. Internal trainers are recognised in the performance review process and may receive a knowledge-sharing bonus.

@@ -1,0 +1,34 @@
+IT Security Procedure
+EASI Group — Document owner: Security (security@easi.net) — Reviewed annually
+1. Purpose
+This procedure defines the minimum security controls and behaviours expected of every EASI Group employee, contractor, and partner with access to EASI systems, devices, or client environments. The objective is to protect EASI assets, employee data, and the data of EASI clients — including Colruyt Group, Carrefour Belgium SA, Delhaize Group, Anheuser-Busch InBev, Ferrero Benelux, GreenTech Solutions, and supplier1 — against unauthorised access, accidental loss, and malicious activity.
+2. Password policy
+Passwords used to access EASI systems must meet all of the following requirements:
+Minimum length of 14 characters.
+At least one uppercase letter, one lowercase letter, one number, and one special character.
+Not equal to any of the last 12 passwords used.
+Rotated at least every 90 days.
+Multi-factor authentication (MFA) is mandatory for all EASI systems, including Microsoft 365, the Salesforce CRM, the SmartSales administration console, the corporate VPN, and any client system to which EASI has access. This explicitly includes Colruyt’s Salesforce organisation, Carrefour’s analytics platform, Delhaize’s EDI environment, and AB InBev’s distribution mapping system. The approved MFA channel is the Microsoft Authenticator mobile application; SMS-based MFA is not acceptable for these systems.
+3. Device security
+Company-issued laptops are configured by EASI IT with full-disk encryption (BitLocker on Windows; FileVault equivalents on Mac). Screens auto-lock after 5 minutes of inactivity. Personal USB drives are prohibited; only encrypted USB drives issued by IT (request through servicedesk.easi.net) may be connected to EASI laptops. Personal laptops, phones, and tablets must not be used to access client data; if exceptional access from a personal device is needed, a justified ticket is opened in advance with security@easi.net.
+4. Clean desk policy
+No sensitive document — including client contracts (such as those signed with Colruyt Group, Carrefour Belgium SA, or supplier1), pricing materials, employee data, or printed Salesforce reports — may be left unattended on a desk or visible on a screen when the employee is away from the workstation. Physical documents are locked in the personal pedestal drawer at the end of each day. Whiteboards used during sensitive discussions are wiped before the meeting room is left. Visitors are escorted at all times in working areas.
+5. Data classification
+Information at EASI is classified into four levels:
+Public — marketing materials, press releases, published case studies.
+Internal — internal policies, project plans, this document.
+Confidential — client contracts, personal data of employees and clients, Salesforce CRM data, and SmartSales order and catalogue data.
+Strictly Confidential — financial forecasts, board materials, M&A-related information.
+Confidential and Strictly Confidential data must be encrypted in transit when shared externally. Encryption is achieved through Microsoft 365 sensitivity labels, password-protected archives, or secure file transfer platforms approved by IT.
+6. Client data handling
+Data extracted from any client system that EASI manages — for example SmartSales transactional data for Colruyt Group, In-Store Analytics output for the Carrefour Belgium SA hypermarket pilot (12 hypermarkets), EDI connector logs for Delhaize Group AD-franchise stores, or Distribution Mapping data for the Anheuser-Busch InBev site in Leuven — is classified Confidential. Access is granted on a documented business need. Access logs are reviewed quarterly by security@easi.net. Bulk exports require security team approval and are watermarked.
+7. Phishing tests and training
+IT runs simulated phishing campaigns at least once per quarter. Every employee will be tested. Employees who click a simulated phishing link or enter credentials in the simulated form are automatically enrolled in a mandatory 30-minute online security awareness training; managers are notified. A second failure within 12 months triggers a discussion with HR. Genuine phishing attempts received in EASI mailboxes must be reported using the "Report Phishing" button in Outlook; the IT security team reviews each report within 4 working hours.
+8. Software installation
+Employees may not install unapproved software on company devices. All software requests are submitted through servicedesk.easi.net. Browser extensions are governed by a whitelist managed by IT; an employee who needs an extension that is not on the list opens a ticket explaining the use case. Open-source libraries used in EASI development projects must come from approved repositories and are subject to scanning by the EASI software composition analysis tool.
+9. Incident reporting
+All suspected security incidents — phishing, malware, unauthorised access, lost or stolen devices, or accidental data exposure — must be reported immediately, ideally through the security portal at security.easi.net, otherwise by email to security@easi.net. The reporter does not investigate independently and does not turn off or "clean" the affected device, as evidence may be lost. For colleagues uncertain about the next step, Arne Albrecht and Dorian Feaux are trained first responders and can assist with the initial reporting. The incident management procedure describes the response timeline; the data breach procedure governs incidents involving personal data.
+10. Visitors and physical security
+Visitors must be registered at the reception desk at Avenue Louise 65 and accompanied by an EASI host while inside the building. Visitor badges are coloured and visibly different from employee badges. Tailgating — letting someone through a secure door without a badge scan — is forbidden. Sensitive areas (server room, finance archive) are accessible only to staff on a named access list, reviewed quarterly.
+11. Sanctions
+Violations of this procedure are addressed through the EASI disciplinary procedure. Severe or repeated violations — including disabling encryption, sharing credentials, sending Confidential data to a personal email account, or refusing to participate in security training — may constitute grounds for dismissal under Belgian labour law.

@@ -1,0 +1,33 @@
+Procurement Procedure
+EASI Group — Document owner: Procurement (procurement@easi.net)
+1. Scope
+This procedure governs all purchases of goods and services by EASI Group, including hardware (managed under the framework agreement with Fujitsu Belgium NV — EASI-FUJ-FWA-2026-001), software licences, professional services, marketing services, and office supplies. It does not apply to client project expenses, which are charged to project budgets and governed by the relevant project contract.
+2. Approval thresholds
+Approval requirements scale with the order value:
+All approvals must be documented in the procurement system before any purchase order is sent to a supplier. Verbal approvals are never sufficient. Splitting an order into smaller pieces to avoid an approval threshold is forbidden and treated as a serious procedural violation.
+3. Three-quote rule
+For any purchase above EUR 5,000 not covered by an existing framework agreement, EASI must obtain at least three competitive quotes. The quotes, the evaluation summary, and the approval are documented and filed with procurement@easi.net. The evaluation considers price, total cost of ownership, service level, references, and compliance with the EASI Supplier Code of Conduct. Single-source justifications (only one supplier can deliver) must be approved by the CFO and stored with the purchase file.
+4. Preferred suppliers and framework agreements
+EASI maintains framework agreements that should be used as the default sourcing channel:
+Hardware: Fujitsu Belgium NV under EASI-FUJ-FWA-2026-001.
+Industrial components and related maintenance: supplier1 under the framework agreement EASI-SUP1-FWA-2025-001 and the maintenance contract EASI-SUP1-MAINT-2026-001.
+Cloud infrastructure: the existing Microsoft Azure enterprise agreement.
+The intranet supplier list, maintained by procurement@easi.net, is the authoritative source. Employees check the list before approaching a new vendor.
+5. New supplier registration
+A new supplier not on the approved list must complete EASI’s supplier registration process. The supplier submits, via the procurement portal at intranet.easi.net/procurement, the supplier registration form, a recent extract of business registration, the signed Supplier Code of Conduct, and evidence of GDPR compliance where the supplier will process personal data on EASI’s behalf or on behalf of EASI clients. Procurement reviews the registration and approves or declines within 5 working days. For suppliers handling client data — for example for Colruyt Group, Carrefour Belgium SA, or Delhaize Group — a Data Processing Agreement is also concluded before any data flow.
+6. Invoices and payment
+All supplier invoices must be sent to finance@easi.net. Paper invoices are scanned by reception and forwarded the same day. The standard payment term is 30 days net from the invoice date. Where a framework agreement specifies a different term — such as the Fujitsu Belgium NV framework agreement or the supplier1 maintenance contract — the contractual term prevails over the standard term. The Invoice Approval Procedure describes the workflow in detail.
+7. Purchase cards
+Purchase cards (company credit cards) are issued only to department managers and above. Cardholders submit the monthly statement together with all receipts to finance@easi.net by the 5th of the following month. Personal purchases on a purchase card are forbidden. Arne Albrecht and Dorian Feaux carry expense claim cards, which are not purchase cards, used for client entertainment within the limits set by the Expense Policy. Lost or stolen cards must be reported to finance@easi.net immediately.
+8. Conflicts of interest
+An EASI employee may not authorise or influence a purchase from a supplier in which they, or a close family member, hold a personal financial interest, without prior written disclosure to the CFO and explicit written approval. Disclosures are filed with procurement@easi.net. Failure to disclose is treated as a disciplinary matter and may constitute grounds for dismissal under Belgian labour law.
+9. Anti-corruption
+EASI applies a zero-tolerance policy on bribery, corruption, and facilitation payments, both in its own conduct and in its expectations of suppliers. Gifts and hospitality offered or received above EUR 50 must be declared to procurement@easi.net. The Supplier Code of Conduct sets out detailed expectations.
+10. Sustainability
+Where two offers are commercially comparable, EASI prefers the supplier with stronger sustainability credentials, in particular ISO 14001 certification or equivalent environmental management. Hardware suppliers must comply with the EU WEEE Directive for end-of-life equipment management. Suppliers are expected to publish or share, on request, their key environmental indicators.
+11. Records and audit
+All procurement files (RFQs, quotes, evaluation, approvals, signed contracts, purchase orders, delivery confirmations, and invoices) are retained for 7 years in line with Belgian accounting law. The procurement records are auditable by the CFO, the external auditor, and — for client-funded purchases — by the relevant client under the audit clauses of the Data Processing Agreements (e.g. EASI-COL-DPA-2026-001).
+12. Roles, contacts and continuous improvement
+The procurement function is led centrally from procurement@easi.net. The team owns the supplier list, the framework agreements (notably EASI-FUJ-FWA-2026-001 with Fujitsu Belgium NV and EASI-SUP1-MAINT-2026-001 with supplier1), and the periodic supplier reviews described in the Supplier Code of Conduct. Day-to-day questions from EASI staff — for example, "is this vendor already approved?", "which framework should I use for new workstations?", or "do I need three quotes for this software renewal?" — are answered within one working day.
+Procurement runs an annual review of all framework agreements and key suppliers in November. The review covers price competitiveness, delivery performance against contractual SLAs, quality of post-sales support, sustainability indicators, and incidents logged during the year (including supply chain cases such as Case 00001022 for supplier1). Outcomes feed into renewal decisions and into the next year’s procurement plan, which is shared with the CFO and the department directors.
+Suggestions for improvements to this procedure — including proposals for new framework agreements, better tooling, or simplifications of the approval matrix — are welcome at procurement@easi.net. The procedure itself is reviewed annually and updated whenever the approval thresholds, the framework supplier list, or the relevant Belgian legislation changes materially.

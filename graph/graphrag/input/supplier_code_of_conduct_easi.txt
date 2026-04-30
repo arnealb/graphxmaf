@@ -1,0 +1,36 @@
+Supplier Code of Conduct
+EASI Group — Document owner: Procurement (procurement@easi.net) — Annual self-declaration required
+1. Applicability
+This Supplier Code of Conduct applies to every organisation supplying goods or services to EASI Group, including hardware suppliers (Fujitsu Belgium NV under EASI-FUJ-FWA-2026-001), component and maintenance suppliers (supplier1 under EASI-SUP1-MAINT-2026-001), and any new supplier onboarded under the EASI Procurement Procedure. It also applies to sub-contractors engaged by suppliers to fulfil EASI contracts; suppliers are required to communicate this Code to their own supply chain and ensure equivalent commitments down the chain.
+2. Labour and human rights
+Suppliers commit to the following labour and human rights principles:
+No child labour — minimum age of 15 years, or the local legal minimum age if higher.
+No forced or compulsory labour; employees must be free to resign with reasonable notice.
+Living wages paid in accordance with local legal requirements; for Belgian suppliers, in line with Belgian collective bargaining agreements.
+Maximum working hours that comply with Belgian labour law (for Belgian suppliers) or local applicable law (for non-Belgian suppliers).
+Safe and healthy working conditions; suppliers maintain occupational health and safety practices appropriate to their activity.
+Suppliers permit EASI audit of labour conditions with 30 days’ notice.
+3. Environmental responsibility
+Suppliers actively manage and reduce their environmental impact. Specific expectations include:
+Suppliers with more than 50 employees are expected to hold ISO 14001 certification or to demonstrate equivalent environmental management.
+All suppliers maintain a documented waste disposal policy.
+Suppliers delivering hardware (this applies in particular to Fujitsu Belgium NV) comply with the EU WEEE Directive on the management of end-of-life electrical and electronic equipment.
+Environmental incidents that may affect EASI deliverables are reported to procurement@easi.net within 48 hours.
+4. Business integrity and anti-corruption
+EASI applies a zero-tolerance policy on bribery, corruption, and facilitation payments. The same standard applies to suppliers acting in any way connected with EASI. Specific rules:
+No gift or hospitality of a value above EUR 50 may be offered to or accepted from EASI staff or EASI clients (including Colruyt Group, Carrefour Belgium SA, Delhaize Group, Anheuser-Busch InBev, Ferrero Benelux, GreenTech Solutions, and supplier1).
+Any offer of a gift above this threshold received by an EASI employee from a supplier must be declared to procurement@easi.net.
+Suppliers maintain accurate financial records.
+Conflicts of interest must be disclosed proactively to EASI.
+5. Data protection and information security
+Suppliers who process personal data on behalf of EASI or EASI’s clients must comply with the General Data Protection Regulation. A Data Processing Agreement is required before any personal data flows. The Data Processing Agreement EASI-COL-DPA-2026-001 between EASI and Colruyt Group, for example, lists Fujitsu Belgium NV among the approved sub-processors. Suppliers maintain appropriate technical and organisational security measures, in line with industry standards. EASI may require suppliers to undergo a security assessment (questionnaire or on-site audit) before contract signature and at any reasonable interval during the contract.
+6. Annual self-declaration
+Each supplier completes and signs EASI’s annual Supplier Self-Declaration form, confirming compliance with this Code. The signed form is submitted to procurement@easi.net by 31 January each year. New suppliers submit the form as part of their initial registration. Marc Supplier (marc.supplier@supplier1.be), Account Manager at supplier1, is the registered compliance contact for supplier1. The compliance contact at Fujitsu Belgium NV is account.manager@fujitsu.be.
+7. EASI audit right
+EASI reserves the right to conduct or commission audits of supplier compliance with this Code, with at least 30 days’ written notice to procurement@easi.net. Audits may consist of a documentation review, a remote interview, or an on-site visit at the supplier’s premises or at a sub-contractor’s premises. Audit costs are borne by EASI unless a material breach is found, in which case audit costs are borne by the supplier in addition to remediation costs.
+8. Breach and remediation
+A supplier found in breach of this Code receives a written notice from procurement@easi.net describing the breach and granting a remediation period of 30 days. If the breach is not remediated within this period, EASI may terminate the relevant contract with immediate effect, without further notice or compensation. Where the breach has implications for EASI client deliverables — for example, a Fujitsu compliance breach affecting hardware support for the Colruyt SmartSales deployment — EASI activates contingency sourcing under the Procurement Procedure to protect ongoing client services.
+9. Confidential reporting
+Suppliers and their employees may report confidentially any suspected violation of this Code, of EASI policies, or of applicable law via the EASI ethics inbox at procurement@easi.net or anonymously through the third-party whistleblowing channel published on the EASI website. EASI commits to investigate every report and to protect the reporter from retaliation, in line with Belgian and EU whistleblower protection laws.
+10. Updates and acknowledgement
+This Code is reviewed annually. Material updates are communicated to suppliers at least 60 days before they take effect. By signing the annual self-declaration, suppliers acknowledge the latest version of the Code. Questions about the interpretation of the Code may be sent to procurement@easi.net.

@@ -1,0 +1,34 @@
+Company Car Policy
+EASI Group — Document owner: HR (hr@easi.net) — Procurement contact: procurement@easi.net
+1. Eligibility and categories
+Company cars are allocated to employees whose role requires regular travel to client locations or whose package includes a vehicle as part of the agreed compensation. Three categories of vehicle exist:
+Category A — consultants and analysts with less than 3 years of seniority. The vehicle is a compact electric or hybrid model. Arne Albrecht, Business Analyst, falls into this category.
+Category B — senior consultants, Sales Engineers, team leads, and account managers. The vehicle is a mid-range model. Dorian Feaux, Sales Engineer, falls into this category.
+Category C — managers and directors. The vehicle is a premium model.
+The list of approved makes and models for each category is published on the intranet and refreshed quarterly by procurement@easi.net. Changes are driven by lease pricing, environmental criteria, and total cost of ownership.
+2. Fuel card and personal use
+A fuel card (or a charging card for electric vehicles) is issued together with the vehicle. The card covers professional kilometres only. Private use is permitted, but a flat personal contribution of EUR 150 per month is deducted from net salary as compensation for private mileage. To support payroll and tax reporting, every driver submits a monthly mileage log to hr@easi.net by the 5th day of the following month. The log distinguishes professional kilometres from private kilometres.
+3. Professional kilometres
+Travel between the EASI office and client locations counts as professional. Frequent destinations include:
+Colruyt Group — Edingensesteenweg 196, 1500 Halle.
+Carrefour Belgium SA — Bergensesteenweg 1424, 1070 Brussels (Anderlecht).
+Delhaize Group — Chaussée de Neerstalle 800, 1190 Brussels (Forest).
+Anheuser-Busch InBev — Vaartstraat 94, 3000 Leuven.
+GreenTech Solutions — Technologiepark 122, 9052 Ghent.
+Ferrero Benelux — Boulevard de la Woluwe 42, 1200 Brussels.
+supplier1 — Rue du Commerce 1, 1000 Brussels.
+The home-to-office commute is included as professional in the standard tax treatment but should be marked separately in the mileage log when travelling directly from home to a client location.
+4. Replacement cycle
+Vehicles are replaced every 4 years or 120,000 km, whichever comes first. Procurement notifies the driver three months before the replacement date and shares the current Category list so that the driver can select a new model. Selection forms must be returned within 15 working days; otherwise procurement assigns a default model from the eligible list.
+5. Damage reporting
+Any damage to the vehicle, however minor, must be reported within 24 hours by email to hr@easi.net. The report includes a description of the incident, photographs of all damaged areas, the date and place of the incident, and, where relevant, the police or insurer reference number. Failure to report within 24 hours may result in the employee bearing part of the repair cost. In case of an accident with personal injury or a third-party vehicle, the standard European accident form (constat) must be completed on site and submitted with the report.
+6. Home charging stations (electric vehicles)
+Drivers of Category A or Category B electric vehicles may request the installation of a home charging station. The request is filed through servicedesk.easi.net under the category "EV Charging". EASI covers installation costs up to EUR 800; any amount above this ceiling is borne by the employee. Electricity used for home charging is reimbursed at EUR 0.10 per kWh, calculated from the monthly meter reading sent to hr@easi.net. The home charging station remains the property of EASI when installed at EASI’s expense; on departure, the equipment is uninstalled or transferred at EASI’s discretion.
+7. Maintenance and tyres
+Routine maintenance follows the manufacturer schedule. The leasing partner organises servicing through its dealer network; the driver is responsible for booking the appointment in time. Summer and winter tyres are provided through the lease contract; tyre changes are scheduled in October and April. Damage to tyres caused by negligence (e.g. driving on rims) is not covered.
+8. Returning the vehicle
+At the end of employment, the vehicle is returned on the last working day to EASI reception at Avenue Louise 65. The driver returns all keys, registration documents, fuel/charging cards, and accessories. The final mileage log must be submitted on the same day. Any damage that has not previously been reported is charged to the driver based on the lease company’s damage assessment.
+9. Compliance
+This policy is to be read together with the EASI Expense Policy (toll fees, parking) and the IT Security Procedure (handling of confidential information stored on in-car infotainment systems). Questions go to hr@easi.net for tax and payroll questions, and to procurement@easi.net for vehicle selection, charging stations, and replacement.
+10. Insurance and accidents
+Every company vehicle is insured under the EASI fleet insurance policy, covering third-party liability, full collision, theft, glass breakage, and assistance. The driver is registered as the principal user; occasional use by a partner or another household member is permitted, provided that person holds a valid driving licence and is registered with HR by email to hr@easi.net. In case of an accident, the driver must complete the European accident form on the spot, take photographs of all vehicles and the scene, and submit the package within 24 hours alongside the damage report described in clause 5. Use of the vehicle for transport of paying passengers (taxi, ride-sharing) is not permitted.
