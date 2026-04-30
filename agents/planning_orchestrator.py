@@ -80,7 +80,8 @@ Handling dependent steps with potentially empty parents:
 Document and policy queries:
 - Questions about internal company rules, procedures, HR policies, expense reimbursement,
   onboarding, contracts, or how-to questions about internal processes should route to the
-  graph agent with a task to search OneDrive for the relevant document.
+  graph agent with the task to use the search_documents tool (GraphRAG knowledge graph).
+- Instruct the graph agent explicitly: "Use search_documents to find the answer."
 - These queries do NOT require salesforce or smartsales unless they also ask for CRM or
   location data.
 - Examples: "what is the expense policy?", "how do I request leave?", "what are the support
@@ -132,7 +133,7 @@ class PlanningOrchestrator:
         graph_agent: Optional[Agent] = None,
         sf_agent: Optional[Agent] = None,
         ss_agent: Optional[Agent] = None,
-        step_timeout: float = 120.0,
+        step_timeout: float = 300.0,
     ):
         self._planner = planner
         self._synthesizer = synthesizer
@@ -491,7 +492,7 @@ def create_planning_orchestrator(
     graph_agent: Optional[Agent] = None,
     sf_agent: Optional[Agent] = None,
     ss_agent: Optional[Agent] = None,
-    step_timeout: float = 120.0,
+    step_timeout: float = 300.0,
 ) -> PlanningOrchestrator:
     """Create a PlanningOrchestrator with planner + synthesizer agents."""
     client_kwargs = dict(

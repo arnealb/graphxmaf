@@ -1,8 +1,10 @@
 """
-GraphRAG local search wrapper — loaded once at MCP server startup, queried per request.
+Vector RAG using the graphrag-built LanceDB index.
+Flow: embed query → LanceDB top-5 → single LLM call.
+Avoids graphrag local_search (multiple LLM calls + retry loops).
 """
+import asyncio
 import logging
-import os
 from pathlib import Path
 from typing import Any
 
@@ -20,32 +22,27 @@ def _load_parquet(name: str) -> pd.DataFrame:
 
 
 class _GraphRAGIndex:
-    """Holds config + parquet data. Instantiated once at first query."""
+    """Holds parquet data + LanceDB table. Instantiated once at first query."""
 
     def __init__(self):
-        from graphrag.config.load_config import load_config
+        import lancedb
+        from dotenv import dotenv_values
 
-        # graphrag resolves relative paths (input/, output/, lancedb) from root_dir
-        # load_config internally sets CWD — we restore it afterwards
-        orig_cwd = os.getcwd()
-        try:
-            self.config = load_config(root_dir=GRAPHRAG_ROOT)
-        finally:
-            os.chdir(orig_cwd)
+        env = dotenv_values(GRAPHRAG_ROOT / ".env")
+        self.api_key = env["GRAPHRAG_API_KEY"]
+        self.api_base = env["GRAPHRAG_API_BASE"]
+        self.chat_deployment = env["GRAPHRAG_CHAT_DEPLOYMENT"]
+        self.embedding_deployment = env["GRAPHRAG_EMBEDDING_DEPLOYMENT"]
+        self.api_version = "2025-01-01-preview"
 
-        # Make lancedb path absolute so it works regardless of CWD at query time
-        self.config.vector_store.db_uri = str(OUTPUT_DIR / "lancedb")
-
-        self.entities = _load_parquet("entities")
-        self.communities = _load_parquet("communities")
-        self.community_reports = _load_parquet("community_reports")
         self.text_units = _load_parquet("text_units")
-        self.relationships = _load_parquet("relationships")
-        covariates_path = OUTPUT_DIR / "covariates.parquet"
-        self.covariates = pd.read_parquet(covariates_path) if covariates_path.exists() else None
+        self.documents = _load_parquet("documents")
 
-        log.info("[graphrag] Index loaded — %d entities, %d text units",
-                 len(self.entities), len(self.text_units))
+        db = lancedb.connect(str(OUTPUT_DIR / "lancedb"))
+        self.vector_table = db.open_table("text_unit_text")
+
+        log.info("[graphrag] Index loaded — %d text units, %d documents",
+                 len(self.text_units), len(self.documents))
 
 
 _index: _GraphRAGIndex | None = None
@@ -59,33 +56,67 @@ def _get_index() -> _GraphRAGIndex:
     return _index
 
 
-async def search_documents(query: str) -> dict[str, Any]:
-    """
-    Search the GraphRAG knowledge graph.
-    Returns the answer text and the source document references.
-    """
-    from graphrag.api.query import local_search
+def _search_sync(query: str) -> dict[str, Any]:
+    """Synchronous: embed → LanceDB search → single LLM call."""
+    from openai import AzureOpenAI
 
     idx = _get_index()
 
-    response, context = await local_search(
-        config=idx.config,
-        entities=idx.entities,
-        communities=idx.communities,
-        community_reports=idx.community_reports,
-        text_units=idx.text_units,
-        relationships=idx.relationships,
-        covariates=idx.covariates,
-        community_level=2,
-        response_type="Multiple Paragraphs",
-        query=query,
+    client = AzureOpenAI(
+        api_key=idx.api_key,
+        azure_endpoint=idx.api_base,
+        api_version=idx.api_version,
     )
 
-    # Extract source file names from context data if available
-    sources: list[str] = []
-    if isinstance(context, dict):
-        for df in context.values():
-            if isinstance(df, pd.DataFrame) and "title" in df.columns:
-                sources.extend(df["title"].dropna().unique().tolist())
+    # 1. Embed the query
+    emb = client.embeddings.create(model=idx.embedding_deployment, input=query)
+    query_vector = emb.data[0].embedding
 
-    return {"answer": str(response), "sources": list(set(sources))}
+    # 2. Vector search → top-5 most similar text chunks
+    results = idx.vector_table.search(query_vector).limit(5).to_pandas()
+    chunk_ids = results["id"].tolist()
+
+    # 3. Retrieve text + source document titles
+    chunks = idx.text_units[idx.text_units["id"].isin(chunk_ids)]
+    doc_id_to_title = idx.documents.set_index("id")["title"].to_dict()
+
+    sources: list[str] = []
+    context_parts: list[str] = []
+    for _, row in chunks.iterrows():
+        title = (
+            doc_id_to_title.get(row.get("document_id", ""), "unknown")
+            .replace(".docx.txt", "")
+            .replace(".txt", "")
+        )
+        sources.append(title)
+        context_parts.append(f"[{title}]\n{row['text']}")
+
+    context = "\n\n---\n\n".join(context_parts)
+
+    # 4. Single LLM call
+    resp = client.chat.completions.create(
+        model=idx.chat_deployment,
+        messages=[
+            {
+                "role": "system",
+                "content": (
+                    "You are a helpful assistant answering questions about internal company documents. "
+                    "Use only the provided context. "
+                    "Answer in the same language as the question. "
+                    "If the context does not contain the answer, say so clearly."
+                ),
+            },
+            {
+                "role": "user",
+                "content": f"Context:\n{context}\n\nQuestion: {query}",
+            },
+        ],
+        temperature=0,
+    )
+
+    return {"answer": resp.choices[0].message.content, "sources": list(set(sources))}
+
+
+async def search_documents(query: str) -> dict[str, Any]:
+    """Search company documents. Runs in a thread to avoid blocking the MCP event loop."""
+    return await asyncio.to_thread(_search_sync, query)
