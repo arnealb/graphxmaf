@@ -1,0 +1,34 @@
+# Git
+.git/
+.gitignore
+
+# Claude memory / tooling
+.claude/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Local dev artefacts
+.token_cache.bin
+.sf_session.json
+*.log
+mlruns/
+mlflow.db
+
+# GraphRAG — source docs and intermediate files are NOT needed at runtime.
+# Only graph/graphrag/output/ (the built index) is needed in the container.
+# Credentials come from Container App env vars, not from .env files.
+graph/graphrag/data_untouched/
+graph/graphrag/input/
+graph/graphrag/cache/
+graph/graphrag/.env
+
+# Eval + notebooks
+eval/
+md/
+handoff/
+*.ipynb

@@ -39,6 +39,7 @@ from startup import (
     _start_salesforce_mcp_server,
     _start_smartsales_mcp_server,
     authenticate,
+    auto_index_if_stale,
 )
 
 load_dotenv()
@@ -156,11 +157,16 @@ def _sse(data: dict) -> str:
 
 def _setup_sync() -> dict:
     """Auth + subprocess startup (blocking). Must run before uvicorn starts."""
+    import pathlib
     config = configparser.ConfigParser()
     config.read(["config.cfg"])
     azure = config["azure"]
     sf = config["salesforce"]
     ss = config["smartsales"] if config.has_section("smartsales") else {}
+    graphrag_cfg = config["graphrag"] if config.has_section("graphrag") else {}
+
+    if graphrag_cfg.get("auto_index", "false").lower() == "true":
+        auto_index_if_stale(pathlib.Path("graph/graphrag"))
 
     mcp_url = azure.get("mcpServerUrl", "http://localhost:8000/mcp")
     log.info(f"[mcp_url_graph] {mcp_url}")
@@ -188,7 +194,7 @@ def _setup_sync() -> dict:
     sf_token = _resolve_sf_session(sf_url)
 
     ss_url = ss.get("mcpServerUrl", "http://localhost:8002/mcp")
-    log.info(f"[mcp_url_smartsales] {mcp_url}")
+    log.info(f"[mcp_url_smartsales] {ss_url}")
 
     ss_parsed = urlparse(ss_url)
     ss_env = {**os.environ, "MCP_RESOURCE_URI": f"{ss_parsed.scheme}://{ss_parsed.netloc}"}

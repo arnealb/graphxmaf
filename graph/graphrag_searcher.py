@@ -5,6 +5,7 @@ Avoids graphrag local_search (multiple LLM calls + retry loops).
 """
 import asyncio
 import logging
+import os
 from pathlib import Path
 from typing import Any
 
@@ -26,13 +27,16 @@ class _GraphRAGIndex:
 
     def __init__(self):
         import lancedb
-        from dotenv import dotenv_values
+        from dotenv import load_dotenv
 
-        env = dotenv_values(GRAPHRAG_ROOT / ".env")
-        self.api_key = env["GRAPHRAG_API_KEY"]
-        self.api_base = env["GRAPHRAG_API_BASE"]
-        self.chat_deployment = env["GRAPHRAG_CHAT_DEPLOYMENT"]
-        self.embedding_deployment = env["GRAPHRAG_EMBEDDING_DEPLOYMENT"]
+        # Local dev: load .env into os.environ if vars not already set.
+        # Azure Container Apps: env vars are set at the container level → .env is ignored.
+        load_dotenv(GRAPHRAG_ROOT / ".env", override=False)
+
+        self.api_key = os.environ["GRAPHRAG_API_KEY"]
+        self.api_base = os.environ["GRAPHRAG_API_BASE"]
+        self.chat_deployment = os.environ.get("GRAPHRAG_CHAT_DEPLOYMENT", "gpt-4o-mini")
+        self.embedding_deployment = os.environ.get("GRAPHRAG_EMBEDDING_DEPLOYMENT", "text-embedding-3-small")
         self.api_version = "2025-01-01-preview"
 
         self.text_units = _load_parquet("text_units")

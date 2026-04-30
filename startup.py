@@ -7,6 +7,7 @@ import logging
 import subprocess
 import webbrowser
 from http.server import HTTPServer, BaseHTTPRequestHandler
+from pathlib import Path
 from urllib.parse import urlparse, parse_qs
 
 import httpx
@@ -88,6 +89,38 @@ def authenticate(client_id: str, tenant_id: str, scopes: list[str], client_secre
 
     _persist_cache(cache)
     return result["access_token"]
+
+
+def auto_index_if_stale(graphrag_root: Path) -> None:
+    """Re-index GraphRAG if source documents are newer than the existing index.
+
+    Checks modification times: if any file in data_untouched/ is newer than
+    output/documents.parquet, wipes input/ and re-runs the full indexer.
+    Safe to call on every startup — skips immediately when the index is current.
+    """
+    output = graphrag_root / "output" / "documents.parquet"
+    data_dir = graphrag_root / "data_untouched"
+
+    if not data_dir.exists():
+        log.info("[graphrag] data_untouched/ not found — skipping auto-index.")
+        return
+
+    sources = list(data_dir.rglob("*.docx")) + list(data_dir.rglob("*.txt"))
+    if not sources:
+        log.info("[graphrag] No source documents found — skipping auto-index.")
+        return
+
+    newest_source = max(f.stat().st_mtime for f in sources)
+    if output.exists() and output.stat().st_mtime >= newest_source:
+        log.info("[graphrag] Index is up-to-date, skipping re-index.")
+        return
+
+    log.info("[graphrag] Index is stale or missing — re-indexing (%d source files)...", len(sources))
+    from graph.graphrag_indexer import convert_all, run_index
+    n = convert_all()
+    if n > 0:
+        run_index()
+    log.info("[graphrag] Re-indexing complete.")
 
 
 def _is_local_url(url: str) -> bool:

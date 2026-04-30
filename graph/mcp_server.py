@@ -131,6 +131,18 @@ async def _extract_and_exchange_token(ctx: Context) -> str:
 # register_graph_tools(mcp, _azure_settings, _extract_and_exchange_token)
 register_graph_tools(mcp, _azure_settings, extract_session_token)
 
+# Pre-load the GraphRAG index at server startup so the first tool call doesn't
+# hit a 5-second cold-start delay that drops the SSE connection on Azure.
+import logging as _logging
+try:
+    from graph.graphrag_searcher import _get_index
+    _get_index()
+    _logging.getLogger("graph.graphrag").info("[graphrag] Index pre-loaded at startup.")
+except Exception as _exc:
+    _logging.getLogger("graph.graphrag").warning(
+        "[graphrag] Index pre-load skipped: %s", _exc
+    )
+
 
 
 class RoutingMiddleware:
