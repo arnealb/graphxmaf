@@ -1,0 +1,13 @@
+{
+  "query": "If the SmartSales platform goes completely down for Colruyt, who at EASI do I notify first and within what timeframe?",
+  "reasoning": "This query concerns internal procedures for notifying relevant contacts during a system outage. Therefore, it requires the graph agent to search for the relevant documents that outline the notification process.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the internal procedure for notifying the relevant contacts at EASI in the event of a complete outage of the SmartSales platform for Colruyt.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the information found in step 1 regarding the notification process and timeframe."
+}

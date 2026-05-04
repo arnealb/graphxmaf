@@ -1,0 +1,13 @@
+{
+  "query": "If the SmartSales platform goes completely down for Colruyt, who at EASI do I notify first and within what timeframe?",
+  "reasoning": "This query requires information about internal procedures for notifying the right contacts within EASI in case of a platform failure, which falls under company policies and procedures. Therefore, I will query the graph agent to find the relevant documentation regarding notification procedures.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the notification procedures for platform failures, including which contact at EASI to notify first and the timeframe for notification.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the findings from step 1 to answer the user's query."
+}

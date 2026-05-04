@@ -131,7 +131,7 @@ class BenchmarkPrompt:
 
 def _load_prompts(path: str | None = None) -> list[BenchmarkPrompt]:
     """Load benchmark prompts from eval/prompts.json."""
-    json_path = path or str(Path(__file__).parent / "prompts.json")
+    json_path = path or str(Path(__file__).parent / "prompts/prompts.json")
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
     return [BenchmarkPrompt(**p) for p in data]

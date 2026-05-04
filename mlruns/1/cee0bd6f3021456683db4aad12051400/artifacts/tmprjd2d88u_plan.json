@@ -1,0 +1,13 @@
+{
+  "query": "I want to purchase a EUR 8,000 piece of equipment for my team. What approval level do I need?",
+  "reasoning": "The user is asking about an internal company process related to purchasing, which falls under the domain of the graph agent to find relevant documents regarding approval levels.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the approval level required for purchasing equipment worth EUR 8,000.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the result of step 1 as the final answer."
+}

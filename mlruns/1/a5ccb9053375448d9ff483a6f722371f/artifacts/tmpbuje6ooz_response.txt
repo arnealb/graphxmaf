@@ -1,0 +1,10 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+According to the Change Management Procedure for the Colruyt SmartSales system:
+
+- Deployments are not allowed during promotional campaign weeks from **Friday 18:00 to Monday 08:00**.
+- This restriction is enforced by the change scheduler.
+
+Therefore, a change deployment on a Friday evening at 19:00 is not permitted during promotional campaign weeks.

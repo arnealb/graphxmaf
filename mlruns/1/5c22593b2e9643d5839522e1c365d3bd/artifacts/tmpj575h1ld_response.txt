@@ -1,0 +1,11 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+From the leave policy:
+
+- **Carry Over Limit**: A maximum of 5 unused vacation days can be carried over to the following calendar year.
+- **Expiration Date**: These carried-over days expire on 31 March of that following year.
+- **Payout Policy**: Unused vacation days cannot be paid out.
+- **Encouragement to Plan**: Employees are encouraged to utilize their leave during the year to avoid losing accrued days.
+- **HR Reminder**: HR sends a reminder in early February to employees with carried-over days remaining.

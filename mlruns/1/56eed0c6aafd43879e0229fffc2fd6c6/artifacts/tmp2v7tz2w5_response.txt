@@ -1,0 +1,19 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is a summary of the notification steps and deadlines following the discovery of a data breach involving Colruyt customer data:
+
+1. **Internal Reporting**:
+   - EASI employees must report the breach within **2 hours** to the EASI Data Protection Officer (DPO) via privacy@easi.net or dpo@easi.net.
+
+2. **Notification to Clients**:
+   - EASI must notify affected clients within **24 hours** of identifying the breach, regardless of whether notification to the Data Protection Authority (DPA) is required.
+
+3. **Notification to the Belgian DPA**:
+   - If a risk to data subjects is identified, EASI is required to notify the Belgian DPA within **72 hours** of becoming aware of the breach.
+
+4. **Notification to Data Subjects**:
+   - If the breach poses a high risk to the rights and freedoms of data subjects, EASI must communicate the breach directly to the affected individuals as soon as possible after identification.
+
+These steps are crucial for compliance with the General Data Protection Regulation (GDPR) and for safeguarding the rights of individuals affected by the breach.

@@ -1,0 +1,15 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Based on the EASI policy regarding remote work, here's what is relevant to your query about working remotely from Spain for 3 weeks:
+
+- **Approval Required**: Working from Spain requires explicit prior approval from HR (hr@easi.net).
+- **Duration Limitations**: The policy allows for up to 10 working days per calendar year in a country other than Belgium without prior approval, but your stay of 3 weeks (15 working days) exceeds this limit.
+- **Considerations for Approval**: The approval process will consider factors such as:
+  - Tax residency
+  - Social security implications
+  - Duration of the stay
+  - Local regulatory environment
+
+In summary, you will need to seek prior approval from HR for your intended 3-week stay in Spain, as it is beyond the allowed limit.

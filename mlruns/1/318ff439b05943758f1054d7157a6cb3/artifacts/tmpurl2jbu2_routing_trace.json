@@ -1,0 +1,31 @@
+{
+  "user_query": "I want to purchase a EUR 8,000 piece of equipment for my team. What approval level do I need?",
+  "plan": {
+    "query": "I want to purchase a EUR 8,000 piece of equipment for my team. What approval level do I need?",
+    "reasoning": "The query pertains to internal company processes regarding purchasing approvals, so it should be routed to the graph agent to find the necessary approval information.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Use search_documents to find the approval level required for purchasing equipment valued at EUR 8,000.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the result of step 1 to the user, detailing the required approval level."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Use search_documents to find the approval level required for purchasing equipment valued at EUR 8,000.",
+      "started_at": "2026-05-04T13:02:46.631192+00:00",
+      "ended_at": "2026-05-04T13:02:54.481047+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_documents"
+      ]
+    }
+  ]
+}

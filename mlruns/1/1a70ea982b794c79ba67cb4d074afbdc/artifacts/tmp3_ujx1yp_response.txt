@@ -1,0 +1,17 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Based on the repayment policy from EASI regarding training costs:
+
+- You completed a EUR 900 training in January.
+- You plan to leave EASI in September, which is 8 months after the training completion.
+  
+### Repayment Calculation:
+- Since your departure falls between 6 and 12 months after the training, you will need to repay **50%** of the training cost.
+  
+### Total Repayment Amount:
+- **EUR 900 x 50% = EUR 450**
+
+### Summary:
+- You need to repay **EUR 450** upon leaving EASI in September.

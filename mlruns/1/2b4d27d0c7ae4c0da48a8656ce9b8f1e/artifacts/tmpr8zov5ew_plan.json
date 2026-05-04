@@ -1,0 +1,13 @@
+{
+  "query": "I want to work remotely from Spain for 3 weeks. Is this allowed under EASI policy?",
+  "reasoning": "The query pertains to internal company rules regarding remote work, which falls under policies documented by the organization. Therefore, the relevant agent for accessing this information is the graph agent, specifically to search for documents related to the EASI policy.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the EASI policy regarding remote work and check if it allows for working remotely from Spain for a period of 3 weeks.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Summarize the findings from the EASI policy document related to working remotely from Spain for 3 weeks."
+}

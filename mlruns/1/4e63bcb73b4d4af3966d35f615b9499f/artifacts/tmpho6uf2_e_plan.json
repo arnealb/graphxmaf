@@ -1,0 +1,13 @@
+{
+  "query": "I am leaving EASI after 5 years. What happens with my company car and is there a non-compete clause?",
+  "reasoning": "The user is inquiring about internal policies related to company assets and employment agreements. This requires accessing internal documents for the relevant procedures and policies at EASI.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find information about the company car policy and non-compete clauses for employees leaving EASI.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Retrieve the relevant results from step 1 and provide a summary of the company car policy and non-compete clause information."
+}

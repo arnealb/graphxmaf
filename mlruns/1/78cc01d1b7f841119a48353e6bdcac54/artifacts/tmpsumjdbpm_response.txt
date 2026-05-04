@@ -1,0 +1,14 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The RTO and RPO targets for EASI's critical systems are as follows:
+
+- **Recovery Time Objective (RTO)**: 4 hours
+- **Recovery Point Objective (RPO)**: 1 hour
+
+These targets were sourced from various EASI procedures, including:
+- Data Breach Procedure EASI
+- Incident Management Procedure EASI
+- Change Management Procedure EASI
+- Business Continuity Plan EASI

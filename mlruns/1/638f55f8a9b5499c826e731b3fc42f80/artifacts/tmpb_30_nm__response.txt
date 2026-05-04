@@ -1,0 +1,16 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here’s how to report a suspected phishing email and the consequences of failing a phishing test twice:
+
+### Reporting a Suspected Phishing Email:
+- **Procedure**: 
+  - Report immediately through the security portal at [security.easi.net](http://security.easi.net) or by emailing security@easi.net.
+  - Do not investigate independently or clean the affected device, as this may lead to loss of evidence.
+  - If unsure, contact trained first responders Arne Albrecht or Dorian Feaux for assistance.
+
+### Consequences of Failing a Phishing Test:
+- If an employee fails a phishing test twice within a 12-month period, it will result in a discussion with HR. 
+
+These guidelines ensure both the safety of the organization and the accountability of employees regarding security measures.

@@ -1,0 +1,10 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Based on the information obtained:
+
+- **Approval Level Required**: Chief Financial Officer (CFO)
+- **Purchase Amount**: EUR 8,000
+- **Approval Range**: EUR 5,000 to 25,000
+- **Documentation Requirement**: All approvals must be documented in the procurement system before issuing a purchase order.

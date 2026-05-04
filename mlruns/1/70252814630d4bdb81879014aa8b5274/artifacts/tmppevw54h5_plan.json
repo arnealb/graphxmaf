@@ -1,0 +1,13 @@
+{
+  "query": "What should I do if my car gets damaged on the way to work?",
+  "reasoning": "The query pertains to internal company processes or policies, specifically related to handling damage to a personal vehicle while commuting. Thus, it requires referencing internal documentation.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the answer regarding procedures for handling vehicle damage while commuting to work.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the information retrieved from the internal documents to answer the user's query."
+}

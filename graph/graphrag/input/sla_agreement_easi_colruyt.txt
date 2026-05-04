@@ -11,6 +11,11 @@ Colruyt commercial and procurement contact: procurement@colruyt.be.
 EASI service desk for end users: portal at servicedesk.easi.net or email it@easi.net.
 4. Priority levels
 Incidents are classified into four priority levels at the time of report. The level may be revised as new information becomes available.
+Priority | Definition | Response | Resolution target | Coverage
+P1 | Full platform outage, all 47 locations or cash register operations affected. | 1 hour | 4 hours | 24/7
+P2 | Partial outage, more than 10 locations affected or core catalogue unavailable. | 4 hours | 1 business day | 08:00–18:00 Mon–Fri
+P3 | Degraded performance or individual location issues. | 1 business day | 5 business days | Business hours
+P4 | Cosmetic issues, feature requests, minor questions. | Best effort | No commitment | Business hours
 Open Case 00001021 (Colruyt — Integration issue with POS system, status: New, priority: Medium) is the baseline case at the date of signature. It is currently managed under priority P3 and will remain at P3 until the integration root cause is identified, after which it may be reclassified.
 5. Availability
 EASI commits to a monthly availability of 99.5 percent for the SmartSales platform, calculated over each calendar month. Scheduled maintenance windows do not count as downtime. The standard maintenance window is Saturday 22:00 to Sunday 02:00 Brussels time. Availability is measured by automated monitoring; downtime starts at the moment EASI acknowledges the incident in the ticketing system, or at the moment of automatic detection by the monitoring platform, whichever is earlier.

@@ -62,6 +62,8 @@ For a prototype multi-agent system I need a set of **fictional but realistic com
 - **Distribution Mapping License** — €8,750/year — deployed at AB InBev Leuven
 - **Sustainability Dashboard License** — €2,500/year — GreenTech Solutions
 
+
+
 ---
 
 ## Documents to Generate

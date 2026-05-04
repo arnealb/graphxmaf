@@ -1,0 +1,26 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the findings regarding your company car and non-compete clause at EASI:
+
+### Company Car Policy for Employees Leaving EASI
+- **Returning the Vehicle**: 
+  - Must be returned on your last working day to EASI reception at Avenue Louise 65.
+  - Return all keys, registration documents, fuel/charging cards, and accessories.
+  
+- **Final Mileage Log**: 
+  - A final mileage log must be submitted on the same day the vehicle is returned.
+
+- **Damage Reporting**: 
+  - Any unreported damage to the vehicle will be charged to you based on the lease company’s damage assessment.
+
+- **Compliance with Offboarding Procedures**: 
+  - Follow the rules outlined in the Company Car Policy, including damage reporting and mileage log submission.
+
+### Non-Compete Clause at EASI
+- **Duration**: 12 months from your last working day.
+- **Geographic Scope**: Belgium.
+- **Sectoral Scope**: Covers field sales software, CRM implementation, and retail analytics.
+- **Compensation**: 50% of your last gross monthly salary, paid for the duration of the clause.
+- **Waiver**: EASI may waive the clause in writing within 15 days of your resignation, which would remove both the restriction and the compensation.

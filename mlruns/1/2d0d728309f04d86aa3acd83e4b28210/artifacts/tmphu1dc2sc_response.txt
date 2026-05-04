@@ -1,0 +1,22 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+To contact supplier1, you can use the following methods:
+
+### Email
+- **Contact Person:** Marc Supplier
+- **Email Address:** [marc.supplier@supplier1.be](mailto:marc.supplier@supplier1.be)
+
+### Phone
+- **Phone Number:** Not available.
+
+### Location
+- **Address:** Rue du Commerce 1, Brussels, 1000, Belgium
+
+### Additional Information
+- You have an upcoming event scheduled involving supplier1:
+  - **Event:** Q2 Delivery Review
+  - **Date and Time:** 10 May 2026, from 08:00 to 09:00
+
+This information should help you reach out to supplier1 effectively.

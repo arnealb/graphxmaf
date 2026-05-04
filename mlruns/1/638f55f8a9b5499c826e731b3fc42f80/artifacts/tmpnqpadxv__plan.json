@@ -1,0 +1,13 @@
+{
+  "query": "How do I report a suspected phishing email and what are the consequences if I fail a phishing test twice?",
+  "reasoning": "The query involves internal processes related to reporting phishing emails and consequences for phishing tests, which are documented procedures. Therefore, it should be routed to the graph agent to find the relevant company documentation.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the company procedures for reporting a suspected phishing email and the consequences for failing a phishing test twice.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the findings from step 1 to the user, summarizing both the reporting procedure and the consequences."
+}

@@ -1,0 +1,12 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here’s what happens to your unused vacation days at the end of the year:
+
+- **Carry Over**: You can carry over a maximum of 5 unused vacation days to the next calendar year.
+- **Expiration**: These carried-over days will expire on 31 March of the following year.
+- **Payout**: Carried-over days cannot be paid out.
+- **Reminder**: HR will send a reminder in early February if you have any carried-over days remaining.
+
+It's recommended to schedule your leave throughout the year to prevent losing any accrued days.

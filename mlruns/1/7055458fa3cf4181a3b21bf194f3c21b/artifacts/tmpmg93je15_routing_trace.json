@@ -1,0 +1,31 @@
+{
+  "user_query": "I completed a EUR 900 training in January and plan to leave EASI in September of the same year. How much do I need to repay?",
+  "plan": {
+    "query": "I completed a EUR 900 training in January and plan to leave EASI in September of the same year. How much do I need to repay?",
+    "reasoning": "The query pertains to a company policy regarding repayment for training costs upon leaving the company. Therefore, I will use the graph agent to search for relevant company documents that outline the repayment policy for training costs.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Use search_documents to find the repayment policy related to training costs for employees leaving EASI.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Summarize the findings from step 1 to provide the user with the repayment amount they need to consider based on the policy."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Use search_documents to find the repayment policy related to training costs for employees leaving EASI.",
+      "started_at": "2026-04-30T15:05:51.121449+00:00",
+      "ended_at": "2026-04-30T15:05:55.433071+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_documents"
+      ]
+    }
+  ]
+}

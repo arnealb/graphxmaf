@@ -1,0 +1,31 @@
+{
+  "user_query": "What happens to my unused vacation days at the end of the year?",
+  "plan": {
+    "query": "What happens to my unused vacation days at the end of the year?",
+    "reasoning": "This query pertains to company policies regarding unused vacation days, thus it should be directed to the graph agent to search for relevant internal documents.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Use search_documents to find the company's policy on unused vacation days at the end of the year.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Provide the result of the document search to answer the user's query."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Use search_documents to find the company's policy on unused vacation days at the end of the year.",
+      "started_at": "2026-04-30T15:04:57.371935+00:00",
+      "ended_at": "2026-04-30T15:05:01.768312+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_documents"
+      ]
+    }
+  ]
+}

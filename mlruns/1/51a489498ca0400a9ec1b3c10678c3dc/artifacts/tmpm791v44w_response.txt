@@ -1,0 +1,10 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the password requirements for accessing EASI systems:
+
+- **Minimum length**: 14 characters
+- **Character requirements**: At least one uppercase letter, one lowercase letter, one number, and one special character
+- **History**: Must not be equal to any of the last 12 passwords used
+- **Password rotation**: Must be changed at least every 90 days

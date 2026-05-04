@@ -1,0 +1,10 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+From the information regarding EASI's work-from-home policy:
+
+- **Probation Period**: During the first 6 months of employment, remote work is not permitted.
+- **Expectations**: New joiners are required to work on-site full time to absorb working practices, build relationships, and enhance productivity.
+- **Applicability**: This policy applies to all roles, including client-facing positions.
+- **Post-Probation**: After successfully completing the probation period, you will be eligible for the standard hybrid arrangement.

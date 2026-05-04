@@ -1,0 +1,15 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Based on the training reimbursement policy from EASI:
+
+- You completed a EUR 900 training in January.
+- You plan to leave in September of the same year, which is 8 months after completing the training.
+
+### Repayment Details:
+- Since you are departing between 6 and 12 months after the training completion:
+  - You will need to repay **50%** of the training cost.
+  - This amounts to **EUR 450** (50% of EUR 900).
+
+The repayment will be deducted from your final pay when you leave EASI.

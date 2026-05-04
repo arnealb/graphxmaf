@@ -1,0 +1,15 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+If EASI misses the P1 response SLA for Colruyt, the financial consequences are as follows:
+
+- A service credit of **10% of the monthly fee** will be applied for that month.
+- Multiple breaches within the same month are aggregated, but the total service credit is capped at **30% of the monthly fee**.
+- Service credits will be deducted from the next invoice and are the exclusive financial remedy for SLA breaches, except in cases of gross negligence or willful misconduct.
+
+Sources:
+- From maintenance_contract_supplier1
+- From data_processing_agreement_colruyt
+- From incident_management_procedure_easi
+- From sla_agreement_easi_colruyt

@@ -1,0 +1,19 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+If your car gets damaged on the way to work, follow these steps based on the company car policy:
+
+- **Report the Damage**: You must report any damage to the vehicle within 24 hours. 
+    - Email: hr@easi.net
+    - Include:
+        - Description of the incident
+        - Photographs of the damaged areas
+        - Date and place of the incident
+        - Police or insurer reference number (if applicable)
+
+- **Consequences of Late Reporting**: Be aware that failing to report the damage within 24 hours may result in you having to cover part of the repair cost.
+
+- **Mileage Log**: If traveling home to the office or directly to a client location, ensure to log it separately as it qualifies for professional mileage.
+
+These steps are critical to ensuring proper handling of the situation and minimizing any potential costs to yourself.

@@ -1,0 +1,13 @@
+{
+  "query": "What are the RTO and RPO targets for EASI's critical systems?",
+  "reasoning": "The query is about internal company rules and targets, which should be addressed by the graph agent using the search_documents tool.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the RTO and RPO targets for EASI's critical systems.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the user with the results retrieved from the document search in step 1."
+}

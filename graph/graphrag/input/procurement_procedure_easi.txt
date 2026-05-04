@@ -4,6 +4,11 @@ EASI Group — Document owner: Procurement (procurement@easi.net)
 This procedure governs all purchases of goods and services by EASI Group, including hardware (managed under the framework agreement with Fujitsu Belgium NV — EASI-FUJ-FWA-2026-001), software licences, professional services, marketing services, and office supplies. It does not apply to client project expenses, which are charged to project budgets and governed by the relevant project contract.
 2. Approval thresholds
 Approval requirements scale with the order value:
+Order value (EUR) | Approval required
+Below 500 | Team lead
+500 to 5,000 | Department manager
+5,000 to 25,000 | CFO
+Above 25,000 | Board
 All approvals must be documented in the procurement system before any purchase order is sent to a supplier. Verbal approvals are never sufficient. Splitting an order into smaller pieces to avoid an approval threshold is forbidden and treated as a serious procedural violation.
 3. Three-quote rule
 For any purchase above EUR 5,000 not covered by an existing framework agreement, EASI must obtain at least three competitive quotes. The quotes, the evaluation summary, and the approval are documented and filed with procurement@easi.net. The evaluation considers price, total cost of ownership, service level, references, and compliance with the EASI Supplier Code of Conduct. Single-source justifications (only one supplier can deliver) must be approved by the CFO and stored with the purchase file.

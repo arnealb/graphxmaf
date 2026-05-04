@@ -1,0 +1,13 @@
+{
+  "query": "If the SmartSales platform goes completely down for Colruyt, who at EASI do I notify first and within what timeframe?",
+  "reasoning": "This query involves internal procedures related to communication in case of a platform failure. I will use the graph agent to find relevant internal documentation that likely outlines the notification process.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the procedure for notifying EASI team members in case the SmartSales platform goes down for Colruyt.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the relevant notification procedure found from the graph agent's output."
+}

@@ -1,0 +1,13 @@
+{
+  "query": "What are the financial consequences if EASI misses the P1 response SLA for Colruyt?",
+  "reasoning": "The query pertains to internal company rules and procedures about SLAs and any financial consequences related to them. Hence, the graph agent is appropriate for this query to locate the relevant company documents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find information regarding financial consequences of missing the P1 response SLA for Colruyt.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the findings from step 1 as the final answer to the query."
+}

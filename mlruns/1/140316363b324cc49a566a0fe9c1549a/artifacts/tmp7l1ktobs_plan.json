@@ -1,0 +1,13 @@
+{
+  "query": "What happens to my unused vacation days at the end of the year?",
+  "reasoning": "This query pertains to company policies regarding unused vacation days, thus it should be directed to the graph agent to search for relevant internal documents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the company's policy on unused vacation days at the end of the year.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the result of the document search to answer the user's query."
+}

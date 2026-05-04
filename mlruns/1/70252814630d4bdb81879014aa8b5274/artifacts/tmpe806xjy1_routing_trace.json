@@ -1,0 +1,31 @@
+{
+  "user_query": "What should I do if my car gets damaged on the way to work?",
+  "plan": {
+    "query": "What should I do if my car gets damaged on the way to work?",
+    "reasoning": "The query pertains to internal company processes or policies, specifically related to handling damage to a personal vehicle while commuting. Thus, it requires referencing internal documentation.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Use search_documents to find the answer regarding procedures for handling vehicle damage while commuting to work.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the information retrieved from the internal documents to answer the user's query."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Use search_documents to find the answer regarding procedures for handling vehicle damage while commuting to work.",
+      "started_at": "2026-04-30T14:16:31.485719+00:00",
+      "ended_at": "2026-04-30T14:16:36.194477+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_documents"
+      ]
+    }
+  ]
+}

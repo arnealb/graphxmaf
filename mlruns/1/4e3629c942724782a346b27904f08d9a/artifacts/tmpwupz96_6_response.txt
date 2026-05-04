@@ -1,0 +1,19 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here’s how to report a suspected phishing email and the consequences of failing a phishing test twice:
+
+### Reporting a Suspected Phishing Email
+- **Procedure**: 
+  - Use the "Report Phishing" button in Outlook for all suspected phishing attempts received in EASI mailboxes.
+  - If the "Report Phishing" button is not available, send a report via email to security@easi.net.
+  - **Important**: Do not investigate independently or attempt to "clean" the affected device, as this may compromise evidence.
+- **Review Time**: The IT security team will review each report within 4 working hours.
+
+*Source: IT Security Procedure (EASI)*
+
+### Consequences of Failing a Phishing Test Twice
+- If an employee fails a phishing test twice within a 12-month period, this will trigger a discussion with HR.
+
+*Source: IT Security Procedure (EASI)*

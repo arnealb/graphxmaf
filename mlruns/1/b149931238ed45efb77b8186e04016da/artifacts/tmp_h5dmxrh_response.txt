@@ -1,0 +1,12 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Based on the findings regarding the work-from-home policy at EASI:
+
+- **Probation Period Requirement**: Remote work is not permitted during the probation period.
+- **On-Site Attendance**: New joiners are required to be on-site full-time for the first 6 months.
+- **Purpose**: This policy is designed to help new employees absorb working practices, build relationships, and enhance productivity.
+- **Post-Probation**: After completing the probation period successfully, employees can access the standard hybrid arrangement, which includes the option to work remotely.
+
+In summary, you will need to work on-site during your probation period at EASI.

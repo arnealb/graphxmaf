@@ -4,6 +4,13 @@ EASI Group — Document owner: HR (hr@easi.net) — Last reviewed: January 2026
 This guide describes the steps that must be completed when an employment contract at EASI Group ends, regardless of who initiated the termination. It covers notice periods under Belgian law, the exit interview, knowledge transfer, equipment return, IT access revocation, final pay, the non-compete clause, and reference letters. The objective is a respectful, complete, and risk-aware separation that protects both the employee and EASI.
 2. Notice periods
 Notice periods follow the Belgian Wet Eenheidsstatuut of 2014. The duration depends on whether the contract is terminated by the employer or the employee, and on the seniority of the employee. The table below shows representative values; the full schedule is included in the Belgian statute and in the employment regulations.
+Seniority | Notice by employee (weeks) | Notice by employer (weeks)
+Less than 6 months | 1 | 2
+6 months to 1 year | 2 | 3
+1 year | 4 | 4
+2 years | 6 | 8
+5 years | 13 | 18
+10 years | 26 | 36
 When the employee is on garden leave, equipment and access are handled at the start of the notice period rather than on the last working day. This is an exception to the standard timing described below.
 3. Exit interview
 The exit interview is mandatory and is scheduled by HR within the first 2 weeks of the notice period. HR (hr@easi.net) sends the calendar invitation. The interview covers: reasons for departure, feedback on management and working conditions, suggestions for improvement, and the status of knowledge transfer. The interview lasts approximately 60 minutes; insights are aggregated, anonymised, and shared with management as part of the annual people analytics review.

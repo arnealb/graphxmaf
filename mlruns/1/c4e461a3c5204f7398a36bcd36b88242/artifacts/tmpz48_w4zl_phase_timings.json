@@ -1,0 +1,30 @@
+{
+  "plan": {
+    "latency_s": 2.448,
+    "steps": 1,
+    "input_tokens": 1031,
+    "output_tokens": 139,
+    "total_tokens": 1170
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "graph",
+      "latency_s": 13.235,
+      "llm_turns": 2,
+      "n_tool_calls": 1,
+      "tool_calls": [
+        "search_documents"
+      ],
+      "input_tokens": 2658,
+      "output_tokens": 35,
+      "total_tokens": 2693
+    }
+  ],
+  "synthesis": {
+    "latency_s": 1.276,
+    "input_tokens": 230,
+    "output_tokens": 54,
+    "total_tokens": 284
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "user_query": "What are the financial consequences if EASI misses the P1 response SLA for Colruyt?",
+  "plan": {
+    "query": "What are the financial consequences if EASI misses the P1 response SLA for Colruyt?",
+    "reasoning": "This query pertains to internal company policies and procedures, which the graph agent can provide through its search_documents tool. It does not require data from salesforce or smartsales since the financial consequences likely fall under internal documentation.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Use search_documents to find the financial consequences of missing the P1 response SLA for Colruyt.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Provide the user with the information found regarding the financial consequences of missing the SLA."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Use search_documents to find the financial consequences of missing the P1 response SLA for Colruyt.",
+      "started_at": "2026-04-30T15:07:47.667124+00:00",
+      "ended_at": "2026-04-30T15:07:52.473535+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_documents"
+      ]
+    }
+  ]
+}

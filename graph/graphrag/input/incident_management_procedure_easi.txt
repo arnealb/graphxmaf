@@ -6,6 +6,11 @@ This procedure governs the end-to-end management of incidents affecting EASI-man
 An incident is any unplanned interruption or quality reduction of a managed service. A service request — for example, the creation of a new SmartSales user account, a configuration change, or a routine catalogue update — is not an incident and is processed under the EASI Service Request workflow. A problem is a recurrent root cause behind multiple incidents and is processed under Problem Management.
 3. Severity levels
 Incidents are classified at the time of report:
+Severity | Definition | Examples | Coverage
+S1 (Critical) | Full service outage; all users or all locations of one or more clients affected. | SmartSales fully down for Colruyt Group; Carrefour analytics inaccessible across all 12 hypermarkets. | 24/7, war-room
+S2 (High) | Major partial outage; >30 percent of users or locations affected, or critical business function unavailable. | Colruyt POS integration down across many stores (Case 00001021 reclassified up); Delhaize EDI not processing orders (Case 00001024). | Business hours, on-call after hours
+S3 (Medium) | Degraded performance or individual location failures. | A single Carrefour hypermarket loses analytics sync; one Delhaize store’s EDI connector drops messages. | Business hours
+S4 (Low) | Minor issues, cosmetic bugs, performance slightly below benchmark. | Visual glitch in a SmartSales report header. | Business hours
 4. Reporting channels
 SmartSales client portal — for end-user-reported issues at any client location.
 Email to support@easi.net — for any client contact.
