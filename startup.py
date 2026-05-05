@@ -49,7 +49,14 @@ def authenticate(client_id: str, tenant_id: str, scopes: list[str], client_secre
 
     accounts = app.get_accounts()
     if accounts:
-        result = app.acquire_token_silent(scopes, account=accounts[0])
+        import concurrent.futures
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as _ex:
+            _fut = _ex.submit(app.acquire_token_silent, scopes, account=accounts[0])
+            try:
+                result = _fut.result(timeout=10)
+            except concurrent.futures.TimeoutError:
+                log.warning("[auth] acquire_token_silent timed out — falling back to browser login")
+                result = None
         if result and "access_token" in result:
             _persist_cache(cache)
             return result["access_token"]
@@ -193,7 +200,7 @@ def _resolve_sf_session(sf_mcp_url: str) -> str:
     login_url = f"{base}/auth/salesforce/login"
 
     try:
-        resp = httpx.get(session_url, timeout=90)
+        resp = httpx.get(session_url, timeout=15)
         if resp.status_code == 200:
             data = resp.json()
             print(f"Salesforce: session restored ({data.get('username', '?')}).")

@@ -1,0 +1,42 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce)...
+️Executing (graph, smartsales)...
+Synthesizing...
+### Company Overview: Delhaize Group
+
+**Support Case:**
+- **Case ID:** 500KI000001mK13YAE
+- **Case Number:** 00001023
+- **Subject:** EDI connection issue
+- **Status:** Working
+- **Priority:** Medium
+- **Account Name:** Delhaize Group
+- **Created Date:** 28 April 2026
+
+**Company Details:**
+- **Name:** Delhaize Group
+- **Industry:** Retail
+- **Website:** [www.delhaize.be](https://www.delhaize.be)
+- **Phone:** Not available
+
+**Communication History:**
+- No contacts or communication records were found in the systems checked.
+
+**Opportunities:**
+- **Opportunity ID:** 006KI000005bIGIYA2
+- **Opportunity Name:** Delhaize Group — Supply Chain Optimisation
+- **Stage:** Negotiation/Review
+- **Amount:** €310,000.00
+- **Close Date:** 31 August 2026
+
+**Locations:**
+- No physical locations are listed for Delhaize Group in the systems checked.
+
+**Catalog Items:**
+- **Delhaize — EDI Connector Pack**
+  - **Description:** EDI integration package for Delhaize franchise stores.
+  - **Price:** €1,200.00
+- Other items include IT Hardware, IT Software, and Spreads, but they are not specific to the Delhaize Group.
+
+This overview provides a comprehensive view of your most recent open support case with Delhaize Group along with additional relevant company information.

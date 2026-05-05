@@ -168,15 +168,18 @@ def _setup_sync() -> dict:
     if graphrag_cfg.get("auto_index", "false").lower() == "true":
         auto_index_if_stale(pathlib.Path("graph/graphrag"))
 
+    import time as _time
     mcp_url = azure.get("mcpServerUrl", "http://localhost:8000/mcp")
     log.info(f"[mcp_url_graph] {mcp_url}")
     log.info("[auth] building MSAL app...")
+    _t0 = _time.monotonic()
     token = authenticate(
         azure["clientId"],
         azure["tenantId"],
         azure["graphUserScopes"].split(" "),
         azure.get("clientSecret", os.environ.get("CLIENT_SECRET", "")),
     )
+    log.info(f"[auth] done in {_time.monotonic() - _t0:.1f}s")
     print("Authenticated with Microsoft.")
 
     parsed = urlparse(mcp_url)
@@ -186,21 +189,25 @@ def _setup_sync() -> dict:
 
     sf_url = sf.get("mcpServerUrl", "http://localhost:8001/mcp")
     log.info(f"[mcp_url_salesforce] {sf_url}")
+    _t1 = _time.monotonic()
 
     sf_parsed = urlparse(sf_url)
     sf_env = {**os.environ, "MCP_RESOURCE_URI": f"{sf_parsed.scheme}://{sf_parsed.netloc}"}
     if _is_local_url(sf_url):
         _procs.append(_start_salesforce_mcp_server(sf_env, sf_url))
     sf_token = _resolve_sf_session(sf_url)
+    log.info(f"[salesforce] session in {_time.monotonic() - _t1:.1f}s")
 
     ss_url = ss.get("mcpServerUrl", "http://localhost:8002/mcp")
     log.info(f"[mcp_url_smartsales] {ss_url}")
+    _t2 = _time.monotonic()
 
     ss_parsed = urlparse(ss_url)
     ss_env = {**os.environ, "MCP_RESOURCE_URI": f"{ss_parsed.scheme}://{ss_parsed.netloc}"}
     if _is_local_url(ss_url):
         _procs.append(_start_smartsales_mcp_server(ss_env, ss_url))
     ss_token = _resolve_ss_session(ss_url)
+    log.info(f"[smartsales] session in {_time.monotonic() - _t2:.1f}s")
 
     return {
         "graph_token": token, "graph_url": mcp_url,

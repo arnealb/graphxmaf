@@ -1,0 +1,83 @@
+{
+  "user_query": "Tell me about the companies behind my open support cases.",
+  "plan": {
+    "query": "Tell me about the companies behind my open support cases.",
+    "reasoning": "The user is seeking a comprehensive overview of the companies related to their open support cases, which necessitates gathering information from both Salesforce for CRM data and Graph for communication history and documents.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Find all open support cases and the associated company accounts and contacts.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "graph",
+        "task": "Search for emails and calendar events mentioning the companies linked to the open support cases obtained from step 1. Include any relevant communication history.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Compile the details from both Salesforce and Graph to create a comprehensive overview of the companies behind the open support cases, including communications and case information."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Find all open support cases and the associated company accounts and contacts.",
+      "started_at": "2026-05-05T09:14:43.256590+00:00",
+      "ended_at": "2026-05-05T09:15:06.970698+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 4,
+      "tool_calls": [
+        "get_cases",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 2,
+      "input": "[Result from step 1]:\n[\n    {\n        \"case_number\": \"00001023\",\n        \"subject\": \"Delhaize Group — EDI connection issue\",\n        \"status\": \"Working\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Delhaize Group\",\n        \"contacts\": []\n    },\n    {\n        \"case_number\": \"00001022\",\n        \"subject\": \"Carrefour Belgium SA — POS integration delay\",\n        \"status\": \"New\",\n        \"priority\": \"High\",\n        \"account_name\": \"Carrefour Belgium SA\",\n        \"contacts\": []\n    },\n    {\n        \"case_number\": \"00001021\",\n        \"subject\": \"Colruyt — Integration issue with POS system\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Colruyt Group\",\n        \"contacts\": []\n    },\n    {\n        \"case_number\": \"00001020\",\n        \"subject\": \"Delayed shipment — supplier1 April batch\",\n        \"status\": \"Working\",\n        \"priority\": \"High\",\n        \"account_name\": \"supplier1\",\n        \"contacts\": [\n            {\n                \"first_name\": \"Marc\",\n                \"last_name\": \"Supplier\",\n                \"email\": \"marc.supplier@supplier1.be\"\n            }\n        ]\n    },\n    {\n        \"case_number\": \"00001018\",\n        \"subject\": \"Verification statut case\",\n        \"status\": \"In progess\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Easi Be\",\n        \"contacts\": [\n            {\n                \"first_name\": \"Jon\",\n                \"last_name\": \"Mul\",\n                \"email\": \"j.mulolo@easi.net\"\n            }\n        ]\n    },\n    {\n        \"case_number\": \"00001006\",\n        \"subject\": \"Issue with order\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Pairi Daiza\",\n        \"contacts\": [\n            {\n                \"first_name\": \"Judy\",\n                \"last_name\": \"Odom\",\n                \"email\": \"jodom@example.com\"\n            },\n            {\n                \"first_name\": \"Susan\",\n                \"last_name\": \"Johanson\",\n                \"email\": \"sjohanson@example.com\"\n            },\n            {\n                \"first_name\": \"Mark\",\n                \"last_name\": \"Dillon\",\n                \"email\": \"mdillon@example.com\"\n            },\n            {\n                \"first_name\": \"Stella\",\n                \"last_name\": \"Pavlova\",\n                \"email\": \"spavlova@example.com\"\n            },\n            {\n                \"first_name\": \"Allison\",\n                \"last_name\": \"Yates\",\n                \"email\": \"ayates@example.com\"\n            },\n            {\n                \"first_name\": \"Edward\",\n                \"last_name\": \"Stamos\",\n                \"email\": \"info@salesforce.com\"\n            },\n            {\n                \"first_name\": \"Howard\",\n                \"last_name\": \"Jones\",\n                \"email\": \"info@salesforce.com\"\n            },\n            {\n                \"first_name\": \"Leanne\",\n                \"last_name\": \"Tomlin\",\n                \"email\": \"info@salesforce.com\"\n            }\n        ]\n    },\n    {\n        \"case_number\": \"00001005\",\n        \"subject\": \"Produits\",\n        \"status\": \"Waiting for Customer\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Pairi Daiza\",\n        \"contacts\": [\n            {\n                \"first_name\": \"Judy\",\n                \"last_name\": \"Odom\",\n                \"email\": \"jodom@example.com\"\n            },\n            {\n                \"first_name\": \"Susan\",\n                \"last_name\": \"Johanson\",\n                \"email\": \"sjohanson@example.com\"\n            },\n            {\n                \"first_name\": \"Mark\",\n                \"last_name\": \"Dillon\",\n                \"email\": \"mdillon@example.com\"\n            },\n            {\n                \"first_name\": \"Stella\",\n                \"last_name\": \"Pavlova\",\n                \"email\": \"spavlova@example.com\"\n            },\n            {\n                \"first_name\": \"Allison\",\n                \"last_name\": \"Yates\",\n                \"email\": \"ayates@example.com\"\n            },\n            {\n                \"first_name\": \"Edward\",\n                \"last_name\": \"Stamos\",\n                \"email\": \"info@salesforce.com\"\n            },\n            {\n                \"first_name\": \"Howard\",\n                \"last_name\": \"Jones\",\n                \"email\": \"info@salesforce.com\"\n            },\n            {\n                \"first_name\": \"Leanne\",\n                \"last_name\": \"Tomlin\",\n                \"email\": \"info@salesforce.com\"\n            }\n        ]\n    },\n    {\n        \"case_number\": \"00001003\",\n        \"subject\": \"Delivery issues with order #544\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Omega SA-NV\",\n        \"contacts\": [\n            {\n                \"first_name\": \"Lauren\",\n                \"last_name\": \"Bailey\",\n                \"email\": \"lbailey@example.com\"\n            },\n            {\n                \"first_name\": \"James\",\n                \"last_name\": \"Wu\",\n                \"email\": \"jwu@example.com\"\n            },\n            {\n                \"first_name\": \"Mark\",\n                \"last_name\": \"Kingston\",\n                \"email\": \"mkingston@example.com\"\n            },\n            {\n                \"first_name\": \"Chris\",\n                \"last_name\": \"Post\",\n                \"email\": \"cpost@example.com\"\n            },\n            {\n                \"first_name\": \"Bob\",\n                \"last_name\": \"Hodges\",\n                \"email\": \"bhodges@example.com\"\n            }\n        ]\n    },\n    {\n        \"case_number\": \"00001000\",\n        \"subject\": \"Sample Case: Our Widgets have not been delivered.\",\n        \"status\": \"Escalated\",\n        \"priority\": \"High\",\n        \"account_name\": \"Global Media\",\n        \"contacts\": [\n            {\n                \"first_name\": \"John\",\n                \"last_name\": \"lastname\",\n                \"email\": \"john.lastname@globalmedia.com\"\n            },\n            {\n                \"first_name\": \"Geoff\",\n                \"last_name\": \"Minor\",\n                \"email\": \"info@salesforce.com\"\n            },\n            {\n                \"first_name\": \"Carole\",\n                \"last_name\": \"White\",\n                \"email\": \"info@salesforce.com\"\n            },\n            {\n                \"first_name\": \"Jon\",\n                \"last_name\": \"Amos\",\n                \"email\": \"info@salesforce.com\"\n            }\n        ]\n    }\n]\n\n[Task]:\nSearch for emails and calendar events mentioning the companies linked to the open support cases obtained from step 1. Include any relevant communication history.",
+      "started_at": "2026-05-05T09:15:07.033752+00:00",
+      "ended_at": "2026-05-05T09:15:40.689139+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar"
+      ]
+    }
+  ]
+}

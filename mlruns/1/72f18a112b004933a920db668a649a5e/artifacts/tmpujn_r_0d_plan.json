@@ -1,0 +1,21 @@
+{
+  "query": "Tell me about the companies behind my open support cases.",
+  "reasoning": "The user is seeking a comprehensive overview of the companies related to their open support cases, which necessitates gathering information from both Salesforce for CRM data and Graph for communication history and documents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Find all open support cases and the associated company accounts and contacts.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Search for emails and calendar events mentioning the companies linked to the open support cases obtained from step 1. Include any relevant communication history.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Compile the details from both Salesforce and Graph to create a comprehensive overview of the companies behind the open support cases, including communications and case information."
+}

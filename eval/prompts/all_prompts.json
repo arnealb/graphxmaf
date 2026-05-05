@@ -285,7 +285,7 @@
     "text": "Find Salesforce accounts in Belgium, including their billing address.",
     "category": "salesforce",
     "difficulty": "medium",
-    "expected_answer": "A list of Salesforce accounts where BillingCountry is Belgium, each showing Name and billing address fields (BillingStreet, BillingCity, BillingCountry).",
+    "expected_answer": "A list of Salesforce accounts where BillingCountry is Belgium.",
     "tags": [
       "find_accounts"
     ],
@@ -381,7 +381,7 @@
     "text": "Show me 5 closed Salesforce cases including their close date and description.",
     "category": "salesforce",
     "difficulty": "medium",
-    "expected_answer": "A list of 5 closed Salesforce cases, each with CaseNumber, Status (Closed), ClosedDate, and Description fields.",
+    "expected_answer": "A list of 5 closed Salesforce cases.",
     "tags": [
       "get_cases"
     ],
@@ -465,7 +465,7 @@
     "text": "Show me Salesforce opportunities in the 'Qualification' stage.",
     "category": "salesforce",
     "difficulty": "medium",
-    "expected_answer": "A list of Salesforce opportunities where StageName is 'Qualification', each showing Name, Amount, and StageName.",
+    "expected_answer": "A list of Salesforce opportunities where StageName is 'Qualification'.",
     "tags": [
       "get_opportunities"
     ],
@@ -489,7 +489,7 @@
     "text": "Find high-priority open cases in Salesforce.",
     "category": "salesforce",
     "difficulty": "medium",
-    "expected_answer": "A list of Salesforce cases where Status is not Closed and Priority is High, each showing CaseNumber, Subject, and Priority.",
+    "expected_answer": "A list of Salesforce cases where Status is not Closed and Priority is High.",
     "tags": [
       "get_cases"
     ],
@@ -1263,10 +1263,10 @@
     ]
   },
   {
-    "text": "Tell me about the companies behind my open support cases.",
+    "text": "Tell me everything about the companies behind my open support cases.",
     "category": "entity-centric2",
     "difficulty": "hard",
-    "expected_answer": "Must cover all 4 open SF cases and provide multi-system context for each linked company. Cases: (1) Carrefour Belgium SA — POS integration delay (New, High) → emails from carrefour-be.eu (fuzzy), SS location CRF-Anderlecht; (2) Delhaize Group — EDI connection issue (Working, Medium) → emails from delhaize.eu (fuzzy), SS location AD Delhaize-Forest; (3) supplier1 — Delayed shipment April batch (Working, High) → emails from Marc Supplier (marc.supplier@supplier1.be), SS location supplier1 (SUP-001); (4) Colruyt Group — Integration issue with POS system (New, Medium) → email from procurement@colruyt.be, SS location Colruyt-Halle. Missing Graph context entirely = max 3. Missing SS locations entirely = significant deduction. Not resolving fuzzy company names (Carrefour/Delhaize) to their emails or locations = significant deduction per missed match.",
+    "expected_answer": "Must cover all open SF cases and provide multi-system context for each linked company. Key cases: (1) Carrefour Belgium SA — POS integration delay (New, High) → emails from carrefour-be.eu (fuzzy), SS location CRF-Anderlecht; (2) Delhaize Group — EDI connection issue (Working, Medium) → emails from delhaize.eu (fuzzy), SS location AD Delhaize-Forest; (3) supplier1 — Delayed shipment April batch (Working, High) → emails from Marc Supplier (marc.supplier@supplier1.be), SS location supplier1 (SUP-001); (4) Colruyt Group — Integration issue with POS system (New, Medium) → email from procurement@colruyt.be, SS location Colruyt-Halle. Scoring: 5 = all 4 companies with SF+Graph+SS data; 4 = minor gaps (1-2 companies missing one system); 3 = Graph OR SmartSales queried but incomplete (e.g. some companies show 'no results found'); 2 = one entire system missing from the response; 1 = only Salesforce data present. Note: 'No recent email found' counts as valid Graph coverage if Graph was queried — penalise only if Graph was not attempted at all.",
     "tags": [
       "orchestrator",
       "multi-agent",

@@ -1,0 +1,95 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce)...
+️Executing (graph, smartsales)...
+Synthesizing...
+Here is the comprehensive overview of the companies behind your open support cases:
+
+### 1. Delhaize Group
+- **Case Number:** 00001023
+- **Subject:** EDI connection issue
+- **Status:** Working
+- **Priority:** Medium
+- **Created Date:** 28 April 2026
+- **Communication History:** 
+  - No recent email found.
+
+### 2. Carrefour Belgium SA
+- **Case Number:** 00001022
+- **Subject:** POS integration delay
+- **Status:** New
+- **Priority:** High
+- **Created Date:** 28 April 2026
+- **Communication History:** 
+  - No recent email found.
+
+### 3. Colruyt Group
+- **Case Number:** 00001021
+- **Subject:** Integration issue with POS system
+- **Status:** New
+- **Priority:** Medium
+- **Created Date:** 28 April 2026
+- **Communication History:**
+  - **Subject:** SmartSales pilot bevestiging
+    - **Sender:** Colruyt Group Procurement
+    - **Received:** 28 April 2026
+    - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7pAAA=)
+
+### 4. supplier1
+- **Case Number:** 00001020
+- **Subject:** Delayed shipment — supplier1 April batch
+- **Status:** Working
+- **Priority:** High
+- **Created Date:** 28 April 2026
+- **Communication History:**
+  - **Subject:** Q2 2026 Delivery Contract
+    - **Sender:** Marc Supplier
+    - **Received:** 28 April 2026
+    - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN1KrLeAAA=)
+  - **Subject:** Updated pricing for H2 2026
+    - **Sender:** Marc Supplier
+    - **Received:** 28 April 2026
+    - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN1KrLdAAA=)
+  - **Upcoming Meeting:**
+    - **Subject:** Q2 Delivery Review
+    - **Date:** 10 May 2026, 08:00 - 09:00
+    - [View Meeting](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLdAAA=)
+
+### 5. Easi Be
+- **Case Numbers:** 00001018, 00001017
+- **Subject:** Verification statut case / Test
+- **Status:** In progress / New
+- **Priority:** Medium for both
+- **Creation Dates:** 6 March 2025
+- **Communication History:**
+  - No recent email found.
+
+### 6. Pairi Daiza
+- **Case Numbers:** 00001006, 00001005, 00001001
+- **Subjects:** Issue with order / Produits / Wrong size widgets
+- **Status:** New / Waiting for Customer / New
+- **Priorities:** Medium for all
+- **Creation Dates:** 18 March 2024 / 13 March 2024 / 29 June 2023
+- **Communication History:**
+  - No recent email found.
+
+### 7. Omega SA-NV
+- **Case Number:** 00001003
+- **Subject:** Delivery issues with order #544
+- **Status:** New
+- **Priority:** Medium
+- **Created Date:** 31 July 2023
+- **Communication History:**
+  - No recent email found.
+
+### 8. Global Media
+- **Case Number:** 00001000
+- **Subject:** Widgets not delivered
+- **Status:** Escalated
+- **Priority:** High
+- **Created Date:** 29 June 2023
+- **Communication History:**
+  - **Order:** Bulk order for media production team
+    - **Details:** Mediastraat 10, Brussels, Zip: 1000, Country: BE
+
+This overview compiles data from your open support cases along with communication history and company details. Please let me know if you need further information on a specific case or company.
