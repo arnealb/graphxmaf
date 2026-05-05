@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pandoc:*)",
+      "Bash(python:*)",
+      "Bash(xelatex:*)",
+      "Bash(where:*)",
+      "Bash(\"/c/Users/AALB/AppData/Local/Programs/MiKTeX/miktex/bin/x64/xelatex.exe\":*)",
+      "Bash(\"/c/Users/AALB/AppData/Local/Programs/MiKTeX/miktex/bin/x64/bibtex.exe\" main:*)",
+      "WebFetch(domain:arxiv.org)",
+      "Bash(grep:*)"
+    ]
+  }
+}

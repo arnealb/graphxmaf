@@ -1,0 +1,80 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: IEEEtran.bst
+Reallocating 'name_of_file' (item size: 1) to 24 items.
+A level-1 auxiliary file: chapters/4_abstract.aux
+Reallocating 'name_of_file' (item size: 1) to 28 items.
+A level-1 auxiliary file: chapters/7_introduction.aux
+Reallocating 'name_of_file' (item size: 1) to 25 items.
+A level-1 auxiliary file: chapters/8_chapter_1.aux
+Reallocating 'name_of_file' (item size: 1) to 25 items.
+A level-1 auxiliary file: chapters/8_chapter_2.aux
+Reallocating 'name_of_file' (item size: 1) to 25 items.
+A level-1 auxiliary file: chapters/8_chapter_3.aux
+Reallocating 'name_of_file' (item size: 1) to 25 items.
+A level-1 auxiliary file: chapters/8_chapter_4.aux
+Reallocating 'name_of_file' (item size: 1) to 27 items.
+A level-1 auxiliary file: chapters/8_eval_theo_5.aux
+Reallocating 'name_of_file' (item size: 1) to 32 items.
+A level-1 auxiliary file: chapters/8_eval_practical_6.aux
+Reallocating 'name_of_file' (item size: 1) to 28 items.
+A level-1 auxiliary file: chapters/10_future-work.aux
+Reallocating 'name_of_file' (item size: 1) to 29 items.
+A level-1 auxiliary file: chapters/12_bibliography.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+Reallocating 'name_of_file' (item size: 1) to 27 items.
+A level-1 auxiliary file: chapters/13_appendices.aux
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: references.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+You've used 16 entries,
+            4087 wiz_defined-function locations,
+            905 strings with 10617 characters,
+and the built_in function-call counts, 7478 in all, are:
+= -- 607
+> -- 183
+< -- 0
++ -- 90
+- -- 45
+* -- 309
+:= -- 1351
+add.period$ -- 32
+call.type$ -- 16
+change.case$ -- 27
+chr.to.int$ -- 0
+cite$ -- 16
+duplicate$ -- 603
+empty$ -- 648
+format.name$ -- 49
+if$ -- 1651
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 146
+newline$ -- 79
+num.names$ -- 16
+pop$ -- 377
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 575
+stack$ -- 0
+substring$ -- 38
+swap$ -- 372
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 16
+warning$ -- 0
+while$ -- 16
+width$ -- 18
+write$ -- 174

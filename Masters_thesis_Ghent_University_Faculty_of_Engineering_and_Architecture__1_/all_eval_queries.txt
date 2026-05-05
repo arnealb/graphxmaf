@@ -1,0 +1,120 @@
+1. Graph prompts
+
+Totaal in lijst: 23 queries
+
+Identity
+Who am I in Microsoft 365?
+Email
+Show me my 5 most recent emails.
+Search for emails that have the word 'meeting' in the subject.
+Have I received any emails in the last 7 days? List sender and subject.
+What does my most recent email say? Give me the full body.
+Show me emails I received in the last 14 days.
+Find emails with 'invoice' in the subject.
+Find the most recent email with 'meeting' in the subject and read its full body.
+People
+Find the email address of Dorian.
+Look up the email address of Marie in the organization.
+Calendar
+What are my upcoming calendar events this week?
+Search my calendar for any events or meetings in the next 14 days.
+How many calendar events do I have scheduled this week? List them all.
+Search my calendar for events scheduled in the next 30 days.
+Contacts
+Show me my Microsoft 365 contacts.
+List my Microsoft 365 contacts and include their phone numbers.
+Files
+Find any Excel or PDF files in my OneDrive.
+Search OneDrive for a file called 'report' and read its content.
+Find all Word documents in my OneDrive.
+Find a document called 'agenda' in OneDrive and show its content.
+Search OneDrive for Excel files and read the content of the first two found.
+Find any files related to 'budget' in OneDrive and read all of them.
+2. Salesforce prompts
+
+Totaal in lijst: 22 queries
+
+Accounts
+List 5 Salesforce accounts.
+Find Salesforce accounts in Belgium, including their billing address.
+Find Salesforce accounts that have 'Group' in their name.
+Show me Salesforce accounts with their phone numbers.
+Find Salesforce accounts in France and list the contacts linked to those accounts.
+Contacts
+Show me 5 Salesforce contacts with their email addresses.
+Find Salesforce contacts in the Sales department.
+Find Salesforce contacts with 'Manager' in their title.
+Show me the most recently created Salesforce contacts.
+Leads
+Show me 5 leads in Salesforce.
+Find Salesforce leads from the Technology or Software industry.
+Find Salesforce leads that have been converted.
+Show me Salesforce leads with the status 'Open - Not Contacted'.
+Opportunities
+List 5 open opportunities in Salesforce.
+Show me Salesforce opportunities with an amount greater than 10,000. Include probability.
+Show me Salesforce opportunities in the 'Proposal/Price Quote' stage.
+List Salesforce opportunities sorted by amount, highest first.
+Show me the 3 largest open Salesforce opportunities and the billing country of each related account.
+Cases
+List open support cases in Salesforce.
+Show me 5 closed Salesforce cases including their close date and description.
+Find high-priority open cases in Salesforce.
+Show me Salesforce cases with their related account names.
+3. SmartSales prompts
+
+Totaal in lijst: 22 queries
+
+Locations
+List all SmartSales locations.
+Find SmartSales locations in Brussels.
+List SmartSales locations in Belgium sorted by name, using full projection.
+List all SmartSales locations, then retrieve the full details of the first result.
+What fields are available to display in the SmartSales location list?
+What fields can I use to filter SmartSales locations?
+What fields can I use to sort SmartSales locations?
+Catalog
+List SmartSales catalog items.
+List SmartSales catalog items with simple projection, sorted by name.
+List SmartSales catalog items, then retrieve the full details of the first one.
+What fields can be displayed for SmartSales catalog items?
+What fields can I filter SmartSales catalog items by?
+What fields can I sort SmartSales catalog items by?
+Orders
+List recent SmartSales orders.
+List SmartSales orders with full projection.
+List SmartSales orders, then retrieve the full details of the first order.
+What is the SmartSales order configuration?
+List all SmartSales order approbation statuses.
+List SmartSales approbation statuses, then get the full details of the first one.
+What fields can be displayed for SmartSales orders?
+What fields can I filter SmartSales orders by?
+What fields can I sort SmartSales orders by?
+4. Orchestrator prompts
+
+Totaal in lijst: 22 queries
+
+Routing queries
+Who am I in Microsoft 365?
+List 5 Salesforce accounts.
+List SmartSales locations.
+What calendar events do I have next week?
+Search my emails for anything about budget.
+Find all open Salesforce opportunities with an amount above 10,000.
+List SmartSales catalog items.
+Show me recent SmartSales orders.
+Cross-system queries
+Find contacts named 'John' in both Microsoft 365 and Salesforce.
+Show me my calendar events for the next 7 days and check whether any organizers appear as contacts in Salesforce.
+List SmartSales locations in Brussels and check if there are any matching Salesforce accounts in the same city.
+What are my 3 most recent emails? Are any of those senders listed as contacts in Salesforce?
+Show me open Salesforce opportunities and SmartSales locations in Belgium. Give me a summary of both.
+Find my 5 most recent emails and check if any of the senders are Salesforce leads.
+List my Microsoft 365 contacts and check if any of them are also SmartSales locations.
+Find Salesforce accounts in Brussels and compare with SmartSales locations in the same city.
+Show me my calendar events for the next 7 days and check if any attendees are Salesforce contacts.
+Who am I in Microsoft 365, what Salesforce accounts exist, and what SmartSales locations are in Belgium?
+List recent SmartSales orders and check if the customer names match any Salesforce accounts.
+Search my OneDrive for files about contracts and check if the mentioned company names are Salesforce accounts.
+Find emails I received this week and check if any senders are linked to a SmartSales location.
+Give me an overview of my upcoming meetings from Microsoft 365, related Salesforce opportunities, and SmartSales locations for the companies involved.

@@ -1,0 +1,187 @@
+\begin{appendices}
+\section*{Bijlage A -- Volledige lijst van testqueries}
+\addcontentsline{toc}{section}{Bijlage A -- Volledige lijst van testqueries}
+\label{app:testqueries}
+
+Onderstaande lijst bevat alle 88 testqueries die gebruikt werden voor de evaluatie van het prototype, gegroepeerd per agent en subcategorie.
+
+\subsection*{GraphAgent (22 queries)}
+
+\textbf{Identity}
+\begin{itemize}[noitemsep]
+  \item Who am I in Microsoft 365?
+\end{itemize}
+
+\textbf{E-mail}
+\begin{itemize}[noitemsep]
+  \item Show me my 5 most recent emails.
+  \item Search for emails that have the word `meeting' in the subject.
+  \item Have I received any emails in the last 7 days? List sender and subject.
+  \item What does my most recent email say? Give me the full body.
+  \item Show me emails I received in the last 14 days.
+  \item Find emails with `invoice' in the subject.
+  \item Find the most recent email with `meeting' in the subject and read its full body.
+\end{itemize}
+
+\textbf{People}
+\begin{itemize}[noitemsep]
+  \item Find the email address of Dorian.
+  \item Look up the email address of Marie in the organization.
+\end{itemize}
+
+\textbf{Kalender}
+\begin{itemize}[noitemsep]
+  \item What are my upcoming calendar events this week?
+  \item Search my calendar for any events or meetings in the next 14 days.
+  \item How many calendar events do I have scheduled this week? List them all.
+  \item Search my calendar for events scheduled in the next 30 days.
+\end{itemize}
+
+\textbf{Contacten}
+\begin{itemize}[noitemsep]
+  \item Show me my Microsoft 365 contacts.
+  \item List my Microsoft 365 contacts and include their phone numbers.
+\end{itemize}
+
+\textbf{Bestanden}
+\begin{itemize}[noitemsep]
+  \item Find any Excel or PDF files in my OneDrive.
+  \item Search OneDrive for a file called `report' and read its content.
+  \item Find all Word documents in my OneDrive.
+  \item Find a document called `agenda' in OneDrive and show its content.
+  \item Search OneDrive for Excel files and read the content of the first two found.
+  \item Find any files related to `budget' in OneDrive and read all of them.
+\end{itemize}
+
+\subsection*{SalesforceAgent (22 queries)}
+
+\textbf{Accounts}
+\begin{itemize}[noitemsep]
+  \item List 5 Salesforce accounts.
+  \item Find Salesforce accounts in Belgium, including their billing address.
+  \item Find Salesforce accounts that have `Group' in their name.
+  \item Show me Salesforce accounts with their phone numbers.
+  \item Find Salesforce accounts in France and list the contacts linked to those accounts.
+\end{itemize}
+
+\textbf{Contacts}
+\begin{itemize}[noitemsep]
+  \item Show me 5 Salesforce contacts with their email addresses.
+  \item Find Salesforce contacts in the Sales department.
+  \item Find Salesforce contacts with `Manager' in their title.
+  \item Show me the most recently created Salesforce contacts.
+\end{itemize}
+
+\textbf{Leads}
+\begin{itemize}[noitemsep]
+  \item Show me 5 leads in Salesforce.
+  \item Find Salesforce leads from the Technology or Software industry.
+  \item Find Salesforce leads that have been converted.
+  \item Show me Salesforce leads with the status `Open - Not Contacted'.
+\end{itemize}
+
+\textbf{Opportunities}
+\begin{itemize}[noitemsep]
+  \item List 5 open opportunities in Salesforce.
+  \item Show me Salesforce opportunities with an amount greater than 10,000. Include probability.
+  \item Show me Salesforce opportunities in the `Proposal/Price Quote' stage.
+  \item List Salesforce opportunities sorted by amount, highest first.
+  \item Show me the 3 largest open Salesforce opportunities and the billing country of each related account.
+\end{itemize}
+
+\textbf{Cases}
+\begin{itemize}[noitemsep]
+  \item List open support cases in Salesforce.
+  \item Show me 5 closed Salesforce cases including their close date and description.
+  \item Find high-priority open cases in Salesforce.
+  \item Show me Salesforce cases with their related account names.
+\end{itemize}
+
+\subsection*{SmartSalesAgent (22 queries)}
+
+\textbf{Locaties}
+\begin{itemize}[noitemsep]
+  \item List all SmartSales locations.
+  \item Find SmartSales locations in Brussels.
+  \item List SmartSales locations in Belgium sorted by name, using full projection.
+  \item List all SmartSales locations, then retrieve the full details of the first result.
+  \item What fields are available to display in the SmartSales location list?
+  \item What fields can I use to filter SmartSales locations?
+  \item What fields can I use to sort SmartSales locations?
+\end{itemize}
+
+\textbf{Catalogus}
+\begin{itemize}[noitemsep]
+  \item List SmartSales catalog items.
+  \item List SmartSales catalog items with simple projection, sorted by name.
+  \item List SmartSales catalog items, then retrieve the full details of the first one.
+  \item What fields can be displayed for SmartSales catalog items?
+  \item What fields can I filter SmartSales catalog items by?
+  \item What fields can I sort SmartSales catalog items by?
+\end{itemize}
+
+\textbf{Orders}
+\begin{itemize}[noitemsep]
+  \item List recent SmartSales orders.
+  \item List SmartSales orders with full projection.
+  \item List SmartSales orders, then retrieve the full details of the first order.
+  \item What is the SmartSales order configuration?
+  \item List all SmartSales order approbation statuses.
+  \item List SmartSales approbation statuses, then get the full details of the first one.
+  \item What fields can be displayed for SmartSales orders?
+  \item What fields can I filter SmartSales orders by?
+  \item What fields can I sort SmartSales orders by?
+\end{itemize}
+
+\subsection*{OrchestratorAgent (22 queries)}
+
+\textbf{Routing queries}
+\begin{itemize}[noitemsep]
+  \item Who am I in Microsoft 365?
+  \item List 5 Salesforce accounts.
+  \item List SmartSales locations.
+  \item What calendar events do I have next week?
+  \item Search my emails for anything about budget.
+  \item Find all open Salesforce opportunities with an amount above 10,000.
+  \item List SmartSales catalog items.
+  \item Show me recent SmartSales orders.
+\end{itemize}
+
+\textbf{Cross-system queries}
+\begin{itemize}[noitemsep]
+  \item Find contacts named `John' in both Microsoft 365 and Salesforce.
+  \item Show me my calendar events for the next 7 days and check whether any organizers appear as contacts in Salesforce.
+  \item List SmartSales locations in Brussels and check if there are any matching Salesforce accounts in the same city.
+  \item What are my 3 most recent emails? Are any of those senders listed as contacts in Salesforce?
+  \item Show me open Salesforce opportunities and SmartSales locations in Belgium. Give me a summary of both.
+  \item Find my 5 most recent emails and check if any of the senders are Salesforce leads.
+  \item List my Microsoft 365 contacts and check if any of them are also SmartSales locations.
+  \item Find Salesforce accounts in Brussels and compare with SmartSales locations in the same city.
+  \item Show me my calendar events for the next 7 days and check if any attendees are Salesforce contacts.
+  \item Who am I in Microsoft 365, what Salesforce accounts exist, and what SmartSales locations are in Belgium?
+  \item List recent SmartSales orders and check if the customer names match any Salesforce accounts.
+  \item Search my OneDrive for files about contracts and check if the mentioned company names are Salesforce accounts.
+  \item Find emails I received this week and check if any senders are linked to a SmartSales location.
+  \item Give me an overview of my upcoming meetings from Microsoft 365, related Salesforce opportunities, and SmartSales locations for the companies involved.
+\end{itemize}
+
+\end{appendices}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Dutch version           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{appendices}
+% \section*{Bijlage A}
+% \addcontentsline{toc}{section}{Bijlage A}  
+
+% Toelichting bijlage.
+
+
+
+% \newpage
+% \section*{Bijlage B}
+% \addcontentsline{toc}{section}{Bijlage B}  
+
+% Toelichting bijlage.
+
+% \end{appendices}

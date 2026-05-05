@@ -1,0 +1,69 @@
+\chapter{Achtergrond en literatuurstudie}
+\label{chap:achtergrond}
+
+\section{Enterprise search binnen organisaties}
+\label{sec:enterprise-search}
+
+Met de term enterprise search wordt verwezen naar zoekoplossingen binnen organisaties waarmee gebruikers informatie proberen terug te vinden, zoals documenten, e-mails, klanten, tickets, dossiers en andere bedrijfsgegevens. In moderne bedrijfsomgevingen bevindt deze informatie zich doorgaans verspreid over verschillende systemen en applicaties, zoals documentplatformen, \gls{CRM}-systemen, \gls{ERP}-systemen, interne databanken en collaboration tools.
+
+Deze spreiding over meerdere systemen bemoeilijkt het zoeken aanzienlijk. De betrokken systemen hanteren vaak eigen databronnen, interfaces, metadata, \glspl{API} en authenticatiemethoden. Daardoor is informatie niet alleen verdeeld over verschillende platformen, maar ook op uiteenlopende manieren gestructureerd. In de praktijk betekent dit dat gebruikers vaak meerdere systemen afzonderlijk moeten doorzoeken om een volledig beeld te krijgen van een klant, project, document of communicatie.
+
+
+Bestaande enterprise search-oplossingen zijn in veel gevallen nog sterk gebaseerd op trefwoorden en leveren vooral losse resultatenlijsten op. Zulke systemen slagen er niet altijd in om de context van een gebruikersvraag goed te begrijpen of informatie uit meerdere bronnen op een zinvolle manier te combineren. Vooral bij complexere zoekvragen stoten klassieke zoekmethoden daardoor op hun limieten. Dit creëert de nood aan intelligentere zoekarchitecturen die niet alleen informatie kunnen terugvinden, maar ook de context van een vraag beter kunnen interpreteren.
+
+
+\section{Large Language Models en hun beperkingen}
+\label{sec:llm}
+
+\glspl{LLM} bieden nieuwe mogelijkheden voor moderne zoeksystemen. In tegenstelling tot klassieke zoekmethoden, die vaak sterk afhankelijk zijn van trefwoorden, kunnen \glspl{LLM} natuurlijke taal begrijpen en genereren~\cite{brown2020gpt3}. Daardoor kunnen gebruikers hun vraag in natuurlijke taal formuleren, terwijl het model de intentie achter die vraag interpreteert. Bovendien kunnen \glspl{LLM} informatie samenvatten, verschillende stukken context combineren en een bruikbaar antwoord formuleren in plaats van enkel een lijst van zoekresultaten terug te geven.
+
+Binnen enterprise search maakt dit het gebruik van \glspl{LLM} bijzonder relevant. Ze kunnen niet alleen helpen bij het beter interpreteren van gebruikersvragen, maar ook bij het structureren en samenbrengen van informatie uit verschillende bronnen. Daardoor ontstaat de mogelijkheid om te evolueren van klassieke resultatenlijsten naar zoekinterfaces die gebruikers directer ondersteunen bij het terugvinden van relevante informatie.
+
+Tegelijk volstaat een \gls{LLM} op zich niet als oplossing voor enterprise search binnen bedrijfsomgevingen. Een model heeft standaard geen ingebouwde toegang tot private bedrijfsdata en kan zonder bijkomende integratie geen informatie ophalen uit interne systemen zoals e-mailomgevingen, \gls{CRM}-platformen of documentbeheersystemen. Daarnaast is de kennis van een \gls{LLM} beperkt tot de trainingsdata en ontbreekt zonder externe context toegang tot actuele of domeinspecifieke informatie. Ook zijn de gegenereerde antwoorden probabilistisch van aard, wat kan leiden tot inconsistente output of hallucinaties. Ten slotte beschikken \glspl{LLM} niet over ingebouwde mechanismen voor \gls{API}-integratie, authenticatie, autorisatie en het respecteren van toegangsrechten. Daarom is een bijkomende architecturale laag nodig die relevante context ophaalt, toegang tot bedrijfsdata regelt en deze op een gecontroleerde manier aan het model beschikbaar stelt.
+
+
+\section{AI-agents en multi-agent systemen}
+\label{sec:agents}
+
+Een \gls{AI}-agent kan worden omschreven als een softwarecomponent die autonoom of semi-autonoom taken uitvoert namens een gebruiker of applicatie~\cite{openai2025agents}. In tegenstelling tot een \gls{LLM}, dat op zichzelf hoofdzakelijk input verwerkt en tekstuele output genereert, kan een agent ook acties ondernemen. Daarbij kan een agent gebruikmaken van mogelijkheden zoals toolgebruik, geheugen, planning en contextbeheer~\cite{googlecloud2024agents}.
+
+Het gedrag van een agent verloopt typisch via een iteratief patroon van redeneren en handelen, ook bekend als het ReAct-patroon (\textit{Reason + Act})~\cite{yao2022react}. Daarin redeneert de agent intern over de huidige context, voert een gerichte actie uit via tools of externe systemen, en verwerkt de terugkoppeling om zijn interne toestand bij te werken. Dit cyclische patroon stelt agents in staat om niet uitsluitend op hun interne kennis te steunen, maar ook actief externe informatie op te vragen en meerdere stappen te plannen.
+
+In een bedrijfscontext is dat onderscheid belangrijk. Waar een \gls{LLM} op zichzelf geen rechtstreekse interactie heeft met externe systemen, kan een agent databronnen aanspreken, informatie ophalen, tussenresultaten bijhouden en deze verwerken in verdere stappen. De \gls{LLM} fungeert daarbij als redeneer- of beslissingscomponent, terwijl de agent als geheel de bijkomende taaklogica en systeeminteractie voorziet. Hierdoor zijn agents bijzonder geschikt voor gebruik in omgevingen waar informatie verspreid zit over meerdere databronnen en waar complexe workflows verschillende systemen met elkaar moeten verbinden.
+
+Een multi-agent systeem is een architectuur waarbij meerdere gespecialiseerde agents samenwerken om een complexere taak uit te voeren~\cite{qiu2024collaborative,openai2025agents}. In plaats van één enkele agent die alle verantwoordelijkheden op zich neemt, wordt de functionaliteit verdeeld over verschillende agents met elk een eigen rol of specialisatie. In de context van enterprise search kan bijvoorbeeld voor elke databron of elk extern systeem een aparte agent worden voorzien, met eigen integratielogica, authenticatiestromen, \gls{REST}-clients en datamodellen.
+
+Deze opsplitsing biedt verschillende voordelen. In de eerste plaats zorgt dit voor een duidelijke scheiding van verantwoordelijkheden, waardoor de architectuur modulairder en beter onderhoudbaar wordt. Elke agent kan zich toespitsen op één specifieke databron of taak, wat het eenvoudiger maakt om nieuwe systemen toe te voegen. Daarnaast laat een multi-agent aanpak toe om query routing explicieter te organiseren, waarbij een centrale orchestrator bepaalt welke agents moeten worden aangesproken om een bepaalde gebruikersvraag te beantwoorden~\cite{microsoft2024agentpatterns}.
+
+Tegelijk brengt een multi-agentarchitectuur ook belangrijke uitdagingen met zich mee. Doordat het systeem uit meerdere samenwerkende componenten bestaat, neemt de complexiteit van de architectuur toe. Dit maakt debugging en foutanalyse moeilijker dan in een meer monolithische architectuur. Bovendien kunnen tokenkost en latency snel oplopen wanneer voor één gebruikersvraag meerdere \gls{LLM}-aanroepen nodig zijn. Tot slot moet ook de beveiliging over meerdere componenten heen bewaakt worden, wat bijkomende eisen stelt aan authenticatie, autorisatie en controle op gegevensuitwisseling tussen agents.
+
+\section{Agent frameworks}
+\label{sec:frameworks}
+
+Een agent framework is een softwarelaag die helpt bij het bouwen, uitvoeren en coördineren van agents. Dergelijke frameworks voorzien mechanismen voor onder meer toolgebruik, state- en contextbeheer, samenwerking tussen meerdere agents, workflow-uitvoering, observability en integratie met externe systemen. Binnen deze masterproef werden drie frameworks nader bekeken: LangGraph, Semantic Kernel en Microsoft Agent Framework.
+
+Bij de keuze van een geschikt framework zijn in deze context verschillende criteria relevant: de mate van controle over de uitvoeringsflow, de flexibiliteit van het gedrag van de agent, de ondersteuning van multi-agent samenwerking en de fit voor gebruik in een enterpriseomgeving. Aangezien de voorgestelde architectuur meerdere gespecialiseerde agents combineert met externe databronnen, volstaat het niet dat een framework enkel flexibel is. Het moet ook toelaten om de interactie tussen agents, het gebruik van tools en de uitvoeringsflow op een duidelijke manier te organiseren.
+
+LangGraph is in de eerste plaats sterk in scenario's waarin de logica expliciet gemodelleerd moet worden als een graaf van stappen en beslissingspunten~\cite{langchain2024langraphdocs}. Het framework laat ontwikkelaars toe om nodes, edges en conditionele overgangen te definiëren, waardoor workflows op een gestructureerde en controleerbare manier kunnen worden opgebouwd. LangGraph ondersteunt bovendien interrupts, checkpoints en human-in-the-loop interacties, wat het geschikt maakt voor voorspelbare en controleerbare processen~\cite{langchain2024multiagent}. Tegelijk is deze aanpak minder flexibel, omdat de globale flow grotendeels vooraf moet worden vastgelegd.
+
+Semantic Kernel vertrekt vanuit een aanpak waarbij een taalmodel tijdens de uitvoering mee bepaalt welke functies of hulpmiddelen worden gebruikt om een taak op te lossen~\cite{microsoft2024semantickernel}. Daardoor is het framework vooral interessant in situaties waar flexibiliteit belangrijk is. Een voordeel van deze aanpak is dat het systeem zich gemakkelijker kan aanpassen aan uiteenlopende vragen en taken. Tegelijk heeft dit ook een nadeel: een groter deel van de beslissingslogica ligt bij het taalmodel zelf, wat het moeilijker maakt om het systeem volledig voorspelbaar en reproduceerbaar te houden.
+
+Microsoft Agent Framework sluit gedeeltelijk aan bij dezelfde ideeën, maar legt meer nadruk op structuur en controle binnen agentische systemen~\cite{microsoft2024agentframework,venturebeat2024maf}. Het framework is ontworpen om samenwerking tussen meerdere agents beter te organiseren en om duidelijker vast te leggen welke rol elke agent heeft binnen het geheel. Hierdoor ontstaat een aanpak die enerzijds voldoende flexibiliteit biedt, maar anderzijds ook meer controle geeft over hoe agents samenwerken en welke acties zij mogen uitvoeren. Dat maakt het framework bijzonder relevant voor toepassingen in een enterprise context, waar betrouwbaarheid, controle en uitbreidbaarheid centraal staan.
+
+Bij de vergelijking van deze frameworks valt op dat elk framework andere accenten legt. LangGraph biedt veel controle en voorspelbaarheid, maar is minder geschikt voor dynamische agentinteracties. Semantic Kernel biedt veel flexibiliteit, maar laat een groter deel van de control flow afhangen van het taalmodel. Microsoft Agent Framework bevindt zich tussen beide benaderingen en combineert expliciete workflowsturing met ondersteuning voor multi-agent samenwerking. Om die reden werd binnen deze masterproef gekozen voor Microsoft Agent Framework als basis voor het prototype.
+
+\section{Model Context Protocol}
+\label{sec:mcp}
+
+Het \gls{MCP} is een gestandaardiseerd protocol waarmee taalmodellen en externe systemen op een uniforme manier met elkaar kunnen communiceren~\cite{anthropic2024mcp}. Via \gls{MCP} kan een model tools of databronnen aanspreken zonder rechtstreeks gekoppeld te zijn aan een specifiek \gls{AI}-framework of een bepaalde vendor. Het protocol vormt zo een gemeenschappelijke laag tussen taalmodellen en externe systemen. Een bruikbare vergelijking is die met USB-C in de hardwarewereld: één uniforme aansluiting die het mogelijk maakt uiteenlopende componenten met elkaar te verbinden.
+
+Een belangrijk probleem dat \gls{MCP} probeert op te lossen, is het zogenaamde MxN-integratieprobleem. Zonder een gemeenschappelijke standaard moet voor elke combinatie van model, framework en databron een aparte koppeling worden gebouwd. Dat leidt snel tot een groot aantal integraties die moeilijk onderhoudbaar en uitbreidbaar zijn. \gls{MCP} biedt hiervoor een uniforme interface waarop zowel applicaties als externe tools en databronnen kunnen worden aangesloten.
+
+De architectuur van \gls{MCP} bestaat uit drie centrale componenten: een host, een client en een server~\cite{huggingface2024mcp,microsoft2024mcpazure}. De host is de \gls{AI}-applicatie die de volledige interactie beheert, waaronder gebruikersinput, \gls{LLM}-aanroepen, contextbeheer en de selectie van geschikte tools. Binnen deze host bevinden zich één of meerdere \gls{MCP}-clients. Een client onderhoudt telkens een één-op-éénverbinding met een \gls{MCP}-server en verzorgt de communicatie tussen het model en die server. Een \gls{MCP}-server is op zijn beurt een extern programma of een service die tools, resources of andere functionaliteiten beschikbaar stelt.
+
+Tegelijk kent ook \gls{MCP} enkele beperkingen en aandachtspunten. Hoewel het protocol de communicatie met externe systemen standaardiseert, lost het niet automatisch alle uitdagingen rond beveiliging, toegangscontrole en governance op. Er moet nog steeds expliciet worden vastgelegd welke tools toegankelijk zijn, welke acties mogen worden uitgevoerd en welke data aan een model mag worden doorgegeven. \gls{MCP} biedt dus vooral een gestandaardiseerde integratielaag, maar vormt op zichzelf geen volledige oplossing voor alle architecturale en beveiligingsgerelateerde uitdagingen.
+
+\section{Nood aan governance bij toegang tot bedrijfsdata}
+\label{sec:security}
+
+Ten slotte speelt ook governance een belangrijke rol. Organisaties moeten niet alleen kunnen bepalen tot welke data een agent toegang heeft, maar ook welke tools of acties binnen het systeem toegelaten zijn en hoe de werking van het systeem gecontroleerd kan worden. In dat verband zijn logging, traceerbaarheid en auditbaarheid belangrijk~\cite{redhat2024mcpsecurity}. Wanneer een systeem antwoorden formuleert op basis van meerdere databronnen, moet achteraf in zekere mate kunnen worden nagegaan welke informatie werd geraadpleegd en via welke componenten die werd verwerkt.

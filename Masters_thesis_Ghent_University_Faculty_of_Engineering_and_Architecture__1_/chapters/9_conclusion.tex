@@ -1,0 +1,13 @@
+\chapter*{Conclusie}
+\chaptermark{Conclusie}
+\addcontentsline{toc}{chapter}{Conclusie}
+
+% TODO: uitwerken na afronding evaluatie
+
+Deze masterproef onderzocht hoe een multi-agentarchitectuur ingezet kan worden om bedrijfsdata uit meerdere heterogene systemen op een veilige en efficiënte manier te doorzoeken via natuurlijke taalqueries.
+
+Vertrekkende vanuit de uitdagingen rond gefragmenteerde bedrijfsdata, de beperkingen van klassieke zoekmethoden en de risico's van \gls{LLM}-gebaseerde systemen, werd een architectuur ontworpen en geïmplementeerd die bestaat uit een centrale orchestrator en drie gespecialiseerde subagents voor respectievelijk Microsoft Graph, Salesforce en SmartSales. De communicatie tussen agents en databronnen verloopt via het \gls{MCP}, wat zorgt voor een modulaire en uitbreidbare integratie.
+
+Uit de evaluatie bleek dat de voorgestelde architectuur in staat is om gebruikersvragen correct te interpreteren, naar de relevante databronnen te routeren en de opgehaalde resultaten samen te voegen tot een samenhangend antwoord. De evaluatie bracht ook een aantal beperkingen aan het licht, waaronder beperkt contextbeheer over meerdere beurten heen, de afwezigheid van robuuste foutafhandeling en ontbrekende multi-user ondersteuning in de huidige prototypeversie.
+
+Het ontwikkelde systeem toont aan dat een multi-agent aanpak een haalbare en uitbreidbare basis biedt voor enterprise search binnen moderne bedrijfsomgevingen. De architectuur is modulair opgebouwd en laat toe om nieuwe databronnen toe te voegen zonder fundamentele wijzigingen aan het bestaande systeem.

@@ -1,0 +1,90 @@
+4. Architectuurontwerp
+
+==H2== 4.1 Ontwerpdoelen
+Het architectuurontwerp van de voorgestelde oplossing vertrekt vanuit de vereisten en knelpunten die in hoofdstuk 3 werden geïdentificeerd. Het doel is een architectuur uit te werken die informatie uit meerdere bedrijfsystemen op een gecontroleerde en uitbreidbare manier toegankelijk maakt via natuurlijke taalqueries.
+Een eerste ontwerpdoel is het ondersteunen van zoekopdrachten over meerdere databronne. De architectuur moet kunnen omgaan met systemen die verschillen in API’s, authenticatiemechanismen en datamodellen, zonder dat deze complexiteit zichtbaar wordt voor de eindgebruiker.
+Een tweede ontwerpdoel is modulariteit. Door de architectuur op te delen in afzonderlijke componenten en gespecialiseerde agents wordt de interne structuur van het systeem overzichtelijker en beter onderhoudbaar.
+Daarnaast moet de architectuur ook uitbreidbaar zijn. Nieuwe databronnen moeten later kunnen worden toegevoegd zonder fundamentele wijzigingen aan de bestaande componenten of aan de globale werking van het systeem.
+Ook moet de architectuur voorzien in een duidelijke scheiding van verantwoordelijkheden. Query-interpretatie, coördinatie, toegang tot databronnen en generatie van antwoorden mogen niet in één grote monolith samenvallen.
+Verder moet de oplossing veilige toegang tot bedrijfsdata ondersteunen. De architectuur moet bestaande authenticatie- en autorisatie regels respecteren en mag geen toegang verlenen tot informatie waarvoor een gebruiker in het bronsysteem geen rechten heeft.
+Een bijkomend doel is betrouwbaarheid. Daarom moet de architectuur niet uitsluitend steunen op generatieve output van een taalmodel, maar op effectief opgehaalde gegevens uit de gekoppelde systemen.
+
+==H2== 4.2 Overzicht van de voorgestelde architectuur
+Om aan deze ontwerpdoelen te voldoen werd er gekozen voor een multi-agent architectuur met een centrale orchestrator en meerdere gespecialiseerde subagents. Deze orchestrator vormt het centrale coördinatiepunt van het systeem. Deze component ontvangt de gebruiker query, interpreteert de vraag en bepaald welke databronnen relevant zijn en stuurt de samenwerking tussen de agents aan.
+Voor elke geïntegreerde databron wordt een afzonderlijke agent voorzien. In het prototype gaat het om een Microsoft Graph agent, een Salesforce agent en een SmartSales agent. Elke agent encapsuleert de logica die nodig is om met één specifiek systeem te communiceren. Daarbij omvat de agent onder meer kennis over de relevante API’s, querymogelijkheden, authenticatie en systeem-specifieke datamodellen.
+De communicatie tussen agents en databronnen verloopt via een MCP-gebaseerde integratielaag. Dit maakt het mogelijk om de agentlogica en en de externe systemen los te koppelen, wat de onderhoudbaarheid en uitbreidbaarheid van het systeem vergemakkelijkt.
+Het globale systeem kan dus worden opgevat als een gelaagde architectuur. Bovenaan bevindt zich de gebruikersinteractie via natuurlijke taal. Daaronder bevindt zich de orchestrator, die instaat voor interpretatie en coördinatie. Vervolgens zijn er de gespecialiseerde agents, die elk via MCP en onderliggende API-koppelingen communiceren met hun respectieve databronnen. De opgehaalde resultaten worden teruggestuurd naar de orchestrator, die deze samenbrengt en omzet in een bruikbaar antwoord voor de gebruiker.
+
+==H2== 4.3 Beschrijving van de componenten
+
+===H3=== 4.3.2 Orchestrator
+De orchestrator vormt het centrale coördinatiepunt van de voorgestelde architectuur. Deze component ontvangt de natuurlijke taalquery van de gebruiker en stuurt het verdere zoekproces aan. De orchestrator fungeert daarbij als schakel tussen de gebruikersinput en de gespecialiseerde agents.
+Een eerste taak van de orchestrator bestaat uit het interpreteren van de vraag van de gebruiker. Op basis van de ingevoerde query wordt bepaald welke informatie de gebruiker precies zoekt en welke systemen daarvoor mogelijk relevant zijn. De orchestrator analyseert dus niet alleen de letterlijke inhoud van de vraag, maar probeert ook de achterliggende intentie en informatiebehoefte te identificeren.
+Vervolgens beslist de orchestrator welke agent of combinatie van agents moet worden aangesproken. Bij eenvoudige zoekopdrachten kan één enkele agent volstaan, bijvoorbeeld wanneer de vraag uitsluitend betrekking heeft op e-mails of kalendergegevens binnen Microsoft Graph. Bij complexere vragen kan het nodig zijn om meerdere agents te activeren, bijvoorbeeld wanneer informatie uit communicatie, documenten en CRM-gegevens gecombineerd moet worden om tot een volledig antwoord te komen.
+Nadat de routing bepaald is, is de orchestrator ook verantwoordelijk voor de algemene uitvoering. De geselecteerde agents worden aangestuurd om relevante informatie op te halen, door de juiste queries te sturen naar de juiste subagents.
+Wanneer de betrokken agents hun resultaten terugsturen, verzamelt de orchestrator deze deelresultaten en brengt hij ze samen. Indien meerdere databronnen werden geraadpleegd, combineert de orchestrator de opgehaalde informatie tot één samenhangend geheel dat aansluit bij de oorspronkelijke vraag van de gebruiker. Op basis van deze samengebrachte context wordt vervolgens een bruikbaar antwoord of overzicht opgesteld.
+De orchestrator bevat dus enkel logica voor het interpreteren van gebruikers input, routing, coordinatie en het samenvoegen van de antwoorden.
+
+===H3=== 4.3.3 Gespecialiseerde agents
+Binnen de voorgestelde architectuur wordt voor elke databron een afzonderlijke gespecialiseerde agent voorzien. In het prototype gaat het om een Microsoft Graph agent, een Salesforce agent en een SmartSales agent. Elke agent is verantwoordelijk voor de interactie met één specifiek systeem en encapsuleert de logica die nodig is om informatie uit die databron op te halen.
+Deze gespecialiseerde aanpak is nodig omdat de betrokken systemen onderling sterk verschillen. Ze maken gebruik van andere API’s, authenticatie, zoekmogelijkheden en datamodellen. Door voor elke databron een afzonderlijke agent te voorzien, kan deze systeem-specifieke complexiteit lokaal worden opgevangen zonder de rest van de architectuur onnodig te belasten.
+Een gespecialiseerde agent ontvangt opdrachten van de orchestrator en vertaalt deze naar concrete acties binnen het gekoppelde systeem, zoals de vraag omzetten naar een API-oproep, een filterquery of iets specifiek opvragen binnen de betreffende databron. De agent staat vervolgens ook in voor het verwerken van de opgehaalde resultaten en het terugsturen ervan naar de orchestrator.
+Het gebruik van afzonderlijke agents zorgt voor een duidelijke scheiding van verantwoordelijkheden binnen de architectuur. De orchestrator hoeft daardoor niet zelf alle details van elke databron te kennen, maar kan de uitvoering delegeren aan componenten die gespecialiseerd zijn in één specifiek domein. Dit verhoogt de modulariteit en onderhoudbaarheid van het systeem.
+Daarnaast bevordert deze aanpak ook de uitbreidbaarheid. Wanneer in de toekomst een nieuwe databron moet worden geïntegreerd, kan hiervoor in principe een bijkomende agent worden toegevoegd zonder dat de bestaande agents of de globale architectuur fundamenteel moeten worden aangepast. De architectuur sluit daardoor goed aan bij bedrijfsomgevingen waarin het aantal databronnen in de loop van de tijd kan toenemen.
+
+===H3=== 4.3.4 MCP-server of toollaag per databron
+Tussen de gespecialiseerde agents en de onderliggende databronnen bevindt zich een MCP-gebaseerde toollaag. Deze laag maakt het mogelijk om functionaliteiten van externe systemen op een uniforme manier beschikbaar te stellen aan de agents. De agenten communiceren daardoor niet rechtstreeks met de API’s van databronnen zoals Microsoft Graph, Salesforce of SmartSales, maar maken gebruik van tools die via een MCP-server worden aangeboden.
+Per databron wordt een afzonderlijke MCP-server of equivalente toollaag voorzien. Deze component exposeert concrete operaties, zoals zoekopdrachten, het ophalen van e-mails, kalenderitems, opportuniteiten of contactgegevens. Voor de agent verschijnen deze operaties als gestructureerde tools met een duidelijke invoer en uitvoer.
+Wanneer een agent een bepaalde actie uitvoert, gebeurt dit via een toolaanroep naar de MCP-server. De server vertaalt deze oproep vervolgens naar de juiste API-calls of systeemoperaties binnen het gekoppelde bronsysteem. De concrete integratielogica bevindt zich dus in deze laag. Zij omvat onder meer het opbouwen van requests, het verwerken van parameters, het aanspreken van endpoints en het interpreteren van responses.
+Deze aanpak zorgt voor een duidelijke scheiding tussen agentlogica en systeemintegratie. De gespecialiseerde agents hoeven daardoor niet zelf alle technische details van de databronnen te bevatten, maar werken met een uniformere interface. Dit verhoogt de modulariteit, onderhoudbaarheid en uitbreidbaarheid van de architectuur.
+Tegelijk neemt MCP de nood aan systeem-specifieke integratie niet volledig weg. De verschillen tussen databronnen blijven bestaan, maar worden ondergebracht in een afzonderlijke en beter beheersbare laag. Daardoor wordt de complexiteit niet geëlimineerd, maar wel op een gecontroleerde manier afgebakend binnen de architectuur.
+
+===H3=== 4.3.5 Onderliggende databronnen
+De voorgestelde architectuur steunt op een aantal bestaande bedrijfsapplicaties die elk hun eigen gegevens en functionaliteiten beheren. In het uitgewerkte prototype gaat het concreet om Microsoft Graph, Salesforce en SmartSales. Deze systemen vormen de onderliggende databronnen waaruit de agents informatie ophalen om vragen van gebruikers te beantwoorden.
+Microsoft Graph fungeert in deze context als toegangspoort tot gegevens binnen het Microsoft 365-ecosysteem, zoals e-mails, agenda-items, contacten, bestanden en andere informatie uit toepassingen zoals Outlook, Teams, OneDrive en SharePoint. Hierdoor kan de architectuur vragen beantwoorden die betrekking hebben op communicatie, documenten en persoonlijke of gedeelde werkcontext binnen de organisatie.
+Salesforce wordt gebruikt als CRM-gerichte databron. Via deze koppeling kan het systeem onder meer informatie ophalen over klanten, contactpersonen, opportuniteiten en andere commercieel relevante gegevens. Salesforce is daarbij vooral relevant voor zoekvragen die gericht zijn op klantrelaties, salesprocessen en bijhorende bedrijfscontext.
+SmartSales vormt een derde databron binnen het prototype en bevat aanvullende sales gerelateerde informatie. Afhankelijk van de beschikbare data en functionaliteiten binnen dit systeem kan deze bron bijvoorbeeld gebruikt worden voor analytische of operationele verkoopinformatie die niet rechtstreeks in Microsoft Graph of Salesforce beschikbaar is.
+Een belangrijk uitgangspunt binnen de architectuur is dat deze onderliggende systemen zelf de source of truth blijven. De voorgestelde oplossing kopieert of centraliseert de volledige bedrijfsdata dus niet in één aparte databank, maar functioneert als een zoek- en orchestratielaag bovenop de bestaande systemen. De informatie blijft opgeslagen en beheerd in de oorspronkelijke applicaties, samen met hun eigen toegangsrechten, validatieregels en beheerprocessen.
+Deze aanpak heeft verschillende voordelen. In de eerste plaats blijft de architectuur nauwer aansluiten bij de bestaande IT-omgeving van de organisatie, zonder dat een grootschalige centrale datareplicatie nodig is. Daarnaast helpt dit om bestaande autorisatie- en governance regels te respecteren, aangezien toegangscontrole in belangrijke mate gekoppeld blijft aan de bronsystemen zelf.
+Tegelijk betekent dit ook dat de kwaliteit, beschikbaarheid en beperkingen van de zoekoplossing gedeeltelijk afhangen van de mogelijkheden van de onderliggende systemen en hun API’s.
+
+===H3=== 4.3.6 LLM of modelcomponent
+De modelcomponent wordt gebruikt om de vragen van de gebruiker te interpreteren, de orchestrator te ondersteunen bij het bepalen van relevante agents of tools, en de opgehaalde resultaten te verwerken tot een samenhangend en leesbaar antwoord. De modelcomponent staat daarbij niet zelf in voor de rechtstreekse toegang tot de onderliggende systemen. De feitelijke gegevensophaling gebeurt via de gespecialiseerde agents en de MCP-gebaseerde toollaag.
+
+==H2== 4.4 Communicatie- en queryflow
+sequenceDiagram
+actor User as Gebruiker
+participant O as Orchestrator
+participant OL as Orchestrator LLM
+participant A as Gespecialiseerde agent
+participant AL as Agent LLM
+participant M as MCP-server
+participant D as Databron
+User->>O: Gebruikersquery
+O->>OL: Interpretatie van de query
+OL-->>O: Relevante intentie en routing
+O->>A: Opdracht aan agent
+A->>AL: Interpretatie van de opdracht
+AL-->>A: Gekozen tool of actie
+A->>M: Toolaanroep
+M->>D: API-call
+D-->>M: Resultaten
+M-->>A: Resultaten
+A-->>O: Deelresultaten
+O->>OL: Synthese van resultaten
+OL-->>O: Antwoordvoorstel
+O-->>User: Eindantwoord
+In de voorgestelde architectuur verloopt de verwerking van een gebruikersvraag in een aantal opeenvolgende stappen. Eerst formuleert de gebruiker een query in natuurlijke taal. Deze query wordt ontvangen door de orchestrator, die optreedt als centraal coördinatiepunt van het systeem.
+Vervolgens analyseert de orchestrator de gebruikersvraag en bepaalt hij, met ondersteuning van een LLM, welke gespecialiseerde agent of combinatie van agents relevant is om de vraag te beantwoorden. Op basis daarvan wordt de query of een deelopdracht doorgestuurd naar de betrokken agents.
+Elke gespecialiseerde agent verwerkt de ontvangen opdracht binnen de context van zijn eigen databron. Om gegevens op te halen, communiceert de agent via de MCP-server met het onderliggende systeem. De MCP-server vertaalt de toolaanroep naar een concrete API-oproep of systeemoperatie binnen het, zoals het uitvoeren van een zoekopdracht of het ophalen van specifieke records.
+De opgehaalde resultaten worden vervolgens via dezelfde weg teruggestuurd naar de agent. De agent geeft deze deelresultaten door aan de orchestrator. Wanneer meerdere agents betrokken zijn, verzamelt de orchestrator de resultaten uit de verschillende databronnen en brengt hij deze samen.
+Op basis van de samengebrachte informatie wordt ten slotte een eindantwoord opgesteld dat aansluit bij de oorspronkelijke vraag van de gebruiker. Hierbij kan de LLM gebruikt worden om de opgehaalde gegevens te structureren en te formuleren tot een leesbaar en bruikbaar antwoord. Dit eindantwoord wordt daarna teruggegeven aan de gebruiker.
+Bij eenvoudige query’s blijft deze flow beperkt tot één gespecialiseerde agent en één databron. Bij complexere query’s kan dezelfde flow zich uitbreiden over meerdere agents en databronnen, waarna de orchestrator de resultaten combineert tot één geïntegreerd antwoord.
+
+==H2== 4.5 Veiligheids- en toegangsmodel
+Aangezien de voorgestelde architectuur toegang biedt tot interne bedrijfsdata, vormt veiligheid een essentieel onderdeel van het ontwerp. De oplossing is daarom opgebouwd als een gecontroleerde laag bovenop bestaande bedrijfsapplicaties, waarbij de authenticatie- en autorisatie mechanismen van de onderliggende systemen behouden blijven.
+Toegang tot databronnen zoals Microsoft Graph, Salesforce en SmartSales verloopt via de beveiligingsmechanismen die door deze systemen zelf worden voorzien, bijvoorbeeld via OAuth 2.0, access tokens of andere systeem-specifieke authenticatiestromen. De architectuur verleent dus geen autonome toegang tot data, maar steunt op de rechten en toegang mechanismen die reeds in de bronsystemen aanwezig zijn.
+Een belangrijk uitgangspunt daarbij is dat de zoekoplossing geen informatie mag teruggeven waarvoor in het oorspronkelijke systeem de gebruiker geen toegangsrechten heeft. De agents en de MCP-servers moeten deze beperkingen respecteren en mogen bestaande autorisatieregels niet omzeilen. De architectuur functioneert dus niet als een aparte toegangslaag, maar als een extra zoek- en orchestratielaag bovenop bestaande systemen.
+Daarnaast wordt de toegang tot bedrijfsdata functioneel afgebakend via gespecialiseerde agents en MCP-tools. De modelcomponent communiceert niet rechtstreeks met de onderliggende API’s, maar kan enkel gebruikmaken van de operaties die via de voorziene agents en toollagen beschikbaar worden gesteld. Hierdoor blijft beter controleerbaar welke gegevens kunnen worden opgevraagd en welke acties binnen het systeem mogelijk zijn.
+4.6 Verantwoording van de architecturale keuzes
+waarom sub agents en niet gewoon de orchestrator verbinden met de mcp servers

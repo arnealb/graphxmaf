@@ -1,0 +1,10 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \xpg@aux {}{english}\ignorespaces Overzicht van de voorgestelde multi-agentarchitectuur: de orchestrator coördineert drie gespecialiseerde subagents (Graph Agent, Salesforce-Agent en SmartSales-Agent), die elk via een afzonderlijke MCP-server communiceren met hun onderliggende databron.}}{14}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \xpg@aux {}{english}\ignorespaces Schematische voorstelling van de communicatie- en queryflow: de gebruikersvraag wordt ontvangen door de orchestrator, die de relevante agents aanspreekt via de bijhorende MCP-servers. De deelresultaten worden samengevoegd tot één eindantwoord voor de gebruiker.}}{16}{figure.caption.20}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

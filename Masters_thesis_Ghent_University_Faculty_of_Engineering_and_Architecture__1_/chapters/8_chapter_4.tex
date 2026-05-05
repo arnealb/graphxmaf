@@ -1,0 +1,121 @@
+\chapter{Implementatie}
+\label{chap:implementatie}
+
+\section{Gebruikte technologieën en stack}
+\label{sec:stack}
+
+De implementatie van de eerste versie van het prototype volgt de architectuur uit hoofdstuk~\ref{chap:architectuur}. Centraal daarin staan een orchestrator, meerdere gespecialiseerde agents en per databron een bijhorende \gls{MCP}-server. Binnen deze \gls{MCP}-servers wordt de logica ondergebracht voor de communicatie met externe systemen, inclusief de concrete toolimplementaties, de interactie met de onderliggende \glspl{API} en de afhandeling van authenticatie.
+
+% devui uitleggen
+Als basis voor de agentlogica werd gebruikgemaakt van het Microsoft Agent Framework. Dit framework wordt gebruikt voor het definiëren van de agents, het registreren van tools, het beheren van sessies en het lokaal testen van de applicatie via de DevUI, de ingebouwde debugomgeving van het Microsoft Agent Framework. Voor de onderliggende taalmodellen wordt Azure OpenAI gebruikt, aangesproken via de Python \gls{SDK} van OpenAI.
+
+Voor de koppeling met externe systemen werd gebruikgemaakt van \gls{MCP}. Voor elk geïntegreerd systeem werd een afzonderlijke \gls{MCP}-server uitgewerkt, namelijk voor Microsoft Graph, Salesforce en SmartSales. Deze servers stellen systeemgebonden functionaliteit beschikbaar in de vorm van tools die door de agents kunnen worden opgeroepen. De \gls{MCP}-servers zijn opgebouwd met FastMCP en worden aangeboden als asynchrone HTTP-services. De beschikbare tools worden extern beschreven in YAML-bestanden die bij het opstarten worden ingelezen.
+
+% hier nog niets over smartsales
+Voor de koppeling met Microsoft 365 wordt gebruikgemaakt van de officiële Microsoft Graph \gls{SDK}. Voor authenticatie richting Microsoft Graph worden onder meer \texttt{msal} en \texttt{azure-identity} gebruikt. Voor Salesforce werd geen aparte \gls{SDK} gebruikt, maar wordt rechtstreeks gewerkt met de Salesforce \gls{REST} \gls{API} via \texttt{httpx}. Voor datamodellering wordt gebruikgemaakt van Pydantic-modellen, zodat gegevens op een consistente manier tussen de verschillende lagen van het systeem kunnen worden uitgewisseld.
+
+% + later die azure key vault shit? 
+% + salesforce soql queries? eerder in implementatie delen van de verschillend ecomponenets ofc 
+    % Voor de koppeling met Salesforce werd rechtstreeks gewerkt met de Salesforce \gls{REST} \gls{API} via httpx, een asynchrone HTTP-client. In de repositorylaag worden SOQL-queries opgebouwd en uitgevoerd om gegevens op te halen over onder meer accounts, contacten, leads, opportunities en cases.
+
+
+\section{Implementatie van de orchestrator}
+\label{sec:impl-orchestrator}
+
+Het gedrag van de orchestrator wordt voornamelijk bepaald door de systeemprompt, namelijk de vaste instructies die de rol, verantwoordelijkheden en het toegelaten toolgebruik van de agent beschrijven.
+
+De orchestrator werkt volgens een hiërarchisch model waarbij de Graph-Agent, Salesforce-Agent en Smartsales-Agent als oproepbare tools aan hem worden aangeboden. Voor elke gespecialiseerde agent is daarbij een wrapper voorzien die een asynchrone oproep uitvoert naar de overeenkomstige agent en het resultaat teruggeeft aan de orchestrator.
+
+% todo v2
+De routing van gebruikersvragen gebeurt in deze eerste versie volledig via het taalmodel. Er is geen aparte rule-based classifier of expliciete intentiedetectielaag aanwezig. Op basis van de inhoud van de gebruikersvraag bepaalt de orchestrator welke agent moet worden aangesproken. Bij queries die informatie uit meerdere systemen vereisen, kan de orchestrator meerdere agents na elkaar oproepen en hun resultaten samenbrengen.
+
+De orchestrator is in deze eerste versie bewust beperkt gehouden tot een lichte coördinatielaag. Hij bevat zelf geen systeemspecifieke integratielogica en houdt ook geen uitgebreide gedeelde conversatiestatus bij tussen de verschillende gespecialiseerde agents. Deze eerste versie volstaat om de voorgestelde architectuur werkend aan te tonen, maar laat nog ruimte voor verdere uitbreiding.
+
+\section{Implementatie van de Microsoft Graph-Agent}
+\label{sec:impl-graph}
+
+De Microsoft Graph-Agent is verantwoordelijk voor vragen die betrekking hebben op gegevens binnen Microsoft 365. In de huidige implementatie ondersteunt hij onder meer e-mails, bestanden, contacten en agenda-items.
+
+De agent is opgebouwd binnen het Microsoft Agent Framework en gebruikt een Azure OpenAI-model om opdrachten van de orchestrator te interpreteren, de juiste tool te selecteren en de opgehaalde resultaten verder te verwerken. De feitelijke toegang tot Microsoft 365 verloopt via een gekoppelde Graph \gls{MCP}-server.
+
+Binnen deze \gls{MCP}-server wordt de systeemspecifieke logica afgehandeld. De beschikbare operaties omvatten onder meer het opvragen van e-mails, het zoeken naar bestanden, het uitlezen van documenten, het raadplegen van contacten en het opvragen van kalenderinformatie. Deze operaties worden via configuratie geregistreerd, zodat de beschikbare tools losgekoppeld blijven van de agentimplementatie.
+
+Voor de communicatie met Microsoft Graph wordt gebruikgemaakt van een repositorylaag op basis van de officiële Microsoft Graph \gls{SDK}. Deze laag vertaalt toolaanroepen naar concrete aanvragen naar Microsoft 365 en zet de ontvangen resultaten om naar gestructureerde objecten.
+
+De authenticatie verloopt via gedelegeerde toegang. De Graph-aanroepen worden uitgevoerd in naam van de geauthenticeerde gebruiker, zodat de agent enkel toegang heeft tot gegevens waarvoor die gebruiker binnen Microsoft 365 gemachtigd is.
+
+In deze eerste versie werd daarnaast een beperkte vorm van sessiecontext voorzien voor bestandsgerelateerde interacties. Wanneer tijdens een sessie documenten worden gevonden, kan de agent bepaalde informatie daarover tijdelijk bijhouden om vervolgvragen beter te ondersteunen.
+
+
+Aangezien de zoekfunctionaliteit van Microsoft Graph voor bestanden en e-mails voornamelijk keyword-gebaseerd is, werd daarnaast ook al een eerste semantische zoekaanpak voor documenten uitgewerkt op basis van vector embeddings. Daardoor kan niet alleen gezocht worden op bestandsnaam of metadata, maar ook op de inhoud en betekenis van documenten.
+
+\section{Implementatie van de Salesforce-Agent}
+\label{sec:impl-salesforce}
+
+
+De Salesforce-Agent is verantwoordelijk voor vragen over \gls{CRM}-gegevens, zoals accounts, contacten, leads, opportunities en cases. Net zoals de Graph-Agent werd ook deze agent geïmplementeerd binnen het Microsoft Agent Framework en gekoppeld aan een Azure OpenAI-model.
+
+De feitelijke toegang tot Salesforce verloopt via een afzonderlijke \gls{MCP}-server, die de beschikbare Salesforce-functionaliteit ter beschikking stelt in de vorm van tools. Deze tools worden gedefinieerd in een YAML-bestand en bij het opstarten van de \gls{MCP}-server geregistreerd.
+
+Achter de \gls{MCP}-server bevindt zich een repositorylaag die instaat voor de effectieve communicatie met Salesforce via de Salesforce \gls{REST} \gls{API}. In deze laag worden SOQL-queries opgebouwd en uitgevoerd om de nodige gegevens op te halen.
+
+% todo: check dit nog keer
+De authenticatie voor Salesforce gebeurt via een sessiegebaseerde aanpak op het niveau van de \gls{MCP}-server. In de implementatie zijn twee authenticatiestromen aanwezig. Enerzijds is er een interactieve \gls{OAuth} Authorization Code Flow, die via de browser gebruikt kan worden. Anderzijds is er ook ondersteuning voor een \gls{JWT}-gebaseerde \gls{OAuth}-flow voor niet-interactieve server-to-server scenario's. In de huidige implementatie wordt deze \gls{JWT}-gebaseerde flow ook als standaardflow gebruikt in de geautomatiseerde authenticatielogica.
+
+% v2
+De Salesforce-Agent is in deze eerste versie stateless opgevat. In tegenstelling tot de Graph-Agent is er geen bijkomende contextprovider voorzien die informatie uit eerdere interacties binnen dezelfde sessie bewaart.
+
+
+\section{Implementatie van de SmartSales-Agent}
+\label{sec:impl-smartsales}
+
+De SmartSales-Agent is verantwoordelijk voor vragen over verkoopgerelateerde gegevens, zoals locaties, catalogusartikelen en bestellingen. Net zoals de Graph- en Salesforce-Agent werd ook deze agent geïmplementeerd binnen het Microsoft Agent Framework en gekoppeld aan een Azure OpenAI-model.
+
+De toegang tot SmartSales verloopt via een afzonderlijke \gls{MCP}-server, die de beschikbare SmartSales-functionaliteit ter beschikking stelt in de vorm van tools. Deze tools worden gedefinieerd in een YAML-bestand en bij het opstarten van de \gls{MCP}-server geregistreerd. De beschikbare operaties zijn georganiseerd rond drie domeinen: gebruikers, catalogus en bestellingen.
+
+Achter de \gls{MCP}-server bevindt zich een repositorylaag die instaat voor de effectieve communicatie met de SmartSales \gls{REST} \gls{API}. In tegenstelling tot de Graph-Agent, waarvoor een officiële \gls{SDK} beschikbaar is, wordt hier gebruikgemaakt van een directe asynchrone HTTP-client. De queryparameters worden daarbij rechtstreeks doorgegeven aan de SmartSales-\gls{API}, die een eigen querynotatie hanteert.
+
+% todo: uitbreiden? 
+Om de kwaliteit van toolaanroepen te verbeteren, worden bij het opstarten van de \gls{MCP}-server de beschikbare filter-, sorteer- en weergavevelden voor alle domeinen opgehaald en lokaal gecachet. Bij elke toolaanroep worden de opgegeven filter- en sorteervelden gevalideerd aan de hand van deze cache, zodat ongeldige parameters vroegtijdig worden onderschept en de agent een duidelijke foutmelding ontvangt.
+
+De authenticatie voor SmartSales verloopt in deze versie volledig niet-interactief. De \gls{MCP}-server authenticeert zich bij het opstarten automatisch via omgevingsvariabelen, zonder tussenkomst van een gebruiker via de browser. Wanneer een toegangstoken verloopt, wordt de authenticatie automatisch opnieuw uitgevoerd op basis van dezelfde configuratie. Voor de opslag van tokens is een bestandsgebaseerde token store voorzien.
+
+Net als de Salesforce-Agent is ook de SmartSales-Agent in deze eerste versie stateless opgevat. Er is geen contextprovider voorzien die informatie uit eerdere interacties binnen dezelfde sessie bewaart.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%dis shit extra: 
+\section{Integratie tussen agents en databronnen}
+\label{sec:integratie}
+
+De integratie tussen de verschillende lagen van het systeem volgt een vast patroon. De orchestrator ontvangt een gebruikersquery en roept, indien nodig, één of meerdere gespecialiseerde agents aan. Elke gespecialiseerde agent selecteert vervolgens een geschikte tool op zijn gekoppelde \gls{MCP}-server. De \gls{MCP}-server vertaalt deze toolaanroep naar een concrete interactie met het onderliggende systeem en geeft het resultaat terug via dezelfde keten.
+
+Deze opbouw zorgt ervoor dat de verantwoordelijkheden duidelijk gescheiden blijven. De orchestrator behandelt de coördinatie, de gespecialiseerde agents verzorgen interpretatie en toolselectie binnen hun eigen domein, en de \gls{MCP}-servers kapselen de systeemspecifieke integratielogica af. Daardoor kan een nieuwe databron worden toegevoegd zonder de globale interactiestroom fundamenteel te wijzigen.
+
+\section{Beperkingen van de huidige implementatie}
+\label{sec:impl-beperkingen}
+
+Hoewel het prototype de voorgestelde architectuur functioneel aantoont, blijft de huidige implementatie op verschillende punten bewust beperkt. Een eerste beperking is dat de routing in de orchestrator volledig via het taalmodel gebeurt en dus niet ondersteund wordt door een afzonderlijke deterministische classificatielaag.
+
+Daarnaast is contextbeheer voorlopig slechts beperkt uitgewerkt. De orchestrator houdt geen gedeelde sessiestatus bij over meerdere gespecialiseerde agents heen, en ook binnen de agents is contextondersteuning slechts gedeeltelijk aanwezig.
+
+Verder is de foutafhandeling nog beperkt. Scenario's zoals time-outs, mislukte toolaanroepen of gedeeltelijke resultaten bij onbeschikbare databronnen worden in deze versie nog niet volledig robuust afgehandeld. Ook multi-user ondersteuning en productiegerichte deployment zijn nog slechts gedeeltelijk uitgewerkt.
+
+De huidige implementatie moet daarom in de eerste plaats worden beschouwd als een functioneel prototype dat de haalbaarheid van de architectuur aantoont, en niet als een volledig productieklare oplossing.

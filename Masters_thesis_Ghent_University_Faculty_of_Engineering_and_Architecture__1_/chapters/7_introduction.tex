@@ -1,0 +1,50 @@
+\chapter{Inleiding}
+\label{chap:intro}
+
+\section{Context en motivatie}
+\label{sec:context}
+
+De digitalisering van bedrijfsprocessen heeft ertoe geleid dat organisaties steeds grotere hoeveelheden data genereren en opslaan. Deze informatie bevindt zich vaak verspreid over verschillende systemen en applicaties, zoals documentbeheersystemen, \gls{CRM}-platformen, e-mailomgevingen en andere interne bedrijfsapplicaties. Hoewel deze systemen elk waardevolle informatie bevatten, zijn ze doorgaans ontwikkeld als afzonderlijke oplossingen met eigen databronnen, interfaces en toegangsmechanismen. Hierdoor wordt het voor gebruikers steeds moeilijker om snel en efficiënt relevante informatie terug te vinden wanneer deze zich over meerdere systemen verspreid bevindt.
+
+Binnen veel organisaties is informatieopzoeking daarom nog steeds een tijdrovend proces. Gebruikers moeten vaak verschillende applicaties afzonderlijk doorzoeken om een volledig beeld te krijgen van een bepaalde klant, document of communicatie. Naarmate het aantal gebruikte softwareplatformen en de hoeveelheid opgeslagen data blijven toenemen, wordt dit probleem steeds groter. Het gebrek aan een uniforme manier om informatie uit verschillende systemen te combineren vormt dan ook een belangrijke uitdaging binnen moderne \gls{IT}-omgevingen.
+
+De recente opkomst van generatieve \gls{AI} en \glspl{LLM} biedt nieuwe mogelijkheden om met deze problematiek om te gaan. Dergelijke modellen zijn in staat om natuurlijke taal te begrijpen en complexe vragen van gebruikers te interpreteren. Daardoor wordt het mogelijk om zoekinterfaces te bouwen waarin gebruikers vragen in natuurlijke taal kunnen stellen, waarna het systeem relevante informatie ophaalt en samenbrengt in een bruikbaar antwoord.
+
+In deze scriptie wordt zo'n zoekoplossing benaderd als een \textit{global search agent}: een AI-gestuurde zoeklaag waarmee een gebruiker via natuurlijke taal informatie kan opvragen over meerdere onderliggende bedrijfssystemen heen, zonder elk systeem afzonderlijk te moeten doorzoeken.
+\section{Probleemstelling}
+\label{sec:probleem}
+
+Hoewel generatieve \gls{AI} veel potentieel heeft, is de integratie ervan in bedrijfsomgevingen niet vanzelfsprekend. Taalmodellen hebben standaard geen directe toegang tot interne databronnen en beschikken niet over ingebouwde mechanismen om met verschillende bedrijfsapplicaties te communiceren. Bovendien moeten organisaties rekening houden met belangrijke aspecten zoals beveiliging, toegangscontrole, privacy en governance van bedrijfsdata.
+
+Daarnaast brengen bedrijfsomgevingen bijkomende technische uitdagingen met zich mee. Data bevindt zich verspreid over meerdere systemen met verschillende \glspl{API}, authenticatiemechanismen en datamodellen. Daardoor volstaat één enkel taalmodel niet om op een betrouwbare manier als zoeklaag bovenop meerdere systemen te functioneren. Het doel is dus om een oplossing te maken die niet alleen veilige toegang biedt, maar ook meerdere databronnen kan integreren en vragen van gebruikers kan routeren naar de juiste systemen.
+
+\section{Onderzoeksvragen}
+\label{sec:onderzoeksvragen}
+
+Deze scriptie vertrekt vanuit de centrale onderzoeksvraag:
+
+\begin{quote}
+\textit{Hoe kan een multi-agentarchitectuur gebruikt worden om bedrijfsdata uit meerdere systemen op een veilige en efficiënte manier te doorzoeken?}
+\end{quote}
+
+Vanuit deze centrale vraag worden de volgende deelvragen onderzocht:
+
+\begin{itemize}
+    \item Hoe kunnen \gls{AI}-agents veilig toegang krijgen tot bedrijfsdata in verschillende systemen?
+    \item Hoe kunnen meerdere databronnen met uiteenlopende \glspl{API} en datamodellen geïntegreerd worden binnen één architectuur?
+    \item Welke multi-agentarchitectuur is het meest geschikt voor een global search agent binnen een bedrijfsomgeving?
+    \item In welke mate kan een multi-agent systeem vragen van gebruikers correct interpreteren, routeren en beantwoorden over verschillende databronnen heen?
+\end{itemize}
+
+\section{Doelstelling van de scriptie}
+\label{sec:doelstelling}
+
+Het doel van deze masterproef is het ontwerpen, implementeren en evalueren van een multi-agentarchitectuur voor een global search agent binnen bedrijfsomgevingen. Concreet wordt een prototype ontwikkeld dat als zoeklaag dient bovenop verschillende applicaties, waarbij \gls{AI}-agents gebruikt worden om de informatie uit meerdere systemen op te halen, waarna de resultaten worden gecombineerd tot een samenhangend antwoord voor de gebruiker.
+
+Deze masterproef wordt uitgevoerd in samenwerking met het bedrijf Easi en maakt gebruik van moderne \gls{AI}- en cloudtechnologieën, waaronder Azure AI Foundry en het \gls{MCP}. Het ontwikkelde prototype dient als proof-of-concept voor een schaalbare architectuur waarmee organisaties generatieve \gls{AI} op een gecontroleerde en uitbreidbare manier kunnen integreren binnen hun bestaande \gls{IT}-landschap.
+
+\section{Opbouw van de scriptie}
+\label{sec:opbouw}
+
+De rest van deze scriptie is als volgt opgebouwd. Hoofdstuk~\ref{chap:achtergrond} bespreekt de relevante achtergrond en literatuur rond enterprise search, \glspl{LLM}, \gls{AI}-agents, multi-agent systemen en \gls{MCP}. Hoofdstuk~\ref{chap:probleemanalyse} analyseert het probleem van informatiefragmentatie binnen bedrijfsomgevingen en definieert de functionele en niet-functionele vereisten voor een global search agent. Hoofdstuk~\ref{chap:architectuur} beschrijft het ontwerp van de voorgestelde architectuur en verantwoordt de gemaakte architecturale keuzes. Hoofdstuk~\ref{chap:implementatie} behandelt de implementatie van het prototype en de integratie met de verschillende databronnen. In hoofdstuk~\ref{chap:evaluatie} wordt het systeem geëvalueerd aan de hand van meerdere testscenario's en querycategorieën.
+

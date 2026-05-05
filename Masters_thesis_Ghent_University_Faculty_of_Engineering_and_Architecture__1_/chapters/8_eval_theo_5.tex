@@ -1,0 +1,126 @@
+\chapter{Evaluatiemethodologie}
+\label{chap:evaluatie}
+
+\section{Evaluatie-opzet}
+\label{sec:evaluatie-opzet}
+
+Dit hoofdstuk evalueert het voorgestelde multi-agentsysteem op basis van vier dimensies: correctheid van het gegenereerde antwoord, correctheid van de query routing, responstijd en tokenverbruik. Deze dimensies sluiten aan bij de centrale doelstelling van deze masterproef, namelijk nagaan in welke mate een multi-agentarchitectuur geschikt is om vragen van gebruikers correct te interpreteren, naar de juiste databronnen te routeren en op een praktisch bruikbare manier te beantwoorden.
+
+De evaluatie wordt uitgevoerd op het uitgewerkte prototype. Daarbij wordt zowel gekeken naar vragen die door één enkele agent kunnen worden afgehandeld als naar vragen waarvoor meerdere agents moeten samenwerken. Op die manier wordt niet alleen de kwaliteit van de individuele subagents beoordeeld, maar ook de werking van de orchestrator als coördinerende component.
+
+De correctheid van de gegenereerde antwoorden wordt niet handmatig voor alle queries beoordeeld, maar via een afzonderlijke \gls{LLM}-evaluator. Het gebruik van een taalmodel als evaluator voor open-tekst antwoorden, ook wel \textit{LLM-as-a-judge} genoemd, is een gevestigde aanpak in de evaluatie van generatieve systemen~\cite{zheng2023judging}. Deze evaluator vergelijkt het gegenereerde antwoord met een vooraf opgesteld referentieantwoord en kent op basis daarvan een score toe. Deze aanpak is gekozen omdat de output van het systeem uit vrije tekst bestaat en de inhoud van de onderliggende databronnen kan veranderen. Daardoor is een eenvoudige exacte vergelijking met één vast referentieantwoord in veel gevallen niet geschikt.
+
+De query routing wordt geëvalueerd door per testquery na te gaan of de orchestrator de verwachte agent of combinatie van agents heeft aangesproken. De performantie van het systeem wordt uitgedrukt in responstijd, gemeten tussen het indienen van de vraag en het ontvangen van het volledige antwoord. De kost van het systeem wordt benaderd via het tokenverbruik van de gebruikte \gls{LLM}-aanroepen.
+
+Er werd gekozen voor \texttt{gpt-4o-mini} als evaluator omdat dit model voor deze benchmark een praktisch evenwicht biedt tussen beoordelingskwaliteit en kost, en daardoor geschikt is voor het automatisch scoren van een grotere set testqueries.
+
+\section{Testscenario's en querycategorieën}
+\label{sec:testscenarios}
+
+\subsection{Samenstelling van de testset}
+\label{subsec:testset-samenstelling}
+
+De testset van 88 queries werd samengesteld via een combinatie van \gls{AI}-ondersteuning en handmatige selectie. Een taalmodel werd ingezet om initiële querysuggesties te genereren per subcategorie en databron. De uiteindelijke queries werden vervolgens handmatig geselecteerd en bijgesteld, zodat ze representatief zijn voor realistische vragen en voldoende spreiding vertonen over de functionaliteit van elke agent.
+
+Aan elke query werd handmatig een moeilijkheidsgraad toegewezen: \textit{simple}, \textit{medium} of \textit{hard}. Eenvoudige queries vereisen een directe opvraging zonder bijzondere filtercriteria. Queries van gemiddelde moeilijkheid bevatten filtercondities, specifieke veldselectie of een zoekopdracht met meerdere parameters. Moeilijke queries vereisen meerdere opeenvolgende toolaanroepen, het doorgeven van resultaten tussen stappen, of een complexe interpretatie van de vraag.
+
+Om de evaluatie reproduceerbaar en consistent uit te voeren, werd een script gebruikt dat alle testqueries automatisch indient en de resultaten vastlegt. De evaluatie focust daarbij in de eerste plaats op de technische werking van het systeem.
+
+\subsection{Overzicht van de querycategorieën}
+\label{subsec:querycategorieen}
+
+De testset is onderverdeeld in vier groepen, één per geëvalueerde agent. Elke groep bestaat uit meerdere subcategorieën die de functionaliteit van de betrokken databron gebruikt. Tabel~\ref{tab:querycategorieen} geeft een overzicht van de verdeling.
+
+\begin{table}[ht]
+\centering
+\caption{Overzicht van de testqueries per agent en subcategorie}
+\label{tab:querycategorieen}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{llr}
+\hline
+\textbf{Agent} & \textbf{Subcategorie} & \textbf{Aantal} \\
+\hline
+GraphAgent        & Identity      & 1  \\
+                  & E-mail        & 7  \\
+                  & People        & 2  \\
+                  & Kalender      & 4  \\
+                  & Contacten     & 2  \\
+                  & Bestanden     & 6  \\
+                  & \textit{Subtotaal} & \textit{22} \\
+\hline
+SalesforceAgent   & Accounts      & 5  \\
+                  & Contacts      & 4  \\
+                  & Leads         & 4  \\
+                  & Opportunities & 5  \\
+                  & Cases         & 4  \\
+                  & \textit{Subtotaal} & \textit{22} \\
+\hline
+SmartSalesAgent   & Locaties      & 7  \\
+                  & Catalogus     & 6  \\
+                  & Orders        & 9  \\
+                  & \textit{Subtotaal} & \textit{22} \\
+\hline
+OrchestratorAgent & Routing queries      & 8  \\
+                  & Cross-system queries & 14 \\
+                  & \textit{Subtotaal}   & \textit{22} \\
+\hline
+\multicolumn{2}{l}{\textbf{Totaal}} & \textbf{88} \\
+\hline
+\end{tabular}
+\end{table}
+
+De queries voor de GraphAgent, SalesforceAgent en SmartSalesAgent zijn opgebouwd rond de objecttypen van de databron. Voor de GraphAgent betreft dit de voornaamste entiteiten binnen Microsoft 365: e-mailberichten, agenda-items, contacten, gebruikersinformatie en bestanden in OneDrive. Voor de SalesforceAgent worden de centrale \gls{CRM}-objecten bevraagd: accounts, contacten, leads, opportunities en cases. De SmartSalesAgent wordt geëvalueerd op queries over locaties, catalogusitems en orders, inclusief vragen over de beschikbare filtervelden en projectiemogelijkheden die eigen zijn aan die \gls{API}.
+
+De queries voor de OrchestratorAgent zijn in twee categorieën verdeeld. Routingqueries zijn enkelvoudige vragen gericht op precies één databron en dienen om na te gaan of de orchestrator de juiste subagent selecteert. Cross-system queries vereisen informatie uit meerdere databronnen tegelijk en evalueren de capaciteit van de orchestrator om subagents te combineren en resultaten samen te voegen tot één coherent antwoord.
+
+De volledige lijst van alle 88 testqueries is opgenomen in bijlage~\ref{app:testqueries}.
+
+\section{Evaluatie van correctheid}
+\label{sec:evaluatie-correctheid-methode}
+
+De correctheid van het systeem wordt hier gezien als de mate waarin het gegenereerde antwoord inhoudelijk overeenkomt met wat er verwacht wordt. Correctheid is niet enkel feitelijke juistheid, maar ook volledigheid en relevantie.
+
+Om de correctheid te beoordelen wordt er voor elke testquery informatie gegeven over wat precies verwacht wordt. Dit bevat niet noodzakelijk een volledig uitgeschreven respons, maar beschrijft welke informatie minimaal aanwezig moet zijn om het antwoord als correct te kunnen beschouwen.
+
+Een eenvoudige juist/fout-beoordeling volstaat hier niet. Met een schaal van 1 tot 5 kan de nuance beter worden vastgelegd. Een score van 1 betekent dat het antwoord fout, leeg of volledig irrelevant is. Een score van 2 duidt op een duidelijk ontoereikend antwoord. Een score van 3 staat voor een gedeeltelijk correct antwoord waarbij de kern van de vraag geraakt wordt, maar belangrijke informatie ontbreekt. Een score van 4 betekent dat het antwoord grotendeels correct en bruikbaar is, met enkel beperkte onnauwkeurigheden. Een score van 5 duidt op een volledig correct, relevant en voldoende volledig antwoord.
+
+De resultaten van deze evaluatie worden op meerdere niveaus bekeken: per agent, per querycategorie en per type (single-agent versus multi-agent).
+
+\section{Evaluatie van query routing}
+\label{sec:evaluatie-routing-methode}
+
+Naast de inhoudelijke correctheid van de antwoorden wordt ook nagegaan of queries naar de juiste subagents worden gerouteerd. Hiervoor werd een observatielaag toegevoegd aan de orchestrator. Bij elke run wordt een routing trace gestart, waarin automatisch wordt bijgehouden welke subagents door de orchestrator worden aangesproken.
+
+Per aanroep wordt onder meer opgeslagen welke agent werd gebruikt, in welke volgorde dit gebeurde, welke query werd doorgestuurd en of de aanroep succesvol was. De effectieve routing wordt vervolgens vergeleken met de vooraf verwachte routing.
+
+Daarbij wordt onderscheid gemaakt tussen verschillende fouttypes. Bij under-routing ontbreekt een vereiste agent, bij over-routing wordt een extra niet-noodzakelijke agent aangesproken, en bij mis-routing wordt een verkeerde agent gekozen.
+
+\section{Evaluatie van performantie en kost}
+\label{sec:evaluatie-performantie-methode}
+
+\subsection{Evaluatie van de responstijd}
+\label{subsec:responstijd-methode}
+
+De performantie van het prototype wordt geëvalueerd op basis van de responstijd per query. Onder responstijd wordt hier de totale tijd verstaan tussen het starten van de verwerking van een query en het moment waarop het volledige antwoord is teruggegeven. Het gaat dus om een end-to-end meting.
+
+De gemeten tijd bevat de volledige verwerking van het systeem, inclusief de inferentietijd van het taalmodel, de toolcalls, externe \gls{API}-oproepen en het uiteindelijk samenstellen van de opgehaalde informatie tot één antwoord.
+
+\subsection{Evaluatie van het tokenverbruik}
+\label{subsec:tokenverbruik-methode}
+
+Naast responstijd wordt ook het tokenverbruik bijgehouden als benadering van de kost van het systeem. Per query worden drie waarden opgeslagen: het aantal inputtokens, het aantal outputtokens en het totaal aantal tokens. Inputtokens omvatten alles wat naar het model gestuurd wordt, zoals de systeemprompt, de vraag van de gebruiker, beschrijvingen van tools en eventuele toolresultaten. Outputtokens zijn de tokens van het uiteindelijke gegenereerde antwoord.
+
+In de analyse wordt het tokenverbruik per query mee opgenomen en vergeleken tussen verschillende agentmodi en querytypes, zodat zichtbaar wordt welke vragen relatief goedkoop blijven en welke net veel context of meerdere agentaanroepen vereisen.
+
+\section{Beperkingen van de evaluatie}
+\label{sec:evaluatie-beperkingen-methode}
+
+Hoewel deze evaluatie een duidelijk beeld geeft van de werking van het voorgestelde systeem, zijn er ook enkele beperkingen waarmee rekening moet worden gehouden.
+
+Een eerste beperking is dat de correctheid van de antwoorden beoordeeld wordt met behulp van een afzonderlijk taalmodel. Die aanpak is nuttig om vrije tekst op een genuanceerde manier te beoordelen, maar blijft gedeeltelijk afhankelijk van dat model. Daardoor is volledige objectiviteit niet gegarandeerd.
+
+Daarnaast is de evaluatie gebaseerd op een vooraf samengestelde set testqueries die beperkt is in omvang. De resultaten geven daarom vooral inzicht in de prestaties van het systeem binnen deze geselecteerde testgevallen.
+
+Ook de gebruikte databronnen zijn dynamisch. Aangezien gegevens in Microsoft Graph, Salesforce en SmartSales kunnen veranderen in de tijd, is het mogelijk dat dezelfde query op een ander moment een ander resultaat oplevert.
+
+Verder is ook de evaluatie van query routing gebaseerd op een vooraf bepaalde verwachte routing per query. In de meeste gevallen is die duidelijk, maar bij complexere vragen kunnen soms meerdere routing strategieën verdedigbaar zijn.

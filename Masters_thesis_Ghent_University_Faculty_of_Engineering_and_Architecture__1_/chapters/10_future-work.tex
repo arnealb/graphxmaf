@@ -1,0 +1,47 @@
+\chapter{Werkpunten voor een volgende versie}
+\label{chap:werkpunten-volgende-versie}
+
+Deze eerste versie van het prototype toont aan dat de voorgestelde multi-agentarchitectuur technisch haalbaar is voor enterprise search over meerdere bedrijfsdatabronnen heen. Tegelijk blijft het huidige systeem op verschillende punten beperkt. In een volgende iteratie zal de nadruk liggen op het versterken van de robuustheid, het uitbreiden van de functionele mogelijkheden en het verder onderbouwen van de gemaakte architecturale keuzes.
+
+\section{Algemene uitbreidingen}
+\label{sec:Algemene uitbreidingen}
+
+Een eerste belangrijk aandachtspunt is het beheer van context en sessies over meerdere interacties heen. In de huidige versie is die ondersteuning beperkt en agent-specifiek, terwijl een volgende iteratie nood heeft aan gedeeld sessiebeheer op systeemniveau. Daardoor zouden eerdere vragen, tussenresultaten en relevante entiteiten over meerdere interacties heen behouden en hergebruikt kunnen worden.
+
+Daarnaast is ook een robuustere foutafhandeling noodzakelijk. Een uitgebreidere versie moet beter kunnen omgaan met time-outs, mislukte toolaanroepen en gedeeltelijke resultaten wanneer één databron tijdelijk niet beschikbaar is.
+
+\section{Uitbreidingen voor de Microsoft Graph-Agent}
+\label{sec:Uitbreidingen voor de Microsoft Graph-Agent}
+
+Voor de Microsoft Graph-Agent ligt een eerste prioriteit in het aanpakken van ongecontroleerd tokenverbruik. De evaluatie toonde een extreme uitschieter waarbij het ophalen van een volledige e-mailbody resulteerde in 49.581 tokens en een verwerkingstijd van meer dan 100 seconden. Een volgende versie moet guardrails voorzien zodat dergelijke uitschieters worden voorkomen.
+
+Een tweede verbeterpunt betreft de interpretatie van datums in kalenderqueries. In de huidige versie worden termen als \textit{this week} of \textit{next week} soms onjuist omgezet, wat leidt tot antwoorden buiten de gevraagde periode.
+
+Verder is ook verbetering van het ophalen en inlezen van documenten een belangrijk uitbreidingspunt. Daarbij kan verder onderzocht worden of Azure AI Search of lichtere alternatieven voor vectoropslag de meest geschikte aanpak vormen. Ook het contextbeheer kan worden uitgebreid: in de huidige versie is dit voornamelijk beperkt tot bestandsgerelateerde interacties, terwijl een volgende iteratie gelijkaardige ondersteuning kan voorzien voor e-mails, contacten en agenda-items.
+
+\section{Uitbreidingen voor de Salesforce-Agent}
+\label{sec:uitbreidingen-salesforce-agent}
+
+De evaluatie toont dat de lage scores van de SalesforceAgent in de eerste plaats het gevolg zijn van concrete implementatieproblemen. De veldselecties in de huidige SOQL-queries zijn op sommige plaatsen te beperkt. Daardoor geeft de agent geregeld onvolledige of lege antwoorden, zelfs wanneer de gevraagde informatie eigenlijk beschikbaar is. Deze technische tekortkomingen vormen daarom een eerste prioriteit voor een volgende versie.
+
+Daarnaast kan de agent ook functioneel verder worden uitgebreid. Zo kunnen de filtermogelijkheden verbeterd worden en kunnen bijkomende Salesforce-objecten ondersteund worden. Ook sessiebeheer biedt nog ruimte voor verbetering. Het kan bijvoorbeeld nuttig zijn om eerder gevonden accounts, contacten of opportunities tijdelijk bij te houden, zodat die in latere interacties opnieuw gebruikt kunnen worden.
+
+\section{Uitbreidingen voor de SmartSales-Agent}
+\label{sec:Uitbreidingen voor de SmartSales-agent}
+De evaluatie toont dat de SmartSalesAgent consistent goed presteert op enkelvoudige queries, maar faalt op multi-step queries waarbij het resultaat van een eerste toolaanroep als invoer moet dienen voor een tweede. In elk geval slaagde de agent er niet in om de uitvoer van de eerste stap correct door te geven. Dit wijst op een beperking in de chaining-logica die in een volgende versie gericht moet worden aangepakt, zonder dat de toegang tot de onderliggende \gls{API} hiervoor hoeft te worden aangepast.
+
+\section{Uitbreidingen voor de orchestrator}
+\label{sec:Uitbreidingen voor de orchestrator}
+De orchestrator vormt het centrale coördinatiepunt van het systeem en is daarom een belangrijk onderdeel voor verdere uitbreiding. Een eerste aandachtspunt is het verbeteren van de query routing. In de huidige versie gebeurt deze volledig via het taalmodel. In een volgende iteratie kan onderzocht worden of een hybride aanpak, waarbij eenvoudige gevallen via expliciete regels worden afgehandeld en complexere gevallen via de \gls{LLM}, betere resultaten oplevert.
+
+Daarnaast vormt ook de logica voor herhaalde subagentaanroepen een verbeterpunt. Iteratieve aanroepen zijn op zich niet problematisch en kunnen nuttig zijn wanneer een vervolgstap voortbouwt op eerder verkregen informatie. De evaluatie toonde echter ook een geval van over-routing waarbij de orchestrator de SmartSalesAgent driemaal aanriep voor dezelfde deelvraag, zonder dat daarbij een zinvolle verfijning van de informatiebehoefte optrad. Een volgende versie moet dergelijke mislukte herhalingen kunnen detecteren en tijdig afbreken, in plaats van ze verder te blijven herhalen.
+
+Tot slot is ook sterkere ondersteuning nodig voor queries die meerdere databronnen combineren. Een volgende iteratie kan explicieter tussenresultaten bijhouden, entiteiten over databronnen heen koppelen en de samenwerking tussen gespecialiseerde agents gerichter aansturen.
+
+\section{Uitgebreidere evaluatie}
+\label{sec:Uitgebreidere evaluatie}
+Naast inhoudelijke uitbreidingen is ook een uitgebreidere evaluatie noodzakelijk. Een eerste mogelijke uitbreiding is een vergelijking tussen verschillende taalmodellen, bijvoorbeeld tussen \texttt{gpt-4o-mini} en een krachtiger alternatief, om de impact op correctheid, performantie en kost te analyseren.
+
+Daarnaast is voor de Microsoft Graph-Agent een vergelijking tussen klassieke retrieval, semantische retrieval en \gls{RAG} relevant, zodat duidelijker kan worden nagegaan welke aanpak het meest geschikt is voor documentgerichte zoekvragen.
+
+

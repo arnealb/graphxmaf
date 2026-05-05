@@ -1,0 +1,151 @@
+
+\chapter{Evaluatieresultaten}
+\label{chap:resultaten}
+
+% --------------------------------------------------------------------------
+\section{Algemene resultaten}
+\label{sec:algemene-resultaten}
+% --------------------------------------------------------------------------
+
+De evaluatie omvat 88 testqueries verdeeld over vier agenten, elk met precies 22 queries. Alle queries werden technisch succesvol uitgevoerd en er traden geen fatale systeemfouten op. De inhoudelijke kwaliteit verschilt echter sterk tussen de agenten.
+
+Op het niveau van de gemiddelde LLM-score (schaal 1--5) presteert de SmartSalesAgent het sterkst met 4,18, gevolgd door de GraphAgent (3,82) en de OrchestratorAgent (3,77), en op afstand de SalesforceAgent (2,59). De orchestrator behandelt uitsluitend complexere vragen, namelijk enkelvoudige routingtests en vragen die antwoorden uit meerdere systemen vereisen. Deze scoort gemiddeld iets lager dan de GraphAgent, maar het verschil is beperkt. Dit suggereert dat de extra routinglaag weinig effect heeft op de antwoordkwaliteit.
+
+Tabel~\ref{tab:algemeen-overzicht} geeft een overzicht van de voornaamste resultaten per agent.
+
+\begin{table}[ht]
+\centering
+\caption{Overzicht van evaluatieresultaten per agent (meest recente run, 31~maart~2026)}
+\label{tab:algemeen-overzicht}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{lrrrrrr}
+\hline
+\textbf{Agent} & \textbf{n} & \textbf{Gem.\ score} & \textbf{Score $\geq$4 (\%)} & \textbf{Gem.\ tijd (s)} & \textbf{Gem.\ inp.\ tok.} & \textbf{Gem.\ uit.\ tok.} \\
+\hline
+GraphAgent        & 22 & 3,82 & 72,7 & 14,6 & 6.430 &   975 \\
+SalesforceAgent   & 22 & 2,59 & 36,4 & 13,1 & 2.946 &   405 \\
+SmartSalesAgent   & 22 & 4,18 & 72,7 & 13,9 & 5.170 & 1.205 \\
+OrchestratorAgent & 22 & 3,77 & 63,6 & 24,3 & 2.266 &   437 \\
+\hline
+\end{tabular}
+\end{table}
+
+% --------------------------------------------------------------------------
+\section{Evaluatie van correctheid}
+\label{sec:evaluatie-correctheid}
+% --------------------------------------------------------------------------
+
+\subsection*{GraphAgent}
+
+De GraphAgent behaalt over 22 queries een gemiddelde score van 3,82, met een mediane score van 4 en een standaardafwijking van 1,26. Eenvoudige vragen, zoals identiteitsvragen en het koppelen van mensen aan hun e-mailadres, scoren het hoogst. De e-mailqueries presteren goed met een gemiddelde van 4,14, maar de vraag die de volledige e-mailbody opvraagt scoort 1 en is tegelijk de traagste query in de volledige testset (102,78 seconden, zie \S\ref{subsec:responstijd}). Vragen over specifieke bestandsinhoud en bestandstypen, zoals Excel-bestanden, scoren 2, terwijl zoekopdrachten in OneDrive goed verlopen.
+
+Kalenderqueries presteren het zwakst met een gemiddelde van 3,00. Vaak treedt hetzelfde probleem op: de agent slaagt er niet in om de gevraagde tijdsperiode correct te interpreteren. Vragen naar gebeurtenissen binnen this week'' of next week'' worden soms beantwoord met events buiten de gevraagde periode, wat resulteert in scores van 2.
+
+Opmerkelijk is dat de moeilijkheidsgraad nauwelijks verschil maakt: eenvoudige, gemiddelde en moeilijke queries scoren respectievelijk 3,86, 3,80 en 3,80. De kwaliteitsverschillen zijn dus niet te herleiden tot de taalcomplexiteit van de vraag, maar tot de aard van de onderliggende Microsoft Graph-endpoints en de volledigheid van de toolimplementatie.
+
+\subsection*{SalesforceAgent}
+
+De SalesforceAgent is duidelijk de zwakste schakel van het systeem. Over 22 queries bedraagt de gemiddelde score 2,59, met een mediane score van 2,5 en een standaardafwijking van 1,56. Elf van de 22 antwoorden scoren 1 of 2 (50,0\%), waarvan negen met score 1. De problematiek is structureel: bij meerdere querytypes geeft de agent systematisch lege lijsten terug. Drie van de vier leadsqueries met inhoudelijke filteringscriteria retourneren een lege \texttt{actual\_response}, net als de query naar opportunities in de \textit{Proposal/Price Quote}-fase en meerdere queries naar open cases.
+
+Wanneer de agent wél data retourneert, ontbreken regelmatig verwachte velden. Contactqueries leveren geen e-mailadressen, casesqueries missen velden als \texttt{CaseNumber} en \texttt{Status}, en de meest complexe accountquery, namelijk accounts in Frankrijk met gekoppelde contacten, geeft een leeg resultaat. Dit wijst in de eerste plaats op een onvolledig veldbeleid in de onderliggende toolconfiguratie: de SOQL-queries hanteren een te beperkte veldselectie en ondersteunen relationele queries onvoldoende. Tegelijk moet worden opgemerkt dat ook de gebruikte sandboxomgeving een beperkende factor vormt. Voor sommige vraagtypes is de beschikbare testdata te beperkt of te weinig representatief om een inhoudelijk volledig antwoord te kunnen formuleren, zelfs wanneer de query op zich correct is opgebouwd. Dit zal zeker meegenomen en bekeken worden in de tweede fase.
+
+De \textit{accounts}-categorie vormt een relatieve uitzondering met een gemiddelde score van 3,60 over vijf queries. De \textit{leads}-categorie haalt het laagste gemiddelde (2,00), gevolgd door \textit{cases} (2,00) en \textit{contacts} (2,50). De moeilijkheidsgraad correleert hier wél met de kwaliteit: beide als \textit{hard} geclassificeerde queries scoren 1, tegenover een gemiddelde van 2,54 voor \textit{medium} en 3,14 voor \textit{simple}.
+
+\subsection*{SmartSalesAgent}
+
+De SmartSalesAgent presteert het meest consistent van de drie subagenten, met een gemiddelde score van 4,18, een mediane score van 5 en slechts drie antwoorden met een score van 2. De \textit{orders}-categorie is bijzonder sterk: acht van de negen queries scoren 4 of 5, en de gemiddelde score bedraagt 4,56. De \textit{catalog}-categorie (gemiddeld 4,00 over zes queries) en de \textit{locations}-categorie (3,86 over zeven queries) scoren iets lager, maar blijven solide.
+
+Alle drie de lage scores (telkens 2) volgen hetzelfde patroon: multi-step queries waarbij de agent eerst een lijst ophaalt en vervolgens de volledige details van het eerste resultaat moet ophalen. In elk geval slaagt de agent er niet in om de uitvoer van de eerste toolaanroep correct door te geven als invoer voor de tweede. Dit is een beperking in de chaining-logica, niet in de toegang tot de API.
+
+De SmartSalesAgent vertoont ook het sterkste verband tussen moeilijkheidsgraad en score: eenvoudige queries scoren gemiddeld 4,71 over veertien queries, terwijl moeilijke queries terugvallen op 2,75 over vier queries. Dit verschil is intuïtief verklaarbaar: complexere SmartSales-queries vereisen combinaties van toolaanroepen, doorgaans chaining-queries, die de agent nog niet betrouwbaar uitvoert.
+
+\subsection*{OrchestratorAgent}
+
+De OrchestratorAgent behaalt een gemiddelde score van 3,77 over 22 queries, met een mediane score van 4 en een standaardafwijking van 1,11. De querysamenstelling omvat acht enkelvoudige routingtests, gericht op één specifieke subagent, en veertien cross-system queries. De cross-system queries scoren gemiddeld 3,93, tegenover 3,50 voor de enkelvoudige routingtests.
+
+Het lagere gemiddelde voor enkelvoudige routingtests is verklaarbaar: de kwaliteit van het antwoord is daar volledig afhankelijk van de prestaties van de onderliggende subagent. De twee routingtests gericht op de SalesforceAgent scoren respectievelijk 2 en 4; de GraphAgent-routingtest over een e-mailzoekopdracht scoort 2 ondanks correcte routing, doordat de agent de gevraagde e-mailinhoud niet volledig teruggeeft. Dit toont dat routingfouten en antwoordkwaliteit ontkoppeld zijn: ook een perfect gerouteerde query kan resulteren in een onvolledig antwoord.
+
+De cross-system resultaten zijn inhoudelijk sterker: vijf van de veertien queries scoren 5, vier scoren 4. Queries die meerdere bronnen combineren, zoals recente e-mails koppelen aan Salesforce-contacten of agenda-items verbinden met Salesforce-accounts, worden goed afgehandeld wanneer de betrokken subagenten voldoende data retourneren. De drie scores van 3 in de cross-system categorie zijn telkens te herleiden naar onvolledige Salesforce-responses die de vergelijkingslogica van de orchestrator tegenwerken.
+
+% --------------------------------------------------------------------------
+\section{Evaluatie van query routing}
+\label{sec:evaluatie-routing}
+% --------------------------------------------------------------------------
+
+De routinganalyse is gebaseerd op de automatisch gegenereerde \textit{routing traces} die per query bijhouden welke subagenten door de orchestrator worden aangesproken, in welke volgorde en met welk resultaat.
+
+\subsection*{Enkelvoudige routing}
+
+Voor de acht routingtests met enkelvoudige routing, namelijk \textit{routing/graph}, \textit{routing/salesforce} en \textit{routing/smartsales}, bedraagt de nauwkeurigheid 100\%: de orchestrator kiest in elk geval exact de verwachte subagent. Er werd geen enkel geval van mis-routing of under-routing vastgesteld. De orchestrator herkent op basis van de vraaginhoud correct het betrokken systeem, zowel voor Microsoft 365-, Salesforce- als SmartSales-queries.
+
+Dat de routing correct is, impliceert niet dat de antwoorden ook kwalitatief zijn. Drie van de acht enkelvoudige routingtests scoren 2: twee Salesforce-routingtests en één Graph-routingtest. Dit patroon is consistent met de eerder vastgestelde prestatietekorten bij die subagenten.
+
+\subsection*{Cross-system routing}
+
+Bij de veertien cross-system queries gebruikt de orchestrator steeds meerdere subagenten. De meest voorkomende combinatie is \textit{graph + salesforce} (vijf keer), gevolgd door \textit{salesforce + smartsales} (drie keer) en \textit{graph + salesforce + salesforce} (twee keer). In het laatste geval roept de orchestrator de SalesforceAgent tweemaal aan binnen dezelfde query, met telkens een verfijnde deelvraag gebaseerd op eerder verkregen informatie. Beide gevallen resulteren in een score van 5, wat aangeeft dat iteratieve subagentaanroepen functioneel zijn wanneer ze op de juiste informatiebehoefte zijn afgestemd.
+
+Het enige geval van over-routing betreft de query \textit{``Find emails I received this week and check if any senders are linked to a SmartSales location''}: de orchestrator roept de SmartSalesAgent driemaal aan naast één GraphAgent-aanroep, wat resulteert in een score van 2 en de op één na hoogste tokenuitgave van de Orchestrator-run. De herhaalde SmartSales-aanroepen zijn functioneel overbodig. Under-routing en mis-routing werden niet vastgesteld in de dataset.
+
+Tabel~\ref{tab:routing-overzicht} vat de routingresultaten samen.
+
+\begin{table}[ht]
+\centering
+\caption{Routingresultaten per categorie (OrchestratorAgent, run 0f9f37a4)}
+\label{tab:routing-overzicht}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{lrrl}
+\hline
+\textbf{Categorie} & \textbf{n} & \textbf{Gem.\ score} & \textbf{Routing} \\
+\hline
+routing/graph       & 3  & 4,00 & 100\% correct (3/3) \\
+routing/salesforce  & 2  & 3,00 & 100\% correct (2/2) \\
+routing/smartsales  & 3  & 3,33 & 100\% correct (3/3) \\
+cross-system        & 14 & 3,93 & n.v.t.\ (variabele verwachte routing) \\
+\hline
+\end{tabular}
+\end{table}
+
+% --------------------------------------------------------------------------
+\section{Evaluatie van performantie en kost}
+\label{sec:evaluatie-performantie}
+% --------------------------------------------------------------------------
+
+\subsection{Evaluatie van de responstijd}
+\label{subsec:responstijd}
+
+
+De gemiddelde responstijden van de drie subagenten liggen dicht bij elkaar: 14,6 seconden voor de GraphAgent, 13,1 seconden voor de SalesforceAgent en 13,9 seconden voor de SmartSalesAgent. De OrchestratorAgent vereist met 24,3 seconden gemiddeld beduidend meer tijd, wat verwacht is gezien de opeenvolgende subagentaanroepen.
+
+De spreiding is voor de GraphAgent het grootst: de standaardafwijking bedraagt 23,0 seconden bij een mediane responstijd van slechts 6,7 seconden. De overgrote meerderheid van queries wordt snel verwerkt, maar een klein aantal gevallen trekt het gemiddelde sterk omhoog. De piekwaarde van 102,8 seconden, voor de query naar de volledige e-mailbody, is het meest extreme geval en wijst op een toolaanroepcyclus waarbij de agent herhaaldelijk probeerde de inhoud op te halen. Dit geval vertegenwoordigt tevens het hoogste tokenverbruik van de volledige dataset (49.581 tokens). Op duidelijke afstand volgen twee zoekopdrachten van respectievelijk 45,1 en 44,0 seconden, waarbij de vertraging te verklaren is door API-responses die volledig door het model moeten worden verwerkt.
+
+De SalesforceAgent vertoont eveneens uitschieters tot 76,5 seconden. Opmerkelijk is dat beide piekwaarden samenvallen met queries die uiteindelijk lege resultaten retourneren (score 1). De vertraging wordt hier dus niet veroorzaakt door grote data-overdracht, maar door herhaalde mislukte API-aanroepen. Dit maakt deze gevallen dubbel kostbaar: lang en inhoudelijk leeg.
+
+De SmartSalesAgent is het meest voorspelbaar in gedrag, met een standaardafwijking van 9,2 seconden en een maximum van 43,8 seconden. De langste responstijd betreft een query naar alle SmartSales-locaties, waarbij een grote datapagina wordt teruggestuurd.
+
+De OrchestratorAgent toont een duidelijk verschil tussen enkelvoudige en multi-agent queries: queries waarbij slechts één subagent werd aangesproken, werden gemiddeld in 15,5 seconden beantwoord, terwijl multi-agent queries gemiddeld 29,3 seconden vergden. Elke bijkomende subagentaanroep voegt inferentietijd en netwerklatenties toe.
+
+\subsection{Evaluatie van het tokenverbruik}
+\label{subsec:tokenverbruik}
+
+Het tokenverbruik verschilt substantieel tussen de agenten en weerspiegelt de architecturale complexiteit van elke subagent. De GraphAgent verbruikt gemiddeld 7.405 tokens per query (6.430 input, 975 output), de SmartSalesAgent 6.375 tokens (5.170 input, 1.205 output). De SalesforceAgent verbruikt aanzienlijk minder met gemiddeld 3.351 tokens (2.946 input, 405 output), en de OrchestratorAgent 2.703 tokens (2.266 input, 437 output).
+
+Het hogere inputverbruik van de Graph- en SmartSalesagent is te verklaren door omvangrijkere toolbeschrijvingen en rijkere API-responses die als context worden meegestuurd. De hogere outputtokens van de SmartSalesAgent (gemiddeld 1.205) ten opzichte van de SalesforceAgent (405) weerspiegelen de inhoudelijk uitgebreidere antwoorden: SmartSales-responses bevatten doorgaans meer opgesomde data, terwijl Salesforce-antwoorden beknopt of leeg zijn. De lage outputtokens bij Salesforce zijn aldus een symptoom van het kwaliteitsprobleem.
+
+De maximale tokenwaarden zijn het meest illustratief voor de uitschieters. De GraphAgent bereikte een piek van 49.581 tokens voor de e-mailbodyquery, grofweg zeven keer het gemiddelde van die agent. Dit gegeven illustreert hoe ongecontroleerde toolaanroepketens aanzienlijke kostpieken kunnen veroorzaken, zelfs in een enkel geval. De SmartSalesAgent bleef begrensder met een maximum van 11.594 tokens.
+
+Bij de OrchestratorAgent stijgt het tokenverbruik met het aantal betrokken agenten: multi-agent queries vergen gemiddeld 3.214 tokens tegenover 1.809 voor enkelvoudige routingtests. Tegelijk scoren multi-agent queries gemiddeld 3,93 tegenover 3,50. De hogere investering in tokens en tijd gaat dus gepaard met een merkbaar betere antwoordkwaliteit, wat intuïtief verklaarbaar is: vragen die meerdere databronnen vereisen, worden ook rijker beantwoord wanneer de betrokken subagenten voldoende data teruggeven.
+
+In termen van efficiëntie is de SmartSalesAgent het sterkst: een hoge gemiddelde score (4,18) bij een gemiddeld tokenverbruik dat vergelijkbaar is met de GraphAgent, maar met lagere outputtokens. De GraphAgent is minder efficiënt door de aanwezigheid van extreme uitschieters die het gemiddelde vertekenen. De SalesforceAgent is het minst efficiënt: het beperkte tokenverbruik levert geen kwaliteitsvoordeel op, en het kernprobleem, lege API-responses door onvolledige SOQL-queries, kan niet worden opgelost door meer tokens in te zetten.
+
+% --------------------------------------------------------------------------
+\section{Beperkingen van de evaluatie}
+\label{sec:evaluatie-beperkingen}
+% --------------------------------------------------------------------------
+
+De evaluatieresultaten bieden een duidelijk en kwantitatief onderbouwd beeld van de werking van het prototype binnen de gekozen testset, maar moeten in hun juiste context worden geïnterpreteerd.
+
+Een eerste beperking betreft de SalesforceAgent. De lage gemiddelde score (2,59) en het hoge aantal lege API-responses zijn in de eerste plaats te herleiden tot tekortkomingen in de toolconfiguratie: onvolledige veldselecties in SOQL-queries en gebrek aan ondersteuning voor relationele queries. Dit zijn correcteerbare implementatiefouten die de prestaties van de agentarchitectuur als zodanig negatief vertekenen. De Salesforce-gerelateerde Orchestrator-scores zullen verbeteren zodra de Salesforce-tools worden bijgewerkt.
+
+Een tweede beperking is de afhankelijkheid van een LLM als evaluator. Hoewel deze aanpak schaalbaar en genuanceerd is, introduceert het subjectiviteit. De rationales in de dataset zijn in de meeste gevallen inhoudelijk verdedigbaar, maar incidentele inconsistenties zijn niet uit te sluiten. Volledig objectieve correctheidsbeoordelingen zijn bij vrije-tekstoutput inherent moeilijk te garanderen.
+
+Tot slot zijn de gebruikte databronnen dynamisch. De data in Microsoft~365, Salesforce en SmartSales kan veranderen over de tijd, waardoor dezelfde benchmarkvragen op een later moment andere scores kunnen opleveren zonder dat het systeemgedrag is veranderd. Dit geldt in het bijzonder voor e-mailqueries, die afhankelijk zijn van de actuele mailboxinhoud, en voor Salesforce-queries die filteren op status of datum.

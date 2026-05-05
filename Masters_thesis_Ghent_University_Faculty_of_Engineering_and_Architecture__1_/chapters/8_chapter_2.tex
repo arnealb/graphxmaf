@@ -1,0 +1,84 @@
+\chapter{Probleemanalyse en vereisten}
+\label{chap:probleemanalyse}
+
+\section{Verspreide data over meerdere systemen}
+\label{sec:verspreide-data}
+
+Binnen organisaties is relevante bedrijfsinformatie zelden gecentraliseerd opgeslagen in één systeem. In de praktijk bevindt informatie zich verspreid over verschillende applicaties, zoals e-mailomgevingen, documentplatformen, \gls{CRM}-systemen, samenwerkingsomgevingen en andere interne tools. Elk van deze systemen ondersteunt een specifiek bedrijfsproces en beheert daarbij zijn eigen gegevensverzameling. Hierdoor ontstaat een gefragmenteerd informatielandschap waarin kennis en context over dezelfde entiteit, zoals een klant, project of medewerker, over meerdere systemen verdeeld kunnen zijn.
+
+Deze spreiding van data bemoeilijkt het terugvinden van informatie aanzienlijk. Gebruikers weten vaak niet op voorhand in welk systeem de gezochte informatie zich bevindt en moeten daarom meerdere applicaties afzonderlijk raadplegen. In veel gevallen volstaat informatie uit één bron niet om een volledig antwoord te formuleren. Relevante context kan bijvoorbeeld deels aanwezig zijn in e-mails, deels in documenten en deels in \gls{CRM}-gegevens. Het verzamelen van deze informatie vraagt dus niet alleen zoekwerk binnen afzonderlijke systemen, maar ook een manuele combinatie van resultaten uit verschillende bronnen.
+
+Deze spreiding maakt het zoekproces ook complexer voor de gebruikers. Zij moeten niet alleen meerdere tools gebruiken, maar ook begrijpen hoe informatie in elk systeem gestructureerd is en welke terminologie daar wordt gebruikt. Naarmate organisaties meer digitale platformen gebruiken, neemt deze complexiteit verder toe.
+
+Daardoor ontstaat de nood aan een oplossing die informatie over verschillende systemen heen toegankelijk kan maken, zonder dat gebruikers elk systeem afzonderlijk moeten doorzoeken.
+
+\section{Uitdagingen rond integratie, authenticatie en datamodellen}
+\label{sec:integratie-uitdagingen}
+
+Het samenbrengen van informatie uit meerdere systemen is niet alleen een organisatorische, maar ook een technische uitdaging. Elk systeem stelt data op een eigen manier beschikbaar, bijvoorbeeld via specifieke \gls{REST}-\glspl{API}, \glspl{SDK} of andere integratiemechanismen. Deze interfaces verschillen in structuur, mogelijkheden en beperkingen. Daardoor volstaat één generieke koppeling niet. Voor elke databron moet rekening worden gehouden met de concrete technische eigenschappen van het betrokken platform.
+
+
+% die foutafhandeling / paginering shit
+Een eerste moeilijkheid betreft de integratie. Verschillende systemen hanteren eigen endpoints, queryparameters, filtermogelijkheden en antwoordformaten. Sommige systemen ondersteunen uitgebreide zoekfunctionaliteit, terwijl andere slechts beperkte opvragingen toelaten. Ook foutafhandeling, rate limiting en paginering verschillen van platform tot platform. \gls{MCP} kan die verschillen gedeeltelijk abstraheren via een uniforme interface, maar neemt de systeem-specifieke implementatielogica niet weg.
+
+Daarnaast vormt authenticatie een belangrijke uitdaging. Toegang tot bedrijfsdata verloopt doorgaans via beveiligde authenticatie zoals \gls{OAuth} 2.0, access tokens of andere identityflows. Een geïntegreerd zoeksysteem moet deze mechanismen correct ondersteunen om veilig toegang te bieden tot de onderliggende systemen. Tegelijk moet het systeem rekening houden met de rechten van de ingelogde gebruiker. Indien een gebruiker geen toegang heeft tot bepaalde informatie in het bronsysteem, mag deze informatie niet ineens beschikbaar zijn via het systeem.
+
+Doordat informatie uit verschillende systemen afkomstig is, worden gelijkaardige entiteiten in elke applicatie vaak anders gemodelleerd. Ze kunnen verschillen in benaming, structuur, beschikbare velden en onderlinge relaties. Zo kan informatie over een klant in een \gls{CRM}-systeem anders worden voorgesteld dan in e-mails, documenten of agenda-items. Om resultaten uit verschillende bronnen op een zinvolle manier te combineren, is daarom een vorm van abstractie of normalisatie nodig.
+
+% In de huidige prototypeversie is deze normalisatie echter nog beperkt uitgewerkt. Elke agent hanteert voorlopig zijn eigen systeem-specifieke datamodellen en stuurt de opgehaalde resultaten in die vorm door naar de orchestrator, die de antwoorden vervolgens samenbrengt. % todo moet dit hier? 
+
+\section{Beperkingen van klassieke zoekmethoden}
+\label{sec:beperkingen-klassiek}
+
+Een eerste beperking is dat klassieke zoekmethoden vaak sterk afhankelijk zijn van expliciete trefwoorden of gestructureerde filters. Daardoor hangt de kwaliteit van het resultaat in belangrijke mate af van de formulering van de gebruiker en van de zoekmogelijkheden die het onderliggende systeem aanbiedt. Wanneer andere terminologie, synoniemen of contextueel verwante begrippen worden gebruikt, bestaat het risico dat relevante resultaten niet worden gevonden. Vooral bij complexere of minder exact geformuleerde informatiebehoeften schieten zulke zoekmethoden daarom vaak tekort.
+
+Daarnaast zijn veel traditionele zoekfuncties beperkt tot één afzonderlijk systeem. Een gebruiker kan bijvoorbeeld zoeken binnen e-mail, binnen een documentplatform of binnen een \gls{CRM}-toepassing, maar niet op een uniforme manier over deze bronnen heen. Dit maakt het zoekproces traag, omslachtig en foutgevoelig.
+
+Een bijkomende beperking is dat klassieke zoekmethoden meestal gericht zijn op het teruggeven van losse resultaten, eerder dan op het formuleren van een samengesteld antwoord. In veel praktijksituaties volstaat het echter niet om enkel een lijst van documenten of records te tonen. Gebruikers zoeken vaak een concreet antwoord op een vraag waarvoor informatie uit meerdere bronnen gecombineerd moet worden.
+
+\section{Risico's van LLM-gebaseerde systemen}
+\label{sec:risicos-llm}
+% todo: check deze shit in prototype pls
+
+Hoewel \gls{LLM}-gebaseerde systemen nieuwe mogelijkheden bieden voor het interpreteren van natuurlijke taal en het samenbrengen van informatie uit verschillende bronnen, brengen zij ook een aantal belangrijke risico's en beperkingen met zich mee. Binnen een bedrijfscontext wegen deze risico's extra zwaar, aangezien antwoorden betrouwbaar en controleerbaar moeten zijn en bestaande beveiligings- en toegangsregels gerespecteerd moeten worden.
+
+Een eerste belangrijk risico is dat een \gls{LLM} foutieve of verzonnen informatie kan genereren, ook wanneer het antwoord overtuigend en grammaticaal correct geformuleerd is. Deze hallucinaties maken dat de output van een model niet automatisch als feitelijk correct mag worden beschouwd.
+
+Daarnaast is de output van een \gls{LLM} probabilistisch van aard. Het model genereert geen deterministisch resultaat, maar genereert tekst op basis van waarschijnlijkheden. Daardoor kan eenzelfde vraag in verschillende gevallen tot een verschillend antwoord leiden.
+
+Een ander belangrijk aandachtspunt betreft privacy en vertrouwelijkheid van gegevens. Wanneer \gls{LLM}-gebaseerde systemen toegang krijgen tot interne bedrijfsinformatie, moet strikt bewaakt worden welke data aan het model wordt doorgestuurd. In een enterprise omgeving is het essentieel dat een dergelijk systeem geen informatie verwerkt of teruggeeft waarvoor de gebruiker geen rechten heeft.
+
+Ook op beveiligingsvlak brengen \gls{LLM}-systemen bijkomende risico's mee. Zo kunnen ze gevoelig zijn voor prompt injection, waarbij kwaadaardige instructies in externe inhoud proberen het gedrag van het model te beïnvloeden.
+
+Deze risico's tonen aan dat \gls{LLM}-gebaseerde systemen niet zomaar als autonome en volledig betrouwbare zoek- of antwoordsystemen mogen worden ingezet. Ze vereisen bijkomende maatregelen rond validatie, bronvermelding, toegangscontrole, contextselectie en beveiliging.
+
+\section{Functionele en niet-functionele vereisten}
+\label{sec:vereisten}
+
+% zorg dat die duidelijk beantwoord worden in 4 architectuur + evaluatie pls
+
+\subsection{Functionele vereisten}
+\label{subsec:functionele-vereisten}
+
+Een eerste functionele vereiste is dat het systeem informatie moet kunnen ophalen uit meerdere, onderling verschillende databronnen. De oplossing moet in staat zijn om meerdere bronnen te raadplegen en de opgehaalde resultaten samen te brengen tot één bruikbaar geheel.
+
+Het systeem moet natuurlijke taal van gebruikers kunnen verwerken. Gebruikers formuleren hun vragen vaak niet als exacte zoektermen of gestructureerde filters, maar als een vraag of beschrijving. De oplossing moet dus overweg kunnen met dergelijke invoer en deze kunnen omzetten naar relevante acties binnen de onderliggende systemen.
+
+Een derde functionele vereiste is dat het systeem kan bepalen welke databron of combinatie van databronnen nodig is om een vraag te beantwoorden. Wanneer een vraag informatie uit meerdere systemen vereist, moet de oplossing de juiste componenten aanspreken en de verkregen resultaten verder verwerken.
+
+Ten slotte moet het systeem antwoorden of resultaten kunnen presenteren op een manier die begrijpelijk en bruikbaar is voor de eindgebruiker. In plaats van louter ruwe technische output of losse records terug te geven, moet de oplossing de gevonden informatie op een overzichtelijke manier ontsluiten.
+
+\subsection{Niet-functionele vereisten}
+\label{subsec:niet-functionele-vereisten}
+
+Naast de functionele werking moet de oplossing ook voldoen aan een aantal niet-functionele vereisten. Een eerste belangrijke vereiste is veiligheid. Aangezien het systeem toegang krijgt tot interne bedrijfsdata, moet het bestaande authenticatie- en autorisatiemechanismen respecteren.
+
+Een tweede belangrijke vereiste betreft privacy en vertrouwelijkheid. Het systeem moet kunnen omgaan met gevoelige informatie en mag enkel die gegevens verwerken die noodzakelijk zijn om een relevante zoekopdracht of antwoord te ondersteunen.
+
+Verder is betrouwbaarheid een cruciale vereiste. De oplossing moet antwoorden zoveel mogelijk baseren op effectief opgehaalde gegevens uit de onderliggende systemen en mag niet uitsluitend steunen op gegenereerde output zonder duidelijke basis in brondata.
+
+Ook uitbreidbaarheid vormt een belangrijke niet-functionele vereiste. Aangezien er steeds meer verschillende data aanwezig zijn binnen een bedrijf, moet de architectuur voldoende modulair zijn om in de toekomst bijkomende databronnen, tools of agents te kunnen integreren.
+
+Daarnaast is gebruiksvriendelijkheid van belang. Het systeem moet een eenvoudige en uniforme interactiewijze aanbieden, ook wanneer de onderliggende technische werking uit meerdere componenten en databronnen bestaat.
+
+Tot slot is ook performantie relevant. Hoewel niet elke zoekopdracht ogenblikkelijk beantwoord hoeft te worden, moet de responstijd voldoende beperkt blijven om de oplossing praktisch inzetbaar te maken in een dagelijkse werkomgeving.
