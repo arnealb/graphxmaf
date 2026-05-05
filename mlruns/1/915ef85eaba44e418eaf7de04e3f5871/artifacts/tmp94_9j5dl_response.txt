@@ -1,0 +1,53 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here is the list of Salesforce leads with the status 'New':
+
+- **Lead ID:** 00QKI000002KQCj2AO
+  - **First Name:** Bert
+  - **Last Name:** Coppens
+  - **Email:** Not provided
+  - **Company:** another-company
+
+- **Lead ID:** 00QKI000002KPEZ2A4
+  - **First Name:** another
+  - **Last Name:** lead
+  - **Email:** mr.another.lead@gmail.com
+  - **Company:** another-company
+
+- **Lead ID:** 00QKI000002KMUE2A4
+  - **First Name:** Open leada
+  - **Last Name:** openlead last name
+  - **Email:** Not provided
+  - **Company:** bakery of sam
+
+- **Lead ID:** 00QKI000002KMU92AO
+  - **First Name:** ur moms lead
+  - **Last Name:** ur dads lead
+  - **Email:** Not provided
+  - **Company:** grandmas bakery
+
+- **Lead ID:** 00QKI000002KLga2AG
+  - **First Name:** Ur
+  - **Last Name:** Mom
+  - **Email:** breads.sticks.sons@gmail.com
+  - **Company:** Breadsticks and sons
+
+- **Lead ID:** 00QJ6000001AurSMAS
+  - **First Name:** Bill
+  - **Last Name:** Murray
+  - **Email:** Not provided
+  - **Company:** MuncherWall
+
+- **Lead ID:** 00Q0600000aULJuEAO
+  - **First Name:** Menard
+  - **Last Name:** Marc
+  - **Email:** marc.test.gsheet@lol.com
+  - **Company:** GSheet Test 2
+
+- **Lead ID:** 00Q0600000Y9D9cEAF
+  - **First Name:** Sarah
+  - **Last Name:** Loehr
+  - **Email:** info@salesforce.com
+  - **Company:** MedLife, Inc.

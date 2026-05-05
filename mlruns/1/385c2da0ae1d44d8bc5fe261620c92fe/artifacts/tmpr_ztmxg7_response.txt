@@ -1,0 +1,91 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+The following fields can be displayed for SmartSales catalog items:
+
+- **Tech Server Creation Date**
+  - Field Name: `techServerCreationDate`
+  - Type: DATETIME
+
+- **Tech Server Update Date**
+  - Field Name: `techServerUpdateDate`
+  - Type: DATETIME
+
+- **Code**
+  - Field Name: `code`
+  - Type: TEXT
+
+- **External ID**
+  - Field Name: `externalId`
+  - Type: TEXT
+
+- **Commented**
+  - Field Name: `commented`
+  - Type: BOOLEAN
+
+- **Title**
+  - Field Name: `title`
+  - Type: TEXT
+
+- **Search Keyword Text**
+  - Field Name: `searchKeywordText`
+  - Type: TEXT
+
+- **Group**
+  - Field Name: `group`
+  - Type: TEXT
+
+- **Description**
+  - Field Name: `description`
+  - Type: TEXT 
+
+- **Price**
+  - Field Name: `price`
+  - Type: DECIMAL
+
+- **Sales Unit**
+  - Field Name: `salesUnit`
+  - Type: INTEGER
+
+- **Packaging Unit**
+  - Field Name: `packagingUnit`
+  - Type: INTEGER
+
+- **Measure**
+  - Field Name: `measure`
+  - Type: DECIMAL
+
+- **Measurement Unit Decimal Precision**
+  - Field Name: `measurementUnitDecimalPrecision`
+  - Type: DECIMAL
+
+- **Measurement Unit Reference Unit Code**
+  - Field Name: `measurementUnitReferenceUnitCode`
+  - Type: TEXT
+
+- **Measurement Unit Title**
+  - Field Name: `measurementUnitTitle`
+  - Type: TEXT
+
+- **Unit of Measure**
+  - Field Name: `unitOfMeasure`
+  - Type: TEXT
+
+- **Availability**
+  - Field Name: `availability`
+  - Type: TEXT
+
+- **Position**
+  - Field Name: `position`
+  - Type: INTEGER
+
+- **Quantity Sold**
+  - Field Name: `quantitySold`
+  - Type: INTEGER
+
+- **Tags**
+  - Field Name: `tags`
+  - Type: TEXT
+
+All fields are fixed and available for both web and mobile audiences.

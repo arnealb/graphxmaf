@@ -1,0 +1,28 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+### Summary of Next Calendar Event and Related Activities:
+
+#### Next Calendar Event:
+- **Subject:** Weekly sync — Dorian Feaux
+- **Start:** 6 May 2026 at 07:00 AM UTC
+- **End:** 6 May 2026 at 07:30 AM UTC
+- **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+- **Attendees:** 
+  - Marc Supplier (marc.supplier@supplier1.be)
+
+#### Related Emails from Marc Supplier:
+1. **Email:** [Follow-up: supplier1 Q2 2026 Delivery Contract](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7nAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)  
+   - **Sender:** Marc Supplier  
+   - **Received:** 28 April 2026 at 11:39 AM UTC
+
+2. **Email:** [supplier1 — Updated pricing for H2 2026](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7oAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)  
+   - **Sender:** Marc Supplier  
+   - **Received:** 28 April 2026 at 11:39 AM UTC
+
+3. **Email:** [Follow-up: supplier1 Q2 2026 Delivery Contract](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7oAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)  
+   - **Sender:** Marc Supplier  
+   - **Received:** 4 May 2026 at 07:45 PM UTC
+
+If you have any further questions or need assistance, feel free to ask!

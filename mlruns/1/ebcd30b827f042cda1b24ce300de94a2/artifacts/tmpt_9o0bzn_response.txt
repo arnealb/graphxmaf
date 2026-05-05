@@ -1,0 +1,62 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is an overview of supplier1 based on the aggregated results:
+
+### General Information
+- **Name**: supplier1
+- **Location**: Rue du Commerce 1, Brussels, 1000, Belgium
+- **Email Contact**: Marc Supplier (marc.supplier@supplier1.be)
+
+### Email Communications
+- **Recent Emails**:
+  - **Subject**: Follow-up: supplier1 Q2 2026 Delivery Contract
+    - **Sender**: Marc Supplier
+    - **Received**: 28 April 2026
+  - **Subject**: Updated pricing for H2 2026
+    - **Sender**: Marc Supplier
+    - **Received**: 28 April 2026
+  - **Subject**: Possible order
+    - **Sender**: Arne Albrecht
+    - **Received**: 20 April 2026
+    
+  [View Email Communication](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7nAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+  
+### Contracts and Agreements
+- **Maintenance and Support Contract**: 
+  - Engaged in preventive and corrective maintenance for the Industrial Components Pack (Product Code: PROD-SUP1-001).
+  - Responsibilities include maintaining schedules and compliance protocols per EASI Supplier Code of Conduct.
+
+### Calendar Events
+- **Upcoming Event**:
+  - **Subject**: Q2 Delivery Review
+  - **Date**: 10 May 2026, 08:00 - 09:00
+  - **Organizer**: SmartAdmin  
+  [View Calendar Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLdAAA%3D&exvsurl=1&path=/calendar/item)
+
+### Salesforce Information
+- **Contacts**:
+  - Marc Supplier (Email: marc.supplier@supplier1.be)
+  - Additional Contact: supplier1_contact (name not specified)
+
+- **Opportunities**:
+  - **Q2 Delivery Contract**: 
+    - **Stage**: Negotiation/Review
+    - **Amount**: 85,000
+    - **Close Date**: 30 June 2026
+  - **Another Opportunity**: 
+    - **Description**: Supp_opportunity
+    - **Close Date**: 8 May 2026
+    - **Stage**: On-going Approval
+
+- **Case Report**:
+  - **Subject**: Delayed shipment — April batch
+  - **Status**: Working, High priority
+  - **Created Date**: 28 April 2026
+
+### SmartSales Information
+- **Catalog Items**: 
+  - IT Hardware and IT Software categorized under relevant group codes.
+
+This comprehensive overview offers insights into supplier1's business operations, relationship contacts, contractual obligations, and current issues.

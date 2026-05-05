@@ -1,0 +1,13 @@
+{
+  "query": "List all SmartSales order approbation statuses.",
+  "reasoning": "This query specifically pertains to internal processes related to the SmartSales system, so it requires the graph agent to search relevant company documents for information on order approbation statuses.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find information regarding SmartSales order approbation statuses.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the results obtained from the graph agent's search on SmartSales order approbation statuses."
+}

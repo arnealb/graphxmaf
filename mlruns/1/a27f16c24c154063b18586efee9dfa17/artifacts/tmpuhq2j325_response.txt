@@ -1,0 +1,63 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the emails you received in the last 14 days:
+
+### Emails List
+1. **Subject:** Een abonnement kopen om uw product te blijven gebruiken  
+   **From:** Microsoft (microsoft-noreply@microsoft.com)  
+   **Received On:** 3 May 2026  
+   [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAOC9kJ6AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+2. **Subject:** Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)  
+   **From:** Microsoft Security (MSSecurity-noreply@microsoft.com)  
+   **Received On:** 2 May 2026  
+   [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAAN%2F0znaAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+3. **Subject:** You've joined the Enterprise group  
+   **From:** Enterprise (Enterprise@easigroupdemo.onmicrosoft.com)  
+   **Received On:** 30 April 2026  
+   [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAAN70MDJAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+4. **Subject:** title test  
+   **From:** Microsoft Power Automate (flow-noreply@microsoft.com)  
+   **Received On:** 30 April 2026  
+   [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAAN70MDIAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+5. **Subject:** test  
+   **From:** Microsoft Power Automate (flow-noreply@microsoft.com)  
+   **Received On:** 30 April 2026  
+   [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAAN70MDHAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+6. **Subject:** 1 of your flow(s) have failed  
+   **From:** Microsoft Power Automate (PowerAutomateNoReply@microsoft.com)  
+   **Received On:** 30 April 2026  
+   [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAAN70MDGAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+7. **Subject:** Proximus — partnership inquiry  
+   **From:** Proximus Business (info@proximus.be)  
+   **Received On:** 28 April 2026  
+   [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAANz2u7zAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+8. **Subject:** Distribution mapping — scope confirmation  
+   **From:** AB InBev Sales (sales@ab-inbev.com)  
+   **Received On:** 28 April 2026  
+   [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAANz2u7yAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+9. **Subject:** Supply chain project — follow-up meeting  
+   **From:** Delhaize Procurement (procurement@delhaize.eu)  
+   **Received On:** 28 April 2026  
+   [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAANz2u7xAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+10. **Subject:** EDI connector — technische vraag  
+    **From:** AD Delhaize IT (it@delhaize.eu)  
+    **Received On:** 28 April 2026  
+    [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAANz2u7yAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+11. **Subject:** Offerte aanvraag — POS koppeling modules  
+    **From:** CRF Belgium Procurement (procurement@carrefour-be.eu)  
+    **Received On:** 28 April 2026  
+    [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAANz2u7wAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+This list comprises all emails received within the specified timeframe.

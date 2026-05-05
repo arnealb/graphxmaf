@@ -1,0 +1,56 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is the full body content of your most recent email:
+
+---
+
+**Subject**: Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)  
+**From**: Microsoft Security <MSSecurity-noreply@microsoft.com>  
+**Received**: 2 May 2026  
+
+Here’s a summary of activities over the last seven days.  
+[Microsoft Security]  
+[Informational] Azure Active Directory is now Microsoft Entra ID. Learn More.<https://aka.ms/aadrebrandFAQ>  
+
+Thanks for using Microsoft Entra Privileged Identity Management (PIM). This weekly digest<https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-email-notifications#weekly-pim-digest-email-for-azure-ad-roles> shows your PIM activities over the last seven days:
+
+**User activation**  
+0<https://portal.azure.com#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadroles>  
+
+![User Activation](https://images.ecomm.microsoft.com/cdn/mediahandler/azure-emails-templates/production/branch-master/ae-63171/images/templates/Microsoft%20Entra%20ID/pim/weeklydigest/user-60px.png)
+
+**Users made permanent**  
+0<https://portal.azure.com#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadroles>  
+
+![Users Made Permanent](https://images.ecomm.microsoft.com/cdn/mediahandler/azure-emails-templates/production/branch-master/ae-63171/images/templates/Microsoft%20Entra%20ID/pim/weeklydigest/user-60px.png)
+
+**Assignments made in PIM**  
+0<https://portal.azure.com#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadroles>  
+
+![Assignments Made in PIM](https://images.ecomm.microsoft.com/cdn/mediahandler/azure-emails-templates/production/branch-master/ae-63171/images/templates/Microsoft%20Entra%20ID/pim/weeklydigest/user-60px.png)
+
+**Assignments made outside of PIM**  
+0<https://portal.azure.com#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadroles>  
+
+![Assignments Made Outside of PIM](https://images.ecomm.microsoft.com/cdn/mediahandler/azure-emails-templates/production/branch-master/ae-63171/images/templates/Microsoft%20Entra%20ID/pim/weeklydigest/user-60px.png)
+
+**Overview of your top roles**  
+| Role                   | Permanent | Eligible | Action                                                |
+|------------------------|-----------|----------|------------------------------------------------------|
+| Global Administrator    | 7         | 0        | Reduce permanent ><https://portal.azure.com#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadroles> |
+| SharePoint Administrator | 5         | 0        | Reduce permanent ><https://portal.azure.com#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadroles> |
+| Directory Readers       | 4         | 0        | Reduce permanent ><https://portal.azure.com#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadroles> |
+
+**Learn more about Microsoft Entra Privileged Identity Management** ><https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-configure>
+
+[Facebook]<https://www.facebook.com/microsoftazure> | [Twitter] <https://twitter.com/azure> | [YouTube] <https://www.youtube.com/@MicrosoftAzure> | [LinkedIn] <https://www.linkedin.com/showcase/microsoft-developers>
+
+Privacy Statement<https://go.microsoft.com/fwlink/?LinkId=521839>
+
+Microsoft Corporation, One Microsoft Way, Redmond, WA 98052
+
+---
+
+For more details, you can also view the email [here](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN-0znaAAA%3D&exvsurl=1&viewmodel=ReadMessageItem).

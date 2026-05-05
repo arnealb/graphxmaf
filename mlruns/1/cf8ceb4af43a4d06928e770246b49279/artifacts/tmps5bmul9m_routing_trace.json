@@ -1,0 +1,101 @@
+{
+  "user_query": "For the company behind my most recent open support case, what else do we know about them?",
+  "plan": {
+    "query": "For the company behind my most recent open support case, what else do we know about them?",
+    "reasoning": "This query requires information about the company related to the user's most recent support case and should involve all available agents for a thorough overview.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Identify the company associated with the user's most recent open support case.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Gather data about the identified company from the CRM, including accounts, contacts, leads, and opportunities.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "graph",
+        "task": "Collect communication history, calendar events, and internal documents related to the identified company.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "agent": "smartsales",
+        "task": "Retrieve location and catalog items related to the identified company.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the outputs from steps 2, 3, and 4 to create a comprehensive overview of the company associated with the most recent open support case."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Identify the company associated with the user's most recent open support case.",
+      "started_at": "2026-05-04T14:30:54.446945+00:00",
+      "ended_at": "2026-05-04T14:30:56.842120+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "[Result from step 1]:\n{\"account_name\":\"Delhaize Group\"}\n\n[Task]:\nGather data about the identified company from the CRM, including accounts, contacts, leads, and opportunities.",
+      "started_at": "2026-05-04T14:30:56.897536+00:00",
+      "ended_at": "2026-05-04T14:31:04.579271+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "find_accounts",
+        "find_contacts",
+        "find_leads",
+        "get_opportunities",
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 4,
+      "input": "[Result from step 1]:\n{\"account_name\":\"Delhaize Group\"}\n\n[Task]:\nRetrieve location and catalog items related to the identified company.",
+      "started_at": "2026-05-04T14:30:56.904539+00:00",
+      "ended_at": "2026-05-04T14:31:10.993601+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 3,
+      "input": "[Result from step 1]:\n{\"account_name\":\"Delhaize Group\"}\n\n[Task]:\nCollect communication history, calendar events, and internal documents related to the identified company.",
+      "started_at": "2026-05-04T14:30:56.901055+00:00",
+      "ended_at": "2026-05-04T14:31:37.789897+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "list_calendar",
+        "search_documents"
+      ]
+    }
+  ]
+}

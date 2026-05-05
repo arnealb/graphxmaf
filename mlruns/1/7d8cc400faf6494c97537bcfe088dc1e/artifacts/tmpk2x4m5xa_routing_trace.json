@@ -1,0 +1,130 @@
+{
+  "user_query": "Prepare me for my next meeting. What do I have coming up and what do I know about the companies involved?",
+  "plan": {
+    "query": "Prepare me for my next meeting. What do I have coming up and what do I know about the companies involved?",
+    "reasoning": "The query requires information from emails and calendar events about the upcoming meeting, along with specific details about the companies involved, necessitating the use of all available agents.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the upcoming calendar events related to meetings and provide details about the companies involved.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Gather information about the companies involved in the upcoming meetings, including accounts, contacts, and any relevant opportunities or cases.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Fetch any locations or catalog items related to the companies involved in the upcoming meetings.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from the three steps to provide a comprehensive overview of the next meeting details along with information about the involved companies."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the upcoming calendar events related to meetings and provide details about the companies involved.",
+      "started_at": "2026-05-04T20:16:20.662367+00:00",
+      "ended_at": "2026-05-04T20:16:27.638235+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_calendar"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Gather information about the companies involved in the upcoming meetings, including accounts, contacts, and any relevant opportunities or cases.",
+      "started_at": "2026-05-04T20:16:20.663551+00:00",
+      "ended_at": "2026-05-04T20:17:23.897343+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 36,
+      "tool_calls": [
+        "find_accounts",
+        "find_contacts",
+        "get_opportunities",
+        "get_cases",
+        "find_accounts",
+        "find_contacts",
+        "get_opportunities",
+        "get_cases",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_contacts",
+        "get_opportunities",
+        "get_cases",
+        "find_contacts",
+        "get_opportunities",
+        "get_cases",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_contacts",
+        "get_opportunities",
+        "get_cases",
+        "find_accounts",
+        "find_contacts",
+        "get_opportunities",
+        "get_cases",
+        "find_contacts",
+        "get_opportunities",
+        "get_cases",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_contacts",
+        "get_opportunities",
+        "get_cases",
+        "find_accounts",
+        "find_accounts",
+        "find_contacts",
+        "get_opportunities",
+        "get_cases",
+        "find_accounts",
+        "find_contacts",
+        "get_opportunities",
+        "get_cases",
+        "find_accounts",
+        "find_contacts",
+        "get_opportunities",
+        "get_cases",
+        "find_accounts",
+        "find_contacts",
+        "get_opportunities",
+        "get_cases",
+        "find_accounts",
+        "find_contacts",
+        "get_opportunities",
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "Fetch any locations or catalog items related to the companies involved in the upcoming meetings.",
+      "started_at": "2026-05-04T20:16:20.664147+00:00",
+      "ended_at": "2026-05-04T20:18:47.604520+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items"
+      ]
+    }
+  ]
+}

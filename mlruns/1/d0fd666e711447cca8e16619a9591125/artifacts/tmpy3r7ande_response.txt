@@ -1,0 +1,98 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is a list of items that require follow-up today:
+
+### Opportunities (Salesforce)
+- **Ferrero — Nutella In-Store Display Campaign**
+  - Stage: Prospecting
+  - Amount: €30,000
+  - Close Date: 1 October 2026
+  - Account: Ferrero Benelux
+  
+- **Colruyt Group — SmartSales Rollout 2026**
+  - Stage: Proposal/Price Quote
+  - Amount: €220,000
+  - Close Date: 30 September 2026
+  - Account: Colruyt Group
+
+- **Anheuser-Busch InBev — Distribution Network Mapping**
+  - Stage: Qualification
+  - Amount: €520,000
+  - Close Date: 15 September 2026
+  - Account: Anheuser-Busch InBev
+
+- **Delhaize Group — Supply Chain Optimisation**
+  - Stage: Negotiation/Review
+  - Amount: €310,000
+  - Close Date: 31 August 2026
+  - Account: Delhaize Group
+
+- **GreenTech Solutions — Sustainability Dashboard**
+  - Stage: Qualification
+  - Amount: €45,000
+  - Close Date: 15 August 2026
+  - Account: GreenTech Solutions
+
+- **Carrefour Belgium SA — In-Store Analytics Pilot**
+  - Stage: Proposal/Price Quote
+  - Amount: €175,000
+  - Close Date: 31 July 2026
+  - Account: Carrefour Belgium SA
+
+- **Supplier1 — Q2 Delivery Contract**
+  - Stage: Negotiation/Review
+  - Amount: €85,000
+  - Close Date: 30 June 2026
+  - Account: Supplier1
+  
+- **Supp_opportunity**
+  - Stage: On-going Approval
+  - Close Date: 8 May 2026
+  - Account: Supplier1
+
+### Cases (Salesforce)
+- **Delhaize Group — EDI connection issue**
+  - Case Number: 00001023
+  - Status: Working
+  - Priority: Medium
+
+- **Carrefour Belgium SA — POS integration delay**
+  - Case Number: 00001022
+  - Status: New
+  - Priority: High
+
+- **Colruyt — Integration issue with POS system**
+  - Case Number: 00001021
+  - Status: New
+  - Priority: Medium
+
+- **Delayed shipment — supplier1 April batch**
+  - Case Number: 00001020
+  - Status: Working
+  - Priority: High
+
+- **Verification statut case**
+  - Case Number: 00001018
+  - Status: In progress
+  - Priority: Medium
+
+### Leads (Salesforce)
+- No leads found requiring follow-up.
+
+### Locations (SmartSales)
+The following locations may warrant follow-up based on their last visit dates:
+- **AACO Davidson, Leuven**
+  - Last Visit Date: 5 April 2026
+
+- **Stream Software, Antwerpen**
+  - Last Visit Date: 27 April 2026
+
+- **Michelles Brasserie, Izegem**
+  - Last Visit Date: 22 April 2026
+
+- **Medimarket Zaventem**
+  - Last Visit Date: 27 April 2026
+
+This is your follow-up list for today. Let me know if you need further details on any specific item!

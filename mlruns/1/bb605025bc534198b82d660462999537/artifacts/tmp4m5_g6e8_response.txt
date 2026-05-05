@@ -1,0 +1,33 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Briefing on Colruyt
+
+#### General Information
+- **Name:** Colruyt Group
+- **Industry:** Retail
+- **Website:** [Colruyt Group](https://www.colruytgroup.com)
+- **Recent Communication:** Received an email regarding a SmartSales pilot confirmation on 28 April 2026 from Colruyt Group Procurement (procurement@colruyt.be). [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7pAAA%3D&exvsurl=1&viewmodel=ReadMessageItem).
+
+#### Events
+- **Upcoming Event:** A kickoff for the SmartSales rollout is scheduled for **15 May 2026** from **12:00 PM to 1:30 PM**. Organized by SmartAdmin. [View Calendar Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLeAAA%3D&exvsurl=1&path=/calendar/item).
+
+#### Financials
+- **Opportunity:** Currently, there is an ongoing opportunity with Colruyt Group related to the SmartSales rollout, estimated at **€220,000**, with a proposal stage set to close on **30 September 2026**.
+
+#### Issues
+- **Case Management:** There is a new case regarding an integration issue with Colruyt's POS system, created on **28 April 2026** with a medium priority.
+
+#### Locations
+- **Halle Location:**
+  - **Address:** Edingensesteenweg 196, Halle, 1500, Belgium
+  - **Coordinates:** Latitude 50.7292, Longitude 4.2219
+
+#### Additional Information
+- **Catalog Items Available:**
+  - IT Hardware
+  - IT Software
+  - Spreads
+
+This briefing encapsulates the essential information on Colruyt based on the latest available data. For any specific or deeper insights regarding Colruyt, further inquiries may be directed to their official channels.

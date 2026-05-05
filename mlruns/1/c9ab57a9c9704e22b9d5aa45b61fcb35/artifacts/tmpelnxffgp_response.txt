@@ -1,0 +1,64 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is a comprehensive overview of supplier1, compiled from various sources:
+
+### General Information
+- **Supplier Name**: supplier1
+- **Contact**: 
+  - **Name**: Marc Supplier
+  - **Email**: marc.supplier@supplier1.be
+
+### Location Details
+- **Address**: 
+  - Rue du Commerce 1
+  - Brussels, Belgium
+  - **ZIP Code**: 1000
+  - **Coordinates**: Latitude 50.8394667, Longitude 4.3673141
+
+### Contracts and Agreements
+- **Current Contracts**:
+  - Supplier1 has a maintenance and support contract with EASI Group, which includes:
+    - Responsibilities for preventive and corrective maintenance of the Industrial Components Pack (product code: PROD-SUP1-001).
+    - Compliance with EASI's Supplier Code of Conduct.
+  
+### Emails
+- **Recent Correspondence**:
+  - **Subject**: Follow-up: supplier1 Q2 2026 Delivery Contract
+    - **Date Received**: 28 April 2026
+    - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7nAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+  - **Subject**: supplier1 — Updated pricing for H2 2026
+    - **Date Received**: 28 April 2026
+    - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7oAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### Calendar Events
+- **Upcoming Event**:
+  - **Subject**: supplier1 — Q2 Delivery Review
+  - **Date and Time**: 10 May 2026, 08:00 - 09:00
+  - [View Calendar Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLdAAA%3D&exvsurl=1&path=/calendar/item)
+
+### Opportunities and Cases in Salesforce
+- **Opportunities**:
+  - **Name**: supplier1 — Q2 Delivery Contract
+    - **Stage**: Negotiation/Review
+    - **Amount**: €85,000
+    - **Close Date**: 30 June 2026
+  - **Name**: supp_opportyunity
+    - **Stage**: On-going Approval
+    - **Close Date**: 8 May 2026
+
+- **Outstanding Case**:
+  - **Case Number**: 00001020
+    - **Subject**: Delayed shipment — supplier1 April batch
+    - **Status**: Working
+    - **Priority**: High
+    - **Date Created**: 28 April 2026
+
+### Catalog Information
+- **Product Categories**:
+  - IT Hardware
+  - IT Software
+  - Spreads 
+
+This overview provides a detailed snapshot of supplier1, including their contact information, contracts, recent communications, scheduled events, and sales opportunities. If you need further details or specific information, please let me know!

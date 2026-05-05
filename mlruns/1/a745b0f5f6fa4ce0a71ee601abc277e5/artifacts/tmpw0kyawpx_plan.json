@@ -1,0 +1,21 @@
+{
+  "query": "Which companies that emailed me recently do not seem to have a location registered with us?",
+  "reasoning": "This query requires examining recent emails to identify sender companies and then checking their registered locations. Therefore, I will use the graph agent to retrieve recent emails and the salesforce agent to check for registered locations.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the companies that have emailed me recently.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Check if the companies identified in step 1 have registered locations in our system.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Determine which companies from step 1 do not appear in the location results from step 2 and list those companies."
+}

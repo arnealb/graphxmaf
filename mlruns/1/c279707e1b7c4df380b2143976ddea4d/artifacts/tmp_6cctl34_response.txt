@@ -1,0 +1,38 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Based on the upcoming calendar events and the records in your CRM, here are the findings:
+
+### Upcoming Calendar Events:
+1. **Weekly sync — Dorian Feaux**
+   - Date: 6 May 2026
+
+2. **Sprint review — Arne Albrecht**
+   - Date: 8 May 2026
+
+3. **Supplier1 — Q2 Delivery Review**
+   - Date: 10 May 2026
+
+4. **GreenTech Solutions — Technical Qualification Call**
+   - Date: 12 May 2026
+
+5. **Colruyt Group — SmartSales Rollout Kickoff**
+   - Date: 15 May 2026
+
+### Companies with Records in CRM:
+- **supplier1**
+- **GreenTech Solutions**
+- **Colruyt Group**
+
+### Findings:
+- **No Corresponding Record:**
+  - **Weekly sync — Dorian Feaux**: No company mentioned.
+  - **Sprint review — Arne Albrecht**: No company mentioned. 
+  - **supplier1**, **GreenTech Solutions**, and **Colruyt Group** all have corresponding records in the CRM.
+
+### Conclusion:
+The only relevant calendar events with no corresponding company records in the CRM are:
+- **Weekly sync — Dorian Feaux**
+- **Sprint review — Arne Albrecht**

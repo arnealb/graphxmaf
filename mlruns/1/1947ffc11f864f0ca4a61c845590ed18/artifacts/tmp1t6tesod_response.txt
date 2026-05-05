@@ -1,0 +1,30 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+### Contact Person for the Most Expensive Open Order
+
+- **Order Details:**
+  - **Order Name:** Anheuser-Busch InBev — Distribution Network Mapping
+  - **Order Amount:** $520,000
+  - **Stage:** Qualification
+  - **Close Date:** 15 September 2026
+  - **Account Name:** Anheuser-Busch InBev
+  
+- **Contact Person:**
+  - **Name:** John Lastname
+  - **Email:** john.lastname@globalmedia.com
+  - **Phone:** 0272700252
+  - **Account Name:** Global Media
+
+### Communication Insights:
+- **Calendar Events Related to Contact:**
+  - **Event 1:** 
+    - **Subject:** meeting
+    - **Date:** 15 April 2026, 13:00 - 13:30
+    - **Organizer:** SmartAdmin
+    - **Attendees:** John Lastname (email: john.lastname@globalmedia.com)
+    - **Event Link:** [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhTAAA%3D&exvsurl=1&path=/calendar/item)
+
+No relevant results from the email search were found.

@@ -1,0 +1,29 @@
+{
+  "query": "What do I need to know about the people I have meetings with this week?",
+  "reasoning": "The user wants a comprehensive overview of the people they have meetings scheduled with, which requires gathering data from all relevant agents to provide a complete picture. This includes communication history, CRM contacts, and potential locations related to these individuals.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Fetch all calendar events for this week along with the email addresses of the attendees.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Using the contact names from step 1 (if any), gather CRM contact information and related opportunities for these individuals.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Using the contact names from step 1 (if any), retrieve any associated location data for these individuals.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Consolidate results from steps 1, 2, and 3 to provide a full overview of the people with whom the user has meetings this week."
+}

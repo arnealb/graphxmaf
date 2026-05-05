@@ -1,0 +1,13 @@
+{
+  "query": "What fields can be displayed for SmartSales catalog items?",
+  "reasoning": "The query pertains to internal catalog information which should be handled by the graph agent, as it is likely part of internal documentation regarding system capabilities or item specifications.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the fields that can be displayed for SmartSales catalog items.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the results from step 1 as the final answer."
+}

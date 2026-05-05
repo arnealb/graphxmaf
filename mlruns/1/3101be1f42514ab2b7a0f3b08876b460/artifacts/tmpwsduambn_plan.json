@@ -1,0 +1,21 @@
+{
+  "query": "Search my OneDrive for files about 'locations' and find those locations in SmartSales.",
+  "reasoning": "The query requests information from both the graph agent for OneDrive files and the smartsales agent for location data. The files from OneDrive need to be retrieved first, and then the locations can be searched for in SmartSales based on those file contents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search OneDrive for files related to 'locations'.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Search for locations based on the contents retrieved from the OneDrive files in step 1, if available.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the search results from the OneDrive files and the locations found in SmartSales to provide a comprehensive answer."
+}

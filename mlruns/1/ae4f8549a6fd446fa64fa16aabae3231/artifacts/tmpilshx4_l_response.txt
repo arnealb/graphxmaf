@@ -1,0 +1,53 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here are the SmartSales locations in Belgium, sorted by name:
+
+- **AACO DAVIDSON**
+  - Address: Havenkant 6, Leuven, 3000
+  - Email: info@aacodavidson.com
+
+- **AB InBev - Leuven**
+  - Address: Vaartstraat 94, Leuven, 3000
+
+- **AD Delhaize - Forest**
+  - Address: Chaussée de Neerstalle 800, Brussels, 1190
+
+- **Arne Albrecht**
+  - Address: Lippenslaan 347, Knokke, 8300
+
+- **Colruyt - Halle**
+  - Address: Edingensesteenweg 196, Halle, 1500
+
+- **CRF - Anderlecht**
+  - Address: Bergensesteenweg 1424, Brussels, 1070
+
+- **Customer1**
+  - Address: Markt 5, Bruges, 8000
+
+- **EASI - Brussels**
+  - Address: Avenue Louise 65, Brussels, 1050
+
+- **Ferrero Benelux - Brussels (Nutella)**
+  - Address: Bld de la Woluwe 42, Brussels, 1200
+
+- **GreenTech Solutions - Ghent**
+  - Address: Technologiepark 122, Ghent, 9052
+
+- **Lidl Belgium - Antwerp**
+  - Address: Noordersingel 10, Antwerp, 2140
+
+- **Michelles Brasserie**
+  - Address: Ingelmunstersestraat 46, Izegem, 8870
+
+- **name-v1**
+  - Address: Stationsplein 14, Antwerp, 2018
+
+- **supplier1**
+  - Address: Rue du Commerce 1, Brussels, 1000
+
+- **supplier1 - Brussels HQ**
+  - Address: Rue de la Loi 42, Brussels, 1000
+
+This list includes all retrieved locations, organized by their names.

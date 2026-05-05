@@ -1,0 +1,12 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The search for SmartSales order approbation statuses did not return any specific information. However, the following related documents were identified that may contain useful context:
+
+- **Invoice Approval Procedure** - `invoice_approval_procedure_easi`
+- **Maintenance Contract Supplier** - `maintenance_contract_supplier1`
+- **Procurement Procedure** - `procurement_procedure_easi`
+- **Change Management Procedure** - `change_management_procedure_easi`
+
+For detailed information on order approbation statuses, consulting these documents may be beneficial.

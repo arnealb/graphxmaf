@@ -1,0 +1,68 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+### Upcoming Meetings
+
+1. **Supplier1 — Q2 Delivery Review**
+   - **Date:** 10 May 2026
+   - **Time:** 08:00 - 09:00
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+2. **GreenTech Solutions — Technical Qualification Call**
+   - **Date:** 12 May 2026
+   - **Time:** 09:00 - 10:00
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+3. **Colruyt Group — SmartSales Rollout Kickoff**
+   - **Date:** 15 May 2026
+   - **Time:** 12:00 - 13:30
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+---
+
+### Company Information
+
+- **Supplier1**
+  - **Industry:** Not specified
+  - **Website:** Not available
+  - **Address:** Multiple locations in Brussels, Belgium (Rue du Commerce 1, Rue de la Loi 42)
+
+- **GreenTech Solutions**
+  - **Industry:** Technology
+  - **Website:** [GreenTech Solutions](https://www.greentechsolutions.be)
+  - **Locations:** Ghent, Belgium (Technologiepark 122)
+
+- **Colruyt Group**
+  - **Industry:** Retail
+  - **Website:** [Colruyt Group](https://www.colruytgroup.com)
+  - **Locations:** No specific locations detailed, but part of the retail sector.
+
+---
+
+### Opportunities Related to the Companies
+
+- **Supplier1**
+  - **Opportunity:** Q2 Delivery Contract
+    - **Stage:** Negotiation/Review
+    - **Close Date:** 30 June 2026
+    - **Amount:** €85,000
+
+  - **Opportunity:** Supp Opportunity
+    - **Stage:** On-going Approval
+    - **Close Date:** 8 May 2026
+
+- **GreenTech Solutions**
+  - **Opportunity:** Sustainability Dashboard
+    - **Stage:** Qualification
+    - **Close Date:** 15 August 2026
+    - **Amount:** €45,000
+
+- **Colruyt Group**
+  - **Opportunity:** SmartSales Rollout 2026
+    - **Stage:** Proposal/Price Quote
+    - **Close Date:** 30 September 2026
+    - **Amount:** €220,000
+
+This overview should prepare you for your upcoming meetings and offer insights into your interactions with the respective companies.

@@ -1,0 +1,21 @@
+{
+  "query": "List SmartSales catalog items, then retrieve the full details of the first one.",
+  "reasoning": "The query requires listing catalog items from SmartSales first and then retrieving detailed information about the first item. The steps are sequential: the second step depends on the output of the first.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "List all catalog items available in SmartSales.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Retrieve the full details of the first catalog item from the list obtained in step 1.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the catalog item details from step 2 to provide a comprehensive view of the first item."
+}

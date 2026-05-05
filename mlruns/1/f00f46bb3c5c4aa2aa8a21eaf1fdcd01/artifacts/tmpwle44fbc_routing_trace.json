@@ -1,0 +1,31 @@
+{
+  "user_query": "How many vacation days do I get per year at EASI?",
+  "plan": {
+    "query": "How many vacation days do I get per year at EASI?",
+    "reasoning": "This query relates to company policy information, which should be answered using the graph agent to search internal documents.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Search for internal documents related to the vacation policy at EASI and find the answer to how many vacation days are provided per year.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Return the information found in the internal document regarding vacation days at EASI."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Search for internal documents related to the vacation policy at EASI and find the answer to how many vacation days are provided per year.",
+      "started_at": "2026-05-04T20:44:58.696443+00:00",
+      "ended_at": "2026-05-04T20:45:06.069426+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_documents"
+      ]
+    }
+  ]
+}

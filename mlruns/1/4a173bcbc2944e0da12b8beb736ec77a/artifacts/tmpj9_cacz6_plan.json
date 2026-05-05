@@ -1,0 +1,29 @@
+{
+  "query": "What do I need to know about the people I have meetings with this week?",
+  "reasoning": "The query requires comprehensive information about the individuals the user will meet with, including emails, calendar events, and contact details. Therefore, all available agents should be used to provide a full picture.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve calendar events for the upcoming week. Extract the names and emails of attendees.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Using the names collected from step 1, look up CRM contacts associated with these individuals to gather commercial relationship data.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Using the names from step 1, search for linked locations or relevant catalogs related to these individuals.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from steps 1, 2, and 3 to present a detailed overview of the people the user will meet with this week, including their contact details, meeting specifics, and any pertinent commercial or location information."
+}

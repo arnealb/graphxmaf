@@ -1,0 +1,74 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+Here is an overview of the companies behind your open support cases, combining case details with available internal documents or communications:
+
+### Open Support Cases Overview
+
+1. **Delhaize Group**
+   - **Case Number:** 00001023
+   - **Subject:** EDI connection issue
+   - **Status:** Working
+   - **Priority:** Medium
+   - **Company Information:** 
+     - Supported by the SmartSales platform related to the EDI Connector Pack and Supply Chain Optimization.
+   - **Sources:** business_continuity_plan_easi, data_processing_agreement_colruyt, sla_agreement_easi_colruyt
+
+2. **Carrefour Belgium SA**
+   - **Case Number:** 00001022
+   - **Subject:** POS integration delay
+   - **Status:** New
+   - **Priority:** High
+   - **Company Information:** 
+     - Frequent destination for professional kilometres; located at Bergensesteenweg 1424, 1070 Brussels (Anderlecht).
+   - **Sources:** company_car_policy_easi, data_processing_agreement_colruyt, sla_agreement_easi_colruyt
+
+3. **Colruyt Group**
+   - **Case Number:** 00001021
+   - **Subject:** Integration issue with POS system
+   - **Status:** New
+   - **Priority:** Medium
+   - **Company Information:** 
+     - Acts as the data controller in the Data Processing Agreement.
+   - **Sources:** business_continuity_plan_easi, data_processing_agreement_colruyt, sla_agreement_easi_colruyt
+
+4. **Easi Be**
+   - **Case Number:** 00001018
+   - **Subject:** Verification status case
+   - **Status:** In progress
+   - **Priority:** Medium
+   - **Company Information:** 
+     - No specific information available.
+   - **Sources:** invoice_approval_procedure_easi, leave_policy_easi, nda_easi_template, remote_work_policy_easi, data_processing_agreement_colruyt
+
+5. **Pairi Daiza**
+   - **Case Numbers:** 00001006, 00001005, 00001001
+   - **Subjects:** Issues with order, Products, Wrong size of widgets
+   - **Statuses:** New, Waiting for Customer, New
+   - **Priorities:** Medium, Medium, High
+   - **Company Information:** 
+     - No specific information available.
+   - **Sources:** health_insurance_guide_easi, data_breach_procedure_easi, remote_work_policy_easi, it_security_procedure_easi, data_processing_agreement_colruyt
+
+6. **Omega SA-NV**
+   - **Case Number:** 00001003
+   - **Subject:** Delivery issues with order #544
+   - **Status:** New
+   - **Priority:** Medium
+   - **Company Information:**
+     - No specific information available.
+   - **Sources:** maintenance_contract_supplier1, company_car_policy_easi, it_security_procedure_easi, nda_easi_template
+
+7. **Global Media**
+   - **Case Number:** 00001000
+   - **Subject:** Widgets not delivered
+   - **Status:** Escalated
+   - **Priority:** High
+   - **Company Information:**
+     - No specific information available.
+   - **Sources:** business_continuity_plan_easi, incident_management_procedure_easi, remote_work_policy_easi
+
+### Summary
+Several companies have open support cases, with varying levels of available information. Delhaize Group, Carrefour Belgium SA, and Colruyt Group provide some context based on their engagements and policies, while other companies lack accessible details in the provided context. If you need more information or specific inquiries about any case, please let me know.

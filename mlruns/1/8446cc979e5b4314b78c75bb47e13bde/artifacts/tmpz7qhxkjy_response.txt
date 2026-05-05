@@ -1,0 +1,30 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are your upcoming calendar events and meetings for the next 14 days:
+
+- **Event:** Weekly sync — Dorian Feaux  
+  **Date:** 6 May 2026  
+  **Time:** 07:00 AM - 07:30 AM  
+  **Organizer:** SmartAdmin
+
+- **Event:** Sprint review — Arne Albrecht  
+  **Date:** 8 May 2026  
+  **Time:** 12:00 PM - 01:00 PM  
+  **Organizer:** SmartAdmin
+
+- **Event:** supplier1 — Q2 Delivery Review  
+  **Date:** 10 May 2026  
+  **Time:** 08:00 AM - 09:00 AM  
+  **Organizer:** SmartAdmin
+
+- **Event:** GreenTech Solutions — Technical Qualification Call  
+  **Date:** 12 May 2026  
+  **Time:** 09:00 AM - 10:00 AM  
+  **Organizer:** SmartAdmin
+
+- **Event:** Colruyt Group — SmartSales Rollout Kickoff  
+  **Date:** 15 May 2026  
+  **Time:** 12:00 PM - 01:30 PM  
+  **Organizer:** SmartAdmin

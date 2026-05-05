@@ -1,0 +1,74 @@
+{
+  "user_query": "Take the sender of my most recent email, look them up in Salesforce as a contact or lead, and check if their company has a SmartSales location.",
+  "plan": {
+    "query": "Take the sender of my most recent email, look them up in Salesforce as a contact or lead, and check if their company has a SmartSales location.",
+    "reasoning": "The query involves fetching email details related to the sender, looking them up in Salesforce for contact or lead information, and afterwards checking for the associated SmartSales location. This requires a structured approach with distinct steps for each action.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the sender of the most recent email in my inbox.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Using the sender's email address from step 1, check if they exist as a contact or lead in Salesforce.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Determine if the company associated with the contact or lead from step 2 has a registered SmartSales location.",
+        "depends_on": [
+          2
+        ]
+      }
+    ],
+    "synthesis": "Combine the results from steps 1, 2, and 3 to provide a complete overview of the sender, their details in Salesforce, and the status of their company's SmartSales location."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the sender of the most recent email in my inbox.",
+      "started_at": "2026-05-04T13:34:57.910483+00:00",
+      "ended_at": "2026-05-04T13:35:01.234703+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_email"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "[Result from step 1]:\nThe sender of the most recent email in your inbox is:\n\n- **Name**: Microsoft\n- **Email**: microsoft-noreply@microsoft.com\n\n[Task]:\nUsing the sender's email address from step 1, check if they exist as a contact or lead in Salesforce.",
+      "started_at": "2026-05-04T13:35:01.273424+00:00",
+      "ended_at": "2026-05-04T13:35:03.748654+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "find_contacts",
+        "find_leads"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "[Result from step 2]:\n[]\n\n[Task]:\nDetermine if the company associated with the contact or lead from step 2 has a registered SmartSales location.",
+      "started_at": "2026-05-04T13:35:03.839858+00:00",
+      "ended_at": "2026-05-04T13:35:06.001005+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce)...
+️Executing (graph, smartsales)...
+Synthesizing...
+### Overview of the Top Open Deal
+
+#### Deal Details
+- **Deal Name:** Anheuser-Busch InBev — Distribution Network Mapping
+- **Stage:** Qualification
+- **Amount:** $520,000
+- **Close Date:** 15 September 2026
+- **Account Name:** Anheuser-Busch InBev
+
+#### Related Accounts
+- **Anheuser-Busch InBev**
+  - **Industry:** Food & Beverage
+  - **Website:** [ab-inbev.com](https://www.ab-inbev.com)
+
+- **Delhaize Group**
+  - **Industry:** Retail
+  - **Website:** [delhaize.be](https://www.delhaize.be)
+
+- **Colruyt Group**
+  - **Stage for Related Deal:** Proposal/Price Quote
+  - **Close Date for Related Deal:** 30 September 2026
+  
+#### Contacts Related to the Deal (From Other Opportunities)
+- **Arne Albrecht**
+  - Email: a.albrecht@easi.net
+
+- **Dorian Feaux**
+  - Email: d.feaux@easi.net
+
+- **Marc Supplier**
+  - Email: marc.supplier@supplier1.be
+
+#### Communications and Location Information
+- **Communications:** 
+  - No emails or calendar events were found related to the top open deal with Anheuser-Busch InBev.
+
+- **Location Information:**
+  - No location details were found for the accounts associated with the top open deal.
+
+This summary provides a comprehensive view of the top open deal and its related entities. Let me know if you need further information or another specific aspect!

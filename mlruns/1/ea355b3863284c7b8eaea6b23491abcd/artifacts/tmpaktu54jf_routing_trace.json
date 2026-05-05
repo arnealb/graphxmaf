@@ -1,0 +1,84 @@
+{
+  "user_query": "What is the full picture of our top open deal?",
+  "plan": {
+    "query": "What is the full picture of our top open deal?",
+    "reasoning": "The query requires an overview of the top open deal, which involves commercial relationship data from Salesforce, potential communication history from Graph, and any relevant location information from Smartsales. Therefore, all available agents will be used to gather a comprehensive view.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch the details of the top open deal, including associated accounts, contacts, and opportunities.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "graph",
+        "task": "Search for any emails or calendar events related to the account or contacts involved in the top open deal from step 1.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Look up the physical location or store information related to the account associated with the top open deal from step 1.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the results from steps 1, 2, and 3 to provide a comprehensive overview of the top open deal, including details about the deal, related correspondence, and location information."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Fetch the details of the top open deal, including associated accounts, contacts, and opportunities.",
+      "started_at": "2026-05-04T14:21:45.329076+00:00",
+      "ended_at": "2026-05-04T14:21:54.129136+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_opportunities",
+        "find_accounts",
+        "find_contacts"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "[Result from step 1]:\n```json\n[\n    {\n        \"tool\": \"functions.get_opportunities\",\n        \"result\": [\n            {\n                \"id\": \"006KI000005bIGNYA2\",\n                \"name\": \"Anheuser-Busch InBev — Distribution Network Mapping\",\n                \"stage\": \"Qualification\",\n                \"amount\": 520000.0,\n                \"close_date\": \"2026-09-15\",\n                \"account_name\": \"Anheuser-Busch InBev\",\n                \"probability\": null,\n                \"type\": null,\n                \"lead_source\": null,\n                \"forecast_category\": null,\n                \"description\": null,\n                \"created_date\": null,\n                \"last_modified_date\": null\n            }\n        ]\n    },\n    {\n        \"tool\": \"functions.find_accounts\",\n        \"result\": [\n            {\n                \"id\": \"001KI00000N80nRYAR\",\n                \"name\": \"Anheuser-Busch InBev\",\n                \"industry\": \"Food & Beverage\",\n                \"website\": \"https://www.ab-inbev.com\",\n                \"phone\": null,\n                \"type\": null,\n                \"billing_street\": null,\n                \"billing_city\": null,\n                \"billing_state\": null,\n                \"billing_postal_code\": null,\n                \"billing_country\": null,\n                \"number_of_employees\": null,\n                \"annual_revenue\": null,\n                \"description\": null,\n                \"created_date\": null,\n                \"last_modified_date\": null\n            }\n        ]\n    },\n    {\n        \"tool\": \"functions.find_contacts\",\n        \"result\": [\n            {\n                \"id\": \"003KI000009uzRbYAI\",\n                \"first_name\": \"Arne\",\n                \"last_name\": \"Albrecht\",\n                \"email\": \"a.albrecht@easi.net\",\n                \"account_name\": \"EASI\",\n                \"phone\": null,\n                \"mobile_phone\": null,\n                \"title\": null,\n                \"department\": null,\n                \"mailing_street\": null,\n                \"mailing_city\": null,\n                \"mailing_state\": null,\n                \"mailing_postal_code\": null,\n                \"mailing_country\": null,\n                \"lead_source\": null,\n                \"created_date\": null\n            },\n            {\n                \"id\": \"003KI00000964NyYAI\",\n                \"first_name\": \"John\",\n                \"last_name\": \"lastname\",\n                \"email\": \"john.lastname@globalmedia.com\",\n                \"account_name\": \"Global Media\",\n                \"phone\": null,\n                \"mobile_phone\": null,\n                \"title\": null,\n                \"department\": null,\n                \"mailing_street\": null,\n                \"mailing_city\": null,\n                \"mailing_state\": null,\n                \"mailing_postal_code\": null,\n                \"mailing_country\": null,\n                \"lead_source\": null,\n                \"created_date\": null\n            },\n            {\n                \"id\": \"003KI00000964NzYAI\",\n                \"first_name\": \"testaccount\",\n                \"last_name\": \"francestuff\",\n                \"email\": \"test.testaccount@grandpa.com\",\n                \"account_name\": \"account in france\",\n                \"phone\": null,\n                \"mobile_phone\": null,\n                \"title\": null,\n                \"department\": null,\n                \"mailing_street\": null,\n                \"mailing_city\": null,\n                \"mailing_state\": null,\n                \"mailing_postal_code\": null,\n                \"mailing_country\": null,\n                \"lead_source\": null,\n                \"created_date\": null\n            }\n        ]\n    }\n]\n```\n\n[Task]:\nLook up the physical location or store information related to the account associated with the top open deal from step 1.",
+      "started_at": "2026-05-04T14:21:54.171508+00:00",
+      "ended_at": "2026-05-04T14:22:00.464463+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 4,
+      "tool_calls": [
+        "list_locations",
+        "list_locations",
+        "list_locations"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 2,
+      "input": "[Result from step 1]:\n```json\n[\n    {\n        \"tool\": \"functions.get_opportunities\",\n        \"result\": [\n            {\n                \"id\": \"006KI000005bIGNYA2\",\n                \"name\": \"Anheuser-Busch InBev — Distribution Network Mapping\",\n                \"stage\": \"Qualification\",\n                \"amount\": 520000.0,\n                \"close_date\": \"2026-09-15\",\n                \"account_name\": \"Anheuser-Busch InBev\",\n                \"probability\": null,\n                \"type\": null,\n                \"lead_source\": null,\n                \"forecast_category\": null,\n                \"description\": null,\n                \"created_date\": null,\n                \"last_modified_date\": null\n            }\n        ]\n    },\n    {\n        \"tool\": \"functions.find_accounts\",\n        \"result\": [\n            {\n                \"id\": \"001KI00000N80nRYAR\",\n                \"name\": \"Anheuser-Busch InBev\",\n                \"industry\": \"Food & Beverage\",\n                \"website\": \"https://www.ab-inbev.com\",\n                \"phone\": null,\n                \"type\": null,\n                \"billing_street\": null,\n                \"billing_city\": null,\n                \"billing_state\": null,\n                \"billing_postal_code\": null,\n                \"billing_country\": null,\n                \"number_of_employees\": null,\n                \"annual_revenue\": null,\n                \"description\": null,\n                \"created_date\": null,\n                \"last_modified_date\": null\n            }\n        ]\n    },\n    {\n        \"tool\": \"functions.find_contacts\",\n        \"result\": [\n            {\n                \"id\": \"003KI000009uzRbYAI\",\n                \"first_name\": \"Arne\",\n                \"last_name\": \"Albrecht\",\n                \"email\": \"a.albrecht@easi.net\",\n                \"account_name\": \"EASI\",\n                \"phone\": null,\n                \"mobile_phone\": null,\n                \"title\": null,\n                \"department\": null,\n                \"mailing_street\": null,\n                \"mailing_city\": null,\n                \"mailing_state\": null,\n                \"mailing_postal_code\": null,\n                \"mailing_country\": null,\n                \"lead_source\": null,\n                \"created_date\": null\n            },\n            {\n                \"id\": \"003KI00000964NyYAI\",\n                \"first_name\": \"John\",\n                \"last_name\": \"lastname\",\n                \"email\": \"john.lastname@globalmedia.com\",\n                \"account_name\": \"Global Media\",\n                \"phone\": null,\n                \"mobile_phone\": null,\n                \"title\": null,\n                \"department\": null,\n                \"mailing_street\": null,\n                \"mailing_city\": null,\n                \"mailing_state\": null,\n                \"mailing_postal_code\": null,\n                \"mailing_country\": null,\n                \"lead_source\": null,\n                \"created_date\": null\n            },\n            {\n                \"id\": \"003KI00000964NzYAI\",\n                \"first_name\": \"testaccount\",\n                \"last_name\": \"francestuff\",\n                \"email\": \"test.testaccount@grandpa.com\",\n                \"account_name\": \"account in france\",\n                \"phone\": null,\n                \"mobile_phone\": null,\n                \"title\": null,\n                \"department\": null,\n                \"mailing_street\": null,\n                \"mailing_city\": null,\n                \"mailing_state\": null,\n                \"mailing_postal_code\": null,\n                \"mailing_country\": null,\n                \"lead_source\": null,\n                \"created_date\": null\n            }\n        ]\n    }\n]\n```\n\n[Task]:\nSearch for any emails or calendar events related to the account or contacts involved in the top open deal from step 1.",
+      "started_at": "2026-05-04T14:21:54.169536+00:00",
+      "ended_at": "2026-05-04T14:22:39.085615+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "search_calendar",
+        "search_email",
+        "search_calendar",
+        "search_email",
+        "search_calendar",
+        "search_email",
+        "search_calendar"
+      ]
+    }
+  ]
+}

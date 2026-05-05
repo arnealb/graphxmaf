@@ -1,0 +1,36 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are 5 leads retrieved from Salesforce:
+
+1. **Bert Coppens**
+   - **ID:** 00QKI000002KQCj2AO
+   - **Company:** another-company
+   - **Status:** New
+   - **Email:** Not provided
+
+2. **Arne Albrecht**
+   - **ID:** 00QKI000002KPFT2A4
+   - **Company:** easi_dupe
+   - **Status:** Contacted
+   - **Email:** albrecht.arne@gmail.com
+
+3. **Another Lead**
+   - **ID:** 00QKI000002KPEZ2A4
+   - **Company:** another-company
+   - **Status:** New
+   - **Email:** mr.another.lead@gmail.com
+
+4. **Open Leada**
+   - **ID:** 00QKI000002KMUE2A4
+   - **Company:** bakery of sam
+   - **Status:** New
+   - **Email:** Not provided 
+
+5. **Ur Moms Lead**
+   - **ID:** 00QKI000002KMU92AO
+   - **Company:** grandmas bakery
+   - **Status:** Not fully retrieved (incomplete data)
+
+Please note that some leads have missing contact information such as phone numbers and emails.

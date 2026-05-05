@@ -1,0 +1,45 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is a summary of everything related to Belgium across your systems:
+
+### Email
+- **Subject**: Belgium region — Q1 2026 commercial summary
+  - **Sender**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Received Date**: 28 April 2026
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7tAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### Documents
+- **Legal Documents**: 
+  - Data Processing Agreement (DPA) and Service Level Agreement (SLA) governed by Belgian law.
+  - Disputes related to these agreements submitted to the Brussels Commercial Court.
+
+### Salesforce Data
+- **Accounts**:
+  - **Anheuser-Busch InBev**: [Website](https://www.ab-inbev.com)
+  - **Delhaize Group**: [Website](https://www.delhaize.be)
+  - **Carrefour Belgium SA**: [Website](https://www.carrefour.be)
+  - **Colruyt Group**: [Website](https://www.colruytgroup.com)
+
+- **Leads in Belgium**:
+  - Bert Coppens from another-company (Status: New)
+  - Arne Albrecht from easi_dupe (Status: Contacted)
+
+### SmartSales Data
+- **Locations in Belgium**:
+  - **AACO DAVIDSON**: Located in Leuven (Zip: 3000)
+  - **Michelles Brasserie**: Located in Izegem (Zip: 8870)
+  - **AB InBev - Leuven**: Located in Leuven (Zip: 3000)
+  - **AD Delhaize - Forest**: Located in Brussels (Zip: 1190)
+  - **Colruyt - Halle**: Located in Halle (Zip: 1500)
+  - **Customer1**: Located in Bruges (Zip: 8000)
+  - **CRF - Anderlecht**: Located in Brussels (Zip: 1070)
+
+- **Catalog Items Related to Belgium**:
+  - **Nutella 750g**: Price $5.99
+  - **AB InBev — Distribution Mapping License**: Price $8,750.00
+  - **Delhaize — EDI Connector Pack**: Price $1,200.00
+  - **Colruyt House Brand — Retail Display Kit**: Price $89.50
+
+This overview captures the relevant data regarding Belgium from across the specified systems.

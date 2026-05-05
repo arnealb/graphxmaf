@@ -1,0 +1,21 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+### Summary of Next Calendar Event and Activities
+
+- **Event Title:** Weekly sync
+- **Start Time:** 6 May 2026, 07:00 AM
+- **End Time:** 6 May 2026, 07:30 AM
+- **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+#### Associated Activities
+- **Emails:** No emails found related specifically to this event.
+- **Documents:** No relevant documents found directly related to the event, but the following unrelated documents were indexed:
+  - Business Continuity Plan
+  - Maintenance Contract
+  - Incident Management Procedure
+  - Procurement Procedure
+  - Remote Work Policy
+
+If you need further assistance or information about any of the documents listed, please let me know!

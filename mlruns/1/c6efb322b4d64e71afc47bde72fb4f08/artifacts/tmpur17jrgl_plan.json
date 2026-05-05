@@ -1,0 +1,13 @@
+{
+  "query": "List SmartSales catalog items with simple projection, sorted by name.",
+  "reasoning": "The query specifically asks for catalog items, which falls under the domain of the smartsales agent. A single step to fetch the relevant data is sufficient.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Fetch all catalog items with a simple projection and sort them by name.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the sorted list of catalog items retrieved from the smartsales agent."
+}

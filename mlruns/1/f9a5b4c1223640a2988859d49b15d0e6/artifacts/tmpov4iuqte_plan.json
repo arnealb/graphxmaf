@@ -1,0 +1,25 @@
+{
+  "query": "Give me a full briefing on Colruyt.",
+  "reasoning": "The query seeks comprehensive information about Colruyt, which necessitates the use of all available agents to gather insights from different perspectives, including CRM data, communication history, and relevant documentation.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for emails and calendar events related to Colruyt, and gather any internal company documents stored in OneDrive that mention Colruyt.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Retrieve all CRM accounts, contacts, leads, opportunities, and cases associated with Colruyt.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Gather information about the physical locations, store or site information, and product catalog related to Colruyt.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all three steps to create a comprehensive briefing on Colruyt, ensuring to include insights from emails, calendar events, CRM data, and physical locations."
+}

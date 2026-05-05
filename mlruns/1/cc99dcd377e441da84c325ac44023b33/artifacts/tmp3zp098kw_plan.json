@@ -1,0 +1,13 @@
+{
+  "query": "Show me Salesforce leads with the status 'New'.",
+  "reasoning": "The query specifically asks for leads within Salesforce, focusing on a particular status. Therefore, only the Salesforce agent is needed to fetch this information directly.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all leads from Salesforce that have the status 'New'.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the leads retrieved from Salesforce in response to the user's query."
+}

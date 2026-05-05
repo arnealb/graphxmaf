@@ -1,0 +1,102 @@
+{
+  "plan": {
+    "latency_s": 4.019,
+    "steps": 3,
+    "input_tokens": 1340,
+    "output_tokens": 267,
+    "total_tokens": 1607
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "salesforce",
+      "latency_s": 13.368,
+      "llm_turns": 2,
+      "n_tool_calls": 1,
+      "tool_calls": [
+        "get_cases"
+      ],
+      "input_tokens": 3969,
+      "output_tokens": 1384,
+      "total_tokens": 5353
+    },
+    {
+      "step_id": 2,
+      "agent": "graph",
+      "latency_s": 30.067,
+      "llm_turns": 2,
+      "n_tool_calls": 24,
+      "tool_calls": [
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_documents",
+        "search_documents",
+        "search_documents",
+        "search_documents",
+        "search_documents",
+        "search_documents",
+        "search_documents",
+        "search_documents"
+      ],
+      "input_tokens": 5104,
+      "output_tokens": 1123,
+      "total_tokens": 6227
+    },
+    {
+      "step_id": 3,
+      "agent": "smartsales",
+      "latency_s": 32.625,
+      "llm_turns": 4,
+      "n_tool_calls": 24,
+      "tool_calls": [
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items"
+      ],
+      "input_tokens": 17481,
+      "output_tokens": 2936,
+      "total_tokens": 20417
+    }
+  ],
+  "synthesis": {
+    "latency_s": 8.35,
+    "input_tokens": 4543,
+    "output_tokens": 740,
+    "total_tokens": 5283
+  }
+}

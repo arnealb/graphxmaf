@@ -1,0 +1,31 @@
+{
+  "user_query": "Show me my Microsoft 365 contacts.",
+  "plan": {
+    "query": "Show me my Microsoft 365 contacts.",
+    "reasoning": "The user is requesting their contacts from the Microsoft 365 platform, which aligns with the capabilities of the graph agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Fetch the user's personal Outlook contacts from Microsoft 365.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of contacts retrieved from the graph agent."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Fetch the user's personal Outlook contacts from Microsoft 365.",
+      "started_at": "2026-05-04T13:32:18.979890+00:00",
+      "ended_at": "2026-05-04T13:32:27.183256+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_contacts"
+      ]
+    }
+  ]
+}

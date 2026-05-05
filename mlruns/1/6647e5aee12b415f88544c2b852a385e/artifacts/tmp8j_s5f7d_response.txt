@@ -1,0 +1,40 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+To calculate the total order value for companies that currently have an open support case, the relevant results were retrieved and analyzed.
+
+### Support Cases (From Salesforce):
+- **Delhaize Group** - Case number: 00001023
+- **Carrefour Belgium SA** - Case number: 00001022
+- **Colruyt Group** - Case number: 00001021
+- **supplier1** - Case number: 00001020
+- **Easi Be** - Case number: 00001018
+- **Easi Be** - Case number: 00001017
+- **Pairi Daiza** - Case number: 00001006
+- **Pairi Daiza** - Case number: 00001005
+- **Omega SA-NV** - Case number: 00001003
+- **Pairi Daiza** - Case number: 00001001
+
+### Relevant Opportunities (From Salesforce):
+- **Colruyt Group** - Amount: 220,000.0
+- **Carrefour Belgium SA** - Amount: 175,000.0
+- **Delhaize Group** - Amount: 310,000.0
+- **supplier1** - Amount: 85,000.0
+- **Omega SA-NV** - Amount: 45,000.0
+- **Pairi Daiza** - Amount: (three cases) with different amounts
+
+### Total Order Value Calculation:
+- Colruyt Group: 220,000.0
+- Carrefour Belgium SA: 175,000.0
+- Delhaize Group: 310,000.0
+- supplier1: 85,000.0
+- Omega SA-NV: 45,000.0
+- Pairi Daiza (from Opportunities): 0 from the single orders noted (no total available from opportunities)
+
+### Total:
+\[ 
+220,000 + 175,000 + 310,000 + 85,000 + 45,000 = 835,000.0 
+\]
+
+Thus, the total order value for companies that currently have an open support case is **835,000.0**.

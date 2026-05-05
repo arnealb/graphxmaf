@@ -1,0 +1,13 @@
+{
+  "query": "List 5 open opportunities in Salesforce.",
+  "reasoning": "The query specifically requests data related to open opportunities, which falls under the CRM scope. Thus, I will use the Salesforce agent to retrieve this information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve a list of 5 open opportunities from Salesforce.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of open opportunities retrieved from Salesforce."
+}

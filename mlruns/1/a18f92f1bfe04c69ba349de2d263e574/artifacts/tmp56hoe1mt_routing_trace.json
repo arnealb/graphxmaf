@@ -1,0 +1,76 @@
+{
+  "user_query": "What do we know about GreenTech Solutions?",
+  "plan": {
+    "query": "What do we know about GreenTech Solutions?",
+    "reasoning": "The query requires a comprehensive view of GreenTech Solutions, pulling information from all available agents to cover aspects related to communications, CRM data, and physical locations.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Search for emails, calendar events, and documents related to GreenTech Solutions.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Look up CRM accounts, contacts, leads, opportunities, and cases associated with GreenTech Solutions.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Retrieve location information and product catalog related to GreenTech Solutions.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine results from steps 1, 2, and 3 to create a comprehensive overview of GreenTech Solutions."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "Retrieve location information and product catalog related to GreenTech Solutions.",
+      "started_at": "2026-05-04T13:54:03.676272+00:00",
+      "ended_at": "2026-05-04T13:54:06.056195+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Look up CRM accounts, contacts, leads, opportunities, and cases associated with GreenTech Solutions.",
+      "started_at": "2026-05-04T13:54:03.673969+00:00",
+      "ended_at": "2026-05-04T13:54:10.716180+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "find_accounts",
+        "find_contacts",
+        "find_leads",
+        "get_opportunities",
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Search for emails, calendar events, and documents related to GreenTech Solutions.",
+      "started_at": "2026-05-04T13:54:03.671317+00:00",
+      "ended_at": "2026-05-04T13:54:16.461719+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "search_calendar",
+        "search_documents"
+      ]
+    }
+  ]
+}

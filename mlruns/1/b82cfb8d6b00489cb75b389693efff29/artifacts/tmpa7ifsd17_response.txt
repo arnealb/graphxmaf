@@ -1,0 +1,53 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Overview of Information Related to Arne Albrecht
+
+**1. Email Correspondence:**
+- Arne Albrecht has sent several emails, all dated in April 2026:
+  - **Aankoop office supplies** (13 April) - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOJ%2FAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+  - **Vraag over vertraagde levering** (13 April) - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKAAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+  - **Voorstel voor kort overleg** (13 April) - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKBAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+  - **Question about delayed delivery** (13 April) - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKDAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+  - **Proposal for a short meeting** (13 April) - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKEAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+  - **Question regarding invoice** (13 April) - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKCAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+  - **Accepted: meeting about numbers** (16 April) - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANR%2BIE1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+  - **Test emails** (20 April, 23 April, 27 April) covering topics such as possible orders and delivery issues.
+
+**2. Salesforce CRM Data:**
+- **Contacts**:
+  - **Arne Albrecht**:  
+    - **Email**: a.albrecht@easi.net  
+    - **Company**: EASI  
+    - **Title**: Business Analyst  
+  - **Arne Albrecht**:  
+    - **Email**: albrecht.arne@gmail.com  
+    - **Company**: Displaytech  
+- **Leads**: 
+  - **Email**: albrecht.arne@gmail.com  
+  - **Status**: Contacted  
+  - **Phone**: 0472700991  
+- **Accounts**:
+  - **EASI**
+  - **Displaytech**
+- **Cases**: 
+  - Multiple cases related to Easi Be with varying statuses (e.g., "In progress", "New", "Closed").
+
+**3. SmartSales Location and Catalog:**
+- **Location**:  
+  - **Name**: Arne Albrecht  
+  - **Address**: Lippenslaan 347, Knokke, Belgium  
+  - **Latitude**: 51.3518122, **Longitude**: 3.2887656  
+- **Catalog Items**: Various items including:
+  - **IT Hardware**: 
+    - USB-C Docking Station: €249.00 (in stock)
+    - Wireless Headset UC: €189.50 (in stock)
+    - Ergonomic Keyboard: €129.00 (in stock)
+    - Business Laptop Pro 15: €1,299.99 (in stock)
+    - Software License Pack: €499.00 (in stock)
+  - **Spreads**: 
+    - Nutella 750g: €5.99 (in stock)
+
+### Conclusion
+The information reveals that Arne Albrecht is involved in multiple business communications, maintains connections with different accounts, and engages with various products and services. For additional details or specific inquiries, please refer to the provided emails or account entries in Salesforce.

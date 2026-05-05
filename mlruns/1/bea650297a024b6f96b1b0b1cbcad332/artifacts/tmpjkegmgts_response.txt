@@ -1,0 +1,32 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Overview of Dorian
+
+**Name:** Dorian Feaux  
+**Role:** Likely a collaborator associated with EASI 
+
+#### Communication History
+- **Emails:**
+  - **New Transport Order Request**
+    - **From:** Dorian Feaux (D.Feaux@easi.net)
+    - **Sent on:** 11 December 2025
+  - **Collaboration Proposal**
+    - **From:** Dorian FÉAUX
+    - **Sent on:** 28 April 2026
+- **Calendar Events:**
+  - **Weekly sync with Dorian**
+    - **Date:** 6 May 2026, 07:00 AM - 07:30 AM
+  - Additional meetings after sync include various project reviews and kickoff meetings indicating ongoing collaboration.
+
+#### Commercial Relationships
+- **Company:** Dorian is associated with **EASI**. However, no specific details about the company's industry or commercial deals were retrieved from Salesforce.
+  
+#### Locations
+- No specific locations related to Dorian or EASI were found in SmartSales.
+
+### Summary
+Dorian Feaux is an active collaborator primarily associated with EASI. Communication includes email requests and a scheduled weekly sync. There are no commercial opportunities or cases recorded in Salesforce, and no location data was provided. 
+
+If you need more information or further assistance, please let me know!

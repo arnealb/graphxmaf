@@ -1,0 +1,73 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Here is the comprehensive overview of the attendees you have meetings with this week:
+
+### 1. Arne Albrecht
+- **Email addresses**:
+  - albrecht.arne@gmail.com
+  - a.albrecht@easi.net
+- **Accounts**:
+  - Displaytech
+  - EASI 
+- **Locations**:
+  - **Address**: Lippenslaan 347, Knokke, 8300, Belgium
+- **Meeting subjects**:
+  - Weekly sync
+  - Sprint review
+  - Meeting about numbers or something
+- **Additional information**: 
+  - No phone or title information available from the systems.
+
+From Graph: 
+  - Weekly sync — Dorian Feaux
+  - Sprint review — Arne Albrecht (multiple entries)
+  
+From Salesforce: 
+  - Displaytech and EASI account details.
+
+From SmartSales: 
+  - Location details in Knokke, Belgium.
+
+---
+
+### 2. John Lastname
+- **Email**: john.lastname@globalmedia.com
+- **Account**: Global Media
+- **Meeting subject**: Meeting
+- **Additional information**: 
+  - No phone or title information available from the systems.
+
+From Graph: 
+  - Meeting regarding John Lastname.
+
+From Salesforce: 
+  - Global Media account details.
+
+---
+
+### 3. ur mom
+- **Email**: ur.mom@grandpa.com
+- **Locations**:
+  - **Address**: Rue de France 1, Brussels, 1000, Belgium
+- **Meeting subject**: zup me de boys
+- **Additional information**: 
+  - No phone or title information available from the systems.
+
+From Graph: 
+  - Meeting regarding ur mom.
+
+From SmartSales: 
+  - Location details in Brussels, Belgium.
+
+---
+
+### Summary
+- **Meetings This Week**: 
+  - Arne Albrecht (multiple contacts and meetings)
+  - John Lastname
+  - ur mom
+
+All attendees have been accounted for with the available data. If you need further details on any individual, please specify!

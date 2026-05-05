@@ -1,0 +1,25 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+### Companies Without Registered Location
+
+Based on the emails received and the absence of location data from Salesforce, the following companies that emailed you recently do not seem to have a location registered:
+
+- Microsoft (Email: microsoft-noreply@microsoft.com)
+- Microsoft Security (Email: MSSecurity-noreply@microsoft.com)
+- Enterprise (Email: Enterprise@easigroupdemo.onmicrosoft.com)
+- Microsoft Power Automate (Email: flow-noreply@microsoft.com)
+- Microsoft Power Automate (Email: flow-noreply@microsoft.com)
+- Microsoft Power Automate (Email: PowerAutomateNoReply@microsoft.com)
+- Proximus Business (Email: info@proximus.be)
+- AB InBev Sales (Email: sales@ab-inbev.com)
+- Delhaize Procurement (Email: procurement@delhaize.eu)
+- AD Delhaize IT (Email: it@delhaize.eu)
+- CRF Belgium Procurement (Email: procurement@carrefour-be.eu)
+- Carrefour BE Operations (Email: ops@carrefour-be.eu)
+
+### Summary
+- **Total Companies Reviewed**: 12
+- **Companies Without Registered Locations**: 12

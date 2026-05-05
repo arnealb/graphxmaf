@@ -1,0 +1,26 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce)...
+️Executing (graph, smartsales)...
+Synthesizing...
+### Overview of Delhaize Group
+
+- **Company Information:**
+  - **Name:** Delhaize Group
+  - **Industry:** Retail
+  - **Website:** [delhaize.be](https://www.delhaize.be)
+
+- **Support Case Details:**
+  - **Case Number:** 00001023
+  - **Subject:** EDI connection issue
+  - **Status:** Working
+  - **Priority:** Medium
+  - **Created Date:** 28 April 2026
+
+- **Communication History:** 
+  - No relevant email or calendar event records found regarding Delhaize Group.
+
+- **Contacts:** 
+  - No contacts associated with Delhaize Group found in the CRM data.
+
+This summary provides a complete view of the current support case, company background, and available communication history for Delhaize Group.

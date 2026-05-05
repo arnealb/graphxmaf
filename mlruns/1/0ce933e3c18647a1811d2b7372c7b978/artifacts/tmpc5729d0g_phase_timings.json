@@ -1,0 +1,36 @@
+{
+  "plan": {
+    "latency_s": 3.258,
+    "steps": 1,
+    "input_tokens": 1026,
+    "output_tokens": 158,
+    "total_tokens": 1184
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "graph",
+      "latency_s": 14.407,
+      "llm_turns": 3,
+      "n_tool_calls": 7,
+      "tool_calls": [
+        "whoami",
+        "list_contacts",
+        "search_documents",
+        "findpeople",
+        "findpeople",
+        "findpeople",
+        "findpeople"
+      ],
+      "input_tokens": 3766,
+      "output_tokens": 547,
+      "total_tokens": 4313
+    }
+  ],
+  "synthesis": {
+    "latency_s": 3.777,
+    "input_tokens": 746,
+    "output_tokens": 245,
+    "total_tokens": 991
+  }
+}

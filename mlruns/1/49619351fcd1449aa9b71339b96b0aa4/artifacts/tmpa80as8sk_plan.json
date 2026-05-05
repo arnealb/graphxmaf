@@ -1,0 +1,13 @@
+{
+  "query": "Give me a summary of all activity related to my next calendar event.",
+  "reasoning": "The user is asking for information regarding their next calendar event, which falls under the domain of personal scheduling and communication history. The appropriate agent to handle this request is the graph agent, as it can access the user's calendar events.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the next calendar event and summarize its details, including related emails and any documents linked to it.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the summary of the next calendar event along with the associated activities."
+}

@@ -1,0 +1,89 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Based on the provided information:
+
+### Accounts with Active Deals (From Salesforce):
+1. **Anheuser-Busch InBev**
+   - Industry: Food & Beverage
+   - Website: [ab-inbev.com](https://www.ab-inbev.com)
+2. **Delhaize Group**
+   - Industry: Retail
+   - Website: [delhaize.be](https://www.delhaize.be)
+3. **Carrefour Belgium SA**
+   - Industry: Retail
+   - Website: [carrefour.be](https://www.carrefour.be)
+4. **Brussels Retail Partners**
+   - Industry: Retail
+5. **Ferrero Benelux**
+   - Industry: Food & Beverage
+6. **GreenTech Solutions**
+   - Industry: Technology
+   - Website: [greentechsolutions.be](https://www.greentechsolutions.be)
+7. **Colruyt Group**
+   - Industry: Retail
+   - Website: [colruytgroup.com](https://www.colruytgroup.com)
+8. **supplier1**
+9. **cityaccount**
+   - Website: [google.com](http://www.google.com)
+10. **account in france**
+    - Industry: Technology
+    - Website: [google.com](http://www.google.com)
+11. **abs**
+12. **Omega SA-NV**
+    - Industry: Technology
+    - Website: [omegaincorporated.com](http://www.omegaincorporated.com)
+13. **Summit Resellers**
+    - Industry: Technology
+    - Website: [ctwresellers.com](http://www.ctwresellers.com)
+14. **Umedia**
+15. **Silodyne Company**
+    - Industry: Healthcare & Life Sciences
+    - Website: [silodyne.com](http://www.silodyne.com)
+16. **Roseburg Products**
+    - Industry: Manufacturing
+    - Website: [roseburgproducts.net](http://www.roseburgproducts.net)
+17. **Tyconet**
+    - Industry: Financial Services
+    - Website: [tyconet.net](http://www.tyconet.net)
+18. **Towson Inc.**
+    - Industry: Retail
+    - Website: [towsoninc.com](http://www.towsoninc.com)
+19. **Southern Solutions**
+    - Industry: Technology
+    - Website: [southernresearchco.com](http://www.southernresearchco.com)
+20. **Tech Labs**
+    - Industry: Technology
+    - Website: [techlabsinc.com](http://www.techlabsinc.com)
+21. **Test**
+    - Industry: Technology
+    - Website: [acmepartners.com](http://www.acmepartners.com)
+22. **Valley Supply Inc.**
+    - Industry: Manufacturing
+    - Website: [valleysupplyinc.net](http://www.valleysupplyinc.net)
+23. **Universal Containers**
+    - Industry: Manufacturing
+    - Website: [universalcontainers.net](http://www.universalcontainers.net)
+24. **Zenith Distributors**
+    - Industry: Technology
+    - Website: [zenithdistributors.com](http://www.zenithdistributors.com)
+25. **Upstyle Inc.**
+    - Industry: Retail
+    - Website: [stylesandsound.com](http://www.stylesandsound.com)
+
+### Accounts with Recent Orders (From SmartSales):
+- **Anheuser-Busch InBev**: Order on 28 April 2026 (Order: ORD-ABI-2026-001)
+- **Delhaize Group**: Order on 28 April 2026 (Order: ORD-ADL-2026-001)
+- **Carrefour Belgium SA**: Order on 28 April 2026 (Order: ORD-CRF-2026-001)
+- **GreenTech Solutions**: Order on 28 April 2026 (Order: ORD-GTS-2026-001)
+- **Colruyt Group**: Order on 28 April 2026 (Order: ORD-COL-2026-001)
+
+### Summary of Accounts with Both Active Deals and Recent Orders:
+- **Anheuser-Busch InBev**
+- **Delhaize Group**
+- **Carrefour Belgium SA**
+- **GreenTech Solutions**
+- **Colruyt Group** 
+
+These accounts have both an active deal and a recent order.

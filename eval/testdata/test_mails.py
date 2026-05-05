@@ -45,93 +45,93 @@ We are actively working to resolve this and will provide an updated timeline sho
 Best regards,
 Marc Supplier
 supplier1""",
-    },
-    {
-        "from_name": "Marc Supplier",
-        "from_addr": "marc.supplier@supplier1.be",
-        "subject": "supplier1 — Updated pricing for H2 2026",
-        "body": """Dear team,
+    }
+#     {
+#         "from_name": "Marc Supplier",
+#         "from_addr": "marc.supplier@supplier1.be",
+#         "subject": "supplier1 — Updated pricing for H2 2026",
+#         "body": """Dear team,
 
-Please find below the updated pricing for supplier1 products, effective July 2026.
+# Please find below the updated pricing for supplier1 products, effective July 2026.
 
-Product PROD-SUP1-001 (Industrial Components Pack) will see a price adjustment starting July 2026. The formal contract amendment will follow next week.
+# Product PROD-SUP1-001 (Industrial Components Pack) will see a price adjustment starting July 2026. The formal contract amendment will follow next week.
 
-Best regards,
-Marc Supplier
-supplier1""",
-    },
-    {
-        "from_name": "Colruyt Group Procurement",
-        "from_addr": "procurement@colruyt.be",
-        "subject": "Colruyt Group — SmartSales pilot bevestiging",
-        "body": """Beste,
+# Best regards,
+# Marc Supplier
+# supplier1""",
+#     },
+#     {
+#         "from_name": "Colruyt Group Procurement",
+#         "from_addr": "procurement@colruyt.be",
+#         "subject": "Colruyt Group — SmartSales pilot bevestiging",
+#         "body": """Beste,
 
-Hierbij bevestigt Colruyt Group de deelname aan het SmartSales pilootproject.
+# Hierbij bevestigt Colruyt Group de deelname aan het SmartSales pilootproject.
 
-De piloot wordt opgezet vanuit onze vestiging in Halle. Het totale projectbudget bedraagt EUR 220,000, inclusief implementatie en eerste licentieperiode.
+# De piloot wordt opgezet vanuit onze vestiging in Halle. Het totale projectbudget bedraagt EUR 220,000, inclusief implementatie en eerste licentieperiode.
 
-Met vriendelijke groeten,
-Procurement Team
-Colruyt Group""",
-    },
-    {
-        "from_name": "GreenTech Solutions",
-        "from_addr": "info@greentechsolutions.be",
-        "subject": "GreenTech Solutions — Interest in sustainability dashboard",
-        "body": """Hello,
+# Met vriendelijke groeten,
+# Procurement Team
+# Colruyt Group""",
+#     },
+#     {
+#         "from_name": "GreenTech Solutions",
+#         "from_addr": "info@greentechsolutions.be",
+#         "subject": "GreenTech Solutions — Interest in sustainability dashboard",
+#         "body": """Hello,
 
-GreenTech Solutions, based in Ghent, is interested in your sustainability dashboard offering.
+# GreenTech Solutions, based in Ghent, is interested in your sustainability dashboard offering.
 
-We estimate a project scope of EUR 2,500 for the initial implementation phase. Could we schedule a call to discuss further?
+# We estimate a project scope of EUR 2,500 for the initial implementation phase. Could we schedule a call to discuss further?
 
-Kind regards,
-GreenTech Solutions
-Ghent""",
-    },
-    {
-        "from_name": "Ferrero Benelux Marketing",
-        "from_addr": "marketing@ferrero.be",
-        "subject": "Ferrero Benelux — Nutella spring campaign inquiry",
-        "body": """Dear team,
+# Kind regards,
+# GreenTech Solutions
+# Ghent""",
+#     },
+#     {
+#         "from_name": "Ferrero Benelux Marketing",
+#         "from_addr": "marketing@ferrero.be",
+#         "subject": "Ferrero Benelux — Nutella spring campaign inquiry",
+#         "body": """Dear team,
 
-Ferrero Benelux is planning a Nutella spring campaign centered around Brussels, featuring Nutella display jars as the key promotional item.
+# Ferrero Benelux is planning a Nutella spring campaign centered around Brussels, featuring Nutella display jars as the key promotional item.
 
-We would like to explore partnership opportunities for in-store activation.
+# We would like to explore partnership opportunities for in-store activation.
 
-Best regards,
-Ferrero Benelux Marketing""",
-    },
-    {
-        "from_name": "Dorian Feaux",
-        "from_addr": "d.feaux@easi.net",
-        "subject": "Intro: Dorian Feaux — EASI collaboration proposal",
-        "body": """Hi,
+# Best regards,
+# Ferrero Benelux Marketing""",
+#     },
+#     {
+#         "from_name": "Dorian Feaux",
+#         "from_addr": "d.feaux@easi.net",
+#         "subject": "Intro: Dorian Feaux — EASI collaboration proposal",
+#         "body": """Hi,
 
-My name is Dorian Feaux, reaching out from EASI at Avenue Louise 65, Brussels.
+# My name is Dorian Feaux, reaching out from EASI at Avenue Louise 65, Brussels.
 
-We see a strong opportunity to collaborate on upcoming enterprise software projects. Would you be open to a brief introductory call?
+# We see a strong opportunity to collaborate on upcoming enterprise software projects. Would you be open to a brief introductory call?
 
-Best,
-Dorian Feaux
-EASI — Avenue Louise 65, Brussels""",
-    },
-    {
-        "from_name": "SmartAdmin",
-        "from_addr": "smartadmin@easigroupdemo.onmicrosoft.com",
-        "subject": "Belgium region — Q1 2026 commercial summary",
-        "body": """Hi team,
+# Best,
+# Dorian Feaux
+# EASI — Avenue Louise 65, Brussels""",
+#     },
+#     {
+#         "from_name": "SmartAdmin",
+#         "from_addr": "smartadmin@easigroupdemo.onmicrosoft.com",
+#         "subject": "Belgium region — Q1 2026 commercial summary",
+#         "body": """Hi team,
 
-Q1 2026 commercial summary for the Belgium region:
+# Q1 2026 commercial summary for the Belgium region:
 
-- Total regional revenue: EUR 375,000
-- Active accounts: supplier1, Colruyt Group, Ferrero Benelux
-- Primary markets: Brussels and broader Belgium
+# - Total regional revenue: EUR 375,000
+# - Active accounts: supplier1, Colruyt Group, Ferrero Benelux
+# - Primary markets: Brussels and broader Belgium
 
-Brussels remains the strongest market. supplier1 and Colruyt drove the majority of Q1 volume. Ferrero showed renewed interest following recent campaign discussions.
+# Brussels remains the strongest market. supplier1 and Colruyt drove the majority of Q1 volume. Ferrero showed renewed interest following recent campaign discussions.
 
-Best regards,
-SmartAdmin""",
-    },
+# Best regards,
+# SmartAdmin""",
+#     },
 ]
 
 
@@ -306,8 +306,8 @@ def main():
     token = get_access_token()
     print("Token verkregen.\n")
 
-    # inject_emails(token)
-    inject_events(token)
+    inject_emails(token)
+    # inject_events(token)
     # inject_onedrive(token)
 
     print("=" * 60)

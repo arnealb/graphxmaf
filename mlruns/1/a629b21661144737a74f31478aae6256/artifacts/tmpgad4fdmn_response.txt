@@ -1,0 +1,27 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are 5 Salesforce accounts:
+
+- **Anheuser-Busch InBev**
+  - Industry: Food & Beverage
+  - Website: [ab-inbev.com](https://www.ab-inbev.com)
+
+- **Delhaize Group**
+  - Industry: Retail
+  - Website: [delhaize.be](https://www.delhaize.be)
+
+- **Carrefour Belgium SA**
+  - Industry: Retail
+  - Website: [carrefour.be](https://www.carrefour.be)
+
+- **Brussels Retail Partners**
+  - Industry: Retail
+  - Website: Not available
+
+- **Ferrero Benelux**
+  - Industry: Food & Beverage
+  - Website: Not available
+
+These accounts were retrieved from Salesforce.

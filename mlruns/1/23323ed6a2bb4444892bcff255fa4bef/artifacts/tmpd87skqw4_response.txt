@@ -1,0 +1,12 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The step results indicate that there is no specific information available regarding the SmartSales order configuration. However, you may find the following related documents useful:
+
+- **Invoice Approval Procedure** - ID: invoice_approval_procedure_easi
+- **Maintenance Contract** - ID: maintenance_contract_supplier1
+- **NDA Template** - ID: nda_easi_template
+- **SLA Agreement** - ID: sla_agreement_easi_colruyt
+
+If you need further assistance or more specific information, please let me know!

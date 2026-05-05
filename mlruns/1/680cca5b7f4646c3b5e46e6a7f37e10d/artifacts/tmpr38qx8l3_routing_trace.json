@@ -1,0 +1,31 @@
+{
+  "user_query": "Find SmartSales locations in Brussels.",
+  "plan": {
+    "query": "Find SmartSales locations in Brussels.",
+    "reasoning": "The query specifically asks for locations, which is within the capability of the smartsales agent. No other agents are necessary for this task.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Fetch all locations in Brussels.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Return the list of locations obtained from the smartsales agent."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Fetch all locations in Brussels.",
+      "started_at": "2026-05-04T13:33:09.269966+00:00",
+      "ended_at": "2026-05-04T13:33:22.645281+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations"
+      ]
+    }
+  ]
+}

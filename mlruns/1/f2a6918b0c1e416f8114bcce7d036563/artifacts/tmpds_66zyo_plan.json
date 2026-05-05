@@ -1,0 +1,13 @@
+{
+  "query": "I want to purchase a EUR 8,000 piece of equipment for my team. What approval level do I need?",
+  "reasoning": "The user is asking about internal company processes related to purchasing approval levels. This requires accessing internal documents to determine the appropriate approval required for a purchase of this amount.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the company procurement policy regarding approval levels for purchases of equipment.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the approval level needed for a purchase of EUR 8,000 based on the document results."
+}

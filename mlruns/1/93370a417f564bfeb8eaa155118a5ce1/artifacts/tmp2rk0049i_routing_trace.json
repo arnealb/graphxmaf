@@ -1,0 +1,76 @@
+{
+  "user_query": "What do I need to know about the people I have meetings with this week?",
+  "plan": {
+    "query": "What do I need to know about the people I have meetings with this week?",
+    "reasoning": "The query requires a 360° view of the individuals involved in the user's meetings. To gather comprehensive information about the people, I will utilize all available agents to obtain emails, calendar events, CRM contacts, and linked locations.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Fetch the names and details of all the people the user has meetings scheduled with this week from calendar events.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Using the names of the contacts retrieved from step 1, retrieve their CRM profiles, including any relevant account and deal information.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Using the names of the contacts retrieved from step 1, fetch any linked physical locations related to these individuals.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the profiles and details from Salesforce and Smartsales with the calendar details to provide a comprehensive overview of each person scheduled for meetings this week."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Fetch the names and details of all the people the user has meetings scheduled with this week from calendar events.",
+      "started_at": "2026-05-04T14:26:20.157350+00:00",
+      "ended_at": "2026-05-04T14:26:25.921155+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_calendar"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "[Result from step 1]:\n```json\n[\n    {\n        \"subject\": \"Weekly sync — Dorian Feaux\",\n        \"start\": \"2026-05-06T07:00:00.0000000\",\n        \"end\": \"2026-05-06T07:30:00.0000000\",\n        \"attendees\": []\n    },\n    {\n        \"subject\": \"Sprint review — Arne Albrecht\",\n        \"start\": \"2026-05-08T12:00:00.0000000\",\n        \"end\": \"2026-05-08T13:00:00.0000000\",\n        \"attendees\": []\n    },\n    {\n        \"subject\": \"supplier1 — Q2 Delivery Review\",\n        \"start\": \"2026-05-10T08:00:00.0000000\",\n        \"end\": \"2026-05-10T09:00:00.0000000\",\n        \"attendees\": []\n    }\n]\n```\n\n[Task]:\nUsing the names of the contacts retrieved from step 1, retrieve their CRM profiles, including any relevant account and deal information.",
+      "started_at": "2026-05-04T14:26:25.983735+00:00",
+      "ended_at": "2026-05-04T14:26:31.249705+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "find_contacts",
+        "find_contacts"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "[Result from step 1]:\n```json\n[\n    {\n        \"subject\": \"Weekly sync — Dorian Feaux\",\n        \"start\": \"2026-05-06T07:00:00.0000000\",\n        \"end\": \"2026-05-06T07:30:00.0000000\",\n        \"attendees\": []\n    },\n    {\n        \"subject\": \"Sprint review — Arne Albrecht\",\n        \"start\": \"2026-05-08T12:00:00.0000000\",\n        \"end\": \"2026-05-08T13:00:00.0000000\",\n        \"attendees\": []\n    },\n    {\n        \"subject\": \"supplier1 — Q2 Delivery Review\",\n        \"start\": \"2026-05-10T08:00:00.0000000\",\n        \"end\": \"2026-05-10T09:00:00.0000000\",\n        \"attendees\": []\n    }\n]\n```\n\n[Task]:\nUsing the names of the contacts retrieved from step 1, fetch any linked physical locations related to these individuals.",
+      "started_at": "2026-05-04T14:26:25.988575+00:00",
+      "ended_at": "2026-05-04T14:26:46.663309+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations",
+        "list_locations",
+        "list_locations"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "query": "Find everything related to the word 'nutella' across all our systems.",
+  "reasoning": "The query asks for a comprehensive search across all available systems to gather any information related to 'nutella'. This requires leveraging all agents to cover emails, documents, CRM data, and product information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find documents, emails, and calendar events related to 'nutella'.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Search for accounts, contacts, opportunities, and cases that contain 'nutella'.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Find any locations or catalog items that are associated with 'nutella'.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all three agents to provide a complete overview of everything related to 'nutella'."
+}

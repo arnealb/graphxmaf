@@ -1,0 +1,29 @@
+{
+  "user_query": "Show me emails I received in the last 14 days.",
+  "plan": {
+    "query": "Show me emails I received in the last 14 days.",
+    "reasoning": "The query specifically asks for emails, which fall under the capabilities of the graph agent. There is no need for multiple steps or other agents.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Fetch all emails received in the last 14 days.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the results of the email fetch from step 1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Fetch all emails received in the last 14 days.",
+      "started_at": "2026-05-04T13:39:26.202597+00:00",
+      "ended_at": "2026-05-04T13:44:26.217686+00:00",
+      "success": false,
+      "error": "Step timed out after 300.0s",
+      "llm_turns": 0,
+      "tool_calls": []
+    }
+  ]
+}

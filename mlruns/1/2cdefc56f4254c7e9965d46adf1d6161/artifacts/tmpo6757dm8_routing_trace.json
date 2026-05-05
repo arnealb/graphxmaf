@@ -1,0 +1,50 @@
+{
+  "user_query": "Find Salesforce leads in Belgium and check if there are SmartSales locations in the same country.",
+  "plan": {
+    "query": "Find Salesforce leads in Belgium and check if there are SmartSales locations in the same country.",
+    "reasoning": "The query requires data from both Salesforce to fetch leads and from SmartSales to check for locations, hence both agents need to be used.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch all leads located in Belgium.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "smartsales",
+        "task": "Check for SmartSales locations in Belgium.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results of the Salesforce leads and the SmartSales locations to provide a comprehensive answer regarding leads and locations in Belgium."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Fetch all leads located in Belgium.",
+      "started_at": "2026-05-04T13:47:50.228545+00:00",
+      "ended_at": "2026-05-04T13:47:55.780902+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "find_leads"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 2,
+      "input": "Check for SmartSales locations in Belgium.",
+      "started_at": "2026-05-04T13:47:50.235334+00:00",
+      "ended_at": "2026-05-04T13:48:07.706923+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations"
+      ]
+    }
+  ]
+}

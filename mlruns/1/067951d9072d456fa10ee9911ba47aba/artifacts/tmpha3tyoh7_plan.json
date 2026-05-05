@@ -1,0 +1,13 @@
+{
+  "query": "Show me Salesforce accounts with their phone numbers.",
+  "reasoning": "The task only requires data from the Salesforce agent to retrieve accounts along with their phone numbers. Therefore, one step is sufficient.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch all Salesforce accounts and include their phone numbers.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the results from the Salesforce account retrieval as a list of accounts with their corresponding phone numbers."
+}

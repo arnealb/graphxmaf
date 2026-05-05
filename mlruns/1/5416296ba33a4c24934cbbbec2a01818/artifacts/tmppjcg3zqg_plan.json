@@ -1,0 +1,25 @@
+{
+  "query": "Is there anything I should follow up on today?",
+  "reasoning": "The query implies a need for insights from various systems to determine if there are any pending follow-ups, including communications and CRM-related tasks.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve any calendar events and recent emails that require follow-up for today.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Find any CRM contacts, leads, or opportunities that have action items or require follow-up today.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Check for any site-related follow-ups or product inquiries that need addressing today.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all three steps to provide a comprehensive list of follow-ups required for today."
+}

@@ -1,0 +1,11 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Based on the internal policy regarding the acceptance of gifts:
+
+- **Gift Threshold**: No gifts or hospitality valued above EUR 50 may be accepted from suppliers.
+- **Offered Dinner Value**: The proposed EUR 75 thank-you dinner exceeds this threshold.
+- **Required Action**: Any offer above EUR 50 must be declared to procurement at procurement@easi.net.
+
+**Conclusion**: The EUR 75 dinner cannot be accepted.

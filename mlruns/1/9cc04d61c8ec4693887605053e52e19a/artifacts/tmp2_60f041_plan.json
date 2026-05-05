@@ -1,0 +1,13 @@
+{
+  "query": "What fields can I use to sort SmartSales locations?",
+  "reasoning": "This query is about internal knowledge related to sorting options in the SmartSales system, which should be handled by the graph agent as it deals with company documentation.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the answer on available fields to sort locations in SmartSales.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the user with the fields found in the documents retrieved by step 1."
+}

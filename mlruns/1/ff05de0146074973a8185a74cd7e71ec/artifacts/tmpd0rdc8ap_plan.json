@@ -1,0 +1,29 @@
+{
+  "query": "For each person I have a meeting with this week, give me everything we know about them.",
+  "reasoning": "The query requires a comprehensive view of each person scheduled for meetings, which involves gathering data from emails, calendar events, CRM contacts, and linked locations. Therefore, all available agents will be utilized to gather the complete information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve all calendar events for this week and extract the names of all attendees for the meetings.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "For each person identified in step 1, gather all relevant CRM contact data including roles, accounts, and related opportunities.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "For each person identified in step 1, collect information about their associated locations and any relevant catalog items.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Aggregate and combine the results from all steps to provide a full profile for each person with whom there is a meeting this week."
+}

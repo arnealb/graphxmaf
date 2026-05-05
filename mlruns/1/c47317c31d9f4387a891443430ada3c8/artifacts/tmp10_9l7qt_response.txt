@@ -1,0 +1,19 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+**Summary of Files Related to the Most Valuable Open Deal**
+
+- **Deal Information** (From Salesforce):
+  - **Deal Name**: Anheuser-Busch InBev — Distribution Network Mapping
+  - **Stage**: Qualification
+  - **Amount**: $520,000
+  - **Close Date**: 15 September 2026
+  - **Account Name**: Anheuser-Busch InBev
+
+- **Related File** (From Graph):
+  - **File Name**: ABinbev deal draft.docx
+  - **Web Link**: [Access File](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B27B73B82-1B22-471B-AEC9-AC963335CD93%7D&file=ABinbev%20deal%20draft.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+This file appears to be a draft related to the Anheuser-Busch InBev deal.

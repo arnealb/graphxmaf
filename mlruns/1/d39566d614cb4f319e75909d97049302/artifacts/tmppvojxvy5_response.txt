@@ -1,0 +1,19 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the three largest open Salesforce opportunities along with the billing countries of their related accounts:
+
+1. **Opportunity Name:** Anheuser-Busch InBev — Distribution Network Mapping  
+   - **Amount:** $520,000  
+   - **Billing Country:** Belgium  
+
+2. **Opportunity Name:** Delhaize Group — Supply Chain Optimisation  
+   - **Amount:** $310,000  
+   - **Billing Country:** Belgium  
+
+3. **Opportunity Name:** Colruyt Group — SmartSales Rollout 2026  
+   - **Amount:** $220,000  
+   - **Billing Country:** Belgium  
+
+All three opportunities are located in Belgium.

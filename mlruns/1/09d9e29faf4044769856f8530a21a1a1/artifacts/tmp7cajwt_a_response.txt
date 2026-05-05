@@ -1,0 +1,11 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+At EASI, the policy regarding working from home during your probation period is as follows:
+
+- **Remote Work During Probation**: Remote work is not permitted during the first 6 months of employment.
+- **On-Site Requirement**: New joiners are required to be on-site full time to absorb working practices, build relationships, and become productive.
+- **Post-Probation**: After successfully completing your probation period, you will be eligible for the standard hybrid work arrangement.
+
+This information is sourced from the EASI remote work policy and related documents.

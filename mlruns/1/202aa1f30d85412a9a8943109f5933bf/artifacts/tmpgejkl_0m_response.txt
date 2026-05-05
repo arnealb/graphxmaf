@@ -1,0 +1,26 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+You have the following meetings scheduled this week that do not have active deals associated with them:
+
+- **Meeting 1:**
+  - **Subject:** Weekly sync — Dorian Feaux
+  - **Date:** 6 May 2026
+  - **Time:** 07:00 - 07:30
+  - **Organizer:** SmartAdmin
+
+- **Meeting 2:**
+  - **Subject:** Sprint review — Arne Albrecht
+  - **Date:** 8 May 2026
+  - **Time:** 12:00 - 13:00
+  - **Organizer:** SmartAdmin
+
+- **Meeting 3:**
+  - **Subject:** supplier1 — Q2 Delivery Review
+  - **Date:** 10 May 2026
+  - **Time:** 08:00 - 09:00
+  - **Organizer:** SmartAdmin 
+
+No results were found from Salesforce indicating any active deals associated with these meetings.

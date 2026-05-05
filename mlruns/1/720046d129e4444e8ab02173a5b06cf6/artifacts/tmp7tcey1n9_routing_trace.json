@@ -1,0 +1,31 @@
+{
+  "user_query": "List 5 open opportunities in Salesforce.",
+  "plan": {
+    "query": "List 5 open opportunities in Salesforce.",
+    "reasoning": "The query specifically asks for open opportunities, which falls under commercial relationship data that the Salesforce agent specializes in.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve a list of 5 open opportunities from the CRM system.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of open opportunities obtained from Salesforce."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve a list of 5 open opportunities from the CRM system.",
+      "started_at": "2026-05-04T13:34:50.106077+00:00",
+      "ended_at": "2026-05-04T13:34:55.411332+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_opportunities"
+      ]
+    }
+  ]
+}

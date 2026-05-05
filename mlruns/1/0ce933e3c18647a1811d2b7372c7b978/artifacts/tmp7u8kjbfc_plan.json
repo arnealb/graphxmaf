@@ -1,0 +1,13 @@
+{
+  "query": "Who am I in Microsoft 365?",
+  "reasoning": "The user is asking for internal company-related information, which falls under Microsoft 365 services. Therefore, I will utilize the graph agent to retrieve relevant personal Outlook contacts and any associated documents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use the user identity to retrieve personal Outlook contacts and any associated documents that provide insight into the user's role, responsibilities, and communications within Microsoft 365.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Compile the information from the graph agent regarding personal contacts and associated documents to provide a full picture of the user's identity within Microsoft 365."
+}

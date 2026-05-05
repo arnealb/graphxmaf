@@ -1,0 +1,13 @@
+{
+  "query": "Which of our accounts have both an active deal and a recent order?",
+  "reasoning": "The query requires information about accounts with active deals from the salesforce agent and details about recent orders which may also be accessible through salesforce by leveraging CRM data. Since both pieces of information can be gathered from the salesforce agent, a single step is sufficient.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Find all accounts that have both an active deal and a recent order.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of accounts that resulted from the salesforce query."
+}

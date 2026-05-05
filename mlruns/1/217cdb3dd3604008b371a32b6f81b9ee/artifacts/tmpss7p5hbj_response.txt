@@ -1,0 +1,61 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here is the list of Salesforce opportunities with an amount greater than 10,000, along with their respective probabilities:
+
+- **Opportunity:** Ferrero — Nutella In-Store Display Campaign  
+  - **Amount:** 30,000  
+  - **Probability:** 10%
+
+- **Opportunity:** Colruyt Group — SmartSales Rollout 2026  
+  - **Amount:** 220,000  
+  - **Probability:** 75%
+
+- **Opportunity:** Anheuser-Busch InBev — Distribution Network Mapping  
+  - **Amount:** 520,000  
+  - **Probability:** 10%
+
+- **Opportunity:** Delhaize Group — Supply Chain Optimisation  
+  - **Amount:** 310,000  
+  - **Probability:** 90%
+
+- **Opportunity:** Carrefour Belgium SA — In-Store Analytics Pilot  
+  - **Amount:** 175,000  
+  - **Probability:** 75%
+
+- **Opportunity:** supplier1 — Q2 Delivery Contract  
+  - **Amount:** 85,000  
+  - **Probability:** 90%
+
+- **Opportunity:** IT Parc replacement  
+  - **Amount:** 19,625  
+  - **Probability:** 25%
+
+- **Opportunity:** Project Smile V2  
+  - **Amount:** 45,000  
+  - **Probability:** 50%
+
+- **Opportunity:** Renewal @ Assurity  
+  - **Amount:** 35,000  
+  - **Probability:** 90%
+
+- **Opportunity:** New project @ Anaco  
+  - **Amount:** 25,000  
+  - **Probability:** 90%
+
+- **Opportunity:** End-of-Year Summit  
+  - **Amount:** 25,000  
+  - **Probability:** 25%
+
+- **Opportunity:** salesforce.com - 2,000 Widgets  
+  - **Amount:** 20,000  
+  - **Probability:** 25%
+
+- **Opportunity:** salesforce.com - 1,000 Widgets  
+  - **Amount:** 100,000  
+  - **Probability:** 25%
+
+- **Opportunity:** salesforce.com - 500 Widgets  
+  - **Amount:** 50,000  
+  - **Probability:** 25%

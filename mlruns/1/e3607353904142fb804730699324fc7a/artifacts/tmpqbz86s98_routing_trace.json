@@ -1,0 +1,70 @@
+{
+  "user_query": "Give me a 360 view of this salesforce account: supplier1 : open opportunities, any SmartSales locations for that account, and any emails I have about that company.",
+  "plan": {
+    "query": "Give me a 360 view of this salesforce account: supplier1 : open opportunities, any SmartSales locations for that account, and any emails I have about that company.",
+    "reasoning": "The query requires an overview of the account 'supplier1' from multiple perspectives, including open opportunities from Salesforce, location data from SmartSales, and communication history from Graph. Therefore, all available agents are utilized to provide a comprehensive view.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve all open opportunities related to the Salesforce account 'supplier1'.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "smartsales",
+        "task": "Fetch any physical locations associated with the account 'supplier1'.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "graph",
+        "task": "Collect all emails related to the company 'supplier1'.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from all steps to form a comprehensive overview of the account 'supplier1', including open opportunities, locations, and email communications."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve all open opportunities related to the Salesforce account 'supplier1'.",
+      "started_at": "2026-05-04T13:36:01.988728+00:00",
+      "ended_at": "2026-05-04T13:36:07.045042+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "find_accounts",
+        "get_opportunities"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 2,
+      "input": "Fetch any physical locations associated with the account 'supplier1'.",
+      "started_at": "2026-05-04T13:36:01.992709+00:00",
+      "ended_at": "2026-05-04T13:36:08.678153+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 3,
+      "input": "Collect all emails related to the company 'supplier1'.",
+      "started_at": "2026-05-04T13:36:01.997618+00:00",
+      "ended_at": "2026-05-04T13:36:11.336390+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email"
+      ]
+    }
+  ]
+}

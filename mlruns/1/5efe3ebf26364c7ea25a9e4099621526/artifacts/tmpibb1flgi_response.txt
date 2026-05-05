@@ -1,0 +1,55 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here is the list of Salesforce accounts in Belgium, along with their billing addresses:
+
+- **Anheuser-Busch InBev**
+  - City: Leuven
+  - Country: Belgium
+
+- **Delhaize Group**
+  - City: Brussels
+  - Country: Belgium
+
+- **Carrefour Belgium SA**
+  - City: Evere
+  - Country: Belgium
+
+- **Brussels Retail Partners**
+  - Street: Grand Place 1
+  - City: Brussels
+  - Postal Code: 1000
+  - Country: Belgium
+
+- **Ferrero Benelux**
+  - City: Brussels
+  - Country: Belgium
+
+- **GreenTech Solutions**
+  - City: Ghent
+  - Country: Belgium
+
+- **Colruyt Group**
+  - City: Halle
+  - Country: Belgium
+
+- **supplier1**
+  - City: Brussels
+  - Country: Belgium
+
+- **cityaccount**
+  - City: Leuven
+  - Country: Belgium
+
+- **Omega SA-NV**
+  - Street: 132 Avenue Louise
+  - City: Bruxelles
+  - Postal Code: 1050
+  - Country: Belgium
+
+- **Easi Be**
+  - Street: 12 Avenue Robert Schuman
+  - City: Nivelles
+  - Postal Code: 1400
+  - Country: Belgium

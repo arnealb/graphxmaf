@@ -1,0 +1,28 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is a summary of your identity in Microsoft 365 based on the available information:
+
+### Personal Contacts
+- **John Lastname**
+  - Email: john.lastname@globalmedia.com
+- **Arne Albrecht**
+  - Email: a.albrecht@easi.net
+  - Alternative Email: albrecht.arne@gmail.com
+
+### Communication and Collaboration Tools
+- **Microsoft Outlook**
+  - Email: MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@easigroupdemo.onmicrosoft.com
+- **SmartAdmin**
+  - Email: SmartAdmin@easigroupdemo.onmicrosoft.com
+- **Test Automation**
+  - Email: Automationtest123@easigroupdemo.onmicrosoft.com
+- **Microsoft Power Automate**
+  - Email: flow-noreply@microsoft.com
+
+### Additional Notes
+- Microsoft 365 facilitates internal and client communication through various tools such as email, Teams, and OneDrive.
+- Detailed role responsibilities are not specified in the available context; refer to your company's policies for more specific guidance.
+
+If you need more information about specific roles or responsibilities, it is recommended to consult additional company documents or guidelines.

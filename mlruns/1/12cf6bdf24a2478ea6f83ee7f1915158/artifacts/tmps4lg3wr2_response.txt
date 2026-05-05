@@ -1,0 +1,59 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here are the SmartSales locations in Brussels:
+
+- **AD Delhaize - Forest**
+  - Street: Chaussée de Neerstalle 800
+  - Zip: 1190
+  - Latitude: 50.7961794
+  - Longitude: 4.3215302
+
+- **CRF - Anderlecht**
+  - Street: Bergensesteenweg 1424
+  - Zip: 1070
+  - Latitude: 50.8124232
+  - Longitude: 4.2910938
+
+- **EASI - Brussels**
+  - Street: Avenue Louise 65
+  - Zip: 1050
+  - Latitude: 50.8330342
+  - Longitude: 4.357659
+
+- **Ferrero Benelux - Brussels (Nutella)**
+  - Street: Bld de la Woluwe 42
+  - Zip: 1200
+  - Latitude: 50.8388442
+  - Longitude: 4.434813
+
+- **Global Media**
+  - Street: Mediastraat 10
+  - Zip: 1000
+  - Latitude: 50.8427501
+  - Longitude: 4.3515499
+
+- **Test**
+  - Street: Teststraat 1
+  - Zip: 1000
+  - Latitude: 50.8427501
+  - Longitude: 4.3515499
+
+- **ur mom**
+  - Street: Rue de France 1
+  - Zip: 1000
+  - Latitude: 50.8347303
+  - Longitude: 4.332933
+
+- **supplier1**
+  - Street: Rue du Commerce 1
+  - Zip: 1000
+  - Latitude: 50.8394667
+  - Longitude: 4.3673141
+
+- **supplier1 - Brussels HQ**
+  - Street: Rue de la Loi 42
+  - Zip: 1000
+  - Latitude: 50.8452574
+  - Longitude: 4.3707214

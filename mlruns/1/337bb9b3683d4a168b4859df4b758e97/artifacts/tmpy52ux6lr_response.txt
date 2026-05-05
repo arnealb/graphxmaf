@@ -1,0 +1,42 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+### Next Meeting Details
+
+- **Meeting:** Weekly sync — Dorian Feaux
+- **Date:** 6 May 2026
+- **Time:** 07:00 - 07:30 (UTC)
+- **Organizer:** SmartAdmin (Email: SmartAdmin@easigroupdemo.onmicrosoft.com)
+- **Attendee:** 
+  - Marc Supplier (Email: marc.supplier@supplier1.be)
+  
+### Company Information
+
+#### Companies Involved:
+1. **supplier1**
+   - **Website:** Not available
+   - **Location:** 
+     - **Street:** Rue du Commerce 1
+     - **City:** Brussels
+     - **Zip:** 1000
+     - **Country:** Belgium
+   
+2. **GreenTech Solutions**
+   - **Industry:** Technology
+   - **Website:** [https://www.greentechsolutions.be](https://www.greentechsolutions.be)
+   - **Location:** Not available (no data)
+
+3. **Colruyt Group**
+   - **Industry:** Retail
+   - **Website:** [https://www.colruytgroup.com](https://www.colruytgroup.com)
+   - **Location:** Not available (no data)
+
+### Summary of Missing Locations
+- **Companies with Locations:**
+  - supplier1 
+
+- **Companies without Locations:**
+  - GreenTech Solutions
+  - Colruyt Group

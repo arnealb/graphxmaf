@@ -1,0 +1,31 @@
+{
+  "user_query": "Show me Salesforce opportunities with an amount greater than 10,000. Include probability.",
+  "plan": {
+    "query": "Show me Salesforce opportunities with an amount greater than 10,000. Include probability.",
+    "reasoning": "The query specifically asks for data related to Salesforce opportunities, thus it can be handled with a single step using the Salesforce agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch all opportunities with an amount greater than 10,000 and include the probability for each opportunity.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of opportunities retrieved from Salesforce, highlighting their amounts and probabilities."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Fetch all opportunities with an amount greater than 10,000 and include the probability for each opportunity.",
+      "started_at": "2026-05-04T13:35:05.281925+00:00",
+      "ended_at": "2026-05-04T13:35:19.561794+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_opportunities"
+      ]
+    }
+  ]
+}

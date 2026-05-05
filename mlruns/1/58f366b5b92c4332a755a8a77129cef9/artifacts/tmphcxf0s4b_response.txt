@@ -1,0 +1,16 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+### Summary of Upcoming Calendar Event
+
+- **Event Title**: Weekly sync — Dorian Feaux
+- **Date and Time**: 6 May 2026, from 07:00 to 07:30 (UTC)
+- **Organizer**: 
+  - Name: SmartAdmin
+  - Email: SmartAdmin@easigroupdemo.onmicrosoft.com
+- **Attendees**: No attendees listed
+- **Related Emails**: None found
+- **Related Documents**: None found
+
+This is the information retrieved related to your next calendar event.

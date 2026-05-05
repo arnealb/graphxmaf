@@ -1,0 +1,17 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (smartsales)...
+Synthesizing...
+### Summary of Results:
+
+#### OneDrive Files Related to 'Locations':
+1. **SmartSales_Locations.docx**
+   - [View Document](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BF23C8827-CC49-4607-A0B8-FF47034DC9E8%7D&file=SmartSales_Locations.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+#### Locations in SmartSales:
+- No location data was found in SmartSales.
+
+### Conclusion:
+- You can find the file related to locations in your OneDrive called **SmartSales_Locations.docx**. 
+- There are currently no associated location records available in SmartSales.

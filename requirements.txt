@@ -32,3 +32,6 @@ agent-framework>=1.0.0b251120
 agent-framework[azure]==1.0.0rc2
 
 graphrag==3.0.9 
+lancedb
+pandas
+python-dotenv

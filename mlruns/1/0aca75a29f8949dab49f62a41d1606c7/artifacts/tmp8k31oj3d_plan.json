@@ -1,0 +1,21 @@
+{
+  "query": "List Salesforce opportunities that are closing this month and check if I have any calendar events related to those account names.",
+  "reasoning": "The user wants to retrieve Salesforce opportunities for a specific period and then correlate that data with calendar events, requiring the involvement of both Salesforce and Graph agents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve a list of Salesforce opportunities that are closing this month, including the associated account names.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Using the account names from step 1, check for any related calendar events. If step 1 returns no opportunities, state that and skip the calendar lookup.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the list of opportunities from step 1 with the related calendar events from step 2 to provide a comprehensive answer."
+}

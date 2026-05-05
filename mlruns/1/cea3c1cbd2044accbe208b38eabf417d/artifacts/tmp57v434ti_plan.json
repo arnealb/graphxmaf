@@ -1,0 +1,21 @@
+{
+  "query": "Find any files we have related to our most valuable open deal and summarise them.",
+  "reasoning": "The task requires a search for files associated with the most valuable open deal, which likely involves identifying that deal through Salesforce and then retrieving related files through Graph. A synthesis of the findings will summarize the relevant documents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Identify the most valuable open deal and provide its details.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Using the details of the deal from step 1, find any related files stored in OneDrive.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the details of the most valuable open deal from step 1 and the related files from step 2 into a comprehensive summary."
+}

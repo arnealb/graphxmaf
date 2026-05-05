@@ -1,0 +1,19 @@
+{
+  "query": "What locations do we have and what deals are linked to them?",
+  "reasoning": "The query requires information about physical locations and their associated deals. To provide a comprehensive response, both the smartsales agent for locations and the salesforce agent for deals must be used.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Fetch all locations associated with our company.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Retrieve all deals linked to our company, including any relevant information about these deals.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from both steps to provide a comprehensive overview of locations and their linked deals."
+}

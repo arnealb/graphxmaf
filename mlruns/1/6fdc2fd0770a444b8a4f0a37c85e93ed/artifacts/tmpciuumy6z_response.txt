@@ -1,0 +1,44 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+### Overview of the Most Recent Email Sender: Microsoft
+
+#### Email Details
+- **Subject:** Een abonnement kopen om uw product te blijven gebruiken
+- **Sender Name:** Microsoft
+- **Sender Email:** microsoft-noreply@microsoft.com
+- **Received Date:** 3 May 2026
+- **Email Body:** Notification about trial subscription ending and options to purchase.
+- **Web Link to Email:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAOC9kJ6AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+#### Communication History with Microsoft
+1. **Email Subject:** Your free trial of Microsoft Copilot Studio has expired
+   - **Received Date:** 9 June 2024
+   - **Web Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAB4DlaXAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+2. **Email Subject:** Your Microsoft Graph connectors free trial is ending soon
+   - **Received Date:** 8 July 2024
+   - **Web Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAACKg04lAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+3. **Email Subject:** Uw Granular-beheerdersrelatie met Netlease verloopt binnenkort
+   - **Received Date:** 13 August 2024
+   - **Web Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAACiw-k6AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+#### CRM Details (from Salesforce)
+- **Contacts Associated with Account "EASI":**
+  - **Brent Pauwels**
+    - Email: b.pauwels@easigroup.onmicrosoft.com
+  - **Sander Van der Maas**
+    - Email: s.vandermaas@easigroup.onmicrosoft.com
+  - **Arnaud Delforge**
+    - Email: a.delforge@easigroup.onmicrosoft.com
+
+- **Accounts Information:** No relevant accounts found in the CRM.
+
+#### Location Information
+- **Microsoft's Address:** 
+  - Microsoft Corporation, One Microsoft Way, Redmond, WA 98052
+
+This summary provides a comprehensive view of the most recent communications with Microsoft, their CRM engagement, and the associated contact details.

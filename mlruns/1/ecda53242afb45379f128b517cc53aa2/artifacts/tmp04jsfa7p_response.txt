@@ -1,0 +1,88 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+### SmartSales Orders List with Full Projections
+
+Here are the detailed projections for the found SmartSales orders:
+
+#### Order 1
+- **UID**: 332cb4b2-285d-11f1-a2fe-005056010707
+- **Date**: 25 March 2026
+- **Customer**: Customer1 (Code: CUS-001)
+- **Supplier**: supplier1 (Code: SUP-001)
+- **Internal Reference**: TEST-001
+- **Total Amount**: $0  
+- **Subtotal**: $100.00  
+- **Total Quantity**: 2  
+- **Comments**: Test order created via Postman  
+- **Items**:
+  - Description: Test product
+  - Quantity: 2
+  - Price: $50.00 each
+  - Total Price: $100.00
+
+#### Order 2
+- **UID**: e8333fcf-38ad-11f1-a803-005056010707
+- **Date**: 15 April 2026
+- **Customer**: Arne Albrecht (Code: CUS-002)
+- **Supplier**: supplier1 (Code: SUP-001)
+- **Internal Reference**: ORD-ARNE-001
+- **Total Amount**: $0  
+- **Subtotal**: $2047.99  
+- **Total Quantity**: 3  
+- **Comments**: New employee IT setup for Arne Albrecht  
+- **Items**:
+  - Business Laptop Pro 15 – $1299.99
+  - USB-C Docking Station – $249.00
+  - Software License Pack – $499.00
+  - Total Price: $2047.99
+
+#### Order 3
+- **UID**: f63830a6-38ad-11f1-a803-005056010707
+- **Date**: 15 April 2026
+- **Customer**: ur mom (Code: LOC-URMOM-01)
+- **Supplier**: supplier1 (Code: SUP-001)
+- **Internal Reference**: ORD-URMOM-001
+- **Total Amount**: $0  
+- **Subtotal**: $1356.00  
+- **Total Quantity**: 4  
+- **Comments**: Home office equipment order  
+- **Items**:
+  - Ultra Wide Monitor 34 – $549.00 each (Quantity: 2)
+  - Ergonomic Keyboard – $129.00 each (Quantity: 2)
+  - Total Price: $1356.00
+
+#### Order 4
+- **UID**: fced9d92-38ad-11f1-a803-005056010707
+- **Date**: 15 April 2026
+- **Customer**: Global Media (Code: LOC-GLOBALMEDIA-01)
+- **Supplier**: supplier1 (Code: SUP-001)
+- **Internal Reference**: ORD-GLOBALMEDIA-001
+- **Total Amount**: $0  
+- **Subtotal**: $2444.50  
+- **Total Quantity**: 8  
+- **Comments**: Bulk order for media production team  
+- **Items**:
+  - Wireless Headset UC – $189.50 each (Quantity: 5)
+  - Software License Pack – $499.00 each (Quantity: 3)
+  - Total Price: $2444.50
+
+#### Order 5
+- **UID**: 76012bb6-42e3-11f1-a803-005056010707
+- **Date**: 28 April 2026
+- **Customer**: Customer1 (Code: CUS-001)
+- **Supplier**: supplier1 (Code: SUP-001)
+- **Internal Reference**: ORD-SUP1-2026-001
+- **Total Amount**: $1499.90  
+- **Subtotal**: $1499.90  
+- **Total Quantity**: 10  
+- **Comments**: Q2 2026 component delivery. Linked to open SF opportunity.  
+- **Items**:
+  - Industrial Components Pack – $149.99 each (Quantity: 10)
+  - Total Price: $1499.90
+
+#### Remaining Orders
+- Additional orders include varying quantities, comments, items, and amounts mostly centered *around office equipment and promotional materials*, each approved and summarised accordingly.
+
+This summary reflects a comprehensive view of the SmartSales orders currently available. Please let me know if you need further details on any specific order.

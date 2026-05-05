@@ -1,0 +1,21 @@
+{
+  "query": "Find any files we have related to our most valuable open deal and summarise them.",
+  "reasoning": "The query requires identifying the most valuable open deal through the salesforce agent and then fetching any related files using the graph agent. Since both tasks are independent, they can run in parallel, and the results can be summarized afterward.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Identify our most valuable open deal.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Find any files related to the most valuable open deal identified in step 1 (if available). If step 1 returns no deal, state that there are no files to find.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Summarize the files found from step 2 in relation to the most valuable open deal from step 1."
+}

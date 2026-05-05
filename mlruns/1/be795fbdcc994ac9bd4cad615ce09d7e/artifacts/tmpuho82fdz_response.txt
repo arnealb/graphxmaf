@@ -1,0 +1,16 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+From SmartSales: The list of order approbation statuses includes the following unique identifiers (UIDs):
+
+- 86ceb193-18a4-11f1-84f0-005056010707
+- 86d4e3b4-18a4-11f1-84f0-005056010707
+- 86d17c14-18a4-11f1-84f0-005056010707
+- 86d5a606-18a4-11f1-84f0-005056010707
+- 86d26456-18a4-11f1-84f0-005056010707
+- 86d62bbc-18a4-11f1-84f0-005056010707
+- 86d30fd9-18a4-11f1-84f0-005056010707
+- 86d6d77c-18a4-11f1-84f0-005056010707
+- 86d3ef5c-18a4-11f1-84f0-005056010707
+- 86d8a79f-18a4-11f1-84f0-005056010707

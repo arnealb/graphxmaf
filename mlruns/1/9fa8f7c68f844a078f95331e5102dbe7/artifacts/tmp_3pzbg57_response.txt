@@ -1,0 +1,57 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph, salesforce)...
+Synthesizing...
+### Upcoming Calendar Events with Unrecorded Companies
+
+**From Calendar Events:**
+1. **Weekly sync** — Dorian Feaux
+   - Date: 6 May 2026
+   - Company: Not specified
+2. **Sprint review** — Arne Albrecht
+   - Date: 8 May 2026
+   - Company: Not specified
+3. **supplier1** — Q2 Delivery Review
+   - Date: 10 May 2026
+   - Company: *supplier1* (recorded in Salesforce)
+4. **GreenTech Solutions** — Technical Qualification Call
+   - Date: 12 May 2026
+   - Company: *GreenTech Solutions* (recorded in Salesforce)
+5. **Colruyt Group** — SmartSales Rollout Kickoff
+   - Date: 15 May 2026
+   - Company: *Colruyt Group* (recorded in Salesforce)
+
+**From Salesforce Accounts:**
+- The following companies are found in Salesforce:
+  - Anheuser-Busch InBev
+  - Delhaize Group
+  - Carrefour Belgium SA
+  - Brussels Retail Partners
+  - Ferrero Benelux
+  - GreenTech Solutions
+  - Colruyt Group
+  - supplier1
+  - cityaccount
+  - account in france
+  - abs
+  - Omega SA-NV
+  - Summit Resellers
+  - Umedia
+  - Silodyne Company
+  - Roseburg Products
+  - Tyconet
+  - Towson Inc.
+  - Southern Solutions
+  - Tech Labs
+  - Test
+  - Valley Supply Inc.
+  - Universal Containers
+  - Zenith Distributors
+  - Upstyle Inc.
+
+### Summary of Findings:
+- All companies mentioned in the calendar are either recorded in Salesforce or not specified. Companies from the events that have no sales record are:
+  - Weekly sync and Sprint review events are not associated with any specific company, meaning there are no identifiable companies leaving unrecorded status for those events.
+  
+### Conclusion:
+- **No new unrecorded companies were identified from the calendar events. However, the Weekly sync and Sprint review events did not specify a company association.**

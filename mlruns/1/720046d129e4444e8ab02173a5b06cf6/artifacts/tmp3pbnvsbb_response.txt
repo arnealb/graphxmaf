@@ -1,0 +1,35 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are 5 open opportunities in Salesforce:
+
+- **Opportunity Name:** Anheuser-Busch InBev — Distribution Network Mapping
+  - **Stage:** Qualification
+  - **Amount:** $520,000
+  - **Close Date:** 15 September 2026
+  - **Account Name:** Anheuser-Busch InBev
+
+- **Opportunity Name:** Delhaize Group — Supply Chain Optimisation
+  - **Stage:** Negotiation/Review
+  - **Amount:** $310,000
+  - **Close Date:** 31 August 2026
+  - **Account Name:** Delhaize Group
+
+- **Opportunity Name:** Carrefour Belgium SA — In-Store Analytics Pilot
+  - **Stage:** Proposal/Price Quote
+  - **Amount:** $175,000
+  - **Close Date:** 31 July 2026
+  - **Account Name:** Carrefour Belgium SA
+
+- **Opportunity Name:** Ferrero — Nutella In-Store Display Campaign
+  - **Stage:** Prospecting
+  - **Amount:** $30,000
+  - **Close Date:** 1 October 2026
+  - **Account Name:** Ferrero Benelux
+
+- **Opportunity Name:** GreenTech Solutions — Sustainability Dashboard
+  - **Stage:** Qualification
+  - **Amount:** $45,000
+  - **Close Date:** 15 August 2026
+  - **Account Name:** GreenTech Solutions

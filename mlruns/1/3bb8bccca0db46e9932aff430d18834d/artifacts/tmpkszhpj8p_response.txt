@@ -1,0 +1,45 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is your profile information from Microsoft 365:
+
+### User Profile
+- **Display Name:** SmartAdmin
+- **Email:** SmartAdmin@easigroupdemo.onmicrosoft.com
+
+### Contacts
+- **John Lastname**
+  - Email: john.lastname@globalmedia.com
+  - Phone: 0326243426
+- **ur dog**
+  - Email: ur.dog@doghouse.com
+  - Phone: 0483922818
+- **test**
+  - Email: test.test@gmail.com
+- **Arne Albrecht**
+  - Email: a.albrecht@easi.net
+
+### Recent Emails
+1. **Subject:** Een abonnement kopen om uw product te blijven gebruiken
+   - **Sender:** Microsoft
+   - **Received:** 3 May 2026
+   - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAOC9kJ6AAA=)
+
+2. **Subject:** Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)
+   - **Sender:** Microsoft Security
+   - **Received:** 2 May 2026
+   - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAAN-0znaAAA=)
+
+### Calendar Events
+1. **Subject:** Weekly sync – Dorian Feaux
+   - **Start:** 6 May 2026, 07:00 UTC
+   - **End:** 6 May 2026, 07:30 UTC
+   - **Organizer:** SmartAdmin
+
+2. **Subject:** Sprint review – Arne Albrecht
+   - **Start:** 8 May 2026, 12:00 UTC
+   - **End:** 8 May 2026, 13:00 UTC
+   - **Organizer:** SmartAdmin
+
+This summary provides a comprehensive overview of your Microsoft 365 identity and interactions.

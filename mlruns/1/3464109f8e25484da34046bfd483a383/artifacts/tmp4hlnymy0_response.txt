@@ -1,0 +1,61 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph, salesforce)...
+Synthesizing...
+Here is the overview of files, meetings, and deals associated with supplier1:
+
+### Files Linked to Supplier1
+- **Supplier Delivery Report Q2 2026**
+  - **Type:** Document
+  - **Size:** 11,874 bytes
+  - **Created:** 28 April 2026
+  - **Modified:** 28 April 2026
+  - **Link:** [View Document](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BD85C356D-46B4-4F1F-91BF-83529C86BBA0%7D&file=supplier1_delivery_report_Q2_2026.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+- **Framework Agreement Easi Supplier1**
+  - **Type:** Document
+  - **Size:** 17,333 bytes
+  - **Created:** 29 April 2026
+  - **Modified:** 29 April 2026
+  - **Link:** [View Document](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B91E9F4C8-794A-40D5-801A-A653FE489416%7D&file=framework_agreement_easi_supplier1.docx.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+- **Contract Draft Q1**
+  - **Type:** Document
+  - **Size:** 12,609 bytes
+  - **Created:** 29 April 2026
+  - **Modified:** 29 April 2026
+  - **Link:** [View Document](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B549E60A0-E809-49CA-BC1A-42886C064537%7D&file=contract_draft_Q1.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+- **SmartSales Locations**
+  - **Type:** Document
+  - **Size:** 9,528 bytes
+  - **Created:** 20 April 2026
+  - **Modified:** 20 April 2026
+  - **Link:** [View Document](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BF23C8827-CC49-4607-A0B8-FF47034DC9E8%7D&file=SmartSales_Locations.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+### Meeting Linked to Supplier1
+- **Q2 Delivery Review**
+  - **Date & Time:** 10 May 2026, 08:00 - 09:00
+  - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Link:** [View Meeting](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLdAAA%3D&exvsurl=1&path=/calendar/item)
+
+### Deals Linked to Supplier1
+- **Deal 1: Supplier1 — Q2 Delivery Contract**
+  - **Stage:** Negotiation/Review
+  - **Amount:** $85,000
+  - **Close Date:** 30 June 2026
+  - **Account Name:** supplier1
+
+- **Deal 2: Supp Opportunity**
+  - **Stage:** On-going Approval
+  - **Close Date:** 8 May 2026
+  - **Account Name:** supplier1
+
+### Case Linked to Supplier1
+- **Case Number:** 00001020
+  - **Subject:** Delayed shipment — supplier1 April batch
+  - **Status:** Working
+  - **Priority:** High
+  - **Created Date:** 28 April 2026
+
+This overview summarizes the key activities and documents associated with supplier1.

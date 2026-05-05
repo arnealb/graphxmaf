@@ -1,0 +1,19 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the password requirements and change frequency for EASI:
+
+### Password Requirements:
+- Minimum length of **14 characters**
+- Must include:
+  - At least **one uppercase letter**
+  - At least **one lowercase letter**
+  - At least **one number**
+  - At least **one special character**
+- Cannot be the same as any of the last **12 passwords used**.
+
+### Change Frequency:
+- Passwords must be rotated at least every **90 days**.
+
+Additionally, multi-factor authentication (MFA) is mandatory for all EASI systems.

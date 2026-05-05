@@ -1,0 +1,17 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Based on the findings regarding the EASI policy for remote work:
+
+- Working from a country other than Belgium is **not part of the standard remote work arrangement**.
+- **Explicit prior approval from HR** is required for such arrangements (contact: hr@easi.net).
+- Approval depends on several factors including:
+  - Tax residency
+  - Social security implications
+  - Duration of stay
+  - Local regulatory environment
+- For stays of **up to 10 working days per calendar year** within the European Union, approval may be granted on a case-by-case basis.
+- However, **working remotely from Spain for 3 weeks** would likely require a **formal review** and may necessitate **contractual adjustments**.
+
+It is essential to seek approval from HR before proceeding with the request to work remotely from Spain.

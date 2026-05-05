@@ -1,0 +1,31 @@
+{
+  "user_query": "Find Salesforce leads that have been converted.",
+  "plan": {
+    "query": "Find Salesforce leads that have been converted.",
+    "reasoning": "The query specifically asks for information about converted leads, which falls under the capabilities of the Salesforce agent. This requires only one step.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve all leads that have been converted within the Salesforce CRM.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the retrieved converted leads from Salesforce."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve all leads that have been converted within the Salesforce CRM.",
+      "started_at": "2026-05-04T13:37:41.989150+00:00",
+      "ended_at": "2026-05-04T13:37:48.889372+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "find_leads"
+      ]
+    }
+  ]
+}

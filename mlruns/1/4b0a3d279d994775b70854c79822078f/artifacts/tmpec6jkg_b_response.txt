@@ -1,0 +1,21 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here are the details of the SmartSales order configuration:
+
+- **Comment Allowed**: Yes
+- **Customer VAT Number Required**: No
+- **Discount Per Item Allowed**: SWIPE
+- **Global Discount Allowed**: SWIPE
+- **Has Disclaimer**: No
+- **Show Signature Input**: Yes
+- **Show VAT Per Item**: No
+- **Signature Required**: No
+- **Total Modifiers**: None
+- **Items**: None
+- **Sections**:
+  - **Name**: Section
+  - **Display Name**: Section
+  - **Read Only**: No
+  - **Fields**: None

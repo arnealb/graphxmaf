@@ -1,0 +1,30 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the contents extracted from the first two Excel files found in OneDrive:
+
+### 1. Book.xlsx
+- **Sheet: Sheet1**
+  - Description: "dit is een excel file met inhoud ig"
+  - Data:
+    - 1 February 2026: dag 1 - 12
+    - 2 February 2026: dag 2 - 24
+    - 3 February 2026: dag 3 - 36
+    - 4 February 2026: dag 4 - 48
+    - 5 February 2026: dag 5 - 60
+    - 6 February 2026: dag 6 - 72
+    - 7 February 2026: dag 7 - 84
+    - 8 February 2026: dag 8 - 96
+    - 9 February 2026: dag 9 - 108
+
+### 2. Demande produits.xlsx
+- **Sheet: Lot 1**
+  - Details about products:
+    - Columns include product number, product name, brand, packaging details, price, and comments.
+  - Sample data entries:
+    - CHIPS NATUREL 175GR, Brand: Lays, Price: Not specified
+    - Cacao Instant 800G, Brand: Premier prix, Price: Not specified
+    - Coffee capsule and other snack products listed without specific prices provided.
+
+(Note: The data in the second file was truncated for brevity, listing a few products in detail.)

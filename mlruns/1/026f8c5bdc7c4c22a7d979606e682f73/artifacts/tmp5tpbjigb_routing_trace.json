@@ -1,0 +1,100 @@
+{
+  "user_query": "For the company behind my most recent open support case, what else do we know about them?",
+  "plan": {
+    "query": "For the company behind my most recent open support case, what else do we know about them?",
+    "reasoning": "The query requires a comprehensive view of the company associated with the user's most recent support case, which involves CRM data and potentially other related information. Therefore, all available agents will be invoked to gather a complete profile of the company.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve the details of the most recent open support case, including the associated company name.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Using the company name from step 1, gather all relevant CRM data about the company including accounts, contacts, and opportunities.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Using the company name from step 1, fetch location information and any catalog items related to the company.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 4,
+        "agent": "graph",
+        "task": "Using the company name from step 1, search for any related emails and calendar events.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the results from steps 2, 3, and 4 to create a comprehensive overview of the company connected to the most recent open support case."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve the details of the most recent open support case, including the associated company name.",
+      "started_at": "2026-05-04T13:30:34.229676+00:00",
+      "ended_at": "2026-05-04T13:30:40.907960+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 4,
+      "input": "[Result from step 1]:\n[{\"id\":\"500KI000001mK13YAE\",\"case_number\":\"00001023\",\"subject\":\"Delhaize Group — EDI connection issue\",\"status\":\"Working\",\"priority\":\"Medium\",\"account_name\":\"Delhaize Group\",\"created_date\":\"2026-04-28T14:40:07Z\",\"description\":null,\"origin\":null,\"type\":null,\"reason\":null,\"closed_date\":null,\"last_modified_date\":null}]\n\n[Task]:\nUsing the company name from step 1, search for any related emails and calendar events.",
+      "started_at": "2026-05-04T13:30:40.977499+00:00",
+      "ended_at": "2026-05-04T13:30:43.997567+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "search_calendar"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "[Result from step 1]:\n[{\"id\":\"500KI000001mK13YAE\",\"case_number\":\"00001023\",\"subject\":\"Delhaize Group — EDI connection issue\",\"status\":\"Working\",\"priority\":\"Medium\",\"account_name\":\"Delhaize Group\",\"created_date\":\"2026-04-28T14:40:07Z\",\"description\":null,\"origin\":null,\"type\":null,\"reason\":null,\"closed_date\":null,\"last_modified_date\":null}]\n\n[Task]:\nUsing the company name from step 1, fetch location information and any catalog items related to the company.",
+      "started_at": "2026-05-04T13:30:40.972651+00:00",
+      "ended_at": "2026-05-04T13:30:50.088261+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items",
+        "list_catalog_items"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "[Result from step 1]:\n[{\"id\":\"500KI000001mK13YAE\",\"case_number\":\"00001023\",\"subject\":\"Delhaize Group — EDI connection issue\",\"status\":\"Working\",\"priority\":\"Medium\",\"account_name\":\"Delhaize Group\",\"created_date\":\"2026-04-28T14:40:07Z\",\"description\":null,\"origin\":null,\"type\":null,\"reason\":null,\"closed_date\":null,\"last_modified_date\":null}]\n\n[Task]:\nUsing the company name from step 1, gather all relevant CRM data about the company including accounts, contacts, and opportunities.",
+      "started_at": "2026-05-04T13:30:40.969914+00:00",
+      "ended_at": "2026-05-04T13:30:51.624673+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "find_accounts",
+        "find_contacts",
+        "get_opportunities",
+        "get_cases"
+      ]
+    }
+  ]
+}

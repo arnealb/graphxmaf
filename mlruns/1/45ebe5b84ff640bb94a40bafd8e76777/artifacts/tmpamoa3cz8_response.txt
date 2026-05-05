@@ -1,0 +1,28 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the converted leads obtained from Salesforce:
+
+- **Lead ID:** 00Q0600000aULJtEAO
+  - **Name:** Delforge Arnaud
+  - **Email:** arnaud.test.gsheet@lol.com
+  - **Company:** arnaud.test.gsheet@lol.com
+  - **Status:** Qualified
+
+- **Lead ID:** 00Q0600000WpaEUEAZ
+  - **Name:** Test Lead
+  - **Company:** Easi
+  - **Status:** Qualified
+
+- **Lead ID:** 00Q0600000Y9D9dEAF
+  - **Name:** John Gardner
+  - **Email:** info@salesforce.com
+  - **Company:** 3C Systems
+  - **Status:** Qualified
+
+- **Lead ID:** 00Q0600000Y9D9eEAF
+  - **Name:** Andy Smith
+  - **Email:** info@salesforce.com
+  - **Company:** Universal Technologies
+  - **Status:** Qualified

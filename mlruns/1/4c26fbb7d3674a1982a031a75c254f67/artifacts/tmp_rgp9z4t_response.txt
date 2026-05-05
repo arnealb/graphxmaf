@@ -1,0 +1,57 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+### Upcoming Meetings
+
+1. **Weekly sync — Dorian Feaux**
+   - **Date:** 6 May 2026
+   - **Time:** 07:00 – 07:30
+
+2. **Sprint review — Arne Albrecht**
+   - **Date:** 8 May 2026
+   - **Time:** 12:00 – 13:00
+
+3. **supplier1 — Q2 Delivery Review**
+   - **Date:** 10 May 2026
+   - **Time:** 08:00 – 09:00
+
+4. **GreenTech Solutions — Technical Qualification Call**
+   - **Date:** 12 May 2026
+   - **Time:** 09:00 – 10:00
+
+5. **Colruyt Group — SmartSales Rollout Kickoff**
+   - **Date:** 15 May 2026
+   - **Time:** 12:00 – 13:30
+
+---
+### Company Information
+
+#### 1. Supplier1
+- **Industry:** Not specified
+- **Website:** Not available
+- **Phone:** Not available
+- **Location(s):**
+  - Rue du Commerce 1, Brussels, 1000, Belgium
+  - Rue de la Loi 42, Brussels, 1000, Belgium
+- **Product:** 
+  - **Industrial Components Pack:** Standard component package for manufacturing processes, priced at €149.99.
+
+#### 2. GreenTech Solutions
+- **Industry:** Technology
+- **Website:** [GreenTech Solutions](https://www.greentechsolutions.be)
+- **Phone:** Not available
+- **Location:** Technologiepark 122, Ghent, 9052, Belgium
+- **Product:** 
+  - **Dashboard License:** Annual software license for the GreenTech sustainability dashboard, priced at €2500.
+
+#### 3. Colruyt Group
+- **Industry:** Retail
+- **Website:** [Colruyt Group](https://www.colruytgroup.com)
+- **Phone:** Not available
+- **Location:** Not specified
+- **Product:** 
+  - **Retail Display Kit:** In-store display kit for retail locations, priced at €89.50.
+
+This information should help you prepare well for your upcoming meetings.

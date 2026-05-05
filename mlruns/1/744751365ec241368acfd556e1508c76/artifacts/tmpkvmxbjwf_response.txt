@@ -1,0 +1,30 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce)...
+️Executing (graph, smartsales)...
+Synthesizing...
+Here’s a comprehensive overview of Delhaize Group, the company linked to your most recent support case:
+
+### Support Case Details
+- **Case Number:** 00001023
+- **Subject:** EDI connection issue
+- **Status:** Working
+- **Priority:** Medium
+- **Created Date:** 28 April 2026
+
+### Company Profile
+- **Name:** Delhaize Group
+- **Industry:** Retail
+- **Website:** [delhaize.be](https://www.delhaize.be)
+- **Location:** 
+  - **City:** Brussels
+  - **Country:** Belgium
+
+### Additional Information
+- No direct contacts for Delhaize Group were found.
+- No related emails or calendar events were discovered.
+
+### Catalog and Locations
+- No locations or catalog items were retrieved. 
+
+This overview encapsulates the current situation regarding your support case with Delhaize Group. If you have any further questions or need details about specific aspects, feel free to ask!

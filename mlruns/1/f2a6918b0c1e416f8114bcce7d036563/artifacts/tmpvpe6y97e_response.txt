@@ -1,0 +1,9 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+To purchase equipment for EUR 8,000, you will need:
+
+- **CFO approval**: This is required for purchases between EUR 5,000 and EUR 25,000.
+
+Ensure that all approvals are documented in the procurement system before sending a purchase order to a supplier.

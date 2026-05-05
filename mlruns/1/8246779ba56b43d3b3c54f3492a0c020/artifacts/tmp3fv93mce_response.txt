@@ -1,0 +1,11 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+No document called "agenda" was found in OneDrive. The following documents were identified instead:
+
+- Invoice Approval Procedure
+- Procurement Procedure
+- Incident Management Procedure
+
+If you wish to explore the content of any of these documents or have other questions, please let me know!

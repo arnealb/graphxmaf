@@ -1,0 +1,13 @@
+{
+  "query": "I completed a EUR 900 training in January and plan to leave EASI in September of the same year. How much do I need to repay?",
+  "reasoning": "This query requires accessing internal company policy documents regarding training repayment terms. Therefore, it needs to be routed to the graph agent to find relevant information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the policy regarding repayment for training costs when leaving the company.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Summarize the repayment terms found in the document to provide the user with the required information."
+}

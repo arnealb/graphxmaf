@@ -1,0 +1,13 @@
+{
+  "query": "Who am I in Microsoft 365?",
+  "reasoning": "The user is asking for information related to their identity within Microsoft 365, which involves accessing internal documents and possibly personal information. The graph agent is capable of retrieving such details.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the user's profile information, including any personal contacts, emails, and calendar events that define their identity in Microsoft 365.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Summarize the user's profile information from step 1 to provide a clear picture of their Microsoft 365 identity."
+}

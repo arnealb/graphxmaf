@@ -1,0 +1,38 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is the comprehensive overview of information related to the word 'nutella' across all systems:
+
+### From Email Search:
+- **Subject**: Ferrero Benelux — Nutella spring campaign inquiry
+- **Sender**: Ferrero Benelux Marketing (marketing@ferrero.be)
+- **Received**: 28 April 2026
+- **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7rAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### From Calendar Search:
+- No relevant results found.
+
+### From Document Search:
+- No documents found that contain information about 'nutella'.
+
+### From Salesforce:
+- No relevant results found.
+
+### From SmartSales:
+- **Location**: Ferrero Benelux - Brussels (Nutella)
+  - **Address**: Bld de la Woluwe 42, Brussels, 1200, Belgium
+
+- **Catalog Items**:
+  - **Nutella 750g**
+    - Description: Hazelnut spread in 750g jar
+    - Price: €5.99
+    - Availability: In Stock
+  
+  - **Nutella 750g — Display Jar**
+    - Description: Nutella hazelnut spread 750g. Ferrero Benelux product for in-store promotion.
+    - Price: €4.99
+    - Sales Unit: 12 jars
+
+### Summary:
+The notable mentions of 'nutella' span an email inquiry regarding a marketing campaign and catalog details about Nutella products available for sale. There were no relevant documents, calendar entries, or Salesforce records identified.

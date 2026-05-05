@@ -1,0 +1,90 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+### Email Domains and Corresponding Salesforce Contacts
+
+1. **albrecht.arne@gmail.com**
+   - **Email Domain:** gmail.com
+   - **Salesforce Contact:** 
+     - Name: Arne Albrecht
+     - Account: Displaytech
+
+2. **marc.supplier@supplier1.be**
+   - **Email Domain:** supplier1.be
+   - **Salesforce Contact:**
+     - Name: Marc Supplier
+     - Account: supplier1
+
+3. **procurement@colruyt.be**
+   - **Email Domain:** colruyt.be
+   - **Salesforce Contact:** None found
+
+4. **info@greentechsolutions.be**
+   - **Email Domain:** greentechsolutions.be
+   - **Salesforce Contact:** None found
+
+5. **marketing@ferrero.be**
+   - **Email Domain:** ferrero.be
+   - **Salesforce Contact:** None found
+
+6. **d.feaux@easi.net**
+   - **Email Domain:** easi.net
+   - **Salesforce Contacts:**
+     - Name: Dorian Feaux
+     - Account: EASI
+     - Name: Arne Albrecht
+     - Account: EASI (alternate email: a.albrecht@easi.net)
+
+7. **SmartAdmin@easigroupdemo.onmicrosoft.com**
+   - **Email Domain:** onmicrosoft.com
+   - **Salesforce Contact:** None found
+
+8. **ops@carrefour-be.eu**
+   - **Email Domain:** carrefour-be.eu
+   - **Salesforce Contact:** None found
+
+9. **procurement@carrefour-be.eu**
+   - **Email Domain:** carrefour-be.eu
+   - **Salesforce Contact:** None found
+
+10. **it@delhaize.eu**
+    - **Email Domain:** delhaize.eu
+    - **Salesforce Contact:** None found
+
+11. **procurement@delhaize.eu**
+    - **Email Domain:** delhaize.eu
+    - **Salesforce Contact:** None found
+
+12. **sales@ab-inbev.com**
+    - **Email Domain:** ab-inbev.com
+    - **Salesforce Contact:** None found
+
+13. **info@proximus.be**
+    - **Email Domain:** proximus.be
+    - **Salesforce Contact:** None found
+
+14. **PowerAutomateNoReply@microsoft.com**
+    - **Email Domain:** microsoft.com
+    - **Salesforce Contact:** None found
+
+15. **flow-noreply@microsoft.com**
+    - **Email Domain:** microsoft.com
+    - **Salesforce Contact:** None found
+
+16. **Enterprise@easigroupdemo.onmicrosoft.com**
+    - **Email Domain:** onmicrosoft.com
+    - **Salesforce Contact:** None found
+
+17. **MSSecurity-noreply@microsoft.com**
+    - **Email Domain:** microsoft.com
+    - **Salesforce Contact:** None found
+
+18. **microsoft-noreply@microsoft.com**
+    - **Email Domain:** microsoft.com
+    - **Salesforce Contact:** None found
+
+### Summary
+- Total unique domains with matching Salesforce contacts: 3 (gmail.com, supplier1.be, easi.net)
+- Domains with no matching contacts: 15

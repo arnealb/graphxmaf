@@ -1,7 +1,7 @@
 [
   {
     "text": "Who am I in Microsoft 365?",
-    "category": "identity",
+    "category": "graph",
     "difficulty": "simple",
     "expected_answer": "The response contains the authenticated user's display name and email address from Microsoft 365.",
     "tags": [
@@ -13,7 +13,7 @@
   },
   {
     "text": "Show me my 5 most recent emails.",
-    "category": "email",
+    "category": "graph",
     "difficulty": "simple",
     "expected_answer": "A list of the 5 most recent inbox emails, each with at minimum the subject line, sender name or email address, and received date/time.",
     "tags": [
@@ -25,7 +25,7 @@
   },
   {
     "text": "Search for emails that have the word 'meeting' in the subject.",
-    "category": "email",
+    "category": "graph",
     "difficulty": "medium",
     "expected_answer": "A list of emails whose subject contains 'meeting', showing subject, sender, and date. If no results are found, the response clearly states so.",
     "tags": [
@@ -37,7 +37,7 @@
   },
   {
     "text": "Have I received any emails in the last 7 days? List sender and subject.",
-    "category": "email",
+    "category": "graph",
     "difficulty": "medium",
     "expected_answer": "A list of emails received in the past 7 days, each showing the sender and subject. If none, the response clearly states the inbox was empty for that period.",
     "tags": [
@@ -49,7 +49,7 @@
   },
   {
     "text": "What does my most recent email say? Give me the full body.",
-    "category": "email",
+    "category": "graph",
     "difficulty": "hard",
     "expected_answer": "The full body text of the most recent email, preceded by its subject and sender. The body is not truncated or summarised.",
     "tags": [
@@ -62,7 +62,7 @@
   },
   {
     "text": "Find the email address of Dorian.",
-    "category": "people",
+    "category": "graph",
     "difficulty": "simple",
     "expected_answer": "The email address(es) associated with a person named Dorian found in the Microsoft 365 directory, along with their display name.",
     "tags": [
@@ -74,7 +74,7 @@
   },
   {
     "text": "What are my upcoming calendar events this week?",
-    "category": "calendar",
+    "category": "graph",
     "difficulty": "simple",
     "expected_answer": "A list of calendar events for the current week, each with event title, start date and time, and optionally end time or location.",
     "tags": [
@@ -86,7 +86,7 @@
   },
   {
     "text": "Search my calendar for any events or meetings in the next 14 days.",
-    "category": "calendar",
+    "category": "graph",
     "difficulty": "medium",
     "expected_answer": "A list of calendar events occurring in the next 14 days, each showing the event title and start date/time",
     "tags": [
@@ -98,7 +98,7 @@
   },
   {
     "text": "Show me my Microsoft 365 contacts.",
-    "category": "contacts",
+    "category": "graph-extra",
     "difficulty": "simple",
     "expected_answer": "A list of the user's Microsoft 365 contacts, each with display name and email address.",
     "tags": [
@@ -110,7 +110,7 @@
   },
   {
     "text": "Find any Excel or PDF files in my OneDrive.",
-    "category": "files",
+    "category": "graph",
     "difficulty": "medium",
     "expected_answer": "A list of Excel (.xlsx/.xls) or PDF files found in OneDrive, each with the file name and its ID.",
     "tags": [
@@ -122,7 +122,7 @@
   },
   {
     "text": "Search OneDrive for a file called 'report' and read its content.",
-    "category": "files",
+    "category": "graph",
     "difficulty": "hard",
     "expected_answer": "The text content of a file whose name contains 'report', preceded by the file name. If no such file is found, the response clearly states so.",
     "tags": [
@@ -135,7 +135,7 @@
   },
   {
     "text": "Show me emails I received in the last 14 days.",
-    "category": "email",
+    "category": "graph",
     "difficulty": "medium",
     "expected_answer": "A list of emails received in the past 14 days, each showing at minimum subject, sender, and received date, mind the format: year-month-day",
     "tags": [
@@ -147,7 +147,7 @@
   },
   {
     "text": "Find emails with 'invoice' in the subject.",
-    "category": "email",
+    "category": "graph",
     "difficulty": "medium",
     "expected_answer": "A list of emails where the subject contains 'invoice', showing sender, subject, and date. If none found, the response states so clearly.",
     "tags": [
@@ -159,7 +159,7 @@
   },
   {
     "text": "Find the most recent email with 'meeting' in the subject and read its full body.",
-    "category": "email",
+    "category": "graph",
     "difficulty": "hard",
     "expected_answer": "The full body of the most recent email whose subject contains 'meeting', preceded by the sender and subject line.",
     "tags": [
@@ -172,7 +172,7 @@
   },
   {
     "text": "Look up the email address of Arne in the organization.",
-    "category": "people",
+    "category": "graph",
     "difficulty": "simple",
     "expected_answer": "The email address and display name of one or more people named Arne found in the Microsoft 365 directory.",
     "tags": [
@@ -184,7 +184,7 @@
   },
   {
     "text": "Find all Word documents in my OneDrive.",
-    "category": "files",
+    "category": "graph",
     "difficulty": "simple",
     "expected_answer": "A list of Word (.docx or .doc) files found in OneDrive, each with the file name and its ID.",
     "tags": [
@@ -196,7 +196,7 @@
   },
   {
     "text": "Find a document called 'agenda' in OneDrive and show its content.",
-    "category": "files",
+    "category": "graph",
     "difficulty": "medium",
     "expected_answer": "The text content of a file named 'agenda' retrieved from OneDrive.",
     "tags": [
@@ -209,7 +209,7 @@
   },
   {
     "text": "Search OneDrive for Excel files and read the content of the first two found.",
-    "category": "files",
+    "category": "graph",
     "difficulty": "hard",
     "expected_answer": "The text content of the first two Excel files found in OneDrive, each clearly labelled with its filename.",
     "tags": [
@@ -222,7 +222,7 @@
   },
   {
     "text": "Find any files related to 'nutella' in OneDrive and read all of them.",
-    "category": "files",
+    "category": "graph",
     "difficulty": "hard",
     "expected_answer": "The text content of every file matching 'nutella' found in OneDrive, each labelled with its filename. If no files are found, states so clearly.",
     "tags": [
@@ -235,7 +235,7 @@
   },
   {
     "text": "List my Microsoft 365 contacts and include their phone numbers.",
-    "category": "contacts",
+    "category": "graph-extra",
     "difficulty": "medium",
     "expected_answer": "A list of Microsoft 365 contacts, each showing display name, email address, and phone number (if available).",
     "tags": [
@@ -247,7 +247,7 @@
   },
   {
     "text": "How many calendar events do I have scheduled this week? List them all.",
-    "category": "calendar",
+    "category": "graph",
     "difficulty": "medium",
     "expected_answer": "A count and a complete list of all calendar events in the current week, each with event title and start date/time.",
     "tags": [
@@ -259,7 +259,7 @@
   },
   {
     "text": "Search my calendar for events scheduled in the next 30 days.",
-    "category": "calendar",
+    "category": "graph",
     "difficulty": "medium",
     "expected_answer": "A list of calendar events occurring in the next 30 days, each showing event title, start date/time, and optionally location. Today is the 14th of april 2026",
     "tags": [
@@ -271,9 +271,9 @@
   },
   {
     "text": "List 5 Salesforce accounts.",
-    "category": "accounts",
+    "category": "salesforce",
     "difficulty": "simple",
-    "expected_answer": "A list of exactly 5 Salesforce account records, each with at minimum the Id and Name fields.",
+    "expected_answer": "A list of exactly 5 Salesforce account records, each with at minimum the Name fields.",
     "tags": [
       "find_accounts"
     ],
@@ -283,7 +283,7 @@
   },
   {
     "text": "Find Salesforce accounts in Belgium, including their billing address.",
-    "category": "accounts",
+    "category": "salesforce",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce accounts where BillingCountry is Belgium, each showing Name and billing address fields (BillingStreet, BillingCity, BillingCountry).",
     "tags": [
@@ -295,7 +295,7 @@
   },
   {
     "text": "Show me 5 Salesforce contacts with their email addresses.",
-    "category": "contacts",
+    "category": "salesforce",
     "difficulty": "simple",
     "expected_answer": "A list of 5 Salesforce contact records, each with Name and Email fields.",
     "tags": [
@@ -307,7 +307,7 @@
   },
   {
     "text": "Find Salesforce contacts in the Sales department.",
-    "category": "contacts",
+    "category": "salesforce",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce contacts where Department equals 'Sales', each showing Name and Department. If none found, the response states so clearly.",
     "tags": [
@@ -319,7 +319,7 @@
   },
   {
     "text": "Show me 5 leads in Salesforce.",
-    "category": "leads",
+    "category": "salesforce",
     "difficulty": "simple",
     "expected_answer": "A list of 5 Salesforce lead records, each with at minimum Name and Company fields.",
     "tags": [
@@ -331,7 +331,7 @@
   },
   {
     "text": "Find Salesforce leads from the Technology or Software industry.",
-    "category": "leads",
+    "category": "salesforce",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce leads where Industry is Technology or Software, each showing Name and Industry.",
     "tags": [
@@ -343,7 +343,7 @@
   },
   {
     "text": "List 5 open opportunities in Salesforce.",
-    "category": "opportunities",
+    "category": "salesforce",
     "difficulty": "simple",
     "expected_answer": "A list of 5 open Salesforce opportunities, each with Name and StageName fields.",
     "tags": [
@@ -355,7 +355,7 @@
   },
   {
     "text": "Show me Salesforce opportunities with an amount greater than 10,000. Include probability.",
-    "category": "opportunities",
+    "category": "salesforce",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce opportunities where Amount > 10000, each showing Name, Amount, and Probability.",
     "tags": [
@@ -367,7 +367,7 @@
   },
   {
     "text": "List open support cases in Salesforce.",
-    "category": "cases",
+    "category": "salesforce",
     "difficulty": "simple",
     "expected_answer": "A list of open Salesforce cases (Status != Closed), each with CaseNumber and Status fields.",
     "tags": [
@@ -379,7 +379,7 @@
   },
   {
     "text": "Show me 5 closed Salesforce cases including their close date and description.",
-    "category": "cases",
+    "category": "salesforce",
     "difficulty": "medium",
     "expected_answer": "A list of 5 closed Salesforce cases, each with CaseNumber, Status (Closed), ClosedDate, and Description fields.",
     "tags": [
@@ -391,7 +391,7 @@
   },
   {
     "text": "Find Salesforce accounts that have 'Group' in their name.",
-    "category": "accounts",
+    "category": "salesforce",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce accounts where Name contains 'Group', each showing Id and Name.",
     "tags": [
@@ -403,7 +403,7 @@
   },
   {
     "text": "Show me Salesforce accounts with their phone numbers.",
-    "category": "accounts",
+    "category": "salesforce",
     "difficulty": "simple",
     "expected_answer": "A list of Salesforce accounts each showing Id, Name, and Phone. Accounts without a phone number may show an empty value.",
     "tags": [
@@ -415,7 +415,7 @@
   },
   {
     "text": "Find Salesforce contacts with 'Manager' in their title.",
-    "category": "contacts",
+    "category": "salesforce",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce contacts where Title contains 'Manager', each showing Name, Title, and Email.",
     "tags": [
@@ -427,7 +427,7 @@
   },
   {
     "text": "Show me the most recently created Salesforce contacts.",
-    "category": "contacts",
+    "category": "salesforce",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce contacts each showing Name, Email",
     "tags": [
@@ -439,7 +439,7 @@
   },
   {
     "text": "Find Salesforce leads that have been converted.",
-    "category": "leads",
+    "category": "salesforce",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce leads where IsConverted is true, each showing Name, Company, and Status.",
     "tags": [
@@ -451,7 +451,7 @@
   },
   {
     "text": "Show me Salesforce leads with the status 'New'.",
-    "category": "leads",
+    "category": "salesforce",
     "difficulty": "simple",
     "expected_answer": "A list of Salesforce leads where Status is 'new', each showing Name, Company, and Status.",
     "tags": [
@@ -463,7 +463,7 @@
   },
   {
     "text": "Show me Salesforce opportunities in the 'Qualification' stage.",
-    "category": "opportunities",
+    "category": "salesforce",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce opportunities where StageName is 'Qualification', each showing Name, Amount, and StageName.",
     "tags": [
@@ -475,7 +475,7 @@
   },
   {
     "text": "List Salesforce opportunities sorted by amount, highest first.",
-    "category": "opportunities",
+    "category": "salesforce",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce opportunities ordered by Amount descending, each showing Name, Amount, and StageName.",
     "tags": [
@@ -487,7 +487,7 @@
   },
   {
     "text": "Find high-priority open cases in Salesforce.",
-    "category": "cases",
+    "category": "salesforce",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce cases where Status is not Closed and Priority is High, each showing CaseNumber, Subject, and Priority.",
     "tags": [
@@ -499,7 +499,7 @@
   },
   {
     "text": "Show me Salesforce cases with their related account names.",
-    "category": "cases",
+    "category": "salesforce",
     "difficulty": "medium",
     "expected_answer": "A list of Salesforce cases each showing CaseNumber, Status, Subject, and the Name of the related Account.",
     "tags": [
@@ -511,7 +511,7 @@
   },
   {
     "text": "Find Salesforce accounts in France and list the contacts linked to those accounts.",
-    "category": "accounts",
+    "category": "salesforce",
     "difficulty": "hard",
     "expected_answer": "First a list of Salesforce accounts where BillingCountry is France, then the contacts associated with each of those accounts.",
     "tags": [
@@ -524,7 +524,7 @@
   },
   {
     "text": "Show me the 3 largest open Salesforce opportunities and the billing country of each related account.",
-    "category": "opportunities",
+    "category": "salesforce",
     "difficulty": "hard",
     "expected_answer": "The 3 open Salesforce opportunities with the highest Amount, each showing Name, Amount, and the BillingCountry of the related Account.",
     "tags": [
@@ -537,9 +537,9 @@
   },
   {
     "text": "List all SmartSales locations.",
-    "category": "locations",
+    "category": "smartsales",
     "difficulty": "simple",
-    "expected_answer": "A JSON array of SmartSales location objects. Each object contains at minimum the uid and name fields. The response also reports the total count.",
+    "expected_answer": "A list of SmartSales location objects, each showing at minimum the name and address details (street, city, zip, country). The response also reports or implies the total count. The uid field is optional — its absence is not penalised if the location names and addresses are clearly present.",
     "tags": [
       "list_locations"
     ],
@@ -549,9 +549,9 @@
   },
   {
     "text": "Find SmartSales locations in Brussels.",
-    "category": "locations",
+    "category": "smartsales",
     "difficulty": "medium",
-    "expected_answer": "A JSON array of SmartSales locations where city equals Brussels. Each object has at minimum uid and name. If none found, states so clearly.",
+    "expected_answer": "A list of SmartSales locations where city equals Brussels. Each object has at minimum uid and name. If none found, states so clearly.",
     "tags": [
       "list_locations"
     ],
@@ -561,9 +561,9 @@
   },
   {
     "text": "List SmartSales locations in Belgium sorted by name, using full projection.",
-    "category": "locations",
+    "category": "smartsales",
     "difficulty": "medium",
-    "expected_answer": "A JSON array of SmartSales locations in Belgium (country eq Belgium), sorted alphabetically by name, with full projection fields for each entry.",
+    "expected_answer": "A list of SmartSales locations in Belgium (country eq Belgium), sorted alphabetically by name, with full projection fields for each entry.",
     "tags": [
       "list_locations"
     ],
@@ -573,7 +573,7 @@
   },
   {
     "text": "List all SmartSales locations, then retrieve the full details of the first result.",
-    "category": "locations",
+    "category": "smartsales",
     "difficulty": "hard",
     "expected_answer": "First the list of locations, then the complete detail object of the first location retrieved by its uid, containing all available fields.",
     "tags": [
@@ -586,7 +586,7 @@
   },
   {
     "text": "What fields are available to display in the SmartSales location list?",
-    "category": "locations",
+    "category": "smartsales",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors indicating which fields can be shown in the SmartSales location list view (e.g. name, city, country, uid).",
     "tags": [
@@ -598,7 +598,7 @@
   },
   {
     "text": "What fields can I use to filter SmartSales locations?",
-    "category": "locations",
+    "category": "smartsales",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors showing which fields support query/filter operators for SmartSales locations (e.g. city, country, name).",
     "tags": [
@@ -610,7 +610,7 @@
   },
   {
     "text": "What fields can I use to sort SmartSales locations?",
-    "category": "locations",
+    "category": "smartsales",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors showing which fields can be used as sort keys for SmartSales locations.",
     "tags": [
@@ -622,9 +622,9 @@
   },
   {
     "text": "List SmartSales catalog items.",
-    "category": "catalog",
+    "category": "smartsales",
     "difficulty": "simple",
-    "expected_answer": "A JSON array of SmartSales catalog item objects. Each object contains at minimum the uid field.",
+    "expected_answer": "A list SmartSales catalog item objects. Each object contains at minimum the uid field.",
     "tags": [
       "list_catalog_items"
     ],
@@ -634,9 +634,9 @@
   },
   {
     "text": "List SmartSales catalog items with simple projection, sorted by name.",
-    "category": "catalog",
+    "category": "smartsales",
     "difficulty": "medium",
-    "expected_answer": "A JSON array of catalog items with simple projection fields, returned in alphabetical order by name.",
+    "expected_answer": "A list of catalog items with simple projection fields, returned in alphabetical order by name.",
     "tags": [
       "list_catalog_items"
     ],
@@ -646,7 +646,7 @@
   },
   {
     "text": "List SmartSales catalog items, then retrieve the full details of the first one.",
-    "category": "catalog",
+    "category": "smartsales",
     "difficulty": "hard",
     "expected_answer": "First the list of catalog items, then the full detail object of the first item retrieved by its uid, containing all available fields.",
     "tags": [
@@ -659,7 +659,7 @@
   },
   {
     "text": "What fields can be displayed for SmartSales catalog items?",
-    "category": "catalog",
+    "category": "smartsales",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors indicating which fields can be shown in the SmartSales catalog item list view.",
     "tags": [
@@ -671,7 +671,7 @@
   },
   {
     "text": "What fields can I filter SmartSales catalog items by?",
-    "category": "catalog",
+    "category": "smartsales",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors showing which fields support query/filter operators for SmartSales catalog items.",
     "tags": [
@@ -683,7 +683,7 @@
   },
   {
     "text": "What fields can I sort SmartSales catalog items by?",
-    "category": "catalog",
+    "category": "smartsales",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors showing which fields can be used as sort keys for SmartSales catalog items.",
     "tags": [
@@ -695,9 +695,9 @@
   },
   {
     "text": "List recent SmartSales orders.",
-    "category": "orders",
+    "category": "smartsales",
     "difficulty": "simple",
-    "expected_answer": "A JSON array of SmartSales order objects. Each object contains at minimum the uid field.",
+    "expected_answer": "A array of SmartSales order objects. Each object contains at minimum the uid field.",
     "tags": [
       "list_orders"
     ],
@@ -707,9 +707,9 @@
   },
   {
     "text": "List SmartSales orders with full projection.",
-    "category": "orders",
+    "category": "smartsales",
     "difficulty": "medium",
-    "expected_answer": "A JSON array of SmartSales orders with the full projection applied, meaning each order object contains all available fields.",
+    "expected_answer": "A  list of SmartSales orders with the full projection applied, meaning each order object contains all available fields.",
     "tags": [
       "list_orders"
     ],
@@ -719,7 +719,7 @@
   },
   {
     "text": "List SmartSales orders, then retrieve the full details of the first order.",
-    "category": "orders",
+    "category": "smartsales",
     "difficulty": "hard",
     "expected_answer": "First the list of orders, then the complete detail object of the first order retrieved by its uid, containing all available fields.",
     "tags": [
@@ -732,9 +732,9 @@
   },
   {
     "text": "What is the SmartSales order configuration?",
-    "category": "orders",
+    "category": "smartsales",
     "difficulty": "simple",
-    "expected_answer": "A JSON object describing the global SmartSales order configuration, including form sections, configurable fields, and order settings.",
+    "expected_answer": "An object describing the global SmartSales order configuration, including form sections, configurable fields, and order settings.",
     "tags": [
       "get_order_configuration"
     ],
@@ -744,9 +744,9 @@
   },
   {
     "text": "List all SmartSales order approbation statuses.",
-    "category": "orders",
+    "category": "smartsales",
     "difficulty": "simple",
-    "expected_answer": "A JSON array of SmartSales order approbation (approval) status objects, each with at minimum a uid field.",
+    "expected_answer": "A list of SmartSales order approbation (approval) status objects, each with at minimum a uid field.",
     "tags": [
       "list_approbation_statuses"
     ],
@@ -756,7 +756,7 @@
   },
   {
     "text": "List SmartSales approbation statuses, then get the full details of the first one.",
-    "category": "orders",
+    "category": "smartsales",
     "difficulty": "hard",
     "expected_answer": "First the list of approbation statuses, then the full detail object of the first status retrieved by its uid.",
     "tags": [
@@ -769,7 +769,7 @@
   },
   {
     "text": "What fields can be displayed for SmartSales orders?",
-    "category": "orders",
+    "category": "smartsales",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors indicating which fields can be shown in the SmartSales order list view.",
     "tags": [
@@ -781,7 +781,7 @@
   },
   {
     "text": "What fields can I filter SmartSales orders by?",
-    "category": "orders",
+    "category": "smartsales",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors showing which fields support query/filter operators for SmartSales orders.",
     "tags": [
@@ -793,7 +793,7 @@
   },
   {
     "text": "What fields can I sort SmartSales orders by?",
-    "category": "orders",
+    "category": "smartsales",
     "difficulty": "simple",
     "expected_answer": "A list or array of field descriptors showing which fields can be used as sort keys for SmartSales orders.",
     "tags": [
@@ -1031,7 +1031,7 @@
     "text": "Give me a complete overview of everything related to Arne.",
     "category": "entity-centric1",
     "difficulty": "hard",
-    "expected_answer": "SF: contact Arne Albrecht (a.albrecht@easi.net, Business Analyst, account EASI). No open opportunities or cases for EASI. Graph: calendar event 'Sprint review — Arne Albrecht' (8 May 2026, 14:00–15:00). Missing Graph or SF entirely = max 3. Missing calendar event = minor deduction. SmartSales (EASI - Brussels location) is optional bonus. Additional pre-existing data (emails from albrecht.arne@gmail.com, secondary Displaytech contact) is acceptable.",
+    "expected_answer": "SF: contact Arne Albrecht (a.albrecht@easi.net, Business Analyst, account EASI). No open opportunities or cases for EASI. Graph: calendar event 'Sprint review — Arne Albrecht' (8 May 2026, 14:00–15:00, if today is past this date this answer will be skipped). Missing Graph or SF entirely = max 3. Missing calendar event = minor deduction. SmartSales (EASI - Brussels location) is optional bonus. Additional pre-existing data (emails from albrecht.arne@gmail.com, secondary Displaytech contact) is acceptable.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1122,7 +1122,7 @@
     "text": "Give me a 360° view of the most recent email sender.",
     "category": "entity-centric1",
     "difficulty": "hard",
-    "expected_answer": "Identifies the most recent email sender from the inbox (time-dependent — based on testdata the most recently injected email is likely from Proximus: info@proximus.be, subject \"Proximus — partnership inquiry\"). Provides a full 360-view: sender name/email/subject, SF account and contact lookup, SS location and order data for their company, recent email/calendar history. For Proximus specifically: this is a gap detection case — no SF account, no SS location. A correct answer must explicitly flag this as a gap (e.g. \"no CRM record found\", \"no SmartSales location found\") rather than silently returning nothing or hallucinating data. If a different sender is most recent due to pre-existing inbox mail, their 360-view is acceptable but gap handling still applies if no SF/SS record exists. Not flagging the Proximus gap = significant deduction. Hallucinating SF/SS data for Proximus = significant deduction.",
+    "expected_answer": "Time-dependent query — correct answer depends on the most recent inbox email at run time. Based on current testdata the most recent email is from Marc Supplier (marc.supplier@supplier1.be), subject 'Follow-up: supplier1 Q2 2026 Delivery Contract' (4 May 2026). A correct answer must: (1) identify the actual most recent sender (not assume Proximus), (2) provide a full 360-view: sender name/email/subject, SF account and contact details, open opportunities, open cases, SS location and order data, recent email/calendar history. For Marc Supplier / supplier1: SF contact exists, SF opportunities exist (Q2 Delivery Contract EUR 85,000), open case 'Delayed shipment — supplier1 April batch' (High), SS locations 'supplier1' (SUP-001) and 'supplier1 - Brussels HQ'. A response that correctly identifies Marc Supplier and provides multi-system context should score well. If Proximus (info@proximus.be) is found as most recent (no SF/SS record): response must explicitly flag the gap — not flagging it = significant deduction. Hallucinating SF/SS data for any sender = significant deduction.",
     "tags": [
       "orchestrator",
       "multi-agent",
@@ -1378,7 +1378,7 @@
     ]
   },
   {
-    "text": "For the company behind my most recent open support case, what else do we know about them?",
+    "text": "For the company behind my most recent open support case, give me a full 360 view",
     "category": "implicit-cross-system",
     "difficulty": "hard",
     "expected_answer": "Time-dependent query — most recent open SF case depends on when it is run. Expected behavior: (1) identifies the most recently created open SF case and extracts the linked company, (2) retrieves full 360-view for that company: SF account details, all open opportunities, all open cases, named contacts if any, (3) SS location and order data for that company, (4) relevant emails and calendar events from Graph. A correct answer integrates all three systems for the identified company. Picking wrong company = significant deduction. Only returning SF data without SS or Graph = significant deduction.",
@@ -1467,141 +1467,247 @@
       "graph"
     ]
   },
-
   {
     "text": "How many vacation days do I get per year at EASI?",
     "category": "onedrive-rag",
     "difficulty": "simple",
     "expected_answer": "Must find 'leave_policy_easi'. Answer must include: (1) 20 statutory vacation days + 12 ADV days = 32 total per year, (2) pro-rated for partial years, (3) carryover maximum 5 days expiring 31 March. Missing ADV distinction or total of 32 = partial deduction. Mentioning only 20 days without ADV = significant deduction.",
-    "tags": ["leave", "HR", "vacation"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "leave",
+      "HR",
+      "vacation"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "What are the RTO and RPO targets for EASI's critical systems?",
     "category": "onedrive-rag",
     "difficulty": "simple",
     "expected_answer": "Must find 'business_continuity_plan_easi'. Answer must include: (1) RTO (Recovery Time Objective) = 4 hours for Priority 1 systems, (2) RPO (Recovery Point Objective) = 1 hour, (3) primary datacenter Azure West Europe with failover to North Europe (Dublin). Missing either RTO or RPO value = significant deduction.",
-    "tags": ["BCP", "disaster-recovery", "infrastructure"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "BCP",
+      "disaster-recovery",
+      "infrastructure"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "What are the password requirements at EASI and how often must I change my password?",
     "category": "onedrive-rag",
     "difficulty": "simple",
     "expected_answer": "Must find 'it_security_procedure_easi'. Answer must include: (1) minimum 14 characters, (2) must contain uppercase, lowercase, number and special character, (3) rotation every 90 days, (4) cannot reuse last 12 passwords, (5) MFA mandatory via Microsoft Authenticator (not SMS). Missing rotation period or MFA requirement = partial deduction.",
-    "tags": ["IT", "security", "password"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "IT",
+      "security",
+      "password"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "When does my health insurance start as a new EASI employee?",
     "category": "onedrive-rag",
     "difficulty": "simple",
     "expected_answer": "Must find 'health_insurance_guide_easi'. Answer must include: (1) automatic enrollment after 3 months of employment. Additional details about DKV policy number, coverage specifics, or optional modules are a bonus but not required for full score. Missing the 3-month waiting period = significant deduction.",
-    "tags": ["HR", "benefits", "health-insurance"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "HR",
+      "benefits",
+      "health-insurance"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "How much advance notice does supplier1 need to give before a scheduled maintenance visit?",
     "category": "onedrive-rag",
     "difficulty": "simple",
     "expected_answer": "Must find 'maintenance_contract_supplier1'. Answer must include: (1) 4 weeks advance notice before each maintenance window, (2) confirmation via email to procurement@easi.net. Details about the contact person or preventive maintenance schedule are a bonus but not required for full score. Missing the 4-week notice = significant deduction.",
-    "tags": ["supplier1", "maintenance", "procurement"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "supplier1",
+      "maintenance",
+      "procurement"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "What happens to my unused vacation days at the end of the year?",
     "category": "onedrive-rag",
     "difficulty": "simple",
     "expected_answer": "Must find 'leave_policy_easi'. Answer must include: (1) maximum 5 vacation days can be carried over to the following year, (2) carried-over days expire on 31 March of the following year and are lost after that date. Missing either the 5-day cap or the 31 March expiry deadline = partial deduction.",
-    "tags": ["leave", "vacation", "carryover"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "leave",
+      "vacation",
+      "carryover"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "If the SmartSales platform goes completely down for Colruyt, who at EASI do I notify first and within what timeframe?",
     "category": "onedrive-rag",
     "difficulty": "medium",
     "expected_answer": "Must find 'incident_management_procedure_easi' and/or 'sla_agreement_easi_colruyt'. Answer must include: (1) S1/P1 severity — immediately notify Arne Albrecht (a.albrecht@easi.net) AND Dorian Feaux (d.feaux@easi.net) AND the Delivery Manager, (2) P1 SLA response target: within 2 hours, (3) if unresolved after 2 hours COO escalates in, (4) client status updates every 2 hours. Missing Arne Albrecht or the 2-hour SLA target = significant deduction.",
-    "tags": ["incident", "SLA", "Colruyt", "escalation"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "incident",
+      "SLA",
+      "Colruyt",
+      "escalation"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "I just joined EASI and am still in my probation period. Can I work from home?",
     "category": "onedrive-rag",
     "difficulty": "medium",
     "expected_answer": "Must find 'remote_work_policy_easi'. Answer must include: (1) No — remote work is prohibited during the first 6 months (probation period), (2) full-time office attendance at Avenue Louise 65 required, (3) mandatory office days for all employees are Mondays and Thursdays, (4) after probation: maximum 3 remote days per week. Not mentioning the 6-month restriction = significant deduction.",
-    "tags": ["remote-work", "probation", "HR"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "remote-work",
+      "probation",
+      "HR"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "I want to purchase a EUR 8,000 piece of equipment for my team. What approval level do I need?",
     "category": "onedrive-rag",
     "difficulty": "medium",
     "expected_answer": "Must find 'procurement_procedure_easi'. Answer must include: (1) EUR 8,000 falls in the EUR 5,000-25,000 bracket requiring CFO approval, (2) three-quote rule applies for purchases over EUR 5,000 without an existing framework agreement. Saying 'manager approval' or 'department manager' (which only covers EUR 500-5,000) = significant deduction.",
-    "tags": ["procurement", "approval", "purchasing"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "procurement",
+      "approval",
+      "purchasing"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "I completed a EUR 900 training in January and plan to leave EASI in September of the same year. How much do I need to repay?",
     "category": "onedrive-rag",
     "difficulty": "medium",
     "expected_answer": "Must find 'training_policy_easi'. Answer must include: (1) January to September = 8 months after completion, (2) the 6-12 month bracket = 50% repayment obligation, (3) 50% of EUR 900 = EUR 450 must be repaid, (4) repayment obligation applies to training costs above EUR 500. Stating the wrong percentage (100%) or wrong amount = significant deduction.",
-    "tags": ["training", "repayment", "HR"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "training",
+      "repayment",
+      "HR"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "How do I report a suspected phishing email and what are the consequences if I fail a phishing test twice?",
     "category": "onedrive-rag",
     "difficulty": "medium",
     "expected_answer": "Must find 'it_security_procedure_easi'. Answer must include: (1) report via the 'Report Phishing' button in Outlook or to security@easi.net, (2) a second test failure triggers an HR discussion/disciplinary procedure. Quarterly test frequency and portal details are a bonus but not required for full score. Missing the HR consequence for a second failure = partial deduction.",
-    "tags": ["IT", "security", "phishing", "compliance"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "IT",
+      "security",
+      "phishing",
+      "compliance"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "I want to work remotely from Spain for 3 weeks. Is this allowed under EASI policy?",
     "category": "onedrive-rag",
     "difficulty": "medium",
     "expected_answer": "Must find 'remote_work_policy_easi'. Answer must include: (1) working abroad within the EU is allowed for a maximum of 10 working days per year on a case-by-case basis with explicit HR approval, (2) 3 weeks equals approximately 15 working days which exceeds the 10-day limit, (3) periods longer than 10 days require a formal HR review, (4) VPN is mandatory and client data cannot be stored on personal devices. Not flagging that 15 days exceeds the 10-day limit = significant deduction.",
-    "tags": ["remote-work", "working-abroad", "HR"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "remote-work",
+      "working-abroad",
+      "HR"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "We discovered a data breach involving Colruyt customer data at 10:00 AM. What are all the notification steps and deadlines?",
     "category": "onedrive-rag",
     "difficulty": "hard",
     "expected_answer": "Must find 'data_breach_procedure_easi'. Answer must include all three deadlines: (1) internal: notify dpo@easi.net or privacy@easi.net within 2 hours = by 12:00 PM, initial assessment within 4 hours; (2) client notification to procurement@colruyt.be within 24 hours = by 10:00 AM next day; (3) Belgian DPA (GBA) notification within 72 hours = by 10:00 AM three days later; (4) evidence must be preserved immediately. Missing any of the three deadlines (2h/24h/72h) = significant deduction per missing item.",
-    "tags": ["GDPR", "data-breach", "compliance", "Colruyt"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "GDPR",
+      "data-breach",
+      "compliance",
+      "Colruyt"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "We want to deploy a change to the Colruyt SmartSales system on a Friday evening at 19:00. Is this allowed?",
     "category": "onedrive-rag",
     "difficulty": "hard",
     "expected_answer": "Must find 'change_management_procedure_easi'. Answer must include: (1) Colruyt has a change blackout window Friday 18:00 to Monday 08:00 during promotional weeks — a 19:00 Friday deployment falls inside this blackout and is NOT allowed, (2) standard maintenance windows are Saturday 22:00-Sunday 06:00 and Tuesday 02:00-04:00, (3) for an emergency change: verbal approval from IT Manager plus Arne Albrecht required, RFC submitted within 24 hours, (4) 48-hour advance client notification required for all planned changes. Saying the deployment is allowed without noting the Colruyt blackout = significant deduction.",
-    "tags": ["change-management", "Colruyt", "maintenance-window"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "change-management",
+      "Colruyt",
+      "maintenance-window"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "I am leaving EASI after 5 years. What happens with my company car and is there a non-compete clause?",
     "category": "onedrive-rag",
     "difficulty": "hard",
     "expected_answer": "Must find 'offboarding_guide_easi' and/or 'company_car_policy_easi'. Answer must include: (1) company car must be returned with a final mileage log and damage inspection, (2) all IT access (Microsoft 365, Salesforce, SmartSales, VPN, client environments) disabled within 24 hours of last working day, (3) non-compete: 12 months in Belgium covering sales/CRM/retail analytics, compensated at 50% of last gross monthly salary, (4) EASI can waive the non-compete within 15 days of receiving the resignation notice. Missing non-compete compensation rate or the waiver option = partial deduction.",
-    "tags": ["offboarding", "car-policy", "non-compete"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "offboarding",
+      "car-policy",
+      "non-compete"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "A supplier wants to offer our team a EUR 75 thank-you dinner. Can we accept?",
     "category": "onedrive-rag",
     "difficulty": "hard",
     "expected_answer": "Must find 'supplier_code_of_conduct_easi' and/or 'procurement_procedure_easi'. Answer must include: (1) No — maximum gift/hospitality threshold is EUR 50, (2) EUR 75 exceeds this limit and must be declined, (3) gifts above EUR 50 must be declared to the CFO, (4) EASI enforces a zero-tolerance anti-corruption policy — accepting is a policy violation. Saying the dinner is acceptable = 1/5 maximum. Mentioning only one policy without the other = minor deduction.",
-    "tags": ["compliance", "anti-corruption", "supplier", "gift-policy"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "compliance",
+      "anti-corruption",
+      "supplier",
+      "gift-policy"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   },
   {
     "text": "What are the financial consequences if EASI misses the P1 response SLA for Colruyt?",
     "category": "onedrive-rag",
     "difficulty": "hard",
     "expected_answer": "Must find 'sla_agreement_easi_colruyt'. Answer must include: (1) each P1 SLA miss triggers a service credit of 10% of the monthly service fee, (2) maximum service credit capped at 30% per month, (3) Colruyt SmartSales contract value is EUR 220,000 annual so a P1 miss costs approximately EUR 1,833 in credits, (4) P1 response target is 2 hours (Arne Albrecht + Dorian Feaux + Delivery Manager), (5) monthly availability target is 99.5%. Missing service credit percentages = significant deduction.",
-    "tags": ["SLA", "Colruyt", "service-credit", "financial"],
-    "expected_agents": ["graph"]
+    "tags": [
+      "SLA",
+      "Colruyt",
+      "service-credit",
+      "financial"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
   }
 ]

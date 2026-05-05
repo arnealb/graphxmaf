@@ -1,0 +1,13 @@
+{
+  "query": "Who is the contact person behind my most expensive open order?",
+  "reasoning": "The query asks for a specific contact related to a commercial order, which necessitates retrieving information about the open orders from the salesforce system. This will allow identifying the most expensive order and subsequently fetching the contact details related to that order.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve details of all open orders including their amounts. Identify the most expensive open order and return its associated contact person.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the name and details of the contact person associated with the most expensive open order identified in step 1."
+}

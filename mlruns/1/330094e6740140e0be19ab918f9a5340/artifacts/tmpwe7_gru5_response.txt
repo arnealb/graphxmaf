@@ -1,0 +1,84 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+Here is an overview of the companies linked to your open support cases:
+
+### 1. Delhaize Group
+- **Case Number:** 00001023
+- **Subject:** EDI connection issue
+- **Status:** Working
+- **Priority:** Medium
+- **Website:** [Delhaize Group](https://www.delhaize.be)
+
+### 2. Carrefour Belgium SA
+- **Case Number:** 00001022
+- **Subject:** POS integration delay
+- **Status:** New
+- **Priority:** High
+- **Website:** [Carrefour Belgium SA](https://www.carrefour.be)
+
+### 3. Colruyt Group
+- **Case Number:** 00001021
+- **Subject:** Integration issue with POS system
+- **Status:** New
+- **Priority:** Medium
+- **Website:** [Colruyt Group](https://www.colruytgroup.com)
+- **Recent Communication:**
+  - **Email Subject:** SmartSales pilot bevestiging
+    - **Sender:** Colruyt Group Procurement
+    - **Date Received:** 28 April 2026
+    - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7pAAA%)**
+    
+### 4. Supplier1
+- **Case Number:** 00001020
+- **Subject:** Delayed shipment — supplier1 April batch
+- **Status:** Working
+- **Priority:** High
+- **Contact:**
+  - **Name:** Marc Supplier
+  - **Email:** marc.supplier@supplier1.be
+- **Recent Communications:**
+  - **Email Subject:** Follow-up: Q2 2026 Delivery Contract
+    - **Sender:** Marc Supplier
+    - **Date Received:** 28 April 2026
+    - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbzQmuAAA%)**
+    
+### 5. Easi Be
+- **Case Number:** 00001018
+- **Subject:** Verification statut case
+- **Status:** In progress
+- **Priority:** Medium
+- **Contact:**
+  - **Name:** Jon Mul
+  - **Email:** j.mulolo@easi.net
+
+### 6. Pairi Daiza
+- **Case Number:** 00001006
+- **Subject:** Issue with order
+- **Status:** New
+- **Priority:** Medium
+- **Website:** [Pairi Daiza](www.morponbrothers.com)
+
+### 7. Omega SA-NV
+- **Case Number:** 00001003
+- **Subject:** Delivery issues with order #544
+- **Status:** New
+- **Priority:** Medium
+- **Website:** [Omega SA-NV](http://www.omegaincorporated.com)
+
+### 8. Global Media
+- **Case Number:** 00001000
+- **Subject:** Sample Case: Our Widgets have not been delivered.
+- **Status:** Escalated
+- **Priority:** High
+- **Contact:**
+  - **Name:** John lastname
+  - **Email:** john.lastname@globalmedia.com
+- **Recent Communication:**
+  - **Email Subject:** Contract_GlobalMedia_2026
+    - **Date:** 15 April 2026
+    - **[View Email](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B9CC62011-7652-4EEE-9DC8-C80201C99BBD%7D&file=Contract_GlobalMedia_2026.docx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+
+This overview consolidates the details of your open support cases alongside the relevant communication history where applicable.

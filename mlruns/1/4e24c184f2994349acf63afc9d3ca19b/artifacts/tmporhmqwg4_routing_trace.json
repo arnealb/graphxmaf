@@ -1,0 +1,31 @@
+{
+  "user_query": "Find all Word documents in my OneDrive.",
+  "plan": {
+    "query": "Find all Word documents in my OneDrive.",
+    "reasoning": "The task requires accessing the OneDrive files specifically, which falls under the capabilities of the graph agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Search for all Word documents in the user's OneDrive.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Provide the list of all Word documents found in OneDrive."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Search for all Word documents in the user's OneDrive.",
+      "started_at": "2026-05-04T14:26:54.364331+00:00",
+      "ended_at": "2026-05-04T14:27:41.079912+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_files"
+      ]
+    }
+  ]
+}

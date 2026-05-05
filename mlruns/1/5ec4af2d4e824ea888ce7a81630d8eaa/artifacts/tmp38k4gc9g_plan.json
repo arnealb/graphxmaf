@@ -1,0 +1,13 @@
+{
+  "query": "List SmartSales catalog items.",
+  "reasoning": "The query specifically asks for catalog items, which falls under the domain of the SmartSales agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve a list of all catalog items available in the SmartSales system.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of catalog items obtained from the SmartSales agent."
+}

@@ -1,0 +1,92 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here are the recent SmartSales orders:
+
+### Recent Orders
+1. **Order ID:** ORD-LDL-2026-001
+   - **Date:** 28 April 2026
+   - **Customer:** Customer1
+   - **Total:** €5,980
+   - **Status:** APPROVED
+   - **Comments:** Shelf replenishment stock for Lidl Belgium Antwerp. No SF account linked.
+
+2. **Order ID:** ORD-ABI-2026-001
+   - **Date:** 28 April 2026
+   - **Customer:** Customer1
+   - **Total:** €8,750
+   - **Status:** APPROVED
+   - **Comments:** Distribution mapping for Anheuser-Busch InBev network. Largest order this quarter.
+
+3. **Order ID:** ORD-ADL-2026-001
+   - **Date:** 28 April 2026
+   - **Customer:** Customer1
+   - **Total:** €9,600
+   - **Status:** APPROVED
+   - **Comments:** EDI connectors for AD Delhaize franchise rollout. Parent account: Delhaize Group.
+
+4. **Order ID:** ORD-CRF-2026-001
+   - **Date:** 28 April 2026
+   - **Customer:** Customer1
+   - **Total:** €54,000
+   - **Status:** APPROVED
+   - **Comments:** Analytics pilot across 12 Carrefour BE hypermarkets. Ref: Carrefour Belgium SA opp.
+
+5. **Order ID:** ORD-GTS-2026-001
+   - **Date:** 28 April 2026
+   - **Customer:** Customer1
+   - **Total:** €2,500
+   - **Status:** APPROVED
+   - **Comments:** Annual sustainability dashboard license. Matches open SF opportunity.
+
+6. **Order ID:** ORD-NUT-2026-001
+   - **Date:** 28 April 2026
+   - **Customer:** Customer1
+   - **Total:** €239.52
+   - **Status:** APPROVED
+   - **Comments:** Nutella in-store promotion stock for spring campaign.
+
+7. **Order ID:** ORD-COL-2026-001
+   - **Date:** 28 April 2026
+   - **Customer:** Customer1
+   - **Total:** €447.50
+   - **Status:** APPROVED
+   - **Comments:** Retail display materials for Q3 rollout.
+
+8. **Order ID:** ORD-SUP1-2026-001
+   - **Date:** 28 April 2026
+   - **Customer:** Customer1
+   - **Total:** €1,499.90
+   - **Status:** APPROVED
+   - **Comments:** Q2 2026 component delivery. Linked to open SF opportunity.
+
+9. **Order ID:** ORD-ARNE-001
+   - **Date:** 15 April 2026
+   - **Customer:** Arne Albrecht
+   - **Total:** €0
+   - **Status:** APPROVED
+   - **Comments:** New employee IT setup for Arne Albrecht.
+
+10. **Order ID:** ORD-URMOM-001
+    - **Date:** 15 April 2026
+    - **Customer:** ur mom
+    - **Total:** €0
+    - **Status:** APPROVED
+    - **Comments:** Home office equipment order.
+
+11. **Order ID:** ORD-GLOBALMEDIA-001
+    - **Date:** 15 April 2026
+    - **Customer:** Global Media
+    - **Total:** €0
+    - **Status:** APPROVED
+    - **Comments:** Bulk order for media production team.
+
+12. **Order ID:** TEST-001
+    - **Date:** 25 March 2026
+    - **Customer:** Customer1
+    - **Total:** €0
+    - **Status:** APPROVED
+    - **Comments:** Test order created via Postman.
+
+These orders reflect a recent range of transactions across different customers with various total amounts and purposes.

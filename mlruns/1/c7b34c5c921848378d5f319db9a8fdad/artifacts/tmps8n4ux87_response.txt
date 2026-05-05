@@ -1,0 +1,27 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the most recently created contacts in Salesforce:
+
+- **Arne Albrecht**
+  - Email: a.albrecht@easi.net
+  - Account Name: EASI
+
+- **Dorian Feaux**
+  - Email: d.feaux@easi.net
+  - Account Name: EASI
+
+- **Marc Supplier**
+  - Email: marc.supplier@supplier1.be
+  - Account Name: supplier1
+
+- **mister maestro**
+  - Email: mist.maestro@gmail.com
+  - Account Name: account in france
+
+- **supplier1_contact lastname**
+  - Email: Not available
+  - Account Name: supplier1
+
+Note: The exact creation dates and additional details are not available.

@@ -1,0 +1,13 @@
+{
+  "query": "Show me 5 leads in Salesforce.",
+  "reasoning": "The query specifically requests information about leads, which falls under the domain of the Salesforce agent. Since it directly pertains to retrieving leads from the CRM system, only one step is needed.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve 5 leads from the Salesforce CRM system.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the results of step 1 as the final answer."
+}

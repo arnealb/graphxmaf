@@ -1,0 +1,13 @@
+{
+  "query": "What fields can I sort SmartSales orders by?",
+  "reasoning": "This query pertains to internal processes related to SmartSales, which is not a CRM or relationship-focused question but rather about system functionality. Hence, it should be routed to the graph agent to access relevant documents or system guidelines regarding SmartSales order sorting.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the fields available for sorting SmartSales orders.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the list of fields found in the previous step as the final answer."
+}

@@ -1,0 +1,29 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the accounts that have both an active deal and a recent order:
+
+### Accounts with Active Deals and Recent Orders:
+- **Delhaize Group**
+  - Recent Order: Case ID 500KI000001mK13YAE (Subject: EDI connection issue, Created: 28 April 2026)
+  - Active Deal: Opportunity ID 006KI000005bIGIYA2 (Stage: Negotiation/Review, Close Date: 31 August 2026)
+
+- **Carrefour Belgium SA**
+  - Recent Order: Case ID 500KI000001mK0yYAE (Subject: POS integration delay, Created: 28 April 2026)
+  - Active Deal: Opportunity ID 006KI000005bIGDYA2 (Stage: Proposal/Price Quote, Close Date: 31 July 2026)
+
+- **Colruyt Group**
+  - Recent Order: Case ID 500KI000001mJiCYAU (Subject: Integration issue with POS system, Created: 28 April 2026)
+  - Active Deal: Opportunity ID 006KI000005bHl1YAE (Stage: Proposal/Price Quote, Close Date: 30 September 2026)
+
+- **supplier1**
+  - Recent Order: Case ID 500KI000001mJjsYAE (Subject: Delayed shipment — April batch, Created: 28 April 2026)
+  - Active Deal: Opportunity ID 006KI000005bHl6YAE (Stage: Negotiation/Review, Close Date: 30 June 2026)
+
+- **Omega SA-NV**
+  - Recent Order: Case ID 5000600005QqhG2AAJ (Subject: Delivery issues with order #544, Created: 31 July 2023)
+  - Active Deal: Opportunity ID 006J6000007ZmITIA0 (Stage: Qualification, Close Date: 21 August 2025)
+
+### Summary
+- Accounts with both an active deal and a recent order: **Delhaize Group**, **Carrefour Belgium SA**, **Colruyt Group**, **supplier1**, **Omega SA-NV**.

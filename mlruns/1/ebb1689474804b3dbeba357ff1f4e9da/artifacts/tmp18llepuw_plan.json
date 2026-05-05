@@ -1,0 +1,13 @@
+{
+  "query": "Find emails with 'invoice' in the subject.",
+  "reasoning": "The query specifically pertains to finding emails, which falls under the capabilities of the graph agent for searching communication history.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for emails with 'invoice' in the subject.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the results of the email search from step 1."
+}

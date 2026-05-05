@@ -1,0 +1,84 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce)...
+️Executing (graph, smartsales)...
+Synthesizing...
+Here is a detailed overview of the companies linked to your open support cases, including CRM details, communication history, and location information:
+
+### 1. Delhaize Group
+- **Case Number:** 00001023
+- **Subject:** EDI connection issue
+- **Status:** Working
+- **Priority:** Medium
+- **Created Date:** 28 April 2026
+- **Additional Information:** Mentioned as a client of the SmartSales platform involved in the EDI Connector Pack and the Supply Chain Optimisation engagement.
+  
+### 2. Carrefour Belgium SA
+- **Case Number:** 00001022
+- **Subject:** POS integration delay
+- **Status:** New
+- **Priority:** High
+- **Created Date:** 28 April 2026
+- **Location:** Bergensesteenweg 1424, 1070 Brussels (Anderlecht).
+  
+### 3. Colruyt Group
+- **Case Number:** 00001021
+- **Subject:** Integration issue with POS system
+- **Status:** New
+- **Priority:** Medium
+- **Created Date:** 28 April 2026
+- **Additional Information:** Controller in the Data Processing Agreement with EASI Group for SmartSales; client in the Service Level Agreement for managed services.
+
+### 4. Supplier1
+- **Case Number:** 00001020
+- **Subject:** Delayed shipment — supplier1 April batch
+- **Status:** Working
+- **Priority:** High
+- **Created Date:** 28 April 2026
+- **Additional Information:** Involved in a maintenance and support contract with EASI Group.
+- **Location:** 
+  - **Street:** Rue du Commerce 1
+  - **City:** Brussels
+  - **Zip:** 1000
+  - **Country:** Belgium
+
+### 5. Easi Be
+- **Case Number:** 00001018 and 00001017 
+- **Subject:** Verification statut case and Test
+- **Status:** In progress (00001018) and New (00001017)
+- **Priority:** Medium
+- **Created Date:** 6 March 2025
+- **Additional Information:** No specific information available.
+
+### 6. Pairi Daiza
+- **Case Number:** 00001006, 00001005, and 00001001
+- **Subject:** Issue with order, Produits, and Sample Case
+- **Status:** New
+- **Priority:** Medium
+- **Created Dates:** 
+    - 18 March 2024 (00001006)
+    - 13 March 2024 (00001005)
+    - 29 June 2023 (00001001)
+- **Additional Information:** No specific information available.
+
+### 7. Omega SA-NV
+- **Case Number:** 00001003
+- **Subject:** Delivery issues with order #544
+- **Status:** New
+- **Priority:** Medium
+- **Created Date:** 31 July 2023
+- **Additional Information:** No specific information available.
+
+### 8. Global Media
+- **Case Number:** 00001000
+- **Subject:** Sample Case: Our Widgets have not been delivered.
+- **Status:** Escalated
+- **Priority:** High
+- **Created Date:** 29 June 2023
+- **Location:**
+  - **Street:** Mediastraat 10
+  - **City:** Brussels
+  - **Zip:** 1000
+  - **Country:** Belgium
+
+This summary includes relevant case details and location information where available.

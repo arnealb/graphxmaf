@@ -1,0 +1,23 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+Here are the SmartSales catalog items sorted by name:
+
+- **AB InBev — Distribution Mapping License**
+- **Business Laptop Pro 15**
+- **Carrefour — In-Store Analytics Module**
+- **Colruyt House Brand — Retail Display Kit**
+- **Delhaize — EDI Connector Pack**
+- **Ergonomic Keyboard**
+- **GreenTech Solutions — Dashboard License**
+- **IT Hardware**
+- **IT Software**
+- **Lidl — Shelf Replenishment Kit**
+- **Nutella 750g**
+- **Nutella 750g — Display Jar**
+- **Ultra Wide Monitor 34**
+- **USB-C Docking Station**
+- **Wireless Headset UC** 
+
+This list includes item names and excludes other details as per your request for simple projection.

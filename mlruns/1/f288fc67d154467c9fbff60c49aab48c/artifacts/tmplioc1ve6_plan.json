@@ -1,0 +1,21 @@
+{
+  "query": "Tell me about the companies behind my open support cases.",
+  "reasoning": "The query requires information about both open support cases and the corresponding companies, necessitating the use of salesforce for the case data and graph for communication history or documents related to those companies.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all open support cases and the associated company information for those cases.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Using the company names from step 1, gather any relevant communication history and documents related to those companies.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from both steps to provide a comprehensive overview of the companies behind the open support cases, including case details and any related communications or documents."
+}

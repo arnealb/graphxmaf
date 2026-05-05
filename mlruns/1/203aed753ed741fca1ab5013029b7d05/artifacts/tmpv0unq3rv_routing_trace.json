@@ -1,0 +1,32 @@
+{
+  "user_query": "Give me a summary of all activity related to my next calendar event.",
+  "plan": {
+    "query": "Give me a summary of all activity related to my next calendar event.",
+    "reasoning": "The query requires gathering current calendar event details along with any relevant communication history. Therefore, both the graph agent is needed to access the calendar and communication information.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the next calendar event details and any related emails or calendar events that involve the same participants.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Summarize the next calendar event details and related activity gathered from the previous step."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the next calendar event details and any related emails or calendar events that involve the same participants.",
+      "started_at": "2026-05-04T20:00:32.436199+00:00",
+      "ended_at": "2026-05-04T20:00:42.215189+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "list_calendar",
+        "search_email"
+      ]
+    }
+  ]
+}

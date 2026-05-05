@@ -1,0 +1,25 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (smartsales)...
+Synthesizing...
+Based on the recent emails received and the company location records, here are the results:
+
+### Companies that emailed recently without a registered location:
+- **Supplier1**
+  - Email: marc.supplier@supplier1.be
+- **EASI**
+  - Email: SmartAdmin@easigroupdemo.onmicrosoft.com
+
+### Companies with a registered location:
+- **Proximus**
+- **AB InBev**
+- **Delhaize**
+- **AD Delhaize**
+- **Carrefour**
+- **Ferrero Benelux**
+- **GreenTech Solutions**
+- **Microsoft**
+- **SharePoint Online**
+- **Microsoft Notifications**
+- **Microsoft Security**

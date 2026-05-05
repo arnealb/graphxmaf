@@ -1,0 +1,38 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+### Available Fields in the SmartSales Location List
+
+- **techServerCreationDate** (DATETIME)
+- **techServerUpdateDate** (DATETIME)
+- **techCreationUser** (TEXT)
+- **techUpdateUser** (TEXT)
+- **techClientCreationDate** (DATETIME)
+- **techClientUpdateDate** (DATETIME)
+- **code** (TEXT)
+- **externalId** (TEXT)
+- **commented** (BOOLEAN)
+- **name** (TEXT)
+- **street** (TEXT)
+- **city** (TEXT)
+- **zip** (TEXT)
+- **country** (TEXT)
+- **latitude** (DECIMAL)
+- **longitude** (DECIMAL)
+- **vatNumber** (TEXT)
+- **hasExtranetAccess** (BOOLEAN)
+- **extranetUsername** (TEXT)
+- **extranetStartDate** (DATE)
+- **extranetEndDate** (DATE)
+- **extranetLanguage** (TEXT)
+- **lastVisitDate** (DATETIME)
+- **lastOrderDate** (DATETIME)
+- **email** (TEXT)
+- **Supplied by** (TEXT, from relation)
+- **Headquarter of** (TEXT, from relation)
+- **Headquarter** (TEXT, from relation)
+- **Billing company** (TEXT, from relation)
+- **VAT** (TEXT)
+
+This list encompasses all the fields available for display in the SmartSales location list.

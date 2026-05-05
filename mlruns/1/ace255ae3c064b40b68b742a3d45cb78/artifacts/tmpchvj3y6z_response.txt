@@ -1,0 +1,67 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Here's the comprehensive overview of each person you have meetings with this week, based on the available information:
+
+### 1. **Arne Albrecht**
+- **Contact Information:**
+  - Emails: 
+    - a.albrecht@easi.net
+    - albrecht.arne@gmail.com
+- **CRM Details:**
+  - Accounts:
+    - **EASI** (no additional details)
+    - **Displaytech**
+      - Industry: Technology
+      - Website: [www.dfcinc.net](http://www.dfcinc.net)
+      - Phone: (769) 555-0153
+- **Meeting Events:**
+  - **Sprint Review**
+    - Date: 8 May 2026
+    - Time: 12:00 - 13:00
+- **Location Information:**
+  - Address: Lippenslaan 347, Knokke, 8300, Belgium
+
+---
+
+### 2. **John Lastname**
+- **Contact Information:**
+  - Email: john.lastname@globalmedia.com
+- **CRM Details:**
+  - Account: **Global Media**
+    - Industry: Media
+    - Phone: (905) 555-1212
+- **Meeting Events:**
+  - **No specific meetings listed for John Lastname this week**.
+- **Location Information:**
+  - **No location details available**.
+
+---
+
+### 3. **Matteo Lantini**
+- **Contact Information:**
+  - Email: m.lantini@easi.net
+- **CRM Details:**
+  - **No CRM details available.**
+- **Meeting Events:**
+  - **No specific meetings listed for Matteo Lantini this week**.
+- **Location Information:**
+  - **No location details available**.
+
+---
+
+### 4. **Dorian Féaux**
+- **Contact Information:**
+  - Email: d.feaux@easi.net
+- **CRM Details:**
+  - **No CRM details available.**
+- **Meeting Events:**
+  - **Weekly Sync**
+    - Date: 6 May 2026
+    - Time: 07:00 - 07:30
+- **Location Information:**
+  - **No location details available**.
+
+This summary encapsulates all known information regarding each individual scheduled for meetings this week. Let me know if you need any further details!

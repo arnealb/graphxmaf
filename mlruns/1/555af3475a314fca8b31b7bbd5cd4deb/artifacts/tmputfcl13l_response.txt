@@ -1,0 +1,38 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce, graph)...
+Synthesizing...
+Here are the companies that appear both in the CRM (Salesforce) and in the email history (Graph):
+
+### Common Companies:
+- **From Salesforce:**
+  - Anheuser-Busch InBev
+  - Delhaize Group
+  - Carrefour Belgium SA
+  - Ferrero Benelux
+  - GreenTech Solutions
+  - Colruyt Group
+
+- **From Graph:**
+  - AB InBev (equivalent to Anheuser-Busch InBev)
+  - Delhaize (part of Delhaize Group)
+  - Carrefour BE (equivalent to Carrefour Belgium SA)
+  - Ferrero Benelux
+  - GreenTech Solutions
+  - Colruyt Group
+
+### Resulting Common Lists:
+- **Anheuser-Busch InBev** (Salesforce) / **AB InBev** (Graph)
+- **Delhaize Group** (Salesforce) / **Delhaize** (Graph)
+- **Carrefour Belgium SA** (Salesforce) / **Carrefour BE** (Graph)
+- **Ferrero Benelux** (both in Salesforce and Graph)
+- **GreenTech Solutions** (both in Salesforce and Graph)
+- **Colruyt Group** (both in Salesforce and Graph)
+
+The combined common companies are:
+- Anheuser-Busch InBev / AB InBev
+- Delhaize Group / Delhaize
+- Carrefour Belgium SA / Carrefour BE
+- Ferrero Benelux
+- GreenTech Solutions
+- Colruyt Group

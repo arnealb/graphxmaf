@@ -1,0 +1,13 @@
+{
+  "query": "Find the most recent email with 'meeting' in the subject and read its full body.",
+  "reasoning": "The task requires fetching email data from the user's Microsoft 365 account, specifically focusing on emails with a certain keyword in the subject. This can be accomplished in a single step using the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for the most recent email with 'meeting' in the subject and retrieve its full body content.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the content of the email retrieved in step 1."
+}

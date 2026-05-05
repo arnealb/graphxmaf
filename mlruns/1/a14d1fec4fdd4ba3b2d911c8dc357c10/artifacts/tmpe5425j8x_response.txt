@@ -1,0 +1,33 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (smartsales)...
+Synthesizing...
+Based on the provided information:
+
+### Companies Recently Emailed Without Registered Locations
+
+- **Microsoft** (microsoft-noreply@microsoft.com)
+- **Microsoft Security** (MSSecurity-noreply@microsoft.com)
+- **Enterprise** (Enterprise@easigroupdemo.onmicrosoft.com)
+- **Microsoft Power Automate** (flow-noreply@microsoft.com)
+- **Proximus Business** (info@proximus.be)
+- **AB InBev Sales** (sales@ab-inbev.com)
+- **Delhaize Procurement** (procurement@delhaize.eu)
+- **AD Delhaize IT** (it@delhaize.eu)
+- **CRF Belgium Procurement** (procurement@carrefour-be.eu)
+- **Carrefour BE Operations** (ops@carrefour-be.eu)
+- **SmartAdmin** (SmartAdmin@easigroupdemo.onmicrosoft.com)
+- **Dorian Fèaux** (d.feaux@easi.net)
+- **Ferrero Benelux Marketing** (marketing@ferrero.be)
+- **GreenTech Solutions** (info@greentechsolutions.be)
+- **Colruyt Group Procurement** (procurement@colruyt.be)
+- **Marc Supplier** (marc.supplier@supplier1.be)
+- **Microsoft Azure** (azure-noreply@microsoft.com)
+- **SharePoint Online** (no-reply@sharepointonline.com)
+
+### Additional Information
+- **Arne Albrecht** (albrecht.arne@gmail.com) does have a registered location in Knokke, Belgium.
+
+### Summary
+All companies listed above do not have a location registered with your system except for Arne Albrecht.

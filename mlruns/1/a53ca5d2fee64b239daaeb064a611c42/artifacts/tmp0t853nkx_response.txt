@@ -1,0 +1,18 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+### Total Order Value for Companies with Open Support Cases
+
+The following companies currently have open support cases:
+
+- **Delhaize Group**: Case number 00001023 (Working)
+- **Carrefour Belgium SA**: Case number 00001022 (New)
+- **Colruyt Group**: Case number 00001021 (New)
+- **supplier1**: Case number 00001020 (Working)
+- **Easi Be**: Case number 00001018 (In progress), 00001017 (New)
+- **Pairi Daiza**: Case numbers 00001006 (New), 00001005 (Waiting for Customer), 00001001 (New)
+- **Omega SA-NV**: Case number 00001003 (New)
+- **Global Media**: Case number 00001000 (Escalated)
+
+However, the results do not provide any information about the total order value associated with these companies. Therefore, it is not possible to calculate the total order value based on the available data.

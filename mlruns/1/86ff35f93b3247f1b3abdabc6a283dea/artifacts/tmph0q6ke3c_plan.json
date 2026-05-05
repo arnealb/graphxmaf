@@ -1,0 +1,13 @@
+{
+  "query": "We discovered a data breach involving Colruyt customer data at 10:00 AM. What are all the notification steps and deadlines?",
+  "reasoning": "The query involves understanding internal policies and procedures regarding data breaches, which falls under internal company documentation. Therefore, I will use the graph agent to search for relevant documents and procedures related to data breach notifications.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for internal company documents that outline the notification steps and deadlines for data breaches.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the findings from the document search in a comprehensive response to the user."
+}

@@ -1,0 +1,58 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce)...
+️Executing (graph, smartsales)...
+Synthesizing...
+Based on the gathered information, here are the most important companies we are currently working with, along with relevant details regarding communication and their physical presence.
+
+### Key Companies
+
+1. **Microsoft**
+   - **Email Communication:**
+     - Subject: "Een abonnement kopen om uw product te blijven gebruiken" 
+     - Date Received: 3 May 2026
+     - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAOC9kJ6AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+2. **EasiGroupDemo (Enterprise)**
+   - **Email Communication:**
+     - Subject: "You've joined the Enterprise group"
+     - Date Received: 30 April 2026
+     - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN70MDJAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+3. **GreenTech Solutions**
+   - **Upcoming Meeting:**
+     - Subject: "Technical Qualification Call"
+     - Meeting Date: 12 May 2026
+
+### Important Locations
+
+1. **AACO DAVIDSON**
+   - Address: Havenkant 6, Leuven, 3000, Belgium
+   - Last Visit Date: 5 April 2026
+
+2. **Stream Software**
+   - Address: Potvlietlaan 4, Antwerpen, 2600, Belgium
+   - Last Visit Date: 27 April 2026
+
+3. **Michelles Brasserie**
+   - Address: Ingelmunstersestraat 46, Izegem, 8870, Belgium
+   - Last Visit Date: 22 April 2026
+
+4. **AB InBev - Leuven**
+   - Address: Vaartstraat 94, Leuven, 3000, Belgium
+
+5. **Colruyt - Halle**
+   - Address: Edingensesteenweg 196, Halle, 1500, Belgium
+
+6. **Lidl Belgium - Antwerp**
+   - Address: Noordersingel 10, Antwerp, 2140, Belgium
+
+7. **Customer1**
+   - Address: Markt 5, Bruges, 8000, Belgium
+   - Last Order Date: 28 April 2026 
+
+### Communication Summary
+- Communication with Microsoft and EasiGroupDemo indicates ongoing collaboration on various products and services.
+- Scheduled meetings with GreenTech Solutions demonstrate active engagement and project discussions.
+
+This summary highlights our significant business relationships and their contact details for better management and follow-up.

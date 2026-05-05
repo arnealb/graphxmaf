@@ -1,0 +1,29 @@
+{
+  "query": "For the company behind my most recent open support case, give me a full 360 view",
+  "reasoning": "The user is requesting a comprehensive overview of a specific company related to their open support case. This requires data from all available agents to provide a complete picture, including communication history, CRM contacts, and any relevant locations.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Find the most recent open support case and retrieve its associated company information, including company name and any related contacts.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Using the company name found in step 1, search for any emails and calendar events related to this company.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Using the company name from step 1, search for any physical locations or site information associated with this company.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from all steps to present a comprehensive overview of the company, including communication history, CRM data, and location details."
+}

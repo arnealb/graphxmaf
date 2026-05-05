@@ -1,0 +1,13 @@
+{
+  "query": "What fields can be displayed for SmartSales orders?",
+  "reasoning": "This query pertains to internal processes and fields regarding SmartSales orders, so it should be directed to the graph agent to search for relevant documentation.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the fields that can be displayed for SmartSales orders.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from step 1 to provide a list of fields that can be displayed for SmartSales orders."
+}

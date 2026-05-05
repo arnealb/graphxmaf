@@ -1,0 +1,12 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+There is no information available regarding the SmartSales order configuration in the retrieved documents. The following documents were found but are not relevant to the query:
+
+- Invoice Approval Procedure (EASI)
+- Maintenance Contract (Supplier 1)
+- NDA (EASI Template)
+- SLA Agreement (EASI Colruyt)  
+
+If you need assistance with something else, please let me know!

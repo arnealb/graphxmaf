@@ -1,0 +1,25 @@
+{
+  "query": "Who is Dorian and how do we work with him?",
+  "reasoning": "The query requires an understanding of Dorian as a person, including communication history and relationships, as well as commercial dealings and physical presence if applicable. Therefore, all available agents should be used to gather a comprehensive view.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for emails and calendar events involving Dorian to gather communication history and scheduling related to him.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Lookup CRM contacts and accounts associated with Dorian to understand our commercial relationship and any relevant opportunities or cases.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Check for any physical locations or catalogs related to Dorian to provide information about our interaction with him at physical sites.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from steps 1, 2, and 3 to create a comprehensive overview of Dorian, including communication history, commercial relationships, and physical presence."
+}

@@ -1,0 +1,13 @@
+{
+  "query": "Show me 5 closed Salesforce cases including their close date and description.",
+  "reasoning": "The user is asking specifically for information related to closed cases within the salesforce system. Therefore, only one step is necessary to fetch this data directly from Salesforce.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch 5 closed cases from Salesforce including their close date and description.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the fetched closed cases with their close dates and descriptions as the final answer."
+}

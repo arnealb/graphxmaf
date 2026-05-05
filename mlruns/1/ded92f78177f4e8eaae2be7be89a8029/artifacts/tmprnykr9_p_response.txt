@@ -1,0 +1,31 @@
+Planning query...
+Plan: 4 stap(pen)
+️Executing (salesforce)...
+️Executing (salesforce, graph, smartsales)...
+Synthesizing...
+Here is the comprehensive overview of Delhaize Group, the company related to your open support case.
+
+### Summary of Support Case
+- **Case Number:** 00001023
+- **Subject:** EDI connection issue
+- **Status:** Working
+- **Priority:** Medium
+- **Created Date:** 28 April 2026
+
+### Company Information
+- **Name:** Delhaize Group
+- **Industry:** Retail
+- **Website:** [delhaize.be](https://www.delhaize.be)
+- **Phone:** Not available
+- **Number of Employees:** Not specified
+- **Annual Revenue:** Not specified
+
+### Additional Insights
+- Delhaize Group is mentioned as a client of the SmartSales platform.
+- They are involved in the **EDI Connector Pack** and the **Supply Chain Optimisation** engagement.
+- Specific additional information from document sources was limited and did not provide further insights into company operations or specifics.
+
+### Locations and Communication
+- Unfortunately, no location data or communication history was retrieved.
+
+This overview consolidates the relevant information available about Delhaize Group in relation to your case. If you require further details or specific insights, please specify!

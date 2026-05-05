@@ -1,0 +1,25 @@
+{
+  "query": "Give me a full briefing on Colruyt.",
+  "reasoning": "The user is requesting a comprehensive overview of the company Colruyt, which requires data from all available agents to provide a complete picture.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Fetch all emails, calendar events, and documents related to Colruyt, including any internal company documents that reference them.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Retrieve all CRM data related to Colruyt, including accounts, contacts, leads, opportunities, and cases.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Gather location data and product catalog information related to Colruyt.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from steps 1, 2, and 3 to create a comprehensive briefing on Colruyt."
+}

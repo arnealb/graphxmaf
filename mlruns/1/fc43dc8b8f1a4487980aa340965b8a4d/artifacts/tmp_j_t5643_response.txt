@@ -1,0 +1,70 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Comprehensive Overview of Everything Related to Belgium
+
+#### Email Communications
+- **Subject**: Belgium region — Q1 2026 commercial summary
+  - **Sender**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Received**: 28 April 2026
+  - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7tAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+#### Documents
+- **Data Processing Agreement (DPA)** and **Service Level Agreement (SLA)** are governed by Belgian law.
+- References to **Belgian Wet Eenheidsstatuut** of 2014 regarding notice periods in the offboarding guide.
+- **Sources**: 
+  - sla_agreement_easi_colruyt
+  - remote_work_policy_easi
+  - offboarding_guide_easi
+  - it_security_procedure_easi
+  - data_processing_agreement_colruyt
+
+#### Salesforce Entities
+- **Accounts**:
+  - **Anheuser-Busch InBev** 
+    - **Industry**: Food & Beverage 
+    - **Website**: [ab-inbev.com](https://www.ab-inbev.com)
+  - **Delhaize Group**
+    - **Industry**: Retail
+    - **Website**: [delhaize.be](https://www.delhaize.be)
+  - **Carrefour Belgium SA**
+    - **Industry**: Retail
+    - **Website**: [carrefour.be](https://www.carrefour.be)
+  - **Brussels Retail Partners** - Retail
+  - **Ferrero Benelux** - Food & Beverage
+  - **GreenTech Solutions**
+    - **Industry**: Technology
+    - **Website**: [greentechsolutions.be](https://www.greentechsolutions.be)
+  - **Colruyt Group**
+    - **Industry**: Retail
+    - **Website**: [colruytgroup.com](https://www.colruytgroup.com)
+  - **Other Accounts**: supplier1, cityaccount, Omega SA-NV, Easi Be
+
+- **Contacts**:
+  - **supplier1_contact** at supplier1
+
+- **Leads**:
+  - **Bert Coppens**: New lead from Belgium (another-company).
+  - **Arne Albrecht**: Contacted lead from Belgium (easi_dupe).
+  - Various leads related to different entities in Belgium.
+
+#### SmartSales Locations
+- **AACO DAVIDSON**, Leuven
+  - **Email**: info@aacodavidson.com
+- **Michelles Brasserie**, Izegem
+  - **Email**: hankar@michellespub.be
+- **AB InBev - Leuven**
+  - **Location**: Leuven
+- **Colruyt - Halle**
+  - **Location**: Halle
+- **AD Delhaize - Forest**
+  - **Location**: Brussels
+- **Ferrero Benelux - Brussels (Nutella)**
+  - **Location**: Brussels
+- **Lidl Belgium - Antwerp**
+  - **Location**: Antwerp
+- **Various other suppliers and clients** mentioned, with addresses in Brussels, Antwerp, Ghent, and Bruges.
+
+### Summary
+The gathered information outlines ongoing communication, official documents referencing Belgian law, key commercial entities operating in Belgium, and detailed locations associated with various organizations. This provides a comprehensive insight into the activities related to Belgium across all platforms.

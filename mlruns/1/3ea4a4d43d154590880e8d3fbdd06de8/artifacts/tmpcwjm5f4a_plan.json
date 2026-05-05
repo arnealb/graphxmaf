@@ -1,0 +1,13 @@
+{
+  "query": "How many calendar events do I have scheduled this week? List them all.",
+  "reasoning": "The user's query is specifically about their calendar events for the current week, which can be retrieved from the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve all calendar events scheduled for this week.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide a count of the events and list them based on the data retrieved from step 1."
+}

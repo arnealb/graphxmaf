@@ -1,0 +1,37 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Overview of Dorian
+
+- **Name:** Dorian Féaux
+- **Email:** d.feaux@easi.net
+- **Associated Company:** EASI
+
+#### Communication History
+- **Recent Emails:**
+  1. **New Request for Transport Order**
+     - **Date:** 11 December 2025
+     - **Sender:** Dorian Féaux
+     - **Details:** Not available.
+  2. **Intro: EASI Collaboration Proposal**
+     - **Date:** 28 April 2026
+     - **Sender:** Dorian Féaux
+     - **Details:** Not available.
+
+#### Upcoming Events
+- **Weekly Sync with Dorian**
+  - **Date and Time:** 6 May 2026, 07:00 AM - 07:30 AM
+  - **Organizer:** SmartAdmin
+- Other relevant events include supplier delivery reviews and kickoff meetings, which might involve collaboration with Dorian.
+
+#### Relationship with EASI
+- **Account Information:**
+  - Dorian appears to work with/for EASI; several contact entries for EASI are present.
+  - No specific account details (like phone or physical addresses) are provided in the results from Salesforce.
+
+#### Physical Presence
+- **Locations:** No physical location data is available.
+
+#### Summary
+Dorian Féaux is a contact associated with EASI, involved in communications and upcoming events primarily organized through SmartAdmin. Further specifics about his role or additional contacts at EASI could not be determined from the available data.

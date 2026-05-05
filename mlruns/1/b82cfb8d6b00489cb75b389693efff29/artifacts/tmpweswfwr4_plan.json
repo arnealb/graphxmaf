@@ -1,0 +1,25 @@
+{
+  "query": "Give me a complete overview of everything related to Arne.",
+  "reasoning": "The query requires a comprehensive view of all information related to the entity 'Arne', necessitating the use of all available agents to gather relevant data from each system.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Fetch all emails and calendar events involving Arne.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Retrieve CRM contacts and any associated leads, accounts, and opportunities related to Arne.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Gather all location and catalog item data linked to Arne.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Aggregate the results from each step to provide a complete overview of all information related to Arne across emails, calendar events, CRM data, and location/catalog details."
+}

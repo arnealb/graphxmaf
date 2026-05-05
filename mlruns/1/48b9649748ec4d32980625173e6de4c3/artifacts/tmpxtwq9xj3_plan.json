@@ -1,0 +1,29 @@
+{
+  "query": "Give me a 360° view of the most recent email sender.",
+  "reasoning": "The query requires a comprehensive overview of the most recent email sender, which involves gathering information from various sources: email communication history from the graph agent, CRM contact details from the salesforce agent, and any relevant location information from the smartsales agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the most recent email sender along with their email communication history.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Look up the CRM contact details related to the email sender identified in step 1.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Find any relevant location information associated with the email sender based on the contact details from step 2.",
+      "depends_on": [
+        2
+      ]
+    }
+  ],
+  "synthesis": "Combine the email communication history from step 1, the CRM contact details from step 2, and the location information from step 3 to provide a comprehensive overview of the most recent email sender."
+}

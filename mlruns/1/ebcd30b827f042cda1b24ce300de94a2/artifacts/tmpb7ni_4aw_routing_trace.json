@@ -1,0 +1,77 @@
+{
+  "user_query": "Tell me everything you know about supplier1.",
+  "plan": {
+    "query": "Tell me everything you know about supplier1.",
+    "reasoning": "The user is asking for a comprehensive overview of supplier1, which requires information from all available agents to gather a complete picture involving emails, calendar events, CRM data, and location details.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Search for communications, documents, and calendar events related to supplier1.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Look up CRM accounts, contacts, leads, opportunities, and cases related to supplier1.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Gather location information and product catalog details concerning supplier1.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Aggregate the results from all steps to provide a complete overview of supplier1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Look up CRM accounts, contacts, leads, opportunities, and cases related to supplier1.",
+      "started_at": "2026-05-04T14:18:08.483249+00:00",
+      "ended_at": "2026-05-04T14:18:18.592791+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "find_accounts",
+        "find_contacts",
+        "find_leads",
+        "get_opportunities",
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "Gather location information and product catalog details concerning supplier1.",
+      "started_at": "2026-05-04T14:18:08.483993+00:00",
+      "ended_at": "2026-05-04T14:18:19.622216+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items",
+        "list_catalog_items"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Search for communications, documents, and calendar events related to supplier1.",
+      "started_at": "2026-05-04T14:18:08.481076+00:00",
+      "ended_at": "2026-05-04T14:18:29.494216+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "search_documents",
+        "search_calendar"
+      ]
+    }
+  ]
+}

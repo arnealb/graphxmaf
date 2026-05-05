@@ -1,0 +1,21 @@
+{
+  "query": "Who sent me emails in the past 7 days? For each sender's email domain, check if there is a matching Salesforce contact for these addresses.",
+  "reasoning": "The task involves retrieving emails from a recent time frame and then checking a related dataset in Salesforce for any contacts that match the sender's email domains. Both steps are needed to fulfill the user's query.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve all emails sent to you in the past 7 days, including the senders' email addresses.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Check for matching contacts in Salesforce for the email domains of the senders retrieved in step 1. Provide the contacts related to these domains.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the list of email senders from step 1 with their respective matching Salesforce contacts from step 2 to create a complete overview."
+}

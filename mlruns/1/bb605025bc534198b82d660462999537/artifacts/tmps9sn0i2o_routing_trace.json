@@ -1,0 +1,78 @@
+{
+  "user_query": "Give me a full briefing on Colruyt.",
+  "plan": {
+    "query": "Give me a full briefing on Colruyt.",
+    "reasoning": "The user is requesting a comprehensive overview of the company Colruyt, which requires data from all available agents to provide a complete picture.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Fetch all emails, calendar events, and documents related to Colruyt, including any internal company documents that reference them.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Retrieve all CRM data related to Colruyt, including accounts, contacts, leads, opportunities, and cases.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Gather location data and product catalog information related to Colruyt.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from steps 1, 2, and 3 to create a comprehensive briefing on Colruyt."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Retrieve all CRM data related to Colruyt, including accounts, contacts, leads, opportunities, and cases.",
+      "started_at": "2026-05-04T14:18:48.021588+00:00",
+      "ended_at": "2026-05-04T14:18:58.227445+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "find_accounts",
+        "find_contacts",
+        "find_leads",
+        "get_opportunities",
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Fetch all emails, calendar events, and documents related to Colruyt, including any internal company documents that reference them.",
+      "started_at": "2026-05-04T14:18:48.019178+00:00",
+      "ended_at": "2026-05-04T14:19:01.074994+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "search_calendar",
+        "search_documents"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "Gather location data and product catalog information related to Colruyt.",
+      "started_at": "2026-05-04T14:18:48.023221+00:00",
+      "ended_at": "2026-05-04T14:19:04.592260+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 4,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items",
+        "list_locations",
+        "list_catalog_items"
+      ]
+    }
+  ]
+}

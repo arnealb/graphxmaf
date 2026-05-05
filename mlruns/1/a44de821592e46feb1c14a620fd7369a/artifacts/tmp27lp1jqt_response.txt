@@ -1,0 +1,54 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Based on the provided steps and data, here are the companies that emailed you recently and do not have a location registered with you:
+
+- **Marc Supplier**
+  - Email: marc.supplier@supplier1.be
+  - Received: 4 May 2026
+  - Subject: Follow-up: supplier1 Q2 2026 Delivery Contract
+  
+- **Proximus Business**
+  - Email: info@proximus.be
+  - Received: 28 April 2026
+  - Subject: Proximus — partnership inquiry
+  
+- **AB InBev Sales**
+  - Email: sales@ab-inbev.com
+  - Received: 28 April 2026
+  - Subject: Distribution mapping — scope confirmation
+  
+- **Delhaize Procurement**
+  - Email: procurement@delhaize.eu
+  - Received: 28 April 2026
+  - Subject: Supply chain project — follow-up meeting
+
+- **AD Delhaize IT**
+  - Email: it@delhaize.eu
+  - Received: 28 April 2026
+  - Subject: EDI connector — technische vraag
+  
+- **CRF Belgium Procurement**
+  - Email: procurement@carrefour-be.eu
+  - Received: 28 April 2026
+  - Subject: Offerte aanvraag — POS koppeling modules
+
+- **Carrefour BE Operations**
+  - Email: ops@carrefour-be.eu
+  - Received: 28 April 2026
+  - Subject: Q2 pilot update — analytics rollout
+
+- **SmartAdmin**
+  - Email: SmartAdmin@easigroupdemo.onmicrosoft.com
+  - Received: 28 April 2026
+  - Subject: Belgium region — Q1 2026 commercial summary
+
+- **Dorian Fieux**
+  - Email: d.feaux@easi.net
+  - Received: 28 April 2026
+  - Subject: Intro: Dorian Feaux — EASI collaboration proposal
+
+### Summary
+- No location data was available from Salesforce to match against, so all listed companies from the emails assume no location is registered.

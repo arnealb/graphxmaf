@@ -1,0 +1,20 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+You have a total of **3 calendar events** scheduled for this week. Here are the details:
+
+1. **Weekly sync — Dorian Feaux**
+   - **Date:** 6 May 2026
+   - **Time:** 07:00 - 07:30
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+2. **Sprint review — Arne Albrecht**
+   - **Date:** 8 May 2026
+   - **Time:** 12:00 - 13:00
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+3. **supplier1 — Q2 Delivery Review**
+   - **Date:** 10 May 2026
+   - **Time:** 08:00 - 09:00
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)

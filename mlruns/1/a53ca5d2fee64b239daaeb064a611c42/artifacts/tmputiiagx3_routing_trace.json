@@ -1,0 +1,31 @@
+{
+  "user_query": "What is the total order value for companies that currently have an open support case?",
+  "plan": {
+    "query": "What is the total order value for companies that currently have an open support case?",
+    "reasoning": "To determine the total order value, we first need to identify the companies that have open support cases using Salesforce. After identifying these companies, we can query for their total order values, which may also be sourced from Salesforce by fetching relevant opportunity or order data.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve a list of companies that currently have open support cases, including their associated order values.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Calculate the total order value from the list of companies retrieved in step 1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve a list of companies that currently have open support cases, including their associated order values.",
+      "started_at": "2026-05-04T13:31:00.534171+00:00",
+      "ended_at": "2026-05-04T13:31:10.877382+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_cases"
+      ]
+    }
+  ]
+}

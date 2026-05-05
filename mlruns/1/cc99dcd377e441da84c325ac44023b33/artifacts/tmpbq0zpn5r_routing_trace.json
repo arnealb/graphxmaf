@@ -1,0 +1,31 @@
+{
+  "user_query": "Show me Salesforce leads with the status 'New'.",
+  "plan": {
+    "query": "Show me Salesforce leads with the status 'New'.",
+    "reasoning": "The query specifically asks for leads within Salesforce, focusing on a particular status. Therefore, only the Salesforce agent is needed to fetch this information directly.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve all leads from Salesforce that have the status 'New'.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the leads retrieved from Salesforce in response to the user's query."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve all leads from Salesforce that have the status 'New'.",
+      "started_at": "2026-05-04T13:38:01.586720+00:00",
+      "ended_at": "2026-05-04T13:38:13.251898+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "find_leads"
+      ]
+    }
+  ]
+}

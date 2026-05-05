@@ -1,0 +1,36 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Here's a comprehensive overview of your Microsoft 365 contacts along with their status in Salesforce:
+
+### Microsoft 365 Contacts:
+1. **John Lastname**
+   - Phone: 0326243426
+   - Email: john.lastname@globalmedia.com
+   - Status in Salesforce: Exists (ID: 003KI00000964NyYAI)
+   
+2. **ur dog**
+   - Phone: 0483922818
+   - Email: ur.dog@doghouse.com
+   - Status in Salesforce: Does not exist
+   
+3. **test**
+   - Phone: Not available
+   - Email: test.test@gmail.com
+   - Status in Salesforce: Does not exist (the check returned another contact with a similar email but different name)
+   
+4. **Arne Albrecht**
+   - Phone: Not available
+   - Email: a.albrecht@easi.net
+   - Status in Salesforce: Exists (ID: 003KI000009uzRbYAI) and has a duplicate (ID: 003KI00000964NzYAI)
+
+### Summary:
+- **Contacts that exist in both systems:**
+  - John Lastname
+  - Arne Albrecht
+
+- **Contacts in Microsoft 365 that do not have corresponding entries in Salesforce:**
+  - ur dog
+  - test
