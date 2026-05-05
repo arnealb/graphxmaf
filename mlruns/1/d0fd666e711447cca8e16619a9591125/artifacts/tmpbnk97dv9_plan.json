@@ -1,0 +1,25 @@
+{
+  "query": "Is there anything I should follow up on today?",
+  "reasoning": "The user is likely requesting information across multiple systems regarding open tasks or meetings. They may have calendar events or emails related to follow-ups. Therefore, all available agents should be used to gather relevant information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve today's calendar events and any relevant emails that require a follow-up.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Fetch any open opportunities, cases, or leads in the CRM that may need to be followed up on today.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Check for any location-related tasks or site information that might need attention or follow-up today.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Compile the results from all steps to provide a comprehensive list of items that require follow-up today."
+}

@@ -1,0 +1,27 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here are the follow-ups required for today:
+
+### Calendar Events
+- **Weekly sync — Dorian Feaux**
+  - **Date:** 6 May 2026
+  - **Time:** 07:00 - 07:30 (UTC)
+  - **Organizer:** SmartAdmin
+
+### Recent Emails
+- **Email from Microsoft** about purchasing a subscription to continue using your product.
+  - **Received on:** 3 May 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAOC9kJ6AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### Salesforce Opportunities
+- **Opportunity:** Prospection Open Source
+  - **Stage:** Active Follow-up
+  - **Close Date:** 11 March 2024
+  - **Account Name:** Open Source Inc.
+
+### SmartSales Orders
+- No follow-ups are necessary as there are no new orders to address.
+
+Make sure to prioritize your calendar event and any needed response to the email regarding your subscription.

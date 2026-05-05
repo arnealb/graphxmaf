@@ -1,0 +1,25 @@
+{
+  "query": "What do we know about GreenTech Solutions?",
+  "reasoning": "The user is asking for a comprehensive overview of GreenTech Solutions, which involves data from all available agents. Therefore, I will gather information from graph for communications and internal documents, from salesforce for CRM related data, and from smartsales for location and catalog information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for all emails, calendar events, and documents related to GreenTech Solutions.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Retrieve all CRM accounts, contacts, leads, and opportunities related to GreenTech Solutions.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Fetch all location and catalog item information related to GreenTech Solutions.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all agents to provide a comprehensive overview of GreenTech Solutions."
+}

@@ -1,0 +1,13 @@
+{
+  "query": "List 5 Salesforce accounts.",
+  "reasoning": "The user explicitly requests data concerning Salesforce accounts, and this can be achieved with a single call to the Salesforce agent without any dependencies.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve a list of 5 accounts from the Salesforce database.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of 5 Salesforce accounts retrieved in step 1."
+}

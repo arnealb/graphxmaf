@@ -1,0 +1,66 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Here is the list of email senders from the past 7 days along with their corresponding Salesforce contacts, if available:
+
+### Email Senders and Salesforce Contacts:
+
+- **albrecht.arne@gmail.com**
+  - *Salesforce Contact*: Arne Albrecht (Displaytech)
+
+- **marc.supplier@supplier1.be**
+  - *Salesforce Contact*: Marc Supplier (supplier1)
+
+- **procurement@colruyt.be**
+  - *No matching Salesforce contact found.*
+
+- **info@greentechsolutions.be**
+  - *No matching Salesforce contact found.*
+
+- **marketing@ferrero.be**
+  - *No matching Salesforce contact found.*
+
+- **d.feaux@easi.net**
+  - *Salesforce Contact*: Dorian Feaux (EASI)
+
+- **SmartAdmin@easigroupdemo.onmicrosoft.com**
+  - *No matching Salesforce contact found.*
+
+- **ops@carrefour-be.eu**
+  - *No matching Salesforce contact found.*
+
+- **procurement@carrefour-be.eu**
+  - *No matching Salesforce contact found.*
+
+- **it@delhaize.eu**
+  - *No matching Salesforce contact found.*
+
+- **procurement@delhaize.eu**
+  - *No matching Salesforce contact found.*
+
+- **sales@ab-inbev.com**
+  - *No matching Salesforce contact found.*
+
+- **info@proximus.be**
+  - *No matching Salesforce contact found.*
+
+- **PowerAutomateNoReply@microsoft.com**
+  - *No matching Salesforce contact found.*
+
+- **flow-noreply@microsoft.com**
+  - *No matching Salesforce contact found.* (Note: Appeared twice)
+
+- **Enterprise@easigroupdemo.onmicrosoft.com**
+  - *No matching Salesforce contact found.*
+
+- **MSSecurity-noreply@microsoft.com**
+  - *No matching Salesforce contact found.*
+
+- **microsoft-noreply@microsoft.com**
+  - *No matching Salesforce contact found.*
+
+### Summary:
+- 5 email addresses have corresponding contacts in Salesforce.
+- 12 email addresses do not have matching Salesforce contacts.

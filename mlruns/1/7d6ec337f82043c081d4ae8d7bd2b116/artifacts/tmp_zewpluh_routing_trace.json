@@ -1,0 +1,31 @@
+{
+  "user_query": "What fields can I sort SmartSales orders by?",
+  "plan": {
+    "query": "What fields can I sort SmartSales orders by?",
+    "reasoning": "The query specifically asks about the fields for sorting orders in SmartSales, which is a live API query that must be routed to the smartsales agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "List all fields that can be used to sort orders in the SmartSales system.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of sortable fields for SmartSales orders."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "List all fields that can be used to sort orders in the SmartSales system.",
+      "started_at": "2026-05-04T15:33:47.042092+00:00",
+      "ended_at": "2026-05-04T15:33:55.292383+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_order_sortable_fields"
+      ]
+    }
+  ]
+}

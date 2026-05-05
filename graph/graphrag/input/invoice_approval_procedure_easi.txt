@@ -1,0 +1,32 @@
+Invoice Approval Procedure
+EASI Group — Document owner: Finance (finance@easi.net)
+1. Purpose
+This procedure describes the workflow for receiving, approving, paying, and archiving supplier invoices at EASI Group. It applies to invoices from all suppliers, irrespective of whether the underlying purchase is governed by a framework agreement, a one-off purchase order, or a recurring contract. The objective is to ensure that EASI pays only for goods and services it has actually received, that payments are made on time, and that an auditable record exists for at least 7 years.
+2. Receipt of invoices
+All invoices must be addressed to EASI Group, Avenue Louise 65, 1050 Brussels, with VAT number BE 0123.456.789. Electronic invoices are sent to finance@easi.net in PDF format or, where supported, as structured e-invoices (Peppol). Paper invoices received by post are scanned by the receptionist on the day of receipt and forwarded to finance@easi.net. Invoices not addressed correctly may be returned to the supplier; this prevents misallocation and tax issues.
+3. Three-way matching
+Finance performs a three-way match for every invoice, comparing:
+The purchase order recorded in the procurement system.
+The goods receipt or service delivery confirmation.
+The invoice itself.
+Recurring invoices issued under standing contracts are matched against the contract record. Examples include the EUR 850 monthly maintenance retainer from supplier1 under EASI-SUP1-MAINT-2026-001, hardware deliveries from Fujitsu Belgium NV under EASI-FUJ-FWA-2026-001, and Microsoft Azure consumption charges. Mismatches in price, quantity, or scope are flagged to the relevant budget owner for clarification before any approval.
+4. Budget owner approval
+After a successful three-way match, finance routes the invoice to the budget owner for approval. The budget owner must approve in the finance portal or by email to finance@easi.net within 5 working days of routing. Overdue approvals are escalated automatically: after 5 days to the department manager; after a further 5 days to the CFO. Specific budget ownership for client project costs is allocated as follows:
+Arne Albrecht — budget owner for Colruyt Group project costs.
+Dorian Feaux — budget owner for Carrefour Belgium SA and GreenTech Solutions project costs.
+Nathalie Pieters — budget owner for Delhaize Group, Ferrero Benelux, and Anheuser-Busch InBev project costs.
+Internal cost categories (IT, HR, office, marketing) follow their own budget owner mapping, maintained by finance@easi.net.
+5. Payment
+Approved invoices are paid on the due date, which is the invoice date plus the contractual payment term (typically 30 days). EASI uses SEPA bank transfers. Payment batches are processed every Tuesday and Thursday. After a batch is executed, finance sends a payment confirmation to the supplier and copies the budget owner. Payments are not split: an invoice is either paid in full or remains on hold pending dispute resolution.
+6. Dispute procedure
+Where the budget owner identifies an issue with an invoice — wrong amount, services not delivered, mismatch with a purchase order — the budget owner contacts the supplier in writing within 10 working days of receiving the invoice. A credit note is requested. The original invoice is placed on hold in the finance system; a hold notice is documented. As an example, Arne Albrecht is currently handling a disputed invoice from supplier1 related to the April batch delay (Case 00001022). The original invoice for PROD-SUP1-001 included a late-delivery charge that EASI is contesting; resolution is pending and the invoice remains on hold.
+7. VAT treatment
+Finance submits quarterly VAT returns to the Belgian tax authority. Invoices with incorrect VAT treatment — wrong rate, missing VAT number, intra-community supply incorrectly charged — must be flagged to finance@easi.net immediately. The supplier is asked to issue a corrective invoice. Internal VAT audits are conducted twice per year by finance and the external auditor; findings are reported to the CFO and addressed within 30 days.
+8. Cross-border supplies and reverse charge
+For services received from suppliers established in another EU member state, the reverse charge mechanism applies under the Belgian VAT Code. Finance verifies that the supplier holds a valid VAT number in their country of establishment and that the invoice mentions "VAT reverse charge — Article 21 §2 EU VAT Directive". For non-EU suppliers, customs and import VAT may apply; in that case the invoice is escalated to finance for treatment.
+9. Recurring contract management
+Recurring invoices from framework or maintenance contracts are reviewed against the contractual schedule each month. A standing order is configured in the finance system that automatically validates the recurring portion of the invoice; any deviation triggers a manual review. The supplier1 maintenance retainer (EUR 850 per month under EASI-SUP1-MAINT-2026-001) and the Microsoft Azure consumption charges are typical examples processed under this approach.
+10. Archiving
+All invoices and supporting documents (purchase order, delivery confirmation, approval trail, payment confirmation) are archived digitally for at least 7 years in line with Belgian accounting law. The archive is managed by finance@easi.net and is accessible to authorised EASI staff (finance, internal audit, the CFO) and to the external auditor on request. Audit trails — every system change, approval, hold, and release — are also retained.
+11. Continuous improvement
+Finance reports key indicators (average days to approval, on-time payment rate, dispute frequency, three-way match success rate) to the CFO each month. Process improvements are agreed with the budget owners and the procurement team. Suggestions for the procedure are welcome at finance@easi.net.

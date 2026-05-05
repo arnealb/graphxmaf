@@ -1,0 +1,13 @@
+{
+  "query": "List 5 open opportunities in Salesforce.",
+  "reasoning": "The query specifically asks for open opportunities, which falls under commercial relationship data that the Salesforce agent specializes in.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve a list of 5 open opportunities from the CRM system.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of open opportunities obtained from Salesforce."
+}

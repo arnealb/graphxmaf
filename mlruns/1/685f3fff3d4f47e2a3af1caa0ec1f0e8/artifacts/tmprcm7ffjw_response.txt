@@ -1,0 +1,23 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here is a summary of the notification steps and deadlines for the data breach involving Colruyt customer data:
+
+### Notification Steps and Deadlines
+- **Internal Reporting Obligation**:
+  - Report the breach within **2 hours** to the Data Protection Officer (DPO) at privacy@easi.net or dpo@easi.net.
+
+- **Initial Assessment**:
+  - Complete by the DPO and IT Security team within **4 hours** of the initial report.
+
+- **Notification to the Belgian Data Protection Authority (DPA)**:
+  - Notify the DPA within **72 hours** if the assessment indicates a risk to data subjects.
+
+- **Notification to Data Subjects**:
+  - Communicate directly with affected individuals if the breach poses a high risk to their rights and freedoms.
+
+- **Notification to Client Controllers**:
+  - Notify affected clients within **24 hours** if the breach involves data processed on their behalf.
+
+These steps are critical for ensuring compliance and timely communication regarding data breaches.

@@ -1,0 +1,31 @@
+{
+  "user_query": "List 5 Salesforce accounts.",
+  "plan": {
+    "query": "List 5 Salesforce accounts.",
+    "reasoning": "The user explicitly requests data concerning Salesforce accounts, and this can be achieved with a single call to the Salesforce agent without any dependencies.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve a list of 5 accounts from the Salesforce database.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of 5 Salesforce accounts retrieved in step 1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve a list of 5 accounts from the Salesforce database.",
+      "started_at": "2026-05-04T13:32:49.331507+00:00",
+      "ended_at": "2026-05-04T13:32:55.963612+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "find_accounts"
+      ]
+    }
+  ]
+}

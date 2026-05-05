@@ -1,0 +1,13 @@
+{
+  "query": "List my Microsoft 365 contacts and include their phone numbers.",
+  "reasoning": "The user is requesting information specifically related to their personal Outlook contacts, which falls under the capabilities of the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the user's personal Outlook contacts along with their phone numbers.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of contacts retrieved from step 1, emphasizing the inclusion of their phone numbers."
+}

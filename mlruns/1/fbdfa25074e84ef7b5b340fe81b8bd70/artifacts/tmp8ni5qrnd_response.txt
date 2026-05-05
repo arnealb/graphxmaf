@@ -1,0 +1,11 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+From the policy document:
+
+- **Remote Work During Probation**: Not permitted.
+- **On-Site Requirement**: New joiners must be on site full time for the first 6 months.
+- **Purpose**: To absorb working practices, build relationships, and enhance productivity. 
+
+You will need to work on-site until your probation period is complete.

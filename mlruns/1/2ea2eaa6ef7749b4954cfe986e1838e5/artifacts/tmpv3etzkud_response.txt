@@ -1,0 +1,50 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce, smartsales)...
+Synthesizing...
+### Accounts with Active Deals and Recent Orders
+
+After cross-referencing the data from both Salesforce and SmartSales, the following accounts have both an active deal and a recent order:
+
+- **Anheuser-Busch InBev**
+  - **Active Deal:**
+    - Name: "Anheuser-Busch InBev — Distribution Network Mapping"
+    - Stage: "Qualification"
+    - Close Date: 15 September 2026
+  - **Recent Orders:**
+    - Order Name: "Distribution mapping for Anheuser-Busch InBev network"
+      - Total: 8,750
+      - Order Date: 15 April 2026
+
+- **Delhaize Group**
+  - **Active Deal:**
+    - Name: "Delhaize Group — Supply Chain Optimisation"
+    - Stage: "Negotiation/Review"
+    - Close Date: 31 August 2026
+  - **Recent Orders:**
+    - Order Name: "EDI connectors for AD Delhaize franchise rollout"
+      - Total: 9,600
+      - Order Date: 15 April 2026
+
+- **Carrefour Belgium SA**
+  - **Active Deal:**
+    - Name: "Carrefour Belgium SA — In-Store Analytics Pilot"
+    - Stage: "Proposal/Price Quote"
+    - Close Date: 31 July 2026
+  - **Recent Orders:**
+    - Order Name: "Analytics pilot across 12 Carrefour BE hypermarkets"
+      - Total: 54,000
+      - Order Date: 15 April 2026
+
+- **Ferrero Benelux**
+  - **Active Deal:**
+    - Name: "Ferrero — Nutella In-Store Display Campaign"
+    - Stage: "Prospecting"
+    - Close Date: 1 October 2026
+  - **Recent Orders:**
+    - Order Name: "Nutella in-store promotion stock for spring campaign"
+      - Total: 239.52
+      - Order Date: 15 April 2026
+
+### Summary
+The accounts listed above have both active deals and recent orders, indicating significant engagement across both platforms.

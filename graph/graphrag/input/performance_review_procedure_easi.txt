@@ -1,0 +1,33 @@
+Performance Review Procedure
+EASI Group — Document owner: HR (hr@easi.net) — Annual cycle and mid-year check-in
+1. Cycle overview
+EASI Group operates an annual performance review cycle complemented by a mid-year check-in. The combination ensures that objectives, feedback, and development conversations happen at least twice every twelve months. The annual cycle drives compensation decisions; the mid-year check-in is purely developmental and is not rated.
+2. Annual review window
+Formal performance reviews are held between September and November every year. The exact dates of the window, including the deadline by which manager evaluations must be locked, are published by HR (hr@easi.net) in mid-August. The annual review captures objectives achieved during the previous twelve months, sets new objectives for the coming year, identifies development priorities, and produces a rating that feeds into the salary review and bonus process.
+3. Mid-year check-in
+In April, every employee has a structured one-to-one conversation with the direct manager. The conversation covers progress against annual objectives, blockers and support needed, training plans, and the working relationship between employee and manager. The discussion is logged in the HR portal as a short narrative summary, but no rating is assigned. If significant changes to objectives are needed, they are recorded at this point.
+4. Self-evaluation
+At least 2 weeks before the formal review meeting, the employee completes a structured self-evaluation form in the HR portal. The form covers: (a) objectives achieved during the year, with concrete evidence; (b) competency self-rating across the EASI competency framework; (c) trainings and certifications completed, including those logged under the Training Policy; (d) goals proposed for the coming year. The self-evaluation is shared with the manager before the meeting and is the starting point of the conversation.
+5. Rating scale
+Performance ratings use a four-level scale: Insufficient, Meets Expectations, Exceeds Expectations, and Exceptional. The manager assigns a rating after the review meeting and after consulting the department director where ratings are above or below "Meets Expectations". Calibration sessions across teams are held in November to maintain consistency.
+6. Link to compensation
+Ratings drive the annual salary review and the bonus pool:
+Insufficient: 0 percent salary increase. A formal performance improvement plan is opened.
+Meets Expectations: 2 to 4 percent salary increase, based on market data and pay equity considerations.
+Exceeds Expectations: 4 to 7 percent salary increase.
+Exceptional: 7 to 10 percent salary increase, plus eligibility for a discretionary spot bonus.
+Promotions to a higher career level are decided independently of the rating but rely heavily on the latest two annual reviews.
+7. Objectives for client-facing roles
+Sales Engineers and Business Analysts have a mix of quantitative and qualitative objectives. For example, Arne Albrecht (Business Analyst) and Dorian Feaux (Sales Engineer) typically carry objectives covering project delivery (number of milestones met, deviation against budget) and client satisfaction (rating from accounts they manage). The annual objective-setting conversation aligns these targets with the broader EASI commercial plan and with the SLAs in force for clients such as Colruyt Group and others.
+8. Client satisfaction inputs
+Client satisfaction is an important objective input for client-facing employees. Nathalie Pieters (Customer Success Manager, n.pieters@easi.net) coordinates the collection of customer satisfaction ratings from key accounts during Q3, including from Colruyt Group, Carrefour Belgium SA, and Delhaize Group. The ratings are aggregated and shared with managers as one input to the formal review. They are not the only input: project delivery, internal collaboration, and competency growth all weigh in.
+9. Development plan
+Every review concludes with a written development plan covering the next twelve months. The plan identifies one or two skills to develop, the training or experience needed, and a target date. Funding follows the rules of the Training Policy. The development plan is reviewed at the next mid-year check-in.
+10. Manager deadlines
+Managers must complete their part of the review form within 5 working days of receiving the employee’s self-evaluation. Late submissions are escalated to the department director. The department director monitors completion rates and flags persistent delays to the HR Director.
+11. Appeals procedure
+An employee who disagrees with the rating may file a written appeal to the HR Director (hr@easi.net) within 10 working days of receiving the formal review. The HR Director convenes a review panel within 15 working days, composed of the department director, an HR representative, and a peer manager from a different department. The panel reviews the documentation, may interview the employee and the manager, and issues a written decision within a further 10 working days. The panel may confirm, raise, or lower the original rating.
+12. Confidentiality
+Performance reviews and ratings are strictly confidential. Access in the HR portal is restricted to the employee, the direct manager, the next-level manager, the HR business partner, and the HR Director. Aggregated, anonymised data may be used for organisational analysis.
+13. Documentation and training for managers
+Every manager who conducts performance reviews completes a 90-minute training session in August before the annual cycle starts. The training covers the rating scale, calibration principles, how to give actionable feedback, and how to handle difficult conversations. New managers receive an extended onboarding session before their first review cycle. The HR business partner is available for coaching on individual cases and to mediate where the manager and the employee have markedly different perceptions of performance.

@@ -1,0 +1,19 @@
+{
+  "query": "Which companies appear both in our CRM and in our email history?",
+  "reasoning": "The query requires information from both the CRM (salesforce) for company accounts and from email history (graph) to find overlaps. Therefore, both agents need to be involved to gather relevant data.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch a list of company accounts from the CRM system.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Retrieve a list of companies from our email history.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Compare the lists of companies from step 1 and step 2 to identify companies that appear in both the CRM and email history."
+}

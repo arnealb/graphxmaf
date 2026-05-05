@@ -1,0 +1,31 @@
+{
+  "user_query": "How much do I get reimbursed if I travel by train to visit a client?",
+  "plan": {
+    "query": "How much do I get reimbursed if I travel by train to visit a client?",
+    "reasoning": "This query pertains to internal company policies regarding travel reimbursement. The graph agent is suited to find the reimbursement policy documentation related to travel expenses.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Use search_documents to find the travel reimbursement policy related to train travel for client visits.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Provide the details from step 1 as the answer to the user's question."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Use search_documents to find the travel reimbursement policy related to train travel for client visits.",
+      "started_at": "2026-04-30T14:16:44.211704+00:00",
+      "ended_at": "2026-04-30T14:16:48.232676+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_documents"
+      ]
+    }
+  ]
+}

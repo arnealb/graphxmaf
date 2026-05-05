@@ -1,0 +1,109 @@
+{
+  "user_query": "Tell me everything about the companies behind my open support cases.",
+  "plan": {
+    "query": "Tell me everything about the companies behind my open support cases.",
+    "reasoning": "The query requires a comprehensive view of the companies related to the user's open support cases, necessitating information from all available agents.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Find all open support cases and their associated companies. Return the company names and related details.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "graph",
+        "task": "Search for emails, calendar events, and OneDrive files mentioning the companies identified in step 1. Include communication history and any relevant calendar events.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Search for locations matching the companies identified in step 1 by name. Also retrieve any orders or catalog items if relevant.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the company information from step 1 with the communication history from step 2 and the location data from step 3 to provide a comprehensive overview of the companies behind the open support cases."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Find all open support cases and their associated companies. Return the company names and related details.",
+      "started_at": "2026-05-05T09:33:27.237093+00:00",
+      "ended_at": "2026-05-05T09:33:36.790089+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "[Result from step 1]:\n[\n    {\n        \"case_number\": \"00001023\",\n        \"subject\": \"Delhaize Group — EDI connection issue\",\n        \"status\": \"Working\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Delhaize Group\",\n        \"created_date\": \"2026-04-28T14:40:07Z\"\n    },\n    {\n        \"case_number\": \"00001022\",\n        \"subject\": \"Carrefour Belgium SA — POS integration delay\",\n        \"status\": \"New\",\n        \"priority\": \"High\",\n        \"account_name\": \"Carrefour Belgium SA\",\n        \"created_date\": \"2026-04-28T14:40:01Z\"\n    },\n    {\n        \"case_number\": \"00001021\",\n        \"subject\": \"Colruyt — Integration issue with POS system\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Colruyt Group\",\n        \"created_date\": \"2026-04-28T08:13:49Z\"\n    },\n    {\n        \"case_number\": \"00001020\",\n        \"subject\": \"Delayed shipment — supplier1 April batch\",\n        \"status\": \"Working\",\n        \"priority\": \"High\",\n        \"account_name\": \"supplier1\",\n        \"created_date\": \"2026-04-28T08:09:54Z\"\n    },\n    {\n        \"case_number\": \"00001018\",\n        \"subject\": \"Verification statut case\",\n        \"status\": \"In progess\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Easi Be\",\n        \"created_date\": \"2025-03-06T10:39:32Z\"\n    },\n    {\n        \"case_number\": \"00001017\",\n        \"subject\": \"Test\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Easi Be\",\n        \"created_date\": \"2025-03-06T10:31:29Z\"\n    },\n    {\n        \"case_number\": \"00001006\",\n        \"subject\": \"Issue with order\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Pairi Daiza\",\n        \"created_date\": \"2024-03-18T15:19:11Z\"\n    },\n    {\n        \"case_number\": \"00001005\",\n        \"subject\": \"Produits\",\n        \"status\": \"Waiting for Customer\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Pairi Daiza\",\n        \"created_date\": \"2024-03-13T16:58:09Z\"\n    },\n    {\n        \"case_number\": \"00001003\",\n        \"subject\": \"Delivery issues with order #544\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Omega SA-NV\",\n        \"created_date\": \"2023-07-31T11:41:24Z\"\n    },\n    {\n        \"case_number\": \"00001001\",\n        \"subject\": \"Sample Case 2: The widgets we received are the wrong size.\",\n        \"status\": \"New\",\n        \"priority\": \"High\",\n        \"account_name\": \"Pairi Daiza\",\n        \"created_date\": \"2023-06-29T10:10:46Z\"\n    },\n    {\n        \"case_number\": \"00001000\",\n        \"subject\": \"Sample Case: Our Widgets have not been delivered.\",\n        \"status\": \"Escalated\",\n        \"priority\": \"High\",\n        \"account_name\": \"Global Media\",\n        \"created_date\": \"2023-06-29T10:10:46Z\"\n    }\n]\n\n[Task]:\nSearch for locations matching the companies identified in step 1 by name. Also retrieve any orders or catalog items if relevant.",
+      "started_at": "2026-05-05T09:33:36.859849+00:00",
+      "ended_at": "2026-05-05T09:34:17.369550+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 4,
+      "tool_calls": [
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_orders",
+        "list_orders",
+        "list_orders",
+        "list_orders",
+        "list_orders",
+        "list_orders"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 2,
+      "input": "[Result from step 1]:\n[\n    {\n        \"case_number\": \"00001023\",\n        \"subject\": \"Delhaize Group — EDI connection issue\",\n        \"status\": \"Working\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Delhaize Group\",\n        \"created_date\": \"2026-04-28T14:40:07Z\"\n    },\n    {\n        \"case_number\": \"00001022\",\n        \"subject\": \"Carrefour Belgium SA — POS integration delay\",\n        \"status\": \"New\",\n        \"priority\": \"High\",\n        \"account_name\": \"Carrefour Belgium SA\",\n        \"created_date\": \"2026-04-28T14:40:01Z\"\n    },\n    {\n        \"case_number\": \"00001021\",\n        \"subject\": \"Colruyt — Integration issue with POS system\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Colruyt Group\",\n        \"created_date\": \"2026-04-28T08:13:49Z\"\n    },\n    {\n        \"case_number\": \"00001020\",\n        \"subject\": \"Delayed shipment — supplier1 April batch\",\n        \"status\": \"Working\",\n        \"priority\": \"High\",\n        \"account_name\": \"supplier1\",\n        \"created_date\": \"2026-04-28T08:09:54Z\"\n    },\n    {\n        \"case_number\": \"00001018\",\n        \"subject\": \"Verification statut case\",\n        \"status\": \"In progess\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Easi Be\",\n        \"created_date\": \"2025-03-06T10:39:32Z\"\n    },\n    {\n        \"case_number\": \"00001017\",\n        \"subject\": \"Test\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Easi Be\",\n        \"created_date\": \"2025-03-06T10:31:29Z\"\n    },\n    {\n        \"case_number\": \"00001006\",\n        \"subject\": \"Issue with order\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Pairi Daiza\",\n        \"created_date\": \"2024-03-18T15:19:11Z\"\n    },\n    {\n        \"case_number\": \"00001005\",\n        \"subject\": \"Produits\",\n        \"status\": \"Waiting for Customer\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Pairi Daiza\",\n        \"created_date\": \"2024-03-13T16:58:09Z\"\n    },\n    {\n        \"case_number\": \"00001003\",\n        \"subject\": \"Delivery issues with order #544\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Omega SA-NV\",\n        \"created_date\": \"2023-07-31T11:41:24Z\"\n    },\n    {\n        \"case_number\": \"00001001\",\n        \"subject\": \"Sample Case 2: The widgets we received are the wrong size.\",\n        \"status\": \"New\",\n        \"priority\": \"High\",\n        \"account_name\": \"Pairi Daiza\",\n        \"created_date\": \"2023-06-29T10:10:46Z\"\n    },\n    {\n        \"case_number\": \"00001000\",\n        \"subject\": \"Sample Case: Our Widgets have not been delivered.\",\n        \"status\": \"Escalated\",\n        \"priority\": \"High\",\n        \"account_name\": \"Global Media\",\n        \"created_date\": \"2023-06-29T10:10:46Z\"\n    }\n]\n\n[Task]:\nSearch for emails, calendar events, and OneDrive files mentioning the companies identified in step 1. Include communication history and any relevant calendar events.",
+      "started_at": "2026-05-05T09:33:36.859235+00:00",
+      "ended_at": "2026-05-05T09:34:33.860199+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files"
+      ]
+    }
+  ]
+}

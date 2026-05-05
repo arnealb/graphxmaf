@@ -1,0 +1,52 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Here’s what you need to know about the people with whom you have meetings scheduled this week:
+
+### Meeting Schedule
+1. **Weekly Sync**
+   - **Date:** 6 May 2026
+   - **Time:** 07:00 AM - 07:30 AM
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Participants:** None listed
+
+2. **Sprint Review**
+   - **Date:** 8 May 2026
+   - **Time:** 12:00 PM - 01:00 PM
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Participants:** None listed
+
+3. **Supplier1 - Q2 Delivery Review**
+   - **Date:** 10 May 2026
+   - **Time:** 08:00 AM - 09:00 AM
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+   - **Participants:** None listed
+
+### Attendees' Information
+- **Dorian Feaux**
+  - **Email:** d.feaux@easi.net
+  - **Account Name:** EASI
+  - **Roles:** Not specified
+
+- **Arne Albrecht**
+  - **Email:** albrecht.arne@gmail.com
+  - **Account Name:** Displaytech
+  - **Location:** 
+    - **Street:** Lippenslaan 347
+    - **City:** Knokke
+    - **Country:** Belgium
+  - **Roles:** Not specified
+
+- **Supplier1**
+  - **Name:** Supplier1
+  - **Location:** 
+    - **Street:** Rue du Commerce 1
+    - **City:** Brussels
+    - **Country:** Belgium
+  - **Roles:** Not specified
+
+### Additional Notes
+- There were no phone numbers or titles provided for the attendees.
+- The scheduled meetings have no additional attendees listed beyond the organizer and the main participants.

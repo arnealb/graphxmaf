@@ -1,0 +1,13 @@
+{
+  "query": "What is the SmartSales order configuration?",
+  "reasoning": "The query requires specific information about SmartSales API fields and configurations, which is handled by the smartsales agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the current order configuration details from SmartSales.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the order configuration details obtained from the smartsales agent."
+}

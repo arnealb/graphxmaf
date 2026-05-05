@@ -1,0 +1,97 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+Here is an overview of your open support cases and the related companies:
+
+### Open Support Cases
+
+1. **Delhaize Group**
+   - **Case Number**: 00001023
+   - **Subject**: EDI connection issue
+   - **Status**: Working
+   - **Priority**: Medium
+   - **Created Date**: 28 April 2026
+
+2. **Carrefour Belgium SA**
+   - **Case Number**: 00001022
+   - **Subject**: POS integration delay
+   - **Status**: New
+   - **Priority**: High
+   - **Created Date**: 28 April 2026
+
+3. **Colruyt Group**
+   - **Case Number**: 00001021
+   - **Subject**: Integration issue with POS system
+   - **Status**: New
+   - **Priority**: Medium
+   - **Created Date**: 28 April 2026
+
+4. **supplier1**
+   - **Case Number**: 00001020
+   - **Subject**: Delayed shipment — supplier1 April batch
+   - **Status**: Working
+   - **Priority**: High
+   - **Created Date**: 28 April 2026
+   - **Related Emails**:
+     - **Follow-up: supplier1 Q2 2026 Delivery Contract**
+       - **Sender**: Marc Supplier (marc.supplier@supplier1.be)
+       - **Received**: 28 April 2026
+       - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7nAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+     - **Updated pricing for H2 2026**
+       - **Sender**: Marc Supplier
+       - **Received**: 28 April 2026
+       - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7oAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+5. **Easi Be**
+   - **Case Number**: 00001018
+   - **Subject**: Verification status case
+   - **Status**: In progress
+   - **Priority**: Medium
+   - **Created Date**: 6 March 2025
+
+6. **Easi Be**
+   - **Case Number**: 00001017
+   - **Subject**: Test
+   - **Status**: New
+   - **Priority**: Medium
+   - **Created Date**: 6 March 2025
+
+7. **Pairi Daiza**
+   - **Case Number**: 00001006
+   - **Subject**: Issue with order
+   - **Status**: New
+   - **Priority**: Medium
+   - **Created Date**: 18 March 2024
+
+8. **Pairi Daiza**
+   - **Case Number**: 00001005
+   - **Subject**: Produits
+   - **Status**: Waiting for Customer
+   - **Priority**: Medium
+   - **Created Date**: 13 March 2024
+
+9. **Omega SA-NV**
+   - **Case Number**: 00001003
+   - **Subject**: Delivery issues with order #544
+   - **Status**: New
+   - **Priority**: Medium
+   - **Created Date**: 31 July 2023
+
+10. **Pairi Daiza**
+    - **Case Number**: 00001001
+    - **Subject**: Sample Case 2: The widgets we received are the wrong size.
+    - **Status**: New
+    - **Priority**: High
+    - **Created Date**: 29 June 2023
+
+11. **Global Media**
+    - **Case Number**: 00001000
+    - **Subject**: Sample Case: Our Widgets have not been delivered.
+    - **Status**: Escalated
+    - **Priority**: High
+    - **Created Date**: 29 June 2023
+
+### Summary
+You have a total of 11 open support cases with various companies, including Delhaize Group, Carrefour Belgium, Colruyt, Easi Be, Pairi Daiza, Omega SA-NV, and Global Media. The case statuses range from "New" to "Working" and "In progress." There are specific emails related to the case with supplier1 addressing delivery contracts and pricing updates.

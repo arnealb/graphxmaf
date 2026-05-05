@@ -1,0 +1,66 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce, smartsales)...
+Synthesizing...
+### Salesforce Leads in Belgium
+
+**Leads:**
+1. **Bert Coppens**
+   - Company: another-company
+   - Status: New
+   - Country: Belgium
+
+2. **Arne Albrecht**
+   - Company: easi_dupe
+   - Email: albrecht.arne@gmail.com
+   - Status: Contacted
+   - Country: Belgium
+
+3. **ur moms lead ur dads lead**
+   - Company: grandmas bakery
+   - Status: New
+   - Country: Belgium
+
+### SmartSales Locations in Belgium
+
+**Locations:**
+1. **AACO DAVIDSON**
+   - Address: Havenkant 6, Leuven, 3000
+
+2. **Michelles Brasserie**
+   - Address: Ingelmunstersestraat 46, Izegem, 8870
+
+3. **AB InBev - Leuven**
+   - Address: Vaartstraat 94, Leuven, 3000
+
+4. **AD Delhaize - Forest**
+   - Address: Chaussée de Neerstalle 800, Brussels, 1190
+
+5. **Colruyt - Halle**
+   - Address: Edingensesteenweg 196, Halle, 1500
+
+6. **CRF - Anderlecht**
+   - Address: Bergensesteenweg 1424, Brussels, 1070
+
+7. **Customer1**
+   - Address: Markt 5, Bruges, 8000
+
+8. **EASI - Brussels**
+   - Address: Avenue Louise 65, Brussels, 1050
+
+9. **Ferrero Benelux - Brussels**
+   - Address: Bld de la Woluwe 42, Brussels, 1200
+
+10. **GreenTech Solutions - Ghent**
+    - Address: Technologiepark 122, Ghent, 9052
+
+11. **Lidl Belgium - Antwerp**
+    - Address: Noordersingel 10, Antwerp, 2140
+
+12. **supplier1**
+    - Address: Rue du Commerce 1, Brussels, 1000
+
+### Summary
+
+- There are **3 Salesforce leads** currently in Belgium.
+- **12 SmartSales locations** are confirmed in Belgium across various cities including Leuven, Brussels, and Antwerp.

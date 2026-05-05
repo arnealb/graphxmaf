@@ -1,0 +1,13 @@
+{
+  "query": "Show me 5 Salesforce contacts with their email addresses.",
+  "reasoning": "The user is requesting a specific set of contacts from the Salesforce CRM, which includes their email addresses. This can be fulfilled in a single call to the Salesforce agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve a list of 5 contacts along with their email addresses from the CRM.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of 5 Salesforce contacts with their email addresses."
+}

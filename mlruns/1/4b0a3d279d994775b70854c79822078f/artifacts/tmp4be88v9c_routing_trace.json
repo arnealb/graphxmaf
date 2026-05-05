@@ -1,0 +1,31 @@
+{
+  "user_query": "What is the SmartSales order configuration?",
+  "plan": {
+    "query": "What is the SmartSales order configuration?",
+    "reasoning": "The query requires specific information about SmartSales API fields and configurations, which is handled by the smartsales agent.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Retrieve the current order configuration details from SmartSales.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the order configuration details obtained from the smartsales agent."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Retrieve the current order configuration details from SmartSales.",
+      "started_at": "2026-05-04T15:35:54.601924+00:00",
+      "ended_at": "2026-05-04T15:35:57.702094+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_order_configuration"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "query": "If the SmartSales platform goes completely down for Colruyt, who at EASI do I notify first and within what timeframe?",
+  "reasoning": "This is a 360° query asking for the company's notification procedure and related contacts concerning Colruyt. Therefore, it requires information from all available agents to provide a comprehensive answer.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for emails, calendar events, and OneDrive files mentioning Colruyt. Include any communication history and documents related to notification procedures.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Find the SF account for Colruyt AND its contacts, including any escalation contacts at EASI related to notifications. Return all relevant contact information.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Search for locations matching Colruyt by name to verify any existing registered locations and related information.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Compile the results from each step to identify who to notify at EASI regarding Colruyt in the event of SmartSales platform downtime and the recommended timeframe for notification."
+}

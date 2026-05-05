@@ -1,0 +1,38 @@
+Data Processing Agreement
+Reference EASI-COL-DPA-2026-001 — Between EASI Group (processor) and Colruyt Group (controller)
+1. Purpose and references
+This Data Processing Agreement ("DPA") sets out the terms under which EASI Group processes personal data on behalf of Colruyt Group in connection with the SmartSales platform and related integrations. The DPA is concluded under Article 28 of the General Data Protection Regulation (Regulation (EU) 2016/679, "GDPR") and is linked to the Service Level Agreement EASI-COL-SLA-2026-001 and to the Colruyt Group — SmartSales Rollout 2026 opportunity.
+2. Roles
+Colruyt Group is the controller. EASI Group is the processor. Each party processes personal data only for the purposes set out below and only in accordance with the controller’s documented instructions. EASI does not determine the purposes of the processing.
+3. Categories of personal data and data subjects
+The processing under this DPA covers three categories of personal data:
+Colruyt retail employees: name, employee identifier, store location, role, and login credentials for SmartSales.
+Colruyt customers: purchase history, pseudonymised through a tokenised customer identifier, with no direct identification possible from the data alone.
+Supplier contact data: names and email addresses of supplier contacts registered in the SmartSales catalogue, including for example Marc Supplier (marc.supplier@supplier1.be), Account Manager at supplier1.
+4. Purposes of processing
+Personal data are processed exclusively for the operation of the SmartSales field sales platform at Colruyt locations, the integration with Colruyt’s point-of-sale system (which is the subject of open Case 00001021), and the generation of sales and location analytics. EASI does not use the data for any other purpose, in particular not for marketing or product development beyond the agreed scope.
+5. Sub-processors
+Colruyt authorises EASI to engage the following sub-processors:
+Microsoft Azure (Ireland data centre) — hosting of the SmartSales backend.
+Fujitsu Belgium NV — on-site hardware maintenance at Colruyt locations.
+The list of approved sub-processors is maintained on EASI’s privacy portal and may be obtained at any time from dpo@easi.net. EASI notifies Colruyt at least 30 days before adding a new sub-processor. Colruyt may object on reasonable grounds within that 30-day period; in case of a sustained objection, the parties enter into good-faith discussions to find an alternative.
+6. Security measures
+EASI maintains an information security management system certified to ISO 27001 (certificate ISO27-EASI-2025-BE). All personal data are encrypted in transit using TLS 1.3 and at rest using AES-256. Access to personal data is restricted to EASI staff with a documented need-to-know. The current authorised list includes Arne Albrecht (account manager), Dorian Feaux (technical escalation), and the platform operations team. Access reviews are performed quarterly by the EASI security team (security@easi.net).
+7. Data retention
+Personal data processed under this DPA are deleted within 30 days of the termination of the underlying SLA, or upon written request from Colruyt at any time during the contract. Colruyt may request a structured export of its data in machine-readable format (CSV or JSON) by emailing a.albrecht@easi.net; the export is provided within 10 working days. Backup deletion is completed within the standard backup rotation cycle and documented in the deletion confirmation.
+8. Audit rights
+Colruyt has the right to conduct or commission an audit of EASI’s data processing activities under this DPA, on-site or remote, once per calendar year, with at least 30 days’ written notice. Audit costs are borne by Colruyt unless the audit identifies a material breach by EASI, in which case EASI bears the costs. EASI may require auditors to sign a non-disclosure agreement before granting access.
+9. Personal data breaches
+If EASI becomes aware of a personal data breach affecting Colruyt data, EASI notifies procurement@colruyt.be and dpo@easi.net within 24 hours. The notification includes the nature of the breach, the categories and approximate number of affected data subjects, the likely consequences, and the measures taken or proposed. The parties cooperate to enable Colruyt to notify the Belgian Data Protection Authority (GBA / APD) within 72 hours where required, and to inform affected data subjects where applicable. The full procedure is described in EASI’s Data Breach Procedure.
+10. Data subject rights
+Colruyt is the point of contact for data subject requests from its employees, customers, and supplier contacts. EASI assists Colruyt in responding to such requests within 5 working days of receiving a written request. Assistance includes locating relevant records, exporting data, anonymising or deleting data, and confirming actions taken in writing.
+11. International transfers
+Personal data are processed within the European Economic Area. Any transfer outside the EEA requires prior written approval from Colruyt and the implementation of appropriate safeguards (Standard Contractual Clauses, adequacy decisions, or other recognised mechanisms).
+12. Termination and return of data
+On termination of this DPA, EASI returns all personal data to Colruyt in the agreed export format and deletes all copies, including backups, within the timelines set out in clause 7. EASI provides written confirmation of deletion. Records that EASI is required by law to retain are kept under continued confidentiality and security obligations.
+13. Contacts
+EASI Data Protection Officer: dpo@easi.net.
+EASI privacy mailbox (general questions): privacy@easi.net.
+Colruyt commercial and DPO contact: procurement@colruyt.be.
+14. Governing law
+This DPA is governed by Belgian law. Disputes arising from or relating to this DPA are submitted to the Brussels Commercial Court.

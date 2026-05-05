@@ -1,0 +1,31 @@
+{
+  "user_query": "What fields can be displayed for SmartSales orders?",
+  "plan": {
+    "query": "What fields can be displayed for SmartSales orders?",
+    "reasoning": "The query is asking about internal company processes regarding SmartSales orders, which should be routed through the graph agent to access relevant documents.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Use search_documents to find information about the fields that can be displayed for SmartSales orders.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the information found in step 1 as the final answer to the user's query."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Use search_documents to find information about the fields that can be displayed for SmartSales orders.",
+      "started_at": "2026-05-04T14:32:20.699502+00:00",
+      "ended_at": "2026-05-04T14:32:24.380618+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_documents"
+      ]
+    }
+  ]
+}

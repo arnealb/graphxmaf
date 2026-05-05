@@ -1,0 +1,12 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The execution of the query did not yield specific information regarding the approval levels required for a purchase of EUR 8,000. However, the following documents may contain relevant guidelines regarding procurement and approval processes:
+
+- **Supplier Code of Conduct (EASI)**
+- **Procurement Procedure (EASI)**
+- **Invoice Approval Procedure (EASI)**
+- **Company Car Policy (EASI)**
+
+If you would like to review the details of any of these documents for approval level information, please let me know!

@@ -1,0 +1,119 @@
+{
+  "user_query": "Tell me about the companies behind my open support cases.",
+  "plan": {
+    "query": "Tell me about the companies behind my open support cases.",
+    "reasoning": "The user is asking for a comprehensive overview of the companies associated with their open support cases, which requires information from all available agents: CRM data from Salesforce regarding the support cases and accounts, communication and document history from Graph, and any relevant location or product catalog information from SmartSales.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve all open support cases and their associated accounts.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "graph",
+        "task": "Find emails, calendar events, and documents associated with the accounts retrieved from step 1.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Look up the locations and catalog items associated with the accounts retrieved from step 1.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the results from all three steps to provide a detailed overview of the companies linked to the user's open support cases, including CRM details, communication history, and location information."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve all open support cases and their associated accounts.",
+      "started_at": "2026-05-04T20:19:41.354986+00:00",
+      "ended_at": "2026-05-04T20:19:54.723268+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 2,
+      "input": "[Result from step 1]:\n[\n    {\n        \"id\": \"500KI000001mK13YAE\",\n        \"case_number\": \"00001023\",\n        \"subject\": \"Delhaize Group — EDI connection issue\",\n        \"status\": \"Working\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Delhaize Group\",\n        \"created_date\": \"2026-04-28T14:40:07Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"500KI000001mK0yYAE\",\n        \"case_number\": \"00001022\",\n        \"subject\": \"Carrefour Belgium SA — POS integration delay\",\n        \"status\": \"New\",\n        \"priority\": \"High\",\n        \"account_name\": \"Carrefour Belgium SA\",\n        \"created_date\": \"2026-04-28T14:40:01Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"500KI000001mJiCYAU\",\n        \"case_number\": \"00001021\",\n        \"subject\": \"Colruyt — Integration issue with POS system\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Colruyt Group\",\n        \"created_date\": \"2026-04-28T08:13:49Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"500KI000001mJjsYAE\",\n        \"case_number\": \"00001020\",\n        \"subject\": \"Delayed shipment — supplier1 April batch\",\n        \"status\": \"Working\",\n        \"priority\": \"High\",\n        \"account_name\": \"supplier1\",\n        \"created_date\": \"2026-04-28T08:09:54Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"500J600000A43BaIAJ\",\n        \"case_number\": \"00001018\",\n        \"subject\": \"Verification statut case\",\n        \"status\": \"In progess\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Easi Be\",\n        \"created_date\": \"2025-03-06T10:39:32Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"500J600000A42FQIAZ\",\n        \"case_number\": \"00001017\",\n        \"subject\": \"Test\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Easi Be\",\n        \"created_date\": \"2025-03-06T10:31:29Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"5000600006VWJ4dAAH\",\n        \"case_number\": \"00001006\",\n        \"subject\": \"Issue with order\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Pairi Daiza\",\n        \"created_date\": \"2024-03-18T15:19:11Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"5000600006ISL5QAAX\",\n        \"case_number\": \"00001005\",\n        \"subject\": \"Produits\",\n        \"status\": \"Waiting for Customer\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Pairi Daiza\",\n        \"created_date\": \"2024-03-13T16:58:09Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"5000600005QqhG2AAJ\",\n        \"case_number\": \"00001003\",\n        \"subject\": \"Delivery issues with order #544\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Omega SA-NV\",\n        \"created_date\": \"2023-07-31T11:41:24Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"5000600006465TiAAI\",\n        \"case_number\": \"00001001\",\n        \"subject\": \"Sample Case 2: The widgets we received are the wrong size.\",\n        \"status\": \"New\",\n        \"priority\": \"High\",\n        \"account_name\": \"Pairi Daiza\",\n        \"created_date\": \"2023-06-29T10:10:46Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"5000600006465TkAAI\",\n        \"case_number\": \"00001000\",\n        \"subject\": \"Sample Case: Our Widgets have not been delivered.\",\n        \"status\": \"Escalated\",\n        \"priority\": \"High\",\n        \"account_name\": \"Global Media\",\n        \"created_date\": \"2023-06-29T10:10:46Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    }\n]\n\n[Task]:\nFind emails, calendar events, and documents associated with the accounts retrieved from step 1.",
+      "started_at": "2026-05-04T20:19:54.766389+00:00",
+      "ended_at": "2026-05-04T20:20:24.832905+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_documents",
+        "search_documents",
+        "search_documents",
+        "search_documents",
+        "search_documents",
+        "search_documents",
+        "search_documents",
+        "search_documents"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "[Result from step 1]:\n[\n    {\n        \"id\": \"500KI000001mK13YAE\",\n        \"case_number\": \"00001023\",\n        \"subject\": \"Delhaize Group — EDI connection issue\",\n        \"status\": \"Working\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Delhaize Group\",\n        \"created_date\": \"2026-04-28T14:40:07Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"500KI000001mK0yYAE\",\n        \"case_number\": \"00001022\",\n        \"subject\": \"Carrefour Belgium SA — POS integration delay\",\n        \"status\": \"New\",\n        \"priority\": \"High\",\n        \"account_name\": \"Carrefour Belgium SA\",\n        \"created_date\": \"2026-04-28T14:40:01Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"500KI000001mJiCYAU\",\n        \"case_number\": \"00001021\",\n        \"subject\": \"Colruyt — Integration issue with POS system\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Colruyt Group\",\n        \"created_date\": \"2026-04-28T08:13:49Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"500KI000001mJjsYAE\",\n        \"case_number\": \"00001020\",\n        \"subject\": \"Delayed shipment — supplier1 April batch\",\n        \"status\": \"Working\",\n        \"priority\": \"High\",\n        \"account_name\": \"supplier1\",\n        \"created_date\": \"2026-04-28T08:09:54Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"500J600000A43BaIAJ\",\n        \"case_number\": \"00001018\",\n        \"subject\": \"Verification statut case\",\n        \"status\": \"In progess\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Easi Be\",\n        \"created_date\": \"2025-03-06T10:39:32Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"500J600000A42FQIAZ\",\n        \"case_number\": \"00001017\",\n        \"subject\": \"Test\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Easi Be\",\n        \"created_date\": \"2025-03-06T10:31:29Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"5000600006VWJ4dAAH\",\n        \"case_number\": \"00001006\",\n        \"subject\": \"Issue with order\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Pairi Daiza\",\n        \"created_date\": \"2024-03-18T15:19:11Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"5000600006ISL5QAAX\",\n        \"case_number\": \"00001005\",\n        \"subject\": \"Produits\",\n        \"status\": \"Waiting for Customer\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Pairi Daiza\",\n        \"created_date\": \"2024-03-13T16:58:09Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"5000600005QqhG2AAJ\",\n        \"case_number\": \"00001003\",\n        \"subject\": \"Delivery issues with order #544\",\n        \"status\": \"New\",\n        \"priority\": \"Medium\",\n        \"account_name\": \"Omega SA-NV\",\n        \"created_date\": \"2023-07-31T11:41:24Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"5000600006465TiAAI\",\n        \"case_number\": \"00001001\",\n        \"subject\": \"Sample Case 2: The widgets we received are the wrong size.\",\n        \"status\": \"New\",\n        \"priority\": \"High\",\n        \"account_name\": \"Pairi Daiza\",\n        \"created_date\": \"2023-06-29T10:10:46Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    },\n    {\n        \"id\": \"5000600006465TkAAI\",\n        \"case_number\": \"00001000\",\n        \"subject\": \"Sample Case: Our Widgets have not been delivered.\",\n        \"status\": \"Escalated\",\n        \"priority\": \"High\",\n        \"account_name\": \"Global Media\",\n        \"created_date\": \"2023-06-29T10:10:46Z\",\n        \"description\": null,\n        \"origin\": null,\n        \"type\": null,\n        \"reason\": null,\n        \"closed_date\": null,\n        \"last_modified_date\": null\n    }\n]\n\n[Task]:\nLook up the locations and catalog items associated with the accounts retrieved from step 1.",
+      "started_at": "2026-05-04T20:19:54.768885+00:00",
+      "ended_at": "2026-05-04T20:20:27.393834+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 4,
+      "tool_calls": [
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items"
+      ]
+    }
+  ]
+}

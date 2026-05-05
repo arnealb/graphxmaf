@@ -1,0 +1,13 @@
+{
+  "query": "How many vacation days do I get per year at EASI?",
+  "reasoning": "The query is about internal company policy regarding vacation days, which can be found using the graph agent's search_documents tool.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the company policy regarding vacation days at EASI.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the information found in step 1 regarding vacation days at EASI."
+}

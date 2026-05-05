@@ -1,0 +1,91 @@
+{
+  "user_query": "Tell me about the companies behind my open support cases.",
+  "plan": {
+    "query": "Tell me about the companies behind my open support cases.",
+    "reasoning": "The user is asking for a comprehensive overview of the companies related to their open support cases. This requires information from both the Salesforce agent, which can provide details about the open support cases and associated companies, and the Graph agent to gather communication history related to those companies.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Find all open support cases and their associated companies along with relevant contacts. Return everything in one response.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "graph",
+        "task": "Search for emails, calendar events, and OneDrive files mentioning the companies from step 1. Include communication history and any relevant calendar events.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the details of the open support cases and companies from step 1 with the communication history from step 2 to provide a complete overview."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Find all open support cases and their associated companies along with relevant contacts. Return everything in one response.",
+      "started_at": "2026-05-04T20:29:02.315042+00:00",
+      "ended_at": "2026-05-04T20:29:30.611209+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 4,
+      "tool_calls": [
+        "get_cases",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 2,
+      "input": "[Result from step 1]:\n[\n    {\n        \"case\": {\n            \"id\": \"500KI000001mK13YAE\",\n            \"case_number\": \"00001023\",\n            \"subject\": \"Delhaize Group — EDI connection issue\",\n            \"status\": \"Working\",\n            \"priority\": \"Medium\",\n            \"account_name\": \"Delhaize Group\",\n            \"created_date\": \"2026-04-28T14:40:07Z\"\n        },\n        \"company\": {\n            \"name\": \"Delhaize Group\",\n            \"industry\": \"Retail\",\n            \"website\": \"https://www.delhaize.be\"\n        },\n        \"contacts\": []\n    },\n    {\n        \"case\": {\n            \"id\": \"500KI000001mK0yYAE\",\n            \"case_number\": \"00001022\",\n            \"subject\": \"Carrefour Belgium SA — POS integration delay\",\n            \"status\": \"New\",\n            \"priority\": \"High\",\n            \"account_name\": \"Carrefour Belgium SA\",\n            \"created_date\": \"2026-04-28T14:40:01Z\"\n        },\n        \"company\": {\n            \"name\": \"Carrefour Belgium SA\",\n            \"industry\": \"Retail\",\n            \"website\": \"https://www.carrefour.be\"\n        },\n        \"contacts\": []\n    },\n    {\n        \"case\": {\n            \"id\": \"500KI000001mJiCYAU\",\n            \"case_number\": \"00001021\",\n            \"subject\": \"Colruyt — Integration issue with POS system\",\n            \"status\": \"New\",\n            \"priority\": \"Medium\",\n            \"account_name\": \"Colruyt Group\",\n            \"created_date\": \"2026-04-28T08:13:49Z\"\n        },\n        \"company\": {\n            \"name\": \"Colruyt Group\",\n            \"industry\": \"Retail\",\n            \"website\": \"https://www.colruytgroup.com\"\n        },\n        \"contacts\": []\n    },\n    {\n        \"case\": {\n            \"id\": \"500KI000001mJjsYAE\",\n            \"case_number\": \"00001020\",\n            \"subject\": \"Delayed shipment — supplier1 April batch\",\n            \"status\": \"Working\",\n            \"priority\": \"High\",\n            \"account_name\": \"supplier1\",\n            \"created_date\": \"2026-04-28T08:09:54Z\"\n        },\n        \"company\": {\n            \"name\": \"supplier1\"\n        },\n        \"contacts\": [\n            {\n                \"id\": \"003KI000009uzQsYAI\",\n                \"first_name\": \"Marc\",\n                \"last_name\": \"Supplier\",\n                \"email\": \"marc.supplier@supplier1.be\",\n                \"title\": \"Account Manager\"\n            }\n        ]\n    },\n    {\n        \"case\": {\n            \"id\": \"500J600000A43BaIAJ\",\n            \"case_number\": \"00001018\",\n            \"subject\": \"Verification statut case\",\n            \"status\": \"In progess\",\n            \"priority\": \"Medium\",\n            \"account_name\": \"Easi Be\",\n            \"created_date\": \"2025-03-06T10:39:32Z\"\n        },\n        \"company\": {\n            \"name\": \"Easi Be\"\n        },\n        \"contacts\": [\n            {\n                \"id\": \"0030600002FBLM5AAP\",\n                \"first_name\": \"Jon\",\n                \"last_name\": \"Mul\",\n                \"email\": \"j.mulolo@easi.net\",\n                \"phone\": \"0412345678\"\n            }\n        ]\n    },\n    {\n        \"case\": {\n            \"id\": \"500060000261z25AAA\",\n            \"case_number\": \"00001006\",\n            \"subject\": \"Issue with order\",\n            \"status\": \"New\",\n            \"priority\": \"Medium\",\n            \"account_name\": \"Pairi Daiza\",\n            \"created_date\": \"2024-03-18T15:19:11Z\"\n        },\n        \"company\": {\n            \"name\": \"Pairi Daiza\",\n            \"industry\": \"Retail\",\n            \"website\": \"www.morponbrothers.com\"\n        },\n        \"contacts\": [\n            {\n                \"id\": \"00306000026Pt1pAAC\",\n                \"first_name\": \"Judy\",\n                \"last_name\": \"Odom\",\n                \"email\": \"jodom@example.com\",\n                \"phone\": \"(689) 555-3077\",\n                \"title\": \"Sales Executive\"\n            },\n            {\n                \"id\": \"00306000026Pt1FAAS\",\n                \"first_name\": \"Susan\",\n                \"last_name\": \"Johanson\",\n                \"email\": \"sjohanson@example.com\",\n                \"phone\": \"(390) 555-5353\",\n                \"title\": \"VP of Operations\"\n            },\n            {\n                \"id\": \"00306000026Pt1GAAS\",\n                \"first_name\": \"Mark\",\n                \"last_name\": \"Dillon\",\n                \"email\": \"mdillon@example.com\",\n                \"phone\": \"(765) 555-3929\",\n                \"title\": \"Head of Partner Relations\"\n            },\n            {\n                \"id\": \"00306000026Pt1HAAS\",\n                \"first_name\": \"Stella\",\n                \"last_name\": \"Pavlova\",\n                \"email\": \"spavlova@example.com\",\n                \"phone\": \"(842) 555-9587\",\n                \"title\": \"VP, Product Management\"\n            },\n            {\n                \"id\": \"00306000026Pt1LAAS\",\n                \"first_name\": \"Allison\",\n                \"last_name\": \"Yates\",\n                \"email\": \"ayates@example.com\",\n                \"phone\": \"(239) 555-1562\",\n                \"title\": \"Owner\"\n            },\n            {\n                \"id\": \"0030600002AksQ4AAJ\",\n                \"first_name\": \"Edward\",\n                \"last_name\": \"Stamos\",\n                \"email\": \"info@salesforce.com\",\n                \"phone\": \"(212) 555-5555\",\n                \"title\": \"President and CEO\"\n            },\n            {\n                \"id\": \"0030600002AksQ5AAJ\",\n                \"first_name\": \"Howard\",\n                \"last_name\": \"Jones\",\n                \"email\": \"info@salesforce.com\",\n                \"phone\": \"(212) 555-5555\",\n                \"title\": \"Buyer\"\n            },\n            {\n                \"id\": \"0030600002AksQ6AAJ\",\n                \"first_name\": \"Leanne\",\n                \"last_name\": \"Tomlin\",\n                \"email\": \"info@salesforce.com\",\n                \"phone\": \"(212) 555-5555\",\n                \"title\": \"VP Customer Support\"\n            }\n        ]\n    },\n    {\n        \"case\": {\n            \"id\": \"5000600005QqhG2AAJ\",\n            \"case_number\": \"00001003\",\n            \"subject\": \"Delivery issues with order #544\",\n            \"status\": \"New\",\n            \"priority\": \"Medium\",\n            \"account_name\": \"Omega SA-NV\",\n            \"created_date\": \"2023-07-31T11:41:24Z\"\n        },\n        \"company\": {\n            \"name\": \"Omega SA-NV\",\n            \"industry\": \"Technology\",\n            \"website\": \"http://www.omegaincorporated.com\"\n        },\n        \"contacts\": [\n            {\n                \"id\": \"003KI000026Pt0vAAC\",\n                \"first_name\": \"Lauren\",\n                \"last_name\": \"Bailey\",\n                \"email\": \"lbailey@example.com\",\n                \"phone\": \"(415) 555-1212\",\n                \"title\": \"SVP, Technology\"\n            },\n            {\n                \"id\": \"00306000026Pt0mAAC\",\n                \"first_name\": \"James\",\n                \"last_name\": \"Wu\",\n                \"email\": \"jwu@example.com\",\n                \"phone\": \"(274) 555-0197\",\n                \"title\": \"VP of Sales\"\n            },\n            {\n                \"id\": \"00306000026Pt0oAAC\",\n                \"first_name\": \"Mark\",\n                \"last_name\": \"Kingston\",\n                \"email\": \"mkingston@example.com\",\n                \"phone\": \"(769) 555-7272\",\n                \"title\": \"Project Manager\"\n            },\n            {\n                \"id\": \"00306000026Pt0rAAC\",\n                \"first_name\": \"Chris\",\n                \"last_name\": \"Post\",\n                \"email\": \"cpost@example.com\",\n                \"phone\": \"(415) 555-5590\",\n                \"title\": \"Business Analyst\"\n            },\n            {\n                \"id\": \"00306000026Pt0xAAC\",\n                \"first_name\": \"Bob\",\n                \"last_name\": \"Hodges\",\n                \"email\": \"bhodges@example.com\",\n                \"phone\": \"(422) 555-5262\",\n                \"title\": \"President and CEO\"\n            }\n        ]\n    },\n    {\n        \"case\": {\n            \"id\": \"5000600006445TkAAI\",\n            \"case_number\": \"00001000\",\n            \"subject\": \"Sample Case: Our Widgets have not been delivered.\",\n            \"status\": \"Escalated\",\n            \"priority\": \"High\",\n            \"account_name\": \"Global Media\",\n            \"created_date\": \"2023-06-29T10:10:46Z\"\n        },\n        \"company\": {\n            \"name\": \"Global Media\",\n            \"industry\": \"Media\"\n        },\n        \"contacts\": [\n            {\n                \"id\": \"003KI00000964NyYAI\",\n                \"first_name\": \"John\",\n                \"last_name\": \"lastname\",\n                \"email\": \"john.lastname@globalmedia.com\",\n                \"phone\": \"0272700252\"\n            },\n            {\n                \"id\": \"0030600002AksQ1AAJ\",\n                \"first_name\": \"Geoff\",\n                \"last_name\": \"Minor\",\n                \"email\": \"info@salesforce.com\",\n                \"phone\": \"(415) 555-1212\",\n                \"title\": \"President\"\n            },\n            {\n                \"id\": \"0030600002AksQ2AAJ\",\n                \"first_name\": \"Carole\",\n                \"last_name\": \"White\",\n                \"email\": \"info@salesforce.com\",\n                \"phone\": \"(415) 555-1212\",\n                \"title\": \"VP Sales\"\n            },\n            {\n                \"id\": \"0030600002AksQ3AAJ\",\n                \"first_name\": \"Jon\",\n                \"last_name\": \"Amos\",\n                \"email\": \"info@salesforce.com\",\n                \"phone\": \"(905) 555-1212\",\n                \"title\": \"Sales Manager\"\n            }\n        ]\n    }\n]\n\n[Task]:\nSearch for emails, calendar events, and OneDrive files mentioning the companies from step 1. Include communication history and any relevant calendar events.",
+      "started_at": "2026-05-04T20:29:30.650614+00:00",
+      "ended_at": "2026-05-04T20:30:13.919943+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files"
+      ]
+    }
+  ]
+}

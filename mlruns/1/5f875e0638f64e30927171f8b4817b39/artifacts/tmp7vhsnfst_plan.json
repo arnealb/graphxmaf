@@ -1,0 +1,21 @@
+{
+  "query": "Find any files we have related to our most valuable open deal and summarise them.",
+  "reasoning": "To address the user's request for files related to the most valuable open deal, I must first identify that deal using Salesforce, then retrieve any associated files in OneDrive using the Graph agent. Since the task involves data aggregation from different systems, both agents are required.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Identify the most valuable open deal and return its details.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Using the deal details from step 1, find and return any associated files from OneDrive related to the identified deal.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Summarize the files retrieved in step 2 to provide a cohesive overview of the documents related to the most valuable open deal."
+}

@@ -32,8 +32,11 @@ AGENT_SHEETS = ["Graph", "Salesforce", "SmartSales", "Orchestrator"]
 # ── Evaluator prompt ──────────────────────────────────────────────────────────
 
 _SYSTEM = (
-    "You are a benchmark evaluator for an AI agent system. "
-    "Your job is to score how well an agent's actual response matches an expected answer."
+    "You are a benchmark evaluator for a multi-agent AI system. "
+    "Your job is to score how well an agent's actual response matches an expected answer. "
+    "Important: if the response states 'no results found' or 'no recent email found' for a system, "
+    "that counts as the system being queried — do NOT treat it as missing coverage. "
+    "Only penalise for missing coverage if the system was clearly never consulted at all."
 )
 
 _USER_TMPL = """\

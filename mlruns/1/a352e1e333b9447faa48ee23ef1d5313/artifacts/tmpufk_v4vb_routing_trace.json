@@ -1,0 +1,82 @@
+{
+  "user_query": "Tell me about the companies behind my open support cases.",
+  "plan": {
+    "query": "Tell me about the companies behind my open support cases.",
+    "reasoning": "The user is seeking information about the companies related to their open support cases, which involves commercial relationship data. Thus, I will use all available agents to get a complete picture including CRM data from Salesforce and other relevant details from Graph and Smartsales.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch all open support cases along with the associated company information.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "graph",
+        "task": "Using the company names obtained from step 1, gather any relevant emails, calendar events, and internal documents related to these companies.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Using the company names obtained from step 1, retrieve the locations and catalog items associated with these companies.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the results from steps 1, 2, and 3 to provide a comprehensive overview of the companies behind the open support cases, including CRM details, communication history, and location information."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Fetch all open support cases along with the associated company information.",
+      "started_at": "2026-05-04T13:56:23.111139+00:00",
+      "ended_at": "2026-05-04T13:56:24.069222+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 0,
+      "tool_calls": []
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "[Result from step 1]:\n[Resultaat geblokkeerd door Azure content filter — mogelijk prompt-injection tekst in brondata]\n\n[Task]:\nUsing the company names obtained from step 1, retrieve the locations and catalog items associated with these companies.",
+      "started_at": "2026-05-04T13:56:24.132854+00:00",
+      "ended_at": "2026-05-04T13:56:30.068240+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 5,
+      "tool_calls": [
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_catalog_items",
+        "list_catalog_items",
+        "list_catalog_items"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 2,
+      "input": "[Result from step 1]:\n[Resultaat geblokkeerd door Azure content filter — mogelijk prompt-injection tekst in brondata]\n\n[Task]:\nUsing the company names obtained from step 1, gather any relevant emails, calendar events, and internal documents related to these companies.",
+      "started_at": "2026-05-04T13:56:24.130054+00:00",
+      "ended_at": "2026-05-04T13:56:34.416530+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 6,
+      "tool_calls": [
+        "findpeople",
+        "search_email",
+        "search_calendar",
+        "search_documents",
+        "read_file",
+        "read_file",
+        "read_file"
+      ]
+    }
+  ]
+}

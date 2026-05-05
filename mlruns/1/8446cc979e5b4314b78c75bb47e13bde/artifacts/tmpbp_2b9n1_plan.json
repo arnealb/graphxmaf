@@ -1,0 +1,13 @@
+{
+  "query": "Search my calendar for any events or meetings in the next 14 days.",
+  "reasoning": "The user is looking for calendar events, which can be handled directly by the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve all events or meetings from the calendar for the next 14 days.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the user with the list of calendar events or meetings retrieved from the previous step."
+}

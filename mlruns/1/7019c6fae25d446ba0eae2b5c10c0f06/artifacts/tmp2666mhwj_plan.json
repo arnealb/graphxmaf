@@ -1,0 +1,29 @@
+{
+  "query": "Who are the most important companies we work with right now?",
+  "reasoning": "The user is asking for a comprehensive overview of significant business relationships, which requires data from all available agents to gather insights across CRM records, communication history, and physical locations related to these companies.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve the list of current important accounts, opportunities, and CRM contacts to identify the most significant companies we work with.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Use the communication history and any related documents to enrich the information about the important companies identified from Salesforce.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Fetch the location and catalog information for the important companies from the previous steps to provide a complete picture.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from all three agents to create a comprehensive overview of the most important companies we work with, including CRM details, communication history, and physical location information."
+}

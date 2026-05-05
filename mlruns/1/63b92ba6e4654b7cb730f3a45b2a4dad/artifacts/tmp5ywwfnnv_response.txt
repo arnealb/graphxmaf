@@ -1,0 +1,11 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+From the graph: 
+- For a purchase of EUR 8,000, you need approval from:
+  - Direct Manager
+  - HR
+  - Department Director
+
+This approval is required because the amount exceeds EUR 1,500.

@@ -1,0 +1,70 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce, smartsales)...
+Synthesizing...
+### Salesforce Leads in Belgium
+Here are the leads found in Belgium from Salesforce:
+
+1. **Bert Coppens**
+   - **Company:** another-company
+   - **Status:** New
+   - **Email:** Not provided
+
+2. **Arne Albrecht**
+   - **Company:** easi_dupe
+   - **Status:** Contacted
+   - **Email:** albrecht.arne@gmail.com
+
+3. **ur moms lead ur dads lead**
+   - **Company:** grandmas bakery
+   - **Status:** New
+   - **Email:** Not provided
+
+### SmartSales Locations in Belgium
+The following SmartSales locations are in Belgium:
+
+1. **AACO DAVIDSON**
+   - **Address:** Havenkant 6, Leuven, 3000
+
+2. **Michelles Brasserie**
+   - **Address:** Ingelmunstersestraat 46, Izegem, 8870
+
+3. **AB InBev - Leuven**
+   - **Address:** Vaartstraat 94, Leuven, 3000
+
+4. **AD Delhaize - Forest**
+   - **Address:** Chaussée de Neerstalle 800, Brussels, 1190
+
+5. **Colruyt - Halle**
+   - **Address:** Edingensesteenweg 196, Halle, 1500
+
+6. **CRF - Anderlecht**
+   - **Address:** Bergensesteenweg 1424, Brussels, 1070
+
+7. **Customer1**
+   - **Address:** Markt 5, Bruges, 8000
+
+8. **Arne Albrecht**
+   - **Address:** Lippenslaan 347, Knokke, 8300
+
+9. **EASI - Brussels**
+   - **Address:** Avenue Louise 65, Brussels, 1050
+
+10. **Ferrero Benelux - Brussels (Nutella)**
+    - **Address:** Bld de la Woluwe 42, Brussels, 1200
+
+11. **GreenTech Solutions - Ghent**
+    - **Address:** Technologiepark 122, Ghent, 9052
+
+12. **Lidl Belgium - Antwerp**
+    - **Address:** Noordersingel 10, Antwerp, 2140
+
+13. **supplier1**
+    - **Address:** Rue du Commerce 1, Brussels, 1000
+
+14. **supplier1 - Brussels HQ**
+    - **Address:** Rue de la Loi 42, Brussels, 1000
+
+### Summary
+- **Leads from Salesforce:** Three leads located in Belgium, with one lead (Arne Albrecht) having provided an email address.
+- **SmartSales Locations:** Multiple locations across different cities in Belgium, including Leuven, Brussels, Antwerp, and Ghent, with one noted location associated with the lead Arne Albrecht.

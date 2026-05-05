@@ -1,0 +1,15 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are your upcoming calendar events for the week:
+
+- **Weekly sync — Dorian Feaux**
+  - **Date:** 6 May 2026
+  - **Time:** 07:00 AM - 07:30 AM
+  - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  
+- **Sprint review — Arne Albrecht**
+  - **Date:** 8 May 2026
+  - **Time:** 12:00 PM - 01:00 PM
+  - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)

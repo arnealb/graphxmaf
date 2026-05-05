@@ -1,0 +1,27 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+### Follow-up Summary for Today
+
+#### Emails Requiring Attention
+- **Proximus — partnership inquiry**
+  - **From:** Proximus Business
+  - **Received:** 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7zAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Distribution mapping — scope confirmation**
+  - **From:** AB InBev Sales
+  - **Received:** 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7yAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Supply chain project — follow-up meeting**
+  - **From:** Delhaize Procurement
+  - **Received:** 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7xAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+#### Calendar Events
+- **No calendar events scheduled for today.**
+
+### Action Items
+- Review and respond to the emails listed above. No calendar commitments for today, allowing for focused follow-up on correspondence.

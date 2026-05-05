@@ -1,0 +1,13 @@
+{
+  "query": "Show me my 5 most recent emails.",
+  "reasoning": "The user is requesting information about recent emails, which falls under the capabilities of the graph agent that handles emails.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the 5 most recent emails from the user's Outlook inbox.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the results of the 5 most recent emails retrieved from the graph agent."
+}

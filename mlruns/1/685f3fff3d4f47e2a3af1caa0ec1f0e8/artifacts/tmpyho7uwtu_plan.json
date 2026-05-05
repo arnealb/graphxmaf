@@ -1,0 +1,13 @@
+{
+  "query": "We discovered a data breach involving Colruyt customer data at 10:00 AM. What are all the notification steps and deadlines?",
+  "reasoning": "The query pertains to internal policies and procedures regarding data breach notifications. This requires accessing company documentation, specifically the steps and deadlines related to data breach notifications.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the notification steps and deadlines related to data breaches.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the information retrieved from the document search as a comprehensive summary of the notification steps and deadlines for the data breach."
+}

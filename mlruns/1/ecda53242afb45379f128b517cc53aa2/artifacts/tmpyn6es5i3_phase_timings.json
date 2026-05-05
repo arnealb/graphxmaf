@@ -1,0 +1,30 @@
+{
+  "plan": {
+    "latency_s": 3.265,
+    "steps": 1,
+    "input_tokens": 1026,
+    "output_tokens": 125,
+    "total_tokens": 1151
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "smartsales",
+      "latency_s": 150.675,
+      "llm_turns": 2,
+      "n_tool_calls": 1,
+      "tool_calls": [
+        "list_orders"
+      ],
+      "input_tokens": 18238,
+      "output_tokens": 15282,
+      "total_tokens": 33520
+    }
+  ],
+  "synthesis": {
+    "latency_s": 13.528,
+    "input_tokens": 15472,
+    "output_tokens": 961,
+    "total_tokens": 16433
+  }
+}

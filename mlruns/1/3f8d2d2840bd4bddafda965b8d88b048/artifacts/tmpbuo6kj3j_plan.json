@@ -1,0 +1,19 @@
+{
+  "query": "Who are the most important companies we work with right now?",
+  "reasoning": "The query seeks to identify key commercial relationships, which involves looking into CRM accounts, associated leads and opportunities, and potentially relevant location or product information to give a comprehensive view. Therefore, all available agents are needed for an entity-centric approach.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve the list of current important accounts, leads, and opportunities that represent our key commercial relationships.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Gather information on locations associated with the important companies retrieved from Salesforce, to provide context on physical presence.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from both Salesforce and Smartsales to present a full overview of the most important companies we work with."
+}

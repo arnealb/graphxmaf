@@ -1,0 +1,22 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+To report a suspected phishing email and understand the consequences of failing a phishing test, follow these guidelines:
+
+### Reporting a Suspected Phishing Email:
+- **Immediate Action**: Report all suspected security incidents, including phishing attempts, as soon as possible.
+- **Reporting Channels**:
+  - **Security Portal**: Use [security.easi.net](http://security.easi.net).
+  - **Email**: Send details to security@easi.net.
+- **Important**: Do not investigate the incident on your own or attempt to clean the affected device; this could destroy evidence.
+- **Assistance**: If you're unsure of the next steps, contact trained first responders Arne Albrecht or Dorian Feaux for help with reporting.
+
+### Consequences of Failing a Phishing Test:
+- **First Failure**: If you click a simulated phishing link or enter credentials in a phishing test:
+  - You are required to complete a **30-minute online security awareness training**.
+  - Your manager will be notified.
+- **Second Failure** (within 12 months):
+  - A discussion will be initiated with **HR** regarding your performance in phishing tests. 
+
+By following these steps, you can effectively report phishing attempts and understand the implications of failing phishing tests.

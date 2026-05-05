@@ -1,0 +1,50 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Overview of Supplier1
+
+#### General Information
+- **Name**: Supplier1
+- **Address**: Rue du Commerce 1, Brussels, 1000, Belgium
+- **Email Contact**: Marc Supplier (marc.supplier@supplier1.be)
+
+#### Communication and Contracts
+- **Recent Emails**:
+  - Follow-up on **Q2 2026 Delivery Contract** (Received on 28 April 2026)
+    - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7nAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+  - Update on **Pricing for H2 2026** (Received on 28 April 2026)
+    - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7oAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Upcoming Calendar Event**:
+  - **Q2 Delivery Review** scheduled for **10 May 2026** at 08:00 AM.
+    - [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLdAAA%3D&exvsurl=1&path=/calendar/item)
+
+#### Contracts and Products
+- **Maintenance Contract**:
+  - Supplier1 is responsible for preventive and corrective maintenance of the **Industrial Components Pack** (Product Code: PROD-SUP1-001).
+  - Obligations include maintenance schedules, communication protocols, pricing, and compliance with the **EASI Supplier Code of Conduct**.
+
+#### Sales and Opportunities
+- **Key Opportunities**:
+  - **Q2 Delivery Contract**:
+    - Stage: Negotiation/Review
+    - Amount: €85,000
+    - Expected Close Date: **30 June 2026**
+  - Another opportunity is under **On-going Approval** with a close date of **8 May 2026**.
+
+- **Open Case**:
+  - Case Number: **00001020**
+  - Subject: Delayed shipment for the April batch
+  - Status: Working
+  - Priority: High
+  - Created on: **28 April 2026**
+
+#### Products Offered
+- Product Categories:
+  - **IT Hardware** (Group code: GRP-IT-HARDWARE)
+  - **IT Software** (Group code: GRP-IT-SOFTWARE)
+  - **Spreads** (Group code: SPREADS)
+
+### Summary
+Supplier1 is engaged in maintenance contracts and dynamic pricing negotiations while handling operational challenges like delayed shipments. They have a scheduled delivery review, and various product offerings, indicating an active and structured business relationship.

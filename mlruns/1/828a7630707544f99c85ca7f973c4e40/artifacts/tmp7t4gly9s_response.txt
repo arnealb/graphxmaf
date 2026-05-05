@@ -1,0 +1,14 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce, graph)...
+Synthesizing...
+Here are the companies that appear in both the CRM and email history:
+
+### Companies Identified:
+- **No matching companies found.**
+
+### Summary:
+- **From Salesforce**: A detailed list of companies was provided, including names, industries, and websites.
+- **From Graph**: The email history did not provide any companies' names that could be compared to the Salesforce list.
+
+There were no companies found in both the CRM and the email history based on the provided data.

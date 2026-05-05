@@ -1,0 +1,13 @@
+{
+  "query": "A supplier wants to offer our team a EUR 75 thank-you dinner. Can we accept?",
+  "reasoning": "This query involves internal company policies regarding accepting gifts or hospitality from suppliers. Therefore, I will direct it to the graph agent to search for relevant company documentation on gift acceptance policies.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the company's policy on accepting gifts from suppliers, including any monetary limits and procedures.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Summarize the gift acceptance policy and determine if the EUR 75 dinner can be accepted based on the findings."
+}

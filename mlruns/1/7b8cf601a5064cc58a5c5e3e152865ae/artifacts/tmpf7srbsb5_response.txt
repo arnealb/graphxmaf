@@ -1,0 +1,11 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+For purchasing equipment worth EUR 8,000, the following approval levels are required:
+
+- **Direct Manager Sign-off**
+- **HR Sign-off**
+- **Department Director Sign-off**
+
+This approval requirement is applicable as the purchase exceeds EUR 1,500.

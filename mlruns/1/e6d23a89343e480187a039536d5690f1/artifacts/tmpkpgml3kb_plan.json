@@ -1,0 +1,21 @@
+{
+  "query": "Which of my recent email senders also have an active deal with us?",
+  "reasoning": "The query involves finding information from both the user's email history and their CRM data about active deals. Therefore, both the graph and salesforce agents are needed to gather this information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Fetch the list of recent email senders from the user's inbox.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Identify active deals with accounts that match the email senders returned from step 1.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from step 1 and step 2 to identify which recent email senders also have active deals in the CRM."
+}

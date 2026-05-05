@@ -1,0 +1,37 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Here is the list of your Microsoft 365 contacts along with their phone numbers, and an indication of whether those contacts also exist in Salesforce:
+
+### Microsoft 365 Contacts
+- **John Lastname**
+  - Email: john.lastname@globalmedia.com
+  - Phone: 0326243426
+  - Exists in Salesforce: Yes (Account: Global Media, Phone: Not listed)
+
+- **ur dog**
+  - Email: ur.dog@doghouse.com
+  - Phone: 0483922818
+  - Exists in Salesforce: No
+
+- **test**
+  - Email: test.test@gmail.com
+  - Phone: Not available
+  - Exists in Salesforce: No
+
+- **Arne Albrecht**
+  - Email: a.albrecht@easi.net
+  - Phone: Not available
+  - Exists in Salesforce: Yes (Account: EASI, Phone: Not listed)
+
+### Summary
+- **Contacts Found in Both:**
+  - John Lastname
+  - Arne Albrecht
+- **Not Found in Salesforce:**
+  - ur dog
+  - test
+
+This provides a comprehensive overview of your Microsoft 365 contacts and their status in Salesforce.

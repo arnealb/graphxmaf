@@ -1,0 +1,42 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce)...
+️Executing (graph, smartsales)...
+Synthesizing...
+### Overview of the Top Open Deal
+
+**Deal Details:**
+- **Name:** Anheuser-Busch InBev — Distribution Network Mapping
+- **Stage:** Qualification
+- **Deal Amount:** $520,000
+- **Close Date:** 15 September 2026
+- **Account Name:** Anheuser-Busch InBev
+
+**Account Information:**
+- **Industry:** Food & Beverage
+- **Website:** [Anheuser-Busch InBev](https://www.ab-inbev.com)
+
+**Contacts Related to the Deal:**
+- **Arne Albrecht**
+  - **Email:** a.albrecht@easi.net
+  - **Account:** EASI
+- **John Lastname**
+  - **Email:** john.lastname@globalmedia.com
+  - **Account:** Global Media
+
+**Calendar Events Related to the Deal:**
+- **Upcoming Meetings:**
+  - **Event:** nog e meeting
+    - **Date & Time:** 21 April 2026, 12:30 PM - 1:00 PM
+    - **Organizer:** SmartAdmin
+    - **Attendee:** Arne Albrecht
+    - **Link:** [View Meeting](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhVAAA%3D&exvsurl=1&path=/calendar/item)
+  
+  - **Event:** meeting
+    - **Date & Time:** 15 April 2026, 1:00 PM - 1:30 PM
+    - **Organizer:** SmartAdmin
+    - **Attendee:** John Lastname
+    - **Link:** [View Meeting](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhTAAA%3D&exvsurl=1&path=/calendar/item)
+
+### Summary
+The top open deal is with Anheuser-Busch InBev, primarily focused on distribution network mapping. Several meetings have been scheduled, indicating ongoing engagement with key contacts. No relevant results from email searches were found, and additional searches in SmartSales returned no data.

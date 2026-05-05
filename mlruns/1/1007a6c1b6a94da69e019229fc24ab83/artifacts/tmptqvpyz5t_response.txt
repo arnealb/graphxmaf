@@ -1,0 +1,28 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Based on the meetings scheduled for this week and the current active deals, here are the companies that have meetings but do not have any active deals with us:
+
+### Meetings This Week:
+1. **Dorian Feaux** - Weekly sync on 6 May 2026
+2. **Arne Albrecht** - Sprint review on 8 May 2026
+3. **supplier1** - Q2 Delivery Review on 10 May 2026
+4. **GreenTech Solutions** - Technical Qualification Call on 12 May 2026
+5. **Colruyt Group** - SmartSales Rollout Kickoff on 15 May 2026
+
+### Active Deals (From Salesforce):
+- **Anheuser-Busch InBev** - Distribution Network Mapping
+- **Delhaize Group** - Supply Chain Optimisation
+- **Carrefour Belgium SA** - In-Store Analytics Pilot
+- **Ferrero Benelux** - Nutella In-Store Display Campaign
+- **GreenTech Solutions** - Sustainability Dashboard (active deal)
+- **Colruyt Group** - SmartSales Rollout 2026 (active deal)
+
+### Companies with Meetings but No Active Deals:
+- **Dorian Feaux** (No active deal found)
+- **Arne Albrecht** (No active deal found)
+- **supplier1** (No active deal found)
+
+Please note that both **GreenTech Solutions** and **Colruyt Group** are currently involved in active deals.

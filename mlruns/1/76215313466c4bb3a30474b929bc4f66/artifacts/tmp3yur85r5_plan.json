@@ -1,0 +1,13 @@
+{
+  "query": "What are my upcoming calendar events this week?",
+  "reasoning": "The user is asking for calendar events, which can be retrieved directly from the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Fetch all upcoming calendar events for this week for the user.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of upcoming calendar events retrieved from step 1."
+}

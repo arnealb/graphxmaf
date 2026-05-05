@@ -1,0 +1,13 @@
+{
+  "query": "What fields can be displayed for SmartSales orders?",
+  "reasoning": "This query directly relates to the SmartSales API and specifically asks about the configuration of fields for orders, which is outside the scope of the graph or salesforce agents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the list of fields that can be displayed for SmartSales orders.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the retrieved list of displayable fields for SmartSales orders as the final answer."
+}

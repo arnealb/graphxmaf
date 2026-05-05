@@ -1,0 +1,26 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+In the event of a SmartSales platform disruption at Colruyt, follow these notification procedures:
+
+### Notification Process:
+- **Immediate Reporting**:
+  - Report the incident via:
+    - SmartSales client portal
+    - Email: support@easi.net
+    - Phone (for S1 and S2 incidents)
+
+- **Initial Notifications (for S1 incidents)**:
+  - Notify the following individuals immediately:
+    - Arne Albrecht: a.albrecht@easi.net
+    - Dorian Feaux: d.feaux@easi.net
+    - EASI Delivery Manager
+
+- **Escalation**:
+  - If the issue is unresolved in **2 hours**, notify the EASI Chief Operating Officer, who will join the response team.
+
+- **Client Communication**:
+  - Arne Albrecht (EASI Account Manager for Colruyt Group) will provide status updates to the client contact every **2 hours** until the incident is resolved. 
+
+This process ensures prompt and effective communication during a disruption.

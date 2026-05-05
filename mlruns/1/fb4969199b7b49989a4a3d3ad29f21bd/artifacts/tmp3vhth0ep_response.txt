@@ -1,0 +1,13 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Based on the Change Management Procedure for the SmartSales system, here are the key considerations regarding your planned deployment on a Friday evening at 19:00:
+
+- **Implementation Windows**:  
+  - The **standard implementation window** for changes is **Saturday from 22:00 to Sunday 06:00** (Brussels time).
+  - A **client-specific window** for Colruyt Group prohibits changes from **Friday 18:00 to Monday 08:00** during promotional campaign weeks.
+
+Given that your planned deployment is at **19:00 on Friday**, it **is not allowed** due to the restriction in place for Colruyt Group's promotional campaign weeks.
+
+If you need to schedule the deployment, consider doing so on **Saturday after 22:00** to adhere to the guidelines.

@@ -1,0 +1,13 @@
+{
+  "query": "What are the password requirements at EASI and how often must I change my password?",
+  "reasoning": "This query involves internal company policies, specifically regarding password requirements, which should be handled by the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the password requirements at EASI and the frequency for changing passwords.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the results obtained from the graph agent about the password requirements and change frequency."
+}

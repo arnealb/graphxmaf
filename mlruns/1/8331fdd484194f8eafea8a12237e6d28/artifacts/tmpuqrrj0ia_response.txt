@@ -1,0 +1,65 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Here's an overview of your upcoming meetings, related Salesforce opportunities, and SmartSales locations for the companies involved.
+
+### Upcoming Meetings (from Microsoft 365)
+- **Weekly sync — Dorian Feaux**
+  - **Date:** 6 May 2026
+  - **Time:** 07:00 - 07:30
+
+- **Sprint review — Arne Albrecht**
+  - **Date:** 8 May 2026
+  - **Time:** 12:00 - 13:00
+
+- **supplier1 — Q2 Delivery Review**
+  - **Date:** 10 May 2026
+  - **Time:** 08:00 - 09:00
+
+- **GreenTech Solutions — Technical Qualification Call**
+  - **Date:** 12 May 2026
+  - **Time:** 09:00 - 10:00
+
+- **Colruyt Group — SmartSales Rollout Kickoff**
+  - **Date:** 15 May 2026
+  - **Time:** 12:00 - 13:30
+
+### Related Salesforce Opportunities
+- **supplier1 — Q2 Delivery Contract**
+  - **Stage:** Negotiation/Review
+  - **Amount:** $85,000
+  - **Close Date:** 30 June 2026
+  - **Account Name:** supplier1
+
+- **supp_opportyunity**
+  - **Stage:** On-going Approval
+  - **Close Date:** 8 May 2026
+  - **Account Name:** supplier1
+
+- **GreenTech Solutions — Sustainability Dashboard**
+  - **Stage:** Qualification
+  - **Amount:** $45,000
+  - **Close Date:** 15 August 2026
+  - **Account Name:** GreenTech Solutions
+
+- **Colruyt Group — SmartSales Rollout 2026**
+  - **Stage:** Proposal/Price Quote
+  - **Amount:** $220,000
+  - **Close Date:** 30 September 2026
+  - **Account Name:** Colruyt Group
+
+### SmartSales Locations
+- **supplier1**
+  - **Address:** Rue du Commerce 1, Brussels, 1000, Belgium
+  
+- **supplier1 - Brussels HQ**
+  - **Address:** Rue de la Loi 42, Brussels, 1000, Belgium
+
+- **GreenTech Solutions - Ghent**
+  - **Address:** Technologiepark 122, Ghent, 9052, Belgium
+
+No useful data was returned regarding locations for Colruyt Group. 
+
+This overview summarizes all your key upcoming engagements and relevant business opportunities. Let me know if you need further assistance!

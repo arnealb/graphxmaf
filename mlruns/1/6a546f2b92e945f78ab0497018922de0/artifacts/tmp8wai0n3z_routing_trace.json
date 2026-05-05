@@ -1,0 +1,81 @@
+{
+  "user_query": "Give me a complete overview of everything related to Arne.",
+  "plan": {
+    "query": "Give me a complete overview of everything related to Arne.",
+    "reasoning": "The user is requesting a comprehensive overview of an entity (Arne) which requires information from all available agents to provide a complete picture.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Gather emails, calendar events, and any related documents associated with Arne.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Fetch CRM contacts, leads, and any associated opportunities or cases related to Arne.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Retrieve any physical locations or catalog items associated with Arne.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from steps 1, 2, and 3 to present a comprehensive overview of all information related to Arne."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "Retrieve any physical locations or catalog items associated with Arne.",
+      "started_at": "2026-05-04T13:30:00.597908+00:00",
+      "ended_at": "2026-05-04T13:30:11.105673+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Fetch CRM contacts, leads, and any associated opportunities or cases related to Arne.",
+      "started_at": "2026-05-04T13:30:00.596139+00:00",
+      "ended_at": "2026-05-04T13:30:12.424565+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 4,
+      "tool_calls": [
+        "find_contacts",
+        "find_leads",
+        "find_accounts",
+        "find_accounts",
+        "get_opportunities",
+        "get_opportunities",
+        "get_cases",
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Gather emails, calendar events, and any related documents associated with Arne.",
+      "started_at": "2026-05-04T13:30:00.593836+00:00",
+      "ended_at": "2026-05-04T13:30:20.446412+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "findpeople",
+        "search_email",
+        "search_email",
+        "search_calendar",
+        "search_documents"
+      ]
+    }
+  ]
+}

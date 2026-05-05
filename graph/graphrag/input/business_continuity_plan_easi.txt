@@ -1,0 +1,42 @@
+Business Continuity Plan
+EASI Group — Document owner: COO — Reviewed annually after the Q4 BCP exercise
+1. Objectives and recovery targets
+The EASI Group Business Continuity Plan defines the organisational, technical, and communication arrangements that allow EASI to continue serving clients in the event of a major disruption. The recovery targets are:
+Recovery Time Objective (RTO): 4 hours for all critical systems.
+Recovery Point Objective (RPO): 1 hour, meaning the maximum acceptable data loss is one hour of transactions.
+These targets apply to all Priority 1 systems listed below. Lower priority systems have longer recovery targets agreed with their owners.
+2. Critical systems — Priority 1
+SmartSales platform — supports Colruyt Group (47 locations under the SmartSales Rollout 2026 opportunity, EUR 220,000), Carrefour Belgium SA (12 hypermarkets under the In-Store Analytics Pilot, EUR 175,000), and Delhaize Group (EDI Connector Pack and the Supply Chain Optimisation engagement, EUR 310,000).
+Salesforce CRM — contains all client data including the active opportunities for Colruyt, Carrefour, Delhaize, AB InBev, GreenTech Solutions, Ferrero Benelux, and supplier1.
+Microsoft 365 — email, Teams, OneDrive — used for all internal and client communication.
+Corporate VPN — required for any remote access to internal and client systems.
+3. Critical systems — Priority 2
+Priority 2 systems include the Finance ERP, the HR portal, and the internal IT ticketing platform at servicedesk.easi.net. RTO for these systems is 24 hours; RPO is 4 hours.
+4. Infrastructure
+The primary data centre is the Microsoft Azure region "West Europe", physically located in the Netherlands. The failover environment is "North Europe" (Dublin, Ireland). Failover for the SmartSales platform and Salesforce CRM is automated and continuously tested. Fujitsu Belgium NV, under the framework agreement EASI-FUJ-FWA-2026-001, provides on-site hardware maintenance and access to failover hardware where local equipment is in scope.
+5. Backup policy
+All Priority 1 system data are backed up every hour, achieving the RPO of 1 hour. Backups are replicated to Azure North Europe. Restore procedures are tested every quarter on a sample of systems. For Salesforce CRM, EASI uses the Salesforce Backup and Restore service for nightly full backups and hourly incremental backups. For SmartSales, backups include the full order history, the catalogue (covering the deployed product codes including PROD-SUP1-001, PROD-COL-001, PROD-CRF-001, PROD-ADL-001, and PROD-ABI-001), and the location data for all 10 SmartSales-managed locations.
+6. Crisis team
+A crisis team is convened immediately when a Priority 1 disruption is declared. Its membership and responsibilities are:
+CEO — overall authority and external decisions.
+COO — operational response and prioritisation.
+IT Manager — technical recovery and infrastructure decisions.
+Arne Albrecht — client communication for Colruyt Group and GreenTech Solutions.
+Dorian Feaux — client communication for Carrefour Belgium SA, Delhaize Group, and Ferrero Benelux.
+Nathalie Pieters — client communication for Anheuser-Busch InBev, supplier1, and other ongoing customer success accounts.
+HR Manager — internal communication and employee welfare.
+Finance Director — financial impact assessment and emergency procurement.
+7. Communication protocol
+Internal crisis communication takes place in the Microsoft Teams channel "Crisis — EASI BCP". All crisis team members are pre-assigned as members of the channel. External client communication is handled exclusively by the designated account managers (see clause 6). Press and media communication is handled exclusively by the CEO. Client SLA implications — for example under EASI-COL-SLA-2026-001 with Colruyt Group, and similar SLAs for Carrefour and Delhaize — are assessed by Arne Albrecht within 30 minutes of crisis declaration; updates are communicated in line with the SLAs (every 2 hours for S1).
+8. Disaster scenarios and responses
+Specific responses are pre-defined for the most likely disaster scenarios:
+Primary data centre failure — automatic failover to Azure North Europe; the IT Manager activates the manual failover steps within 15 minutes if automation does not trigger.
+Key personnel unavailability — for example, both Arne Albrecht and Dorian Feaux unreachable simultaneously; Nathalie Pieters takes over client communication for all accounts until at least one primary returns.
+Ransomware attack — affected systems are isolated immediately; the Incident Management Procedure is activated; security@easi.net leads the technical response; restore is performed from the last clean backup; client notification follows the Data Breach Procedure if personal data are affected.
+EASI offices at Avenue Louise 65 inaccessible (fire, building issue) — staff work remotely under the Remote Work Policy; the crisis team convenes by Teams; no client visits are scheduled to or from the office.
+9. Annual BCP exercise
+A tabletop exercise is conducted in Q4 every year. All crisis team members participate. The scenario is varied annually to cover different categories of risk. The 2025 scenario covered a primary data centre failure; the 2026 scenario will cover a ransomware attack. Findings — gaps, broken assumptions, missing contact details — are documented in a written report; the BCP is updated within 30 days of the exercise.
+10. Vendor and supplier resilience
+Critical vendors and suppliers (Microsoft, Fujitsu Belgium NV, supplier1, Salesforce) are assessed annually for business continuity capability. The assessment reviews their own continuity plans, recovery objectives, and incident history. Findings are summarised for the COO and feed into the annual procurement risk review.
+11. Plan distribution
+The BCP is distributed to all crisis team members and to the EASI leadership team. A summarised version (without sensitive details) is shared with key clients on request, in line with applicable SLAs and DPAs. The full plan is reviewed and signed off by the COO each January.

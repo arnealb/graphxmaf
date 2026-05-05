@@ -1,0 +1,13 @@
+{
+  "query": "Show me my 5 most recent emails.",
+  "reasoning": "The query specifically asks for emails, which falls under the capability of the graph agent that manages Microsoft 365 communication history.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the 5 most recent emails from the personal Outlook account.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the results from step 1 as the final answer."
+}

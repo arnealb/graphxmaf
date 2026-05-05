@@ -1,0 +1,13 @@
+{
+  "query": "Show me Salesforce opportunities in the 'Qualification' stage.",
+  "reasoning": "The query specifically asks for opportunities within Salesforce at a certain stage, which can be handled in one step using the Salesforce agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all opportunities in the 'Qualification' stage from Salesforce.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the results of the Salesforce opportunities retrieved in step 1."
+}

@@ -1,0 +1,13 @@
+{
+  "query": "Show me 5 closed Salesforce cases including their close date and description.",
+  "reasoning": "The query specifically asks for data from Salesforce about closed cases. I will route this to the Salesforce agent to handle the request directly.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve 5 closed Salesforce cases, including their close date and description.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the details of the 5 closed Salesforce cases as requested."
+}

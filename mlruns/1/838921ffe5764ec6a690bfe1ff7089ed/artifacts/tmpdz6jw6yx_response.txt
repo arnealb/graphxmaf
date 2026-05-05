@@ -1,0 +1,88 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Overview of Arne Albrecht
+
+#### General Information
+- **Name:** Arne Albrecht
+- **Email Addresses:**
+  - a.albrecht@easi.net (From Salesforce)
+  - albrecht.arne@gmail.com (From Salesforce)
+- **Account Associations:**
+  - EASI (From Salesforce)
+  - Displaytech (From Salesforce)
+
+#### Contacts
+- **Salesforce Contacts:**
+  - Arne Albrecht, Email: a.albrecht@easi.net, Account: EASI
+  - Arne Albrecht, Email: albrecht.arne@gmail.com, Account: Displaytech
+
+#### Leads
+- **Salesforce Leads:**
+  - **Lead ID:** 00QKI000002KPFT2A4
+    - **Email:** albrecht.arne@gmail.com
+    - **Company:** easi_dupe
+    - **Status:** Contacted
+
+#### Opportunities
+- **Salesforce Opportunities:**
+  - **Nutella In-Store Display Campaign**
+    - Amount: €30,000
+    - Close Date: 1 October 2026
+    - Account: Ferrero Benelux
+    - Stage: Prospecting
+  
+  - **SmartSales Rollout 2026**
+    - Amount: €220,000
+    - Close Date: 30 September 2026
+    - Account: Colruyt Group
+    - Stage: Proposal/Price Quote
+
+  - **Distribution Network Mapping**
+    - Amount: €520,000
+    - Close Date: 15 September 2026
+    - Account: Anheuser-Busch InBev
+    - Stage: Qualification
+
+  - **Supply Chain Optimisation**
+    - Amount: €310,000
+    - Close Date: 31 August 2026
+    - Account: Delhaize Group
+    - Stage: Negotiation/Review
+
+  - **Sustainability Dashboard**
+    - Amount: €45,000
+    - Close Date: 15 August 2026
+    - Account: GreenTech Solutions
+    - Stage: Qualification
+
+#### Cases
+- **Salesforce Cases:**
+  - **Case Number:** 00001023
+    - **Subject:** Delhaize Group — EDI connection issue
+    - **Status:** Working
+    - **Priority:** Medium
+    - **Created Date:** 28 April 2026
+  
+  - **Case Number:** 00001022
+    - **Subject:** Carrefour Belgium SA — POS integration delay
+    - **Status:** New
+    - **Priority:** High
+    - **Created Date:** 28 April 2026
+
+  - **Case Number:** 00001021
+    - **Subject:** Colruyt — Integration issue with POS system
+    - **Status:** New
+    - **Priority:** Medium
+    - **Created Date:** 28 April 2026
+
+#### Location
+- **SmartSales Information:**
+  - **Name:** Arne Albrecht
+  - **Address:** Lippenslaan 347, 8300 Knokke, Belgium
+  - **Last Order Date:** 15 April 2026
+  - **Has Extranet Access:** No
+
+### Summary
+Arne Albrecht is associated with EASI and Displaytech. He has been contacted regarding leads in sales and is involved in multiple ongoing opportunities with forecasted financials. Currently, there are several active support cases linked with Arne, mainly concerning EDI connections and POS system integrations. He is located in Knokke, Belgium.

@@ -1,0 +1,20 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (smartsales)...
+Synthesizing...
+### Summary of Findings
+
+#### From OneDrive:
+- **File about Locations:**
+  - **Name:** SmartSales_Locations.docx
+  - **Size:** 9,528 bytes
+  - **Created on:** 20 April 2026
+  - **Modified on:** 20 April 2026
+  - **Link:** [SmartSales_Locations.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BF23C8827-CC49-4607-A0B8-FF47034DC9E8%7D&file=SmartSales_Locations.docx&action=default&mobileredirect=true&DefaultItemOpen=1)
+
+#### From SmartSales:
+- No relevant locations were found.
+
+### Conclusion
+You have the file "SmartSales_Locations.docx" in OneDrive that contains information about locations. However, no corresponding location data was retrieved from SmartSales. If you need assistance accessing the content of the document or further action, please let me know!

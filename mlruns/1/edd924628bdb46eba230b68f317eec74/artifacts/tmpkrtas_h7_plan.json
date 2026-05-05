@@ -1,0 +1,29 @@
+{
+  "query": "Take the sender of my most recent email, look them up in Salesforce as a contact or lead, and check if their company has a SmartSales location.",
+  "reasoning": "The query involves gathering email information and then using that to obtain CRM data and location data. Therefore, I will first retrieve the most recent email sender from the graph agent, then use that information in the salesforce agent to look up the contact or lead, and finally check with the smartsales agent to see if their company has a location.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the sender's information from the most recent email.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Look up the sender's email address from step 1 as a contact or lead in Salesforce.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Check if the company associated with the sender from step 2 has a SmartSales location.",
+      "depends_on": [
+        2
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from steps 2 and 3 to provide a complete overview of the sender's contact details and company location status."
+}

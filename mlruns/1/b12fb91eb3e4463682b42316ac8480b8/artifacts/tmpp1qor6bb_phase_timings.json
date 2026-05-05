@@ -1,0 +1,92 @@
+{
+  "plan": {
+    "latency_s": 4.895,
+    "steps": 3,
+    "input_tokens": 1554,
+    "output_tokens": 267,
+    "total_tokens": 1821
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "salesforce",
+      "latency_s": 9.551,
+      "llm_turns": 2,
+      "n_tool_calls": 1,
+      "tool_calls": [
+        "get_cases"
+      ],
+      "input_tokens": 3977,
+      "output_tokens": 789,
+      "total_tokens": 4766
+    },
+    {
+      "step_id": 3,
+      "agent": "smartsales",
+      "latency_s": 40.502,
+      "llm_turns": 4,
+      "n_tool_calls": 14,
+      "tool_calls": [
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_orders",
+        "list_orders",
+        "list_orders",
+        "list_orders",
+        "list_orders",
+        "list_orders"
+      ],
+      "input_tokens": 8301,
+      "output_tokens": 3259,
+      "total_tokens": 11560
+    },
+    {
+      "step_id": 2,
+      "agent": "graph",
+      "latency_s": 56.99,
+      "llm_turns": 2,
+      "n_tool_calls": 24,
+      "tool_calls": [
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files",
+        "search_files"
+      ],
+      "input_tokens": 19029,
+      "output_tokens": 7819,
+      "total_tokens": 26848
+    }
+  ],
+  "synthesis": {
+    "latency_s": 14.984,
+    "input_tokens": 9032,
+    "output_tokens": 1233,
+    "total_tokens": 10265
+  }
+}

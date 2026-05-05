@@ -1,0 +1,55 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the Salesforce opportunities currently in the 'Qualification' stage:
+
+- **Opportunity: Anheuser-Busch InBev — Distribution Network Mapping**
+  - **ID:** 006KI000005bIGNYA2
+  - **Amount:** $520,000
+  - **Close Date:** 15 September 2026
+  - **Account Name:** Anheuser-Busch InBev
+
+- **Opportunity: GreenTech Solutions — Sustainability Dashboard**
+  - **ID:** 006KI000005bHl6YAE
+  - **Amount:** $45,000
+  - **Close Date:** 15 August 2026
+  - **Account Name:** GreenTech Solutions
+
+- **Opportunity: Annual Corporate Gala**
+  - **ID:** 006J6000004i8AYIAY
+  - **Amount:** Not specified
+  - **Close Date:** 20 February 2025
+  - **Account Name:** Universal Services
+
+- **Opportunity: Product Launch Event**
+  - **ID:** 006J6000004i8AdIAI
+  - **Amount:** Not specified
+  - **Close Date:** 19 February 2025
+  - **Account Name:** Gusto Manufacturing
+
+- **Opportunity: Business lunch**
+  - **ID:** 006J6000004i8CpIAI
+  - **Amount:** $10,000
+  - **Close Date:** 30 January 2025
+  - **Account Name:** Optos Inc.
+
+- **Opportunity: Prospection Gusto**
+  - **ID:** 00606000018RlzoAAC
+  - **Amount:** Not specified
+  - **Close Date:** 31 December 2024
+  - **Account Name:** Gusto Manufacturing
+
+- **Opportunity: Test sync**
+  - **ID:** 006J6000004HVlYIAW
+  - **Amount:** $0
+  - **Close Date:** 16 December 2024
+  - **Account Name:** 3C Systems
+
+- **Opportunity: Universal Technologies-**
+  - **ID:** 00606000019mdWJAAY
+  - **Amount:** Not specified
+  - **Close Date:** 31 December 2023
+  - **Account Name:** Universal Technologies
+
+These opportunities provide an overview of potential sales engagements in their early stages within Salesforce.

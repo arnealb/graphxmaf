@@ -1,0 +1,25 @@
+{
+  "query": "What is the current status of our relationship with supplier1?",
+  "reasoning": "The query requires a comprehensive view of our relationship with 'supplier1', which involves CRM information, communication history, and location data. Therefore, all available agents will be used to gather the necessary information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for emails and calendar events related to 'supplier1' to gather communication history.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Retrieve CRM accounts, contacts, leads, opportunities, and cases associated with 'supplier1' to understand the commercial relationship.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Collect any location data and catalog items related to 'supplier1' to understand the physical presence and product offering.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all three steps to provide a complete picture of the current status of the relationship with 'supplier1'."
+}

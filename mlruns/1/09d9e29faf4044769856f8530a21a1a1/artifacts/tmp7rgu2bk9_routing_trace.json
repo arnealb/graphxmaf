@@ -1,0 +1,31 @@
+{
+  "user_query": "I just joined EASI and am still in my probation period. Can I work from home?",
+  "plan": {
+    "query": "I just joined EASI and am still in my probation period. Can I work from home?",
+    "reasoning": "The user is asking about internal rules or policies regarding remote work during their probation period at EASI, which is a semantic/policy query. Therefore, the graph agent is appropriate to find this information in company documents.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Use search_documents to find the policy about working from home during probation periods.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Provide the user with the results from the search about the policy on working from home during probation periods."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Use search_documents to find the policy about working from home during probation periods.",
+      "started_at": "2026-05-04T20:46:40.859104+00:00",
+      "ended_at": "2026-05-04T20:46:44.918864+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_documents"
+      ]
+    }
+  ]
+}

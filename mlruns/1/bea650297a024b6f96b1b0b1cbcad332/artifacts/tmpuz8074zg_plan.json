@@ -1,0 +1,25 @@
+{
+  "query": "Who is Dorian and how do we work with him?",
+  "reasoning": "The query requires a comprehensive view of the individual named Dorian, which includes communication history, CRM-related information, and linked locations or contexts. Therefore, I will use all available agents to gather this information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Find emails and calendar events involving Dorian to understand communication history and scheduling.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Look up CRM contacts and any related opportunities, accounts, or cases associated with Dorian to gather commercial relationship data.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Search for locations or sites related to Dorian to gather information on any physical presence or context associated with him.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all steps to provide a comprehensive overview of Dorian, including communication history, commercial relationships, and any relevant locations."
+}

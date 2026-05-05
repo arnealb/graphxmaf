@@ -131,7 +131,7 @@ class BenchmarkPrompt:
 
 def _load_prompts(path: str | None = None) -> list[BenchmarkPrompt]:
     """Load benchmark prompts from eval/prompts.json."""
-    json_path = path or str(Path(__file__).parent / "prompts.json")
+    json_path = path or str(Path(__file__).parent / "prompts/prompts.json")
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
     return [BenchmarkPrompt(**p) for p in data]
@@ -166,7 +166,9 @@ async def run_and_collect(orchestrator, query: str) -> dict:
             elif event["type"] == "error":
                 errors.append(event["message"])
     except Exception as exc:
+        import traceback as _tb
         print(f"[DEBUG EXCEPTION] {exc}")
+        print(_tb.format_exc())
         errors.append(str(exc))
 
     return {
@@ -302,6 +304,15 @@ async def run_benchmark_case(
         else:
             result = await runner(prompt.text)
 
+        # ── Print plan steps for routing diagnosis ───────────────────────────
+        if result["plan"].get("reasoning"):
+            print(f"       reasoning: {result['plan']['reasoning']}")
+        for s in result["plan"].get("steps", []):
+            print(f"       plan step {s['id']}: agent={s['agent']}  task={s['task'][:80]!r}")
+        if result["errors"]:
+            for err in result["errors"]:
+                print(f"       [ERROR] {err}")
+
         plan_stats = compute_plan_stats(result["plan"])
 
         # ── Score answer quality (LLM-as-a-Judge) ────────────────────────────
@@ -381,6 +392,9 @@ async def run_benchmark_case(
         if result["errors"]:
             _log_text_artifact("\n".join(result["errors"]), "errors.txt")
 
+        print(f"       response:\n{result['response'].strip()}")
+        if llm_rationale:
+            print(f"       judge:    {llm_rationale[:200]}")
         print(
             f"       llm={llm_score}/5  routing={routing_score}/5"
             f"  latency={result['latency_s']:.1f}s"

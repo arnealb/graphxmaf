@@ -1,0 +1,13 @@
+{
+  "query": "What are the RTO and RPO targets for EASI's critical systems?",
+  "reasoning": "The query involves internal company rules and processes regarding Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO) for systems, which are likely documented internally. Therefore, the graph agent is the appropriate choice to search for this information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the RTO and RPO targets for EASI's critical systems.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the information retrieved from the graph agent's search regarding the RTO and RPO targets."
+}

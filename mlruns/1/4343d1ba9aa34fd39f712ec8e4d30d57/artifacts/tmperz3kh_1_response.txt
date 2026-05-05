@@ -1,0 +1,32 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are 5 closed Salesforce cases, including their close dates and descriptions:
+
+1. **Case Number**: 00001002
+   - **Subject**: Sample Case 3: Cannot track our order.
+   - **Closed Date**: 22 November 2024
+   - **Description**: N/A
+
+2. **Case Number**: 00001008
+   - **Subject**: Problème accès site
+   - **Closed Date**: 22 November 2024
+   - **Description**: Test
+
+3. **Case Number**: 00001012
+   - **Subject**: (Gmail Forwarding Confirmation - Receive Mail from easi.demo.inbox@gmail.com)
+   - **Closed Date**: 27 February 2025
+   - **Description**: easi.demo.inbox@gmail.com has requested to automatically forward mail...
+
+4. **Case Number**: 00001009
+   - **Subject**: Test
+   - **Closed Date**: 27 February 2025
+   - **Description**: Jonathan Mulolo  
+     Business Consultant  
+     j.mulolo@easi.net - www.easi.net
+
+5. **Case Number**: 00001015
+   - **Subject**: Test Entitlement Case
+   - **Closed Date**: 27 February 2025
+   - **Description**: Hello

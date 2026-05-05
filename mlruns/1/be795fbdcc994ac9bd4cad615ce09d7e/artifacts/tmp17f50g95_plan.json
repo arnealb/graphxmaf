@@ -1,0 +1,13 @@
+{
+  "query": "List all SmartSales order approbation statuses.",
+  "reasoning": "This query specifically pertains to the SmartSales API, which deals with understanding the available approbation statuses for orders. Since it requires a direct API call to determine this information, it should be handled by the smartsales agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve a list of all approbation statuses available for SmartSales orders.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of approbation statuses from step 1 as the final output."
+}

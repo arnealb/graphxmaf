@@ -1,0 +1,21 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here's what you need to know regarding your company car and the non-compete clause as you prepare to leave EASI:
+
+### Company Car
+- **Return Process**: You must return the company car on your last working day, along with all related items.
+- **Personal Contribution**: If you have been using the car for personal purposes, you may have a personal contribution of EUR 150 per month for that use.
+- **Professional Mileage**: Remember that travel between the EASI office and client locations counts as professional mileage.
+- **Condition Reporting**: Any damages to the vehicle need to be reported within 24 hours.
+
+### Non-Compete Clause
+- **Applicability**: The non-compete clause applies to your role, as you are likely in a commercial or customer-facing position.
+- **Duration**: The clause lasts for 12 months from your last working day.
+- **Geographical Scope**: It covers the territory of Belgium.
+- **Sectoral Scope**: It applies specifically to the field of sales software, CRM implementation, and retail analytics.
+- **Compensation**: You will receive 50% of your last gross monthly salary for the duration of this clause.
+- **Waiver Option**: EASI may waive the non-compete clause in writing within 15 days of your resignation, which would remove both the restrictions and the compensation.
+
+Be sure to review the full policies for detailed requirements and any additional provisions.

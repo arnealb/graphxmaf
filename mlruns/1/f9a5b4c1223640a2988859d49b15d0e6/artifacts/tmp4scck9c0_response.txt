@@ -1,0 +1,44 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Briefing on Colruyt
+
+#### General Information
+- **Role in Data Processing**: Colruyt serves as the controller in the Data Processing Agreement, indicating its involvement in data management concerning the SmartSales platform and related services.
+
+#### Recent Communications and Events
+- **Email Received**:
+  - **Date**: 28 April 2026
+  - **Subject**: Colruyt Group — SmartSales pilot confirmation
+  - **Sender**: Colruyt Group Procurement
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7pAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Upcoming Calendar Event**:
+  - **Event**: SmartSales Rollout Kickoff
+  - **Date**: 15 May 2026, 12:00 PM - 1:30 PM
+  - **Organizer**: SmartAdmin
+  - **Link**: [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLeAAA%3D&exvsurl=1&path=/calendar/item)
+
+#### Sales Insights
+- **Current Opportunity**:
+  - **Name**: Colruyt Group — SmartSales Rollout 2026
+  - **Stage**: Proposal/Price Quote
+  - **Amount**: €220,000
+  - **Close Date**: 30 September 2026
+
+- **Support Case**:
+  - **Case Number**: 00001021
+  - **Subject**: Integration issue with POS system
+  - **Status**: New
+  - **Priority**: Medium
+  - **Created Date**: 28 April 2026
+
+#### Physical Locations
+- **Status**: No specific physical location details were returned in the search results.
+
+#### Catalog Items
+- **Status**: No catalog items were found as the query returned an error regarding filter fields.
+
+### Conclusion
+Colruyt is actively engaged in the SmartSales platform and has ongoing communications and planned rollouts relating to this initiative. There are current opportunities under discussion that indicate a significant financial commitment and active case management for integration issues. Further details regarding physical locations and catalog items are unavailable at this time.

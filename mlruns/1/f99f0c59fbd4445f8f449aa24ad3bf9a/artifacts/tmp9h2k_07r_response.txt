@@ -1,0 +1,55 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Based on the results from the steps:
+
+### Recent Email Senders
+- **Microsoft**
+  - Email: microsoft-noreply@microsoft.com
+  - Subject: Een abonnement kopen om uw product te blijven gebruiken
+  - Received: 3 May 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAOC9kJ6AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Microsoft Security**
+  - Email: MSSecurity-noreply@microsoft.com
+  - Subject: Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)
+  - Received: 2 May 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAAN%2F0znaAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Enterprise (EasiGroupDemo)**
+  - Email: Enterprise@easigroupdemo.onmicrosoft.com
+  - Subject: You've joined the Enterprise group
+  - Received: 30 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAAN70MDJAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Microsoft Power Automate**
+  - Email: flow-noreply@microsoft.com
+  - Subject: title test
+  - Received: 30 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAAN70MDIAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Proximus Business**
+  - Email: info@proximus.be
+  - Subject: Proximus — partnership inquiry
+  - Received: 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAANz2u7zAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **AB InBev Sales**
+  - Email: sales@ab-inbev.com
+  - Subject: Distribution mapping — scope confirmation
+  - Received: 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAANz2u7yAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Delhaize Procurement**
+  - Email: procurement@delhaize.eu
+  - Subject: Supply chain project — follow-up meeting
+  - Received: 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAANz2u7xAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### Active Deals Identification
+- From **Salesforce**: No results were returned, so there is no information available on active deals that correspond with the recent email senders.
+
+### Conclusion
+Currently, based on the available information, I cannot identify which of these recent email senders has an active deal due to the lack of data from Salesforce.

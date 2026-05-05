@@ -1,0 +1,13 @@
+{
+  "query": "Find any Excel or PDF files in my OneDrive.",
+  "reasoning": "The user is asking for a specific type of file in OneDrive, which falls under the capabilities of the graph agent. This task can be completed in a single step.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search OneDrive for any Excel or PDF files.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of found Excel and PDF files from OneDrive."
+}

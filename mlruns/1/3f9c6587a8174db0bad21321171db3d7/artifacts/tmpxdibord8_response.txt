@@ -1,0 +1,15 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+In the event of a complete outage of the SmartSales platform at Colruyt, you should notify the following EASI contacts:
+
+- **Arne Albrecht** (EASI account manager)
+  - Email: a.albrecht@easi.net
+- **Dorian Feaux** (EASI technical escalation)
+  - Email: d.feaux@easi.net
+- **EASI Delivery Manager**
+
+**Timeframe:**
+- Notify them immediately upon the outage occurrence.
+- If the incident is not resolved within **2 hours** of acknowledgment, inform the **EASI Chief Operating Officer**, who will join the response.

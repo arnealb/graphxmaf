@@ -1,0 +1,52 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The search for the file named 'report' yielded the following results:
+
+### Found File: **supplier1 - Q2 Delivery Report**
+- **Supplier:** supplier1 (SUP-001)
+- **Period:** Q2 2026 (April–June)
+
+#### Orders:
+- **ORD-SUP1-2026-001:** 10x Industrial Components Pack @ EUR 149.99 = EUR 1499.90  
+  **Status:** Shipped (5 days delay — under investigation)  
+
+#### Open Issues:
+- April batch arrived late; quality review initiated for supplier1.
+- Contract renewal for the Q2 Delivery Contract pending signature.
+
+#### Contact:
+- **Marc Supplier:** marc.supplier@supplier1.be
+
+### Additional File Found: **NVIDIA Corporation (NVDA) -- Comprehensive Financial Research Report**
+- **Prepared:** 10 April 2026
+- **Data as of:** 10 April 2026 (market data); most recent fiscal year-end on 25 January 2026.
+
+#### Company Overview:
+- **Full Legal Name:** NVIDIA Corporation
+- **Ticker:** NVDA
+- **Exchange:** NASDAQ
+- **Sector/Industry:** Technology / Semiconductors
+- **Incorporated:** California, April 1993; Delaware, April 1998
+- **Headquarters:** Santa Clara, California
+- **CEO:** Jensen Huang
+- **Employees:** 42,000 (as of 25 January 2026) — up 16.7% YoY
+- **Revenue per Employee:** ~$5.14 million (FY2026)
+
+#### Reporting Segments:
+1. **Compute & Networking** - Data Center solutions, AI, automotive platforms.
+2. **Graphics** - Gaming GPUs, professional visualization tools.
+
+#### Market-Facing Revenue Breakdown (FY2026):
+- **Total Revenue:** $215.9B
+- **Data Center:** $193.7B (89.7% of total)
+- **Gaming:** $16.0B (7.4% of total)
+- **Professional Visualization:** $3.2B (1.5% of total)
+- **Automotive:** $2.3B (1.1% of total)
+- **OEM & Other:** $0.6B (0.3% of total)
+
+*Note: The content for the NVIDIA report is truncated.*
+
+### Summary
+- The main report found was **supplier1 - Q2 Delivery Report** detailing orders and issues, along with a second significant document on **NVIDIA Corporation's** financial performance. 

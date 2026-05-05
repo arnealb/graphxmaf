@@ -1,0 +1,89 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the emails you received in the last 7 days, including the senders and subjects:
+
+### List of Emails
+
+- **Sender:** Arne Albrecht  
+  **Subject:** delivery issues  
+  **Received:** 27 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7mAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Sender:** Marc Supplier  
+  **Subject:** Follow-up: supplier1 Q2 2026 Delivery Contract  
+  **Received:** 28 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7nAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Sender:** Marc Supplier  
+  **Subject:** supplier1 — Updated pricing for H2 2026  
+  **Received:** 28 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7oAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Sender:** Colruyt Group Procurement  
+  **Subject:** Colruyt Group — SmartSales pilot bevestiging  
+  **Received:** 28 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7pAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Sender:** GreenTech Solutions  
+  **Subject:** GreenTech Solutions — Interest in sustainability dashboard  
+  **Received:** 28 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7qAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Sender:** Ferrero Benelux Marketing  
+  **Subject:** Ferrero Benelux — Nutella spring campaign inquiry  
+  **Received:** 28 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7rAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Sender:** Dorian Féraux  
+  **Subject:** Intro: Dorian Feaux — EASI collaboration proposal  
+  **Received:** 28 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7sAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Sender:** SmartAdmin  
+  **Subject:** Belgium region — Q1 2026 commercial summary  
+  **Received:** 28 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7tAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Sender:** Carrefour BE Operations  
+  **Subject:** Q2 pilot update — analytics rollout  
+  **Received:** 28 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7uAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Sender:** AD Delhaize IT  
+  **Subject:** EDI connector — technische vraag  
+  **Received:** 28 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7wAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Sender:** Microsoft Power Automate  
+  **Subject:** 1 of your flow(s) have failed  
+  **Received:** 30 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN70MDGAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Sender:** Microsoft Power Automate  
+  **Subject:** test  
+  **Received:** 30 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN70MDHAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Sender:** Microsoft Power Automate  
+  **Subject:** title test  
+  **Received:** 30 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN70MDIAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Sender:** Enterprise  
+  **Subject:** You've joined the Enterprise group  
+  **Received:** 30 April 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN70MDJAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Sender:** Microsoft Security  
+  **Subject:** Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)  
+  **Received:** 2 May 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN%2F0znaAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Sender:** Microsoft  
+  **Subject:** Een abonnement kopen om uw product te blijven gebruiken  
+  **Received:** 3 May 2026  
+  [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN70MDHAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+This summary lists all the relevant emails from the past week.

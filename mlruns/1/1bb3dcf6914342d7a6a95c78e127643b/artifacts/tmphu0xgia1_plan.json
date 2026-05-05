@@ -1,0 +1,13 @@
+{
+  "query": "What fields can I filter SmartSales orders by?",
+  "reasoning": "The user is asking about internal system data related to SmartSales. Therefore, I will use the graph agent to access the relevant documentation on SmartSales order filtering.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the answer regarding the fields available for filtering SmartSales orders.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the information found about SmartSales order filtering fields as the final answer."
+}

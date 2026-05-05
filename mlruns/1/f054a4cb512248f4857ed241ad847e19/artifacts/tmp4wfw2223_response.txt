@@ -1,0 +1,18 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (salesforce)...
+Synthesizing...
+The contact person related to your most expensive open order is:
+
+- **Name**: Arnaud Delforge
+- **Title**: Mr
+- **Email**: a.delforge@easigroup.onmicrosoft.com
+- **Phone**: +32486448286
+- **Account Name**: EASI
+
+**Order Details**:
+- **Order Name**: Anheuser-Busch InBev — Distribution Network Mapping
+- **Order Amount**: $520,000
+- **Close Date**: 15 September 2026
+- **Stage**: Qualification

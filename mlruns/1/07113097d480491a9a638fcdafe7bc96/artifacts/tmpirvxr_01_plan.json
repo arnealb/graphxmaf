@@ -1,0 +1,13 @@
+{
+  "query": "When does my health insurance start as a new EASI employee?",
+  "reasoning": "The query is about internal company processes, specifically regarding health insurance for new employees, which should be handled by the graph agent using company documentation.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the answer regarding when health insurance starts for new EASI employees.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the information returned by the graph agent regarding health insurance start dates for new employees."
+}

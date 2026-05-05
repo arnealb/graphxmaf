@@ -1,0 +1,76 @@
+{
+  "user_query": "Find everything related to the word 'nutella' across all our systems.",
+  "plan": {
+    "query": "Find everything related to the word 'nutella' across all our systems.",
+    "reasoning": "The query seeks comprehensive information about 'nutella' across multiple domains, thus all available agents should be utilized to gather a full picture.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Search for any emails, calendar events, or documents related to 'nutella' in the Microsoft 365 system.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Search for any accounts, CRM contacts, leads, opportunities, or cases that mention 'nutella' in the Salesforce CRM system.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Search for any locations or catalog items related to 'nutella' in the Smartsales system.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from steps 1, 2, and 3 to provide a comprehensive overview of all information related to 'nutella'."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Search for any accounts, CRM contacts, leads, opportunities, or cases that mention 'nutella' in the Salesforce CRM system.",
+      "started_at": "2026-05-04T13:54:37.171919+00:00",
+      "ended_at": "2026-05-04T13:54:42.312633+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "find_accounts",
+        "find_contacts",
+        "find_leads",
+        "get_opportunities",
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Search for any emails, calendar events, or documents related to 'nutella' in the Microsoft 365 system.",
+      "started_at": "2026-05-04T13:54:37.168519+00:00",
+      "ended_at": "2026-05-04T13:54:45.580857+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "search_calendar",
+        "search_documents"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "Search for any locations or catalog items related to 'nutella' in the Smartsales system.",
+      "started_at": "2026-05-04T13:54:37.174834+00:00",
+      "ended_at": "2026-05-04T13:54:48.641764+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items"
+      ]
+    }
+  ]
+}

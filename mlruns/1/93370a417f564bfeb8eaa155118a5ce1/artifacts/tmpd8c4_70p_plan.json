@@ -1,0 +1,29 @@
+{
+  "query": "What do I need to know about the people I have meetings with this week?",
+  "reasoning": "The query requires a 360° view of the individuals involved in the user's meetings. To gather comprehensive information about the people, I will utilize all available agents to obtain emails, calendar events, CRM contacts, and linked locations.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Fetch the names and details of all the people the user has meetings scheduled with this week from calendar events.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Using the names of the contacts retrieved from step 1, retrieve their CRM profiles, including any relevant account and deal information.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Using the names of the contacts retrieved from step 1, fetch any linked physical locations related to these individuals.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the profiles and details from Salesforce and Smartsales with the calendar details to provide a comprehensive overview of each person scheduled for meetings this week."
+}

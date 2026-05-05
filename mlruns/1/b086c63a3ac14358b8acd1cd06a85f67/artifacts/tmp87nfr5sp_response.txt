@@ -1,0 +1,16 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph, salesforce)...
+Synthesizing...
+If EASI misses the P1 response SLA for Colruyt, the following financial consequences apply according to the SLA agreement:
+
+### Financial Implications
+- **Service Credit**: EASI is required to provide a service credit of **10% of the monthly fee** for that month if they fail to meet the P1 response or resolution target.
+- **Multiple Breaches**: If there are multiple breaches within the same month, the service credits will be aggregated. However, the **total service credit is capped at 30% of the monthly fee**.
+- **Exclusivity of Remedy**: The service credits are applied as a deduction on the next invoice and serve as the **sole financial remedy** for missed support commitments, except in cases of **gross negligence or willful misconduct**.
+
+### Current Relationship Context
+- EASI is currently engaged in a proposal stage with Colruyt for the "SmartSales Rollout 2026" project, valued at **€220,000**, with a close date set for **30 September 2026**. This ongoing business relationship may intensify the focus on adhering to SLA commitments to maintain customer satisfaction and minimize any financial penalties that could affect future contracts.
+
+### Summary
+In summary, failing to meet the P1 response SLA could cost EASI up to 30% of their monthly fee in service credits, potentially impacting their ongoing business relationship with Colruyt, especially given the current high-value proposal in progress.

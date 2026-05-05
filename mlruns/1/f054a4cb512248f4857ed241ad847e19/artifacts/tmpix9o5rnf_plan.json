@@ -1,0 +1,21 @@
+{
+  "query": "Who is the contact person behind my most expensive open order?",
+  "reasoning": "To find the contact person for the most expensive open order, I need to first identify the order with the highest value and then look up its associated contact in Salesforce. Since this process involves two distinct pieces of information — the order details and the associated contact — it requires two steps.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch the details of the most expensive open order, including its associated contact person.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Using the contact information retrieved from step 1, provide further details about the contact person.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results of step 2 to provide a complete overview of the contact person related to the most expensive open order."
+}

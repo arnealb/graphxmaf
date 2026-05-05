@@ -1,0 +1,11 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+To purchase a piece of equipment costing EUR 8,000, you will need the following approvals:
+
+- **Direct Manager**: Approval required
+- **HR**: Approval required
+- **Department Director**: Approval required
+
+Ensure that all three sign off on the purchase.

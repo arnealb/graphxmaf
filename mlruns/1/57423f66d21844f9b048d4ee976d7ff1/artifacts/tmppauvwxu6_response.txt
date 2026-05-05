@@ -1,0 +1,35 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+### Salesforce Opportunities Closing This Month
+
+1. **Colruyt Group — SmartSales Rollout 2026**
+   - **Stage:** Proposal/Price Quote
+   - **Amount:** $220,000
+   - **Close Date:** 30 September 2026
+   - **Account Name:** Colruyt Group
+
+2. **Anheuser-Busch InBev — Distribution Network Mapping**
+   - **Stage:** Qualification
+   - **Amount:** $520,000
+   - **Close Date:** 15 September 2026
+   - **Account Name:** Anheuser-Busch InBev
+
+### Calendar Events Related to Opportunities
+
+- **Colruyt Group:**
+  - **Event:** SmartSales Rollout Kickoff
+  - **Date:** 15 May 2026
+  - **Web Link:** [View Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLeAAA%3D&exvsurl=1&path=/calendar/item)
+
+- **Anheuser-Busch InBev:**
+  - No calendar events found.
+
+### Summary
+
+- **Opportunities Closing This Month:** 2 (Colruyt Group and Anheuser-Busch InBev)
+- **Related Calendar Events:** 1 (for Colruyt Group) 
+
+If you need to know more details or have any other requests, feel free to ask!

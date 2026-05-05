@@ -1,0 +1,13 @@
+{
+  "query": "What fields can be displayed for SmartSales catalog items?",
+  "reasoning": "The user is asking about specific fields related to SmartSales catalog items, which falls under the domain of the SmartSales API. This query needs to be routed to the appropriate agent for direct API information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve the list of fields that can be displayed for SmartSales catalog items.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the results from step 1 as the final answer."
+}

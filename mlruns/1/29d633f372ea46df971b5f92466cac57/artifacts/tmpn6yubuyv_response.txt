@@ -1,0 +1,55 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+### Overview of the Most Recent Email Sender
+
+#### Email Details
+- **Sender Name:** Microsoft
+- **Sender Email:** microsoft-noreply@microsoft.com
+- **Subject:** Een abonnement kopen om uw product te blijven gebruiken
+- **Received Date:** 3 May 2026
+- **Body Summary:**
+  - The email informs the recipient that their trial version will expire on 10 May 2026 and encourages them to purchase a subscription to maintain access to Microsoft services.
+  - It contains links for purchasing a subscription and for managing trial accounts.
+
+#### Communication History with Microsoft
+1. **Most Recent Email:**
+   - **Subject:** Een abonnement kopen om uw product te blijven gebruiken
+   - **Received Date:** 3 May 2026
+
+2. **Previous Emails:**
+   - **Your free trial of Microsoft Copilot Studio has expired**
+     - **Received Date:** 9 June 2024
+     - **Link to View:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAB4DlaXAAA=)
+   - **Your Microsoft Graph connectors free trial is ending soon**
+     - **Received Date:** 8 July 2024
+     - **Link to View:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAACKg04lAAA=)
+   - **Uw Granular-beheerdersrelatie met Netlease verloopt binnenkort**
+     - **Received Date:** 13 August 2024
+     - **Link to View:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAACiw-k6AAA=)
+   - **Uw Granular-beheerdersrelatie met Netlease is verlopen**
+     - **Received Date:** 14 August 2024
+     - **Link to View:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAACiw-k7AAA=)
+   - **Ihre Microsoft Copilot Studio trial expires soon—choose how to continue**
+     - **Received Date:** 18 September 2024
+     - **Link to View:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAC5vb87AAA=)
+
+#### CRM Data from Salesforce
+- **Contacts Identified in CRM Related to EASI:**
+  - **Brent Pauwels**
+    - **Email:** b.pauwels@easigroup.onmicrosoft.com
+    - **Phone:** +32487458866
+  - **Sander Van der Maas**
+    - **Email:** s.vandermaas@easigroup.onmicrosoft.com
+    - **Phone:** +32486444827
+  - **Arnaud Delforge**
+    - **Email:** a.delforge@easigroup.onmicrosoft.com
+    - **Phone:** +32486448286
+
+#### Location Information
+- **SmartSales:** No location information was returned.
+
+### Summary
+The most recent email from Microsoft serves as a notification regarding the expiration of a trial subscription. The communication history includes several reminders about other trial expirations. Relevant contacts associated with this email are identified in the CRM system, providing potential points of follow-up. No location data was retrieved from SmartSales.

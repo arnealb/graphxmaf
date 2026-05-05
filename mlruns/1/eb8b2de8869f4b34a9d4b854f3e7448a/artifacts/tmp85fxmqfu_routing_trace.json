@@ -1,0 +1,34 @@
+{
+  "user_query": "Find Salesforce accounts in France and list the contacts linked to those accounts.",
+  "plan": {
+    "query": "Find Salesforce accounts in France and list the contacts linked to those accounts.",
+    "reasoning": "The query requires retrieving accounts located in France from Salesforce and then finding the associated contacts for those accounts. This can be accomplished in a single step without needing intermediate results.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch all Salesforce accounts located in France and include the linked contacts for those accounts.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the accounts and their linked contacts as a consolidated list."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Fetch all Salesforce accounts located in France and include the linked contacts for those accounts.",
+      "started_at": "2026-05-04T14:25:36.223051+00:00",
+      "ended_at": "2026-05-04T14:25:52.439750+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 4,
+      "tool_calls": [
+        "find_accounts",
+        "find_contacts",
+        "find_accounts",
+        "find_contacts"
+      ]
+    }
+  ]
+}

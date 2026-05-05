@@ -1,0 +1,77 @@
+{
+  "user_query": "Prepare me for my next meeting. What do I have coming up and what do I know about the companies involved?",
+  "plan": {
+    "query": "Prepare me for my next meeting. What do I have coming up and what do I know about the companies involved?",
+    "reasoning": "The user is asking for both upcoming meetings and details about the companies involved. I need to gather calendar events for upcoming meetings from graph and company information from both salesforce and smartsales for a comprehensive overview.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve upcoming calendar events to find the user's next meeting.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Lookup company details related to the contacts involved in the user's next meeting.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Retrieve information about the companies involved in the user's next meeting, including their physical presence and product catalog.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the results of the upcoming meetings from step 1 with the detailed company information from steps 2 and 3 to prepare a comprehensive overview for the user."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve upcoming calendar events to find the user's next meeting.",
+      "started_at": "2026-05-04T13:31:28.002101+00:00",
+      "ended_at": "2026-05-04T13:31:35.597410+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_calendar"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "[Result from step 1]:\n```json\n[\n    {\n        \"id\": \"AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLgAAA=\",\n        \"subject\": \"Weekly sync — Dorian Feaux\",\n        \"start\": \"2026-05-06T07:00:00.0000000\",\n        \"end\": \"2026-05-06T07:30:00.0000000\",\n        \"organizer\": {\n            \"name\": \"SmartAdmin\",\n            \"address\": \"SmartAdmin@easigroupdemo.onmicrosoft.com\"\n        },\n        \"attendees\": []\n    },\n    {\n        \"id\": \"AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLhAAA=\",\n        \"subject\": \"Sprint review — Arne Albrecht\",\n        \"start\": \"2026-05-08T12:00:00.0000000\",\n        \"end\": \"2026-05-08T13:00:00.0000000\",\n        \"organizer\": {\n            \"name\": \"SmartAdmin\",\n            \"address\": \"SmartAdmin@easigroupdemo.onmicrosoft.com\"\n        },\n        \"attendees\": []\n    }\n]\n```\n\n[Task]:\nLookup company details related to the contacts involved in the user's next meeting.",
+      "started_at": "2026-05-04T13:31:35.638485+00:00",
+      "ended_at": "2026-05-04T13:31:38.311886+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "find_contacts",
+        "find_contacts"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "[Result from step 1]:\n```json\n[\n    {\n        \"id\": \"AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLgAAA=\",\n        \"subject\": \"Weekly sync — Dorian Feaux\",\n        \"start\": \"2026-05-06T07:00:00.0000000\",\n        \"end\": \"2026-05-06T07:30:00.0000000\",\n        \"organizer\": {\n            \"name\": \"SmartAdmin\",\n            \"address\": \"SmartAdmin@easigroupdemo.onmicrosoft.com\"\n        },\n        \"attendees\": []\n    },\n    {\n        \"id\": \"AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLhAAA=\",\n        \"subject\": \"Sprint review — Arne Albrecht\",\n        \"start\": \"2026-05-08T12:00:00.0000000\",\n        \"end\": \"2026-05-08T13:00:00.0000000\",\n        \"organizer\": {\n            \"name\": \"SmartAdmin\",\n            \"address\": \"SmartAdmin@easigroupdemo.onmicrosoft.com\"\n        },\n        \"attendees\": []\n    }\n]\n```\n\n[Task]:\nRetrieve information about the companies involved in the user's next meeting, including their physical presence and product catalog.",
+      "started_at": "2026-05-04T13:31:35.641109+00:00",
+      "ended_at": "2026-05-04T13:31:50.203278+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 4,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items",
+        "list_locations",
+        "list_catalog_items"
+      ]
+    }
+  ]
+}

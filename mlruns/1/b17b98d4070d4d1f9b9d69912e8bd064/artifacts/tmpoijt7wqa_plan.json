@@ -1,0 +1,25 @@
+{
+  "query": "Tell me everything about the companies behind my open support cases.",
+  "reasoning": "The query requires comprehensive information about the companies related to open support cases, thus involving all available agents to gather relevant details from different perspectives: communication history, CRM data on the companies, and their physical presence.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for emails, calendar events, and OneDrive files mentioning the companies behind my open support cases. Include any communication history.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Find accounts for the companies behind my open support cases AND their contacts, ALL open opportunities, and any leads for these companies. Return everything in one response.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Search for locations matching the companies behind my open support cases. Try partial name matches if the exact name returns nothing. Also retrieve any catalog items if relevant.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all three steps to provide a complete overview of the companies behind the open support cases, including communication history, CRM data, and physical presence."
+}

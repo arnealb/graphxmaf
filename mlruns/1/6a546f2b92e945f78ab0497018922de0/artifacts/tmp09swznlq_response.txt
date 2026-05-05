@@ -1,0 +1,74 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is a comprehensive overview of all available information related to Arne Albrecht:
+
+### Personal Information
+- **Full Name:** Arne Albrecht
+- **Email Addresses:**
+  - a.albrecht@easi.net (associated with EASI)
+  - albrecht.arne@gmail.com (associated with Displaytech)
+- **Accounts:**
+  - **EASI**: Contact associated with this account.
+  - **Displaytech**: Contact associated with this account.
+
+### Calendar Events
+From Microsoft 365 calendar:
+- **Test Meeting**
+  - **Date:** 8 January 2025
+  - **Time:** 11:00 AM - 11:30 AM
+  - **Organizer:** Group-test
+  - **Attendees:** Group-test, SmartAdmin
+  - **Web Link:** [View](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAEEDoV3AAA%3D&exvsurl=1&path=/calendar/item)
+
+- **Meeting: nog e meeting**
+  - **Date:** 21 April 2026
+  - **Time:** 12:30 PM - 1:00 PM
+  - **Organizer:** SmartAdmin
+  - **Attendees:** Arne Albrecht (a.albrecht@easi.net)
+  - **Web Link:** [View](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANH3nhVAAA%3D&exvsurl=1&path=/calendar/item)
+
+- **Meeting: about numbers or something**
+  - **Date:** 21 April 2026
+  - **Time:** 4:30 PM - 5:00 PM
+  - **Organizer:** SmartAdmin
+  - **Attendees:** Arne (albrecht.arne@gmail.com)
+  - **Web Link:** [View](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAANRyrptAAA%3D&exvsurl=1&path=/calendar/item)
+
+### Salesforce Information
+- **Contact Id 1:**
+  - **First Name:** Arne
+  - **Last Name:** Albrecht
+  - **Email:** a.albrecht@easi.net
+  - **Account Name:** EASI
+  
+- **Contact Id 2:**
+  - **First Name:** Arne
+  - **Last Name:** Albrecht
+  - **Email:** albrecht.arne@gmail.com
+  - **Account Name:** Displaytech
+
+- **Lead:**
+  - **First Name:** Arne
+  - **Last Name:** Albrecht
+  - **Email:** albrecht.arne@gmail.com
+  - **Company:** easi_dupe
+  - **Status:** Contacted
+
+### Locations
+From SmartSales:
+- **Location Information:**
+  - **Name:** Arne Albrecht
+  - **Address:** Lippenslaan 347, Knokke, 8300, Belgium
+  - **Last Order Date:** 15 April 2026
+
+### Documents
+From document searches:
+- **No specific documents related to Arne were found.** A context was provided indicating a lack of specific information.
+
+### Summary
+- Arne Albrecht is associated with multiple email addresses and accounts in Salesforce (EASI and Displaytech) and has upcoming meetings scheduled in Microsoft 365.
+- A location related to Arne was found in SmartSales, confirming residence in Belgium. 
+
+For more specific information or documentation, please provide additional context or details.

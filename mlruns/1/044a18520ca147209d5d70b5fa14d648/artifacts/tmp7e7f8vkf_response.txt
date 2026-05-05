@@ -1,0 +1,22 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here’s the information regarding unused vacation days based on the company's leave policy:
+
+- **Carried Over Days**: 
+  - A maximum of 5 unused vacation days can be carried over to the following calendar year.
+  
+- **Expiration of Carried Over Days**: 
+  - Any carried-over days will expire on 31 March of the following year.
+  
+- **Payout Policy**: 
+  - Unused vacation days cannot be paid out; they must be used or they will be lost.
+
+- **Employee Encouragement**: 
+  - Employees are encouraged to schedule their leave throughout the year to prevent losing any accrued vacation days.
+
+- **Notification**: 
+  - The HR department sends a reminder in early February to employees who have any carried-over days remaining.
+
+This information is crucial for managing your vacation days effectively.

@@ -1,0 +1,13 @@
+{
+  "query": "If the SmartSales platform goes completely down for Colruyt, who at EASI do I notify first and within what timeframe?",
+  "reasoning": "The query involves identifying a notification protocol or procedure related to a specific company. This kind of internal process inquiry fits the type A semantic/policy query, which should be routed to the graph agent to retrieve relevant internal documents or policies.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the notification protocol or escalation policy for platform disruptions involving Colruyt and EASI.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Summarize the findings from the document search to provide the recommended notification contact and timing."
+}

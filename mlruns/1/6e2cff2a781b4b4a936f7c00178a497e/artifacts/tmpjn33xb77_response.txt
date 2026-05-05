@@ -1,0 +1,53 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Briefing on Colruyt
+
+**Overview:**
+
+Colruyt Group is a prominent retail company based in Belgium, known primarily for its supermarket chain. The company also engages in various ancillary operations, including procurement and supply chain management.
+
+**Recent Developments:**
+
+- **SmartSales Pilot Confirmation:**  
+  - **Date Received:** 28 April 2026  
+  - **Sender:** Colruyt Group Procurement  
+  - This communication pertains to the confirmation of a pilot initiative involving the SmartSales platform.  
+  - **[View email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7pAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+- **SmartSales Rollout Kickoff:**  
+  - **Date:** 15 May 2026, 12:00 - 13:30  
+  - This event marks the kickoff of the rollout strategy for the SmartSales platform.  
+  - **[View calendar event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLeAAA%3D&exvsurl=1&path=/calendar/item)**
+
+**Business Opportunities:**
+
+- **Current Proposal:**  
+  - **Project:** Colruyt Group — SmartSales Rollout 2026  
+  - **Stage:** Proposal/Price Quote  
+  - **Potential Value:** €220,000  
+  - **Close Date:** 30 September 2026  
+  - This opportunity is in the proposal phase; further developments are awaited.
+
+**Locations:**
+
+- **Main Store Location:**  
+  - **Name:** Colruyt - Halle  
+  - **Address:** Edingensesteenweg 196, Halle, 1500, Belgium  
+  - **Coordinates:** Latitude 50.7292372, Longitude 4.2219105  
+
+**Product Offerings:**
+Colruyt offers a diverse range of products including:
+- **IT Hardware and Software**  
+- **Food Items:** e.g., Nutella 750g  
+- **Electronics:** e.g., ultra-wide monitors and business laptops  
+- **Retail Items:** e.g., retail display kits for stores.
+
+#### Notable Products:
+- **USB-C Docking Station** - €249.00
+- **Wireless Headset UC** - €189.50
+- **Ergonomic Keyboard** - €129.00
+- **Business Laptop Pro 15** - €1299.99
+
+This comprehensive overview of Colruyt reflects its active role in the retail sector, current projects, and product offerings, supporting its position as a significant player in the Belgian market.

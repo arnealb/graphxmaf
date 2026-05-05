@@ -1,0 +1,41 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is a comprehensive overview of **GreenTech Solutions** based on the available data:
+
+### **Communication History**
+- **Email Received**: 
+  - **Subject**: Interest in sustainability dashboard
+  - **From**: GreenTech Solutions (info@greentechsolutions.be)
+  - **Date**: 28 April 2026
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7qAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+- **Calendar Event**:
+  - **Subject**: Technical Qualification Call
+  - **Date/Time**: 12 May 2026, 09:00 - 10:00 (UTC)
+  - **Organizer**: SmartAdmin
+  - **Link**: [View Calendar Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLfAAA%3D&exvsurl=1&path=/calendar/item)
+
+### **CRM Data**
+- **Opportunities**:
+  - **Name**: GreenTech Solutions — Sustainability Dashboard
+  - **Stage**: Qualification
+  - **Amount**: €45,000
+  - **Close Date**: 15 August 2026
+  - **Account Name**: GreenTech Solutions
+
+### **Location Details**
+- **Primary Location**:
+  - **Name**: GreenTech Solutions - Ghent
+  - **Address**: Technologiepark 122, Ghent, 9052, Belgium
+  - **Latitude**: 51.0129939
+  - **Longitude**: 3.7092335
+  - **Details**: No extranet access was noted.
+
+### **Products/Services**
+- **Dashboard License**:
+  - **Title**: GreenTech Solutions — Dashboard License
+  - **Description**: Annual software license for the GreenTech sustainability dashboard.
+  - **Price**: €2,500
+
+This overview summarizes all known facets of GreenTech Solutions, including communication history, CRM data, and location details. If you need further information, feel free to ask!

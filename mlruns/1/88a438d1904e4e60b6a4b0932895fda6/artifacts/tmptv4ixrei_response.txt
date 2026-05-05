@@ -1,0 +1,35 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Overview of Dorian Feaux
+
+**Identity:**
+- **Name:** Dorian Feaux
+- **Email:** d.feaux@easi.net
+- **Associated Account:** EASI
+
+**Communication History:**
+- **Emails:**
+  - 11 December 2025: Received a request for a transport order from Dorian ([View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAH1XydTAAA%3D&exvsurl=1&viewmodel=ReadMessageItem))
+  - 28 April 2026: Sent an introduction regarding an EASI collaboration proposal ([View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7sAAA%3D&exvsurl=1&viewmodel=ReadMessageItem))
+
+- **Calendar Events:**
+  - 6 May 2026: Weekly sync with Dorian from 07:00 to 07:30.
+  
+**CRM Relationship Data:**
+- Dorian is associated with multiple EASI accounts in Salesforce, which include:
+  - EASI
+  - Easi Be
+  - Easi Group
+  - Easi Lu
+- No specific lead, opportunity, or case data was found related to Dorian.
+
+**Location Information:**
+- No specific location data was retrieved from any sources related to Dorian.
+
+### Working with Dorian
+- **Weekly Syncs:** Consider scheduling regular check-ins, such as the upcoming weekly sync on 6 May 2026.
+- **Collaboration Communication:** Respond to his collaboration proposals via email and ensure mutual understanding of project timelines and expectations. 
+
+This comprehensive overview should help facilitate effective collaboration with Dorian.

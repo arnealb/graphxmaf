@@ -1,0 +1,20 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+**Regarding Your Departure from EASI: Company Car and Non-Compete Clause**
+
+### Company Car Policy:
+- **Return Requirements**: You must return the company car on your last working day along with all keys and documents.
+- **Eligibility**: You likely qualified for a company car based on your role. The policy includes different categories for various positions.
+- **Personal Use Contribution**: If you've been using the car personally, there may be a monthly contribution of EUR 150.
+- **Damage Reporting**: Any damage must be reported within 24 hours before returning the vehicle.
+
+### Non-Compete Clause:
+- **Duration**: 12 months after your last working day.
+- **Geographic Scope**: Applies within Belgium.
+- **Sectoral Scope**: Covers specific industries related to field sales software, CRM, and retail analytics.
+- **Compensation**: You would be entitled to 50% of your last gross monthly salary during this period.
+- **Waiver Option**: EASI may waive the non-compete clause in writing within 15 days of your resignation.
+
+For further clarification on these policies, it is recommended to contact the HR department directly.

@@ -1,0 +1,48 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here's the overview of your upcoming meetings and the companies involved:
+
+### Upcoming Meetings
+1. **Weekly Sync**
+   - **Date**: 6 May 2026
+   - **Time**: 07:00 AM - 07:30 AM
+   - **Organizer**: SmartAdmin
+   - **Attendee**: Marc Supplier (Supplier1)
+
+2. **Sprint Review**
+   - **Date**: 8 May 2026
+   - **Time**: 12:00 PM - 01:00 PM
+   - **Organizer**: SmartAdmin
+
+3. **Supplier1 — Q2 Delivery Review**
+   - **Date**: 10 May 2026
+   - **Time**: 08:00 AM - 09:00 AM
+   - **Organizer**: SmartAdmin
+
+4. **GreenTech Solutions — Technical Qualification Call**
+   - **Date**: 12 May 2026
+   - **Time**: 09:00 AM - 10:00 AM
+   - **Organizer**: SmartAdmin
+
+5. **Colruyt Group — SmartSales Rollout Kickoff**
+   - **Date**: 15 May 2026
+   - **Time**: 12:00 PM - 01:30 PM
+   - **Organizer**: SmartAdmin
+
+### Company Information
+- **Supplier1**
+  - **Contact**: Marc Supplier (Email: marc.supplier@supplier1.be)
+  - **Address**: Rue du Commerce 1, Brussels, Belgium
+  - **Description**: Supplier of industrial components used in manufacturing processes.
+
+- **GreenTech Solutions**
+  - **Address**: Technologiepark 122, Ghent, Belgium
+  - **Description**: Focused on sustainability solutions, potentially related to technology innovations.
+
+- **Colruyt Group**
+  - **Address**: Edingensesteenweg 196, Halle, Belgium
+  - **Description**: A major retailer in Belgium, involved in the retail market.
+
+You have a series of important meetings lined up, with relevant participants and insights into the companies involved.

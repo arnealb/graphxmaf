@@ -1,0 +1,30 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+Here is a summary of the files related to the most valuable open deal with "supplier1":
+
+### Files Associated with the Deal
+
+1. **[supplier1_delivery_report_Q2_2026.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BD85C356D-46B4-4F1F-91BF-83529C86BBA0%7D&file=supplier1_delivery_report_Q2_2026.docx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+   - **Size:** 11,874 bytes
+   - **Created on:** 28 April 2026
+   - **Modified on:** 28 April 2026
+
+2. **[framework_agreement_easi_supplier1.docx.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B91E9F4C8-794A-40D5-801A-A653FE489416%7D&file=framework_agreement_easi_supplier1.docx.docx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+   - **Size:** 17,333 bytes
+   - **Created on:** 29 April 2026
+   - **Modified on:** 29 April 2026
+
+3. **[contract_draft_Q1.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B549E60A0-E809-49CA-BC1A-42886C064537%7D&file=contract_draft_Q1.docx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+   - **Size:** 12,609 bytes
+   - **Created on:** 29 April 2026
+   - **Modified on:** 29 April 2026
+
+4. **[SmartSales_Locations.docx](https://easigroupdemo-my.sharepoint.com/personal/smartadmin_easigroupdemo_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BF23C8827-CC49-4607-A0B8-FF47034DC9E8%7D&file=SmartSales_Locations.docx&action=default&mobileredirect=true&DefaultItemOpen=1)**
+   - **Size:** 9,528 bytes
+   - **Created on:** 20 April 2026
+   - **Modified on:** 20 April 2026
+
+These files are essential resources for managing the ongoing approval process of the deal with "supplier1," scheduled to close on 8 May 2026.

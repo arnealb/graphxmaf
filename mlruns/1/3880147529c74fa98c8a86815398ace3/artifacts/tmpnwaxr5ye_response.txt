@@ -1,0 +1,57 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+The search for the term "report" yielded two documents from OneDrive. Here are their contents:
+
+### 1. Supplier1 Delivery Report (Q2 2026)
+```
+Supplier: supplier1 (SUP-001)
+Period: Q2 2026 (April–June)
+
+Orders:
+- ORD-SUP1-2026-001: 10x Industrial Components Pack @ EUR 149.99 = EUR 1499.90
+  Status: Shipped (5 days delay — under investigation)
+
+Open Issues:
+- April batch arrived late. supplier1 quality review initiated.
+- Contract renewal (supplier1 Q2 Delivery Contract) pending signature.
+
+Contact: Marc Supplier <marc.supplier@supplier1.be>
+```
+
+### 2. NVIDIA Financial Analysis Report
+```
+# NVIDIA Corporation (NVDA) -- Comprehensive Financial Research Report
+
+**Prepared:** April 10, 2026
+**Data as of:** April 10, 2026 (market data); January 25, 2026 (most recent fiscal year-end)
+**Fiscal Year Note:** NVIDIA's fiscal year ends in late January. FY2026 ended January 25, 2026.
+
+## 1. Company Overview
+| Field | Detail |
+|-------|--------|
+| **Full Legal Name** | NVIDIA Corporation |
+| **Ticker** | NVDA |
+| **Exchange** | NASDAQ Global Select Market |
+| **Sector / Industry** | Technology / Semiconductors |
+| **Incorporated** | California, April 1993; reincorporated in Delaware, April 1998 |
+| **Headquarters** | 2788 San Tomas Expressway, Santa Clara, California 95051 |
+| **CEO** | Jensen Huang (Founder) |
+| **CFO** | Colette Kress (EVP & CFO) |
+| **Employees** | 42,000 (as of January 25, 2026) -- up 16.7% YoY from 36,000 |
+
+## 2. Market Data (as of April 10, 2026)
+| Metric | Value |
+|--------|-------|
+| **Current Stock Price** | ~$186.50 |
+| **Market Capitalization** | ~$4.5 trillion |
+| **Total Assets** | $206,803 million |
+
+...
+
+**Key observation:** FY2023 saw a cyclical downturn. Starting FY2024, the AI-driven data center boom produced explosive growth.
+...
+```
+
+If you need further details from either report or have any specific requests, feel free to ask!

@@ -1,0 +1,21 @@
+{
+  "query": "List my Microsoft 365 contacts with their phone numbers and check if those contacts also exist in Salesforce.",
+  "reasoning": "The first step retrieves the user's Outlook contacts from Microsoft 365 along with their phone numbers. The second step checks Salesforce to see if those contacts exist there based on the results from the first step, providing a complete view.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "List all my Microsoft 365 contacts and include their phone numbers.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Check for the existence of the contacts retrieved in step 1 within Salesforce.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the list of contacts from Microsoft 365 with the results of the contact check in Salesforce to present a comprehensive overview of the user's contacts and their statuses."
+}

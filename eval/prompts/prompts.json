@@ -1,0 +1,38 @@
+[
+  {
+    "text": "Find high-priority open cases in Salesforce.",
+    "category": "salesforce",
+    "difficulty": "medium",
+    "expected_answer": "A list of Salesforce cases where Status is not Closed and Priority is High.",
+    "tags": [
+      "get_cases"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
+  },
+    {
+    "text": "Show me Salesforce opportunities in the 'Qualification' stage.",
+    "category": "salesforce",
+    "difficulty": "medium",
+    "expected_answer": "A list of Salesforce opportunities where StageName is 'Qualification'.",
+    "tags": [
+      "get_opportunities"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
+  },
+    {
+    "text": "Show me 5 closed Salesforce cases including their close date and description.",
+    "category": "salesforce",
+    "difficulty": "medium",
+    "expected_answer": "A list of 5 closed Salesforce cases.",
+    "tags": [
+      "get_cases"
+    ],
+    "expected_agents": [
+      "salesforce"
+    ]
+  }
+]

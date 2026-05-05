@@ -1,0 +1,13 @@
+{
+  "query": "How do I report a suspected phishing email and what are the consequences if I fail a phishing test twice?",
+  "reasoning": "The query involves internal company processes related to reporting phishing and the consequences of failing a phishing test, thus requiring information from company policy documents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the process for reporting a suspected phishing email and the consequences of failing a phishing test twice.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Summarize the findings from the document search to provide a comprehensive answer."
+}

@@ -1,0 +1,48 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+You have received several emails in the last 7 days. Here is a list of the senders and subjects:
+
+- **From Arne Albrecht** (albrecht.arne@gmail.com): 
+  - Subject: delivery issues
+- **From Marc Supplier** (marc.supplier@supplier1.be): 
+  - Subject: Follow-up: supplier1 Q2 2026 Delivery Contract
+- **From Marc Supplier** (marc.supplier@supplier1.be): 
+  - Subject: supplier1 — Updated pricing for H2 2026
+- **From Colruyt Group Procurement** (procurement@colruyt.be): 
+  - Subject: Colruyt Group — SmartSales pilot bevestiging
+- **From GreenTech Solutions** (info@greentechsolutions.be): 
+  - Subject: GreenTech Solutions — Interest in sustainability dashboard
+- **From Ferrero Benelux Marketing** (marketing@ferrero.be): 
+  - Subject: Ferrero Benelux — Nutella spring campaign inquiry
+- **From Dorian Féaux** (d.feaux@easi.net): 
+  - Subject: Intro: Dorian Feaux — EASI collaboration proposal
+- **From SmartAdmin** (SmartAdmin@easigroupdemo.onmicrosoft.com): 
+  - Subject: Belgium region — Q1 2026 commercial summary
+- **From Carrefour BE Operations** (ops@carrefour-be.eu): 
+  - Subject: Q2 pilot update — analytics rollout
+- **From CRF Belgium Procurement** (procurement@carrefour-be.eu): 
+  - Subject: Offerte aanvraag — POS koppeling modules
+- **From AD Delhaize IT** (it@delhaize.eu): 
+  - Subject: EDI connector — technische vraag
+- **From Delhaize Procurement** (procurement@delhaize.eu): 
+  - Subject: Supply chain project — follow-up meeting
+- **From AB InBev Sales** (sales@ab-inbev.com): 
+  - Subject: Distribution mapping — scope confirmation
+- **From Proximus Business** (info@proximus.be): 
+  - Subject: Proximus — partnership inquiry
+- **From Microsoft Power Automate** (PowerAutomateNoReply@microsoft.com): 
+  - Subject: 1 of your flow(s) have failed
+- **From Microsoft Power Automate** (flow-noreply@microsoft.com): 
+  - Subject: test
+- **From Microsoft Power Automate** (flow-noreply@microsoft.com): 
+  - Subject: title test
+- **From Enterprise** (Enterprise@easigroupdemo.onmicrosoft.com): 
+  - Subject: You've joined the Enterprise group
+- **From Microsoft Security** (MSSecurity-noreply@microsoft.com): 
+  - Subject: Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)
+- **From Microsoft** (microsoft-noreply@microsoft.com): 
+  - Subject: Een abonnement kopen om uw product te blijven gebruiken
+
+This list includes both personal and automated email notifications.

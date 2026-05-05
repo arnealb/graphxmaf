@@ -1,0 +1,11 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+You cannot accept the thank-you dinner from the supplier because:
+
+- **EASI Policy**: There is a zero-tolerance policy regarding bribery and corruption.
+- **Gift Limitation**: No gifts or hospitality valued above EUR 50 may be accepted from suppliers.
+- **Action Required**: Any offer of a gift above this threshold must be declared to procurement@easi.net.
+
+In this case, since the dinner is valued at EUR 75, it exceeds the acceptable limit.

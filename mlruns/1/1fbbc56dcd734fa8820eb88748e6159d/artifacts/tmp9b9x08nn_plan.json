@@ -1,0 +1,25 @@
+{
+  "query": "Tell me everything you know about supplier1.",
+  "reasoning": "The user is requesting a comprehensive overview of 'supplier1', which requires information from all available agents: graph for communication history and documents, salesforce for CRM-related data, and smartsales for physical presence and catalog items.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for emails, calendar events, and internal documents related to supplier1.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Fetch CRM accounts, contacts, opportunities, and support history associated with supplier1.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Retrieve locations and catalog items related to supplier1.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from all agents to form a complete overview of supplier1."
+}

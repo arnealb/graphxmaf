@@ -1,0 +1,21 @@
+{
+  "query": "Who is the contact person behind my most expensive open order?",
+  "reasoning": "The query is entity-centric, specifically asking for a contact related to an order which requires information from both the salesforce system for order details and the graph system for any related communication. Thus, both agents are needed to gather the required data.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve the most expensive open order and include details of the associated contact person.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Using the contact person’s details from step 1, find any email communication or calendar events related to this contact person.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the contact person details from step 1 with any relevant communication found in step 2 to present a comprehensive overview of the contact person associated with the most expensive open order."
+}

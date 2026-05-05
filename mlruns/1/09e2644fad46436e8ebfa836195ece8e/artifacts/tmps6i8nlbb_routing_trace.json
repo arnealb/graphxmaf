@@ -1,0 +1,31 @@
+{
+  "user_query": "List open support cases in Salesforce.",
+  "plan": {
+    "query": "List open support cases in Salesforce.",
+    "reasoning": "The user is specifically asking for information related to support cases, which directly pertains to Salesforce's functionality. Therefore, only one step is needed to query Salesforce for open support cases.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Fetch all open support cases in Salesforce.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of open support cases retrieved from Salesforce."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Fetch all open support cases in Salesforce.",
+      "started_at": "2026-05-04T13:35:42.580467+00:00",
+      "ended_at": "2026-05-04T13:35:54.759474+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "get_cases"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+### Current Status of Relationship with Supplier1
+
+**Recent Communications:**
+- **Follow-up on Q2 2026 Delivery Contract**
+  - **From:** Marc Supplier
+  - **Received:** 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7nAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Updated Pricing for H2 2026**
+  - **From:** Marc Supplier
+  - **Received:** 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN2u7oAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Possible Order Discussion**
+  - **From:** Arne Albrecht
+  - **Received:** 20 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANbZQmuAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+**Upcoming Meeting:**
+- **Q2 Delivery Review**
+  - **Date:** 10 May 2026, 08:00 - 09:00
+  - **Organizer:** SmartAdmin
+  - [View Calendar Event](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLdAAA%3D&exvsurl=1&path=/calendar/item)
+
+**Salesforce Insights:**
+- **Delayed Shipment Case**
+  - **Case Number:** 00001020
+  - **Status:** Working
+  - **Priority:** High
+  - **Created on:** 28 April 2026
+
+- **Opportunities:**
+  - **Q2 Delivery Contract**
+    - **Stage:** Negotiation/Review
+    - **Amount:** €85,000
+    - **Close Date:** 30 June 2026
+  - **Another Opportunity**
+    - **Stage:** On-going Approval
+    - **Close Date:** 8 May 2026
+
+**Supplier Details:**
+- **Contact Person:**
+  - **Name:** Marc Supplier
+  - **Email:** marc.supplier@supplier1.be
+
+- **Supplier Information:**
+  - **Location:** Rue du Commerce 1, Brussels, Belgium
+  - **General Communication:** Maintained via email and ongoing contract negotiations.
+
+### Summary
+The relationship with Supplier1 is currently active, with ongoing discussions about contracts and pricing updates. There are scheduled meetings to discuss delivery logistics, and existing challenges like delayed shipments are being addressed. Two significant opportunities are in review, indicating a proactive approach to collaboration.

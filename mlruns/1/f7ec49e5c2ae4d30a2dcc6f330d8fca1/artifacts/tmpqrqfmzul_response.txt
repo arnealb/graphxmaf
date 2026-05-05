@@ -1,0 +1,22 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+In the event of a complete SmartSales platform downtime for Colruyt, here's what you need to know about notifying the appropriate contact at EASI:
+
+### Primary Point of Contact
+- **Name:** Dorian Feaux
+- **Title:** Sales Engineer
+- **Email:** d.feaux@easi.net
+
+### Recommended Timeframe for Notification
+- **Notify Dorian Feaux within 2 hours** of discovering the downtime, as per the internal reporting obligation outlined in EASI's Data Breach Procedure.
+
+### Summary of Notification Procedures
+- If the downtime involves data processed on behalf of a client (like Colruyt):
+  - **Notify the affected client within 24 hours.**
+- Should there be any potential risk to data subjects:
+  - Notify the **Belgian Data Protection Authority within 72 hours**.
+- For breaches that might pose high risks to individual rights, a direct communication to affected individuals is necessary.
+
+For more details, refer to the complete EASI Data Breach Procedure documentation.

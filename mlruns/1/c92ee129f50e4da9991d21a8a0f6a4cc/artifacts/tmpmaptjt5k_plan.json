@@ -1,0 +1,29 @@
+{
+  "query": "Prepare me for my next meeting. What do I have coming up and what do I know about the companies involved?",
+  "reasoning": "The user is asking for both upcoming meetings and details about the companies involved. I need to gather calendar events for upcoming meetings from graph and company information from both salesforce and smartsales for a comprehensive overview.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve upcoming calendar events to find the user's next meeting.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Lookup company details related to the contacts involved in the user's next meeting.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Retrieve information about the companies involved in the user's next meeting, including their physical presence and product catalog.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results of the upcoming meetings from step 1 with the detailed company information from steps 2 and 3 to prepare a comprehensive overview for the user."
+}

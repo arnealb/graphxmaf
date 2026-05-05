@@ -1,0 +1,33 @@
+Change Management Procedure
+EASI Group — Document owner: IT Manager (it@easi.net) — ITIL-aligned
+1. Scope
+This procedure governs all changes to production environments managed by EASI Group, whether they are EASI internal systems or systems EASI manages on behalf of clients. The platforms in scope include the SmartSales platform deployed at Colruyt Group (47 locations), Carrefour Belgium SA, and Delhaize Group; the In-Store Analytics Module at Carrefour Belgium SA (12 hypermarkets); the EDI Connector Pack at Delhaize Group AD-franchise stores; the Distribution Mapping platform at Anheuser-Busch InBev in Leuven; the GreenTech Solutions Sustainability Dashboard; and EASI’s internal IT infrastructure at Avenue Louise 65.
+2. Change types
+Three change types are recognised. Each follows a different approval path:
+Standard change — pre-approved, low-risk, repeatable changes that follow a documented procedure. Examples: adding a new SmartSales user for Colruyt, updating catalogue prices in SmartSales for Ferrero Benelux. No CAB review is required. The implementer logs the change.
+Normal change — a change that requires assessment and CAB approval. Examples: deploying a new SmartSales module version, modifying the Carrefour analytics data pipeline, or changing the configuration of the Delhaize EDI Connector. An RFC is required.
+Emergency change — a change required urgently to restore service or to prevent imminent impact. Examples: an emergency hotfix for the Colruyt POS integration issue (Case 00001021) or for the Delhaize EDI issue (Case 00001024). Verbal approval from the IT Manager (it@easi.net) and from Arne Albrecht as account owner is sufficient to proceed; a retroactive RFC is recorded in the change log within 24 hours.
+3. RFC process
+A Request for Change is submitted via servicedesk.easi.net under the category "Change Request". The RFC must include:
+A clear description of the proposed change.
+The business justification.
+The systems and clients affected.
+A risk assessment (Low / Medium / High).
+A rollback plan, which is mandatory for every change.
+The proposed implementation window and expected downtime.
+The requester’s name and contact.
+Arne Albrecht and Dorian Feaux typically submit RFCs for client-facing changes affecting their respective accounts; the IT team submits RFCs for changes to internal infrastructure.
+4. Change Advisory Board (CAB)
+The CAB meets every Thursday at 14:00 at EASI’s Avenue Louise 65 office; virtual attendance is supported. CAB members are: the IT Manager (chair), Arne Albrecht, Dorian Feaux, Nathalie Pieters, and a Finance representative. The quorum is 3 members including the chair. The CAB reviews all pending normal change RFCs, considers risk and impact, requests additional information where needed, and approves or rejects each RFC. Approved changes are scheduled for the next available implementation window.
+5. Implementation windows
+The standard implementation window is Saturday 22:00 to Sunday 06:00 Brussels time. A secondary window is available on Tuesday 02:00 to 04:00 for minor changes. Client-specific windows may apply: for example, Colruyt Group has requested that no changes be applied during the period from Friday 18:00 to Monday 08:00 during promotional campaign weeks; this constraint has been confirmed by procurement@colruyt.be and is enforced by the change scheduler. Emergency changes may be implemented outside windows with the approval of the CAB chair.
+6. Stakeholder communication
+For normal changes affecting client environments, the responsible EASI account manager notifies the relevant client contact at least 48 hours before the implementation window. Notifications include: the nature of the change, the expected downtime (if any), a rollback plan summary, the implementation window, and the contact for questions. Standard recipients are procurement@colruyt.be for Colruyt Group, ops@carrefour-be.eu for Carrefour Belgium SA, and procurement@delhaize.eu for Delhaize Group. For internal changes, communication is sent through the relevant Microsoft Teams channels.
+7. Implementation
+On the day of implementation, the implementer follows the approved change plan. Steps are recorded in the change ticket as they are executed. Tests are performed to validate the change. The implementer notifies the client and the EASI service desk when the change is complete. If any deviation from the plan occurs, it is documented immediately.
+8. Failed change and rollback
+If a change causes service degradation or fails post-implementation tests, the implementer initiates the rollback plan immediately. An incident is raised under the EASI Incident Management Procedure, with a severity reflecting the actual impact (S1 or S2 in most cases). A post-mortem is conducted within 5 working days; the root cause is fed back into the change risk assessment process to prevent repetition. Repeated failures from the same source trigger a problem record under Problem Management.
+9. Post-implementation review
+Each normal change is followed by a brief post-implementation review at the next CAB meeting. The review covers: was the change successful, were the planned tests sufficient, was the rollback plan ever exercised, and what improvements should be made. Approved standard change templates may be revised based on these reviews.
+10. Records and metrics
+All RFCs, approvals, and outcomes are stored in the change management system. Monthly metrics include the number of normal changes, the number of emergency changes, the percentage of changes successful at first attempt, and the percentage of changes communicated on time to clients. The metrics are reported to the COO and shared in the monthly client service report (e.g. for Colruyt under EASI-COL-SLA-2026-001).

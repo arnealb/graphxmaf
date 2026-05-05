@@ -1,0 +1,13 @@
+{
+  "query": "What fields can I sort SmartSales orders by?",
+  "reasoning": "This query is related to internal processes and requires document search capabilities, so I will route it to the graph agent.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find information about the fields available for sorting SmartSales orders.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the results from step 1 as the answer to the user's query."
+}

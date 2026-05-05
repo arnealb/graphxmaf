@@ -1,0 +1,23 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+### Financial Consequences for EASI if P1 Response SLA is Missed for Colruyt
+
+- **Service Credit:** If EASI fails to meet the response target for a P1 incident:
+  - A service credit of **10% of the monthly fee** for that month is applied.
+  - Multiple breaches in the same month may be aggregated.
+  - However, the total service credit per month is **capped at 30%** of the monthly fee.
+
+- **Application of Service Credits:** 
+  - Service credits are applied as a deduction on the next invoice.
+  - These credits are the **sole financial remedy** for missed support commitments under the SLA, with exceptions for cases of gross negligence or willful misconduct.
+
+- **Other Notes:**
+  - There are no specified financial consequences for Colruyt regarding missed P1 response SLAs in the provided context.
+
+**Sources:**
+- From incident_management_procedure_easi
+- From maintenance_contract_supplier1
+- From data_processing_agreement_colruyt
+- From sla_agreement_easi_colruyt

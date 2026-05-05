@@ -1,0 +1,13 @@
+{
+  "query": "Give me a summary of all activity related to my next calendar event.",
+  "reasoning": "The query requires gathering current calendar event details along with any relevant communication history. Therefore, both the graph agent is needed to access the calendar and communication information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the next calendar event details and any related emails or calendar events that involve the same participants.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Summarize the next calendar event details and related activity gathered from the previous step."
+}

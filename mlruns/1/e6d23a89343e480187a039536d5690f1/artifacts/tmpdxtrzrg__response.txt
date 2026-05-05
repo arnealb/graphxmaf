@@ -1,0 +1,30 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Based on the recent email senders and the active deals in your CRM, here are the findings:
+
+### Recent Email Senders
+- **Microsoft**
+  - Email: microsoft-noreply@microsoft.com
+  - Received: 3 May 2026
+- **Microsoft Security**
+  - Email: MSSecurity-noreply@microsoft.com
+  - Received: 2 May 2026
+- **Enterprise**
+  - Email: Enterprise@easigroupdemo.onmicrosoft.com
+  - Received: 30 April 2026
+- **Microsoft Power Automate**
+  - Email: flow-noreply@microsoft.com
+  - Received: 30 April 2026
+
+### Active Deals
+- **Deal: Prospection Haven**
+  - ID: 00606000018RlztAAC
+  - Stage: Prospection idea
+  - Account Name: Haven Enterprises
+  - Close Date: 31 December 2024
+
+### Conclusion
+- There are **no matched email senders** from your recent emails that have an active deal in the CRM. Specifically, the only active deal is associated with **Haven Enterprises**, which does not correspond to any of the recent email senders listed.

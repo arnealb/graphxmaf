@@ -1,0 +1,21 @@
+{
+  "query": "Which of my recent email senders also have an active deal with us?",
+  "reasoning": "The query requires first identifying the recent email senders, and then checking if any of those senders have an active deal in the CRM. Therefore, I will first retrieve the recent email senders from the graph agent and then check for active deals in Salesforce.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the list of recent email senders from your Outlook account.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Using the email addresses from step 1, check for any active deals associated with those contacts in Salesforce.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from step 1 and step 2 to identify which recent email senders have active deals."
+}

@@ -1,0 +1,29 @@
+{
+  "query": "Prepare me for my next meeting. What do I have coming up and what do I know about the companies involved?",
+  "reasoning": "The query involves retrieving scheduled meetings from the user's calendar and gathering relevant data about the companies involved from both Salesforce and SmartSales. This ensures a comprehensive overview of the user's upcoming commitments and the context for those meetings.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the upcoming calendar events for the user, focusing on meetings and their details.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Find all accounts and contacts related to the companies involved in the meetings retrieved from step 1. Return all relevant information about these accounts and contacts.",
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Search for locations and any other relevant physical presence information for the companies involved in the meetings from step 1.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the calendar event details from step 1 with the account and contact information from step 2 and the location data from step 3 to provide a comprehensive overview for the user's next meeting."
+}

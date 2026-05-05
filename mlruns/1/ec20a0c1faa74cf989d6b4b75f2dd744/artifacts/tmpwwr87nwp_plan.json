@@ -1,0 +1,19 @@
+{
+  "query": "Give me a full picture of our commercial activity in Brussels.",
+  "reasoning": "The query asks for a comprehensive overview of commercial activities, which implies using all available agents to gather relevant data on accounts, contacts, opportunities, and locations in that area.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch all accounts, contacts, opportunities, and cases related to our commercial activity in Brussels.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Gather information on locations related to our commercial activity in Brussels, including store sites or physical presence.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from both Salesforce and Smartsales to create a comprehensive overview of commercial activity in Brussels."
+}

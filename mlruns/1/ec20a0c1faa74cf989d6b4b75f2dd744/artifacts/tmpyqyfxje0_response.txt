@@ -1,0 +1,67 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Here is a comprehensive overview of our commercial activity in Brussels, based on the results from Salesforce and Smartsales:
+
+### Key Accounts in Brussels (From Salesforce)
+- **Delhaize Group**
+  - Industry: Retail
+  - Website: [delhaize.be](https://www.delhaize.be)
+
+- **Brussels Retail Partners**
+  - Industry: Retail
+
+- **Ferrero Benelux**
+  - Industry: Food & Beverage
+
+- **Supplier1**
+  - No additional information provided.
+
+- **Salesforce.com**
+  - Industry: Technology
+  - Website: [salesforce.com](http://www.salesforce.com)
+
+- **General Utilities**
+  - Industry: Communications
+  - Website: [generalutilities.net](http://www.generalutilities.net)
+
+- **Pairi Daiza**
+  - Industry: Manufacturing
+
+### Contact Information (From Salesforce)
+- **Supplier1 Contact**
+  - Name: supplier1_contact lastname
+  - Account: Supplier1
+
+### Locations of Commercial Activity (From Smartsales)
+- **AD Delhaize - Forest**
+  - Address: Chaussée de Neerstalle 800, Brussels, 1190
+
+- **CRF - Anderlecht**
+  - Address: Bergensesteenweg 1424, Brussels, 1070
+
+- **EASI - Brussels**
+  - Address: Avenue Louise 65, Brussels, 1050
+
+- **Ferrero Benelux - Brussels (Nutella)**
+  - Address: Bld de la Woluwe 42, Brussels, 1200
+
+- **Global Media**
+  - Address: Mediastraat 10, Brussels, 1000
+
+- **Test Location**
+  - Address: Teststraat 1, Brussels, 1000
+
+- **Supplier1 Location**
+  - Address: Rue du Commerce 1, Brussels, 1000
+
+- **Supplier1 - Brussels HQ**
+  - Address: Rue de la Loi 42, Brussels, 1000
+
+### Summary
+- Various key accounts in the retail and food & beverage sectors are established in Brussels, with significant locations identified for operational activity.
+- Salesforce data shows multiple key stakeholders, with a notable focus on retail entities.
+- Smartsales provides specific addresses that highlight active commercial locations associated with our accounts.
+
+This overview encapsulates the current state of our commercial activity in Brussels, with ample information on key players and locations. 

@@ -1,0 +1,74 @@
+{
+  "plan": {
+    "latency_s": 4.351,
+    "steps": 2,
+    "input_tokens": 1553,
+    "output_tokens": 203,
+    "total_tokens": 1756
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "salesforce",
+      "latency_s": 23.714,
+      "llm_turns": 4,
+      "n_tool_calls": 17,
+      "tool_calls": [
+        "get_cases",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_accounts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts",
+        "find_contacts"
+      ],
+      "input_tokens": 8637,
+      "output_tokens": 1389,
+      "total_tokens": 10026
+    },
+    {
+      "step_id": 2,
+      "agent": "graph",
+      "latency_s": 33.655,
+      "llm_turns": 2,
+      "n_tool_calls": 16,
+      "tool_calls": [
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_email",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar",
+        "search_calendar"
+      ],
+      "input_tokens": 7256,
+      "output_tokens": 1380,
+      "total_tokens": 8636
+    }
+  ],
+  "synthesis": {
+    "latency_s": 12.101,
+    "input_tokens": 3174,
+    "output_tokens": 993,
+    "total_tokens": 4167
+  }
+}

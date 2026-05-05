@@ -1,0 +1,37 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is a comprehensive overview of all information related to 'nutella' across our systems:
+
+### From Email Search:
+- **Subject**: Ferrero Benelux — Nutella spring campaign inquiry
+- **Sender**: Ferrero Benelux Marketing (marketing@ferrero.be)
+- **Received on**: 28 April 2026
+- **Link to Email**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7rAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### From Salesforce:
+- **Opportunity**: Ferrero — Nutella In-Store Display Campaign
+  - **Stage**: Prospecting
+  - **Amount**: $30,000
+  - **Close Date**: 1 October 2026
+  - **Account Name**: Ferrero Benelux
+
+### From SmartSales:
+- **Location**: Ferrero Benelux - Brussels (Nutella)
+  - **Address**: Bld de la Woluwe 42, Brussels, 1200, Belgium
+  - **Latitude**: 50.8388442
+  - **Longitude**: 4.434813
+  - **Creation Date**: 28 April 2026
+  - **Update Date**: 28 April 2026
+
+- **Catalog Items**: No relevant information returned related to 'nutella'.
+
+- **Other Searches**: Calendar and documents related to 'nutella' returned no useful results.
+
+### Summary:
+- Key activities and inquiries regarding Nutella are ongoing, especially in marketing and sales efforts.
+- Locations related to Ferrero and Nutella have been identified, particularly in Brussels.
+- Further exploration of catalog items yielded no relevant findings.
+
+If you need more details or further exploration of specific aspects, please let me know!

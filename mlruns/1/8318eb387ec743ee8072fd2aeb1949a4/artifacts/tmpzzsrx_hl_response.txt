@@ -1,0 +1,90 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+### Contacts with 'Manager' in Their Title from Salesforce:
+
+- **Marc Supplier**
+  - **Title:** Account Manager
+  - **Email:** marc.supplier@supplier1.be
+  - **Account:** supplier1
+
+- **Jeff Blay**
+  - **Title:** Enterprise Sales Manager
+  - **Email:** jblay@example.com
+  - **Account:** Towson Inc.
+
+- **Mark Kingston**
+  - **Title:** Project Manager
+  - **Email:** mkingston@example.com
+  - **Account:** Omega SA-NV
+
+- **Gabriel Silva**
+  - **Title:** Sales Manager
+  - **Email:** rlloyd@example.com
+  - **Account:** Opportunity Resources Inc
+
+- **Danielle Hauck**
+  - **Title:** Sales Manager
+  - **Email:** dhauck@example.com
+  - **Account:** Vand Enterprises Inc.
+
+- **Derek Rose**
+  - **Title:** Credit Manager
+  - **Email:** drose@example.com
+  - **Account:** UlyssesNet
+
+- **Jon Baker**
+  - **Title:** Sales Manager
+  - **Email:** jon.baker@nivea.com
+  - **Account:** Nivea
+
+- **Wes Chopra**
+  - **Title:** Manager, Information Technology
+  - **Email:** wchopra@example.com
+  - **Account:** Green Fields Media
+
+- **Leo Novak**
+  - **Title:** Marketing Manager
+  - **Email:** lnovak@example.com
+  - **Account:** Universal Containers
+
+- **Ron Adkins**
+  - **Title:** General Manager
+  - **Email:** radkins@example.com
+  - **Account:** Valley Supply Inc.
+
+- **Larry Kuchenreuther**
+  - **Title:** Account Manager
+  - **Email:** lkuchenreuther@example.com
+  - **Account:** Missoula & Sons Inc.
+
+- **Keith Lopez**
+  - **Title:** Marketing Manager
+  - **Email:** klopez@example.com
+  - **Account:** Advanced Communications
+
+- **Bill Martin**
+  - **Title:** Operations Manager
+  - **Email:** bmartin@example.com
+  - **Account:** Datanet Inc.
+
+- **Laura Rossi**
+  - **Title:** Manager, Sales Operations
+  - **Email:** lrossi@example.com
+  - **Account:** Permadyne GmbH LTD
+
+- **David Homme**
+  - **Title:** Product Marketing Manager
+  - **Email:** dhomme@example.com
+  - **Account:** Datanet Inc.
+
+- **Greg Walker**
+  - **Title:** Asset Manager
+  - **Email:** gwalker@example.com
+  - **Account:** Wellspring Inc.
+
+- **Jon Amos**
+  - **Title:** Sales Manager
+  - **Email:** info@salesforce.com
+  - **Account:** Global Media

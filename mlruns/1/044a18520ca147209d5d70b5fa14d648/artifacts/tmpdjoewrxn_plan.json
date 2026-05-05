@@ -1,0 +1,13 @@
+{
+  "query": "What happens to my unused vacation days at the end of the year?",
+  "reasoning": "The query pertains to internal company policies regarding vacation days, which requires documentation about HR policies.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the company policy regarding unused vacation days at the end of the year.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the findings of the company policy about unused vacation days."
+}

@@ -1,0 +1,14 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Based on EASI's early-departure repayment policy for funded training:
+
+- You completed a EUR 900 training in January.
+- You plan to leave in September, which is 8 months after the course completion.
+
+**Repayment Amount:**
+- Since your departure is between 6 and 12 months after completing the training, you will need to repay **50% of the training cost**.
+- Therefore, the amount you need to repay is **EUR 450**.
+
+This amount will be offset against your final pay if applicable.

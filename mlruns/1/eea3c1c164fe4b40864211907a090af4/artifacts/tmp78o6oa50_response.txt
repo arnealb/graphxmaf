@@ -1,0 +1,37 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are your 5 most recent emails:
+
+1. **Subject:** Een abonnement kopen om uw product te blijven gebruiken  
+   **Sender:** Microsoft  
+   **Sender Email:** microsoft-noreply@microsoft.com  
+   **Received:** 3 May 2026  
+   **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAOC9kJ6AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+2. **Subject:** Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)  
+   **Sender:** Microsoft Security  
+   **Sender Email:** MSSecurity-noreply@microsoft.com  
+   **Received:** 2 May 2026  
+   **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN%2F0znaAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+3. **Subject:** You've joined the Enterprise group  
+   **Sender:** Enterprise  
+   **Sender Email:** Enterprise@easigroupdemo.onmicrosoft.com  
+   **Received:** 30 April 2026  
+   **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN70MDJAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+4. **Subject:** title test  
+   **Sender:** Microsoft Power Automate  
+   **Sender Email:** flow-noreply@microsoft.com  
+   **Received:** 30 April 2026  
+   **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN70MDIAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+5. **Subject:** test  
+   **Sender:** Microsoft Power Automate  
+   **Sender Email:** flow-noreply@microsoft.com  
+   **Received:** 30 April 2026  
+   **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAN70MDHAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+Feel free to click on the links to view the emails in your inbox.

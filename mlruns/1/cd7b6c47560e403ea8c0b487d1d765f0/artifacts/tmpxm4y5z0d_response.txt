@@ -1,0 +1,36 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce)...
+️Executing (graph, smartsales)...
+Synthesizing...
+Here is a comprehensive overview of your top open deal based on the available data:
+
+### Top Open Deal
+- **Deal Name:** Anheuser-Busch InBev — Distribution Network Mapping
+- **Stage:** Qualification
+- **Amount:** $520,000
+- **Close Date:** 15 September 2026
+- **Account Name:** Anheuser-Busch InBev
+- **Industry:** Food & Beverage
+- **Website:** [Anheuser-Busch InBev](https://www.ab-inbev.com)
+
+### Communication and Meetings
+- **Upcoming Meeting:**
+  - **Subject:** Colruyt Group — SmartSales Rollout Kickoff
+  - **Date:** 15 May 2026, from 12:00 PM to 1:30 PM
+  - **Organizer:** SmartAdmin
+  - **Web Link:** [Join Meeting](https://outlook.office365.com/owa/?itemid=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAENAAA692EWSiRLR6aYejiouW3UAAN1KrLeAAA%3D&exvsurl=1&path=/calendar/item)
+
+### Documentation 
+- **Available Documents:**
+  - Contextual references to Anheuser-Busch InBev and Colruyt Group are noted in various documents, but specific details were not provided.
+  - Relevant documents include:
+    - Business Continuity Plan
+    - Company Car Policy
+    - Data Processing Agreement (for Colruyt Group)
+    - SLA Agreement
+
+### Additional Information
+- **No specific results were found from SmartSales regarding this deal.**
+
+This summary encapsulates the key details of your top open deal, along with relevant communications and documents. If you need more specific information or further details, please let me know!

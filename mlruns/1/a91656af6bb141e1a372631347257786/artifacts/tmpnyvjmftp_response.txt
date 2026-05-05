@@ -1,0 +1,67 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+### Emails Received in the Past 7 Days
+
+Here are the email senders from the past week along with their respective email domains:
+
+- **Arne Albrecht**
+  - Email: albrecht.arne@gmail.com
+  - Received: 27 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7mAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Marc Supplier**
+  - Email: marc.supplier@supplier1.be
+  - Received: 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7nAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Marc Supplier**
+  - Email: marc.supplier@supplier1.be
+  - Received: 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7oAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Colruyt Group Procurement**
+  - Email: procurement@colruyt.be
+  - Received: 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7pAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **GreenTech Solutions**
+  - Email: info@greentechsolutions.be
+  - Received: 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7qAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Ferrero Benelux Marketing**
+  - Email: marketing@ferrero.be
+  - Received: 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7rAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Dorian Féaux**
+  - Email: d.feaux@easi.net
+  - Received: 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7sAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **SmartAdmin**
+  - Email: SmartAdmin@easigroupdemo.onmicrosoft.com
+  - Received: 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7tAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Carrefour BE Operations**
+  - Email: ops@carrefour-be.eu
+  - Received: 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7uAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **AD Delhaize IT**
+  - Email: it@delhaize.eu
+  - Received: 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7wAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+- **Proximus Business**
+  - Email: info@proximus.be
+  - Received: 28 April 2026
+  - [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7zAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### Salesforce Contacts
+
+There were no matching Salesforce contacts found for any of the email domains listed above. Therefore, there is no additional information to provide regarding contacts in Salesforce related to the email senders.

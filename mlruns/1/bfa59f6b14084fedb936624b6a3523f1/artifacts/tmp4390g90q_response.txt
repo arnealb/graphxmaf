@@ -1,0 +1,45 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the Salesforce accounts located in Belgium along with their billing addresses:
+
+- **Anheuser-Busch InBev**
+  - Billing City: Leuven
+
+- **Delhaize Group**
+  - Billing City: Brussels
+
+- **Carrefour Belgium SA**
+  - Billing City: Evere
+
+- **Brussels Retail Partners**
+  - Billing Street: Grand Place 1
+  - Billing City: Brussels
+  - Billing Postal Code: 1000
+
+- **Ferrero Benelux**
+  - Billing City: Brussels
+
+- **GreenTech Solutions**
+  - Billing City: Ghent
+
+- **Colruyt Group**
+  - Billing City: Halle
+
+- **supplier1**
+  - Billing City: Brussels
+
+- **cityaccount**
+  - Billing City: Leuven
+  - Website: www.google.com
+
+- **Omega SA-NV**
+  - Billing Street: 132 Avenue Louise
+  - Billing City: Bruxelles
+  - Billing Postal Code: 1050
+
+- **Easi Be**
+  - Billing Street: 12 Avenue Robert Schuman
+  - Billing City: Nivelles
+  - Billing Postal Code: 1400

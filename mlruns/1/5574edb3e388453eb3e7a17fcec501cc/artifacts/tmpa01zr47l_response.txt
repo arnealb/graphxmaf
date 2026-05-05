@@ -1,0 +1,51 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (smartsales)...
+️Executing (smartsales)...
+Synthesizing...
+### SmartSales Locations
+
+1. **AACO DAVIDSON**
+   - **Address**: Havenkant 6, Leuven, 3000, Belgium
+   - **UID**: 77538c4e-2135-11f1-84f0-005056010707
+   - **Code**: 20260316134107
+
+2. **Stream Software**
+   - **Address**: Potvlietlaan 4, Antwerpen, 2600
+   - **UID**: e6d82255-2861-11f1-a2fe-005056010707
+   - **Code**: 20260325164646
+
+3. **Michelles Brasserie**
+   - **Address**: Ingelmunstersestraat 46, Izegem, 8870, Belgium
+   - **UID**: e1c00878-3e4e-11f1-a803-005056010707
+   - **Code**: 20260422152305
+
+4. **Medimarket Zaventem**
+   - **Address**: Zaventem
+   - **UID**: db9b62b8-4220-11f1-a803-005056010707
+   - **Code**: 20260427120644
+
+5. **AB InBev - Leuven**
+   - **Address**: Vaartstraat 94, Leuven, 3000, Belgium
+   - **UID**: 2f355296-4310-11f1-a803-005056010707
+   - **Code**: ABI-LEU-001
+
+...and other locations (total of 26).
+
+### Details of the First Location: AACO DAVIDSON
+
+- **Name**: AACO DAVIDSON
+- **Address**: Havenkant 6, Leuven, 3000, Belgium
+- **UID**: 77538c4e-2135-11f1-84f0-005056010707
+- **Code**: 20260316134107
+- **Creation Date**: 15 March 2026
+- **Update Date**: 06 April 2026
+- **Email**: info@aacodavidson.com
+- **Latitude**: 50.8873413
+- **Longitude**: 4.7005038
+- **Deleted**: No
+- **Suppliers**: None
+- **Last Visit Date**: 05 April 2026
+- **Extranet Access**: No
+
+The information captures the locations alongside the detailed attributes of the first entry from the SmartSales data.

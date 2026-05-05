@@ -1,0 +1,22 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the notification steps and deadlines for addressing a data breach involving customer data at EASI:
+
+1. **Internal Reporting Obligation**:
+   - Employees must report any suspected or discovered personal data breach within **2 hours** to the EASI Data Protection Officer (DPO) at privacy@easi.net or dpo@easi.net.
+
+2. **Initial Assessment**:
+   - The DPO and the IT Security team will conduct an initial assessment within **4 hours** of the internal report to evaluate the nature and impact of the breach.
+
+3. **Notification to the Belgian Data Protection Authority (DPA)**:
+   - If the assessment indicates a risk to data subjects, EASI must inform the Belgian DPA within **72 hours** of becoming aware of the breach.
+
+4. **Notification to Data Subjects**:
+   - If the breach poses a high risk to the rights and freedoms of data subjects, EASI is required to communicate the breach directly to the affected individuals.
+
+5. **Notification to Client Controllers**:
+   - If the breach involves data processed on behalf of a client, EASI must notify the affected client within **24 hours** of identifying the breach.
+
+These steps are essential for ensuring compliance with regulatory requirements and timely communication related to data breaches.

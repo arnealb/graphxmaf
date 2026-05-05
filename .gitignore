@@ -5,3 +5,5 @@
 *.pem
 *.crt
 *.key
+handoff
+*.db

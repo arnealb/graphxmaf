@@ -1,0 +1,21 @@
+{
+  "query": "Which companies am I meeting this week that have no active deal with us?",
+  "reasoning": "The query requires checking calendar events for meetings scheduled this week and cross-referencing those companies with the CRM to identify which of them have no active deals.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the calendar events scheduled for this week and extract the associated companies from those events.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "For the companies retrieved in step 1, check the CRM to identify which companies have no active deals with us.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results of step 1 and step 2 to list the companies you are meeting this week that have no active deal."
+}

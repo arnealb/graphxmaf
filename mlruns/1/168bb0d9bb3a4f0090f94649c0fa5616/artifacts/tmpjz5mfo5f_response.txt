@@ -1,0 +1,45 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+### Overview of Your Identity in Microsoft 365
+
+#### Contacts
+- **John Lastname**
+  - Email: john.lastname@globalmedia.com
+  - Phone: 0326243426
+
+- **ur dog**
+  - Email: ur.dog@doghouse.com
+  - Phone: 0483922818
+
+- **test**
+  - Email: test.test@gmail.com
+  - Phone: Not provided
+
+- **Arne Albrecht**
+  - Email: a.albrecht@easi.net
+  - Phone: Not provided
+
+#### Calendar Events
+- **Weekly sync — Dorian Feaux**
+  - Date: 6 May 2026
+  - Time: 07:00 - 07:30
+
+- **Sprint review — Arne Albrecht**
+  - Date: 8 May 2026
+  - Time: 12:00 - 13:00
+
+- **supplier1 — Q2 Delivery Review**
+  - Date: 10 May 2026
+  - Time: 08:00 - 09:00
+
+- **GreenTech Solutions — Technical Qualification Call**
+  - Date: 12 May 2026
+  - Time: 09:00 - 10:00
+
+- **Colruyt Group — SmartSales Rollout Kickoff**
+  - Date: 15 May 2026
+  - Time: 12:00 - 13:30
+
+This overview provides a snapshot of your personal and professional connections as well as upcoming commitments within Microsoft 365.

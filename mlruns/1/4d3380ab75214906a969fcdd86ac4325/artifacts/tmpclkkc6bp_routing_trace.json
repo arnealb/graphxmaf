@@ -1,0 +1,31 @@
+{
+  "user_query": "List recent SmartSales orders.",
+  "plan": {
+    "query": "List recent SmartSales orders.",
+    "reasoning": "The user is asking for a live data query related to SmartSales, which requires the smartsales agent to retrieve the information.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Fetch the most recent SmartSales orders.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the results of the recent SmartSales orders retrieved from step 1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Fetch the most recent SmartSales orders.",
+      "started_at": "2026-05-04T19:59:30.812071+00:00",
+      "ended_at": "2026-05-04T19:59:50.778407+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_orders"
+      ]
+    }
+  ]
+}

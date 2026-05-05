@@ -1,0 +1,117 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the Salesforce opportunities with an amount greater than 10,000, including their probabilities:
+
+- **Ferrero — Nutella In-Store Display Campaign**
+  - **ID:** 006KI000005bHlBYAU
+  - **Amount:** 30,000
+  - **Probability:** 10%
+  - **Stage:** Prospecting
+  - **Close Date:** 1 October 2026
+  - **Account Name:** Ferrero Benelux
+
+- **Colruyt Group — SmartSales Rollout 2026**
+  - **ID:** 006KI000005bHl1YAE
+  - **Amount:** 220,000
+  - **Probability:** 75%
+  - **Stage:** Proposal/Price Quote
+  - **Close Date:** 30 September 2026
+  - **Account Name:** Colruyt Group
+
+- **Anheuser-Busch InBev — Distribution Network Mapping**
+  - **ID:** 006KI000005bIGNYA2
+  - **Amount:** 520,000
+  - **Probability:** 10%
+  - **Stage:** Qualification
+  - **Close Date:** 15 September 2026
+  - **Account Name:** Anheuser-Busch InBev
+
+- **Delhaize Group — Supply Chain Optimisation**
+  - **ID:** 006KI000005bIGIYA2
+  - **Amount:** 310,000
+  - **Probability:** 90%
+  - **Stage:** Negotiation/Review
+  - **Close Date:** 31 August 2026
+  - **Account Name:** Delhaize Group
+
+- **Carrefour Belgium SA — In-Store Analytics Pilot**
+  - **ID:** 006KI000005bIGDYA2
+  - **Amount:** 175,000
+  - **Probability:** 75%
+  - **Stage:** Proposal/Price Quote
+  - **Close Date:** 31 July 2026
+  - **Account Name:** Carrefour Belgium SA
+
+- **supplier1 — Q2 Delivery Contract**
+  - **ID:** 006KI000005bHkXYAU
+  - **Amount:** 85,000
+  - **Probability:** 90%
+  - **Stage:** Negotiation/Review
+  - **Close Date:** 30 June 2026
+  - **Account Name:** supplier1
+
+- **IT Parc replacement**
+  - **ID:** 006J6000007lXp3IAE
+  - **Amount:** 19,625
+  - **Probability:** 25%
+  - **Stage:** Offer sent
+  - **Close Date:** 30 September 2025
+  - **Account Name:** Advanced Communications
+
+- **Project Smile V2**
+  - **ID:** 006J6000007ZmITIA0
+  - **Amount:** 45,000
+  - **Probability:** 50%
+  - **Stage:** Value Proposition
+  - **Close Date:** 21 August 2025
+  - **Account Name:** Omega SA-NV
+
+- **Renewal @ Assurity**
+  - **ID:** 006J6000004i8BmIAI
+  - **Amount:** 35,000
+  - **Probability:** 90%
+  - **Stage:** Negotiation/Review
+  - **Close Date:** 20 February 2025
+  - **Account Name:** Assurity Corporation
+
+- **New project @ Anaco**
+  - **ID:** 006J6000004i8BnIAI
+  - **Amount:** 25,000
+  - **Probability:** 90%
+  - **Stage:** Negotiation/Review
+  - **Close Date:** 30 January 2025
+  - **Account Name:** Anaco Limited
+
+- **End-of-Year Summit**
+  - **ID:** 006J6000004i8CVIAY
+  - **Amount:** 25,000
+  - **Probability:** 25%
+  - **Stage:** Offer sent
+  - **Close Date:** 24 January 2025
+  - **Account Name:** Tech Labs
+
+- **salesforce.com - 2,000 Widgets**
+  - **ID:** 006060000193aYmAAI
+  - **Amount:** 20,000
+  - **Probability:** 25%
+  - **Stage:** Offer sent
+  - **Close Date:** 13 June 2021
+  - **Account Name:** salesforce.com
+
+- **salesforce.com - 1,000 Widgets**
+  - **ID:** 006060000193aYlAAI
+  - **Amount:** 100,000
+  - **Probability:** 25%
+  - **Stage:** Approved
+  - **Close Date:** 15 April 2021
+  - **Account Name:** salesforce.com
+
+- **salesforce.com - 500 Widgets**
+  - **ID:** 006060000193aYgAAI
+  - **Amount:** 50,000
+  - **Probability:** 25%
+  - **Stage:** Offer sent
+  - **Close Date:** 13 March 2021
+  - **Account Name:** Global Media

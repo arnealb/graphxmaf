@@ -1,0 +1,20 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+In the event of a complete disruption of the SmartSales platform for Colruyt, follow this notification protocol:
+
+### First Notification
+- **Who to Notify First**: 
+  - Arne Albrecht (a.albrecht@easi.net)
+  - Dorian Feaux (d.feaux@easi.net)
+  - EASI Delivery Manager
+
+### Timeframe for Notification
+- **Critical Incidents (S1)**: Immediate notification 
+- **High Incidents (S2)**: Notify Arne Albrecht within 30 minutes
+
+### Escalation
+- If the incident is not resolved within 2 hours, the EASI Chief Operating Officer will be notified.
+
+This process is designed to ensure effective communication and rapid response during critical incidents.

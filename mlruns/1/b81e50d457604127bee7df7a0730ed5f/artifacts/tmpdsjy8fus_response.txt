@@ -1,0 +1,56 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+### Overview of Upcoming Meetings, Related Opportunities, and Locations
+
+#### Upcoming Meetings (From Microsoft 365)
+1. **Weekly sync — Dorian Feaux**
+   - **Date & Time:** 6 May 2026, 07:00 - 07:30
+   - **Organizer:** SmartAdmin
+  
+2. **Sprint review — Arne Albrecht**
+   - **Date & Time:** 8 May 2026, 12:00 - 13:00
+   - **Organizer:** SmartAdmin
+  
+3. **supplier1 — Q2 Delivery Review**
+   - **Date & Time:** 10 May 2026, 08:00 - 09:00
+   - **Organizer:** SmartAdmin
+  
+4. **GreenTech Solutions — Technical Qualification Call**
+   - **Date & Time:** 12 May 2026, 09:00 - 10:00
+   - **Organizer:** SmartAdmin
+  
+5. **Colruyt Group — SmartSales Rollout Kickoff**
+   - **Date & Time:** 15 May 2026, 12:00 - 13:30
+   - **Organizer:** SmartAdmin
+
+#### Related Salesforce Opportunities (From Salesforce)
+1. **supplier1 — Q2 Delivery Contract**
+   - **Stage:** Negotiation/Review
+   - **Amount:** $85,000
+   - **Close Date:** 30 June 2026
+   - **Account Name:** supplier1
+  
+2. **supp_opportyunity**
+   - **Stage:** On-going Approval
+   - **Close Date:** 8 May 2026
+   - **Account Name:** supplier1
+  
+3. **GreenTech Solutions — Sustainability Dashboard**
+   - **Stage:** Qualification
+   - **Amount:** $45,000
+   - **Close Date:** 15 August 2026
+   - **Account Name:** GreenTech Solutions
+  
+4. **Colruyt Group — SmartSales Rollout 2026**
+   - **Stage:** Proposal/Price Quote
+   - **Amount:** $220,000
+   - **Close Date:** 30 September 2026
+   - **Account Name:** Colruyt Group
+
+#### SmartSales Locations
+- No relevant locations were found for the companies involved (From SmartSales).
+
+This summary outlines the scheduled meetings along with their associated Salesforce opportunities while indicating that no location data is available.

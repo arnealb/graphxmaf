@@ -1,0 +1,13 @@
+{
+  "query": "Show me Salesforce cases with their related account names.",
+  "reasoning": "The task requires consolidated information from Salesforce about cases and their associated account names. A single step is sufficient since the needed data can be retrieved together.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch Salesforce cases along with their related account names.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the results from the Salesforce cases along with account names in a coherent format."
+}

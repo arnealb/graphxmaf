@@ -1,0 +1,47 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Here is an overview of the individuals you have meetings with this week, including their roles and relevant contact details:
+
+### 1. Dorian Feaux
+- **Meeting Details**: 
+  - **Subject**: Weekly sync
+  - **Date**: 6 May 2026
+  - **Time**: 07:00 AM - 07:30 AM
+- **Profile**:
+  - **Title**: Sales Engineer
+  - **Email**: d.feaux@easi.net
+  - **Account Name**: EASI
+
+### 2. Arne Albrecht
+- **Meeting Details**:
+  - **Subject**: Sprint review
+  - **Date**: 8 May 2026
+  - **Time**: 12:00 PM - 01:00 PM
+- **Profile**:
+  - **Title**: Business Analyst
+  - **Email**: a.albrecht@easi.net
+  - **Account Name**: EASI
+- **Location**:
+  - **Address**: 
+    - Street: Lippenslaan 347
+    - City: Knokke
+    - Zip: 8300
+    - Country: Belgium
+
+### 3. Supplier Meeting
+- **Meeting Details**:
+  - **Subject**: supplier1 — Q2 Delivery Review
+  - **Date**: 10 May 2026
+  - **Time**: 08:00 AM - 09:00 AM
+- **Supplier Profile**:
+  - **Name**: supplier1
+  - **Address**:
+    - Street: Rue du Commerce 1
+    - City: Brussels
+    - Zip: 1000
+    - Country: Belgium
+
+This summary provides essential information about the attendees and their scheduled meetings for the week.

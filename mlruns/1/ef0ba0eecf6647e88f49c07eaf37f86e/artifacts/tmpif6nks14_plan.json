@@ -1,0 +1,13 @@
+{
+  "query": "Can I work from home during my probation period at EASI?",
+  "reasoning": "The user is asking about internal company policies regarding working from home while on probation. Thus, the graph agent is needed to look up the relevant policy documents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the company's policy on working from home during probation periods.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Extract the information regarding the work-from-home policy during probation from the document returned by the graph agent."
+}

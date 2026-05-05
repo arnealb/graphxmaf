@@ -1,0 +1,77 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce)...
+️Executing (graph, smartsales)...
+Synthesizing...
+Here is an overview of the companies associated with your open support cases, including details from various sources:
+
+### Companies and Cases
+1. **Delhaize Group**
+   - **Case Number:** 00001023
+   - **Subject:** EDI connection issue
+   - **Status:** Working
+   - **Created Date:** 28 April 2026
+   - **Additional Information:** Involved in an EDI Connector Pack and Supply Chain Optimization engagement, with a contract value of EUR 310,000.
+   - **Source:** From Salesforce, Graph
+
+2. **Carrefour Belgium SA**
+   - **Case Number:** 00001022
+   - **Subject:** POS integration delay
+   - **Status:** New
+   - **Priority:** High
+   - **Created Date:** 28 April 2026
+   - **Location:** Bergensesteenweg 1424, 1070 Brussels (Anderlecht)
+   - **Source:** From Salesforce, Graph
+
+3. **Colruyt Group**
+   - **Case Number:** 00001021
+   - **Subject:** Integration issue with POS system
+   - **Status:** New
+   - **Created Date:** 28 April 2026
+   - **Additional Information:** Mentioned as a client in relevant agreements.
+   - **Source:** From Salesforce, Graph
+
+4. **supplier1**
+   - **Case Number:** 00001020
+   - **Subject:** Delayed shipment — supplier1 April batch
+   - **Status:** Working
+   - **Created Date:** 28 April 2026
+   - **Location:** Rue du Commerce 1, Brussels, 1000, Belgium
+   - **Additional Information:** Involved in a maintenance and support contract with EASI Group, responsible for preventive and corrective maintenance.
+   - **Source:** From Salesforce, Graph, SmartSales
+
+5. **Easi Be**
+   - **Case Number:** 00001018 and 00001017
+   - **Subject:** Verification status case and Test
+   - **Status:** In progress and New respectively
+   - **Created Date:** 6 March 2025
+   - **Additional Information:** No specific details available.
+   - **Source:** From Salesforce, Graph
+
+6. **Pairi Daiza**
+   - **Case Numbers:** 00001006, 00001005, and 00001001
+   - **Subjects:** Issue with order, Produits, and wrong size widgets.
+   - **Status:** New and Waiting for Customer
+   - **Created Dates:** 18 March 2024, 13 March 2024, and 29 June 2023 respectively
+   - **Additional Information:** No specific details available.
+   - **Source:** From Salesforce, Graph
+
+7. **Omega SA-NV**
+   - **Case Number:** 00001003
+   - **Subject:** Delivery issues with order #544
+   - **Status:** New
+   - **Created Date:** 31 July 2023
+   - **Additional Information:** No specific details available.
+   - **Source:** From Salesforce, Graph
+
+8. **Global Media**
+   - **Case Number:** 00001000
+   - **Subject:** Widgets not delivered.
+   - **Status:** Escalated
+   - **Created Date:** 29 June 2023
+   - **Location:** Mediastraat 10, Brussels, 1000, Belgium
+   - **Additional Information:** No specific details available.
+   - **Source:** From Salesforce, Graph, SmartSales
+
+### Summary
+You have active support cases involving several companies, each with specific statuses and subjects. Notable information regarding contracts, locations, and general company engagements has been highlighted where available. If you need further details on any specific case or company, please let me know!

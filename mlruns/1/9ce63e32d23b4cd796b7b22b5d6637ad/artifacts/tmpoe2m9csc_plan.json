@@ -1,0 +1,21 @@
+{
+  "query": "Read the most recently modified OneDrive file and check if any company names in it are Salesforce accounts.",
+  "reasoning": "The query involves accessing a OneDrive file for information and then verifying if any company names found in that file correspond to Salesforce accounts. Hence, it requires the graph agent for the OneDrive file and the Salesforce agent to check the accounts.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Find the most recently modified OneDrive file and extract its content.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Using the company names extracted from step 1 (if any), check if they exist as Salesforce accounts. If step 1 returned no names, state that and skip the lookup.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from step 1 and step 2 to present an overview of the OneDrive file content and whether any companies mentioned are Salesforce accounts."
+}

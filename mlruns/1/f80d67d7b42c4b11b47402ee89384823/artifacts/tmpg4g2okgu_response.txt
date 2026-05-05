@@ -1,0 +1,21 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce, graph)...
+Synthesizing...
+Based on the analysis of the results from both datasets, the following companies appear in both the CRM (Salesforce) and the email history (Graph):
+
+### Common Companies:
+
+- **Anheuser-Busch InBev**
+  - From Salesforce: `Anheuser-Busch InBev`
+  - From Graph: `AB InBev Sales`
+  
+- **Delhaize Group**
+  - From Salesforce: `Delhaize Group`
+  - From Graph: `Delhaize Procurement` and `AD Delhaize IT`
+  
+- **Carrefour Belgium SA**
+  - From Salesforce: `Carrefour Belgium SA`
+  - From Graph: `Carrefour BE Operations`
+
+These companies are confirmed to have entries in both the CRM and email history datasets. Other companies from Salesforce did not match any company names from Graph.

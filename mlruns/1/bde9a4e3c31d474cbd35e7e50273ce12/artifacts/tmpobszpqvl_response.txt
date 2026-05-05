@@ -1,0 +1,22 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Here’s the list of companies you are meeting this week that have no active deal with us:
+
+### Meetings Scheduled This Week:
+1. **supplier1** - Q2 Delivery Review
+   - **Status**: Has active deals
+2. **GreenTech Solutions** - Technical Qualification Call
+   - **Status**: Has active deal (Sustainability Dashboard)
+3. **Colruyt Group** - SmartSales Rollout Kickoff
+   - **Status**: Has active deal (SmartSales Rollout 2026)
+
+### Summary of Findings:
+- **Supplier1**: Active deal in Negotiation/Review stage.
+- **GreenTech Solutions**: Active deal in Qualification stage.
+- **Colruyt Group**: Active deal in Proposal/Price Quote stage.
+
+### Conclusion:
+- **No companies** meet the criteria of having no active deal with us for this week’s meetings.

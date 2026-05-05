@@ -1,0 +1,32 @@
+{
+  "user_query": "How do I report a suspected phishing email and what are the consequences if I fail a phishing test twice?",
+  "plan": {
+    "query": "How do I report a suspected phishing email and what are the consequences if I fail a phishing test twice?",
+    "reasoning": "The query involves internal processes and company documentation, which should be handled by the graph agent to find relevant procedures and policies.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Use search_documents to find the procedures for reporting a suspected phishing email and the consequences for failing a phishing test twice.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Summarize the results from step 1 to provide a comprehensive answer to the user."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Use search_documents to find the procedures for reporting a suspected phishing email and the consequences for failing a phishing test twice.",
+      "started_at": "2026-05-04T12:28:49.425043+00:00",
+      "ended_at": "2026-05-04T12:28:56.650766+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_documents",
+        "search_documents"
+      ]
+    }
+  ]
+}

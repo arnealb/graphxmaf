@@ -56,6 +56,11 @@ async def _read_email(repo: GraphRepository, message_id: str, **kwargs):
     return result.model_dump(mode="json")
 
 
+async def _search_documents(repo: GraphRepository, query: str, **kwargs):
+    from graph.graphrag_searcher import search_documents
+    return await search_documents(query)
+
+
 async def _search_files(repo: GraphRepository, query: str, drive_id=None, folder_id="root", **kwargs):
     import re
     filetype_match = re.search(r'\bfiletype:(\w+)\b', query, re.IGNORECASE)
@@ -115,6 +120,7 @@ _DISPATCH = {
     "find_people":         _find_people,
     "list_email":          _list_email,
     "read_email":          _read_email,
+    "search_documents":    _search_documents,
     "search_files":        _search_files,
     "read_file":           _read_file,
     "read_multiple_files": _read_multiple_files,

@@ -1,0 +1,76 @@
+{
+  "user_query": "Give me a full picture of our commercial activity in Brussels.",
+  "plan": {
+    "query": "Give me a full picture of our commercial activity in Brussels.",
+    "reasoning": "The query requires a comprehensive view of all commercial activities in Brussels, which involves information from CRM, location, and company-related data. Therefore, all available agents (graph, salesforce, smartsales) should be utilized to gather the necessary information.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Search for all accounts, contacts, opportunities, and cases related to commercial activities in Brussels.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "smartsales",
+        "task": "Find any locations or physical sites associated with our commercial activities in Brussels.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "graph",
+        "task": "Identify any emails, calendar events, or internal documents related to our commercial activities in Brussels.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from all three steps to create a comprehensive overview of our commercial activity in Brussels, highlighting accounts, opportunities, locations, and relevant communications or documents."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 3,
+      "input": "Identify any emails, calendar events, or internal documents related to our commercial activities in Brussels.",
+      "started_at": "2026-05-04T13:57:18.283651+00:00",
+      "ended_at": "2026-05-04T13:57:22.996668+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "search_calendar",
+        "search_documents"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Search for all accounts, contacts, opportunities, and cases related to commercial activities in Brussels.",
+      "started_at": "2026-05-04T13:57:18.277199+00:00",
+      "ended_at": "2026-05-04T13:57:23.548771+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "find_accounts",
+        "find_contacts",
+        "get_opportunities",
+        "get_cases",
+        "find_accounts",
+        "find_contacts"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 2,
+      "input": "Find any locations or physical sites associated with our commercial activities in Brussels.",
+      "started_at": "2026-05-04T13:57:18.279850+00:00",
+      "ended_at": "2026-05-04T13:57:30.704527+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations"
+      ]
+    }
+  ]
+}

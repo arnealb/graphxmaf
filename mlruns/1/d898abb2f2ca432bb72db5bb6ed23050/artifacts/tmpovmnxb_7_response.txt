@@ -1,0 +1,35 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here are the emails containing the word 'meeting' in the subject:
+
+1. **Email Subject:** Accepted: meeting about numbers or something @ di 21 April 2026 18:30 - 19:00 (CEST)  
+   - **Sender:** Arne Albrecht  
+   - **Sender Email:** albrecht.arne@gmail.com  
+   - **Received:** 16 April 2026  
+   - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANR%2BIE1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+2. **Email Subject:** meeting about numbers or something  
+   - **Sender:** SmartAdmin  
+   - **Sender Email:** SmartAdmin@easigroupdemo.onmicrosoft.com  
+   - **Received:** 16 April 2026  
+   - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAFEZy9jAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+3. **Email Subject:** meeting  
+   - **Sender:** SmartAdmin  
+   - **Sender Email:** SmartAdmin@easigroupdemo.onmicrosoft.com  
+   - **Received:** 14 April 2026  
+   - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEJAAA692EWSiRLR6aYejiouW3UAANJHug1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+4. **Email Subject:** Proposal for a short meeting  
+   - **Sender:** Arne Albrecht  
+   - **Sender Email:** albrecht.arne@gmail.com  
+   - **Received:** 13 April 2026  
+   - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAAM7uOKEAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+5. **Email Subject:** Supply chain project — follow-up meeting  
+   - **Sender:** Delhaize Procurement  
+   - **Sender Email:** procurement@delhaize.eu  
+   - **Received:** 28 April 2026  
+   - **Link:** [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7xAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)

@@ -1,0 +1,18 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+### Summary of Activity Related to Next Calendar Event
+
+**Event Details:**
+- **Subject:** Weekly sync — Dorian Feaux
+- **Start Time:** 6 May 2026, 07:00 AM
+- **End Time:** 6 May 2026, 07:30 AM
+- **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+- **Attendees:** None listed
+- **Web Link:** Not available
+
+**Communication Activity:**
+- No emails were found related to this event.
+
+There are no additional activities or communications associated with this event at this time.

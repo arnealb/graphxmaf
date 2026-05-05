@@ -1,0 +1,13 @@
+{
+  "query": "Look up the email address of Arne in the organization.",
+  "reasoning": "The user is asking for a specific email address associated with an individual in the organization, which is best handled by the graph agent as it manages personal Outlook contacts and communication history.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Find the email address of Arne from the organization's address book.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the email address found in step 1."
+}

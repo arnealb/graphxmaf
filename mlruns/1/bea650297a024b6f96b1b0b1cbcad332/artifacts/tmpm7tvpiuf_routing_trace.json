@@ -1,0 +1,74 @@
+{
+  "user_query": "Who is Dorian and how do we work with him?",
+  "plan": {
+    "query": "Who is Dorian and how do we work with him?",
+    "reasoning": "The query requires a comprehensive view of the individual named Dorian, which includes communication history, CRM-related information, and linked locations or contexts. Therefore, I will use all available agents to gather this information.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Find emails and calendar events involving Dorian to understand communication history and scheduling.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Look up CRM contacts and any related opportunities, accounts, or cases associated with Dorian to gather commercial relationship data.",
+        "depends_on": []
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Search for locations or sites related to Dorian to gather information on any physical presence or context associated with him.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from all steps to provide a comprehensive overview of Dorian, including communication history, commercial relationships, and any relevant locations."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "Search for locations or sites related to Dorian to gather information on any physical presence or context associated with him.",
+      "started_at": "2026-05-04T13:29:38.075004+00:00",
+      "ended_at": "2026-05-04T13:29:39.992187+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations"
+      ]
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Look up CRM contacts and any related opportunities, accounts, or cases associated with Dorian to gather commercial relationship data.",
+      "started_at": "2026-05-04T13:29:38.072228+00:00",
+      "ended_at": "2026-05-04T13:29:44.533372+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "find_contacts",
+        "find_accounts",
+        "get_opportunities",
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Find emails and calendar events involving Dorian to understand communication history and scheduling.",
+      "started_at": "2026-05-04T13:29:38.068534+00:00",
+      "ended_at": "2026-05-04T13:29:50.214627+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "findpeople",
+        "list_calendar",
+        "search_email"
+      ]
+    }
+  ]
+}

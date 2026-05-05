@@ -1,0 +1,13 @@
+{
+  "query": "Find Salesforce leads that have been converted.",
+  "reasoning": "The query specifically asks for information about converted leads, which falls under the capabilities of the Salesforce agent. This requires only one step.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all leads that have been converted within the Salesforce CRM.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the retrieved converted leads from Salesforce."
+}

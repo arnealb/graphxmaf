@@ -1,0 +1,36 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (smartsales)...
+Synthesizing...
+Here are the results of your query for 'locations' from OneDrive along with corresponding details from SmartSales.
+
+### Locations from OneDrive:
+
+- **Colruyt Group**: 47 locations.
+- **Carrefour Belgium SA**: 12 hypermarkets.
+- **Delhaize Group**: Active in multiple locations.
+- **Anheuser-Busch InBev (Leuven)**: Utilizes a Distribution Mapping platform.
+- **Delhaize Group AD-Franchise Stores**: Relevant to the EDI Connector Pack.
+
+**Note**: For specific identifiers and addresses of Colruyt locations, refer to Annex A of the SLA agreement.
+
+### Locations from SmartSales:
+
+1. **Colruyt - Halle**
+   - **Code**: COLRUYT-HAL-001
+   - **Address**: Edingensesteenweg 196, Halle, 1500, Belgium
+   - **Coordinates**: Latitude 50.7292372, Longitude 4.2219105
+   - **Creation Date**: 28 April 2026
+   - **Updated Date**: 28 April 2026
+
+2. **AD Delhaize - Forest**
+   - **Code**: ADL-FOR-001
+   - **Address**: Chaussée de Neerstalle 800, Brussels, 1190, Belgium
+   - **Coordinates**: Latitude 50.7961794, Longitude 4.3215302
+   - **Creation Date**: 28 April 2026
+   - **Updated Date**: 28 April 2026
+
+### Summary
+- Both Colruyt and Delhaize locations are confirmed in the SmartSales system, while further information on all EASI-related locations is documented in your associated OneDrive files.
+- For any further specifics or additional locations, refer to the listed documents in your OneDrive.

@@ -1,0 +1,12 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Based on the findings regarding EASI's policy on accepting gifts from suppliers:
+
+- **Zero-Tolerance Policy**: EASI has a strict zero-tolerance policy on bribery, corruption, and facilitation payments.
+- **Gift Value Threshold**: No gift or hospitality valued above EUR 50 may be accepted by EASI staff or clients.
+- **Action Required**: If a gift exceeding this limit is offered, it must be declared to procurement@easi.net.
+
+### Conclusion
+- Since the thank-you dinner valued at EUR 75 exceeds the EUR 50 threshold, it cannot be accepted without declaring it to the procurement department.

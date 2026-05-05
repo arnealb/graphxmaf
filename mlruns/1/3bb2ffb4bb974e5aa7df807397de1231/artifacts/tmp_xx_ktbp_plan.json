@@ -1,0 +1,13 @@
+{
+  "query": "Find the email address of Dorian.",
+  "reasoning": "The query is person-centric, requiring information about a specific individual. I will use the graph agent to find Dorian's email address, as it handles personal Outlook contacts and communication history.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for Dorian in the personal Outlook contacts and retrieve the email address associated with that name.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Provide the email address retrieved from the graph agent as the final answer."
+}

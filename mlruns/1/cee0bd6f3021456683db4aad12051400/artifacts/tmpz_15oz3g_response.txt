@@ -1,0 +1,12 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+To purchase a EUR 8,000 piece of equipment, you need the following approvals:
+
+- **Approval Levels**:
+  - Direct Manager
+  - HR
+  - Department Director
+
+Additionally, you must obtain at least three competitive quotes, and the approval must be documented in the procurement system.

@@ -1,0 +1,13 @@
+{
+  "query": "How much advance notice does supplier1 need to give before a scheduled maintenance visit?",
+  "reasoning": "This query relates to internal company processes regarding the scheduling of maintenance visits. I will use the graph agent to search for relevant internal documentation that specifies the advance notice required.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the advance notice requirement for scheduled maintenance visits from supplier1.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the result from step 1 as the answer to the user's query."
+}

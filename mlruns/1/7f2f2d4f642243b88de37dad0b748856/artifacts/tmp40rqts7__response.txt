@@ -1,0 +1,24 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Based on the vacation policy for EASI, here are the details concerning vacation days:
+
+- **Annual Paid Leave**:
+  - Each employee is entitled to **20 statutory vacation days** per calendar year.
+  - Additionally, employees receive **12 ADV days** (reduction of working hours).
+  - This totals **32 paid leave days** for a full-time, full-year employee.
+  - For part-time employees or those joining or leaving mid-year, leave is accrued on a **pro-rata basis**.
+
+- **Leave Requests**:
+  - Leave requests must be submitted through the **HR portal**.
+  - Minimum notice requirements:
+    - At least **3 working days** in advance for up to 3 consecutive days.
+    - At least **2 weeks** in advance for more than 3 consecutive days.
+  - Managers have a response time of **3 working days**.
+
+- **Carryover Policy**:
+  - A maximum of **5 unused leave days** can be carried over to the next calendar year.
+  - These carried over days will **expire on 31 March** of the following year and cannot be paid out.
+
+For any further queries or disputes regarding leave, employees are encouraged to reach out to HR at hr@easi.net.

@@ -1,0 +1,86 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here is the list of open support cases retrieved from Salesforce:
+
+### Open Support Cases
+
+- **Case Number:** 00001023
+  - **Subject:** Delhaize Group — EDI connection issue
+  - **Status:** Working
+  - **Priority:** Medium
+  - **Account Name:** Delhaize Group
+  - **Created Date:** 28 April 2026
+
+- **Case Number:** 00001022
+  - **Subject:** Carrefour Belgium SA — POS integration delay
+  - **Status:** New
+  - **Priority:** High
+  - **Account Name:** Carrefour Belgium SA
+  - **Created Date:** 28 April 2026
+
+- **Case Number:** 00001021
+  - **Subject:** Colruyt — Integration issue with POS system
+  - **Status:** New
+  - **Priority:** Medium
+  - **Account Name:** Colruyt Group
+  - **Created Date:** 28 April 2026
+
+- **Case Number:** 00001020
+  - **Subject:** Delayed shipment — supplier1 April batch
+  - **Status:** Working
+  - **Priority:** High
+  - **Account Name:** supplier1
+  - **Created Date:** 28 April 2026
+
+- **Case Number:** 00001018
+  - **Subject:** Verification statut case
+  - **Status:** In progress
+  - **Priority:** Medium
+  - **Account Name:** Easi Be
+  - **Created Date:** 6 March 2025
+
+- **Case Number:** 00001017
+  - **Subject:** Test
+  - **Status:** New
+  - **Priority:** Medium
+  - **Account Name:** Easi Be
+  - **Created Date:** 6 March 2025
+
+- **Case Number:** 00001006
+  - **Subject:** Issue with order
+  - **Status:** New
+  - **Priority:** Medium
+  - **Account Name:** Pairi Daiza
+  - **Created Date:** 18 March 2024
+
+- **Case Number:** 00001005
+  - **Subject:** Produits
+  - **Status:** Waiting for Customer
+  - **Priority:** Medium
+  - **Account Name:** Pairi Daiza
+  - **Created Date:** 13 March 2024
+
+- **Case Number:** 00001003
+  - **Subject:** Delivery issues with order #544
+  - **Status:** New
+  - **Priority:** Medium
+  - **Account Name:** Omega SA-NV
+  - **Created Date:** 31 July 2023
+
+- **Case Number:** 00001001
+  - **Subject:** Sample Case 2: The widgets we received are the wrong size.
+  - **Status:** New
+  - **Priority:** High
+  - **Account Name:** Pairi Daiza
+  - **Created Date:** 29 June 2023
+
+- **Case Number:** 00001000
+  - **Subject:** Sample Case: Our Widgets have not been delivered.
+  - **Status:** Escalated
+  - **Priority:** High
+  - **Account Name:** Global Media
+  - **Created Date:** 29 June 2023
+
+These cases are currently open and require attention.

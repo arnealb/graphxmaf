@@ -1,0 +1,13 @@
+{
+  "query": "Is there anything I should follow up on today?",
+  "reasoning": "The query is about potential follow-ups, which likely involves checking emails and calendar events for any pending tasks or communications. Therefore, I will use the graph agent to gather relevant emails and calendar events.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Check today's emails and calendar events for any pending follow-ups or tasks that need attention.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Compile the results from the email and calendar check to provide a summary of any follow-ups required for today."
+}

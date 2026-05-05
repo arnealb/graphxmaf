@@ -1,0 +1,21 @@
+{
+  "query": "Who is the contact person behind my most expensive open order?",
+  "reasoning": "To find the contact person linked to the most expensive open order, I will first need to gather data about all open orders and their associated details, including their value and contacts. This requires the Smartsales agent to identify the most expensive open order, followed by the Salesforce agent to extract the associated contact information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve all open orders, including their values and associated identifiers.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Using the order identifier from step 1, find the associated contact person for the most expensive open order.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the contact information obtained from step 2 with the details of the most expensive open order from step 1 to provide a complete answer."
+}

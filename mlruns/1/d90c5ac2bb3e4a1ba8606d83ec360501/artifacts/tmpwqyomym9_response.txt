@@ -1,0 +1,53 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (smartsales)...
+️Executing (smartsales)...
+Synthesizing...
+### SmartSales Approbation Statuses
+
+Here is the list of approbation statuses (by UID):
+
+- **86ceb193-18a4-11f1-84f0-005056010707**
+- **86d4e3b4-18a4-11f1-84f0-005056010707**
+- **86d17c14-18a4-11f1-84f0-005056010707**
+- **86d5a606-18a4-11f1-84f0-005056010707**
+- **86d26456-18a4-11f1-84f0-005056010707**
+- **86d62bbc-18a4-11f1-84f0-005056010707**
+- **86d30fd9-18a4-11f1-84f0-005056010707**
+- **86d6d77c-18a4-11f1-84f0-005056010707**
+- **86d3ef5c-18a4-11f1-84f0-005056010707**
+- **86d8a79f-18a4-11f1-84f0-005056010707**
+
+### Full Details of the First Approbation Status
+
+**UID**: 86ceb193-18a4-11f1-84f0-005056010707  
+- **Title**: Ongoing approval
+  - **English**: Ongoing approval
+  - **French**: En cours d'approbation
+  - **Dutch**: Lopende goedkeuring
+- **Type**: OFFER
+- **Code**: PENDING
+- **Position**: 0
+- **Icon Code**: QUARTER_0
+- **Icon Color**: YELLOW
+- **Percent of Success**: 0.0%
+- **Terminal**: No
+- **Secured**: No
+- **Include in My Team**: Yes
+- **System**: No
+- **Deleted**: No
+- **Email Subject**:
+  - **English**: Offer
+  - **French**: Offre
+  - **Dutch**: Offerte
+- **Email Body**:
+  - **English**: An offer has been received from {0} {1}. Please download a copy below:
+  - **French**: Une offre a été reçue de {0} {1}. Veuillez en télécharger une copie ci-dessous :
+  - **Dutch**: Een offerte van {0} {1} werd ontvangen. Hieronder kan u een exemplaar downloaden:
+- **Notification Types**: 
+  - USER
+  - BACKOFFICE
+  - CUSTOMER
+- **Security Permissions**: None specified
+
+This provides a comprehensive overview of the first approbation status and its details in SmartSales.

@@ -1,0 +1,19 @@
+{
+  "query": "Which of our accounts have both an active deal and a recent order?",
+  "reasoning": "This query requires information from both salesforce for the active deals and orders, and smartsales for the recent order information. To identify accounts, I will fetch active deals from salesforce and check order information from smartsales simultaneously.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Get a list of accounts that have active deals.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Get a list of accounts with recent orders.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Cross-reference the results from step 1 and step 2 to identify accounts that appear in both lists."
+}

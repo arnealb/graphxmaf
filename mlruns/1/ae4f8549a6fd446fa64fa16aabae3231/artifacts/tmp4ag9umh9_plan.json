@@ -1,0 +1,13 @@
+{
+  "query": "List SmartSales locations in Belgium sorted by name, using full projection.",
+  "reasoning": "The user seeks detailed information about all SmartSales locations in a specific region (Belgium), which requires querying the smartsales agent for relevant location data. A single step is sufficient as it can retrieve all necessary data in one call without dependencies.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Retrieve all SmartSales locations in Belgium and sort them by name, providing full projection of all available details for each location.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of SmartSales locations retrieved in step 1, ensuring they are sorted by name."
+}

@@ -1,0 +1,24 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Here is a list of companies that recently emailed you and do not appear to have a registered location with us:
+
+- **Marc Supplier**
+- **Microsoft**
+- **Microsoft Security**
+- **Proximus Business**
+- **AB InBev Sales**
+- **Delhaize Procurement**
+- **AD Delhaize IT**
+- **CRF Belgium Procurement**
+- **Carrefour BE Operations**
+- **Dorian Fëaux**
+- **Ferrero Benelux Marketing**
+- **GreenTech Solutions**
+- **Colruyt Group Procurement**
+- **Arne Albrecht**
+- **Microsoft Azure**
+
+All listed companies emailed you recently, and none have a registered location according to our records.

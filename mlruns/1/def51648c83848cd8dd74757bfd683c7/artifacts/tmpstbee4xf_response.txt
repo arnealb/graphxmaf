@@ -1,0 +1,50 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (smartsales)...
+Synthesizing...
+The following fields can be displayed for SmartSales orders:
+
+- **Date Fields:**
+  - techServerCreationDate (DATETIME)
+  - techServerUpdateDate (DATETIME)
+  - techClientCreationDate (DATETIME)
+  - techClientUpdateDate (DATETIME)
+  - date (DATETIME)
+  - approbationModificationDate (DATETIME)
+
+- **User Fields:**
+  - techCreationUser (TEXT)
+  - techUpdateUser (TEXT)
+  - approbationModificationUser (TEXT)
+  - user (TEXT)
+
+- **Reference Fields:**
+  - internalReference (TEXT)
+  - externalReference (TEXT)
+  - customerCode (TEXT)
+  - locationExternalId (TEXT)
+
+- **Customer Fields:**
+  - customer (TEXT)
+  - email (TEXT)
+
+- **Financial Fields:**
+  - total (DECIMAL)
+  - totalWithoutDiscount (DECIMAL)
+  - totalDiscount (DECIMAL)
+  - totalDiscountPercentage (DECIMAL)
+
+- **Status and Comments:**
+  - commented (BOOLEAN)
+  - versionHistory (BOOLEAN)
+  - hasManualDiscount (BOOLEAN)
+  - comments (TEXT)
+  - approbationStatus (TEXT)
+
+- **Type Field:**
+  - type (TEXT)
+
+- **Version Field:**
+  - versionKey (TEXT)
+
+These fields are available for display on both web and mobile platforms, with some fields limited to the web only.

@@ -1,0 +1,19 @@
+{
+  "query": "Which companies appear both in our CRM and in our email history?",
+  "reasoning": "The query requires information from both the CRM for company records and the email history for communication logs. Therefore, both the salesforce and graph agents are necessary to identify companies that exist in both datasets.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch all companies from the CRM accounts.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Retrieve all companies from the email history.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from steps 1 and 2 to identify the companies that exist in both datasets."
+}

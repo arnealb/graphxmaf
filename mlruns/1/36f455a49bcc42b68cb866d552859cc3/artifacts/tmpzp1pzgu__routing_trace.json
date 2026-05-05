@@ -1,0 +1,76 @@
+{
+  "user_query": "For the company behind my most recent open support case, give me a full 360 view",
+  "plan": {
+    "query": "For the company behind my most recent open support case, give me a full 360 view",
+    "reasoning": "The user is requesting a comprehensive overview of a specific company related to their open support case. This requires data from all available agents to provide a complete picture, including communication history, CRM contacts, and any relevant locations.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Find the most recent open support case and retrieve its associated company information, including company name and any related contacts.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "graph",
+        "task": "Using the company name found in step 1, search for any emails and calendar events related to this company.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Using the company name from step 1, search for any physical locations or site information associated with this company.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the results from all steps to present a comprehensive overview of the company, including communication history, CRM data, and location details."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Find the most recent open support case and retrieve its associated company information, including company name and any related contacts.",
+      "started_at": "2026-05-04T20:19:22.109648+00:00",
+      "ended_at": "2026-05-04T20:19:27.593001+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "get_cases",
+        "find_accounts",
+        "find_contacts"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "[Result from step 1]:\n[\n    {\n        \"tool\": \"functions.get_cases\",\n        \"result\": {\n            \"id\": \"500KI000001mK13YAE\",\n            \"case_number\": \"00001023\",\n            \"subject\": \"Delhaize Group — EDI connection issue\",\n            \"status\": \"Working\",\n            \"priority\": \"Medium\",\n            \"account_name\": \"Delhaize Group\",\n            \"created_date\": \"2026-04-28T14:40:07Z\"\n        }\n    },\n    {\n        \"tool\": \"functions.find_accounts\",\n        \"result\": {\n            \"id\": \"001KI00000N7zVuYAJ\",\n            \"name\": \"Delhaize Group\",\n            \"industry\": \"Retail\",\n            \"website\": \"https://www.delhaize.be\"\n        }\n    },\n    {\n        \"tool\": \"functions.find_contacts\",\n        \"result\": []\n    }\n]\n\n[Task]:\nUsing the company name from step 1, search for any physical locations or site information associated with this company.",
+      "started_at": "2026-05-04T20:19:27.632606+00:00",
+      "ended_at": "2026-05-04T20:19:30.187666+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 2,
+      "input": "[Result from step 1]:\n[\n    {\n        \"tool\": \"functions.get_cases\",\n        \"result\": {\n            \"id\": \"500KI000001mK13YAE\",\n            \"case_number\": \"00001023\",\n            \"subject\": \"Delhaize Group — EDI connection issue\",\n            \"status\": \"Working\",\n            \"priority\": \"Medium\",\n            \"account_name\": \"Delhaize Group\",\n            \"created_date\": \"2026-04-28T14:40:07Z\"\n        }\n    },\n    {\n        \"tool\": \"functions.find_accounts\",\n        \"result\": {\n            \"id\": \"001KI00000N7zVuYAJ\",\n            \"name\": \"Delhaize Group\",\n            \"industry\": \"Retail\",\n            \"website\": \"https://www.delhaize.be\"\n        }\n    },\n    {\n        \"tool\": \"functions.find_contacts\",\n        \"result\": []\n    }\n]\n\n[Task]:\nUsing the company name found in step 1, search for any emails and calendar events related to this company.",
+      "started_at": "2026-05-04T20:19:27.630438+00:00",
+      "ended_at": "2026-05-04T20:19:30.565514+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_email",
+        "search_calendar"
+      ]
+    }
+  ]
+}

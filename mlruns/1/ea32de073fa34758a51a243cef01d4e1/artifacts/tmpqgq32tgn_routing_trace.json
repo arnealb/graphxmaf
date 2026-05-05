@@ -1,0 +1,75 @@
+{
+  "user_query": "Who are the most important companies we work with right now?",
+  "plan": {
+    "query": "Who are the most important companies we work with right now?",
+    "reasoning": "The query asks for an overview of important companies the user has a relationship with, which warrants gathering information from all available agents to form a complete picture.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Retrieve the list of current important accounts and their details related to our ongoing activities.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "graph",
+        "task": "Collect any relevant emails and calendar events associated with the important accounts identified in step 1.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "agent": "smartsales",
+        "task": "Gather location and product catalog information related to the important companies identified in step 1.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Combine the details from steps 1, 2, and 3 to provide a comprehensive overview of the most important companies we work with, including account details, communication history, and physical presence information."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Retrieve the list of current important accounts and their details related to our ongoing activities.",
+      "started_at": "2026-05-04T13:55:38.766758+00:00",
+      "ended_at": "2026-05-04T13:55:41.137932+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "find_accounts"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 2,
+      "input": "[Result from step 1]:\n[]\n\n[Task]:\nCollect any relevant emails and calendar events associated with the important accounts identified in step 1.",
+      "started_at": "2026-05-04T13:55:41.178743+00:00",
+      "ended_at": "2026-05-04T13:56:03.802986+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_email",
+        "list_calendar"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 3,
+      "input": "[Result from step 1]:\n[]\n\n[Task]:\nGather location and product catalog information related to the important companies identified in step 1.",
+      "started_at": "2026-05-04T13:55:41.181269+00:00",
+      "ended_at": "2026-05-04T13:57:33.635421+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_locations",
+        "list_catalog_items"
+      ]
+    }
+  ]
+}

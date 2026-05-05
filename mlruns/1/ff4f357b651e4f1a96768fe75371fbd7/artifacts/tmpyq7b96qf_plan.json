@@ -1,0 +1,21 @@
+{
+  "query": "List my Microsoft 365 contacts with their phone numbers and check if those contacts also exist in Salesforce.",
+  "reasoning": "The query involves retrieving contacts from Microsoft 365 and verifying their existence in Salesforce. Therefore, it requires one step to fetch contacts and another step to cross-reference them with Salesforce.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve all your Microsoft 365 contacts along with their phone numbers.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Check if the contacts retrieved from step 1 exist in Salesforce.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the list of Microsoft 365 contacts with their phone numbers and the results from the Salesforce check to produce a final list indicating which contacts exist in both systems."
+}

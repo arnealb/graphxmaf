@@ -1,0 +1,28 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is the overview of everything related to 'Nutella' from the three systems:
+
+### From Microsoft 365:
+- **Email Inquiry:** 
+  - Subject: "Ferrero Benelux — Nutella spring campaign inquiry"
+  - Sender: Ferrero Benelux Marketing (marketing@ferrero.be)
+  - Received on: 28 April 2026
+  - [View Message](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7rAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### From Salesforce:
+- **No results found.**
+
+### From SmartSales:
+- **Location Information:**
+  - Name: Ferrero Benelux - Brussels (Nutella)
+  - Location:
+    - Address: Bld de la Woluwe 42, Brussels, 1200, Belgium
+    - Latitude: 50.8388442
+    - Longitude: 4.434813
+  - Creation Date: 28 April 2026
+  - Update Date: 28 April 2026
+  - Created by: Client Application
+
+This information provides insights into Nutella-related inquiries and locations, with no additional relevant data available from Salesforce.

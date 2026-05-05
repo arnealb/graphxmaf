@@ -1,0 +1,13 @@
+{
+  "query": "Give me a summary of all activity related to my next calendar event.",
+  "reasoning": "The query requires information about the user's next calendar event, which is best obtained through the graph agent. Gathering this information allows us to summarize the relevant activities associated with that event.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Retrieve the details of the next calendar event, including related emails and any relevant documents.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Summarize the retrieved event details and associated activities into a cohesive summary."
+}

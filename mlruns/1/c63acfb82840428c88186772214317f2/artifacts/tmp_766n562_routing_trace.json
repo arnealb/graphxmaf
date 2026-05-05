@@ -1,0 +1,31 @@
+{
+  "user_query": "What fields can I use to filter SmartSales locations?",
+  "plan": {
+    "query": "What fields can I use to filter SmartSales locations?",
+    "reasoning": "The query pertains to a specific feature of the SmartSales agent related to filtering location data, and there is no need to query other agents.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "smartsales",
+        "task": "Provide a list of fields available for filtering SmartSales locations.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the list of filtering fields provided by the SmartSales agent as the final answer."
+  },
+  "invoked_agents": [
+    {
+      "agent": "smartsales",
+      "order": 1,
+      "input": "Provide a list of fields available for filtering SmartSales locations.",
+      "started_at": "2026-05-04T14:22:28.537739+00:00",
+      "ended_at": "2026-05-04T14:22:53.501185+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_queryable_fields"
+      ]
+    }
+  ]
+}

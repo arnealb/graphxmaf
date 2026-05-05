@@ -1,0 +1,13 @@
+{
+  "query": "Find a document called 'agenda' in OneDrive and show its content.",
+  "reasoning": "The query explicitly asks for a specific document by name, which falls under the TYPE B category for file-by-name queries. Therefore, it should be routed to the graph agent for searching files.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for a document called 'agenda' in OneDrive and retrieve its content.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the content of the document retrieved by the graph agent."
+}

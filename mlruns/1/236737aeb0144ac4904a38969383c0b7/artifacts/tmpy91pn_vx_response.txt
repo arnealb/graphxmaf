@@ -1,0 +1,54 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+Here's the full body of your most recent email:
+
+---
+
+**Subject:** Een abonnement kopen om uw product te blijven gebruiken
+
+**Sender:** Microsoft (microsoft-noreply@microsoft.com)
+
+**Received:** 3 May 2026
+
+Uw proefversie wordt uitgeschakeld op zondag 10 mei 2026.
+
+**[Microsoft]**  
+Uw proefabonnement eindigt. Schaf een abonnement aan om uw product te blijven gebruiken.
+
+Uw proefversie wordt uitgeschakeld op zondag 10 mei 2026. Als u uw producten wilt blijven gebruiken, koopt u een betaald abonnement in de Microsoft 365-beheercentrum.
+
+Een abonnement afsluiten ><https://nam.safelink.emails.azure.net/redirect/?destination=https%3A%2F%2Fadmin.microsoft.com%2FAdminPortal%2FHome%3Fref%3Dsubscriptions%26source%3Dtcemail&p=bT1jODhlZWQwMC1mYzY5LTRkNTYtODRmNS05MGIzYzgzMzIyMGQmcz0wMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAmdT1hZW8mbD1Ib21l>
+
+Als uw proefversies zijn uitgeschakeld op zondag 10 mei 2026:
+
+- Uw gebruikers hebben geen toegang meer tot de services die zijn gekoppeld aan dit abonnement.
+- Uw beheerders hebben toegang tot het beheercentrum, maar ze kunnen geen licenties meer toewijzen aan gebruikers.
+
+**Uw proefversie die wordt uitgeschakeld:**
+
+| Product                             | Totaal aantal licenties | Begindatum            |
+|-------------------------------------|------------------------|-----------------------|
+| Microsoft Agent 365 Frontier (No Teams) Trial | 25                     | dinsdag 10 maart 2026 |
+
+**Aanvullende informatie:**
+
+- Een proefversie ​verlengen<https://nam.safelink.emails.azure.net/redirect/?destination=https%3A%2F%2Fdocs.microsoft.com%2Fnl-be%2Fmicrosoft-365%2Fcommerce%2Ftry-or-buy-microsoft-365%3Fview%3Do365-worldwide&p=bT1jODhlZWQwMC1mYzY5LTRkNTYtODRmNS05MGIzYzgzMzIyMGQmcz0wMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAmdT1hZW8mbD10cnktb3ItYnV5LW1pY3Jvc29mdC0zNjU%3D>.
+- Een proefversie ​annuleren<https://nam.safelink.emails.azure.net/redirect/?destination=https%3A%2F%2Fdocs.microsoft.com%2Fnl-be%2Fmicrosoft-365%2Fcommerce%2Fsubscriptions%2Fcancel-your-subscription%3Fview%3Do365-worldwide&p=bT1jODhlZWQwMC1mYzY5LTRkNTYtODRmNS05MGIzYzgzMzIyMGQmcz0wMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAmdT1hZW8mbD1jYW5jZWwteW91ci1zdWJzY3JpcHRpb24%3D>.
+
+**Accountgegevens**
+
+- Naam van de organisatie: EasiGroupDemo
+- Vervaldatum: zondag 10 mei 2026
+- Primaire tenant-id: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5
+
+Vindt u deze e-mail nuttig? Ja<https://nam.safelink.emails.azure.net/trackingfeedback/?p=bT1jODhlZWQwMC1mYzY5LTRkNTYtODRmNS05MGIzYzgzMzIyMGQmZj1Qb3NpdGl2ZSZiPW5sLWJlJmE9My01LTIwMjYgMTA6MDY6MDUmdT1hZW8%3D> Nee<https://nam.safelink.emails.azure.net/trackingfeedback/?p=bT1jODhlZWQwMC1mYzY5LTRkNTYtODRmNS05MGIzYzgzMzIyMGQmZj1OZWdhdGl2ZSZiPW5sLWJlJmE9My01LTIwMjYgMTA6MDY6MDUmdT1hZW8%3D>
+
+**Privacyverklaring**<https://nam.safelink.emails.azure.net/redirect/?destination=https%3A%2F%2Fgo.microsoft.com%2Ffwlink%2F%3FLinkId%3D521839&p=bT1jODhlZWQwMC1mYzY5LTRkNTYtODRmNS05MGIzYzgzMzIyMGQmcz0wMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAmdT1hZW8mbD1wcml2YWN5LXN0YXRlbWVudA%3D%3D>
+
+Microsoft Corporation, One Microsoft Way, ​Redmond, WA 98052
+
+--- 
+
+This email provides important information regarding the end of your trial subscription with Microsoft.

@@ -1,0 +1,13 @@
+{
+  "query": "What is the SmartSales order configuration?",
+  "reasoning": "The query pertains to a specific process or guideline related to SmartSales, which should be handled by the graph agent to find relevant internal documents.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find information regarding the SmartSales order configuration.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the document or information retrieved from the search about the SmartSales order configuration."
+}

@@ -8,6 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY config.cfg .
 COPY auth/ auth/
 COPY graph/ graph/
+COPY graph/graphrag/output/ graph/graphrag/output/
 COPY shared/ shared/
 
 EXPOSE 8000

@@ -1,0 +1,13 @@
+{
+  "query": "We want to deploy a change to the Colruyt SmartSales system on a Friday evening at 19:00. Is this allowed?",
+  "reasoning": "The query involves a question about internal company rules or processes, specifically regarding deployment policies. The graph agent is the appropriate choice to find relevant documentation related to any deployment restrictions or policies.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Use search_documents to find the deployment policy regarding changes to the SmartSales system on a Friday evening.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the content of the deployment policy found in step 1."
+}

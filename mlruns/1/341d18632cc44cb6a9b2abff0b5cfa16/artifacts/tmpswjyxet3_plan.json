@@ -1,0 +1,13 @@
+{
+  "query": "Show me Salesforce opportunities in the 'Qualification' stage.",
+  "reasoning": "The user is asking for specific data related to Salesforce opportunities, so I will use the Salesforce agent to directly fetch that information.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Find all Salesforce opportunities that are in the 'Qualification' stage.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of opportunities from step 1."
+}

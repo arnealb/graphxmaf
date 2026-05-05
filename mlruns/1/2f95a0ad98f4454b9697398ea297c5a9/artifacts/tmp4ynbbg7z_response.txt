@@ -1,0 +1,54 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph, salesforce, smartsales)...
+Synthesizing...
+Here is a comprehensive overview of all information related to Belgium across the systems you queried:
+
+### Email
+- **Email Subject**: Belgium region — Q1 2026 commercial summary
+  - **Sender**: SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+  - **Received Date**: 28 April 2026
+  - **Link**: [View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7tAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+
+### Documents
+- **Governing Laws**: The Data Processing Agreement (DPA) and the Service Level Agreement (SLA) are governed by Belgian law.
+- **Legal Reference**: The Belgian Wet Eenheidsstatuut of 2014 regarding notice periods is mentioned in the offboarding guide.
+- **Sources**: 
+  - SLA Agreement (Easi Colruyt)
+  - Remote Work Policy (Easi)
+  - Offboarding Guide (Easi)
+  - IT Security Procedure (Easi)
+  - Data Processing Agreement (Colruyt)
+
+### Salesforce
+- **Accounts**: 
+  - **Anheuser-Busch InBev**: [Website](https://www.ab-inbev.com)
+  - **Delhaize Group**: [Website](https://www.delhaize.be)
+  - **Carrefour Belgium SA**: [Website](https://www.carrefour.be)
+  - **Colruyt Group**: [Website](https://www.colruytgroup.com)
+  - **Ferrero Benelux**
+  - **GreenTech Solutions**: [Website](https://www.greentechsolutions.be)
+
+- **Contacts**:
+  - **Supplier1 Contact**: supplier1_contact lastname (Account: supplier1)
+
+- **Leads**:
+  - Bert Coppens (Company: another-company, Status: New, Country: Belgium)
+  - Arne Albrecht (Company: easi_dupe, Status: Contacted, Email: albrecht.arne@gmail.com, Country: Belgium)
+
+### SmartSales
+- **Locations**:
+  - **AB InBev - Leuven**: Vaartstraat 94, Leuven, 3000, Belgium
+  - **Delhaize - Forest**: Chaussée de Neerstalle 800, Brussels, 1190, Belgium
+  - **Colruyt - Halle**: Edingensesteenweg 196, Halle, 1500, Belgium
+  - **Michelles Brasserie**: Ingelmunstersestraat 46, Izegem, 8870, Belgium
+  - **Lidl Belgium - Antwerp**: Noordersingel 10, Antwerp, 2140, Belgium
+  - **Numerous other sites across Belgium include: Ghent, Bruges, and Brussels locations for Colruyt, Lidl, and Ferrero.**
+
+### Summary of Items Available
+- **Catalog Items**: Products related to Belgian firms include:
+  - Nutella (750g)
+  - Annual licenses for various businesses (e.g., AB InBev, Delhaize, Colruyt)
+  - IT Hardware and Software items (USB-C Docking Station, Laptops, Wireless Headsets)
+  
+This encapsulated view provides an overview of the information linked to Belgium from the systems you queried. If you require further details on any specific segment, please let me know!

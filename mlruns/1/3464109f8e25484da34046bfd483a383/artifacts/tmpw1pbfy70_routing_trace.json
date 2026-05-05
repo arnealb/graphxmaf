@@ -1,0 +1,54 @@
+{
+  "user_query": "What files, meetings, and deals are linked to supplier1?",
+  "plan": {
+    "query": "What files, meetings, and deals are linked to supplier1?",
+    "reasoning": "The query asks for a comprehensive view of a specific entity, 'supplier1', which involves gathering information from multiple agents, including documents, calendar events, and CRM deals.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Search for files and meetings linked to supplier1, including any relevant communication history or documents stored in OneDrive.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Find all deals related to supplier1, including opportunities and cases in the CRM system.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Combine the results from steps 1 and 2 to provide a full overview of the files, meetings, and deals associated with supplier1."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Find all deals related to supplier1, including opportunities and cases in the CRM system.",
+      "started_at": "2026-05-04T13:46:54.310608+00:00",
+      "ended_at": "2026-05-04T13:47:02.276422+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "find_accounts",
+        "get_opportunities",
+        "get_cases"
+      ]
+    },
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Search for files and meetings linked to supplier1, including any relevant communication history or documents stored in OneDrive.",
+      "started_at": "2026-05-04T13:46:54.308294+00:00",
+      "ended_at": "2026-05-04T13:47:23.430653+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "search_files",
+        "search_calendar",
+        "search_email"
+      ]
+    }
+  ]
+}

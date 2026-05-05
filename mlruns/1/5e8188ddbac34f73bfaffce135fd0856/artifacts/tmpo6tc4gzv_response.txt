@@ -1,0 +1,71 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+Here's an overview of your upcoming meetings, related Salesforce opportunities, and SmartSales locations:
+
+### Upcoming Meetings (from Microsoft 365)
+1. **Weekly Sync**
+   - **Date:** 6 May 2026
+   - **Time:** 07:00 - 07:30
+   - **Organizer:** SmartAdmin
+
+2. **Sprint Review**
+   - **Date:** 8 May 2026
+   - **Time:** 12:00 - 13:00
+   - **Organizer:** SmartAdmin
+
+3. **Q2 Delivery Review**
+   - **Date:** 10 May 2026
+   - **Time:** 08:00 - 09:00
+   - **Organizer:** SmartAdmin
+
+4. **Technical Qualification Call (GreenTech Solutions)**
+   - **Date:** 12 May 2026
+   - **Time:** 09:00 - 10:00
+   - **Organizer:** SmartAdmin
+
+5. **SmartSales Rollout Kickoff (Colruyt Group)**
+   - **Date:** 15 May 2026
+   - **Time:** 12:00 - 13:30
+   - **Organizer:** SmartAdmin
+
+### Related Salesforce Opportunities
+1. **GreenTech Solutions — Sustainability Dashboard**
+   - **Stage:** Qualification
+   - **Amount:** $45,000
+   - **Close Date:** 15 August 2026
+   - **Account Name:** GreenTech Solutions
+
+2. **Colruyt Group — SmartSales Rollout 2026**
+   - **Stage:** Proposal/Price Quote
+   - **Amount:** $220,000
+   - **Close Date:** 30 September 2026
+   - **Account Name:** Colruyt Group
+
+3. **supplier1 — Q2 Delivery Contract**
+   - **Stage:** Negotiation/Review
+   - **Amount:** $85,000
+   - **Close Date:** 30 June 2026
+   - **Account Name:** supplier1
+
+4. **supp_opportyunity**
+   - **Stage:** On-going Approval
+   - **Close Date:** 8 May 2026
+   - **Account Name:** supplier1
+
+### SmartSales Locations
+- **Supplier1:**
+  - **Location Name:** supplier1
+  - **Address:** Rue du Commerce 1, Brussels, 1000, Belgium
+
+- **Supplier1 - Brussels HQ:**
+  - **Location Name:** supplier1 - Brussels HQ
+  - **Address:** Rue de la Loi 42, Brussels, 1000, Belgium
+
+- **GreenTech Solutions - Ghent:**
+  - **Location Name:** GreenTech Solutions - Ghent
+  - **Address:** Technologiepark 122, Ghent, 9052, Belgium
+
+This overview compiles all your relevant meetings, opportunities, and locations for the involved companies.

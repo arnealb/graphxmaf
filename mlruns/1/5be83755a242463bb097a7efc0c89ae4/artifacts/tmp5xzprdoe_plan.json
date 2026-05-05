@@ -1,0 +1,13 @@
+{
+  "query": "Show me 5 Salesforce contacts with their email addresses.",
+  "reasoning": "The query specifically asks for Salesforce contacts, so only the Salesforce agent is necessary to retrieve the required information in a single step.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Fetch 5 Salesforce contacts along with their email addresses.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Return the list of 5 Salesforce contacts along with their email addresses from step 1."
+}

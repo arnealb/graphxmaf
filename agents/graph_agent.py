@@ -37,8 +37,16 @@ def create_graph_agent(graph_mcp):
             - Vague follow-up about files → re-run search_files with expanded or related keywords from Current topic.
 
             DOCUMENT WORKFLOW
-            - User asks to search for files → call search_files.
-            - User asks what a file says, explains, or contains → call read_file or read_multiple_files, then answer from the content. NEVER re-list file names or IDs instead of reading.
+            - User mentions a filename or file type ("find a file called X", "show me my Excel files",
+              "search OneDrive for a file called Y") → call search_files, then read_file or read_multiple_files.
+              Do NOT use search_documents for these — search_documents does not search by filename.
+            - Questions about internal policies, HR rules, expense reimbursement, contracts,
+              onboarding, procedures, or how-to questions about internal processes →
+              call search_documents first. If search_documents returns no relevant answer
+              (e.g. "I don't have enough context" or empty result), fall back to search_files
+              with the key topic as the query.
+            - User explicitly asks to browse or list files → call search_files.
+            - User asks what a specific file says → call read_file or read_multiple_files.
             - Files already in [Session Context] → use their IDs directly, do not search again.
             - Question spans multiple files already found → call read_multiple_files with all relevant IDs in one call.
 

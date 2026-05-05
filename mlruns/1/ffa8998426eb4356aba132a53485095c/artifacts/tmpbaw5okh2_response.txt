@@ -1,0 +1,55 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here is the list of Salesforce opportunities sorted by amount, highest first:
+
+- **Anheuser-Busch InBev — Distribution Network Mapping**
+  - Amount: $520,000
+  - Close Date: 15 September 2026
+  - Stage: Qualification
+  - Account Name: Anheuser-Busch InBev
+
+- **Delhaize Group — Supply Chain Optimisation**
+  - Amount: $310,000
+  - Close Date: 31 August 2026
+  - Stage: Negotiation/Review
+  - Account Name: Delhaize Group
+  
+- **Colruyt Group — SmartSales Rollout 2026**
+  - Amount: $220,000
+  - Close Date: 30 September 2026
+  - Stage: Proposal/Price Quote
+  - Account Name: Colruyt Group
+
+- **Carrefour Belgium SA — In-Store Analytics Pilot**
+  - Amount: $175,000
+  - Close Date: 31 July 2026
+  - Stage: Proposal/Price Quote
+  - Account Name: Carrefour Belgium SA
+
+- **salesforce.com - 1,000 Widgets**
+  - Amount: $100,000
+  - Close Date: 15 April 2021
+  - Stage: Approved
+  - Account Name: salesforce.com
+
+- **supplier1 — Q2 Delivery Contract**
+  - Amount: $85,000
+  - Close Date: 30 June 2026
+  - Stage: Negotiation/Review
+  - Account Name: supplier1
+
+- **salesforce.com - 500 Widgets**
+  - Amount: $50,000
+  - Close Date: 13 March 2021
+  - Stage: Offer sent
+  - Account Name: Global Media
+
+- **Project Smile V2**
+  - Amount: $45,000
+  - Close Date: 21 August 2025
+  - Stage: Value Proposition
+  - Account Name: Omega SA-NV
+
+All other opportunities either had a null amount or were not relevant to the sorting request.

@@ -1,0 +1,19 @@
+{
+  "query": "Which companies appear both in our CRM and in our email history?",
+  "reasoning": "The query requires information about companies from both the CRM (salesforce) and email history (graph). Therefore, both agents must be involved to find the intersection of companies present in both datasets.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "List all companies from the CRM accounts.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "graph",
+      "task": "Retrieve all companies mentioned in the email history.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Identify the companies that appear in both step 1 and step 2 results to determine the common companies in our CRM and email history."
+}

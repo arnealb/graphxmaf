@@ -1,0 +1,48 @@
+{
+  "user_query": "Are there companies in my upcoming calendar that we have no record of?",
+  "plan": {
+    "query": "Are there companies in my upcoming calendar that we have no record of?",
+    "reasoning": "The query requires checking the user's upcoming calendar for companies and comparing them against the CRM records to identify any not present in the system. This involves fetching calendar events first and then looking up the companies in Salesforce.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve the upcoming calendar events, including the companies associated with those events.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "salesforce",
+        "task": "Check the list of companies from the CRM to identify any that are not included in the companies derived from the upcoming calendar events from step 1.",
+        "depends_on": [
+          1
+        ]
+      }
+    ],
+    "synthesis": "Compare the list of companies from the calendar events with the list from Salesforce and identify any companies present in the calendar but absent in the Salesforce records."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve the upcoming calendar events, including the companies associated with those events.",
+      "started_at": "2026-05-04T14:24:49.901721+00:00",
+      "ended_at": "2026-05-04T14:29:49.933109+00:00",
+      "success": false,
+      "error": "Step timed out after 300.0s",
+      "llm_turns": 0,
+      "tool_calls": []
+    },
+    {
+      "agent": "salesforce",
+      "order": 2,
+      "input": "Check the list of companies from the CRM to identify any that are not included in the companies derived from the upcoming calendar events from step 1.",
+      "started_at": "2026-05-04T14:29:49.980993+00:00",
+      "ended_at": "2026-05-04T14:29:51.275191+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 1,
+      "tool_calls": []
+    }
+  ]
+}

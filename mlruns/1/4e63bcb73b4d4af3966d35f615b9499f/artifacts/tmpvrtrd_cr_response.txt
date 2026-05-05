@@ -1,0 +1,26 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (graph)...
+Synthesizing...
+### Summary of Company Car Policy and Non-Compete Clause at EASI
+
+#### Company Car Policy
+- **Eligibility**: Employees needing regular travel or with cars included in their compensation package qualify.
+  - **Categories**:
+    - **Category A**: Compact electric/hybrid for consultants and analysts (less than 3 years seniority).
+    - **Category B**: Mid-range for senior consultants, Sales Engineers, team leads, account managers.
+    - **Category C**: Premium models for managers and directors.
+- **Fuel Card Usage**: Issued for professional use; a €150 monthly contribution is required for private use.
+- **Professional Mileage**: Travel between the office and client locations counts as professional.
+- **Replacement**: Vehicles are replaced every 4 years or at 120,000 km; notification is given three months prior.
+- **Returning Vehicles**: Must be returned on the last working day with all related items.
+- **Damage Reporting**: All vehicle damage must be reported within 24 hours.
+- **Insurance**: Covered under EASI's fleet insurance; specific procedures for accidents must be followed.
+
+#### Non-Compete Clause
+- **Applicable Roles**: Applies to positions such as Sales Engineer, Business Analyst, and Customer Success Manager.
+- **Duration**: 12 months post-employment.
+- **Geographic Scope**: Limited to Belgium.
+- **Sectoral Scope**: Concerns field sales software, CRM implementation, and retail analytics.
+- **Compensation**: 50% of the last gross monthly salary during the clause's duration.
+- **Waiver Option**: EASI can waive the non-compete clause in writing within 15 days of resignation, removing restrictions and compensation obligations.

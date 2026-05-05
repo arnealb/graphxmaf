@@ -1,0 +1,90 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (salesforce)...
+️Executing (graph)...
+Synthesizing...
+Here is an overview of the companies behind your open support cases, along with relevant communication details:
+
+### Open Support Cases Overview
+
+1. **Delhaize Group**
+   - **Case Number:** 00001023
+   - **Subject:** EDI connection issue
+   - **Status:** Working
+   - **Priority:** Medium
+   - **Contacts:** None listed
+
+2. **Carrefour Belgium SA**
+   - **Case Number:** 00001022
+   - **Subject:** POS integration delay
+   - **Status:** New
+   - **Priority:** High
+   - **Contacts:** None listed
+
+3. **Colruyt Group**
+   - **Case Number:** 00001021
+   - **Subject:** Integration issue with POS system
+   - **Status:** New
+   - **Priority:** Medium
+   - **Contacts:** None listed
+   - **Recent Email Communication:**
+     - **Subject:** SmartSales pilot bevestiging
+     - **Sender:** Colruyt Group Procurement (procurement@colruyt.be)
+     - **Received:** 28 April 2026
+     - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7pAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+4. **supplier1**
+   - **Case Number:** 00001020
+   - **Subject:** Delayed shipment — supplier1 April batch
+   - **Status:** Working
+   - **Priority:** High
+   - **Contacts:**
+     - Marc Supplier (marc.supplier@supplier1.be)
+   - **Recent Email Communication:**
+     - **Subject:** Follow-up: supplier1 Q2 2026 Delivery Contract
+     - **Sender:** Marc Supplier (marc.supplier@supplier1.be)
+     - **Received:** 28 April 2026
+     - **[View Email](https://outlook.office365.com/owa/?ItemID=AAMkAGU1ZDBjZDFhLTU5NzgtNDM1ZC05MmFjLTEwMjg3YWRiZWJiNwBGAAAAAABy2bKPANopSJQUklYx9jrxBwA692EWSiRLR6aYejiouW3UAAAAAAEMAAA692EWSiRLR6aYejiouW3UAANz2u7nAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)**
+
+5. **Easi Be**
+   - **Case Number:** 00001018
+   - **Subject:** Verification status case
+   - **Status:** In progress
+   - **Priority:** Medium
+   - **Contacts:**
+     - Jon Mul (j.mulolo@easi.net)
+
+6. **Pairi Daiza**
+   - **Case Number:** 00001006
+   - **Subject:** Issue with order
+   - **Status:** New
+   - **Priority:** Medium
+   - **Contacts:**
+     - Judy Odom (jodom@example.com)
+     - Susan Johanson (sjohanson@example.com)
+     - Mark Dillon (mdillon@example.com)
+     - Stella Pavlova (spavlova@example.com)
+     - Allison Yates (ayates@example.com)
+
+7. **Omega SA-NV**
+   - **Case Number:** 00001003
+   - **Subject:** Delivery issues with order #544
+   - **Status:** New
+   - **Priority:** Medium
+   - **Contacts:**
+     - Lauren Bailey (lbailey@example.com)
+     - James Wu (jwu@example.com)
+
+8. **Global Media**
+   - **Case Number:** 00001000
+   - **Subject:** Sample Case: Our Widgets have not been delivered.
+   - **Status:** Escalated
+   - **Priority:** High
+   - **Contacts:**
+     - John lastname (john.lastname@globalmedia.com)
+
+### Summary Notes
+- Companies such as Delhaize Group, Carrefour Belgium SA, and Colruyt Group are currently linked to cases with varying urgency, from new issues to ongoing resolutions.
+- Recent communications from Colruyt Group and supplier1 have been recorded, providing insights into ongoing discussions. 
+
+Feel free to reach out for additional details on any specific case or company.

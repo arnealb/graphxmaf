@@ -1,0 +1,42 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (salesforce)...
+️Executing (graph, smartsales)...
+Synthesizing...
+Here is a comprehensive 360 view of the **Delhaize Group**, the company behind your most recent open support case.
+
+### Support Case Details
+- **Case Number:** 00001023
+- **Subject:** Delhaize Group — EDI connection issue
+- **Status:** Working
+- **Priority:** Medium
+- **Created Date:** 28 April 2026
+
+### Company Information
+- **Name:** Delhaize Group
+- **Industry:** Retail
+- **Website:** [delhaize.be](https://www.delhaize.be)
+- **Phone:** Not available
+
+### Locations
+- **Location Name:** AD Delhaize - Forest
+  - **Street:** Chaussée de Neerstalle 800
+  - **City:** Brussels
+  - **Zip Code:** 1190
+  - **Country:** Belgium
+  - **Latitude:** 50.7961794
+  - **Longitude:** 4.3215302
+
+### Opportunities
+- **Opportunity Name:** Delhaize Group — Supply Chain Optimisation
+  - **Stage:** Negotiation/Review
+  - **Amount:** €310,000
+  - **Close Date:** 31 August 2026
+
+### Contacts
+- **Contacts Found:** None available.
+
+### Other Relevant Information
+- There are no emails, calendar events, or OneDrive files related to Delhaize Group in the system.
+
+This summary encapsulates the critical aspects of your engagement with Delhaize Group regarding the open support case. If you need further details, please let me know!

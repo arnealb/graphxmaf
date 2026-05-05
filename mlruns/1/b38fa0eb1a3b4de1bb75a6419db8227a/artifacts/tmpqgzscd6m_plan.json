@@ -1,0 +1,13 @@
+{
+  "query": "List open support cases in Salesforce.",
+  "reasoning": "The user is requesting information specifically related to open support cases, which falls under the domain of the Salesforce agent. No additional data from other agents is required.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Retrieve all open support cases from the Salesforce system.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of open support cases retrieved from Salesforce."
+}

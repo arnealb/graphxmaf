@@ -1,0 +1,35 @@
+Planning query...
+Plan: 3 stap(pen)
+️Executing (graph)...
+️Executing (salesforce, smartsales)...
+Synthesizing...
+### Upcoming Meetings
+
+1. **Weekly sync with Dorian Feaux**
+   - **Date:** 6 May 2026
+   - **Time:** 07:00 - 07:30
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+2. **Sprint review with Arne Albrecht**
+   - **Date:** 8 May 2026
+   - **Time:** 12:00 - 13:00
+   - **Organizer:** SmartAdmin (SmartAdmin@easigroupdemo.onmicrosoft.com)
+
+### Company Information
+
+**AACO DAVIDSON**
+- **Location:** Havenkant 6, Leuven, 3000, Belgium
+
+**Stream Software**
+- **Location:** Potvlietlaan 4, Antwerpen, 2600, Belgium
+
+**Nutella 750g**
+- **Description:** Hazelnut spread in a 750g jar
+- **Price:** €5.99
+- **Availability:** In stock
+
+### Summary
+
+- Prepare for a **weekly sync** meeting and a **sprint review** meeting with respective individuals. 
+- Familiarize yourself with **AACO DAVIDSON** and **Stream Software** as they may be relevant sources or partners.
+- Consider discussing relevant products or services, such as **Nutella 750g** or IT hardware/software offerings, during meetings if appropriate.

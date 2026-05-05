@@ -1,0 +1,58 @@
+{
+  "user_query": "Which of our accounts have both an active deal and a recent order?",
+  "plan": {
+    "query": "Which of our accounts have both an active deal and a recent order?",
+    "reasoning": "This query requires information from both salesforce for the active deals and orders, and smartsales for the recent order information. To identify accounts, I will fetch active deals from salesforce and check order information from smartsales simultaneously.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "salesforce",
+        "task": "Get a list of accounts that have active deals.",
+        "depends_on": []
+      },
+      {
+        "id": 2,
+        "agent": "smartsales",
+        "task": "Get a list of accounts with recent orders.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Cross-reference the results from step 1 and step 2 to identify accounts that appear in both lists."
+  },
+  "invoked_agents": [
+    {
+      "agent": "salesforce",
+      "order": 1,
+      "input": "Get a list of accounts that have active deals.",
+      "started_at": "2026-05-04T13:55:53.740202+00:00",
+      "ended_at": "2026-05-04T13:56:17.839042+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 3,
+      "tool_calls": [
+        "find_accounts",
+        "get_opportunities"
+      ]
+    },
+    {
+      "agent": "smartsales",
+      "order": 2,
+      "input": "Get a list of accounts with recent orders.",
+      "started_at": "2026-05-04T13:55:53.743789+00:00",
+      "ended_at": "2026-05-04T13:57:46.086790+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 9,
+      "tool_calls": [
+        "list_orders",
+        "list_order_queryable_fields",
+        "list_orders",
+        "list_orders",
+        "list_orders",
+        "list_orders",
+        "list_orders",
+        "list_orders"
+      ]
+    }
+  ]
+}
