@@ -1,0 +1,25 @@
+{
+  "query": "Is there anything I should follow up on today?",
+  "reasoning": "The query is open-ended and seeks a comprehensive view of tasks or items requiring follow-up across different areas of communication and accounts. I will use all available agents to gather relevant information from emails, calendar events, CRM accounts, leads, opportunities, and any registered locations.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for today's calendar events and any emails that require follow-up. Look for emails that are flagged or marked for action.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Retrieve all open opportunities, leads, and any cases associated with my accounts that may require follow-up today.",
+      "depends_on": []
+    },
+    {
+      "id": 3,
+      "agent": "smartsales",
+      "task": "Check for any registered locations related to my accounts that may have pending activities or require follow-up today.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Combine the results from steps 1, 2, and 3 to create a comprehensive list of follow-up items for today."
+}

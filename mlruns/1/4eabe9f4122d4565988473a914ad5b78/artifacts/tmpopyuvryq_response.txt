@@ -1,0 +1,15 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Here are the recent email senders who also have an active deal with your company:
+
+- **GreenTech Solutions**
+  - **Email:** info@greentechsolutions.be
+  - **Deal Name:** Sustainability Dashboard
+  - **Stage:** Qualification
+  - **Amount:** €45,000
+  - **Close Date:** 15 August 2026
+
+No other recent email senders have active deals with your company.

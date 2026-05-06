@@ -1,0 +1,30 @@
+{
+  "plan": {
+    "latency_s": 2.88,
+    "steps": 1,
+    "input_tokens": 1551,
+    "output_tokens": 108,
+    "total_tokens": 1659
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "salesforce",
+      "latency_s": 11.074,
+      "llm_turns": 2,
+      "n_tool_calls": 1,
+      "tool_calls": [
+        "find_accounts"
+      ],
+      "input_tokens": 6281,
+      "output_tokens": 956,
+      "total_tokens": 7237
+    }
+  ],
+  "synthesis": {
+    "latency_s": 8.006,
+    "input_tokens": 1338,
+    "output_tokens": 448,
+    "total_tokens": 1786
+  }
+}

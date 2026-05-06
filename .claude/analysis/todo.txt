@@ -1,0 +1,9 @@
+todo:
+- 1 orchestrator agent zonder de subagent om prestaties te vergelijken
+- orchestrator md file: Agentselectie is volledig LLM-gebaseerd. Er is geen rule-based classifier of keyword-filter.
+    - dafok, wat zijn de opties hiervoor
+
+----------------------------------------------------------------------
+maybe:
+- De repositories zijn volledig stateless per aanroep; het token wordt bij elke aanroep meegegeven vanuit de MCP-router.
+- teveel tool declaratie informatie in de agents zelf, pas aan zodat naar de tools.yaml files gezet wordt

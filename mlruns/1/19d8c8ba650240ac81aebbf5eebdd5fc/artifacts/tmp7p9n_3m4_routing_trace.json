@@ -1,0 +1,31 @@
+{
+  "user_query": "List my Microsoft 365 contacts and include their phone numbers.",
+  "plan": {
+    "query": "List my Microsoft 365 contacts and include their phone numbers.",
+    "reasoning": "The user is requesting a list of their Microsoft 365 contacts, which includes phone numbers. The graph agent can retrieve this information from the user's personal Outlook contacts.",
+    "steps": [
+      {
+        "id": 1,
+        "agent": "graph",
+        "task": "Retrieve all my personal Outlook contacts and their phone numbers.",
+        "depends_on": []
+      }
+    ],
+    "synthesis": "Present the retrieved contacts with their phone numbers as a final list."
+  },
+  "invoked_agents": [
+    {
+      "agent": "graph",
+      "order": 1,
+      "input": "Retrieve all my personal Outlook contacts and their phone numbers.",
+      "started_at": "2026-05-05T12:44:49.238318+00:00",
+      "ended_at": "2026-05-05T12:44:58.572198+00:00",
+      "success": true,
+      "error": null,
+      "llm_turns": 2,
+      "tool_calls": [
+        "list_contacts"
+      ]
+    }
+  ]
+}

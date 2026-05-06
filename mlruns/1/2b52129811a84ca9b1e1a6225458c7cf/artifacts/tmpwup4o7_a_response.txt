@@ -1,0 +1,84 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (smartsales)...
+Synthesizing...
+Here is the list of companies that emailed you recently and do not seem to have a registered location with you:
+
+### Companies without Registered Locations:
+- **Marc Supplier**
+  - Email: marc.supplier@supplier1.be
+  - Subject: Follow-up: supplier1 Q2 2026 Delivery Contract
+  - Received: 4 May 2026
+  
+- **Proximus Business**
+  - Email: info@proximus.be
+  - Subject: Proximus — partnership inquiry
+  - Received: 28 April 2026
+
+- **AB InBev Sales**
+  - Email: sales@ab-inbev.com
+  - Subject: Distribution mapping — scope confirmation
+  - Received: 28 April 2026
+
+- **Delhaize Procurement**
+  - Email: procurement@delhaize.eu
+  - Subject: Supply chain project — follow-up meeting
+  - Received: 28 April 2026
+
+- **AD Delhaize IT**
+  - Email: it@delhaize.eu
+  - Subject: EDI connector — technische vraag
+  - Received: 28 April 2026
+
+- **CRF Belgium Procurement**
+  - Email: procurement@carrefour-be.eu
+  - Subject: Offerte aanvraag — POS koppeling modules
+  - Received: 28 April 2026
+
+- **Carrefour BE Operations**
+  - Email: ops@carrefour-be.eu
+  - Subject: Q2 pilot update — analytics rollout
+  - Received: 28 April 2026
+
+- **SmartAdmin**
+  - Email: SmartAdmin@easigroupdemo.onmicrosoft.com
+  - Subject: Belgium region — Q1 2026 commercial summary
+  - Received: 28 April 2026
+
+- **Dorian Féaux**
+  - Email: d.feaux@easi.net
+  - Subject: Intro: Dorian Feaux — EASI collaboration proposal
+  - Received: 28 April 2026
+
+- **Ferrero Benelux Marketing**
+  - Email: marketing@ferrero.be
+  - Subject: Ferrero Benelux — Nutella spring campaign inquiry
+  - Received: 28 April 2026
+
+- **GreenTech Solutions**
+  - Email: info@greentechsolutions.be
+  - Subject: GreenTech Solutions — Interest in sustainability dashboard
+  - Received: 28 April 2026
+
+- **Colruyt Group Procurement**
+  - Email: procurement@colruyt.be
+  - Subject: Colruyt Group — SmartSales pilot bevestiging
+  - Received: 28 April 2026
+
+- **Microsoft Azure**
+  - Email: azure-noreply@microsoft.com
+  - Subject: Retirement notice: Transition Azure OpenAI Assistants APIs to Microsoft Foundry Agent Service by 26 August 2026
+  - Received: 23 April 2026
+
+- **SharePoint Online**
+  - Email: no-reply@sharepointonline.com
+  - Subject: Your files have been reactivated
+  - Received: 22 April 2026
+
+- **Microsoft Security**
+  - Email: MSSecurity-noreply@microsoft.com
+  - Subject: Your weekly PIM digest for EasiGroupDemo (ID: b112dc60-a22d-4ff4-b07a-cb1dc8d6fdf5)
+  - Received: 19 April 2026
+
+If you need more information or details about any specific company, feel free to ask!

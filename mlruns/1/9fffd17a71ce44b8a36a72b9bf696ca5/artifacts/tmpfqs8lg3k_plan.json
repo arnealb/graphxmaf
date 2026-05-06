@@ -1,0 +1,21 @@
+{
+  "query": "What locations do we have and what deals are linked to them?",
+  "reasoning": "The query is asking for information about locations and the associated deals, which requires data from both the SmartSales system (for locations) and the Salesforce system (for deals and opportunities linked to those locations).",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Search for all locations registered with us. Include details about each location.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Find all deals and opportunities linked to the locations retrieved from step 1. Ensure to include relevant details about each opportunity.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the location data from step 1 with the deals data from step 2 to provide a comprehensive overview of locations and their linked deals."
+}

@@ -1,0 +1,13 @@
+{
+  "query": "Find Salesforce accounts in Belgium, including their billing address.",
+  "reasoning": "The query specifically asks for Salesforce accounts, which requires the use of the Salesforce agent to retrieve account information and billing addresses.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "salesforce",
+      "task": "Find all Salesforce accounts located in Belgium and include their billing addresses in the response.",
+      "depends_on": []
+    }
+  ],
+  "synthesis": "Present the list of Salesforce accounts with their respective billing addresses."
+}

@@ -1,0 +1,21 @@
+{
+  "query": "What locations do we have and what deals are linked to them?",
+  "reasoning": "The query requires information about physical locations and their corresponding deals, necessitating the use of both smartsales for location data and salesforce for deal data.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "smartsales",
+      "task": "Search for all registered locations. Retrieve any relevant details about these locations.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Find all deals linked to the locations retrieved in step 1. Return all associated information for those deals.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from steps 1 and 2 to provide a comprehensive overview of the locations and the deals linked to them."
+}

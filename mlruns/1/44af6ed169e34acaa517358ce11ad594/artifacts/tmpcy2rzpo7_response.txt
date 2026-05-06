@@ -1,0 +1,25 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (smartsales)...
+Synthesizing...
+The following companies that emailed you recently do not seem to have a registered location with us:
+
+- **Proximus**
+- **AB InBev**
+- **EASI Group**
+- **Dorian Feaux**
+- **Ferrero Benelux**
+- **GreenTech Solutions**
+
+**Companies that have a registered location:**
+- **Delhaize**
+- **AD Delhaize**
+- **Carrefour**
+- **Colruyt**
+- **Microsoft**
+- **SharePoint Online**
+
+**Sources:**
+- From Step 1 — (recent emailers)
+- From Step 2 — SmartSales (companies without locations)

@@ -1,0 +1,13 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+From the analysis of your upcoming calendar events and the Salesforce records, here are the companies that are in your calendar but have no corresponding record in Salesforce:
+
+- **SmartAdmin**: No record found.
+
+### Companies with Existing Records in Salesforce:
+- **supplier1**: Record exists.
+- **GreenTech Solutions**: Record exists.
+- **Colruyt Group**: Record exists.

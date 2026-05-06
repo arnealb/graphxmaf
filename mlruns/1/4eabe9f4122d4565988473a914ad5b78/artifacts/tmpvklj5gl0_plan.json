@@ -1,0 +1,21 @@
+{
+  "query": "Which of my recent email senders also have an active deal with us?",
+  "reasoning": "The query involves retrieving recent emails and checking for active deals in Salesforce. Both agents are required to provide a complete answer to the user's request.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for recent emails from your inbox and extract the sender information.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "salesforce",
+      "task": "Find all active deals (opportunities) associated with the senders retrieved in step 1. Return details of these deals.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the list of senders from step 1 with the active deals from step 2 to identify which recent email senders also have active deals."
+}

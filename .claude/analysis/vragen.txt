@@ -1,0 +1,33 @@
+1 architectuur: 
+
+"De PlanningOrchestrator (agents/planning_orchestrator.py) ontvangt een gebruikersvraag en voert drie fasen uit:"
+- obv welke context stelt hij dit plan op
+
+"Uitvoeringsfase: De stappen worden als een DAG geordend en per wave parallel uitgevoerd. Elke stap roept een gespecialiseerde subagent aan."
+- wat is DAG
+
+deel 3: waar de LLM-calls plaatsvinden
+- in de subagents (graph / salesforce / smartsales) is er toch ook een llm call?
+
+deel 8: hier wordt er gesproken van agents/routingtrace.py
+- dit wordt nergens anders in de analysis_01_architectuur.md beschreven
+- heel da agentselectie deel moet beter
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+2 orchestrator in detail: 
+- alles van deel 4 moet goed bekeken worden
+
+- deel 5: motiveer dit meer: 
+    - De PlanningOrchestrator biedt subagents niet als FunctionTool aan (dit was het oude patroon). In de huidige architectuur zijn subagents directe Python-objecten (Agent-instanties) die via agent.run(task) worden aangeroepen.   
+    - wil meer informatie over waarom dit zo gebeurt
+
+- deel 9: 
+    - Validatie van agenten (_validate_plan(), regel 330–349): Controleert dat alleen beschikbare agenten worden gebruikt
+    - hier misschien nog extra validatie op het plan zelf aanroepen en niet enkel op de gebruikte 
+
+- deel 11: 
+    - Voorspelbaarheid: Bij identieke vragen kan de planner andere agenten kiezen of een andere planstructuur genereren. Dit is inherent aan LLM-niet-determinisme. De temperatuur-instelling is niet zichtbaar in de code (standaard van agent_framework wordt gebruikt).
+    - temperatuur mss nog best eens in code zetten dan? 
+        

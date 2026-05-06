@@ -1,0 +1,14 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+Here are the companies from your upcoming calendar that do not have a corresponding record in Salesforce:
+
+### Companies Without a Record
+- **SmartAdmin**: No matching record found.
+- **supplier1**: No matching record found.
+
+### Companies With a Record
+- **GreenTech Solutions**: Found a match in Salesforce.
+- **Colruyt Group**: Found a match in Salesforce.

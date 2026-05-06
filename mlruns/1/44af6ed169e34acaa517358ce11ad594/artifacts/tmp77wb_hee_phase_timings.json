@@ -1,0 +1,56 @@
+{
+  "plan": {
+    "latency_s": 4.681,
+    "steps": 2,
+    "input_tokens": 1559,
+    "output_tokens": 220,
+    "total_tokens": 1779
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "agent": "graph",
+      "latency_s": 8.169,
+      "llm_turns": 2,
+      "n_tool_calls": 1,
+      "tool_calls": [
+        "list_email"
+      ],
+      "input_tokens": 10420,
+      "output_tokens": 449,
+      "total_tokens": 10869
+    },
+    {
+      "step_id": 2,
+      "agent": "smartsales",
+      "latency_s": 10.879,
+      "llm_turns": 2,
+      "n_tool_calls": 14,
+      "tool_calls": [
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations",
+        "list_locations"
+      ],
+      "input_tokens": 5807,
+      "output_tokens": 91,
+      "total_tokens": 5898
+    }
+  ],
+  "synthesis": {
+    "latency_s": 3.393,
+    "input_tokens": 946,
+    "output_tokens": 130,
+    "total_tokens": 1076
+  }
+}

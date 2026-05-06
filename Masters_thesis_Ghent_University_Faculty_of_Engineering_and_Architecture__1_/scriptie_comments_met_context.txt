@@ -1,0 +1,76 @@
+Comments uit scriptie_v1_AA_revfdt (2).pdf
+
+1. Abstract - p. 2
+Comment: probeer misschien ook een quantitatief resultaat te vermelden
+Heeft betrekking op: "De eerste resultaten geven aan dat de voorgestelde aanpak potentieel heeft voor enterprise search binnen bedrijfsomgevingen, maar tonen ook aan dat de uiteindelijke kwaliteit sterk afhangt van de betrouwbaarheid en maturiteit van de onderliggende agent- en toolimplementaties."
+Context: Abstract, resultaten/conclusie van het prototype.
+
+2. Hoofdstuk 1 - Inleiding - 1.3 Onderzoeksvragen - p. 10
+Comment: splitsing: bedrijfs-omgeving
+Heeft betrekking op: "Welke multi-agentarchitectuur is het meest geschikt voor een global search agent binnen een bedrijfsomgeving?"
+Context: derde deelvraag; in de PDF is "bedrijfsomgeving" fout afgebroken als "bedrijf-somgeving".
+
+3. Hoofdstuk 1 - Inleiding - 1.3 Onderzoeksvragen - p. 10
+Comment: ook de snelheid van uitvoering als een deelvraag vermelden?
+Heeft betrekking op: "In welke mate kan een multi-agent systeem vragen van gebruikers correct interpreteren, routeren en beantwoorden over verschillende databronnen heen?"
+Context: lijst met deelvragen; de huidige deelvragen focussen op veiligheid, integratie, architectuur, routing en correctheid, maar niet expliciet op responstijd/performantie.
+
+4. Hoofdstuk 2 - Achtergrond en literatuurstudie - 2.5 Model Context Protocol - p. 16
+Comment: governance inclusief authenticatie/authorisatie?
+Heeft betrekking op: "Hoewel het protocol de communicatie met externe systemen standaardiseert, lost het niet automatisch alle uitdagingen rond beveiliging, toegangscontrole en governance op."
+Context: beperkingen/aandachtspunten van MCP; mogelijk explicieter maken dat governance ook authenticatie en autorisatie omvat.
+
+5. Hoofdstuk 3 - Probleemanalyse en vereisten - 3.5.2 Niet-functionele vereisten - p. 20
+Comment: kan je deze quantitatief beschrijven? naast de qualitatieve beschrijving?
+Heeft betrekking op: "Verder is betrouwbaarheid een cruciale vereiste. De oplossing moet antwoorden zoveel mogelijk baseren op effectief opgehaalde gegevens uit de onderliggende systemen en mag niet uitsluitend steunen op gegenereerde output zonder duidelijke basis in brondata."
+Context: niet-functionele vereiste betrouwbaarheid; mogelijk aanvullen met meetbare criteria zoals correctheidsscore, minimaal percentage correcte antwoorden, of hallucinatiereductie.
+
+6. Hoofdstuk 4 - Architectuurontwerp - 4.5 Verantwoording van de architecturale keuzes - p. 25
+Comment: dit belangrijke aspect misschien in iets meer detail beschrijven?
+Heeft betrekking op: "Ten slotte werd een MCP-gebaseerde integratielaag gebruikt om de agentlogica los te koppelen van de concrete systeemintegraties. Daardoor blijven de onderliggende databronnen de source of truth, terwijl de architectuur toch voldoende modulair blijft om later bijkomende databronnen of tools toe te voegen."
+Context: architecturale motivatie voor MCP/source of truth/modulariteit; meer detail geven over waarom dit belangrijk is.
+
+7. Hoofdstuk 5 - Implementatie - 5.7 Beperkingen van de huidige implementatie - p. 30
+Comment: misschien hier de link maken met "mogelijke uitbreidingen" en aangeven hoe je het zou aanpakken
+Heeft betrekking op: "Daarnaast is contextbeheer voorlopig slechts beperkt uitgewerkt. De orchestrator houdt geen gedeelde sessiestatus bij over meerdere gespecialiseerde agents heen, en ook binnen de agents is contextondersteuning slechts gedeeltelijk aanwezig."
+Context: beperking rond contextbeheer; best koppelen aan hoofdstuk 8 en kort aangeven hoe je dit zou verbeteren.
+
+8. Hoofdstuk 6 - Evaluatiemethodologie - 6.2.1 Samenstelling van de testset - p. 32
+Comment: is er een validatie gebeurd door een medewerker van Easi? zo ja, best vermelden hier
+Heeft betrekking op: "De testset van 88 queries werd samengesteld via een combinatie van AI-ondersteuning en handmatige selectie. Een taalmodel werd ingezet om initiële querysuggesties te genereren per subcategorie en databron. De uiteindelijke queries werden vervolgens handmatig geselecteerd en bijgesteld, zodat ze representatief zijn voor realistische vragen en voldoende spreiding vertonen over de functionaliteit van elke agent."
+Context: samenstelling en representativiteit van de testset; vermelden of iemand van Easi de queries/verwachte antwoorden heeft gevalideerd.
+
+9. Hoofdstuk 6 - Evaluatiemethodologie - 6.3 Evaluatie van correctheid - p. 33
+Comment: wie geeft de scores: onafhankelijke testgebruikers?
+Heeft betrekking op: "Een eenvoudige juist/fout-beoordeling volstaat hier niet. Met een schaal van 1 tot 5 kan de nuance beter worden vastgelegd."
+Context: scoringmethode voor correctheid; expliciteren dat de scores door een LLM-evaluator worden toegekend, of eventueel aanvullen met menselijke validatie.
+
+10. Hoofdstuk 6 - Evaluatiemethodologie - 6.5.1 Evaluatie van de responstijd - p. 34
+Comment: naast de volledige tijd, zijn ook de deeltijden interessant (om eventuele bottlenecks op te sporen)
+Heeft betrekking op: "De performantie van het prototype wordt geëvalueerd op basis van de responstijd per query. Onder responstijd wordt hier de totale tijd verstaan tussen het starten van de verwerking van een query en het moment waarop het volledige antwoord is teruggegeven. Het gaat dus om een end-to-end meting."
+Context: performantie-evaluatie; naast end-to-end tijd ook deelmetingen zoals LLM-tijd, toolcall-tijd en API-tijd overwegen.
+
+11. Hoofdstuk 6 - Evaluatiemethodologie - 6.5 Evaluatie van performantie en kost - p. 34
+Comment: ook rekening houden met simultane gebruikers: bij 100+ gelijktijdige gebruikers kan het trager worden, ook schaalbaarheid vermelden?
+Heeft betrekking op: "De gemeten tijd bevat de volledige verwerking van het systeem, inclusief de inferentietijd van het taalmodel, de toolcalls, externe API-oproepen en het uiteindelijk samenstellen van de opgehaalde informatie tot één antwoord."
+Context: performantie-evaluatie; huidige meting lijkt per query te gebeuren, maar zegt nog weinig over load/concurrency/schaalbaarheid.
+
+12. Hoofdstuk 6 - Evaluatiemethodologie - 6.6 Beperkingen van de evaluatie - p. 35
+Comment: idem, hier ook de link leggen naar "mogelijke uitbreidingen" en vermelden hoe je zou aanpakken?
+Heeft betrekking op: "Ook de gebruikte databronnen zijn dynamisch. Aangezien gegevens in Microsoft Graph, Salesforce en SmartSales kunnen veranderen in de tijd, is het mogelijk dat dezelfde query op een ander moment een ander resultaat oplevert."
+Context: beperking door dynamische databronnen; koppelen aan verbeteringen zoals vaste snapshots, seeddata of versioned benchmarksets.
+
+13. Hoofdstuk 7 - Evaluatieresultaten - 7.2 Evaluatie van correctheid - p. 38
+Comment: correctheid valideren door onafhankelijke menselijke gebruikers?
+Heeft betrekking op: "De GraphAgent behaalt over 22 queries een gemiddelde score van 3,82, met een mediane score van 4 en een standaardafwijking van 1,26."
+Context: rapportering van correctheidsscores; eventueel vermelden dat scores automatisch via LLM-as-a-judge zijn bepaald en dat menselijke validatie een nuttige aanvulling of beperking is.
+
+14. Hoofdstuk 7 - Evaluatieresultaten - 7.4.1 Evaluatie van de responstijd - p. 41
+Comment: vrij hoge waarden, is optimalisatie mogelijk? grafiek toevoegen en schaalbaarheid bespreken?
+Heeft betrekking op: "De gemiddelde responstijden van de drie subagenten liggen dicht bij elkaar: 14,6 seconden voor de GraphAgent, 13,1 seconden voor de SalesforceAgent en 13,9 seconden voor de SmartSalesAgent. De OrchestratorAgent vereist met 24,3 seconden gemiddeld beduidend meer tijd, wat verwacht is gezien de opeenvolgende subagentaanroepen."
+Context: performantie-resultaten; voeg eventueel grafiek toe, bespreek optimalisaties en link met schaalbaarheid.
+
+15. Hoofdstuk 7 - Evaluatieresultaten - 7.5 Beperkingen van de evaluatie - p. 43
+Comment: idem, ook bespreken hoe je beperkingen zou aanpakken
+Heeft betrekking op: "Een tweede beperking is de afhankelijkheid van een LLM als evaluator. Hoewel deze aanpak schaalbaar en genuanceerd is, introduceert het subjectiviteit."
+Context: beperking rond LLM-as-a-judge; aangeven hoe dit aangepakt kan worden, bijvoorbeeld via menselijke controle, meerdere evaluatormodellen of inter-rater agreement.

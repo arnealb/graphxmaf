@@ -1,0 +1,62 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here are the Salesforce accounts in Belgium along with their respective billing addresses:
+
+- **Account ID:** 001KI00000N80nRYAR
+  - **City:** Leuven
+  - **Street:** Not provided
+  - **Postal Code:** Not provided
+
+- **Account ID:** 001KI00000N7zVuYAJ
+  - **City:** Brussels
+  - **Street:** Not provided
+  - **Postal Code:** Not provided
+
+- **Account ID:** 001KI00000N80nMYAR
+  - **City:** Evere
+  - **Street:** Not provided
+  - **Postal Code:** Not provided
+
+- **Account ID:** 001KI00000N7zSNYAZ
+  - **City:** Brussels
+  - **Street:** Grand Place 1
+  - **Postal Code:** 1000
+
+- **Account ID:** 001KI00000N7zhFYAR
+  - **City:** Brussels
+  - **Street:** Not provided
+  - **Postal Code:** Not provided
+
+- **Account ID:** 001KI00000N7zqXYAR
+  - **City:** Ghent
+  - **Street:** Not provided
+  - **Postal Code:** Not provided
+
+- **Account ID:** 001KI00000N7zHSYAZ
+  - **City:** Halle
+  - **Street:** Not provided
+  - **Postal Code:** Not provided
+
+- **Account ID:** 001KI00000N7MjVYAV
+  - **City:** Brussels
+  - **Street:** Not provided
+  - **Postal Code:** Not provided
+
+- **Account ID:** 001KI00000N73fKYAR
+  - **City:** Leuven
+  - **Street:** Not provided
+  - **Postal Code:** Not provided
+
+- **Account ID:** 001060000261z1qAAA
+  - **City:** Bruxelles
+  - **Street:** 132 Avenue Louise
+  - **Postal Code:** 1050
+
+- **Account ID:** 0010600002E0EOjAAN
+  - **City:** Nivelles
+  - **Street:** 12 Avenue Robert Schuman
+  - **Postal Code:** 1400
+
+Please note that several accounts do not have a complete billing address with a street or postal code provided.

@@ -1,0 +1,21 @@
+{
+  "query": "Which companies that emailed me recently do not seem to have a location registered with us?",
+  "reasoning": "The query involves looking for recent email communications to identify companies that emailed the user, and then checking the SmartSales platform for registered locations. This requires using both the graph agent to gather recent emails and the smartsales agent to verify location registration.",
+  "steps": [
+    {
+      "id": 1,
+      "agent": "graph",
+      "task": "Search for recent emails sent to the user and extract the company names from the email addresses.",
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "agent": "smartsales",
+      "task": "Check for registered locations for the company names extracted from step 1. Identify which companies do not have a location registered with us.",
+      "depends_on": [
+        1
+      ]
+    }
+  ],
+  "synthesis": "Combine the results from step 2 to list the companies that emailed the user recently without a registered location."
+}

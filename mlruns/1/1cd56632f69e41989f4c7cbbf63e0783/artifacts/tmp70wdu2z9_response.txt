@@ -1,0 +1,20 @@
+Planning query...
+Plan: 2 stap(pen)
+️Executing (graph)...
+️Executing (salesforce)...
+Synthesizing...
+There are no active deals found in the Salesforce records. Therefore, none of your recent email senders have an active deal with us. 
+
+- **Recent Email Senders**: 
+  - Marc Supplier
+  - Proximus Business
+  - AB InBev Sales
+  - Delhaize Procurement
+  - AD Delhaize IT
+  - CRF Belgium Procurement
+  - Carrefour BE Operations
+  - SmartAdmin
+  - Dorian Féaux
+  - Ferrero Benelux Marketing
+
+Since there are no active deals, no matches can be identified.

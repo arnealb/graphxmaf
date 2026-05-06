@@ -1,0 +1,45 @@
+Planning query...
+Plan: 1 stap(pen)
+️Executing (salesforce)...
+Synthesizing...
+Here is the list of Salesforce accounts in Belgium along with their billing addresses:
+
+- **Anheuser-Busch InBev**
+  - **Billing City:** Leuven
+  - **Website:** [ab-inbev.com](https://www.ab-inbev.com)
+
+- **Delhaize Group**
+  - **Billing City:** Brussels
+  - **Website:** [delhaize.be](https://www.delhaize.be)
+
+- **Carrefour Belgium SA**
+  - **Billing City:** Evere
+  - **Website:** [carrefour.be](https://www.carrefour.be)
+
+- **Brussels Retail Partners**
+  - **Billing Address:** Grand Place 1, Brussels, 1000
+
+- **Ferrero Benelux**
+  - **Billing City:** Brussels
+
+- **GreenTech Solutions**
+  - **Billing City:** Ghent
+  - **Website:** [greentechsolutions.be](https://www.greentechsolutions.be)
+
+- **Colruyt Group**
+  - **Billing City:** Halle
+  - **Website:** [colruytgroup.com](https://www.colruytgroup.com)
+
+- **supplier1**
+  - **Billing City:** Brussels
+
+- **cityaccount**
+  - **Billing City:** Leuven
+  - **Website:** [google.com](www.google.com)
+
+- **Omega SA-NV**
+  - **Billing Address:** 132 Avenue Louise, Bruxelles, 1050
+  - **Website:** [omegaincorporated.com](http://www.omegaincorporated.com)
+
+- **Easi Be**
+  - **Billing Address:** 12 Avenue Robert Schuman, Nivelles, 1400

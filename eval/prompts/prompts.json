@@ -1,38 +1,141 @@
 [
-  {
-    "text": "Find high-priority open cases in Salesforce.",
+    {
+    "text": "Is there anything I should follow up on today?",
+    "category": "entity-centric1",
+    "difficulty": "hard",
+    "expected_answer": "Time-dependent query — correct output varies by run date. Expected behavior: provides a structured, prioritized follow-up list that combines signals from Graph and Salesforce. Priority order: (1) upcoming calendar events today or within the next 1-2 days, (2) recent emails that suggest pending action (unanswered requests, follow-ups, proposals), (3) high-priority open SF cases, (4) SF opportunities with imminent close dates. Based on testdata: high-priority cases always relevant regardless of date — \"Delayed shipment — supplier1 April batch\" (Working, High) and \"Carrefour Belgium SA — POS integration delay\" (New, High). Near-term opportunities: supplier1 Q2 Delivery Contract (Negotiation/Review, close 30 Jun 2026). Calendar events within the week of run date if still upcoming. A correct answer is ranked by urgency, not a flat dump. Returning a flat unordered list = minor deduction. Missing both high-priority cases = significant deduction. Including SmartSales data = unnecessary, minor deduction for noise.",
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "graph",
+      "salesforce",
+      "360-view"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
+  },
+
+    {
+    "text": "What locations do we have and what deals are linked to them?",
+    "category": "entity-centric2",
+    "difficulty": "hard",
+    "expected_answer": "Lists SS locations and links each to corresponding SF opportunities via entity resolution. Testdata locations and expected links: supplier1 (Brussels) → Q2 Delivery Contract €85k; Colruyt-Halle → SmartSales Rollout 2026 €220k; GreenTech-Ghent → Sustainability Dashboard €45k; Ferrero-Brussels → Nutella In-Store Display Campaign €30k; CRF-Anderlecht → Carrefour Belgium SA In-Store Analytics Pilot €175k (fuzzy); AD Delhaize-Forest → Delhaize Group Supply Chain Optimisation €310k (fuzzy); AB InBev-Leuven → Distribution Network Mapping €520k (fuzzy). Pre-existing SS locations without deals are acceptable. Missing fuzzy links (Carrefour/Delhaize/AB InBev) = significant deduction.",
+    "tags": [
+      "orchestrator",
+      "multi-agent",
+      "salesforce",
+      "smartsales",
+      "360-view"
+    ],
+    "expected_agents": [
+      "salesforce",
+      "smartsales"
+    ]
+  },
+    {
+    "text": "List my Microsoft 365 contacts and include their phone numbers.",
+    "category": "graph-extra",
+    "difficulty": "medium",
+    "expected_answer": "A list of Microsoft 365 contacts, each showing display name, email address, and phone number (if available).",
+    "tags": [
+      "list_contacts"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
+  },
+    {
+    "text": "Show me my Microsoft 365 contacts.",
+    "category": "graph-extra",
+    "difficulty": "simple",
+    "expected_answer": "A list of the user's Microsoft 365 contacts, each with display name and email address.",
+    "tags": [
+      "list_contacts"
+    ],
+    "expected_agents": [
+      "graph"
+    ]
+  },
+
+    {
+    "text": "Which of my recent email senders also have an active deal with us?",
+    "category": "implicit-cross-system",
+    "difficulty": "hard",
+    "expected_answer": "Four recent email senders have active deals: supplier1 (marc.supplier@supplier1.be, deal EUR 85,000), Colruyt Group (procurement@colruyt.be, deal EUR 220,000), GreenTech Solutions (info@greentechsolutions.be, deal EUR 45,000), and Ferrero Benelux (marketing@ferrero.be, deal EUR 30,000). SmartAdmin (internal) and Microsoft Azure (azure-noreply@microsoft.com) have no Salesforce deals. Dorian Feaux (d.feaux@easi.net) is a contact at EASI which has no open opportunity.",
+    "tags": [
+      "implicit-link",
+      "graph-to-sf"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
+  },
+    {
+    "text": "Are there companies in my upcoming calendar that we have no record of?",
+    "category": "implicit-cross-system",
+    "difficulty": "hard",
+    "expected_answer": "Time-dependent query — depends on which calendar events are upcoming. Expected behavior: (1) retrieves all upcoming calendar events, (2) extracts companies or people from event subjects, (3) checks each against SF (accounts + contacts) for any record, (4) flags those with no SF record as a gap. Based on testdata calendar events (supplier1, Colruyt Group, GreenTech Solutions, Dorian Feaux/EASI, Arne Albrecht/EASI): all have SF records, so a correct answer should report no gaps for these. Pre-existing calendar events with unknown companies are acceptable gaps. Missing the SF lookup step = significant deduction. Confusing calendar companies with email senders = significant deduction.",
+    "tags": [
+      "implicit-link",
+      "graph-to-sf",
+      "gap-analysis"
+    ],
+    "expected_agents": [
+      "graph",
+      "salesforce"
+    ]
+  },
+    {
+    "text": "Which companies that emailed me recently do not seem to have a location registered with us?",
+    "category": "implicit-cross-system",
+    "difficulty": "hard",
+    "expected_answer": "Senders with no SmartSales location: Proximus (info@proximus.be — gap detection case: email only, no SS entry, no SF account), SmartAdmin (smartadmin@easigroupdemo.onmicrosoft.com — internal account), and Microsoft Azure (azure-noreply@microsoft.com — pre-existing, no SS entry) are acceptable. The following senders DO have registered SS locations and must NOT be listed as missing — including via fuzzy entity resolution: supplier1 → 'supplier1' (SUP-001), Colruyt Group → 'Colruyt - Halle' (COLRUYT-HAL-001), GreenTech Solutions → 'GreenTech Solutions - Ghent' (GTS-GNT-001), Ferrero Benelux → 'Ferrero Benelux - Brussels (Nutella)' (FERR-BRU-001), EASI → 'EASI - Brussels' (EASI-BRU-001), Carrefour → 'CRF - Anderlecht' (fuzzy), Delhaize → 'AD Delhaize - Forest' (fuzzy), AB InBev → 'AB InBev - Leuven' (fuzzy). Not flagging Proximus as a gap = significant deduction. Incorrectly flagging fuzzy-matched companies (Carrefour, Delhaize, AB InBev) as missing = significant deduction per incorrectly flagged company.",
+    "tags": [
+      "implicit-link",
+      "graph-to-ss",
+      "gap-analysis"
+    ],
+    "expected_agents": [
+      "graph",
+      "smartsales"
+    ]
+  },
+    {
+    "text": "Find Salesforce accounts in Belgium, including their billing address.",
     "category": "salesforce",
     "difficulty": "medium",
-    "expected_answer": "A list of Salesforce cases where Status is not Closed and Priority is High.",
+    "expected_answer": "A list of Salesforce accounts where BillingCountry is Belgium.",
     "tags": [
-      "get_cases"
+      "find_accounts"
     ],
     "expected_agents": [
       "salesforce"
     ]
   },
     {
-    "text": "Show me Salesforce opportunities in the 'Qualification' stage.",
+    "text": "Show me Salesforce accounts with their phone numbers.",
     "category": "salesforce",
-    "difficulty": "medium",
-    "expected_answer": "A list of Salesforce opportunities where StageName is 'Qualification'.",
+    "difficulty": "simple",
+    "expected_answer": "A list of Salesforce accounts each showing Id, Name, and Phone. Accounts without a phone number may show an empty value.",
     "tags": [
-      "get_opportunities"
-    ],
-    "expected_agents": [
-      "salesforce"
-    ]
-  },
-    {
-    "text": "Show me 5 closed Salesforce cases including their close date and description.",
-    "category": "salesforce",
-    "difficulty": "medium",
-    "expected_answer": "A list of 5 closed Salesforce cases.",
-    "tags": [
-      "get_cases"
+      "find_accounts"
     ],
     "expected_agents": [
       "salesforce"
     ]
   }
+
+
+
+
+
+
+
+
+
+
+
 ]
